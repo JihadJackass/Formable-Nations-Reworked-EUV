@@ -1,4 +1,4 @@
-﻿# DIJOS DUAL SCRIPTED GUIS - Left/Right Click Support
+﻿# FORMABLE NATIONS DUAL SCRIPTED GUIS - Left/Right Click Support
 # Left Click = Add positive (+100), Right Click = Add negative (-100)
 # Auto-cleanup: Adding one removes the opposite
 
