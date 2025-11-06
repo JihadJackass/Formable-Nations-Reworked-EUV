@@ -1,0 +1,1 @@
+gui/dijos_window.gui = dijos_window
