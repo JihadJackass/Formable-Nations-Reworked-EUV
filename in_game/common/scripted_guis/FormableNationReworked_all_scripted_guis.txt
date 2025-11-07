@@ -10,11 +10,17 @@ dijos_add_army_logistics_distance_positive = {
 		
 		# Toggle positive modifier
 		if = {
-			limit = { has_country_modifier = dijos_army_logistics_distance_positive }
+			limit = { 
+				has_country_modifier = dijos_army_logistics_distance_positive 
+			}
 			remove_country_modifier = dijos_army_logistics_distance_positive
 		}
 		else = {
-			add_country_modifier = { modifier = dijos_army_logistics_distance_positive years = 999 mode = add }
+			add_country_modifier = { 
+				modifier = dijos_army_logistics_distance_positive 
+				years = 999 
+				mode = add 
+			}
 		}
 	}
 }

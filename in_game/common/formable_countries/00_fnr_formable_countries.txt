@@ -1,0 +1,48 @@
+﻿RUS_f_fnr = {
+	level = 4
+	required_locations_fraction = 0.5
+	rule = historical
+
+	potential = {
+		OR = {
+			culture = { 
+				has_culture_group = culture_group:russian_group 
+				has_culture_group = culture_group:slavic_group 
+			}
+			culture = culture:halychian_culture
+			culture = culture:polatskian_culture
+			culture = culture:polesian_culture
+			culture = culture:ruthenian
+			culture = culture:severian
+			culture = culture:volhynian_culture
+			culture = culture:rusyn_culture
+			culture = culture:cossack_culture
+			culture = culture:smolenskian_culture
+			tag = KIE
+		}
+	}
+
+	allow = {
+		owns = location:moscow
+		owns = location:novgorod
+	}
+	
+	name = RUS
+	flag = RUS
+	adjective = RUS_ADJ
+	tag = RUS
+	color = map_RUS
+
+	regions = {
+		russian_region
+		ural_region
+		steppes_region
+	}
+	form_effect = {
+		if = {
+			limit = { country_rank_level < 4 }
+			set_country_rank_effect = { rank = country_rank:rank_empire }
+		}
+		
+	}
+}

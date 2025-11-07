@@ -107,6 +107,8 @@
  NED_f_desc: "The Dutch are emerging as one of Europe's most capable naval and colonial powers. Lucrative trade opportunities, locally and overseas, have resulted in a swift evolution for the country into one of the first capitalist countries in the world."
  EUR_f: "$EUR$"
  EUR_f_desc: "The land of [ShowContinentName('europe')] is the historical home of a great variety of peoples. If united under a single banner and identity it will be able to express its full potential and power."
+ RUS_f_fnr: "Russia"
+ RUS_f_fnr_desc: "Through conquest and diplomacy, Russia has managed to transform from a mere settlement into a dominant principality. After several eastern expeditions, the Mongol hordes have finally been subdued and a centralized Russian state, ruled under the suzerainty of the Tsar, is emerging. Influences from Western Europe are helping us modernize and reform our nation and Western style of education is being adopted."
  RUS_f: "Russia"
  RUS_f_desc: "Through conquest and diplomacy, Russia has managed to transform from a mere settlement into a dominant principality. After several eastern expeditions, the Mongol hordes have finally been subdued and a centralized Russian state, ruled under the suzerainty of the Tsar, is emerging. Influences from Western Europe are helping us modernize and reform our nation and Western style of education is being adopted."
  ITA_f: "Italy"
