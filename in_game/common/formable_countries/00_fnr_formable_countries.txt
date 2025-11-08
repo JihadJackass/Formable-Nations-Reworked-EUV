@@ -1,48 +1,173 @@
-﻿RUS_f_fnr = {
-	level = 4
-	required_locations_fraction = 0.5
-	rule = historical
+﻿#######################################
+# FORMABLE NATIONS REWORKED FORMABLES #
+#######################################
 
-	potential = {
-		OR = {
-			culture = { 
-				has_culture_group = culture_group:russian_group 
-				has_culture_group = culture_group:slavic_group 
-			}
-			culture = culture:halychian_culture
-			culture = culture:polatskian_culture
-			culture = culture:polesian_culture
-			culture = culture:ruthenian
-			culture = culture:severian
-			culture = culture:volhynian_culture
-			culture = culture:rusyn_culture
-			culture = culture:cossack_culture
-			culture = culture:smolenskian_culture
-			tag = KIE
-		}
-	}
+########################
+# HISTORICAL FORMABLES #
+########################
 
-	allow = {
-		owns = location:moscow
-		owns = location:novgorod
-	}
-	
-	name = RUS
-	flag = RUS
-	adjective = RUS_ADJ
-	tag = RUS
-	color = map_RUS
+	# Baluchistan
 
-	regions = {
-		russian_region
-		ural_region
-		steppes_region
-	}
-	form_effect = {
-		if = {
-			limit = { country_rank_level < 4 }
-			set_country_rank_effect = { rank = country_rank:rank_empire }
+	BLC_fnr = {
+
+		level = 2
+		required_locations_fraction = 0.60
+		rule = plausible
+		
+		potential = {
+			culture = { has_culture_group = culture_group:iranian_group }
 		}
 		
+		allow = {
+		}
+
+		name = BLC
+		flag = BLC
+		adjective = BLC_ADJ
+		tag = BLC
+		color = map_scandinavia # TODO: LEARN
+
+		regions = {
+			persia_region
+		}
+		areas = {
+			baluchistan_area
+		}
+		form_effect = {
+		}
 	}
-}
+
+	# Polabia
+
+	POLB_fnr = {
+
+		level = 2
+		required_locations_fraction = 0.05
+		rule = plausible
+		
+		potential = {
+			culture = { has_culture_group = culture_group:polish_group }
+		}
+		
+		allow = {
+		}
+
+		name = POLB
+		flag = POLB
+		adjective = POLB_ADJ
+		tag = POLB
+		color = map_scandinavia # TODO: LEARN
+
+		regions = {
+			baltic_region
+		}
+		areas = {
+			greater_poland_area
+			central_poland_area
+			lesser_poland_area
+		}
+		form_effect = {
+		}
+	}
+
+	# Great Sorbia
+
+	GSORB_fnr = {
+
+		level = 2
+		required_locations_fraction = 0.02
+		rule = plausible
+		
+		potential = {
+			culture = { has_culture_group = culture_group:german_group }
+		}
+		
+		allow = {
+		}
+
+		name = GSORB_fnr
+		flag = GSORB_fnr
+		adjective = GSORB_fnr_ADJ
+		tag = GSORB_fnr
+		color = map_scandinavia # TODO: LEARN
+
+		regions = {
+			north_german_region
+			south_german_region
+		}
+		areas = {
+			franconia_area
+			upper_saxony_area
+		}
+		form_effect = {
+		}
+	}
+
+	# Kingdom of Hanover
+
+	KOFHN_fnr = {
+
+		level = 2
+		required_locations_fraction = 0.16
+		rule = plausible
+		
+		potential = {
+			culture = { has_culture_group = culture_group:german_group }
+		}
+		
+		allow = {
+		}
+
+		name = KOFHN_fnr
+		flag = KOFHN_fnr
+		adjective = KOFHN_fnr_ADJ
+		tag = KOFHN_fnr
+		color = map_scandinavia # TODO: LEARN
+
+		regions = {
+			#north_german_region
+		}
+		areas = {
+			lower_saxony_area
+		}
+		form_effect = {
+		}
+	}
+
+
+
+############################
+# NON-HISTORICAL FORMABLES #
+############################
+
+	# Arpitania
+
+	ARPIT_fnr = {
+
+		level = 2
+		required_locations_fraction = 0.07
+		rule = plausible
+		
+		potential = {
+			culture = culture:arpitan
+		}
+		
+		allow = {
+		}
+
+		name = ARPIT_fnr
+		flag = ARPIT_fnr
+		adjective = ARPIT_fnr_ADJ
+		tag = ARPIT_fnr
+		color = map_scandinavia # TODO: LEARN
+
+		regions = {
+			france_region
+		}
+		areas = {
+			savoy_area
+			piemonte_area
+		}
+		form_effect = {
+		}
+	}

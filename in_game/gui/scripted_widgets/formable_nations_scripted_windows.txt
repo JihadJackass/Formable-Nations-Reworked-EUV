@@ -1,1 +1,3 @@
 gui/dijos_window.gui = dijos_window
+
+# TODO: Change this to FNR window
