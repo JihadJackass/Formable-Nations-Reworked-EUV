@@ -43,6 +43,12 @@
     BALTICSTATES_fnr: "Baltic States"
     BALTICSTATES_fnr_desc: "TODO: description & flag"
 
+    ALSACELORRAINE_fnr: "Alsace-Lorraine"
+    ALSACELORRAINE_fnr_desc: "TODO: description & flag"
+
+    KOAQUITAINE_fnr: "Kingdom of Aquitaine"
+    KOAQUITAINE_fnr_desc: "TODO: description & flag"
+
   ############################
   # NON-HISTORICAL FORMABLES #
   ############################
@@ -55,6 +61,20 @@
     ADRIATICEMP_fnr: "Adriatic Empire"
     ADRIATICEMP_fnr_desc: "TODO: description & flag"
 
+    ALPLAND_fnr: "Alpland"
+    ALPLAND_fnr_desc: "TODO: description & flag"
 
+    ANGLODUTCH_fnr: "Anglo-Dutch Union"
+    ANGLODUTCH_fnr_desc: "TODO: description & flag"
 
+    AUSTRIANEMPIRE_fnr: "Austrian Empire"
+    AUSTRIANEMPIRE_fnr_desc: "TODO: description & flag"
 
+    AUSTRIABAVARIA_fnr: "Austria-Bavaria"
+    AUSTRIABAVARIA_fnr_desc: "TODO: description & flag"
+
+    BALKLEAGUE_fnr: "Balkan League"
+    BALKLEAGUE_fnr_desc: "TODO: description & flag"
+
+    BASQUECOUN_fnr: "Basque Country"
+    BASQUECOUN_fnr_desc: "TODO: description & flag"

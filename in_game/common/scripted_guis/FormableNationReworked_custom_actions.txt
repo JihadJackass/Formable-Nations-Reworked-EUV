@@ -1,4 +1,4 @@
-# FORMABLE NATIONS REWORKED CUSTOM SCRIPTED ACTIONS - EU5 ONLY
+﻿# FORMABLE NATIONS REWORKED CUSTOM SCRIPTED ACTIONS - EU5 ONLY
 # Only using effects that actually exist in EU5
 
 # ===== COMBINED MODIFIERS =====
@@ -6,30 +6,5 @@
 FormableNationReworked_toggle_historical_formables = {
 	scope = country
 	effect = {
-		if = {
-			limit = { 
-				has_country_modifier = dijos_ultimate_supreme 
-			}
-			remove_country_modifier = dijos_ultimate_supreme
-		}
-		else = {
-			add_country_modifier = { 
-				modifier = dijos_ultimate_supreme 
-				years = 999 mode = add 
-			}
-		}
-	}
-}
-
-dijos_toggle_military_supreme = {
-	scope = country
-	effect = {
-		if = {
-			limit = { has_country_modifier = dijos_military_supreme }
-			remove_country_modifier = dijos_military_supreme
-		}
-		else = {
-			add_country_modifier = { modifier = dijos_military_supreme years = 999 mode = add }
-		}
 	}
 }

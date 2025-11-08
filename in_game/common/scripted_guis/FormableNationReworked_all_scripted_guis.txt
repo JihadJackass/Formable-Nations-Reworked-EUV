@@ -2,25 +2,3 @@
 # Left Click = Add positive (+100), Right Click = Add negative (-100)
 # Auto-cleanup: Adding one removes the opposite
 
-dijos_add_army_logistics_distance_positive = {
-	scope = country
-	effect = {
-		# Remove opposite modifier if present
-		remove_country_modifier = dijos_army_logistics_distance_negative
-		
-		# Toggle positive modifier
-		if = {
-			limit = { 
-				has_country_modifier = dijos_army_logistics_distance_positive 
-			}
-			remove_country_modifier = dijos_army_logistics_distance_positive
-		}
-		else = {
-			add_country_modifier = { 
-				modifier = dijos_army_logistics_distance_positive 
-				years = 999 
-				mode = add 
-			}
-		}
-	}
-}

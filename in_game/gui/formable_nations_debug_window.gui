@@ -34,8 +34,8 @@ window = {
 				button_main_tab_alt = {
 					using = layoutpolicy_expanding
 					raw_text = "Formable Settings"
-					onclick = "[GetVariableSystem.Set('dijos_mega_cat', 'custom')]"
-					down = "[GetVariableSystem.HasValue('dijos_mega_cat', 'custom')]"
+					#onclick = "[GetVariableSystem.Set('dijos_mega_cat', 'custom')]"
+					#down = "[GetVariableSystem.HasValue('dijos_mega_cat', 'custom')]"
 				}
 			}
 		}	
@@ -53,18 +53,9 @@ window = {
 					# CUSTOM CATEGORY
 					vbox = {
 						layoutpolicy_horizontal = expanding
-						visible = "[GetVariableSystem.HasValue('dijos_mega_cat', 'custom')]"
+						#visible = "[GetVariableSystem.HasValue('dijos_mega_cat', 'custom')]"
 						spacing = 20
 
-						text_label_center = {
-							text = "Custom Actions & Combined Modifiers"
-							using = fontsize_xxl
-						}
-
-						text_label_center = {
-							text = "=== COMBINED MODIFIERS ==="
-							using = fontsize_xl
-						}
 						hbox = {
 							spacing = 5
 							button_regular = {
@@ -82,11 +73,6 @@ window = {
 								raw_text = "Toggle Meme Formables"
 								onclick = "[GetScriptedGui('dijos_toggle_naval_supreme').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 							}
-						}
-						text_label_center = {
-							text = "=== DIPLOMACY & DEBUG ==="
-							using = fontsize_xl
-							margin_top = 15
 						}
 						hbox = {
 							spacing = 5

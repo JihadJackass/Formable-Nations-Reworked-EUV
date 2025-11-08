@@ -98,8 +98,8 @@
 		color = map_scandinavia # TODO: LEARN
 
 		regions = {
-			north_german_region
-			south_german_region
+			#north_german_region
+			#south_german_region
 		}
 		areas = {
 			franconia_area
@@ -349,7 +349,7 @@
 
 		name = ANGEVINEMPIRE_fnr
 		flag = ANGEVINEMPIRE_fnr
-		adjective = JANGEVINEMPIRE_fnr_ADJ
+		adjective = ANGEVINEMPIRE_fnr_ADJ
 		tag = ANGEVINEMPIRE_fnr
 		color = map_scandinavia # TODO: LEARN
 
@@ -382,7 +382,7 @@
 
 		name = BALTICSTATES_fnr
 		flag = BALTICSTATES_fnr
-		adjective = JBALTICSTATES_fnr_ADJ
+		adjective = BALTICSTATES_fnr_ADJ
 		tag = BALTICSTATES_fnr
 		color = map_scandinavia # TODO: LEARN
 
@@ -396,6 +396,178 @@
 		form_effect = {
 		}
 	}
+
+	# Alsace-Lorraine
+
+	ALSACELORRAINE_fnr = {
+
+		level = 3
+		required_locations_fraction = 0.60
+		rule = plausible
+		
+		potential = {
+			OR = {
+				culture = culture:lorrain
+				culture = culture:rhine_alemannic
+			}
+		}
+		
+		allow = {
+			
+		}
+
+		name = ALSACELORRAINE_fnr
+		flag = ALSACELORRAINE_fnr
+		adjective = ALSACELORRAINE_fnr_ADJ
+		tag = ALSACELORRAINE_fnr
+		color = map_scandinavia # TODO: LEARN
+
+		regions = {
+			#baltic_region
+		}
+
+		areas = {
+			lorraine_area
+			alsace_area
+		}
+		form_effect = {
+		}
+	}	
+
+	# Austrian Empire
+
+	AUSTRIANEMPIRE_fnr = {
+
+		level = 4
+		required_locations_fraction = 0.75
+		rule = plausible
+		potential = {
+			culture = { has_culture_group = culture_group:german_group }
+		}
+		
+		name = AUSTRIANEMPIRE_fnr
+		flag = AUSTRIANEMPIRE_fnr
+		adjective = AUSTRIANEMPIRE_fnr_ADJ
+		tag = AUSTRIANEMPIRE_fnr
+		color = map_GER
+		
+		regions = {
+			#north_german_region
+			#south_german_region
+		}
+		areas = {
+			austria_area
+			upper_austria_area
+			styria_area
+			#bavaria_area
+			salzburg_area
+			carinthia_area
+			slovenia_area
+			croatia_area
+			slavonia_area
+			transdanubia_area
+			north_alfold_area
+			south_alfold_area
+			slovakia_area
+			moravia_area
+			transylvania_area
+			veneto_area
+			lombardy_area
+			tirol_area
+			bohemia_area
+			#lesser_poland_area
+			#red_ruthenia_area
+		}
+
+		form_effect = {
+			if = {
+				limit = { country_rank_level < 4 }
+				set_country_rank_effect = { rank = country_rank:rank_empire }
+			}
+		}
+	}
+
+	# Austro-Hungarian Empire
+
+	# Austria-Bavaria
+
+	AUSTRIABAVARIA_fnr = {
+
+		level = 3
+		required_locations_fraction = 0.60
+		rule = plausible
+		potential = {
+			culture = { has_culture_group = culture_group:german_group }
+		}
+		
+		name = AUSTRIABAVARIA_fnr
+		flag = AUSTRIABAVARIA_fnr
+		adjective = AUSTRIABAVARIA_fnr_ADJ
+		tag = AUSTRIABAVARIA_fnr
+		color = map_GER
+		
+		regions = {
+			#north_german_region
+			#south_german_region
+		}
+		areas = {
+			austria_area
+			upper_austria_area
+			styria_area
+			bavaria_area
+			salzburg_area
+			carinthia_area
+			slovenia_area
+			moravia_area
+		}
+
+		form_effect = {
+			if = {
+				limit = { country_rank_level < 4 }
+				set_country_rank_effect = { rank = country_rank:rank_empire }
+			}
+		}
+	}
+
+	# Basque Country
+
+	BASQUECOUN_fnr = {
+
+		level = 1
+		required_locations_fraction = 0.85
+		rule = plausible
+		
+		potential = {
+			culture = culture:basque
+		}
+		
+		allow = {
+		}
+
+		name = BASQUECOUN_fnr
+		flag = BASQUECOUN_fnr
+		adjective = BASQUECOUN_fnr_ADJ
+		tag = BASQUECOUN_fnr
+		color = map_scandinavia # TODO: LEARN
+
+		regions = {
+		}
+		areas = {
+			navarre_area
+		}
+		provinces = {
+			bayonne_province
+		}
+		locations = {
+			orthez
+			dax
+			tosse
+		}
+		form_effect = {
+		}
+	}
+
+	# Belarus
 
 ############################
 # NON-HISTORICAL FORMABLES #
@@ -496,4 +668,154 @@
 		}
 	}	
 
-	
+	# Alpland
+
+	ALPLAND_fnr = {
+		level = 3
+		required_locations_fraction = 0.80
+		rule = historical
+
+		potential = {
+			culture = { has_culture_group = culture_group:swiss_group }
+		}
+
+		allow = {
+		}
+		
+		name = ALPLAND_fnr
+		flag = ALPLAND_fnr
+		adjective = ALPLAND_fnr_ADJ
+		tag = ALPLAND_fnr
+		color = map_SWI
+
+		areas = {
+			central_switzerland_area
+			eastern_switzerland_area
+			western_switzerland_area
+		}
+		form_effect = {
+			set_country_rank_effect = { rank = country_rank:rank_kingdom }
+			unlock_government_reform_effect = { type = autonomous_swiss_cantons_reform }
+			add_replacing_gov_reform = { reform = government_reform:autonomous_swiss_cantons_reform }
+			if = {
+				limit = {
+					NOT = { government_type = government_type:monarchy }
+					NOT = { government_type = government_type:theocracy }
+					NOT = { government_type = government_type:republic }
+				}
+				change_government_type = government_type:republic
+			}
+		}
+	}
+
+	# Anglo-Dutch Union
+
+	ANGLODUTCH_fnr = {
+		level = 4
+		required_locations_fraction = 0.75
+		rule = plausible
+		
+		potential = {
+			OR = {
+				culture = culture:english
+				culture = culture:low_franconian
+			}
+		}
+
+		allow = {
+		}
+		
+		name = ANGLODUTCH_fnr
+		flag = ANGLODUTCH_fnr
+		adjective = ANGLODUTCH_fnr_ADJ
+		tag = ANGLODUTCH_fnr
+		color = map_ENG
+
+		areas = {
+			home_counties_area
+			east_anglia_area
+			west_country_area
+			midlands_area
+			flanders_area
+			holland_area
+			friesland_area
+		}
+		form_effect = {
+		}
+	}
+
+	# Kingdom of Aquitaine
+
+	KOAQUITAINE_fnr = {
+
+		level = 3
+		required_locations_fraction = 0.35
+		rule = plausible
+		
+		potential = {
+			#culture = { has_culture_group = culture_group:french_group }
+		}
+		
+		allow = {
+		}
+
+		name = KOAQUITAINE_fnr
+		flag = KOAQUITAINE_fnr
+		adjective = KOAQUITAINE_fnr_ADJ
+		tag = KOAQUITAINE_fnr
+		color = map_scandinavia # TODO: LEARN
+
+		regions = {
+
+		}
+		areas = {
+			gascony_area
+			guyenne_area
+			limousin_province
+			poitou_area
+		}
+		form_effect = {
+		}
+	}
+
+	# Balkan League
+
+	BALKLEAGUE_fnr = {
+
+		level = 3
+		required_locations_fraction = 0.50
+		rule = plausible
+		
+		potential = {
+			culture = { has_culture_group = culture_group:slavic_group }
+			culture = { has_culture_group = culture_group:south_slavic_group }
+		}
+		
+		allow = {
+		}
+
+		name = BALKLEAGUE_fnr
+		flag = BALKLEAGUE_fnr
+		adjective = BALKLEAGUE_fnr_ADJ
+		tag = BALKLEAGUE_fnr
+		color = map_scandinavia # TODO: LEARN
+
+		regions = {
+			#balkan_region
+		}
+		areas = {
+			bosnia_area
+			slavonia_area
+			croatia_area
+			serbia_area
+			albania_area
+			macedonia_area
+			bulgaria_area
+			thrace_area
+			northern_greece_area
+		}
+		provinces = {
+		}
+		form_effect = {
+		}
+	}	
