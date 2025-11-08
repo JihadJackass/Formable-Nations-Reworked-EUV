@@ -16,9 +16,32 @@
     GSORB_fnr: "Greater Sorbia"
     GSORB_fnr_desc: "TODO: description & flag"
 
+    # Sorbic Kingdom
+    KSORB_fnr: "Sorbic Kingdom"
+    KSORB_desc: "TODO: description & flag"  
+
     # Kingdom of Hanover
     KOFHN_fnr: "Kingdom of Hanover"
     KOFHN_fnr_desc: "TODO: description & flag"
+
+    # Polynesia
+    POLYNE_fnr: "Polynesia"
+    POLYNE_fnr_desc: "TODO: description & flag"
+
+    HAWAIII_fnr: "Hawai'i"
+    HAWAIII_fnr_desc: "TODO: description & flag"
+
+    YUGOSLAVIA_fnr: "Yugoslavia"
+    YUGOSLAVIA_fnr_desc: "TODO: description & flag"
+
+    JAPAN_fnr: "Japan"
+    JAPAN_fnr_desc: "TODO: description & flag"
+
+    ANGEVINEMPIRE_fnr: "Angevin Empire"
+    ANGEVINEMPIRE_fnr_desc: "TODO: description & flag"
+
+    BALTICSTATES_fnr: "Baltic States"
+    BALTICSTATES_fnr_desc: "TODO: description & flag"
 
   ############################
   # NON-HISTORICAL FORMABLES #
@@ -28,7 +51,9 @@
     ARPIT_fnr: "Arpitania"
     ARPIT_fnr_desc: "TODO: description & flag"
 
-
+    # Adriatic Empire
+    ADRIATICEMP_fnr: "Adriatic Empire"
+    ADRIATICEMP_fnr_desc: "TODO: description & flag"
 
 
 

@@ -2,6 +2,12 @@
 # FORMABLE NATIONS REWORKED FORMABLES #
 #######################################
 
+# TODO LIST:
+# - COLORS
+# - FLAGS
+# - DESCRIPTIONS
+# - ADJECTIVES
+
 ########################
 # HISTORICAL FORMABLES #
 ########################
@@ -74,8 +80,8 @@
 
 	GSORB_fnr = {
 
-		level = 2
-		required_locations_fraction = 0.02
+		level = 3
+		required_locations_fraction = 0.04
 		rule = plausible
 		
 		potential = {
@@ -89,6 +95,39 @@
 		flag = GSORB_fnr
 		adjective = GSORB_fnr_ADJ
 		tag = GSORB_fnr
+		color = map_scandinavia # TODO: LEARN
+
+		regions = {
+			north_german_region
+			south_german_region
+		}
+		areas = {
+			franconia_area
+			upper_saxony_area
+		}
+		form_effect = {
+		}
+	}
+
+	# Sorbic Kingdom
+
+	KSORB_fnr = {
+
+		level = 2
+		required_locations_fraction = 0.02
+		rule = plausible
+		
+		potential = {
+			culture = { has_culture_group = culture_group:german_group }
+		}
+		
+		allow = {
+		}
+
+		name = KSORB_fnr
+		flag = KSORB_fnr
+		adjective = KSORB_fnr_ADJ
+		tag = KSORB_fnr
 		color = map_scandinavia # TODO: LEARN
 
 		regions = {
@@ -134,7 +173,229 @@
 		}
 	}
 
+	# Polynesia
 
+	POLYNE_fnr = {
+
+		level = 2
+		required_locations_fraction = 0.26
+		rule = plausible
+		
+		potential = {
+			culture = { has_culture_group = culture_group:polynesian_group }
+		}
+		
+		allow = {
+		}
+
+		name = POLYNE_fnr
+		flag = POLYNE_fnr
+		adjective = POLYNE_fnr_ADJ
+		tag = POLYNE_fnr
+		color = map_scandinavia # TODO: LEARN
+
+		regions = {
+			polynesia_region
+		}
+		areas = {
+			hawaii_area
+			papahanaumokuakea_area
+			aono_raina_area
+			te_henua_enana_area
+			kuki_airani_area
+			tuhaa_pae_area
+			totaiete_ma_area
+			tuamotu_area
+			raeffsky_area
+			palliser_area
+			rapa_nui_area
+			pitcairn_area
+			rawaki_area
+			tuvalu_area
+			futuna_area
+			tonga_area
+			niue_area
+			tokelau_area
+			samoa_area
+		}
+		form_effect = {
+		}
+	}	
+
+	# Hawai'i
+
+	HAWAIII_fnr = {
+
+		level = 2
+		required_locations_fraction = 0.13
+		rule = plausible
+		
+		potential = {
+			OR = {
+				culture = { has_culture_group = culture_group:polynesian_group }
+				culture = culture:kanaka_maoli_culture
+			}
+		}
+		
+		allow = {
+		}
+
+		name = HAWAIII_fnr
+		flag = HAWAIII_fnr
+		adjective = HAWAIII_fnr_ADJ
+		tag = HAWAIII_fnr
+		color = map_scandinavia # TODO: LEARN
+
+		regions = {
+			polynesia_region
+		}
+		areas = {
+			hawaii_area
+		}
+		form_effect = {
+		}
+	}
+
+	# Yugoslavia
+
+	YUGOSLAVIA_fnr = {
+
+		level = 3
+		required_locations_fraction = 0.60
+		rule = plausible
+		
+		potential = {
+			culture = { has_culture_group = culture_group:slavic_group }
+			culture = { has_culture_group = culture_group:south_slavic_group }
+		}
+		
+		allow = {
+		}
+
+		name = YUGOSLAVIA_fnr
+		flag = YUGOSLAVIA_fnr
+		adjective = YUGOSLAVIA_fnr_ADJ
+		tag = YUGOSLAVIA_fnr
+		color = map_scandinavia # TODO: LEARN
+
+		regions = {
+			#balkan_region
+		}
+		areas = {
+			bosnia_area
+			slavonia_area
+			croatia_area
+			serbia_area
+		}
+		provinces = {
+			vardar_province
+			illyria_province
+			prilep_province
+			lower_carniola_province
+		}
+		form_effect = {
+		}
+	}	
+
+	# Japan
+
+	JAPAN_fnr = {
+
+		level = 3
+		required_locations_fraction = 0.90
+		rule = plausible
+		
+		potential = {
+			language = language:japanese_language
+		}
+		
+		allow = {
+		}
+
+		name = JAPAN_fnr
+		flag = JAPAN_fnr
+		adjective = JAPAN_fnr_ADJ
+		tag = JAPAN_fnr
+		color = map_scandinavia # TODO: LEARN
+
+		regions = {
+			japan_region
+		}
+		areas = {
+			#savoy_area
+			#piemonte_area
+		}
+		form_effect = {
+		}
+	}	
+
+	# Angevin Empire
+
+	ANGEVINEMPIRE_fnr = {
+
+		level = 4
+		required_locations_fraction = 0.35
+		rule = plausible
+		
+		potential = {
+			OR = {
+				culture = { has_culture_group = culture_group:british_group }
+				culture = { has_culture_group = culture_group:french_group }
+			}
+		}
+		
+		allow = {
+		}
+
+		name = ANGEVINEMPIRE_fnr
+		flag = ANGEVINEMPIRE_fnr
+		adjective = JANGEVINEMPIRE_fnr_ADJ
+		tag = ANGEVINEMPIRE_fnr
+		color = map_scandinavia # TODO: LEARN
+
+		regions = {
+			france_region
+			great_britain_region
+		}
+		areas = {
+			#savoy_area
+		}
+		form_effect = {
+		}
+	}
+	
+	# Baltic States
+
+	BALTICSTATES_fnr = {
+
+		level = 3
+		required_locations_fraction = 0.80
+		rule = plausible
+		
+		potential = {
+			culture = culture:german_baltic
+		}
+		
+		allow = {
+			government_type = government_type:republic
+		}
+
+		name = BALTICSTATES_fnr
+		flag = BALTICSTATES_fnr
+		adjective = JBALTICSTATES_fnr_ADJ
+		tag = BALTICSTATES_fnr
+		color = map_scandinavia # TODO: LEARN
+
+		regions = {
+			#baltic_region
+		}
+
+		areas = {
+			baltic_area
+		}
+		form_effect = {
+		}
+	}
 
 ############################
 # NON-HISTORICAL FORMABLES #
@@ -171,3 +432,68 @@
 		form_effect = {
 		}
 	}
+
+	# Adriatic Empire
+
+	ADRIATICEMP_fnr = {
+
+		level = 4
+		required_locations_fraction = 0.65
+		rule = plausible
+		
+		potential = {
+			OR = {
+				culture = culture:venetian
+				culture = culture:emilian
+				culture = culture:median
+				culture = culture:neapolitan
+				culture = culture:friulian
+				culture = culture:croatian
+				culture = culture:bosnian
+				culture = culture:serbian
+				culture = culture:albanian
+			}
+		}
+		
+		allow = {
+		}
+
+		name = ADRIATICEMP_fnr
+		flag = ADRIATICEMP_fnr
+		adjective = ADRIATICEMP_fnr_ADJ
+		tag = ADRIATICEMP_fnr
+		color = map_scandinavia # TODO: LEARN
+
+		regions = {
+			#italy_region
+			#balkan_region
+		}
+		areas = {
+			veneto_area
+			croatia_area
+		}
+		provinces = {
+			ferrara_province
+			gorizia_province
+			romagna_province
+			urbino_province
+			marche_province
+			zeta_province
+			lower_carniola_province
+			illyria_province
+			abruzzo_citra_province
+			abruzzo_ultra_province
+			molise_province
+			capitanata_province
+			bari_province
+			otranto_province
+			hum_province
+		}
+		locations = {
+			slunj
+		}
+		form_effect = {
+		}
+	}	
+
+	
