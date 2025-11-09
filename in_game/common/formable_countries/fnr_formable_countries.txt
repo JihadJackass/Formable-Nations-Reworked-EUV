@@ -7,6 +7,7 @@
 # - FLAGS
 # - DESCRIPTIONS
 # - ADJECTIVES
+# - ONCE MAJORITY FORMABLES ARE DONE, GO OVER EVERY ONE AND IMPROVE/FIX
 
 ########################
 # HISTORICAL FORMABLES #
@@ -31,7 +32,7 @@
 		flag = BLC
 		adjective = BLC_ADJ
 		tag = BLC
-		color = map_scandinavia # TODO: LEARN
+		color = map_scandinavia 
 
 		regions = {
 			persia_region
@@ -62,7 +63,7 @@
 		flag = POLB
 		adjective = POLB_ADJ
 		tag = POLB
-		color = map_scandinavia # TODO: LEARN
+		color = map_scandinavia 
 
 		regions = {
 			baltic_region
@@ -95,7 +96,7 @@
 		flag = GSORB_fnr
 		adjective = GSORB_fnr_ADJ
 		tag = GSORB_fnr
-		color = map_scandinavia # TODO: LEARN
+		color = map_scandinavia 
 
 		regions = {
 			#north_german_region
@@ -128,7 +129,7 @@
 		flag = KSORB_fnr
 		adjective = KSORB_fnr_ADJ
 		tag = KSORB_fnr
-		color = map_scandinavia # TODO: LEARN
+		color = map_scandinavia 
 
 		regions = {
 			north_german_region
@@ -161,7 +162,7 @@
 		flag = KOFHN_fnr
 		adjective = KOFHN_fnr_ADJ
 		tag = KOFHN_fnr
-		color = map_scandinavia # TODO: LEARN
+		color = map_scandinavia 
 
 		regions = {
 			#north_german_region
@@ -192,7 +193,7 @@
 		flag = POLYNE_fnr
 		adjective = POLYNE_fnr_ADJ
 		tag = POLYNE_fnr
-		color = map_scandinavia # TODO: LEARN
+		color = map_scandinavia 
 
 		regions = {
 			polynesia_region
@@ -244,7 +245,7 @@
 		flag = HAWAIII_fnr
 		adjective = HAWAIII_fnr_ADJ
 		tag = HAWAIII_fnr
-		color = map_scandinavia # TODO: LEARN
+		color = map_scandinavia 
 
 		regions = {
 			polynesia_region
@@ -276,7 +277,7 @@
 		flag = YUGOSLAVIA_fnr
 		adjective = YUGOSLAVIA_fnr_ADJ
 		tag = YUGOSLAVIA_fnr
-		color = map_scandinavia # TODO: LEARN
+		color = map_scandinavia 
 
 		regions = {
 			#balkan_region
@@ -316,7 +317,7 @@
 		flag = JAPAN_fnr
 		adjective = JAPAN_fnr_ADJ
 		tag = JAPAN_fnr
-		color = map_scandinavia # TODO: LEARN
+		color = map_scandinavia 
 
 		regions = {
 			japan_region
@@ -351,7 +352,7 @@
 		flag = ANGEVINEMPIRE_fnr
 		adjective = ANGEVINEMPIRE_fnr_ADJ
 		tag = ANGEVINEMPIRE_fnr
-		color = map_scandinavia # TODO: LEARN
+		color = map_scandinavia 
 
 		regions = {
 			france_region
@@ -384,7 +385,7 @@
 		flag = BALTICSTATES_fnr
 		adjective = BALTICSTATES_fnr_ADJ
 		tag = BALTICSTATES_fnr
-		color = map_scandinavia # TODO: LEARN
+		color = map_scandinavia 
 
 		regions = {
 			#baltic_region
@@ -420,7 +421,7 @@
 		flag = ALSACELORRAINE_fnr
 		adjective = ALSACELORRAINE_fnr_ADJ
 		tag = ALSACELORRAINE_fnr
-		color = map_scandinavia # TODO: LEARN
+		color = map_scandinavia 
 
 		regions = {
 			#baltic_region
@@ -548,7 +549,7 @@
 		flag = BASQUECOUN_fnr
 		adjective = BASQUECOUN_fnr_ADJ
 		tag = BASQUECOUN_fnr
-		color = map_scandinavia # TODO: LEARN
+		color = map_scandinavia 
 
 		regions = {
 		}
@@ -568,6 +569,168 @@
 	}
 
 	# Belarus
+
+	BELARUS_fnr = {
+
+		level = 3
+		required_locations_fraction = 0.09
+		rule = plausible
+		potential = {
+			OR = {
+				culture = culture:smolenskian_culture
+				culture = culture:polatskian_culture
+			}
+		}
+		allow = {
+		}
+		
+		name = BELARUS_fnr
+		flag = BELARUS_fnr
+		adjective = BELARUS_fnr_ADJ
+		tag = BELARUS_fnr
+		color = map_ruthenian
+		
+		regions = {
+			ruthenia_region
+			#russian_region
+		}
+		form_effect = {
+		}
+	}
+
+	# Belgium
+
+	BELGIUM_fnr = {
+
+		level = 2
+		required_locations_fraction = 0.44
+		rule = plausible
+		
+		potential = {
+			culture = { has_culture_group = culture_group:german_group }
+		}
+		
+		allow = {
+		}
+
+		name = BELGIUM_fnr
+		flag = BELGIUM_fnr
+		adjective = BELGIUM_fnr_ADJ
+		tag = BELGIUM_fnr
+		color = map_scandinavia 
+
+		regions = {
+		}
+		areas = {
+			brabant_area
+			flanders_area
+		}
+		form_effect = {
+		}
+	}
+
+	# Benelux
+
+	BENELUX_fnr = {
+
+		level = 2
+		required_locations_fraction = 0.44
+		rule = plausible
+		
+		potential = {
+			culture = culture:low_franconian
+			culture = culture:frisian
+		}
+		
+		allow = {
+		}
+
+		name = BENELUX_fnr
+		flag = BENELUX_fnr
+		adjective = BENELUX_fnr_ADJ
+		tag = BENELUX_fnr
+		color = map_scandinavia 
+
+		regions = {
+		}
+		areas = {
+			brabant_area
+			flanders_area
+			holland_area
+			friesland_area
+		}
+		form_effect = {
+		}
+	}
+
+	# Bremen-Verden
+
+	BREMENVERDEN_fnr = {
+
+		level = 2
+		required_locations_fraction = 0.44
+		rule = plausible
+		
+		potential = {
+			OR = {
+				culture = culture:lower_saxon
+				culture = { has_culture_group = culture_group:indian_group }
+			}
+		}
+		
+		allow = {
+		}
+
+		name = BREMENVERDEN_fnr
+		flag = BREMENVERDEN_fnr
+		adjective = BREMENVERDEN_fnr_ADJ
+		tag = BREMENVERDEN_fnr
+		color = map_scandinavia 
+
+		regions = {
+		}
+		areas = {
+			lower_saxony_area
+		}
+		form_effect = {
+		}
+	}
+
+	# Bulgarian Empire (TODO: perhaps firsts and second bulg empire)
+
+	BULGEMPIRE_fnr = {
+
+		level = 3
+		required_locations_fraction = 0.60
+		rule = plausible
+		
+		potential = {
+			culture = culture:bulgarian
+		}
+		
+		allow = {
+		}
+
+		name = BULGEMPIRE_fnr
+		flag = BULGEMPIRE_fnr
+		adjective = BULGEMPIRE_fnr_ADJ
+		tag = BULGEMPIRE_fnr
+		color = map_scandinavia 
+
+		regions = {
+			#balkan_region
+		}
+		areas = {
+			bulgaria_area
+			serbia_area
+			thrace_area
+			macedonia_area
+		}
+		provinces = {
+		}
+		form_effect = {
+		}
+	}	
 
     # Hellas
 
@@ -735,7 +898,7 @@
 		flag = ALASKA_fnr
 		adjective = ALASKA_fnr_ADJ
 		tag = ALASKA_fnr
-		color = map_scandinavia # TODO: LEARN
+		color = map_scandinavia 
 
 		regions = {
 			alaska_region
@@ -763,7 +926,7 @@
 		flag = ARPIT_fnr
 		adjective = ARPIT_fnr_ADJ
 		tag = ARPIT_fnr
-		color = map_scandinavia # TODO: LEARN
+		color = map_scandinavia 
 
 		regions = {
 			france_region
@@ -805,7 +968,7 @@
 		flag = ADRIATICEMP_fnr
 		adjective = ADRIATICEMP_fnr_ADJ
 		tag = ADRIATICEMP_fnr
-		color = map_scandinavia # TODO: LEARN
+		color = map_scandinavia 
 
 		regions = {
 			#italy_region
@@ -934,7 +1097,7 @@
 		flag = KOAQUITAINE_fnr
 		adjective = KOAQUITAINE_fnr_ADJ
 		tag = KOAQUITAINE_fnr
-		color = map_scandinavia # TODO: LEARN
+		color = map_scandinavia 
 
 		regions = {
 
@@ -969,7 +1132,7 @@
 		flag = BALKLEAGUE_fnr
 		adjective = BALKLEAGUE_fnr_ADJ
 		tag = BALKLEAGUE_fnr
-		color = map_scandinavia # TODO: LEARN
+		color = map_scandinavia 
 
 		regions = {
 			#balkan_region
@@ -990,3 +1153,39 @@
 		form_effect = {
 		}
 	}	
+
+	# Bosnia-Serbia
+
+	BOSNIASERBIA_fnr = {
+
+		level = 3
+		required_locations_fraction = 0.50
+		rule = plausible
+		
+		potential = {
+			culture = { has_culture_group = culture_group:slavic_group }
+			culture = { has_culture_group = culture_group:south_slavic_group }
+		}
+		
+		allow = {
+		}
+
+		name = BOSNIASERBIA_fnr
+		flag = BOSNIASERBIA_fnr
+		adjective = BOSNIASERBIA_fnr_ADJ
+		tag = BOSNIASERBIA_fnr_fnr
+		color = map_scandinavia 
+
+		regions = {
+		}
+		areas = {
+			bosnia_area
+			serbia_area
+		}
+		provinces = {
+		}
+		form_effect = {
+		}
+	}	
+
+# end of file do NOT allow LAST line to have any code

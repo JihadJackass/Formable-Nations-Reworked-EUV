@@ -6,52 +6,68 @@
 
     # Balochistan
     BLC_fnr: "Balochistan"
-    BLC_fnr_desc: "TODO: description & flag"
+    BLC_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
     
     # Polabia
     POLB_fnr: "Polabia"
-    POLB_fnr_desc: "TODO: description & flag"
+    POLB_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
 
     # Greater Sorbia
     GSORB_fnr: "Greater Sorbia"
-    GSORB_fnr_desc: "TODO: description & flag"
+    GSORB_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
 
     # Sorbic Kingdom
     KSORB_fnr: "Sorbic Kingdom"
-    KSORB_desc: "TODO: description & flag"  
+    KSORB_desc: "TODO: content, description, color & flag + anything else it needs"  
 
     # Kingdom of Hanover
     KOFHN_fnr: "Kingdom of Hanover"
-    KOFHN_fnr_desc: "TODO: description & flag"
+    KOFHN_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
 
     # Polynesia
     POLYNE_fnr: "Polynesia"
-    POLYNE_fnr_desc: "TODO: description & flag"
+    POLYNE_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
 
     HAWAIII_fnr: "Hawai'i"
-    HAWAIII_fnr_desc: "TODO: description & flag"
+    HAWAIII_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
 
     YUGOSLAVIA_fnr: "Yugoslavia"
-    YUGOSLAVIA_fnr_desc: "TODO: description & flag"
+    YUGOSLAVIA_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
 
     JAPAN_fnr: "Japan"
-    JAPAN_fnr_desc: "TODO: description & flag"
+    JAPAN_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
 
     ANGEVINEMPIRE_fnr: "Angevin Empire"
-    ANGEVINEMPIRE_fnr_desc: "TODO: description & flag"
+    ANGEVINEMPIRE_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
 
     BALTICSTATES_fnr: "Baltic States"
-    BALTICSTATES_fnr_desc: "TODO: description & flag"
+    BALTICSTATES_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
 
     ALSACELORRAINE_fnr: "Alsace-Lorraine"
-    ALSACELORRAINE_fnr_desc: "TODO: description & flag"
+    ALSACELORRAINE_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
 
     KOAQUITAINE_fnr: "Kingdom of Aquitaine"
-    KOAQUITAINE_fnr_desc: "TODO: description & flag"
+    KOAQUITAINE_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
 
     # Rhine Confederation
     CRHINE_fnr: "Confederation of the Rhine"
-    CRHINE_fnr_desc: "TODO: description & flag"
+    CRHINE_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
+
+    # Belarus
+    BELARUS_fnr: "Belarus"
+    BELARUS_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
+
+    # Benelux
+    BENELUX_fnr: "Benelux"
+    BENELUX_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
+
+    # Bremen-Verden
+    BREMENVERDEN_fnr: "Bremen-Verden"
+    BREMENVERDEN_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
+
+    # Bulgarian Empire
+    BULGEMPIRE_fnr: "Bulgarian Empire"
+    BULGEMPIRE_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
 
   ############################
   # NON-HISTORICAL FORMABLES #
@@ -59,30 +75,34 @@
 
     # Alaska
     ALASKA_fnr: "Alaska"
-    ALASKA_fnr_desc: "TODO: description & flag"
+    ALASKA_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
 
     # Arpitania
     ARPIT_fnr: "Arpitania"
-    ARPIT_fnr_desc: "TODO: description & flag"
+    ARPIT_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
 
     # Adriatic Empire
     ADRIATICEMP_fnr: "Adriatic Empire"
-    ADRIATICEMP_fnr_desc: "TODO: description & flag"
+    ADRIATICEMP_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
 
     ALPLAND_fnr: "Alpland"
-    ALPLAND_fnr_desc: "TODO: description & flag"
+    ALPLAND_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
 
     ANGLODUTCH_fnr: "Anglo-Dutch Union"
-    ANGLODUTCH_fnr_desc: "TODO: description & flag"
+    ANGLODUTCH_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
 
     AUSTRIANEMPIRE_fnr: "Austrian Empire"
-    AUSTRIANEMPIRE_fnr_desc: "TODO: description & flag"
+    AUSTRIANEMPIRE_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
 
     AUSTRIABAVARIA_fnr: "Austria-Bavaria"
-    AUSTRIABAVARIA_fnr_desc: "TODO: description & flag"
+    AUSTRIABAVARIA_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
 
     BALKLEAGUE_fnr: "Balkan League"
-    BALKLEAGUE_fnr_desc: "TODO: description & flag"
+    BALKLEAGUE_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
 
     BASQUECOUN_fnr: "Basque Country"
-    BASQUECOUN_fnr_desc: "TODO: description & flag"
+    BASQUECOUN_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
+
+    # bosnia serbia
+    BOSNIASERBIA_fnr: "Bosnia-Serbia"
+    BOSNIASERBIA_fnr_desc: "TODO: content, description, color & flag + anything else it needs"

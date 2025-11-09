@@ -1823,8 +1823,8 @@ RUS_f = {
 	rule = historical
 
 	potential = {
-		OR = {
-			culture = { 
+		culture = { 
+			OR = {
 				has_culture_group = culture_group:russian_group 
 				has_culture_group = culture_group:slavic_group 
 			}
@@ -1846,6 +1846,8 @@ RUS_f = {
 		russian_region
 		ural_region
 		steppes_region
+		ruthenia_region
+
 	}
 	form_effect = {
 		if = {
