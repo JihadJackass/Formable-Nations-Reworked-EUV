@@ -49,9 +49,17 @@
     KOAQUITAINE_fnr: "Kingdom of Aquitaine"
     KOAQUITAINE_fnr_desc: "TODO: description & flag"
 
+    # Rhine Confederation
+    CRHINE_fnr: "Confederation of the Rhine"
+    CRHINE_fnr_desc: "TODO: description & flag"
+
   ############################
   # NON-HISTORICAL FORMABLES #
   ############################
+
+    # Alaska
+    ALASKA_fnr: "Alaska"
+    ALASKA_fnr_desc: "TODO: description & flag"
 
     # Arpitania
     ARPIT_fnr: "Arpitania"

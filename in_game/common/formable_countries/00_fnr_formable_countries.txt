@@ -569,9 +569,180 @@
 
 	# Belarus
 
+    # Hellas
+
+	HELLAS_fnr = {
+		level = 2
+		required_locations_fraction = 1
+		rule = historical
+
+		potential = {
+		}
+
+		allow = {
+		}
+
+		name = HELLAS_fnr
+		flag = HELLAS_fnr
+		adjective = HELLAS_fnr_ADJ
+		tag = HELLAS_fnr
+		color = map_GRC
+
+		areas = {
+			northern_greece_area
+			morea_area
+			aegean_archipelago_area
+		}
+		provinces = {
+			upper_macedonia_province
+			lower_macedonia_province
+			central_macedonia_province
+			chalkidiki_province
+			evros_province
+		}
+		locations = {
+			konitsa
+			argyrokastro
+			butrint
+		}
+	}
+
+	# Rhine Confed
+
+	CRHINE_fnr = {
+		level = 3
+		required_locations_fraction = 1
+		rule = historical
+
+		potential = {
+			culture = { has_culture_group = culture_group:german_group }
+		}
+
+		allow = {
+
+		}
+
+		name = CRHINE_fnr
+		flag = CRHINE_fnr
+		adjective = CRHINE_fnr_ADJ
+		tag = CRHINE_fnr
+		color = map_RHE
+
+		areas = {
+			franconia_area
+			bavaria_area
+			swabia_area
+			mecklenburg_area
+		}
+
+		provinces = {
+			rhine_valley_province
+			schwarzwald_province
+			kraichgau_province
+			odenwald_province
+			taunus_province
+			westerwald
+			bergisches_land_province
+			sauerland_province
+			lippe_province
+			schwerin_province
+			brunswick_province
+			altmark_province
+			saale_province
+			leipziger_bucht_province
+			erzgebirge_province
+			flaming_province
+			niederlausitz_province
+			oberlausitz_province
+			elbtal_province
+			wetterau_province
+			spessart_province
+			vogelsberg_province
+			hessen_bergland_province
+			thuringer_becken_province
+			vogtland_province
+			thuringer_wald_province
+			leine_province
+			harz_province
+			hanover_province
+			unterinntal_province
+			oberinntal_province
+			salzburger_land_province
+			vorarlberg_province
+		}
+
+		locations = {
+			heidelberg
+			darmstadt
+			offenbach
+			dusseldorf
+			luneburg
+			ebstorf
+			fallingbostel
+			buckeburg
+			neustadt_am_rubenberge
+			essen
+			bochum
+			recklinghausen
+			dortmund
+			hamm
+			magdeburg
+			calbe
+			celle
+			winsen_aller
+			isenhagen
+			uelzen
+			dannenberg
+			luchow
+			halberstadt
+			quedlinburg
+			bernburg
+			scharding
+			ried
+			st_georgen
+			braunau
+			brixen
+			bruncek
+			sterzing
+			bischofshofen
+			saalfelden
+			mittersill
+			bruneck
+		}
+	}
+
 ############################
 # NON-HISTORICAL FORMABLES #
 ############################
+
+	# Alaska
+
+	ALASKA_fnr = {
+		level = 1
+		required_locations_fraction = 0.70
+		rule = plausible
+
+		potential = {
+		}
+
+		allow = {
+			capital = {
+				region = region:alaska_region
+			}
+		}
+
+		name = ALASKA_fnr
+		flag = ALASKA_fnr
+		adjective = ALASKA_fnr_ADJ
+		tag = ALASKA_fnr
+		color = map_scandinavia # TODO: LEARN
+
+		regions = {
+			alaska_region
+		}
+		form_effect = {
+		}
+	}
 
 	# Arpitania
 

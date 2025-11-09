@@ -1,0 +1,7 @@
+﻿ALASKA_fnr = {
+	color = map_ahiler
+	color2 = rgb { 241 198 188 }
+
+	culture_definition = turkish_culture
+	religion_definition = shia
+}
