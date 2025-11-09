@@ -7,6 +7,7 @@
 # - FLAGS
 # - DESCRIPTIONS
 # - ADJECTIVES
+# - rule = plausible (set proper formable rule for all)
 # - ONCE MAJORITY FORMABLES ARE DONE, GO OVER EVERY ONE AND IMPROVE/FIX
 
 ########################
@@ -359,7 +360,6 @@
 			great_britain_region
 		}
 		areas = {
-			#savoy_area
 		}
 		form_effect = {
 		}
@@ -592,7 +592,6 @@
 		
 		regions = {
 			ruthenia_region
-			#russian_region
 		}
 		form_effect = {
 		}
@@ -718,7 +717,6 @@
 		color = map_scandinavia 
 
 		regions = {
-			#balkan_region
 		}
 		areas = {
 			bulgaria_area
@@ -727,6 +725,203 @@
 			macedonia_area
 		}
 		provinces = {
+		}
+		form_effect = {
+		}
+	}	
+
+	# British Empire (TODO: finish, lots of territory)
+
+	BRITISHEMPIRE_fnr = {
+
+		level = 4
+		required_locations_fraction = 0.90
+		rule = plausible
+		
+		potential = {
+			culture = { has_culture_group = culture_group:british_group }
+		}
+		
+		allow = {
+		}
+
+		name = BRITISHEMPIRE_fnr
+		flag = BRITISHEMPIRE_fnr
+		adjective = BRITISHEMPIRE_fnr_ADJ
+		tag = BRITISHEMPIRE_fnr
+		color = map_scandinavia 
+
+		regions = {
+			great_britain_region
+			deccan_region
+			central_india_region
+		}
+		areas = {
+		}
+		form_effect = {
+		}
+	}
+
+	# Alpland
+
+	ALPLAND_fnr = {
+		level = 3
+		required_locations_fraction = 0.80
+		rule = historical
+
+		potential = {
+			culture = { has_culture_group = culture_group:swiss_group }
+		}
+
+		allow = {
+		}
+		
+		name = ALPLAND_fnr
+		flag = ALPLAND_fnr
+		adjective = ALPLAND_fnr_ADJ
+		tag = ALPLAND_fnr
+		color = map_SWI
+
+		areas = {
+			central_switzerland_area
+			eastern_switzerland_area
+			western_switzerland_area
+		}
+		form_effect = {
+			set_country_rank_effect = { rank = country_rank:rank_kingdom }
+			unlock_government_reform_effect = { type = autonomous_swiss_cantons_reform }
+			add_replacing_gov_reform = { reform = government_reform:autonomous_swiss_cantons_reform }
+			if = {
+				limit = {
+					NOT = { government_type = government_type:monarchy }
+					NOT = { government_type = government_type:theocracy }
+					NOT = { government_type = government_type:republic }
+				}
+				change_government_type = government_type:republic
+			}
+		}
+	}
+
+	# Cisalpina (Cisalpine Republic)
+
+	CISALPINA_fnr = {
+		level = 3
+		required_locations_fraction = 0.80
+		rule = historical
+
+		potential = {
+			OR = { 
+				culture = { has_culture_group = culture_group:swiss_group }
+				culture = { has_culture_group = culture_group:italian_group }
+			}
+		}
+
+		allow = {
+		}
+		
+		name = CISALPINA_fnr
+		flag = CISALPINA_fnr
+		adjective = CISALPINA_fnr_ADJ
+		tag = CISALPINA_fnr
+		color = map_SWI
+
+		areas = {
+			lombardy_area
+			emilia_area
+		}
+		form_effect = {
+		}
+	}
+
+
+	# Commonwealth of England
+
+	ENGLISHCOMMONWEALTH_fnr = {
+
+		level = 3
+		required_locations_fraction = 0.99
+		rule = plausible
+		
+		potential = {
+			culture = { has_culture_group = culture_group:british_group }
+		}
+		
+		allow = {
+			always = no # TODO add historical event reqs
+		}
+
+		name = ENGLISHCOMMONWEALTH_fnr
+		flag = ENGLISHCOMMONWEALTH_fnr
+		adjective = ENGLISHCOMMONWEALTH_fnr_ADJ
+		tag = ENGLISHCOMMONWEALTH_fnr
+		color = map_scandinavia 
+
+		regions = {
+		}
+		areas = {
+			home_counties_area
+			east_anglia_area
+			midlands_area
+			west_country_area
+		}
+		form_effect = {
+		}
+	}
+
+	# Czechoslovakia 
+
+	CZECKSLOVAK_fnr = {
+		level = 3
+		required_locations_fraction = 1
+		rule = historical
+
+		potential = {
+			OR = {
+				culture = culture:czech
+				culture = culture:moravian
+				culture = culture:slovak
+			}
+		}
+
+		allow = {
+		}
+
+		name = CZECKSLOVAK_fnr
+		flag = CZECKSLOVAK_fnr
+		adjective = CZECKSLOVAK_fnr_ADJ
+		tag = CZECKSLOVAK_fnr
+		color = map_RHE
+
+		areas = {
+			bohemia_area
+			moravia_area
+			slovakia_area
+		}
+	}
+
+	# Ducal Prussia
+
+	DUCALPRUSSIA_fnr = {
+		level = 2
+		required_locations_fraction = 0.30
+		rule = historical
+
+		potential = {
+			culture = culture:prussian
+		}
+
+		allow = {
+			always = no # TODO: historical reqs
+		}
+		
+		name = DUCALPRUSSIA_fnr
+		flag = PRU
+		adjective = DUCALPRUSSIA_fnr_ADJ
+		tag = DUCALPRUSSIA_fnr
+		color = map_PRU
+
+		areas = {
+			prussia_area
 		}
 		form_effect = {
 		}
@@ -873,6 +1068,7 @@
 			bruneck
 		}
 	}
+
 
 ############################
 # NON-HISTORICAL FORMABLES #
@@ -1181,6 +1377,185 @@
 		areas = {
 			bosnia_area
 			serbia_area
+		}
+		provinces = {
+		}
+		form_effect = {
+		}
+	}	
+
+	# Catholica Russica
+
+	CATHOLICARUS_fnr = {
+		level = 4
+		required_locations_fraction = 0.5
+		rule = historical
+
+		potential = {
+			culture = { 
+				OR = {
+					has_culture_group = culture_group:russian_group 
+					has_culture_group = culture_group:slavic_group 
+				}
+			}
+		}
+
+		allow = {
+			religion = religion:catholic
+			owns = location:moscow
+			owns = location:novgorod
+		}
+		
+		name = CATHOLICARUS_fnr
+		flag = CATHOLICARUS_fnr
+		adjective = CATHOLICARUS_fnr_ADJ
+		tag = CATHOLICARUS_fnr
+		color = map_RUS
+
+		regions = {
+			russian_region
+			ural_region
+			steppes_region
+			ruthenia_region
+		}
+		form_effect = {
+			if = {
+				limit = { country_rank_level < 4 }
+				set_country_rank_effect = { rank = country_rank:rank_empire }
+			}
+			
+		}
+	}
+
+	# Celtic Union
+
+	CELTICUNION_fnr = {
+
+		level = 4
+		required_locations_fraction = 0.60
+		rule = plausible
+		
+		potential = {
+			culture = { has_culture_group = culture_group:british_group }
+		}
+		
+		allow = {
+		}
+
+		name = CELTICUNION_fnr_fnr
+		flag = IRE # TODO
+		adjective = CELTICUNION_fnr_ADJ
+		tag = CELTICUNION_fnr
+		color = map_scandinavia 
+
+		regions = {
+			great_britain_region
+			ireland_region
+		}
+		areas = {
+			brittany_area
+		}
+		form_effect = {
+		}
+	}	
+
+	# Carolingian Empire (TODO: finish, lots of territory)
+
+	CAROLINGIAN_fnr = {
+
+		level = 4
+		required_locations_fraction = 0.90
+		rule = plausible
+		
+		potential = {
+			culture = { has_culture_group = culture_group:french_group }
+		}
+		
+		allow = {
+		}
+
+		name = CAROLINGIAN_fnr
+		flag = CAROLINGIAN_fnr
+		adjective = CAROLINGIAN_fnr_ADJ
+		tag = CAROLINGIAN_fnr
+		color = map_scandinavia 
+
+		regions = {
+			france_region
+			north_german_region
+			south_german_region
+			italy_region
+		}
+		areas = {
+		}
+		form_effect = {
+		}
+	}
+
+	# Cordoba
+	CORDOBA_fnr = { 
+
+		level = 3
+		required_locations_fraction = 0.44
+		rule = plausible
+		
+		potential = {
+			OR = {
+				culture = { has_culture_group = culture_group:maghrebi_group }
+				culture = { has_culture_group = culture_group:iberian_group }
+			}
+			religion.group = religion_group:muslim
+		}
+
+		allow = {
+		}
+		
+		name = CORDOBA_fnr
+		flag = CORDOBA_fnr
+		adjective = CORDOBA_fnr_ADJ
+		tag = CORDOBA_fnr
+		color = map_ADU
+		
+		areas = {
+			andalusia_area
+			granada_area
+			extremadura_area
+			murcia_area
+		}
+		form_effect = {
+		}
+	}
+
+	# Dacia
+	DACIA_fnr = {
+
+		level = 2
+		required_locations_fraction = 0.70
+		rule = plausible
+		
+		potential = {
+			OR = {
+				culture = culture:bulgarian
+				culture = culture:wallachian
+				culture = culture:moldovan
+			}
+		}
+		
+		allow = {
+		}
+
+		name = DACIA_fnr
+		flag = DACIA_fnr
+		adjective = DACIA_fnr_ADJ
+		tag = DACIA_fnr
+		color = map_scandinavia 
+
+		regions = {
+		}
+		areas = {
+			bulgaria_area
+			wallachia_area
+			moldavia_area
 		}
 		provinces = {
 		}

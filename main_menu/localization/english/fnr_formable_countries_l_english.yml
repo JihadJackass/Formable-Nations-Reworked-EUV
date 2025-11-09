@@ -69,6 +69,26 @@
     BULGEMPIRE_fnr: "Bulgarian Empire"
     BULGEMPIRE_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
 
+    # British Empire
+    BRITISHEMPIRE_fnr: "British Empire"
+    BRITISHEMPIRE_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
+
+    # Cisalpina
+    CISALPINA_fnr: "Cisalpina"
+    CISALPINA_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
+
+    # Commonwealth of England
+    ENGLISHCOMMONWEALTH_fnr: "Commonwealth of England"
+    ENGLISHCOMMONWEALTH_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
+
+    # Czechoslovakia
+    CZECKSLOVAK_fnr: "Czechoslovakia"
+    CZECKSLOVAK_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
+
+    # Ducal Prussia
+    DUCALPRUSSIA_fnr: "Ducal Prussia"
+    DUCALPRUSSIA_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
+
   ############################
   # NON-HISTORICAL FORMABLES #
   ############################
@@ -106,3 +126,23 @@
     # bosnia serbia
     BOSNIASERBIA_fnr: "Bosnia-Serbia"
     BOSNIASERBIA_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
+
+    # Catholica Russica
+    CATHOLICARUS_fnr: "Catholica Russica"
+    CATHOLICARUS_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
+
+    # Celtic Union
+    CELTICUNION_fnr: "Celtic Union"
+    CELTICUNION_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
+
+    # Carolingian Empire
+    CAROLINGIAN_fnr: "Carolingian Empire"
+    CAROLINGIAN_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
+
+    # Cordoba
+    CORDOBA_fnr: "Cordoba"
+    CORDOBA_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
+
+    # Dacia
+    DACIA_fnr: "Dacia"
+    DACIA_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
