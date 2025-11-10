@@ -113,6 +113,38 @@
     FRENCHEMPIRE_fnr: "French Empire"
     FRENCHEMPIRE_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
 
+    # German Empire
+    GERMANEMPIRE_fnr: "German Empire"
+    GERMANEMPIRE_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
+
+    # German Reich
+    GERMANREICH_fnr: "German Reich"
+    GERMANREICH_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
+
+    # Greater German Reich
+    GREATERGERMANREICH_fnr: "Greater German Reich"
+    GREATERGERMANREICH_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
+
+    # Hanseatic League
+    HANSALEAGUE_fnr: "Hanseatic League"
+    HANSALEAGUE_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
+
+    # Hesse-Nassau
+    HESSENASSAU_fnr: "Hesse-Nassau"
+    HESSENASSAU_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
+
+    # Italian Empire
+    ITALIANEMPIRE_fnr: "Italian Empire"
+    ITALIANEMPIRE_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
+
+    # Kalmar Union
+    KALMARUNION_fnr: "Kalmar Union"
+    KALMARUNION_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
+
+    # Latin Empire
+    LATINEMPIRE_fnr: "Latin Empire"
+    LATINEMPIRE_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
+
   ############################
   # NON-HISTORICAL FORMABLES #
   ############################
@@ -190,3 +222,39 @@
     # Gallic Empire
     GALLICEMPIRE_fnr: "Gallic Empire"
     GALLICEMPIRE_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
+
+    # Hungarian Empire
+    HUNGARIANEMPIRE_fnr: "Hungarian Empire"
+    HUNGARIANEMPIRE_desc: "TODO: content, description, color & flag + anything else it needs"
+
+    # Iberian Empire
+    IBERIANEMPIRE_fnr: "Iberian Empire"
+    IBERIANEMPIRE_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
+
+    # Italian Merchant Alliance
+    ITALIANMERCHANT_fnr: "Italian Merchant Alliance"
+    ITALIANMERCHANT_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
+
+    # Jagiellonian Empire
+    JAGIELLONIAN_fnr: "Jagiellonian Empire"
+    JAGIELLONIAN_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
+
+    # Kyivan Rus
+    KYIVANRUS_fnr: "Kyivan Rus"
+    KYIVANRUS_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
+
+    # Ummayads
+    UMMAYADS_fnr: "Ummayad Caliphate"
+    UMMAYADS_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
+
+    # Kingdom of Germany
+    KOFGERMANY_fnr: "Kingdom of Germany"
+    KOFGERMANY_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
+
+    # Kingdom of God
+    KOFGOD_fnr: "Kingdom of God"
+    KOFGOD_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
+
+    # Langobards
+    LANGOBARDS_fnr: "Langobards"
+    LANGOBARDS_fnr_desc: "TODO: content, description, color & flag + anything else it needs"

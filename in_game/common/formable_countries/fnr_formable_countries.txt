@@ -997,6 +997,10 @@
 		rule = historical
 
 		potential = {
+			OR = {
+				culture = culture:hellenic
+				culture = { has_culture_group = culture_group:greek_group }
+			}
 		}
 
 		allow = {
@@ -1106,6 +1110,284 @@
 		}
 	}	
 
+	# German Empire
+	GERMANEMPIRE_fnr = {
+
+		level = 4
+		required_locations_fraction = 0.60
+		rule = plausible
+		
+		potential = {
+			culture = { has_culture_group = culture_group:german_group }
+		}
+		
+		allow = {
+		}
+
+		name = GERMANEMPIRE_fnr
+		flag = GERMANEMPIRE_fnr
+		adjective = GERMANEMPIRE_fnr_ADJ
+		tag = GERMANEMPIRE_fnr
+		color = map_GER
+
+		regions = {
+			north_german_region
+			south_german_region
+		}
+		form_effect = {
+		}
+	}	
+
+	# German Reich
+	GERMANREICH_fnr = {
+
+		level = 4
+		required_locations_fraction = 0.60
+		rule = plausible
+		
+		potential = {
+			culture = { has_culture_group = culture_group:german_group }
+		}
+		
+		allow = {
+		}
+
+		name = GERMANREICH_fnr
+		flag = GERMANREICH_fnr
+		adjective = GERMANREICH_fnr_ADJ
+		tag = GERMANREICH_fnr
+		color = map_GER
+
+		regions = {
+			north_german_region
+			south_german_region
+		}
+		form_effect = {
+		}
+	}	
+
+	# Greater German Reich
+	GREATERGERMANREICH_fnr = {
+
+		level = 4
+		required_locations_fraction = 0.60
+		rule = plausible
+		
+		potential = {
+			culture = { has_culture_group = culture_group:german_group }
+		}
+		
+		allow = {
+		}
+
+		name = GREATERGERMANREICH_fnr
+		flag = GREATERGERMANREICH_fnr
+		adjective = GREATERGERMANREICH_fnr_ADJ
+		tag = GREATERGERMANREICH_fnr
+		color = map_GER
+
+		regions = {
+			north_german_region
+			south_german_region
+		}
+		form_effect = {
+		}
+	}	
+
+	# Hanseatic League
+
+	HANSALEAGUE_fnr = {
+
+		level = 3
+		required_locations_fraction = 0.60
+		rule = plausible
+		
+		potential = {
+			OR = {
+				culture = { has_culture_group = culture_group:german_group }
+				culture = { has_culture_group = culture_group:scandinavian_group }
+				culture = { has_culture_group = culture_group:baltic_group }
+			}
+		}
+		
+		allow = {
+			# TODO: proper requirements based on hansa league
+			is_subject_of = hanseatic_member
+		}
+
+		name = HANSALEAGUE_fnr
+		flag = HANSALEAGUE_fnr
+		adjective = HANSALEAGUE_fnr_ADJ
+		tag = HANSALEAGUE_fnr
+		color = map_GER
+
+		regions = {
+			north_german_region
+			baltic_region
+			scandinavian_region
+		}
+		form_effect = {
+		}
+	}
+
+	# Hesse-Nassau
+	HESSENASSAU_fnr = {
+
+		level = 3
+		required_locations_fraction = 0.80
+		rule = plausible
+		
+		potential = {
+			culture = { has_culture_group = culture_group:german_group }
+		}
+		
+		allow = {
+		}
+
+		name = HESSENASSAU_fnr
+		flag = HESSENASSAU_fnr
+		adjective = HESSENASSAU_fnr_ADJ
+		tag = HESSENASSAU_fnr
+		color = map_GER
+
+		areas = {
+			hesse_area
+		}
+		provinces = {
+			sauerland_province
+		}
+		form_effect = {
+		}
+	}
+
+	# Italian Empire
+	ITALIANEMPIRE_fnr = {
+		level = 4
+		required_locations_fraction = 0.90
+		rule = historical
+
+		potential = {
+			culture = { has_culture_group = culture_group:italian_group }
+		}
+
+		allow = {
+		}
+		
+		name = ITALIANEMPIRE_fnr
+		flag = ITA
+		adjective = ITALIANEMPIRE_fnr_ADJ
+		tag = ITALIANEMPIRE_fnr
+		color = map_ITA
+
+		regions = {
+			italy_region
+		}
+		areas = {
+			albania_area
+		}
+		form_effect = {
+		}
+	}	
+
+	# Kalmar Union
+	KALMARUNION_fnr = {
+
+		level = 3
+		required_locations_fraction = 0.75
+		rule = plausible
+		
+		potential = {
+			culture = { has_culture_group = culture_group:scandinavian_group }
+		}
+		
+		allow = {
+		}
+
+		name = KALMARUNION_fnr
+		flag = KALMARUNION_fnr
+		adjective = KALMARUNION_fnr_ADJ
+		tag = KALMARUNION_fnr
+		color = map_scandinavia
+
+		regions = {
+			scandinavian_region
+		}
+		areas = {
+			iceland_area
+		}
+		form_effect = {
+		}
+	}
+
+	# Kyivan Rus
+	KYIVANRUS_fnr = {
+
+		level = 4
+		required_locations_fraction = 0.75
+		rule = plausible
+		potential = {
+			OR = {
+				culture = culture:halychian_culture
+				culture = culture:polatskian_culture
+				culture = culture:polesian_culture
+				culture = culture:ruthenian
+				culture = culture:severian
+				culture = culture:volhynian_culture
+				culture = culture:rusyn_culture
+				culture = culture:cossack_culture
+				culture = culture:smolenskian_culture
+			}
+		}
+		allow = {
+			owns = location:kyiv
+		}
+		
+		name = KYIVANRUS_fnr
+		flag = KYIVANRUS_fnr
+		adjective = KYIVANRUS_fnr_ADJ
+		tag = KYIVANRUS_fnr
+		color = map_ruthenian
+		
+		regions = {
+			ruthenia_region
+		}
+		areas = {
+			lithuania_area
+		}
+		form_effect = {
+		}
+	}
+
+	# Latin Empire
+
+	LATINEMPIRE_fnr = {
+		level = 4
+		required_locations_fraction = 0.40
+		rule = historical
+
+		potential = {
+			OR = {
+				culture = culture:hellenic
+				culture = { has_culture_group = culture_group:greek_group }
+				culture.language = language:latin_language
+			}
+		}
+
+		allow = {
+		}
+
+		name = LATINEMPIRE_fnr
+		flag = LATINEMPIRE_fnr
+		adjective = LATINEMPIRE_fnr_ADJ
+		tag = LATINEMPIRE_fnr
+		color = map_GRC
+
+		regions = {
+			balkan_region
+			anatolia_region
+		}
+	}	
+
     # Hellas
 
 	HELLAS_fnr = {
@@ -1144,7 +1426,7 @@
 		}
 	}
 
-	# Rhine Confed
+	# The Rhine Confederation
 
 	CRHINE_fnr = {
 		level = 3
@@ -1888,6 +2170,249 @@
 
 		regions = {
 			france_region
+		}
+		form_effect = {
+		}
+	}	
+
+	# Hungarian Empire
+	HUNGARIANEMPIRE_fnr = {
+
+		level = 4
+		required_locations_fraction = 0.85
+		rule = plausible
+		
+		potential = {
+			culture = { has_culture_group = culture_group:hungarian_group }
+		}
+		
+		allow = {
+		}
+
+		name = HUNGARIANEMPIRE_fnr
+		flag = HUNGARIANEMPIRE_fnr
+		adjective = HUNGARIANEMPIRE_fnr_ADJ
+		tag = HUNGARIANEMPIRE_fnr
+		color = map_HUN
+
+		regions = {
+			carpathia_region
+		}
+		form_effect = {
+		}
+	}	
+
+	# Iberian Empire
+	IBERIANEMPIRE_fnr = {
+
+		level = 4
+		required_locations_fraction = 0.85
+		rule = plausible
+		
+		potential = {
+			culture = { has_culture_group = culture_group:iberian_group }
+		}
+		
+		allow = {
+		}
+
+		name = IBERIANEMPIRE_fnr
+		flag = IBERIANEMPIRE_fnr
+		adjective = IBERIANEMPIRE_fnr_ADJ
+		tag = IBERIANEMPIRE_fnr
+		color = map_scandinavia 
+
+		regions = {
+			iberia_region
+		}
+		form_effect = {
+		}
+	}	
+	
+	# Italian Merchant Alliance
+	ITALIANMERCHANT_fnr = {
+		level = 3
+		required_locations_fraction = 0.35
+		rule = historical
+
+		potential = {
+			culture = { has_culture_group = culture_group:italian_group }
+		}
+
+		allow = {
+			#government_type = government_type:republic
+		}
+		
+		name = ITALIANMERCHANT_fnr
+		flag = VEN
+		adjective = ITALIANMERCHANT_fnr_ADJ
+		tag = ITALIANMERCHANT_fnr
+		color = map_ITA
+
+		regions = {
+			italy_region
+		}
+		form_effect = {
+		}
+	}	
+
+	# Jagiellonian Empire
+	JAGIELLONIAN_fnr = {
+
+		level = 3
+		required_locations_fraction = 0.75
+		rule = plausible
+		potential = {
+			OR = {
+				culture = { has_culture_group = culture_group:polish_group }
+				culture = culture:polish
+				culture = culture:halychian_culture
+				culture = culture:polatskian_culture
+				culture = culture:polesian_culture
+				culture = culture:ruthenian
+				culture = culture:severian
+				culture = culture:volhynian_culture
+				culture = culture:rusyn_culture
+				culture = culture:cossack_culture
+				culture = culture:smolenskian_culture
+			}
+		}
+		allow = {
+		}
+		
+		name = JAGIELLONIAN_fnr
+		flag = JAGIELLONIAN_fnr
+		adjective = JAGIELLONIAN_fnr_ADJ
+		tag = JAGIELLONIAN_fnr
+		color = map_ruthenian
+		
+		regions = {
+			ruthenia_region
+			baltic_region
+		}
+		form_effect = {
+		}
+	}
+
+	# Ummayad Caliphate
+	UMMAYADS_fnr = {
+
+		level = 4
+		required_locations_fraction = 0.35
+		rule = plausible
+		
+		potential = {
+			OR = {
+				culture = { has_culture_group = culture_group:iranian_group }
+				culture = { has_culture_group = culture_group:arabic_group }
+				culture = { has_culture_group = culture_group:maghrebi_group }
+				culture = { has_culture_group = culture_group:iberian_group }
+			}
+		}
+		
+		allow = {
+		}
+
+		name = UMMAYADS_fnr
+		flag = UMMAYADS_fnr
+		adjective = UMMAYADS_fnr_ADJ
+		tag = UMMAYADS_fnr
+		color = map_scandinavia 
+
+		regions = {
+			crescent_region
+			caucasus_region
+			persia_region
+			egypt_region
+			maghreb_region
+			iberia_region
+		}
+		areas = {
+			cilicia_area
+		}
+		form_effect = {
+		}
+	}	
+
+	# Kingdom of Germany (post carolingian germany)
+	KOFGERMANY_fnr = {
+
+		level = 3
+		required_locations_fraction = 0.40
+		rule = plausible
+		
+		potential = {
+			culture = { has_culture_group = culture_group:german_group }
+		}
+		
+		allow = {
+		}
+
+		name = KOFGERMANY_fnr
+		flag = KOFGERMANY_fnr
+		adjective = KOFGERMANY_fnr_ADJ
+		tag = KOFGERMANY_fnr
+		color = map_GER
+
+		regions = {
+			north_german_region
+			south_german_region
+			italy_region
+		}
+		form_effect = {
+		}
+	}	
+	
+	# Kingdom of God
+	# TODO: wont show for papacy, I'm assuming it is prevented from seeing formables or something
+	KOFGOD_fnr = {
+		level = 3
+		required_locations_fraction = 0.35
+		rule = historical
+
+		potential = {
+			culture = { has_culture_group = culture_group:italian_group }
+			tag = c:PAP
+		}
+
+		allow = {
+			tag = c:PAP
+		}
+		
+		name = KOFGOD_fnr
+		flag = KOFGOD_fnr
+		adjective = KOFGOD_fnr_ADJ
+		tag = KOFGOD_fnr
+		color = map_ITA
+
+		regions = {
+			italy_region
+		}
+		form_effect = {
+		}
+	}		
+
+	# Langobards
+	LANGOBARDS_fnr = {
+		level = 3
+		required_locations_fraction = 0.45
+		rule = historical
+
+		potential = {
+			culture = { has_culture_group = culture_group:italian_group }
+		}
+
+		allow = {
+		}
+		
+		name = LANGOBARDS_fnr
+		flag = LANGOBARDS_fnr
+		adjective = LANGOBARDS_fnr_ADJ
+		tag = LANGOBARDS_fnr
+		color = map_ITA
+
+		regions = {
+			italy_region
 		}
 		form_effect = {
 		}
