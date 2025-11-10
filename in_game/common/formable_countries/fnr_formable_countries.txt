@@ -133,8 +133,6 @@
 		color = map_scandinavia 
 
 		regions = {
-			north_german_region
-			south_german_region
 		}
 		areas = {
 			franconia_area
@@ -833,7 +831,6 @@
 		}
 	}
 
-
 	# Commonwealth of England
 
 	ENGLISHCOMMONWEALTH_fnr = {
@@ -922,6 +919,188 @@
 
 		areas = {
 			prussia_area
+		}
+		form_effect = {
+		}
+	}	
+
+	# Ukraine
+
+	UKRAINE_fnr = {
+
+		level = 3
+		required_locations_fraction = 0.75
+		rule = plausible
+		potential = {
+			OR = {
+				culture = culture:halychian_culture
+				culture = culture:polatskian_culture
+				culture = culture:polesian_culture
+				culture = culture:ruthenian
+				culture = culture:severian
+				culture = culture:volhynian_culture
+				culture = culture:rusyn_culture
+				culture = culture:cossack_culture
+				culture = culture:smolenskian_culture
+			}
+		}
+		allow = {
+			owns = location:kyiv
+		}
+		
+		name = UKRAINE_fnr
+		flag = UKR
+		adjective = UKRAINE_fnr_ADJ
+		tag = UKRAINE_fnr
+		color = map_ruthenian
+		
+		regions = {
+			ruthenia_region
+		}
+		form_effect = {
+		}
+	}
+
+	# Donetsk People's Republic
+	DONETSKPR_fnr = {
+
+		level = 3
+		required_locations_fraction = 0.01
+		rule = plausible
+		potential = {
+			OR = {
+				culture = culture:mishar
+				culture = { has_culture_group = culture_group:polish_group }
+			}
+		}
+		allow = {
+		}
+		
+		name = DONETSKPR_fnr
+		flag = DONETSKPR_fnr
+		adjective = DONETSKPR_fnr_ADJ
+		tag = DONETSKPR_fnr
+		color = map_ruthenian
+		
+		regions = {
+			steppes_region
+			ruthenia_region
+		}
+		form_effect = {
+		}
+	}	
+
+	# Eastern Roman Empire
+	EASTROMANEMPIRE_fnr = {
+		level = 4
+		required_locations_fraction = 0.40
+		rule = historical
+
+		potential = {
+		}
+
+		allow = {
+		}
+
+		name = EASTROMANEMPIRE_fnr
+		flag = ROM
+		adjective = EASTROMANEMPIRE_fnr_ADJ
+		tag = EASTROMANEMPIRE_fnr
+		color = map_GRC
+
+		regions = {
+			balkan_region
+			anatolia_region
+		}
+	}
+
+	# Emilia-Romagna
+	EMILIAROMAGNA_fnr = {
+		level = 3
+		required_locations_fraction = 0.80
+		rule = historical
+
+		potential = {
+			culture = { has_culture_group = culture_group:italian_group }
+		}
+
+		allow = {
+		}
+		
+		name = EMILIAROMAGNA_fnr
+		flag = EMILIAROMAGNA_fnr
+		adjective = EMILIAROMAGNA_fnr_ADJ
+		tag = EMILIAROMAGNA_fnr
+		color = map_ITA
+
+		areas = {
+			emilia_area
+		}
+		form_effect = {
+		}
+	}	
+
+	# European Union
+	EUROPEANUNION_fnr = {
+		level = 4
+		required_locations_fraction = 0.65
+		rule = historical
+
+		potential = {
+			OR = {
+				culture = { has_culture_group = culture_group:french_group }
+				culture = { has_culture_group = culture_group:british_group }
+				culture = { has_culture_group = culture_group:italian_group }
+				culture = { has_culture_group = culture_group:german_group }
+				culture = { has_culture_group = culture_group:bohemian_group }
+				culture = { has_culture_group = culture_group:polish_group }
+				culture = { has_culture_group = culture_group:iberian_group }
+			}
+		}
+
+		allow = {
+		}
+		
+		name = EUROPEANUNION_fnr
+		flag = EUROPEANUNION_fnr
+		adjective = EUROPEANUNION_fnr_ADJ
+		tag = EUROPEANUNION_fnr
+		color = map_ITA
+
+		sub_continents = {
+			western_europe
+		}
+		regions = {
+			baltic_region
+		}
+		form_effect = {
+		}
+	}	
+
+	# French Empire
+
+	FRENCHEMPIRE_fnr = {
+
+		level = 4
+		required_locations_fraction = 0.60
+		rule = plausible
+		
+		potential = {
+			culture = { has_culture_group = culture_group:french_group }
+		}
+		
+		allow = {
+			#tag = FRA
+		}
+
+		name = FRENCHEMPIRE_fnr
+		flag = FRENCHEMPIRE_fnr
+		adjective = FRENCHEMPIRE_fnr_ADJ
+		tag = FRENCHEMPIRE_fnr
+		color = map_scandinavia 
+
+		regions = {
+			france_region
 		}
 		form_effect = {
 		}
@@ -1068,7 +1247,6 @@
 			bruneck
 		}
 	}
-
 
 ############################
 # NON-HISTORICAL FORMABLES #
@@ -1550,17 +1728,169 @@
 		tag = DACIA_fnr
 		color = map_scandinavia 
 
-		regions = {
-		}
 		areas = {
 			bulgaria_area
 			wallachia_area
 			moldavia_area
 		}
-		provinces = {
+		form_effect = {
+		}
+	}	
+
+	# Dual Monarchy
+	DUALMONARCHY_fnr = {
+
+		level = 4
+		required_locations_fraction = 0.35
+		rule = plausible
+		
+		potential = {
+			OR = {
+				culture = { has_culture_group = culture_group:british_group }
+				culture = { has_culture_group = culture_group:french_group }
+			}
+		}
+		
+		allow = {
+		}
+
+		name = DUALMONARCHY_fnr
+		flag = DUALMONARCHY_fnr
+		adjective = DUALMONARCHY_fnr_ADJ
+		tag = DUALMONARCHY_fnr
+		color = map_scandinavia 
+
+		regions = {
+			france_region
+			great_britain_region
+		}
+		areas = {
+		}
+		form_effect = {
+		}
+	}
+
+	# East Slavia
+	EASTSLAVIA_fnr = {
+
+		level = 3
+		required_locations_fraction = 0.10
+		rule = plausible
+		potential = {
+			OR = {
+				culture = culture:halychian_culture
+				culture = culture:polatskian_culture
+				culture = culture:polesian_culture
+				culture = culture:ruthenian
+				culture = culture:severian
+				culture = culture:volhynian_culture
+				culture = culture:rusyn_culture
+				culture = culture:cossack_culture
+				culture = culture:smolenskian_culture
+			}
+		}
+		allow = {
+		}
+		
+		name = EASTSLAVIA_fnr
+		flag = EASTSLAVIA_fnr
+		adjective = EASTSLAVIA_fnr_ADJ
+		tag = UKRAINE_fnr
+		color = map_ruthenian
+		
+		regions = {
+			ruthenia_region
+			steppes_region
+			baltic_region
+			russian_region
 		}
 		form_effect = {
 		}
 	}	
 
-# end of file do NOT allow LAST line to have any code
+	# Franco-Iberian Empire
+	FRANCOIBERIANEMP_fnr = {
+
+		level = 4
+		required_locations_fraction = 0.35
+		rule = plausible
+		
+		potential = {
+			OR = {
+				culture = { has_culture_group = culture_group:iberian_group }
+				culture = { has_culture_group = culture_group:french_group }
+			}
+		}
+		
+		allow = {
+		}
+
+		name = FRANCOIBERIANEMP_fnr
+		flag = FRANCOIBERIANEMP_fnr
+		adjective = FRANCOIBERIANEMP_fnr_ADJ
+		tag = FRANCOIBERIANEMP_fnr
+		color = map_scandinavia 
+
+		regions = {
+			france_region
+			iberia_region
+		}
+		form_effect = {
+		}
+	}	
+
+	# Frieslande (Germanized Dutch basically)
+	FRIESLANDE_fnr = {
+
+		level = 3
+		required_locations_fraction = 1
+		rule = plausible
+		
+		potential = {
+			culture = culture:frisian
+		}
+		
+		allow = {
+		}
+
+		name = FRIESLANDE_fnr
+		flag = FRIESLANDE_fnr
+		adjective = FRIESLANDE_fnr_ADJ
+		tag = FRIESLANDE_fnr
+		color = map_scandinavia 
+
+		areas = {
+			friesland_area
+		}
+		form_effect = {
+		}
+	}
+
+	# Gallic Empire
+	GALLICEMPIRE_fnr = {
+
+		level = 4
+		required_locations_fraction = 0.60
+		rule = plausible
+		
+		potential = {
+			culture = { has_culture_group = culture_group:french_group }
+		}
+		
+		allow = {
+		}
+
+		name = GALLICEMPIRE_fnr
+		flag = GALLICEMPIRE_fnr
+		adjective = GALLICEMPIRE_fnr_ADJ
+		tag = GALLICEMPIRE_fnr
+		color = map_scandinavia 
+
+		regions = {
+			france_region
+		}
+		form_effect = {
+		}
+	}	
+
+ # end of file do NOT allow LAST line to have any code

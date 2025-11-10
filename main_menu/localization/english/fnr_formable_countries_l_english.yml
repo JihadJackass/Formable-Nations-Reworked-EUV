@@ -89,6 +89,30 @@
     DUCALPRUSSIA_fnr: "Ducal Prussia"
     DUCALPRUSSIA_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
 
+    # Ukraine
+    UKRAINE_fnr: "Ukraine"
+    UKRAINE_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
+
+    # Donetsk PR
+    DONETSKPR_fnr: "Donetsk People's Republic"
+    DONETSKPR_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
+
+    # Eastern Roman Empire
+    EASTROMANEMPIRE_fnr: "Eastern Roman Empire"
+    EASTROMANEMPIRE_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
+
+    # Emilia-Romagna
+    EMILIAROMAGNA_fnr: "Emilia-Romagna"
+    EMILIAROMAGNA_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
+
+    # European Union
+    EUROPEANUNION_fnr: "European Union"
+    EUROPEANUNION_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
+
+    # French Empire
+    FRENCHEMPIRE_fnr: "French Empire"
+    FRENCHEMPIRE_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
+
   ############################
   # NON-HISTORICAL FORMABLES #
   ############################
@@ -146,3 +170,23 @@
     # Dacia
     DACIA_fnr: "Dacia"
     DACIA_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
+
+    # Dual Monarchy
+    DUALMONARCHY_fnr: "Dual Monarchy"
+    DUALMONARCHY_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
+
+    # East Slavia
+    EASTSLAVIA_fnr: "East Slavia"
+    EASTSLAVIA_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
+
+    # Franco-Iberian Empire
+    FRANCOIBERIANEMP_fnr: "Franco-Iberian Empire"
+    FRANCOIBERIANEMP_desc: "TODO: content, description, color & flag + anything else it needs"
+
+    # Frieslande
+    FRIESLANDE_fnr: "Frieslande"
+    FRIESLANDE_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
+
+    # Gallic Empire
+    GALLICEMPIRE_fnr: "Gallic Empire"
+    GALLICEMPIRE_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
