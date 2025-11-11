@@ -1363,10 +1363,10 @@ ROM_f = {
 		country_rank = country_rank:rank_empire
 		is_hegemon = yes
 
-		trigger_if = {
-			limit = { NOT = { tag = c:BYZ } }
-			NOT = { country_exists = c:BYZ }
-		}
+		#trigger_if = {
+		#	limit = { NOT = { tag = c:BYZ } }
+		#	NOT = { country_exists = c:BYZ }
+		#}
 		OR = {
 			religion.group = religion_group:christian
 			religion = religion:hellenism_religion

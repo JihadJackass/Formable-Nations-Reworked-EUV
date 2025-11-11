@@ -3,6 +3,8 @@
 #######################################
 
 # TODO LIST:
+# - Oraganize this list based on Alphabetical
+# - Adjust historical organization (armenian empire should be non-historical)
 # - COLORS
 # - FLAGS
 # - DESCRIPTIONS
@@ -14,11 +16,10 @@
 # HISTORICAL FORMABLES #
 ########################
 
-	# Baluchistan
-
+	# Balochistan
 	BLC_fnr = {
 
-		level = 2
+		level = 3
 		required_locations_fraction = 0.60
 		rule = plausible
 		
@@ -29,11 +30,11 @@
 		allow = {
 		}
 
-		name = BLC
-		flag = BLC
-		adjective = BLC_ADJ
-		tag = BLC
-		color = map_scandinavia 
+		name = BLC_fnr
+		flag = BLC_fnr
+		adjective = BLC_fnr_ADJ
+		tag = BLC_fnr
+		color = map_BLC_fnr
 
 		regions = {
 			persia_region
@@ -46,7 +47,6 @@
 	}
 
 	# Polabia
-
 	POLB_fnr = {
 
 		level = 2
@@ -60,11 +60,11 @@
 		allow = {
 		}
 
-		name = POLB
-		flag = POLB
-		adjective = POLB_ADJ
-		tag = POLB
-		color = map_scandinavia 
+		name = POLB_fnr
+		flag = POLB_fnr
+		adjective = POLB_fnr_ADJ
+		tag = POLB_fnr
+		color = map_POLB_fnr
 
 		regions = {
 			baltic_region
@@ -79,11 +79,10 @@
 	}
 
 	# Great Sorbia
-
 	GSORB_fnr = {
 
 		level = 3
-		required_locations_fraction = 0.04
+		required_locations_fraction = 0.60
 		rule = plausible
 		
 		potential = {
@@ -97,11 +96,9 @@
 		flag = GSORB_fnr
 		adjective = GSORB_fnr_ADJ
 		tag = GSORB_fnr
-		color = map_scandinavia 
+		color = map_GSORB_fnr
 
 		regions = {
-			#north_german_region
-			#south_german_region
 		}
 		areas = {
 			franconia_area
@@ -112,11 +109,10 @@
 	}
 
 	# Sorbic Kingdom
-
 	KSORB_fnr = {
 
-		level = 2
-		required_locations_fraction = 0.02
+		level = 3
+		required_locations_fraction = 0.40
 		rule = plausible
 		
 		potential = {
@@ -130,7 +126,7 @@
 		flag = KSORB_fnr
 		adjective = KSORB_fnr_ADJ
 		tag = KSORB_fnr
-		color = map_scandinavia 
+		color = map_KSORB_fnr
 
 		regions = {
 		}
@@ -143,11 +139,10 @@
 	}
 
 	# Kingdom of Hanover
-
 	KOFHN_fnr = {
 
 		level = 2
-		required_locations_fraction = 0.16
+		required_locations_fraction = 0.46
 		rule = plausible
 		
 		potential = {
@@ -161,7 +156,7 @@
 		flag = KOFHN_fnr
 		adjective = KOFHN_fnr_ADJ
 		tag = KOFHN_fnr
-		color = map_scandinavia 
+		color = map_KOFHN_fnr
 
 		regions = {
 			#north_german_region
@@ -174,10 +169,9 @@
 	}
 
 	# Polynesia
-
 	POLYNE_fnr = {
 
-		level = 2
+		level = 3
 		required_locations_fraction = 0.26
 		rule = plausible
 		
@@ -192,7 +186,7 @@
 		flag = POLYNE_fnr
 		adjective = POLYNE_fnr_ADJ
 		tag = POLYNE_fnr
-		color = map_scandinavia 
+		color = map_POLYNE_fnr
 
 		regions = {
 			polynesia_region
@@ -223,10 +217,9 @@
 	}	
 
 	# Hawai'i
-
 	HAWAIII_fnr = {
 
-		level = 2
+		level = 3
 		required_locations_fraction = 0.13
 		rule = plausible
 		
@@ -244,7 +237,7 @@
 		flag = HAWAIII_fnr
 		adjective = HAWAIII_fnr_ADJ
 		tag = HAWAIII_fnr
-		color = map_scandinavia 
+		color = map_HAWAIII_fnr
 
 		regions = {
 			polynesia_region
@@ -257,11 +250,10 @@
 	}
 
 	# Yugoslavia
-
 	YUGOSLAVIA_fnr = {
 
 		level = 3
-		required_locations_fraction = 0.60
+		required_locations_fraction = 0.80
 		rule = plausible
 		
 		potential = {
@@ -276,7 +268,7 @@
 		flag = YUGOSLAVIA_fnr
 		adjective = YUGOSLAVIA_fnr_ADJ
 		tag = YUGOSLAVIA_fnr
-		color = map_scandinavia 
+		color = map_YUGOSLAVIA_fnr
 
 		regions = {
 			#balkan_region
@@ -298,7 +290,6 @@
 	}	
 
 	# Japan
-
 	JAPAN_fnr = {
 
 		level = 3
@@ -316,7 +307,7 @@
 		flag = JAPAN_fnr
 		adjective = JAPAN_fnr_ADJ
 		tag = JAPAN_fnr
-		color = map_scandinavia 
+		color = map_JAPAN_fnr 
 
 		regions = {
 			japan_region
@@ -330,7 +321,6 @@
 	}	
 
 	# Angevin Empire
-
 	ANGEVINEMPIRE_fnr = {
 
 		level = 4
@@ -351,7 +341,7 @@
 		flag = ANGEVINEMPIRE_fnr
 		adjective = ANGEVINEMPIRE_fnr_ADJ
 		tag = ANGEVINEMPIRE_fnr
-		color = map_scandinavia 
+		color = map_ANGEVINEMPIRE_fnr
 
 		regions = {
 			france_region
@@ -360,11 +350,14 @@
 		areas = {
 		}
 		form_effect = {
+			if = {
+				limit = { country_rank_level < 4 }
+				set_country_rank_effect = { rank = country_rank:rank_empire }
+			}
 		}
 	}
 	
 	# Baltic States
-
 	BALTICSTATES_fnr = {
 
 		level = 3
@@ -383,7 +376,7 @@
 		flag = BALTICSTATES_fnr
 		adjective = BALTICSTATES_fnr_ADJ
 		tag = BALTICSTATES_fnr
-		color = map_scandinavia 
+		color = map_BALTICSTATES_fnr
 
 		regions = {
 			#baltic_region
@@ -397,7 +390,6 @@
 	}
 
 	# Alsace-Lorraine
-
 	ALSACELORRAINE_fnr = {
 
 		level = 3
@@ -419,7 +411,7 @@
 		flag = ALSACELORRAINE_fnr
 		adjective = ALSACELORRAINE_fnr_ADJ
 		tag = ALSACELORRAINE_fnr
-		color = map_scandinavia 
+		color = map_ALSACELORRAINE_fnr
 
 		regions = {
 			#baltic_region
@@ -434,7 +426,6 @@
 	}	
 
 	# Austrian Empire
-
 	AUSTRIANEMPIRE_fnr = {
 
 		level = 4
@@ -448,7 +439,7 @@
 		flag = AUSTRIANEMPIRE_fnr
 		adjective = AUSTRIANEMPIRE_fnr_ADJ
 		tag = AUSTRIANEMPIRE_fnr
-		color = map_GER
+		color = map_AUSTRIANEMPIRE_fnr
 		
 		regions = {
 			#north_german_region
@@ -489,7 +480,6 @@
 	# Austro-Hungarian Empire
 
 	# Austria-Bavaria
-
 	AUSTRIABAVARIA_fnr = {
 
 		level = 3
@@ -503,7 +493,7 @@
 		flag = AUSTRIABAVARIA_fnr
 		adjective = AUSTRIABAVARIA_fnr_ADJ
 		tag = AUSTRIABAVARIA_fnr
-		color = map_GER
+		color = map_AUSTRIABAVARIA_fnr
 		
 		regions = {
 			#north_german_region
@@ -529,7 +519,6 @@
 	}
 
 	# Basque Country
-
 	BASQUECOUN_fnr = {
 
 		level = 1
@@ -547,7 +536,7 @@
 		flag = BASQUECOUN_fnr
 		adjective = BASQUECOUN_fnr_ADJ
 		tag = BASQUECOUN_fnr
-		color = map_scandinavia 
+		color = map_BASQUECOUN_fnr
 
 		regions = {
 		}
@@ -567,7 +556,6 @@
 	}
 
 	# Belarus
-
 	BELARUS_fnr = {
 
 		level = 3
@@ -586,7 +574,7 @@
 		flag = BELARUS_fnr
 		adjective = BELARUS_fnr_ADJ
 		tag = BELARUS_fnr
-		color = map_ruthenian
+		color = map_BELARUS_fnr
 		
 		regions = {
 			ruthenia_region
@@ -596,10 +584,9 @@
 	}
 
 	# Belgium
-
 	BELGIUM_fnr = {
 
-		level = 2
+		level = 3
 		required_locations_fraction = 0.44
 		rule = plausible
 		
@@ -614,7 +601,7 @@
 		flag = BELGIUM_fnr
 		adjective = BELGIUM_fnr_ADJ
 		tag = BELGIUM_fnr
-		color = map_scandinavia 
+		color = map_BELGIUM_fnr
 
 		regions = {
 		}
@@ -627,16 +614,17 @@
 	}
 
 	# Benelux
-
 	BENELUX_fnr = {
 
-		level = 2
+		level = 3
 		required_locations_fraction = 0.44
 		rule = plausible
 		
 		potential = {
-			culture = culture:low_franconian
-			culture = culture:frisian
+			OR = {
+				culture = culture:low_franconian
+				culture = culture:frisian
+			}
 		}
 		
 		allow = {
@@ -646,7 +634,7 @@
 		flag = BENELUX_fnr
 		adjective = BENELUX_fnr_ADJ
 		tag = BENELUX_fnr
-		color = map_scandinavia 
+		color = map_BENELUX_fnr
 
 		regions = {
 		}
@@ -661,7 +649,6 @@
 	}
 
 	# Bremen-Verden
-
 	BREMENVERDEN_fnr = {
 
 		level = 2
@@ -682,7 +669,7 @@
 		flag = BREMENVERDEN_fnr
 		adjective = BREMENVERDEN_fnr_ADJ
 		tag = BREMENVERDEN_fnr
-		color = map_scandinavia 
+		color = map_BREMENVERDEN_fnr
 
 		regions = {
 		}
@@ -694,7 +681,6 @@
 	}
 
 	# Bulgarian Empire (TODO: perhaps firsts and second bulg empire)
-
 	BULGEMPIRE_fnr = {
 
 		level = 3
@@ -712,7 +698,7 @@
 		flag = BULGEMPIRE_fnr
 		adjective = BULGEMPIRE_fnr_ADJ
 		tag = BULGEMPIRE_fnr
-		color = map_scandinavia 
+		color = map_BULGEMPIRE_fnr
 
 		regions = {
 		}
@@ -725,11 +711,14 @@
 		provinces = {
 		}
 		form_effect = {
+			if = {
+				limit = { country_rank_level < 4 }
+				set_country_rank_effect = { rank = country_rank:rank_empire }
+			}
 		}
 	}	
 
 	# British Empire (TODO: finish, lots of territory)
-
 	BRITISHEMPIRE_fnr = {
 
 		level = 4
@@ -747,7 +736,7 @@
 		flag = BRITISHEMPIRE_fnr
 		adjective = BRITISHEMPIRE_fnr_ADJ
 		tag = BRITISHEMPIRE_fnr
-		color = map_scandinavia 
+		color = map_BRITISHEMPIRE_fnr
 
 		regions = {
 			great_britain_region
@@ -757,11 +746,14 @@
 		areas = {
 		}
 		form_effect = {
+			if = {
+				limit = { country_rank_level < 4 }
+				set_country_rank_effect = { rank = country_rank:rank_empire }
+			}
 		}
 	}
 
 	# Alpland
-
 	ALPLAND_fnr = {
 		level = 3
 		required_locations_fraction = 0.80
@@ -778,7 +770,7 @@
 		flag = ALPLAND_fnr
 		adjective = ALPLAND_fnr_ADJ
 		tag = ALPLAND_fnr
-		color = map_SWI
+		color = map_ALPLAND_fnr
 
 		areas = {
 			central_switzerland_area
@@ -801,7 +793,6 @@
 	}
 
 	# Cisalpina (Cisalpine Republic)
-
 	CISALPINA_fnr = {
 		level = 3
 		required_locations_fraction = 0.80
@@ -821,7 +812,7 @@
 		flag = CISALPINA_fnr
 		adjective = CISALPINA_fnr_ADJ
 		tag = CISALPINA_fnr
-		color = map_SWI
+		color = map_CISALPINA_fnr
 
 		areas = {
 			lombardy_area
@@ -832,7 +823,6 @@
 	}
 
 	# Commonwealth of England
-
 	ENGLISHCOMMONWEALTH_fnr = {
 
 		level = 3
@@ -851,7 +841,7 @@
 		flag = ENGLISHCOMMONWEALTH_fnr
 		adjective = ENGLISHCOMMONWEALTH_fnr_ADJ
 		tag = ENGLISHCOMMONWEALTH_fnr
-		color = map_scandinavia 
+		color = map_ENGLISHCOMMONWEALTH_fnr
 
 		regions = {
 		}
@@ -866,7 +856,6 @@
 	}
 
 	# Czechoslovakia 
-
 	CZECKSLOVAK_fnr = {
 		level = 3
 		required_locations_fraction = 1
@@ -887,7 +876,7 @@
 		flag = CZECKSLOVAK_fnr
 		adjective = CZECKSLOVAK_fnr_ADJ
 		tag = CZECKSLOVAK_fnr
-		color = map_RHE
+		color = map_CZECKSLOVAK_fnr
 
 		areas = {
 			bohemia_area
@@ -897,7 +886,6 @@
 	}
 
 	# Ducal Prussia
-
 	DUCALPRUSSIA_fnr = {
 		level = 2
 		required_locations_fraction = 0.30
@@ -915,7 +903,7 @@
 		flag = PRU
 		adjective = DUCALPRUSSIA_fnr_ADJ
 		tag = DUCALPRUSSIA_fnr
-		color = map_PRU
+		color = map_DUCALPRUSSIA_fnr
 
 		areas = {
 			prussia_area
@@ -925,7 +913,6 @@
 	}	
 
 	# Ukraine
-
 	UKRAINE_fnr = {
 
 		level = 3
@@ -949,10 +936,10 @@
 		}
 		
 		name = UKRAINE_fnr
-		flag = UKR
+		flag = UKRAINE_fnr
 		adjective = UKRAINE_fnr_ADJ
 		tag = UKRAINE_fnr
-		color = map_ruthenian
+		color = map_UKRAINE_fnr
 		
 		regions = {
 			ruthenia_region
@@ -980,7 +967,36 @@
 		flag = DONETSKPR_fnr
 		adjective = DONETSKPR_fnr_ADJ
 		tag = DONETSKPR_fnr
-		color = map_ruthenian
+		color = map_DONETSKPR_fnr
+		
+		regions = {
+			steppes_region
+			ruthenia_region
+		}
+		form_effect = {
+		}
+	}	
+
+	# Luhansk People's Republic
+	LUHANSKPR_fnr = {
+
+		level = 3
+		required_locations_fraction = 0.01
+		rule = plausible
+		potential = {
+			OR = {
+				culture = culture:mishar
+				culture = { has_culture_group = culture_group:polish_group }
+			}
+		}
+		allow = {
+		}
+		
+		name = LUHANSKPR_fnr
+		flag = LUHANSKPR_fnr
+		adjective = LUHANSKPR_fnr_ADJ
+		tag = LUHANSKPR_fnr
+		color = map_LUHANSKPR_fnr
 		
 		regions = {
 			steppes_region
@@ -1010,11 +1026,18 @@
 		flag = ROM
 		adjective = EASTROMANEMPIRE_fnr_ADJ
 		tag = EASTROMANEMPIRE_fnr
-		color = map_GRC
+		color = map_EASTROMANEMPIRE_fnr
 
 		regions = {
 			balkan_region
 			anatolia_region
+		}
+
+		form_effect = {
+			if = {
+				limit = { country_rank_level < 4 }
+				set_country_rank_effect = { rank = country_rank:rank_empire }
+			}
 		}
 	}
 
@@ -1035,7 +1058,7 @@
 		flag = EMILIAROMAGNA_fnr
 		adjective = EMILIAROMAGNA_fnr_ADJ
 		tag = EMILIAROMAGNA_fnr
-		color = map_ITA
+		color = map_EMILIAROMAGNA_fnr
 
 		areas = {
 			emilia_area
@@ -1047,7 +1070,7 @@
 	# European Union
 	EUROPEANUNION_fnr = {
 		level = 4
-		required_locations_fraction = 0.65
+		required_locations_fraction = 0.34
 		rule = historical
 
 		potential = {
@@ -1069,24 +1092,64 @@
 		flag = EUROPEANUNION_fnr
 		adjective = EUROPEANUNION_fnr_ADJ
 		tag = EUROPEANUNION_fnr
-		color = map_ITA
+		color = map_EUROPEANUNION_fnr
 
-		sub_continents = {
-			western_europe
-		}
 		regions = {
-			baltic_region
+			france_region
+			iberia_region
+			north_german_region
+			south_german_region
+			italy_region
+		}
+		areas = {
+			silesia_area
+			prussia_area
+			central_poland_area
+			greater_poland_area
+			mazovia_area
+			lesser_poland_area
+			slovakia_area
+			transdanubia_area
+			north_alfold_area
+			south_alfold_area
+			transylvania_area
+			wallachia_area
+			bulgaria_area
+			thrace_area
+			northern_greece_area
+			morea_area
+			baltic_area
+			denmark_area
+			skaneland_area
+			gotaland_area
+			svealand_area
+			norrland_area
+			finland_area
+			munster_area
+			connaught_area
+			leinster_area
+		}
+		provinces = {
+			lower_macedonia_province
+			chalkidiki_province
+			central_macedonia_province
+			raseiniai_province
+			upyte_province
+			donegal_province
 		}
 		form_effect = {
+			if = {
+				limit = { country_rank_level < 4 }
+				set_country_rank_effect = { rank = country_rank:rank_empire }
+			}
 		}
 	}	
 
 	# French Empire
-
 	FRENCHEMPIRE_fnr = {
 
 		level = 4
-		required_locations_fraction = 0.60
+		required_locations_fraction = 0.50
 		rule = plausible
 		
 		potential = {
@@ -1101,12 +1164,30 @@
 		flag = FRENCHEMPIRE_fnr
 		adjective = FRENCHEMPIRE_fnr_ADJ
 		tag = FRENCHEMPIRE_fnr
-		color = map_scandinavia 
+		color = map_FRENCHEMPIRE_fnr
 
 		regions = {
 			france_region
 		}
+		areas = {
+			tunis_area
+			algiers_area
+			atlas_high_plateau
+			tunis_area
+		}
+		provinces = {
+			pumonte_province
+			cismonte_province
+			antakya_province
+			hims_province
+			halab_province
+			latakia_province
+		}
 		form_effect = {
+			if = {
+				limit = { country_rank_level < 4 }
+				set_country_rank_effect = { rank = country_rank:rank_empire }
+			}
 		}
 	}	
 
@@ -1128,13 +1209,49 @@
 		flag = GERMANEMPIRE_fnr
 		adjective = GERMANEMPIRE_fnr_ADJ
 		tag = GERMANEMPIRE_fnr
-		color = map_GER
+		color = map_GERMANEMPIRE_fnr
 
 		regions = {
-			north_german_region
-			south_german_region
+		}
+		areas = {
+			swabia_area
+			franconia_area
+			upper_rhine_area
+			hesse_area
+			upper_saxony_area
+			brandenburg_area
+			lower_saxony_area
+			westphalia_area
+			rhineland_area
+			holstein_area
+			pomerania_area
+			prussia_area
+			mecklenburg_area
+			bavaria_area
+			silesia_area
+		}
+		provinces = {
+			holstein_province
+			slesvig_province
+			sonderjylland_province
+			#poznan_province
+			arnskrone_province
+			#naklo_province
+			#znin_province
+			pays_messin_province
+			lower_alsace_province
+			sarregueminois_province
+		}
+		locations = {
+			zlotow
+			wyrzysk
+			naklo
 		}
 		form_effect = {
+			if = {
+				limit = { country_rank_level < 4 }
+				set_country_rank_effect = { rank = country_rank:rank_empire }
+			}
 		}
 	}	
 
@@ -1156,13 +1273,17 @@
 		flag = GERMANREICH_fnr
 		adjective = GERMANREICH_fnr_ADJ
 		tag = GERMANREICH_fnr
-		color = map_GER
+		color = map_GERMANREICH_fnr
 
 		regions = {
 			north_german_region
 			south_german_region
 		}
 		form_effect = {
+			if = {
+				limit = { country_rank_level < 4 }
+				set_country_rank_effect = { rank = country_rank:rank_empire }
+			}
 		}
 	}	
 
@@ -1184,42 +1305,100 @@
 		flag = GREATERGERMANREICH_fnr
 		adjective = GREATERGERMANREICH_fnr_ADJ
 		tag = GREATERGERMANREICH_fnr
-		color = map_GER
+		color = map_GREATERGERMANREICH_fnr
 
 		regions = {
 			north_german_region
 			south_german_region
 		}
 		form_effect = {
+			if = {
+				limit = { country_rank_level < 4 }
+				set_country_rank_effect = { rank = country_rank:rank_empire }
+			}
+		}
+	}	
+
+	# Nazi Germany
+	NAZIGERMANY_fnr = {
+
+		level = 4
+		required_locations_fraction = 0.70
+		rule = plausible
+		
+		potential = {
+			culture = { has_culture_group = culture_group:german_group }
+		}
+		
+		allow = {
+		}
+
+		name = NAZIGERMANY_fnr
+		flag = NAZIGERMANY_fnr
+		adjective = NAZIGERMANY_fnr_ADJ
+		tag = NAZIGERMANY_fnr
+		color = map_NAZIGERMANY_fnr
+
+		regions = {
+			north_german_region
+			south_german_region
+		}
+		form_effect = {
+			if = {
+				limit = { country_rank_level < 4 }
+				set_country_rank_effect = { rank = country_rank:rank_empire }
+			}
 		}
 	}	
 
 	# Hanseatic League
-
 	HANSALEAGUE_fnr = {
 
 		level = 3
-		required_locations_fraction = 0.60
+		required_locations_fraction = 0.04
 		rule = plausible
 		
 		potential = {
-			OR = {
-				culture = { has_culture_group = culture_group:german_group }
-				culture = { has_culture_group = culture_group:scandinavian_group }
-				culture = { has_culture_group = culture_group:baltic_group }
+			government_type = government_type:republic
+			AND = {
+				NOT = {
+					country_exists = c:HANSA
+					country_exists = c:HANSALEAGUE_fnr
+					culture = culture:danish
+					culture = culture:aukstaitian
+					OR = {
+						tag = POL
+						tag = BRA
+						tag = DEN
+						tag = SWE
+						tag = NOV
+						tag = LIT
+					}
+				}
+				OR = {
+					culture = { has_culture_group = culture_group:german_group }
+					culture = { has_culture_group = culture_group:scandinavian_group }
+					culture = { has_culture_group = culture_group:baltic_group }
+				}
 			}
 		}
 		
 		allow = {
+		#	trigger_if = {
+		#		custom_tooltip = {
+		#			text = HANSALEAGUE_fnr_tt
+		#			government_type != government_type:republic
+		#		}
+		#	}
 			# TODO: proper requirements based on hansa league
-			is_subject_of = hanseatic_member
+			# is_subject_of = hanseatic_member
 		}
 
 		name = HANSALEAGUE_fnr
 		flag = HANSALEAGUE_fnr
 		adjective = HANSALEAGUE_fnr_ADJ
 		tag = HANSALEAGUE_fnr
-		color = map_GER
+		color = map_HANSALEAGUE_fnr
 
 		regions = {
 			north_german_region
@@ -1227,6 +1406,10 @@
 			scandinavian_region
 		}
 		form_effect = {
+			#if = {
+			#	limit = { country_rank_level < 3 }
+			#	set_country_rank_effect = { rank = country_rank:rank_kingdom }
+			#}
 		}
 	}
 
@@ -1248,7 +1431,7 @@
 		flag = HESSENASSAU_fnr
 		adjective = HESSENASSAU_fnr_ADJ
 		tag = HESSENASSAU_fnr
-		color = map_GER
+		color = map_HESSENASSAU_fnr
 
 		areas = {
 			hesse_area
@@ -1277,7 +1460,7 @@
 		flag = ITA
 		adjective = ITALIANEMPIRE_fnr_ADJ
 		tag = ITALIANEMPIRE_fnr
-		color = map_ITA
+		color = map_ITALIANEMPIRE_fnr
 
 		regions = {
 			italy_region
@@ -1286,6 +1469,10 @@
 			albania_area
 		}
 		form_effect = {
+			if = {
+				limit = { country_rank_level < 4 }
+				set_country_rank_effect = { rank = country_rank:rank_empire }
+			}
 		}
 	}	
 
@@ -1307,7 +1494,7 @@
 		flag = KALMARUNION_fnr
 		adjective = KALMARUNION_fnr_ADJ
 		tag = KALMARUNION_fnr
-		color = map_scandinavia
+		color = map_KALMARUNION_fnr
 
 		regions = {
 			scandinavian_region
@@ -1346,7 +1533,7 @@
 		flag = KYIVANRUS_fnr
 		adjective = KYIVANRUS_fnr_ADJ
 		tag = KYIVANRUS_fnr
-		color = map_ruthenian
+		color = map_KYIVANRUS_fnr
 		
 		regions = {
 			ruthenia_region
@@ -1359,7 +1546,6 @@
 	}
 
 	# Latin Empire
-
 	LATINEMPIRE_fnr = {
 		level = 4
 		required_locations_fraction = 0.40
@@ -1380,54 +1566,1617 @@
 		flag = LATINEMPIRE_fnr
 		adjective = LATINEMPIRE_fnr_ADJ
 		tag = LATINEMPIRE_fnr
-		color = map_GRC
+		color = map_LATINEMPIRE_fnr
 
 		regions = {
 			balkan_region
 			anatolia_region
 		}
+		form_effect = {
+			if = {
+				limit = { country_rank_level < 4 }
+				set_country_rank_effect = { rank = country_rank:rank_empire }
+			}
+		}
 	}	
 
-    # Hellas
-
-	HELLAS_fnr = {
-		level = 2
-		required_locations_fraction = 1
+	# Lombardy
+	LOMBARDY_fnr = {
+		level = 3
+		required_locations_fraction = 0.90
 		rule = historical
 
 		potential = {
+			culture = { has_culture_group = culture_group:italian_group }
 		}
 
 		allow = {
 		}
-
-		name = HELLAS_fnr
-		flag = HELLAS_fnr
-		adjective = HELLAS_fnr_ADJ
-		tag = HELLAS_fnr
-		color = map_GRC
+		
+		name = LOMBARDY_fnr
+		flag = LOMBARDY_fnr
+		adjective = LOMBARDY_fnr_ADJ
+		tag = LOMBARDY_fnr
+		color = map_LOMBARDY_fnr
 
 		areas = {
-			northern_greece_area
-			morea_area
-			aegean_archipelago_area
+			lombardy_area
+		}
+		form_effect = {
+		}
+	}	
+
+	# Lombardy-Venetia
+	LOMBARDYVENETIA_fnr = {
+		level = 3
+		required_locations_fraction = 0.90
+		rule = historical
+
+		potential = {
+			culture = { has_culture_group = culture_group:italian_group }
+		}
+
+		allow = {
+		}
+		
+		name = LOMBARDYVENETIA_fnr
+		flag = LOMBARDYVENETIA_fnr
+		adjective = LOMBARDYVENETIA_fnr_ADJ
+		tag = LOMBARDYVENETIA_fnr
+		color = map_LOMBARDYVENETIA_fnr
+
+		areas = {
+			lombardy_area
+			veneto_area
+		}
+		form_effect = {
+		}
+	}	
+
+	# Lower Saxony
+	LOWERSAXONY_fnr = {
+
+		level = 3
+		required_locations_fraction = 0.80
+		rule = plausible
+		
+		potential = {
+			culture = culture:lower_saxon
+		}
+		
+		allow = {
+		}
+
+		name = LOWERSAXONY_fnr
+		flag = LOWERSAXONY_fnr
+		adjective = LOWERSAXONY_fnr_ADJ
+		tag = LOWERSAXONY_fnr
+		color = map_LOWERSAXONY_fnr
+
+		areas = {
+			lower_saxony_area
 		}
 		provinces = {
-			upper_macedonia_province
-			lower_macedonia_province
-			central_macedonia_province
-			chalkidiki_province
-			evros_province
 		}
-		locations = {
-			konitsa
-			argyrokastro
-			butrint
+		form_effect = {
 		}
 	}
 
-	# The Rhine Confederation
+	# Malta
+	MALTA_fnr = {
 
+		level = 3
+		required_locations_fraction = 0.80
+		rule = plausible
+		
+		potential = {
+			culture = culture:lower_saxon
+		}
+		
+		allow = {
+		}
+
+		name = MALTA_fnr
+		flag = MALTA_fnr
+		adjective = MALTA_fnr_ADJ
+		tag = MALTA_fnr
+		color = map_MALTA_fnr
+
+		locations = {
+			malta
+		}
+		form_effect = {
+		}
+	}
+
+	# Mercia
+	MERCIA_fnr = {
+
+		level = 3
+		required_locations_fraction = 0.95
+		rule = plausible
+		
+		potential = {
+			culture = culture:english
+		}
+		
+		allow = {
+		}
+
+		name = MERCIA_fnr
+		flag = MERCIA_fnr
+		adjective = MERCIA_fnr_ADJ
+		tag = MERCIA_fnr
+		color = map_MERCIA_fnr
+
+		regions = {
+		}
+		areas = {
+			midlands_area
+		}
+		form_effect = {
+		}
+	}	
+
+	# Russian Empire
+	RUSSIANEMPIRE_fnr = {
+		level = 4
+		required_locations_fraction = 0.88
+		rule = historical
+
+		potential = {
+			culture = { 
+				has_culture_group = culture_group:russian_group 
+			}
+		}
+
+		allow = {
+			owns = location:moscow
+			owns = location:novgorod
+		}
+		
+		name = RUSSIANEMPIRE_fnr
+		flag = RUSSIANEMPIRE_fnr
+		adjective = RUSSIANEMPIRE_fnr_ADJ
+		tag = RUSSIANEMPIRE_fnr
+		color = map_RUSSIANEMPIRE_fnr
+
+		regions = {
+			russian_region
+			ural_region
+			steppes_region
+			ruthenia_region
+
+		}
+		form_effect = {
+			if = {
+				limit = { country_rank_level < 4 }
+				set_country_rank_effect = { rank = country_rank:rank_empire }
+			}
+			
+		}
+	}
+
+	# Russian Federation
+	RUSSIANFED_fnr = {
+		level = 4
+		required_locations_fraction = 0.01
+		rule = historical
+
+		potential = {
+			culture = { 
+				has_culture_group = culture_group:russian_group 
+			}
+		}
+
+		allow = {
+			owns = location:moscow
+			owns = location:novgorod
+		}
+		
+		name = RUSSIANFED_fnr
+		flag = RUSSIANFED_fnr
+		adjective = RUSSIANFED_fnr_ADJ
+		tag = RUSSIANFED_fnr
+		color = map_RUSSIANFED_fnr
+
+		regions = {
+			russian_region
+			ural_region
+			steppes_region
+			ruthenia_region
+
+		}
+		form_effect = {
+			if = {
+				limit = { country_rank_level < 4 }
+				set_country_rank_effect = { rank = country_rank:rank_empire }
+			}
+			
+		}
+	}
+
+	# Serbian Empire
+	SERBEMPIRE_fnr = {
+
+		level = 4
+		required_locations_fraction = 0.60
+		rule = plausible
+		
+		potential = {
+			culture = culture:serbian
+		}
+		
+		allow = {
+		}
+
+		name = SERBEMPIRE_fnr
+		flag = SERBEMPIRE_fnr
+		adjective = SERBEMPIRE_fnr_ADJ
+		tag = SERBEMPIRE_fnr
+		color = map_SERBEMPIRE_fnr
+
+		regions = {
+		}
+		areas = {
+			northern_greece_area
+			serbia_area
+			albania_area
+			macedonia_area
+		}
+		provinces = {
+		}
+		form_effect = {
+			if = {
+				limit = { country_rank_level < 4 }
+				set_country_rank_effect = { rank = country_rank:rank_empire }
+			}
+		}
+	}	
+
+	# Soviet Union
+	SOVIETUNION_fnr = {
+		level = 4
+		required_locations_fraction = 0.92
+		rule = historical
+
+		potential = {
+			culture = { 
+				has_culture_group = culture_group:russian_group 
+			}
+		}
+
+		allow = {
+			owns = location:moscow
+			owns = location:novgorod
+		}
+		
+		name = SOVIETUNION_fnr
+		flag = SOVIETUNION_fnr
+		adjective = SOVIETUNION_fnr_ADJ
+		tag = SOVIETUNION_fnr
+		color = map_SOVIETUNION_fnr
+
+		regions = {
+			russian_region
+			ural_region
+			steppes_region
+			ruthenia_region
+		}
+		form_effect = {
+			if = {
+				limit = { country_rank_level < 4 }
+				set_country_rank_effect = { rank = country_rank:rank_empire }
+			}
+			
+		}
+	}
+
+	# Sweden-Norway
+	SWEDENNORWAY_fnr = {
+
+		level = 3
+		required_locations_fraction = 0.85
+		rule = plausible
+		
+		potential = {
+			culture = { has_culture_group = culture_group:scandinavian_group }
+		}
+		
+		allow = {
+		}
+
+		name = SWEDENNORWAY_fnr
+		flag = SWEDENNORWAY_fnr
+		adjective = SWEDENNORWAY_fnr_ADJ
+		tag = SWEDENNORWAY_fnr
+		color = map_SWEDENNORWAY_fnr
+
+		regions = {
+			scandinavian_region
+		}
+		areas = {
+			iceland_area
+		}
+		form_effect = {
+		}
+	}
+
+	# Swedish Empire
+	SWEDISHEMP_fnr = {
+
+		level = 4
+		required_locations_fraction = 0.85
+		rule = plausible
+		
+		potential = {
+			culture = { has_culture_group = culture_group:scandinavian_group }
+		}
+		
+		allow = {
+		}
+
+		name = SWEDISHEMP_fnr
+		flag = SWEDISHEMP_fnr
+		adjective = SWEDISHEMP_fnr_ADJ
+		tag = SWEDISHEMP_fnr
+		color = map_SWEDISHEMP_fnr
+
+		regions = {
+			scandinavian_region
+		}
+		areas = {
+		}
+		form_effect = {
+			if = {
+				limit = { country_rank_level < 4 }
+				set_country_rank_effect = { rank = country_rank:rank_empire }
+			}
+		}
+	}
+
+	# Turkey
+	TURKEY_fnr = {
+
+		level = 3
+		required_locations_fraction = 0.85
+		rule = plausible
+		
+		potential = {
+			OR = {
+				TAG = TUR
+				culture = culture:lower_saxon
+				culture = { has_culture_group = culture_group:turkish_culture }
+			}
+		}
+		
+		allow = {
+		}
+
+		name = TURKEY_fnr
+		flag = TURKEY_fnr
+		adjective = TURKEY_fnr_ADJ
+		tag = TURKEY_fnr
+		color = map_TURKEY_fnr
+
+		regions = {
+			anatolia_region
+		}
+		areas = {
+		}
+		form_effect = {
+		}
+	}
+
+	# The United Kingdom
+	UNITEDKINGDOM_fnr = {
+
+		level = 3
+		required_locations_fraction = 0.75
+		rule = plausible
+		
+		potential = {
+			culture = { has_culture_group = culture_group:british_group }
+		}
+		
+		allow = {
+		}
+
+		name = UNITEDKINGDOM_fnr
+		flag = UNITEDKINGDOM_fnr
+		adjective = UNITEDKINGDOM_fnr_ADJ
+		tag = UNITEDKINGDOM_fnr
+		color = map_UNITEDKINGDOM_fnr
+
+		regions = {
+			great_britain_region
+		}
+		areas = {
+		}
+		form_effect = {
+		}
+	}
+
+	# Wendish Empire
+	WENDISHEMPIRE_fnr = {
+
+		level = 4
+		required_locations_fraction = 0.75
+		rule = plausible
+		
+		potential = {
+			culture = { has_culture_group = culture_group:polish_group }
+		}
+		
+		allow = {
+		}
+
+		name = WENDISHEMPIRE_fnr
+		flag = WENDISHEMPIRE_fnr
+		adjective = WENDISHEMPIRE_fnr_ADJ
+		tag = WENDISHEMPIRE_fnr
+		color = map_WENDISHEMPIRE_fnr
+
+		regions = {
+			baltic_region
+		}
+		areas = {
+		}
+		form_effect = {
+			if = {
+				limit = { country_rank_level < 4 }
+				set_country_rank_effect = { rank = country_rank:rank_empire }
+			}
+		}
+	}
+	
+	# Armenian Empire
+	ARMENIAEMPIRE_fnr = {
+
+		level = 4
+		required_locations_fraction = 0.75
+		rule = plausible
+		
+		potential = {
+			culture = culture:armenian_culture
+		}
+		
+		allow = {
+		}
+
+		name = ARMENIAEMPIRE_fnr
+		flag = ARMENIAEMPIRE_fnr
+		adjective = ARMENIAEMPIRE_fnr_ADJ
+		tag = ARMENIAEMPIRE_fnr
+		color = map_ARMENIAEMPIRE_fnr
+
+		regions = {
+			caucasus_region
+		}
+		areas = {
+		}
+		form_effect = {
+			if = {
+				limit = { country_rank_level < 4 }
+				set_country_rank_effect = { rank = country_rank:rank_empire }
+			}
+		}
+	}
+	
+	# Arabian Empire
+	ARABIANEMPIRE_fnr = {
+
+		level = 4
+		required_locations_fraction = 0.75
+		rule = plausible
+		
+		potential = {
+			OR = {
+				culture = { has_culture_group = culture_group:arabic_group }
+				culture = { has_culture_group = culture_group:arabian_group }
+			}
+		}
+		
+		allow = {
+		}
+
+		name = ARMENIAEMPIRE_fnr
+		flag = ARMENIAEMPIRE_fnr
+		adjective = ARMENIAEMPIRE_fnr_ADJ
+		tag = ARMENIAEMPIRE_fnr
+		color = map_ARABIANEMPIRE_fnr
+
+		regions = {
+			arabia_region
+			crescent_region
+		}
+		areas = {
+		}
+		form_effect = {
+			if = {
+				limit = { country_rank_level < 4 }
+				set_country_rank_effect = { rank = country_rank:rank_empire }
+			}
+		}
+	}	
+
+	# Caucasia
+	CAUCASIA_fnr = {
+
+		level = 3
+		required_locations_fraction = 0.68
+		rule = plausible
+		
+		potential = {
+			culture = { has_culture_group = culture_group:caucasian_group }
+		}
+		
+		allow = {
+		}
+
+		name = CAUCASIA_fnr
+		flag = CAUCASIA_fnr
+		adjective = CAUCASIA_fnr_ADJ
+		tag = CAUCASIA_fnr
+		color = map_CAUCASIA_fnr
+
+		regions = {
+			caucasus_region
+		}
+		areas = {
+		}
+		form_effect = {
+		}
+	}
+
+	# Empire of China
+	CHINAEMPIRE_fnr = {
+
+		level = 3
+		required_locations_fraction = 0.78
+		rule = plausible
+		
+		potential = {
+			OR = {
+				culture = { has_culture_group = culture_group:chinese_group }
+				culture = { has_culture_group = culture_group:mongolian_group }
+			}
+		}
+		
+		allow = {
+		}
+
+		name = CHINAEMPIRE_fnr
+		flag = CHINAEMPIRE_fnr
+		adjective = CHINAEMPIRE_fnr_ADJ
+		tag = CHINAEMPIRE_fnr
+		color = map_CHINAEMPIRE_fnr
+
+		regions = {
+			north_china_region
+			east_china_region
+			south_china_region
+			west_china_region
+			tibet_region
+		}
+		areas = {
+		}
+		form_effect = {
+			if = {
+				limit = { country_rank_level < 4 }
+				set_country_rank_effect = { rank = country_rank:rank_empire }
+			}
+		}
+	}
+
+	# Goguryeo
+	GOGURYEO_fnr = {
+
+		level = 3
+		required_locations_fraction = 0.95
+		rule = plausible
+		
+		potential = {
+			culture = { has_culture_group = culture_group:confucian_group }
+		}
+		
+		allow = {
+		}
+
+		name = GOGURYEO_fnr
+		flag = GOGURYEO_fnr
+		adjective = GOGURYEO_fnr_ADJ
+		tag = GOGURYEO_fnr
+		color = map_GOGURYEO_fnr
+
+		regions = {
+			korea_region
+		}
+		areas = {
+		}
+		form_effect = {
+		}
+	}
+
+	# Korea
+	KOREA_fnr = {
+
+		level = 3
+		required_locations_fraction = 1
+		rule = plausible
+		
+		potential = {
+			culture = { has_culture_group = culture_group:confucian_group }
+		}
+		
+		allow = {
+		}
+
+		name = KOREA_fnr
+		flag = KOREA_fnr
+		adjective = KOREA_fnr_ADJ
+		tag = KOREA_fnr
+		color = map_KOREA_fnr
+
+		regions = {
+			korea_region
+		}
+		areas = {
+		}
+		form_effect = {
+		}
+	}
+
+	# Himalayan Empire
+	HIMALAYA_fnr = {
+
+		level = 4
+		required_locations_fraction = 0.20
+		rule = plausible
+		
+		potential = {
+			NOT = {
+				tag = DLH
+			}
+			OR = {
+				culture = { has_culture_group = culture_group:indo_aryan_group }
+				culture = { has_culture_group = culture_group:tibeto_burman_group }
+			}
+		}
+		
+		allow = {
+		}
+
+		name = HIMALAYA_fnr
+		flag = HIMALAYA_fnr
+		adjective = HIMALAYA_fnr_ADJ
+		tag = HIMALAYA_fnr
+		color = map_HIMALAYA_fnr
+
+		regions = {
+			hindustan_region
+			tibet_region
+		}
+		areas = {
+		}
+		form_effect = {
+			if = {
+				limit = { country_rank_level < 4 }
+				set_country_rank_effect = { rank = country_rank:rank_empire }
+			}
+		}
+	}
+
+	# Afghanistan
+	AFGHANISTAN_fnr = {
+
+		level = 3
+		required_locations_fraction = 0.80
+		rule = plausible
+		
+		potential = {
+			OR = {
+				culture = culture:afghan_culture
+				culture = { has_culture_group = culture_group:iranian_group }
+			}
+		}
+		
+		allow = {
+		}
+
+		name = AFGHANISTAN_fnr
+		flag = AFGHANISTAN_fnr
+		adjective = AFGHANISTAN_fnr_ADJ
+		tag = AFGHANISTAN_fnr
+		color = map_AFGHANISTAN_fnr
+
+		regions = {
+		}
+		areas = {
+			sistan_area
+			baluchistan_area
+		}
+		form_effect = {
+		}
+	}
+
+	# Islamic State
+	ISIS_fnr = {
+
+		level = 3
+		required_locations_fraction = 0.80
+		rule = plausible
+		
+		potential = {
+			OR = {
+				culture = culture:syriac_culture
+				culture = culture:armenian_culture
+			}
+		}
+		
+		allow = {
+		}
+
+		name = ISIS_fnr
+		flag = ISIS_fnr
+		adjective = ISIS_fnr_ADJ
+		tag = ISIS_fnr
+		color = map_ISIS_fnr
+
+		regions = {
+		}
+		areas = {
+			jazira_area
+		}
+		form_effect = {
+		}
+	}
+
+	# Mingrelia
+	MINGRELIA_fnr = {
+
+		level = 3
+		required_locations_fraction = 0.68
+		rule = plausible
+		
+		potential = {
+			culture = { has_culture_group = culture_group:caucasian_group }
+		}
+		
+		allow = {
+		}
+
+		name = MINGRELIA_fnr
+		flag = MINGRELIA_fnr
+		adjective = MINGRELIA_fnr_ADJ
+		tag = MINGRELIA_fnr
+		color = map_MINGRELIA_fnr
+
+		regions = {
+			caucasus_region
+		}
+		areas = {
+		}
+		form_effect = {
+		}
+	}
+
+	# North Korea
+	NORTHKOREA_fnr = {
+
+		level = 3
+		required_locations_fraction = 1
+		rule = plausible
+		
+		potential = {
+			culture = { has_culture_group = culture_group:confucian_group }
+		}
+		
+		allow = {
+		}
+
+		name = NORTHKOREA_fnr
+		flag = NORTHKOREA_fnr
+		adjective = NORTHKOREA_fnr_ADJ
+		tag = NORTHKOREA_fnr
+		color = map_NORTHKOREA_fnr
+
+		regions = {
+		}
+		areas = {
+			gwanseo_area
+			haeseo_area
+			gwanbuk_area
+		}
+		form_effect = {
+		}
+	}
+
+	# South Korea
+	SOUTHKOREA_fnr = {
+
+		level = 3
+		required_locations_fraction = 1
+		rule = plausible
+		
+		potential = {
+			culture = { has_culture_group = culture_group:confucian_group }
+		}
+		
+		allow = {
+		}
+
+		name = SOUTHKOREA_fnr
+		flag = SOUTHKOREA_fnr
+		adjective = SOUTHKOREA_fnr_ADJ
+		tag = SOUTHKOREA_fnr
+		color = map_SOUTHKOREA_fnr
+
+		regions = {
+		}
+		areas = {
+			honam_area
+			hoseo_area
+			yeongnam_area
+			gyeonggi_area
+			gwandong_area
+		}
+		form_effect = {
+		}
+	}
+
+	# Omani Empire
+	OMANIEMPIRE_fnr = {
+
+		level = 4
+		required_locations_fraction = 0.85
+		rule = plausible
+		
+		potential = {
+			culture = culture:omani_culture
+		}
+		
+		allow = {
+		}
+
+		name = OMANIEMPIRE_fnr
+		flag = OMANIEMPIRE_fnr
+		adjective = OMANIEMPIRE_fnr_ADJ
+		tag = OMANIEMPIRE_fnr
+		color = map_OMANIEMPIRE_fnr
+
+		regions = {
+		}
+		areas = {
+			oman_area
+		}
+		form_effect = {
+			if = {
+				limit = { country_rank_level < 4 }
+				set_country_rank_effect = { rank = country_rank:rank_empire }
+			}
+		}
+	}
+
+	# People's Republic of China
+	PRC_fnr = {
+
+		level = 4
+		required_locations_fraction = 0.85
+		rule = plausible
+		
+		potential = {
+			OR = {
+				culture = { has_culture_group = culture_group:chinese_group }
+				culture = { has_culture_group = culture_group:mongolian_group }
+			}
+		}
+		
+		allow = {
+		}
+
+		name = PRC_fnr
+		flag = PRC_fnr
+		adjective = PRC_fnr_ADJ
+		tag = PRC_fnr
+		color = map_PRC_fnr
+
+		regions = {
+			north_china_region
+			east_china_region
+			south_china_region
+			west_china_region
+			tibet_region
+		}
+		areas = {
+		}
+		form_effect = {
+		}
+	}
+
+	# Republic of China
+	ROC_fnr = {
+
+		level = 4
+		required_locations_fraction = 0.76
+		rule = plausible
+		
+		potential = {
+			OR = {
+				culture = { has_culture_group = culture_group:chinese_group }
+				culture = { has_culture_group = culture_group:mongolian_group }
+			}
+		}
+		
+		allow = {
+		}
+
+		name = ROC_fnr
+		flag = ROC_fnr
+		adjective = ROC_fnr_ADJ
+		tag = ROC_fnr
+		color = map_ROC_fnr
+
+		regions = {
+			north_china_region
+			east_china_region
+			south_china_region
+			west_china_region
+			tibet_region
+		}
+		areas = {
+		}
+		form_effect = {
+		}
+	}	
+
+	# Philippines
+	PHILIPPINES_fnr = {
+
+		level = 3
+		required_locations_fraction = 0.67
+		rule = plausible
+		
+		potential = {
+			culture = { has_culture_group = culture_group:austronesian_group }
+		}
+		
+		allow = {
+		}
+
+		name = PHILIPPINES_fnr
+		flag = PHILIPPINES_fnr
+		adjective = PHILIPPINES_fnr_ADJ
+		tag = PHILIPPINES_fnr
+		color = map_PHILIPPINES_fnr
+
+		areas = {
+			luzon_area
+			visayas_area
+			mindanao_area
+		}
+		form_effect = {
+		}
+	}
+
+	# Saudi Arabia
+	SAUDIS_fnr = {
+
+		level = 3
+		required_locations_fraction = 0.70
+		rule = plausible
+		
+		potential = {
+			culture = { has_culture_group = culture_group:arabian_group }
+		}
+		
+		allow = {
+		}
+
+		name = SAUDIS_fnr
+		flag = SAUDIS_fnr
+		adjective = SAUDIS_fnr_ADJ
+		tag = SAUDIS_fnr
+		color = map_SAUDIS_fnr
+
+		regions = {
+			arabia_region
+		}
+		form_effect = {
+		}
+	}
+	
+	# Sulawesi
+	SULAWESI_fnr = {
+
+		level = 3
+		required_locations_fraction = 0.75
+		rule = plausible
+		
+		potential = {
+			OR = {
+				culture.language = language:buginese_language
+				culture.language = language:celebic_language
+				
+			}
+		}
+		
+		allow = {
+		}
+
+		name = SULAWESI_fnr
+		flag = SULAWESI_fnr
+		adjective = SULAWESI_fnr_ADJ
+		tag = SULAWESI_fnr
+		color = map_SULAWESI_fnr
+
+		regions = {
+		}
+		areas = {
+			celebes_area
+		}
+		form_effect = {
+		}
+	}	
+
+	# Taiping
+	TAIPING_fnr = {
+
+		level = 3
+		required_locations_fraction = 0.68
+		rule = plausible
+		
+		potential = {
+			OR = {
+				culture = { has_culture_group = culture_group:chinese_group }
+				culture = { has_culture_group = culture_group:mongolian_group }
+			}
+		}
+		
+		allow = {
+			religion = religion:catholic
+			NOT = {
+				tag = c:CHI
+			}
+		}
+
+		name = TAIPING_fnr
+		flag = TAIPING_fnr
+		adjective = TAIPING_fnr_ADJ
+		tag = TAIPING_fnr
+		color = map_TAIPING_fnr
+
+		regions = {
+			east_china_region
+		}
+		areas = {
+		}
+		form_effect = {
+		}
+	}	
+
+	# Taliban
+	TALIBAN_fnr = {
+
+		level = 3
+		required_locations_fraction = 0.85
+		rule = plausible
+		
+		potential = {
+			OR = {
+				culture = culture:afghan_culture
+				culture = { has_culture_group = culture_group:iranian_group }
+			}
+		}
+		
+		allow = {
+		}
+
+		name = TALIBAN_fnr
+		flag = TALIBAN_fnr
+		adjective = TALIBAN_fnr_ADJ
+		tag = TALIBAN_fnr
+		color = map_TALIBAN_fnr
+
+		regions = {
+		}
+		areas = {
+			sistan_area
+			baluchistan_area
+		}
+		form_effect = {
+		}
+	}
+
+	# Tengoku
+	TENGOKU_fnr = {
+
+		level = 3
+		required_locations_fraction = 0.90
+		rule = plausible
+		
+		potential = {
+			language = language:japanese_language
+		}
+		
+		allow = {
+			religion = religion:catholic
+		}
+
+		name = TENGOKU_fnr
+		flag = TENGOKU_fnr
+		adjective = TENGOKU_fnr_ADJ
+		tag = TENGOKU_fnr
+		color = map_TENGOKU_fnr
+
+		regions = {
+			japan_region
+		}
+		areas = {
+		}
+		form_effect = {
+		}
+	}
+
+	# The Horde
+	HORDE_fnr = {
+
+		level = 4
+		required_locations_fraction = 1
+		rule = plausible
+		
+		potential = {
+			culture = culture:mongolian_culture
+		}
+		
+		allow = {
+		}
+
+		name = HORDE_fnr
+		flag = HORDE_fnr
+		adjective = HORDE_fnr_ADJ
+		tag = HORDE_fnr
+		color = map_HORDE_fnr
+
+		regions = {
+			steppes_region
+		}
+		areas = {
+		}
+		form_effect = {
+		}
+	}
+
+	# Tibetan Empire
+	TIBETEMPIRE_fnr = {
+
+		level = 4
+		required_locations_fraction = 0.80
+		rule = plausible
+		
+		potential = {
+			culture = { has_culture_group = culture_group:tibeto_burman_group }
+		}
+		
+		allow = {
+		}
+
+		name = TIBETEMPIRE_fnr
+		flag = TIBETEMPIRE_fnr
+		adjective = TIBETEMPIRE_fnr_ADJ
+		tag = TIBETEMPIRE_fnr
+		color = map_TIBETEMPIRE_fnr
+
+		regions = {
+			tibet_region
+		}
+		areas = {
+		}
+		form_effect = {
+			if = {
+				limit = { country_rank_level < 4 }
+				set_country_rank_effect = { rank = country_rank:rank_empire }
+			}
+		}
+	}
+
+	# United Arab Republic
+	UAR_fnr = {
+
+		level = 3
+		required_locations_fraction = 0.90
+		rule = plausible
+		
+		potential = {
+			OR = {
+				culture = culture:syriac_culture
+				culture = culture:armenian_culture
+				culture = culture:upper_egyptian_culture
+				culture = culture:lower_egyptian_culture
+			}
+		}
+		
+		allow = {
+		}
+
+		name = UAR_fnr
+		flag = UAR_fnr
+		adjective = UAR_fnr_ADJ
+		tag = UAR_fnr
+		color = map_UAR_fnr
+
+		regions = {
+			egypt_region
+		}
+		areas = {
+			#jazira_area
+		}
+		provinces = {
+			hims_province
+			halab_province
+			antakya_province
+		}
+		form_effect = {
+		}
+	}
+
+	# Vietnam
+	VIETNAM_fnr = {
+
+		level = 3
+		required_locations_fraction = 0.20
+		rule = plausible
+		
+		potential = {
+			OR = {
+				culture = { has_culture_group = culture_group:austroasiatic_group }
+				culture = { has_culture_group = culture_group:austronesian_group }
+			}
+		}
+		
+		allow = {
+		}
+
+		name = VIETNAM_fnr
+		flag = VIETNAM_fnr
+		adjective = VIETNAM_fnr_ADJ
+		tag = VIETNAM_fnr
+		color = map_VIETNAM_fnr
+
+		regions = {
+			indochina_region
+		}
+		areas = {
+			red_river_area
+			champa_area
+		}
+		provinces = {
+		}
+		form_effect = {
+		}
+	}
+
+	# Burma
+	BURMA_fnr = {
+
+		level = 3
+		required_locations_fraction = 0.60
+		rule = plausible
+		
+		potential = {
+			culture = culture:burmese_culture
+		}
+		
+		allow = {
+		}
+
+		name = BURMA_fnr
+		flag = BURMA_fnr
+		adjective = BURMA_fnr_ADJ
+		tag = BURMA_fnr
+		color = map_BURMA_fnr
+
+		regions = {
+		}
+		areas = {
+			irrawady_area
+			hill_area
+			kachin_area
+			arakhan_area
+			irrawady_delta_area
+			shan_highland_area
+		}
+		provinces = {
+		}
+		form_effect = {
+		}
+	}
+
+	# Chola Empire
+	CHOLA_fnr = {
+
+		level = 4
+		required_locations_fraction = 0.30
+		rule = plausible
+		
+		potential = {
+			culture = culture:tamil
+		}
+		
+		allow = {
+		}
+
+		name = CHOLA_fnr
+		flag = CHOLA_fnr
+		adjective = CHOLA_fnr_ADJ
+		tag = CHOLA_fnr
+		color = map_CHOLA_fnr
+
+		regions = {
+		}
+		areas = {
+			tamil_land_area
+			malabar_area
+			andhra_area
+			orissa_area
+			bengal_area
+		}
+		provinces = {
+		}
+		form_effect = {
+			if = {
+				limit = { country_rank_level < 4 }
+				set_country_rank_effect = { rank = country_rank:rank_empire }
+			}
+		}
+	}
+
+	# Ceylon
+	CEYLON_fnr = {
+
+		level = 3
+		required_locations_fraction = 0.95
+		rule = plausible
+		
+		potential = {
+			OR = {
+				culture = culture:tamil
+				culture = culture:sinhalese
+			}
+		}
+		
+		allow = {
+		}
+
+		name = CEYLON_fnr
+		flag = CEYLON_fnr
+		adjective = CEYLON_fnr_ADJ
+		tag = CEYLON_fnr
+		color = map_CEYLON_fnr
+
+		regions = {
+		}
+		areas = {
+			sailan_area
+		}
+		provinces = {
+		}
+		form_effect = {
+		}
+	}
+
+	# Abyssinia
+	ABYSSINIA_fnr = {
+
+		level = 4
+		required_locations_fraction = 0.95
+		rule = plausible
+		
+		potential = {
+			culture = culture:amhara
+		}
+		
+		allow = {
+		}
+
+		name = ABYSSINIA_fnr
+		flag = ABYSSINIA_fnr
+		adjective = ABYSSINIA_fnr_ADJ
+		tag = ABYSSINIA_fnr
+		color = map_ABYSSINIA_fnr
+
+		regions = {
+			ethiopia_region
+		}
+		areas = {
+		}
+		provinces = {
+		}
+		form_effect = {
+		}
+	}
+
+	# Chad
+	CHAD_fnr = {
+
+		level = 3
+		required_locations_fraction = 0.95
+		rule = plausible
+		
+		potential = {
+			culture = culture:kanembu_culture
+		}
+		
+		allow = {
+		}
+
+		name = CHAD_fnr
+		flag = CHAD_fnr
+		adjective = CHAD_fnr_ADJ
+		tag = CHAD_fnr
+		color = map_CHAD_fnr
+
+		regions = {
+		}
+		areas = {
+			kanem_area
+		}
+		provinces = {
+		}
+		form_effect = {
+		}
+	}
+
+	# Madagascar
+	MADAGASCAR_fnr = {
+		level = 3
+		required_locations_fraction = 0.90
+		rule = historical
+
+		potential = {
+			culture = { has_culture_group = culture_group:malagasy_group }
+		}
+		allow = {
+			
+		}
+
+		name = MADAGASCAR_fnr
+		flag = MADAGASCAR_fnr
+		adjective = MADAGASCAR_fnr_ADJ
+		tag = MADAGASCAR_fnr
+		color = map_MADAGASCAR_fnr
+
+		regions = {
+			madagascar_region
+		}
+
+		form_effect = {
+		}
+	}
+
+	# Rhodesia
+	RHODESIA_fnr = {
+		level = 3
+		required_locations_fraction = 0.40
+		rule = historical
+
+		potential = {
+			culture = culture:shona_culture
+		}
+		allow = {
+			
+		}
+
+		name = MANCHURIA_fnr
+		flag = MANCHURIA_fnr
+		adjective = MANCHURIA_fnr_ADJ
+		tag = MANCHURIA_fnr
+		color = map_RHODESIA_fnr
+
+		regions = {
+			zimbabwe_region
+		}
+
+		form_effect = {
+		}
+	}	
+
+	# Manchuria
+	MANCHURIA_fnr = {
+		level = 3
+		required_locations_fraction = 0.40
+		rule = historical
+
+		potential = {
+			OR = {
+				culture = { has_culture_group = culture_group:jurchen_group }
+				culture = { has_culture_group = culture_group:tungusic_group }
+			}
+		}
+		allow = {
+			
+		}
+
+		name = MANCHURIA_fnr
+		flag = MANCHURIA_fnr
+		adjective = MANCHURIA_fnr_ADJ
+		tag = MANCHURIA_fnr
+		color = map_MANCHURIA_fnr
+
+		regions = {
+			manchuria_region
+		}
+
+		form_effect = {
+		}
+	}	
+
+	# Israel
+	ISRAEL_fnr = {
+		level = 3
+		required_locations_fraction = 0.40
+		rule = historical
+
+		potential = {
+			OR = {
+				OR = {
+					culture = culture:beyte_yisrael
+					culture = culture:sephardi
+				}
+				any_owned_location = { 
+					region = region:crescent_region 
+				}
+			}
+		}
+		allow = {
+			
+		}
+
+		name = PALESTINE_fnr
+		flag = PALESTINE_fnr
+		adjective = PALESTINE_fnr_ADJ
+		tag = PALESTINE_fnr
+		color = map_ISRAEL_fnr
+
+		regions = {
+			levant_area
+		}
+
+		form_effect = {
+		}
+	}	
+
+	# Palestine
+	PALESTINE_fnr = {
+		level = 3
+		required_locations_fraction = 0.40
+		rule = historical
+
+		potential = {
+			OR = {
+				culture = culture:bedouin_culture
+				culture = culture:levantine_culture
+			}
+		}
+		allow = {
+			
+		}
+
+		name = PALESTINE_fnr
+		flag = PALESTINE_fnr
+		adjective = PALESTINE_fnr_ADJ
+		tag = PALESTINE_fnr
+		color = map_PALESTINE_fnr
+
+		regions = {
+			levant_area
+		}
+
+		form_effect = {
+		}
+	}	
+
+	# The Rhine Confederation
 	CRHINE_fnr = {
 		level = 3
 		required_locations_fraction = 1
@@ -1445,7 +3194,7 @@
 		flag = CRHINE_fnr
 		adjective = CRHINE_fnr_ADJ
 		tag = CRHINE_fnr
-		color = map_RHE
+		color = map_CRHINE_fnr
 
 		areas = {
 			franconia_area
@@ -1535,7 +3284,6 @@
 ############################
 
 	# Alaska
-
 	ALASKA_fnr = {
 		level = 1
 		required_locations_fraction = 0.70
@@ -1554,7 +3302,7 @@
 		flag = ALASKA_fnr
 		adjective = ALASKA_fnr_ADJ
 		tag = ALASKA_fnr
-		color = map_scandinavia 
+		color = map_ALASKA_fnr
 
 		regions = {
 			alaska_region
@@ -1564,7 +3312,6 @@
 	}
 
 	# Arpitania
-
 	ARPIT_fnr = {
 
 		level = 2
@@ -1582,7 +3329,7 @@
 		flag = ARPIT_fnr
 		adjective = ARPIT_fnr_ADJ
 		tag = ARPIT_fnr
-		color = map_scandinavia 
+		color = map_ARPIT_fnr
 
 		regions = {
 			france_region
@@ -1596,7 +3343,6 @@
 	}
 
 	# Adriatic Empire
-
 	ADRIATICEMP_fnr = {
 
 		level = 4
@@ -1624,7 +3370,7 @@
 		flag = ADRIATICEMP_fnr
 		adjective = ADRIATICEMP_fnr_ADJ
 		tag = ADRIATICEMP_fnr
-		color = map_scandinavia 
+		color = map_ADRIATICEMP_fnr
 
 		regions = {
 			#italy_region
@@ -1655,13 +3401,16 @@
 			slunj
 		}
 		form_effect = {
+			if = {
+				limit = { country_rank_level < 4 }
+				set_country_rank_effect = { rank = country_rank:rank_empire }
+			}
 		}
 	}	
 
 	# Alpland
-
 	ALPLAND_fnr = {
-		level = 3
+		level = 2
 		required_locations_fraction = 0.80
 		rule = historical
 
@@ -1676,7 +3425,7 @@
 		flag = ALPLAND_fnr
 		adjective = ALPLAND_fnr_ADJ
 		tag = ALPLAND_fnr
-		color = map_SWI
+		color = map_ALPLAND_fnr
 
 		areas = {
 			central_switzerland_area
@@ -1699,7 +3448,6 @@
 	}
 
 	# Anglo-Dutch Union
-
 	ANGLODUTCH_fnr = {
 		level = 4
 		required_locations_fraction = 0.75
@@ -1719,7 +3467,7 @@
 		flag = ANGLODUTCH_fnr
 		adjective = ANGLODUTCH_fnr_ADJ
 		tag = ANGLODUTCH_fnr
-		color = map_ENG
+		color = map_ANGLODUTCH_fnr
 
 		areas = {
 			home_counties_area
@@ -1735,7 +3483,6 @@
 	}
 
 	# Kingdom of Aquitaine
-
 	KOAQUITAINE_fnr = {
 
 		level = 3
@@ -1753,7 +3500,7 @@
 		flag = KOAQUITAINE_fnr
 		adjective = KOAQUITAINE_fnr_ADJ
 		tag = KOAQUITAINE_fnr
-		color = map_scandinavia 
+		color = map_KOAQUITAINE_fnr
 
 		regions = {
 
@@ -1768,8 +3515,39 @@
 		}
 	}
 
-	# Balkan League
+	# Occitania
+	OCCITANIA_fnr = {
 
+		level = 3
+		required_locations_fraction = 0.35
+		rule = plausible
+		
+		potential = {
+			culture = { has_culture_group = culture_group:french_group }
+		}
+		
+		allow = {
+		}
+
+		name = OCCITANIA_fnr
+		flag = OCCITANIA_fnr
+		adjective = OCCITANIA_fnr_ADJ
+		tag = OCCITANIA_fnr
+		color = map_OCCITANIA_fnr
+
+		regions = {
+
+		}
+		areas = {
+			gascony_area
+			guyenne_area
+			languedoc_area
+		}
+		form_effect = {
+		}
+	}
+
+	# Balkan League
 	BALKLEAGUE_fnr = {
 
 		level = 3
@@ -1788,7 +3566,7 @@
 		flag = BALKLEAGUE_fnr
 		adjective = BALKLEAGUE_fnr_ADJ
 		tag = BALKLEAGUE_fnr
-		color = map_scandinavia 
+		color = map_BALKLEAGUE_fnr
 
 		regions = {
 			#balkan_region
@@ -1811,11 +3589,10 @@
 	}	
 
 	# Bosnia-Serbia
-
 	BOSNIASERBIA_fnr = {
 
 		level = 3
-		required_locations_fraction = 0.50
+		required_locations_fraction = 0.75
 		rule = plausible
 		
 		potential = {
@@ -1830,7 +3607,7 @@
 		flag = BOSNIASERBIA_fnr
 		adjective = BOSNIASERBIA_fnr_ADJ
 		tag = BOSNIASERBIA_fnr_fnr
-		color = map_scandinavia 
+		color = map_BOSNIASERBIA_fnr
 
 		regions = {
 		}
@@ -1845,7 +3622,6 @@
 	}	
 
 	# Catholica Russica
-
 	CATHOLICARUS_fnr = {
 		level = 4
 		required_locations_fraction = 0.5
@@ -1870,7 +3646,7 @@
 		flag = CATHOLICARUS_fnr
 		adjective = CATHOLICARUS_fnr_ADJ
 		tag = CATHOLICARUS_fnr
-		color = map_RUS
+		color = map_CATHOLICARUS_fnr
 
 		regions = {
 			russian_region
@@ -1888,7 +3664,6 @@
 	}
 
 	# Celtic Union
-
 	CELTICUNION_fnr = {
 
 		level = 4
@@ -1906,7 +3681,7 @@
 		flag = IRE # TODO
 		adjective = CELTICUNION_fnr_ADJ
 		tag = CELTICUNION_fnr
-		color = map_scandinavia 
+		color = map_CELTICUNION_fnr
 
 		regions = {
 			great_britain_region
@@ -1920,7 +3695,6 @@
 	}	
 
 	# Carolingian Empire (TODO: finish, lots of territory)
-
 	CAROLINGIAN_fnr = {
 
 		level = 4
@@ -1938,7 +3712,7 @@
 		flag = CAROLINGIAN_fnr
 		adjective = CAROLINGIAN_fnr_ADJ
 		tag = CAROLINGIAN_fnr
-		color = map_scandinavia 
+		color = map_CAROLINGIAN_fnr
 
 		regions = {
 			france_region
@@ -1949,6 +3723,10 @@
 		areas = {
 		}
 		form_effect = {
+			if = {
+				limit = { country_rank_level < 4 }
+				set_country_rank_effect = { rank = country_rank:rank_empire }
+			}
 		}
 	}
 
@@ -1974,7 +3752,7 @@
 		flag = CORDOBA_fnr
 		adjective = CORDOBA_fnr_ADJ
 		tag = CORDOBA_fnr
-		color = map_ADU
+		color = map_CORDOBA_fnr
 		
 		areas = {
 			andalusia_area
@@ -2008,7 +3786,7 @@
 		flag = DACIA_fnr
 		adjective = DACIA_fnr_ADJ
 		tag = DACIA_fnr
-		color = map_scandinavia 
+		color = map_DACIA_fnr 
 
 		areas = {
 			bulgaria_area
@@ -2040,7 +3818,7 @@
 		flag = DUALMONARCHY_fnr
 		adjective = DUALMONARCHY_fnr_ADJ
 		tag = DUALMONARCHY_fnr
-		color = map_scandinavia 
+		color = map_DUALMONARCHY_fnr
 
 		regions = {
 			france_region
@@ -2078,7 +3856,7 @@
 		flag = EASTSLAVIA_fnr
 		adjective = EASTSLAVIA_fnr_ADJ
 		tag = UKRAINE_fnr
-		color = map_ruthenian
+		color = map_EASTSLAVIA_fnr
 		
 		regions = {
 			ruthenia_region
@@ -2111,13 +3889,17 @@
 		flag = FRANCOIBERIANEMP_fnr
 		adjective = FRANCOIBERIANEMP_fnr_ADJ
 		tag = FRANCOIBERIANEMP_fnr
-		color = map_scandinavia 
+		color = map_FRANCOIBERIANEMP_fnr
 
 		regions = {
 			france_region
 			iberia_region
 		}
 		form_effect = {
+			if = {
+				limit = { country_rank_level < 4 }
+				set_country_rank_effect = { rank = country_rank:rank_empire }
+			}
 		}
 	}	
 
@@ -2139,7 +3921,7 @@
 		flag = FRIESLANDE_fnr
 		adjective = FRIESLANDE_fnr_ADJ
 		tag = FRIESLANDE_fnr
-		color = map_scandinavia 
+		color = map_FRIESLANDE_fnr
 
 		areas = {
 			friesland_area
@@ -2163,15 +3945,19 @@
 		}
 
 		name = GALLICEMPIRE_fnr
-		flag = GALLICEMPIRE_fnr
+		flag = IRE
 		adjective = GALLICEMPIRE_fnr_ADJ
 		tag = GALLICEMPIRE_fnr
-		color = map_scandinavia 
+		color = map_GALLICEMPIRE_fnr
 
 		regions = {
 			france_region
 		}
 		form_effect = {
+			if = {
+				limit = { country_rank_level < 4 }
+				set_country_rank_effect = { rank = country_rank:rank_empire }
+			}
 		}
 	}	
 
@@ -2190,15 +3976,19 @@
 		}
 
 		name = HUNGARIANEMPIRE_fnr
-		flag = HUNGARIANEMPIRE_fnr
+		flag = HUN
 		adjective = HUNGARIANEMPIRE_fnr_ADJ
 		tag = HUNGARIANEMPIRE_fnr
-		color = map_HUN
+		color = map_HUNGARIANEMPIRE_fnr
 
 		regions = {
 			carpathia_region
 		}
 		form_effect = {
+			if = {
+				limit = { country_rank_level < 4 }
+				set_country_rank_effect = { rank = country_rank:rank_empire }
+			}
 		}
 	}	
 
@@ -2220,12 +4010,16 @@
 		flag = IBERIANEMPIRE_fnr
 		adjective = IBERIANEMPIRE_fnr_ADJ
 		tag = IBERIANEMPIRE_fnr
-		color = map_scandinavia 
+		color = map_IBERIANEMPIRE_fnr
 
 		regions = {
 			iberia_region
 		}
 		form_effect = {
+			if = {
+				limit = { country_rank_level < 4 }
+				set_country_rank_effect = { rank = country_rank:rank_empire }
+			}
 		}
 	}	
 	
@@ -2247,7 +4041,7 @@
 		flag = VEN
 		adjective = ITALIANMERCHANT_fnr_ADJ
 		tag = ITALIANMERCHANT_fnr
-		color = map_ITA
+		color = map_ITALIANMERCHANT_fnr
 
 		regions = {
 			italy_region
@@ -2281,16 +4075,20 @@
 		}
 		
 		name = JAGIELLONIAN_fnr
-		flag = JAGIELLONIAN_fnr
+		flag = POL
 		adjective = JAGIELLONIAN_fnr_ADJ
 		tag = JAGIELLONIAN_fnr
-		color = map_ruthenian
+		color = map_JAGIELLONIAN_fnr
 		
 		regions = {
 			ruthenia_region
 			baltic_region
 		}
 		form_effect = {
+			if = {
+				limit = { country_rank_level < 4 }
+				set_country_rank_effect = { rank = country_rank:rank_empire }
+			}
 		}
 	}
 
@@ -2317,7 +4115,7 @@
 		flag = UMMAYADS_fnr
 		adjective = UMMAYADS_fnr_ADJ
 		tag = UMMAYADS_fnr
-		color = map_scandinavia 
+		color = map_UMMAYADS_fnr
 
 		regions = {
 			crescent_region
@@ -2331,6 +4129,10 @@
 			cilicia_area
 		}
 		form_effect = {
+			if = {
+				limit = { country_rank_level < 4 }
+				set_country_rank_effect = { rank = country_rank:rank_empire }
+			}
 		}
 	}	
 
@@ -2349,10 +4151,10 @@
 		}
 
 		name = KOFGERMANY_fnr
-		flag = KOFGERMANY_fnr
+		flag = GER
 		adjective = KOFGERMANY_fnr_ADJ
 		tag = KOFGERMANY_fnr
-		color = map_GER
+		color = map_KOFGERMANY_fnr
 
 		regions = {
 			north_german_region
@@ -2372,7 +4174,7 @@
 
 		potential = {
 			culture = { has_culture_group = culture_group:italian_group }
-			tag = c:PAP
+			#tag = c:PAP
 		}
 
 		allow = {
@@ -2383,7 +4185,7 @@
 		flag = KOFGOD_fnr
 		adjective = KOFGOD_fnr_ADJ
 		tag = KOFGOD_fnr
-		color = map_ITA
+		color = map_KOFGOD_fnr
 
 		regions = {
 			italy_region
@@ -2409,7 +4211,7 @@
 		flag = LANGOBARDS_fnr
 		adjective = LANGOBARDS_fnr_ADJ
 		tag = LANGOBARDS_fnr
-		color = map_ITA
+		color = map_LANGOBARDS_fnr
 
 		regions = {
 			italy_region
@@ -2417,5 +4219,186 @@
 		form_effect = {
 		}
 	}	
+
+	# Lusitanian Empire
+	LUSITANIANEMP_fnr = {
+
+		level = 4
+		required_locations_fraction = 0.95
+		rule = plausible
+		
+		potential = {
+			culture = culture:portuguese
+		}
+		
+		allow = {
+		}
+
+		name = LUSITANIANEMP_fnr
+		flag = LUSITANIANEMP_fnr
+		adjective = LUSITANIANEMP_fnr_ADJ
+		tag = LUSITANIANEMP_fnr
+		color = map_LUSITANIANEMP_fnr
+
+		areas = {
+			north_portugal_area
+			south_portugal_area
+			galicia_area
+		}
+		form_effect = {
+			if = {
+				limit = { country_rank_level < 4 }
+				set_country_rank_effect = { rank = country_rank:rank_empire }
+			}
+		}
+	}	
+
+	# Macedonia 
+	MACEDONIA_fnr = {
+		level = 3
+		required_locations_fraction = 0.75
+		rule = historical
+
+		potential = {
+			OR = {
+				culture = culture:hellenic
+				culture = { has_culture_group = culture_group:greek_group }
+			}
+		}
+
+		allow = {
+			not = { tag = BYZ }
+		}
+
+		name = MACEDONIA_fnr
+		flag = MACEDONIA_fnr
+		adjective = MACEDONIA_fnr_ADJ
+		tag = MACEDONIA_fnr
+		color = map_MACEDONIA_fnr
+
+		provinces = {
+			north_epirus_province
+		}
+
+		areas = {
+			macedonia_area
+			northern_greece_area
+		}
+	}
+
+	# Macedonian Empire
+	MACEDONIAEMPIRE_fnr = {
+		level = 4
+		required_locations_fraction = 0.75
+		rule = historical
+
+		potential = {
+			OR = {
+				culture = culture:hellenic
+				culture = { has_culture_group = culture_group:greek_group }
+			}
+		}
+
+		allow = {
+		}
+
+		name = MACEDONIAEMPIRE_fnr
+		flag = MACEDONIAEMPIRE_fnr
+		adjective = MACEDONIAEMPIRE_fnr_ADJ
+		tag = MACEDONIAEMPIRE_fnr
+		color = map_MACEDONIAEMPIRE_fnr
+		
+		areas = {
+			macedonia_area
+			northern_greece_area
+			thrace_area
+			bulgaria_area
+			armenian_highlands_area
+			eastern_khorasan_area
+			badakhshan_area
+		}
+
+		regions = {
+			crescent_region
+			persia_region
+			egypt_region
+			anatolia_region
+		}
+
+		form_effect = {
+			if = {
+				limit = { country_rank_level < 4 }
+				set_country_rank_effect = { rank = country_rank:rank_empire }
+			}
+		}
+	}	
+
+	# North Sea Empire
+	NORTHSEAEMPIRE_fnr = {
+		level = 4
+		required_locations_fraction = 0.75
+		rule = historical
+
+		potential = {
+			OR = {
+				culture = { has_culture_group = culture_group:british_group }
+				culture = { has_culture_group = culture_group:scandinavian_group }
+			}
+		}
+
+		allow = {
+		}
+
+		name = NORTHSEAEMPIRE_fnr
+		flag = NORTHSEAEMPIRE_fnr
+		adjective = NORTHSEAEMPIRE_fnr_ADJ
+		tag = NORTHSEAEMPIRE_fnr
+		color = map_NORTHSEAEMPIRE_fnr
+		
+		areas = {
+			home_counties_area
+			midlands_area
+			east_anglia_area
+			northumbria_area
+			denmark_area
+			skaneland_area
+			syd_norge_area
+			nord_norge_area
+		}
+
+		form_effect = {
+			if = {
+				limit = { country_rank_level < 4 }
+				set_country_rank_effect = { rank = country_rank:rank_empire }
+			}
+		}
+	}	
+
+	# Pontus
+	PONTUS_fnr = {
+		level = 3
+		required_locations_fraction = 0.75
+		rule = historical
+
+		potential = {
+			culture = culture:pontic_greek_culture
+		}
+
+		allow = {
+		}
+
+		name = PONTUS_fnr
+		flag = PONTUS_fnr
+		adjective = PONTUS_fnr_ADJ
+		tag = PONTUS_fnr
+		color = map_PONTUS_fnr
+		
+		areas = {
+			pontus_area
+			crimea_area
+			matrega_area
+		}
+	}	
+	
 
  # end of file do NOT allow LAST line to have any code

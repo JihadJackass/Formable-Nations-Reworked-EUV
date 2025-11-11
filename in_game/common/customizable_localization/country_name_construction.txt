@@ -8,6 +8,8 @@
 					tag = PAP
 					has_reform = government_reform:papacy_reform
 				}
+				# Formable Nations Reworked Names without Prefix
+				tag = HANSALEAGUE_fnr
 			}
 		}
 	}

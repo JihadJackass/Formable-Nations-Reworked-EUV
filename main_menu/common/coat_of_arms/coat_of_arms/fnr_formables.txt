@@ -11,3 +11,687 @@
 		color1 = "black"
 		color2 = "yellow"
 	}
+# Balochistan
+	BLC_fnr = {
+		pattern = "pattern_horizontal_split_01.dds"
+		color1 = "green"
+		color2 = "red"
+	}
+# Polabia
+	POLB_fnr = {
+		pattern = "pattern_jurchen_checky_colours.dds"
+		color1 = "blue"
+		color2 = "red"
+		color3 = "white"
+	}
+# Greater Sorbia
+	GSORB_fnr = {
+		pattern = "pattern_jurchen_checky_colours.dds"
+		color1 = "red"
+		color2 = "blue"
+		color3 = "white"
+	}
+# Sorbic Kingdom TODO: fix
+	KSORB_fnr = {
+		pattern = "pattern_jurchen_checky_colours.dds"
+		color1 = "red"
+		color2 = "blue"
+		color3 = "white"
+	}
+# Kingdom of Hanover TODO: fix
+	KOFHN_fnr = {
+		pattern = "pattern_horizontal_split_01.dds"
+		color1 = "yellow"
+		color2 = "white"
+	}
+# Polynesia
+	POLYNE_fnr = {
+		pattern = "pattern_jurchen_checky_colours.dds"
+		color1 = "red"
+		color2 = "white"
+		color3 = "red"
+	}
+# Hawaii TODO: fix
+	HAWAIII_fnr = {
+		pattern = "pattern_jurchen_checky_colours.dds"
+		color1 = "red"
+		color2 = "white"
+		color3 = "blue"
+	}
+# Yugoslavia
+	YUGOSLAVIA_fnr = {
+		pattern = "pattern_jurchen_checky_colours.dds"
+		color1 = "blue"
+		color2 = "white"
+		color3 = "red"
+	}
+# Japan
+	JAPAN_fnr = {
+		pattern = "pattern_mena_round_frame_shield.dds"
+		color1 = "white"
+		color2 = "red"
+	}
+# Angevin Empire TODO: fix
+	ANGEVINEMPIRE_fnr = {
+		pattern = "pattern_solid.dds"
+		color1 = "red"
+	}
+# Baltic States	
+	BALTICSTATES_fnr = {
+		pattern = "pattern_cross.dds"
+		color1 = "white"
+		color2 = "black"
+	}
+# Alsace-Lorraine
+	ALSACELORRAINE_fnr = {
+		pattern = "pattern_horizontal_split_01.dds"
+		color1 = "red"
+		color2 = "white"
+	}
+# Austria-Bavaria TODO: fix
+	AUSTRIABAVARIA_fnr = {
+		pattern = "pattern_jurchen_checky_colours.dds"
+		color1 = "blue"
+		color2 = "white"
+		color3 = "red"
+	}
+# Basque Country TODO: fix
+	BASQUECOUN_fnr = {
+		pattern = "pattern_cross.dds"
+		color1 = "red"
+		color2 = "white"
+	}
+# Belarus
+	BELARUS_fnr = {
+		pattern = "pattern_jurchen_checky_colours.dds"
+		color1 = "green"
+		color2 = "red"
+		color3 = "red"
+	}
+# Belgium	
+	BELGIUM_fnr = {
+		pattern = "pattern_tricolor_vertical_01.dds"
+		color1 = "black"
+		color2 = "yellow"
+		color3 = "red"
+	}
+# Benelux
+	BENELUX_fnr = {
+		pattern = "pattern_tricolor_horizontal_01.dds"
+		color1 = "red"
+		color2 = "white"
+		color3 = "blue"
+	}
+# Bremen-Verden TODO: fix
+	BREMENVERDEN_fnr = {
+		pattern = "pattern_solid.dds"
+		color1 = "red"
+	}
+# Bulgarian Empire
+	BULGEMPIRE_fnr = {
+		pattern = "pattern_tricolor_horizontal_01.dds"
+		color1 = "white"
+		color2 = "green"
+		color3 = "red"
+	}
+# British Empire TODO: fix
+	BRITISHEMPIRE_fnr = {
+		pattern = "pattern_cross.dds"
+		color1 = "white"
+		color2 = "red"
+	}
+# Alpland TODO: fix
+	ALPLAND_fnr = {
+		pattern = "pattern_solid.dds"
+		color1 = "blue_sky"
+	}	
+# Cisalpina	
+	CISALPINA_fnr = {
+		pattern = "pattern_tricolor_horizontal_01.dds"
+		color1 = "red"
+		color2 = "white"
+		color3 = "green"
+	}	
+# Commonwealth of England # TODO
+	ENGLISHCOMMONWEALTH_fnr = {
+		pattern = "pattern_cross.dds"
+		color1 = "white"
+		color2 = "red"
+	}
+# Czechoslovakia # TODO
+	CZECKSLOVAK_fnr = {
+		pattern = "pattern_horizontal_split_01.dds"
+		color1 = "white"
+		color2 = "red"
+		color3 = "blue"
+	}
+# Ducal Prussia
+	# TODO: uses prussia flag for now
+# Ukraine
+	UKRAINE_fnr = {
+		pattern = "pattern_horizontal_split_01.dds"
+		color1 = "blue"
+		color2 = "yellow"
+	}
+# Donetsk People's Republic
+	DONETSKPR_fnr = {
+		pattern = "pattern_horizontal_split_01.dds"
+		color1 = "red"
+		color2 = "blue"
+		color3 = "black"
+	}
+# Luhansk People's Republic
+	LUHANSKPR_fnr = {
+		pattern = "pattern_horizontal_split_01.dds"
+		color1 = "blue_sky"
+		color2 = "blue"
+		color3 = "red"
+	}
+# Emilia-Romagna
+	EMILIAROMAGNA_fnr = {
+		pattern = "pattern_cross.dds"
+		color1 = "white"
+		color2 = "red"
+	}
+# European Union # TODO
+	EUROPEANUNION_fnr = {
+		pattern = "pattern_solid.dds"
+		color1 = "blue"
+	}
+# French Empire
+	FRENCHEMPIRE_fnr = {
+		pattern = "pattern_tricolor_vertical_01.dds"
+		color1 = "blue"
+		color2 = "white"
+		color3 = "red"
+	}
+# German Empire
+	GERMANEMPIRE_fnr = {
+		pattern = "pattern_tricolor_horizontal_01.dds"
+		color1 = "black"
+		color2 = "white"
+		color3 = "red"
+	}
+# German Reich
+	GERMANREICH_fnr = {
+		pattern = "pattern_mena_round_frame_shield.dds"
+		color1 = "red"
+		color2 = "white"
+	}	
+# Greater German Reich
+	GREATERGERMANREICH_fnr = {
+		pattern = "pattern_tricolor_horizontal_01.dds"
+		color1 = "black"
+		color2 = "white"
+		color3 = "red"
+	}
+# Nazi Germany
+	NAZIGERMANY_fnr = {
+		pattern = "pattern_mena_round_frame_shield.dds"
+		color1 = "red"
+		color2 = "white"
+	}
+# Hanseatic League
+	HANSALEAGUE_fnr = {
+		pattern = "pattern_horizontal_split_01.dds"
+		color1 = "red"
+		color2 = "white"
+	}
+# Hanseatic League
+	HESSENASSAU_fnr = {
+		pattern = "pattern_tricolor_horizontal_01.dds"
+		color1 = "red"
+		color2 = "white"
+		color3 = "blue_sky"
+	}
+# Italian Empire
+	ITALIANEMPIRE_fnr = {
+		pattern = "pattern_tricolor_horizontal_01.dds"
+		color1 = "red"
+		color2 = "white"
+		color3 = "green"
+	}
+# Kalmar Union
+	KALMARUNION_fnr = {
+		pattern = "pattern_cross.dds"
+		color1 = "red"
+		color2 = "yellow"
+	}
+# Kyivan Rus
+	# TODO: Uses Ruthenia flag for now
+
+# Latin Empire
+	# TODO: Uses rome flag for now
+
+# Lombardy # TODO
+	LOMBARDY_fnr = {
+		pattern = "pattern_solid.dds"
+		color1 = "green"
+	}
+# Lombardy-Venetia
+	LOMBARDYVENETIA_fnr = {
+		pattern = "pattern_border_thin.dds"
+		color1 = "green_pine"
+		color2 = "black"
+	}
+# Lower Saxony
+	LOWERSAXONY_fnr = {
+		pattern = "pattern_tricolor_horizontal_01.dds"
+		color1 = "black"
+		color2 = "red"
+		color3 = "yelow"		
+	}
+# Malta
+	MALTA_fnr = {
+		pattern = "pattern_vertical_split_01.dds"
+		color1 = "white"
+		color2 = "red"
+	}
+# Mercia
+	MERCIA_fnr = { # TODO
+		pattern = "pattern_cross.dds"
+		color1 = "blue"
+		color2 = "yellow"
+	}
+# Russian Empire
+	RUSSIANEMPIRE_fnr = {
+		pattern = "pattern_tricolor_horizontal_01.dds"
+		color1 = "black"
+		color2 = "yellow"
+		color3 = "white"
+	}
+# Russian Federation
+	RUSSIANFED_fnr = {
+		pattern = "pattern_tricolor_horizontal_01.dds"
+		color1 = "white"
+		color2 = "blue"
+		color3 = "red"
+	}
+# Serbian Empire
+	SERBEMPIRE_fnr = {
+		pattern = "pattern_tricolor_horizontal_01.dds"
+		color1 = "red"
+		color2 = "blue_light"
+		color3 = "white"		
+	}
+# Soviet Union	
+	SOVIETUNION_fnr = {
+		pattern = "pattern_solid.dds"
+		color1 = "red_scarlet"	
+	}
+# Sweden-Norway
+	SWEDENNORWAY_fnr = {
+		pattern = "pattern_cross.dds"
+		color1 = "blue"
+		color2 = "yellow"
+	}
+# Turkey
+	TURKEY_fnr = {
+		pattern = "pattern_solid.dds"
+		color1 = "red"	
+	}	
+# The United Kingdom TODO: fix
+	UNITEDKINGDOM_fnr = {
+		pattern = "pattern_cross.dds"
+		color1 = "white"
+		color2 = "red"
+	}
+# Wendish Empire
+	WENDISHEMPIRE_fnr = {
+		pattern = "pattern_solid.dds"
+		color1 = "red"	
+	}	
+# Armenian Empire
+	ARMENIAEMPIRE_fnr = {
+		pattern = "pattern_solid.dds"
+		color1 = "red_scarlet"	
+	}	
+# Arabian Empire
+	ARABIANEMPIRE_fnr = {
+		pattern = "pattern_solid.dds"
+		color1 = "green"	
+	}	
+# Caucasia
+	CAUCASIA_fnr = {
+		pattern = "pattern_horizontal_stripes_01.dds"
+		color1 = "green"	
+		color2 = "white"	
+	}	
+# Empire of China
+	CHINAEMPIRE_fnr = {
+		pattern = "pattern_jurchen_checky_colours.dds"
+		color1 = "blue"	
+		color2 = "white"	
+		color3 = "yellow"	
+	}	
+# Goguryeo
+	GOGURYEO_fnr = {
+		pattern = "pattern_solid.dds"
+		color1 = "brick"		
+	}	
+# Korea
+	KOREA_fnr = {
+		pattern = "pattern_mena_round_frame_shield.dds"
+		color1 = "white"
+		color2 = "blue"	
+	}	
+# Himalayan Empire
+	HIMALAYA_fnr = {
+		pattern = "pattern_solid.dds"
+		color1 = "white"	
+	}	
+# Afghanistan	
+	AFGHANISTAN_fnr = {
+		pattern = "pattern_tricolor_vertical_01.dds"
+		color1 = "black"
+		color2 = "red"
+		color3 = "green"
+	}
+# Mingrelia
+	MINGRELIA_fnr = {
+		pattern = "pattern_quarterly_q2_q3_per_pale.dds"
+		color1 = "blue"
+		color2 = "red"	
+		color3 = "yellow"	
+	}
+# North Korea
+	NORTHKOREA_fnr = {
+		pattern = "pattern_mena_round_frame_shield.dds"
+		color1 = "white"
+		color2 = "blue"	
+	}	
+# South Korea
+	SOUTHKOREA_fnr = {
+		pattern = "pattern_mena_round_frame_shield.dds"
+		color1 = "white"
+		color2 = "blue"	
+	}	
+# Omani Empire	
+	OMANIEMPIRE_fnr = {
+		pattern = "pattern_solid.dds"
+		color1 = "red"	
+	}	
+# People's Republic of China
+	PRC_fnr = {
+		pattern = "pattern_solid.dds"
+		color1 = "red"	
+	}	
+# Republic of China	
+	ROC_fnr = {
+		pattern = "pattern_canton_02.dds"
+		color1 = "blue"	
+		color2 = "red"	
+	}	
+# Philippines	
+	PHILIPPINES_fnr = {
+		pattern = "pattern_solid.dds"
+		color1 = "blue"	
+	}		
+# Saudi Arabia
+	SAUDIS_fnr = {
+		pattern = "pattern_solid.dds"
+		color1 = "green"	
+	}	
+# Sulawesi
+	SULAWESI_fnr = {
+		pattern = "pattern_mena_round_frame_shield.dds"
+		color1 = "white"
+		color2 = "orange"	
+	}	
+# Taiping
+	TAIPING_fnr = {
+		pattern = "pattern_solid.dds"
+		color1 = "yellow"	
+	}	
+# Taliban
+	TALIBAN_fnr = {
+		pattern = "pattern_mena_round_frame_shield.dds"
+		color1 = "white"
+		color2 = "black"
+	}	
+# Tengoku
+	TENGOKU_fnr = {
+		pattern = "pattern_mena_round_frame_shield.dds"
+		color1 = "white"
+		color2 = "yellow"
+	}
+# The Horde	
+	HORDE_fnr = {
+		pattern = "pattern_mena_round_frame_shield.dds"
+		color1 = "green_pine"
+		color2 = "green"
+	}	
+# Tibetan Empire
+	TIBETEMPIRE_fnr = {
+		pattern = "pattern_tricolor_vertical_01.dds"
+		color1 = "red"
+		color2 = "blue"
+		color3 = "red"
+	}
+# United Arab Republic
+	UAR_fnr = {
+		pattern = "pattern_tricolor_vertical_01.dds"
+		color1 = "black"
+		color2 = "white"
+		color3 = "red"
+	}
+# Vietnam
+	VIETNAM_fnr = {
+		pattern = "pattern_mena_round_frame_shield.dds"
+		color1 = "yellow"
+		color2 = "red"
+	}	
+# Burma
+	BURMA_fnr = {
+		pattern = "pattern_tricolor_vertical_01.dds"
+		color1 = "red"
+		color2 = "green"
+		color3 = "yellow"
+	}	
+# Chola
+	CHOLA_fnr = {
+		pattern = "pattern_per_saltire_shield.dds"
+		color1 = "red"
+		color2 = "white"
+		color3 = "red"
+	}	
+# Ceylon		
+	CHOLA_fnr = {
+		pattern = "pattern_border_venice.dds"
+		color1 = "yellow"
+		color2 = "brick"
+	}	
+# Abyssinia
+	ABYSSINIA_fnr = {
+		pattern = "pattern_tricolor_vertical_01.dds"
+		color1 = "red"
+		color2 = "yellow"
+		color3 = "green"
+	}	
+# Chad
+	CHAD_fnr = {
+		pattern = "pattern_tricolor_horizontal_01.dds"
+		color1 = "blue"
+		color2 = "yellow"
+		color3 = "red"
+	}
+# Madagascar
+ 	MADAGASCAR_fnr = {
+		pattern = "pattern_tricolor_horizontal_01.dds"
+		color1 = "white"
+		color2 = "yellow"
+		color3 = "red"
+	}		
+# Rhodesia
+ 	RHODESIA_fnr = {
+		pattern = "pattern_tricolor_horizontal_01.dds"
+		color1 = "green"
+		color2 = "white"
+		color3 = "green"
+	}	
+# Manchuria
+ 	MANCHURIA_fnr = {
+		pattern = "pattern_solid.dds"
+		color1 = "yellow"
+	}	
+# Israel
+ 	ISRAEL_fnr = {
+		pattern = "pattern_solid.dds"
+		color1 = "white"
+	}				
+# Palestine
+ 	PALESTINE_fnr = {
+		pattern = "pattern_tricolor_horizontal_01.dds"
+		color1 = "green"
+		color2 = "white"
+		color3 = "black"
+	}				
+# Alaska
+ 	ALASKA_fnr = {
+		pattern = "pattern_solid.dds"
+		color1 = "blue_sky"
+	}	
+# Arpitania
+ 	ARPIT_fnr = {
+		pattern = "pattern_cross.dds"
+		color1 = "white"
+		color2 = "red_mid"
+	}	
+# Adriatic Empire
+ 	ADRIATICEMP_fnr = {
+		pattern = "pattern_tricolor_horizontal_01.dds"
+		color1 = "red"
+		color2 = "white"
+		color3 = "red"
+	}	
+# Anglo-Dutch Union
+	ANGLODUTCH_fnr = {
+		pattern = "pattern_tricolor_vertical_01.dds"
+		color1 = "orange"
+		color2 = "white"
+		color3 = "blue"
+	}	
+# Kingdom of Aquitaine
+ 	KOAQUITAINE_fnr = {
+		pattern = "pattern_solid.dds"
+		color1 = "red"
+	}	
+# Occitania	
+ 	OCCITANIA_fnr = {
+		pattern = "pattern_solid.dds"
+		color1 = "red_mid"
+	}	
+# Balkan League
+	BALKLEAGUE_fnr = {
+		pattern = "pattern_tricolor_horizontal_01.dds"
+		color1 = "red"
+		color2 = "blue_light"
+		color3 = "white"		
+	}
+# Bosnia-Serbia
+	BOSNIASERBIA_fnr = {
+		pattern = "pattern_tricolor_horizontal_01.dds"
+		color1 = "red"
+		color2 = "blue"
+		color3 = "white"		
+	}
+# Catholica Russica
+	CATHOLICARUS_fnr = {
+		pattern = "pattern_solid.dds"
+		color1 = "yellow"		
+	}
+# Celtic Union
+	# Uses ireland flag for now
+
+# Carolingian Empire
+	CAROLINGIAN_fnr = {
+		pattern = "pattern_solid.dds"
+		color1 = "orange"		
+	}	
+# Dacia
+	DACIA_fnr = {
+		pattern = "pattern_solid.dds"
+		color1 = "indigo"		
+	}	
+# Dual Monarchy	
+	DUALMONARCHY_fnr = {
+		pattern = "pattern_solid.dds"
+		color1 = "indigo"		
+	}	
+# East Slavia
+	EASTSLAVIA_fnr = {
+		pattern = "pattern_solid.dds"
+		color1 = "purple_mid"		
+	}	
+# Franco-Iberian Empire		
+	FRANCOIBERIANEMP_fnr = {
+		pattern = "pattern_tricolor_vertical_01.dds"
+		color1 = "red"
+		color2 = "yellow"
+		color3 = "blue"		
+	}		
+# Frieslande (Germanized Dutch basically)
+	FRIESLANDE_fnr = {
+		pattern = "pattern_tricolor_vertical_01.dds"
+		color1 = "orange"
+		color2 = "white"
+		color3 = "black"
+	}	
+# Gallic Empire
+	# Uses ireland flag for now
+
+# Hungarian Empire
+	# Uses hungary flag for now
+
+# Iberian Empire
+	FRIESLANDE_fnr = {
+		pattern = "pattern_cross.dds"
+		color1 = "yellow"
+		color2 = "red"
+	}	
+# Italian Merchant Alliance
+	ITALIANMERCHANT_fnr = {
+		pattern = "pattern_tricolor_horizontal_01.dds"
+		color1 = "red"
+		color2 = "white"
+		color3 = "green"
+	}	
+# Jagiellonian Empire
+	# Uses polish flag for now
+	
+# Ummayad Caliphate
+	UMMAYADS_fnr = {
+		pattern = "pattern_solid.dds"
+		color1 = "white"	
+	}
+	
+# Kingdom of Germany (post carolingian germany)
+	# Uses Germany flag
+
+# Lusitanian Empire
+	LUSITANIANEMP_fnr = {
+		pattern = "pattern_vertical_split_01.dds"
+		color1 = "blue_sky"
+		color2 = "white"
+	}
+# Macedonia
+	MACEDONIA_fnr = {
+		pattern = "pattern_solid.dds"
+		color1 = "purple_mid"	
+	}
+# Macedonian Empire
+	MACEDONIA_fnr = {
+		pattern = "pattern_solid.dds"
+		color1 = "purple"	
+	}
+# North Sea Empire	
+	NORTHSEAEMPIRE_fnr = {
+		pattern = "pattern_cross.dds"
+		color1 = "white"
+		color2 = "black"
+	}	
+# Pontus
+	PONTUS_fnr = {
+		pattern = "pattern_solid.dds"
+		color1 = "blue_sky"	
+	}	
