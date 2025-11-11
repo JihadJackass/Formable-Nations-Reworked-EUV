@@ -2429,7 +2429,7 @@
 	OMANIEMPIRE_fnr = {
 
 		level = 4
-		required_locations_fraction = 0.85
+		required_locations_fraction = 0.95
 		rule = plausible
 		
 		potential = {
@@ -3872,7 +3872,7 @@
 	FRANCOIBERIANEMP_fnr = {
 
 		level = 4
-		required_locations_fraction = 0.35
+		required_locations_fraction = 0.67
 		rule = plausible
 		
 		potential = {
