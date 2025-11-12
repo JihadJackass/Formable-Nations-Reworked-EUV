@@ -2,34 +2,38 @@
 # Formable Nations Reworked Colors #
 ####################################
 colors = {
-	# Balochistan
-	map_BLC_fnr = rgb { 7 54 16 }
-	# Polabia
-	map_POLB_fnr = rgb { 145 62 48 }
-	# Great Sorbia
-	map_GSORB_fnr = rgb { 19 13 115 }
-	# Sorbic Kingdom
-	map_KSORB_fnr = rgb { 28 16 180 }
-	# Kingdom of Hanover
-	map_KOFHN_fnr = rgb { 118 117 42 }
-	# Polynesia
-	map_POLYNE_fnr = rgb { 12 1 106 }
-	# Hawai'i
-	map_HAWAIII_fnr = rgb { 123 104 7 }
-	# Yugoslavia
-	map_YUGOSLAVIA_fnr = rgb { 86 85 123 }
-	# Japan
-	map_JAPAN_fnr = rgb { 154 144 171 }
-	# Angevin Empire
-	map_ANGEVINEMPIRE_fnr = rgb { 148 8 0 }
-	# Baltic States
-	map_BALTICSTATES_fnr = rgb { 63 66 63 }
+# Abyssinia
+	map_ABYSSINIA_fnr = rgb { 22 68 7 }
+	# Adriatic Empire
+	map_ADRIATICEMP_fnr = rgb { 180 2 16 }
+	# Afghanistan
+	map_AFGHANISTAN_fnr = rgb { 7 29 6 }
+	# Alaska
+	map_ALASKA_fnr = rgb { 11 19 90 }
+	# Alpland
+	map_ALPLAND_fnr = rgb { 2 60 95 }
 	# Alsace-Lorraine
 	map_ALSACELORRAINE_fnr = rgb { 129 47 29 }
+	# Anglo-Dutch Union
+	map_ANGLODUTCH_fnr = rgb { 127 90 0 }
+	# Angevin Empire
+	map_ANGEVINEMPIRE_fnr = rgb { 148 8 0 }
+	# Arabian Empire
+	map_ARABIANEMPIRE_fnr = rgb { 3 29 6 }
+	# Armenian Empire
+	map_ARMENIAEMPIRE_fnr = rgb { 62 0 1 }
+	# Arpitania
+	map_ARPIT_fnr = rgb { 98 105 58 }
 	# Austrian Empire
 	map_AUSTRIANEMPIRE_fnr = rgb { 158 147 38 }
 	# Austria-Bavaria
 	map_AUSTRIABAVARIA_fnr = rgb { 101 126 151 }
+	# Balkan League
+	map_BALKLEAGUE_fnr = rgb { 68 27 5 }
+	# Baltic States
+	map_BALTICSTATES_fnr = rgb { 63 66 63 }
+	# Balochistan
+	map_BLC_fnr = rgb { 7 54 16 }
 	# Basque Country
 	map_BASQUECOUN_fnr = rgb { 109 71 0 }
 	# Belarus
@@ -38,54 +42,114 @@ colors = {
 	map_BELGIUM_fnr = rgb { 109 92 13 }
 	# Benelux
 	map_BENELUX_fnr = rgb { 123 87 1 }
+	# Bosnia-Serbia
+	map_BOSNIASERBIA_fnr = rgb { 136 105 61 }
 	# Bremen-Verden
 	map_BREMENVERDEN_fnr = rgb { 101 8 8 }
-	# Bulgarian Empire
-	map_BULGEMPIRE_fnr = rgb { 7 36 2 }
 	# British Empire
 	map_BRITISHEMPIRE_fnr = rgb { 155 0 0 }
-	# Alpland
-	map_ALPLAND_fnr = rgb { 2 60 95 }
+	# Bulgarian Empire
+	map_BULGEMPIRE_fnr = rgb { 7 36 2 }
+	# Burma
+	map_BURMA_fnr = rgb { 151 100 3 }
+	# Carolingian Empire
+	map_CAROLINGIAN_fnr = rgb { 118 86 0 }
+	# Catholica Russica
+	map_CATHOLICARUS_fnr = rgb { 171 163 0 }
+	# Caucasia
+	map_CAUCASIA_fnr = rgb { 91 97 42 }
+	# Celtic Union
+	map_CELTICUNION_fnr = rgb { 0 21 1 }
+	# Ceylon
+	map_CEYLON_fnr = rgb { 136 63 71 }
+	# Chad
+	map_CHAD_fnr = rgb { 165 165 25 }
+	# Chola Empire
+	map_CHOLA_fnr = rgb { 102 7 12 }
 	# Cisalpina (Cisalpine Republic)
 	map_CISALPINA_fnr = rgb { 29 101 10 }
 	# Commonwealth of England
 	map_ENGLISHCOMMONWEALTH_fnr = rgb { 63 127 136 }
+	# Cordoba
+	map_CORDOBA_fnr = rgb { 105 96 86 }
 	# Czechoslovakia 
 	map_CZECKSLOVAK_fnr = rgb { 21 36 112 }
-	# Ducal Prussia
-	map_DUCALPRUSSIA_fnr = rgb { 55 56 60 }
-	# Ukraine
-	map_UKRAINE_fnr = rgb { 29 87 136 }
+	# Dacia
+	map_DACIA_fnr = rgb { 68 66 61 }
 	# Donetsk People's Republic
 	map_DONETSKPR_fnr = rgb { 0 5 25 }
-	# Luhansk People's Republic
-	map_LUHANSKPR_fnr = rgb { 28 2 1 }
+	# Dual Monarchy
+	map_DUALMONARCHY_fnr = rgb { 79 42 112 }
+	# Ducal Prussia
+	map_DUCALPRUSSIA_fnr = rgb { 55 56 60 }
+	# East Slavia
+	map_EASTSLAVIA_fnr = rgb { 17 4 29 }
 	# Eastern Roman Empire
 	map_EASTROMANEMPIRE_fnr = rgb { 97 2 94 }
 	# Emilia-Romagna
 	map_EMILIAROMAGNA_fnr = rgb { 15 54 15 }
+	# Empire of China
+	map_CHINAEMPIRE_fnr = rgb { 116 133 0 }
 	# European Union
 	map_EUROPEANUNION_fnr = rgb { 7 7 105 }
+	# Franco-Iberian Empire
+	map_FRANCOIBERIANEMP_fnr = rgb { 19 34 127 }
 	# French Empire
 	map_FRENCHEMPIRE_fnr = rgb { 0 0 110 }
+	# Frieslande
+	map_FRIESLANDE_fnr = rgb { 52 63 102 }
+	# Gallic Empire
+	map_GALLICEMPIRE_fnr = rgb { 6 29 0 }
 	# German Empire
 	map_GERMANEMPIRE_fnr = rgb { 37 37 56 }
 	# German Reich
 	map_GERMANREICH_fnr = rgb { 13 13 20 }
+	# Goguryeo
+	map_GOGURYEO_fnr = rgb { 39 15 37 }
+	# Great Sorbia
+	map_GSORB_fnr = rgb { 19 13 115 }
 	# Greater German Reich
 	map_GREATERGERMANREICH_fnr = rgb { 15 8 8 }
-	# Nazi Germany
-	map_NAZIGERMANY_fnr = rgb { 15 4 4 }
 	# Hanseatic League
 	map_HANSALEAGUE_fnr = rgb { 49 54 9 }
+	# Hawai'i
+	map_HAWAIII_fnr = rgb { 123 104 7 }
 	# Hesse-Nassau
 	map_HESSENASSAU_fnr = rgb { 16 72 89 }
+	# Himalayan Empire
+	map_HIMALAYA_fnr = rgb { 42 32 2 }
+	# Hungarian Empire
+	map_HUNGARIANEMPIRE_fnr = rgb { 105 95 94 }
+	# Iberian Empire
+	map_IBERIANEMPIRE_fnr = rgb { 118 116 2 }
+	# Islamic State
+	map_ISIS_fnr = rgb { 2 2 2 }
+	# Israel
+	map_ISRAEL_fnr = rgb { 18 103 163 }
 	# Italian Empire
 	map_ITALIANEMPIRE_fnr = rgb { 7 94 2 }
+	# Italian Merchant Alliance
+	map_ITALIANMERCHANT_fnr = rgb { 18 100 5 }
+	# Jagiellonian Empire
+	map_JAGIELLONIAN_fnr = rgb { 50 63 110 }
+	# Japan
+	map_JAPAN_fnr = rgb { 154 144 171 }
 	# Kalmar Union
 	map_KALMARUNION_fnr = rgb { 112 112 3 }
+	# Kingdom of Aquitaine
+	map_KOAQUITAINE_fnr = rgb { 143 8 11 }
+	# Kingdom of Germany
+	map_KOFGERMANY_fnr = rgb { 110 113 0 }
+	# Kingdom of God
+	map_KOFGOD_fnr = rgb { 101 91 91 }
+	# Kingdom of Hanover
+	map_KOFHN_fnr = rgb { 118 117 42 }
+	# Korea
+	map_KOREA_fnr = rgb { 97 97 103 }
 	# Kyivan Rus
 	map_KYIVANRUS_fnr = rgb { 6 57 103 }
+	# Langobards
+	map_LANGOBARDS_fnr = rgb { 23 26 77 }
 	# Latin Empire
 	map_LATINEMPIRE_fnr = rgb { 165 147 2 }
 	# Lombardy
@@ -94,64 +158,70 @@ colors = {
 	map_LOMBARDYVENETIA_fnr = rgb { 75 109 51 }
 	# Lower Saxony
 	map_LOWERSAXONY_fnr = rgb { 82 7 13 }
+	# Luhansk People's Republic
+	map_LUHANSKPR_fnr = rgb { 28 2 1 }
+	# Lusitanian Empire
+	map_LUSITANIANEMP_fnr = rgb { 80 97 211 }
+	# Macedonia 
+	map_MACEDONIA_fnr = rgb { 49 3 62 }
+	# Macedonian Empire
+	map_MACEDONIAEMPIRE_fnr = rgb { 40 12 48 }
+	# Madagascar
+	map_MADAGASCAR_fnr = rgb { 29 97 16 }
 	# Malta
 	map_MALTA_fnr = rgb { 143 1 11 }
+	# Manchuria
+	map_MANCHURIA_fnr = rgb { 105 112 4 }
 	# Mercia
 	map_MERCIA_fnr = rgb { 18 50 102 }
+	# Mingrelia
+	map_MINGRELIA_fnr = rgb { 82 29 1 }
+	# Nazi Germany
+	map_NAZIGERMANY_fnr = rgb { 15 4 4 }
+	# North Korea
+	map_NORTHKOREA_fnr = rgb { 117 3 5 }
+	# North Sea Empire
+	map_NORTHSEAEMPIRE_fnr = rgb { 112 11 13 }
+	# Occitania
+	map_OCCITANIA_fnr = rgb { 129 43 48 }
+	# Omani Empire
+	map_OMANIEMPIRE_fnr = rgb { 50 0 3 }
+	# Palestine
+	map_PALESTINE_fnr = rgb { 2 82 7 }
+	# People's Republic of China
+	map_PRC_fnr = rgb { 163 0 11 }
+	# Philippines
+	map_PHILIPPINES_fnr = rgb { 1 0 92 }
+	# Polabia
+	map_POLB_fnr = rgb { 145 62 48 }
+	# Polynesia
+	map_POLYNE_fnr = rgb { 12 1 106 }
+	# Pontus
+	map_PONTUS_fnr = rgb { 3 1 3 }
+	# Republic of China
+	map_ROC_fnr = rgb { 3 0 180 }
+	# Rhodesia
+	map_RHODESIA_fnr = rgb { 32 66 23 }
 	# Russian Empire
 	map_RUSSIANEMPIRE_fnr = rgb { 0 85 2 }
 	# Russian Federation
 	map_RUSSIANFED_fnr = rgb { 4 0 110 }
+	# Saudi Arabia
+	map_SAUDIS_fnr = rgb { 3 34 4 }
 	# Serbian Empire
 	map_SERBEMPIRE_fnr = rgb { 94 110 22 }
+	# Sorbic Kingdom
+	map_KSORB_fnr = rgb { 28 16 180 }
+	# South Korea
+	map_SOUTHKOREA_fnr = rgb { 90 106 148 }
 	# Soviet Union
 	map_SOVIETUNION_fnr = rgb { 113 0 1 }
+	# Sulawesi
+	map_SULAWESI_fnr = rgb { 68 11 3 }
 	# Sweden-Norway
 	map_SWEDENNORWAY_fnr = rgb { 0 0 62 }
 	# Swedish Empire
 	map_SWEDISHEMP_fnr = rgb { 5 9 120 }
-	# Turkey
-	map_TURKEY_fnr = rgb { 163 7 10 }
-	# The United Kingdom
-	map_UNITEDKINGDOM_fnr = rgb { 116 93 94 }
-	# Wendish Empire
-	map_WENDISHEMPIRE_fnr = rgb { 75 3 4 }
-	# Armenian Empire
-	map_ARMENIAEMPIRE_fnr = rgb { 62 0 1 }
-	# Arabian Empire
-	map_ARABIANEMPIRE_fnr = rgb { 3 29 6 }
-	# Caucasia
-	map_CAUCASIA_fnr = rgb { 91 97 42 }
-	# Empire of China
-	map_CHINAEMPIRE_fnr = rgb { 116 133 0 }
-	# Goguryeo
-	map_GOGURYEO_fnr = rgb { 39 15 37 }
-	# Korea
-	map_KOREA_fnr = rgb { 97 97 103 }
-	# Himalayan Empire
-	map_HIMALAYA_fnr = rgb { 42 32 2 }
-	# Afghanistan
-	map_AFGHANISTAN_fnr = rgb { 7 29 6 }
-	# Islamic State
-	map_ISIS_fnr = rgb { 2 2 2 }
-	# Mingrelia
-	map_MINGRELIA_fnr = rgb { 82 29 1 }
-	# North Korea
-	map_NORTHKOREA_fnr = rgb { 117 3 5 }
-	# South Korea
-	map_SOUTHKOREA_fnr = rgb { 90 106 148 }
-	# Omani Empire
-	map_OMANIEMPIRE_fnr = rgb { 50 0 3 }
-	# People's Republic of China
-	map_PRC_fnr = rgb { 163 0 11 }
-	# Republic of China
-	map_ROC_fnr = rgb { 3 0 180 }
-	# Philippines
-	map_PHILIPPINES_fnr = rgb { 1 0 92 }
-	# Saudi Arabia
-	map_SAUDIS_fnr = rgb { 3 34 4 }
-	# Sulawesi
-	map_SULAWESI_fnr = rgb { 68 11 3 }
 	# Taiping
 	map_TAIPING_fnr = rgb { 129 129 4 }
 	# Taliban
@@ -160,97 +230,25 @@ colors = {
 	map_TENGOKU_fnr = rgb { 165 165 11 }
 	# The Horde
 	map_HORDE_fnr = rgb { 4 25 6 }
+	# The Rhine Confederation
+	map_CRHINE_fnr = rgb { 9 62 3 }
+	# The United Kingdom
+	map_UNITEDKINGDOM_fnr = rgb { 116 93 94 }
 	# Tibetan Empire
 	map_TIBETEMPIRE_fnr = rgb { 20 9 0 }
+	# Turkey
+	map_TURKEY_fnr = rgb { 163 7 10 }
+	# Ukraine
+	map_UKRAINE_fnr = rgb { 29 87 136 }
+	# Ummayad Caliphate
+	map_UMMAYADS_fnr = rgb { 181 185 198 }
 	# United Arab Republic
 	map_UAR_fnr = rgb { 4 24 0 }
 	# Vietnam
 	map_VIETNAM_fnr = rgb { 112 6 10 }
-	# Burma
-	map_BURMA_fnr = rgb { 151 100 3 }
-	# Chola Empire
-	map_CHOLA_fnr = rgb { 102 7 12 }
-	# Ceylon
-	map_CEYLON_fnr = rgb { 136 63 71 }
-	# Abyssinia
-	map_ABYSSINIA_fnr = rgb { 22 68 7 }
-	# Chad
-	map_CHAD_fnr = rgb { 165 165 25 }
-	# Madagascar
-	map_MADAGASCAR_fnr = rgb { 29 97 16 }
-	# Rhodesia
-	map_RHODESIA_fnr = rgb { 32 66 23 }
-	# Manchuria
-	map_MANCHURIA_fnr = rgb { 105 112 4 }
-	# Israel
-	map_ISRAEL_fnr = rgb { 18 103 163 }
-	# Palestine
-	map_PALESTINE_fnr = rgb { 2 82 7 }
-	# The Rhine Confederation
-	map_CRHINE_fnr = rgb { 9 62 3 }
-	# Alaska
-	map_ALASKA_fnr = rgb { 11 19 90 }
-	# Arpitania
-	map_ARPIT_fnr = rgb { 98 105 58 }
-	# Adriatic Empire
-	map_ADRIATICEMP_fnr = rgb { 180 2 16 }
-	# Alpland
-	map_ALPLAND_fnr = rgb { 28 60 33 }
-	# Anglo-Dutch Union
-	map_ANGLODUTCH_fnr = rgb { 127 90 0 }
-	# Kingdom of Aquitaine
-	map_KOAQUITAINE_fnr = rgb { 143 8 11 }
-	# Occitania
-	map_OCCITANIA_fnr = rgb { 129 43 48 }
-	# Balkan League
-	map_BALKLEAGUE_fnr = rgb { 68 27 5 }
-	# Bosnia-Serbia
-	map_BOSNIASERBIA_fnr = rgb { 136 105 61 }
-	# Catholica Russica
-	map_CATHOLICARUS_fnr = rgb { 171 163 0 }
-	# Celtic Union
-	map_CELTICUNION_fnr = rgb { 0 21 1 }
-	# Carolingian Empire
-	map_CAROLINGIAN_fnr = rgb { 118 86 0 }
-	# Cordoba
-	map_CORDOBA_fnr = rgb { 105 96 86 }
-	# Dacia
-	map_DACIA_fnr = rgb { 68 66 61 }
-	# Dual Monarchy
-	map_DUALMONARCHY_fnr = rgb { 79 42 112 }
-	# East Slavia
-	map_EASTSLAVIA_fnr = rgb { 17 4 29 }
-	# Franco-Iberian Empire
-	map_FRANCOIBERIANEMP_fnr = rgb { 19 34 127 }
-	# Frieslande
-	map_FRIESLANDE_fnr = rgb { 52 63 102 }
-	# Gallic Empire
-	map_GALLICEMPIRE_fnr = rgb { 6 29 0 }
-	# Hungarian Empire
-	map_HUNGARIANEMPIRE_fnr = rgb { 105 95 94 }
-	# Iberian Empire
-	map_IBERIANEMPIRE_fnr = rgb { 118 116 2 }
-	# Italian Merchant Alliance
-	map_ITALIANMERCHANT_fnr = rgb { 18 100 5 }
-	# Jagiellonian Empire
-	map_JAGIELLONIAN_fnr = rgb { 50 63 110 }
-	# Ummayad Caliphate
-	map_UMMAYADS_fnr = rgb { 181 185 198 }
-	# Kingdom of Germany
-	map_KOFGERMANY_fnr = rgb { 110 113 0 }
-	# Kingdom of God
-	map_KOFGOD_fnr = rgb { 101 91 91 }
-	# Langobards
-	map_LANGOBARDS_fnr = rgb { 23 26 77 }
-	# Lusitanian Empire
-	map_LUSITANIANEMP_fnr = rgb { 80 97 211 }
-	# Macedonia 
-	map_MACEDONIA_fnr = rgb { 49 3 62 }
-	# Macedonian Empire
-	map_MACEDONIAEMPIRE_fnr = rgb { 40 12 48 }
-	# North Sea Empire
-	map_NORTHSEAEMPIRE_fnr = rgb { 112 11 13 }
-	# Pontus
-	map_PONTUS_fnr = rgb { 3 1 3 }
+	# Wendish Empire
+	map_WENDISHEMPIRE_fnr = rgb { 75 3 4 }
+	# Yugoslavia
+	map_YUGOSLAVIA_fnr = rgb { 86 85 123 }
 }
 

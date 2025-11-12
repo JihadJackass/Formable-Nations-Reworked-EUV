@@ -9,7 +9,44 @@
 					has_reform = government_reform:papacy_reform
 				}
 				# Formable Nations Reworked Names without Prefix
-				tag = HANSALEAGUE_fnr
+				OR = {
+					tag = HANSALEAGUE_fnr
+					tag = EASTSLAVIA_fnr
+					tag = UMMAYADS_fnr
+					tag = ANGEVINEMPIRE_fnr
+					tag = AUSTRIANEMPIRE_fnr
+					tag = BULGEMPIRE_fnr
+					tag = BRITISHEMPIRE_fnr
+					tag = EASTROMANEMPIRE_fnr
+					tag = WESTROMANEMPIRE_fnr
+					tag = FRENCHEMPIRE_fnr
+					tag = GERMANEMPIRE_fnr
+					tag = ITALIANEMPIRE_fnr
+					tag = LATINEMPIRE_fnr
+					tag = RUSSIANEMPIRE_fnr
+					tag = CELTICUNION_fnr
+					tag = RUSSIANFED_fnr
+					tag = SERBEMPIRE_fnr
+					tag = SWEDISHEMP_fnr
+					tag = WENDISHEMPIRE_fnr
+					tag = ARMENIAEMPIRE_fnr
+					tag = ARABIANEMPIRE_fnr
+					tag = CHINAEMPIRE_fnr
+					tag = HIMALAYA_fnr
+					tag = OMANIEMPIRE_fnr
+					tag = TIBETEMPIRE_fnr
+					tag = CHOLA_fnr
+					tag = ADRIATICEMP_fnr
+					tag = CAROLINGIAN_fnr
+					tag = FRANCOIBERIANEMP_fnr
+					tag = GALLICEMPIRE_fnr
+					tag = HUNGARIANEMPIRE_fnr
+					tag = IBERIANEMPIRE_fnr
+					tag = JAGIELLONIAN_fnr
+					tag = LUSITANIANEMP_fnr
+					tag = MACEDONIAEMPIRE_fnr
+					tag = NORTHSEAEMPIRE_fnr
+				}
 			}
 		}
 	}

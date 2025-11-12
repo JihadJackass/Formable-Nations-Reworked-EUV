@@ -5,10 +5,8 @@
 # TODO LIST:
 # - Oraganize this list based on Alphabetical
 # - Adjust historical organization (armenian empire should be non-historical)
-# - COLORS
 # - FLAGS
 # - DESCRIPTIONS
-# - ADJECTIVES
 # - rule = plausible (set proper formable rule for all)
 # - ONCE MAJORITY FORMABLES ARE DONE, GO OVER EVERY ONE AND IMPROVE/FIX
 
@@ -324,7 +322,7 @@
 	ANGEVINEMPIRE_fnr = {
 
 		level = 4
-		required_locations_fraction = 0.35
+		required_locations_fraction = 0.65
 		rule = plausible
 		
 		potential = {
@@ -335,6 +333,7 @@
 		}
 		
 		allow = {
+		
 		}
 
 		name = ANGEVINEMPIRE_fnr
@@ -683,7 +682,7 @@
 	# Bulgarian Empire (TODO: perhaps firsts and second bulg empire)
 	BULGEMPIRE_fnr = {
 
-		level = 3
+		level = 4
 		required_locations_fraction = 0.60
 		rule = plausible
 		
@@ -1009,7 +1008,7 @@
 	# Eastern Roman Empire
 	EASTROMANEMPIRE_fnr = {
 		level = 4
-		required_locations_fraction = 0.40
+		required_locations_fraction = 0.60
 		rule = historical
 
 		potential = {
@@ -1020,16 +1019,33 @@
 		}
 
 		allow = {
+			owns = location:constantinople
 		}
 
 		name = EASTROMANEMPIRE_fnr
-		flag = ROM
+		flag = EASTROMANEMPIRE_fnr
 		adjective = EASTROMANEMPIRE_fnr_ADJ
 		tag = EASTROMANEMPIRE_fnr
 		color = map_EASTROMANEMPIRE_fnr
 
+		areas = {
+			thrace_area
+			macedonia_area
+			bulgaria_area
+			northern_greece_area
+			morea_area
+			serbia_area
+			albania_area
+			aegean_archipelago_area
+			levant_area
+			sinai_area
+			lower_egypt_area
+			upper_egypt_area
+			cyrenaica_area
+		}
+
 		regions = {
-			balkan_region
+			#balkan_region
 			anatolia_region
 		}
 
@@ -1157,7 +1173,7 @@
 		}
 		
 		allow = {
-			#tag = FRA
+			#rank = country_rank:rank_empire
 		}
 
 		name = FRENCHEMPIRE_fnr
@@ -1530,7 +1546,7 @@
 		}
 		
 		name = KYIVANRUS_fnr
-		flag = KYIVANRUS_fnr
+		flag = UKR
 		adjective = KYIVANRUS_fnr_ADJ
 		tag = KYIVANRUS_fnr
 		color = map_KYIVANRUS_fnr
@@ -1983,7 +1999,7 @@
 		}
 
 		name = UNITEDKINGDOM_fnr
-		flag = UNITEDKINGDOM_fnr
+		flag = GBR_uk
 		adjective = UNITEDKINGDOM_fnr_ADJ
 		tag = UNITEDKINGDOM_fnr
 		color = map_UNITEDKINGDOM_fnr
@@ -3667,7 +3683,7 @@
 	CELTICUNION_fnr = {
 
 		level = 4
-		required_locations_fraction = 0.60
+		required_locations_fraction = 0.65
 		rule = plausible
 		
 		potential = {
@@ -3677,18 +3693,26 @@
 		allow = {
 		}
 
-		name = CELTICUNION_fnr_fnr
-		flag = IRE # TODO
+		name = CELTICUNION_fnr
+		flag = IRE_green
 		adjective = CELTICUNION_fnr_ADJ
 		tag = CELTICUNION_fnr
 		color = map_CELTICUNION_fnr
 
 		regions = {
-			great_britain_region
 			ireland_region
 		}
 		areas = {
 			brittany_area
+			wales_area
+			scottish_lowlands_area
+			scottish_highlands_area
+			hebrides_area
+			galicia_area
+		}
+		provinces = {
+			cornwall_province
+			devon_province
 		}
 		form_effect = {
 		}
@@ -3815,7 +3839,7 @@
 		}
 
 		name = DUALMONARCHY_fnr
-		flag = DUALMONARCHY_fnr
+		flag = GBR_fleurs
 		adjective = DUALMONARCHY_fnr_ADJ
 		tag = DUALMONARCHY_fnr
 		color = map_DUALMONARCHY_fnr
@@ -3855,7 +3879,7 @@
 		name = EASTSLAVIA_fnr
 		flag = EASTSLAVIA_fnr
 		adjective = EASTSLAVIA_fnr_ADJ
-		tag = UKRAINE_fnr
+		tag = EASTSLAVIA_fnr
 		color = map_EASTSLAVIA_fnr
 		
 		regions = {
@@ -3865,6 +3889,10 @@
 			russian_region
 		}
 		form_effect = {
+			if = {
+				limit = { country_rank_level < 3 }
+				set_country_rank_effect = { rank = country_rank:rank_kingdom }
+			}
 		}
 	}	
 
@@ -4350,7 +4378,7 @@
 		}
 
 		name = NORTHSEAEMPIRE_fnr
-		flag = NORTHSEAEMPIRE_fnr
+		flag = NSE_WHITE_FNR
 		adjective = NORTHSEAEMPIRE_fnr_ADJ
 		tag = NORTHSEAEMPIRE_fnr
 		color = map_NORTHSEAEMPIRE_fnr
