@@ -2,7 +2,7 @@
 # Formable Nations Reworked Colors #
 ####################################
 colors = {
-# Abyssinia
+	# Abyssinia
 	map_ABYSSINIA_fnr = rgb { 22 68 7 }
 	# Adriatic Empire
 	map_ADRIATICEMP_fnr = rgb { 180 2 16 }
@@ -122,6 +122,8 @@ colors = {
 	map_HUNGARIANEMPIRE_fnr = rgb { 105 95 94 }
 	# Iberian Empire
 	map_IBERIANEMPIRE_fnr = rgb { 118 116 2 }
+	# Illyria
+	map_ILLYRIA_fnr =  rgb { 80 40 2 }
 	# Islamic State
 	map_ISIS_fnr = rgb { 2 2 2 }
 	# Israel
@@ -248,6 +250,8 @@ colors = {
 	map_VIETNAM_fnr = rgb { 112 6 10 }
 	# Wendish Empire
 	map_WENDISHEMPIRE_fnr = rgb { 75 3 4 }
+	# Western Roman Empire
+	map_WESTROMANEMPIRE_fnr = rgb { 140 10 10 }
 	# Yugoslavia
 	map_YUGOSLAVIA_fnr = rgb { 86 85 123 }
 }

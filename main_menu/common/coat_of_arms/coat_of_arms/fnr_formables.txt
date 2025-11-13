@@ -25,10 +25,41 @@ NSE_WHITE_FNR = { # North Sea Empire
 	}
 }
 
+# Illyria
+ILLYRIA_fnr = {
+	pattern = "pattern_tricolor_horizontal_01.dds"
+	color1 = "green"
+	color2 = "white"
+	color3 = "green"
+}
+
 # Eastern Roman Empire
 EASTROMANEMPIRE_fnr = { # Roman Empire
 	pattern = "pattern_solid.dds"
 	color1 = "purple_mid"
+	color2 = "yellow"
+	color3 = "white"
+	color4 = "red"
+
+	colored_emblem = {
+		texture = "ce_laurel_wreath.dds"
+		color1 = color2
+		color2 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.975 0.975 } }			
+	}	
+	colored_emblem = {
+		texture = "ce_roman_aquila.dds"
+		color1 = color2
+		color2 = hsv360 	{	25	70	33	} 	
+		color3 = color1
+		instance = { position = { 0.5 0.55 } scale = { 0.7 0.7 } }			
+	}			
+}
+
+# Western Roman Empire
+WESTROMANEMPIRE_fnr = { # Roman Empire
+	pattern = "pattern_solid.dds"
+	color1 = "red"
 	color2 = "yellow"
 	color3 = "white"
 	color4 = "red"
@@ -184,7 +215,7 @@ EASTROMANEMPIRE_fnr = { # Roman Empire
 		color2 = "green"
 		color3 = "red"
 	}
-# British Empire TODO: fix
+# British Empire
 	BRITISHEMPIRE_fnr = {
 		pattern = "pattern_cross.dds"
 		color1 = "white"
@@ -193,8 +224,8 @@ EASTROMANEMPIRE_fnr = { # Roman Empire
 # Alpland TODO: fix
 	ALPLAND_fnr = {
 		pattern = "pattern_solid.dds"
-		color1 = "blue_sky"
-	}	
+		color1 = "blue_sky"	
+	}
 # Cisalpina	
 	CISALPINA_fnr = {
 		pattern = "pattern_tricolor_horizontal_01.dds"

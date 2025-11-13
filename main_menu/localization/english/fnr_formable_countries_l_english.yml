@@ -139,10 +139,20 @@
     LUHANSKPR_fnr_ADJ: "Luhansk"
     LUHANSKPR_fnr_desc: "The Luhansk People's Republic (LPR) is a breakaway state in eastern Ukraine, located in the Donbas region, that was proclaimed in 2014 and effectively annexed by Russia in 2022. It is a disputed territory, with nearly all UN member states considering it a part of Ukraine. The LPR was formed by Russian-backed separatists following the Euromaidan revolution and is heavily supported by Russia, but it has received limited international recognition"
 
+    # Illyria
+    ILLYRIA_fnr: "Illyria"
+    ILLYRIA_fnr_ADJ: "Illyrian"
+    ILLYRIA_fnr_desc: "Illyria was an ancient region on the western Balkan Peninsula, along the Adriatic Sea, that was home to various tribes collectively known as the Illyrians. It included territories in modern-day Albania, Montenegro, and Croatia, and was later expanded to become the Roman province of Illyricum, which stretched from the Adriatic to the Danube. The name has also been used in later historical contexts and in fiction."
+
     # Eastern Roman Empire
     EASTROMANEMPIRE_fnr: "Eastern Roman Empire"
     EASTROMANEMPIRE_fnr_ADJ: "Roman"
-    EASTROMANEMPIRE_fnr_desc: "The Eastern Roman Empire, also known as the Byzantine Empire, was the continuation of the Roman Empire in its eastern provinces, with its capital at Constantinople (modern-day Istanbul). Its citizens called themselves 'Romans' and the empire was a powerful hub of Eastern Orthodox Christianity, Greek culture, and classical learning that influenced the development of art, law, and government across Europe and the Middle East for over a thousand years after the Western Roman Empire's fall"
+    EASTROMANEMPIRE_fnr_desc: "The Eastern Roman Empire, also known as the Byzantine Empire, was the continuation of the Roman Empire in its eastern provinces, with its capital at Constantinople (modern-day Istanbul). Its citizens called themselves 'Romans' and the empire was a powerful hub of Eastern Orthodox Christianity, Greek culture, and classical learning that influenced the development of art, law, and government across Europe and the Middle East for over a thousand years after the Western Roman Empire's fall."
+
+    # Western Roman Empire
+    WESTROMANEMPIRE_fnr: "Western Roman Empire"
+    WESTROMANEMPIRE_fnr_ADJ: "Roman"
+    WESTROMANEMPIRE_fnr_desc: "The Western Roman Empire was the western half of the Roman Empire that was administered separately from the East after a formal division in 395 AD. It was characterized by a capital that moved from Mediolanum to Ravenna, encompassing provinces like Italy, Gaul, and Hispania, but was weakened by economic instability, political corruption, and frequent invasions from groups like the Goths, Burgundians, and Suebi."
 
     # Emilia-Romagna
     EMILIAROMAGNA_fnr: "Emilia-Romagna"
@@ -298,6 +308,10 @@
     GOGURYEO_fnr: "Goguryeo"
     GOGURYEO_fnr_ADJ: "Goguryeo"
     GOGURYEO_fnr_desc: "Goguryeo was a powerful, militaristic Korean kingdom that existed from 37 BC to 668 AD, located in Manchuria and the northern Korean peninsula. It was one of the Three Kingdoms of Korea and became a dominant force in East Asia, reaching its peak in the 5th century under Kings Gwanggaeto the Great and Jangsu. The kingdom was known for its military strength, including its defeat of a massive Sui dynasty invasion, and its territorial expansion into Manchuria and parts of the Korean peninsula. It was eventually conquered by the allied forces of the Tang dynasty and the Silla kingdom."
+
+    MANCHURIA_fnr: "Manchuria"
+    MANCHURIA_fnr_ADJ: "Manchurian"
+    MANCHURIA_fnr_desc: "Manchuria is a historical and geographical region in Northeast Asia, most commonly referring to the three northeastern provinces of modern China: Liaoning, Jilin, and Heilongjiang. Historically, it also included parts of the Russian Far East, a territory ceded to Russia in the 19th century and now known as Outer Manchuria. The region is the ancestral homeland of the Manchu people and has been a historical crossroads for various ethnic groups, including Mongols, Koreans, and Han Chinese"
 
     # Korea
     KOREA_fnr: "Korea"
