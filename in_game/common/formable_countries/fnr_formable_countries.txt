@@ -954,6 +954,7 @@
 		required_locations_fraction = 0.01
 		rule = plausible
 		potential = {
+			government_type = government_type:republic
 			OR = {
 				culture = culture:mishar
 				culture = { has_culture_group = culture_group:polish_group }
@@ -983,6 +984,7 @@
 		required_locations_fraction = 0.01
 		rule = plausible
 		potential = {
+			government_type = government_type:republic
 			OR = {
 				culture = culture:mishar
 				culture = { has_culture_group = culture_group:polish_group }
