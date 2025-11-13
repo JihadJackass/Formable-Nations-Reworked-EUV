@@ -752,45 +752,6 @@
 		}
 	}
 
-	# Alpland
-	ALPLAND_fnr = {
-		level = 3
-		required_locations_fraction = 0.80
-		rule = historical
-
-		potential = {
-			culture = { has_culture_group = culture_group:swiss_group }
-		}
-
-		allow = {
-		}
-		
-		name = ALPLAND_fnr
-		flag = ALPLAND_fnr
-		adjective = ALPLAND_fnr_ADJ
-		tag = ALPLAND_fnr
-		color = map_ALPLAND_fnr
-
-		areas = {
-			central_switzerland_area
-			eastern_switzerland_area
-			western_switzerland_area
-		}
-		form_effect = {
-			set_country_rank_effect = { rank = country_rank:rank_kingdom }
-			unlock_government_reform_effect = { type = autonomous_swiss_cantons_reform }
-			add_replacing_gov_reform = { reform = government_reform:autonomous_swiss_cantons_reform }
-			if = {
-				limit = {
-					NOT = { government_type = government_type:monarchy }
-					NOT = { government_type = government_type:theocracy }
-					NOT = { government_type = government_type:republic }
-				}
-				change_government_type = government_type:republic
-			}
-		}
-	}
-
 	# Cisalpina (Cisalpine Republic)
 	CISALPINA_fnr = {
 		level = 3
@@ -1059,6 +1020,74 @@
 		}
 	}
 
+	# Western Roman Empire
+	WESTROMANEMPIRE_fnr = {
+		level = 4
+		required_locations_fraction = 0.60
+		rule = historical
+
+		potential = {
+			OR = {
+				culture = { has_culture_group = culture_group:italian_group }
+				culture = { has_culture_group = culture_group:french_group }
+				culture = { has_culture_group = culture_group:iberian_group }
+			}
+		}
+
+		allow = {
+			owns = location:rome
+		}
+
+		name = WESTROMANEMPIRE_fnr
+		flag = WESTROMANEMPIRE_fnr
+		adjective = WESTROMANEMPIRE_fnr_ADJ
+		tag = WESTROMANEMPIRE_fnr
+		color = map_WESTROMANEMPIRE_fnr
+
+		regions = {
+			france_region
+			iberia_region
+			italy_region
+		}
+
+		areas = {
+			algiers_area
+			tunis_area
+			tripolitania_area
+			western_switzerland_area
+			central_switzerland_area
+			slovenia_area
+			croatia_area
+			slavonia_area
+			bosnia_area
+		}
+
+		provinces = {
+			trentino_province
+			kert_province
+		}
+
+		locations = {
+			lasko
+			celje
+			al_mazamma
+			badis
+			tizgane
+			tetouan
+			tazroute
+			asilah
+			ceuta
+			tangier
+		}
+
+		form_effect = {
+			if = {
+				limit = { country_rank_level < 4 }
+				set_country_rank_effect = { rank = country_rank:rank_empire }
+			}
+		}
+	}	
+
 	# Emilia-Romagna
 	EMILIAROMAGNA_fnr = {
 		level = 3
@@ -1107,7 +1136,7 @@
 		}
 		
 		name = EUROPEANUNION_fnr
-		flag = EUROPEANUNION_fnr
+		flag = EUR
 		adjective = EUROPEANUNION_fnr_ADJ
 		tag = EUROPEANUNION_fnr
 		color = map_EUROPEANUNION_fnr
@@ -1964,7 +1993,7 @@
 			OR = {
 				TAG = TUR
 				culture = culture:lower_saxon
-				culture = { has_culture_group = culture_group:turkish_culture }
+				culture = culture:turkish_culture
 			}
 		}
 		
@@ -3085,10 +3114,10 @@
 			
 		}
 
-		name = MANCHURIA_fnr
-		flag = MANCHURIA_fnr
-		adjective = MANCHURIA_fnr_ADJ
-		tag = MANCHURIA_fnr
+		name = RHODESIA_fnr
+		flag = RHODESIA_fnr
+		adjective = MRHODESIA_fnr_ADJ
+		tag = RHODESIA_fnr
 		color = map_RHODESIA_fnr
 
 		regions = {
@@ -3156,7 +3185,7 @@
 		tag = PALESTINE_fnr
 		color = map_ISRAEL_fnr
 
-		regions = {
+		areas = {
 			levant_area
 		}
 
@@ -3186,7 +3215,7 @@
 		tag = PALESTINE_fnr
 		color = map_PALESTINE_fnr
 
-		regions = {
+		areas = {
 			levant_area
 		}
 
@@ -3288,7 +3317,7 @@
 			st_georgen
 			braunau
 			brixen
-			bruncek
+			bruneck
 			sterzing
 			bischofshofen
 			saalfelden
@@ -3428,12 +3457,16 @@
 
 	# Alpland
 	ALPLAND_fnr = {
-		level = 2
-		required_locations_fraction = 0.80
+		level = 3
+		required_locations_fraction = 0.65
 		rule = historical
 
 		potential = {
-			culture = { has_culture_group = culture_group:swiss_group }
+			OR = {
+				culture = culture:arpitan
+				culture = { has_culture_group = culture_group:swiss_group }
+				culture = { has_culture_group = culture_group:italian_group }
+			}
 		}
 
 		allow = {
@@ -3446,14 +3479,54 @@
 		color = map_ALPLAND_fnr
 
 		areas = {
-			central_switzerland_area
+			#central_switzerland_area
 			eastern_switzerland_area
-			western_switzerland_area
+			#western_switzerland_area
+			#provence_area
+			savoy_area
+			#lombardy_area
+			tirol_area
+			#piemonte_area
+			carinthia_area
+		}
+		provinces = {
+			pinzgau_province
+			salzburger_land_province
+			pongau_province
+			upper_styria_province
+			traungau_province
+			dignois_province
+			aosta_province
+			oberwallis_province
+			bern_province
+		}
+		locations = {
+			puget_theniers
+			nice
+			ventimiglia
+			albenga
+			susa
+			varallo
+			domodossola
+			locarno
+			bellinzona
+			montreux
+			chiavenna
+			bormio
+			tresivio
+			pieve
+			tolmezzo
+			tolmin
+			bled
+			skofja_loka
+			waidhofen
+			scheibbs
+			lilienfeld
 		}
 		form_effect = {
 			set_country_rank_effect = { rank = country_rank:rank_kingdom }
-			unlock_government_reform_effect = { type = autonomous_swiss_cantons_reform }
-			add_replacing_gov_reform = { reform = government_reform:autonomous_swiss_cantons_reform }
+			#unlock_government_reform_effect = { type = autonomous_swiss_cantons_reform }
+			#add_replacing_gov_reform = { reform = government_reform:autonomous_swiss_cantons_reform }
 			if = {
 				limit = {
 					NOT = { government_type = government_type:monarchy }
@@ -3601,6 +3674,49 @@
 			northern_greece_area
 		}
 		provinces = {
+		}
+		form_effect = {
+		}
+	}	
+
+	# Illyria
+	ILLYRIA_fnr = {
+
+		level = 3
+		required_locations_fraction = 0.50
+		rule = plausible
+		
+		potential = {
+			culture = { has_culture_group = culture_group:slavic_group }
+			culture = { has_culture_group = culture_group:south_slavic_group }
+		}
+		
+		allow = {
+		}
+
+		name = ILLYRIA_fnr
+		flag = ILLYRIA_fnr
+		adjective = ILLYRIA_fnr_ADJ
+		tag = ILLYRIA_fnr
+		color = map_ILLYRIA_fnr
+
+		areas = {
+			bosnia_area
+			slavonia_area
+			croatia_area
+			serbia_area
+		}
+		provinces = {
+			illyria_province
+			prilep_province
+			lower_carniola_province
+		}
+		locations = {
+			kruje
+			debar
+			skopje
+			tirana
+			durres
 		}
 		form_effect = {
 		}
@@ -4203,8 +4319,10 @@
 		rule = historical
 
 		potential = {
-			culture = { has_culture_group = culture_group:italian_group }
-			#tag = c:PAP
+			AND = {
+				culture = { has_culture_group = culture_group:italian_group }
+				tag = PAP
+			}
 		}
 
 		allow = {
