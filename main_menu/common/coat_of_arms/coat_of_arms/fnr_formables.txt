@@ -247,7 +247,12 @@ WESRE = { # Roman Empire
 		color3 = "blue"
 	}
 # Ducal Prussia
-	# TODO: uses prussia flag for now
+	DCLPR = {
+		pattern = "pattern_horizontal_split_01.dds"
+		color1 = "black"
+		color2 = "white"
+		color3 = "black"
+	}
 # Ukraine
 	UKRNE = {
 		pattern = "pattern_horizontal_split_01.dds"
@@ -339,11 +344,17 @@ WESRE = { # Roman Empire
 		color2 = "yellow"
 	}
 # Kyivan Rus
-	# TODO: Uses Ruthenia flag for now
-
+	KYVRU = {
+		pattern = "pattern_horizontal_split_01.dds"
+		color1 = "blue"
+		color2 = "yellow"
+	}
 # Latin Empire
-	# TODO: Uses rome flag for now
-
+	LTNEM = {
+		pattern = "pattern_horizontal_split_01.dds"
+		color1 = "red"
+		color2 = "yellow"
+	}
 # Lombardy # TODO
 	LOMBARDY_fnr = {
 		pattern = "pattern_solid.dds"
@@ -682,8 +693,12 @@ WESRE = { # Roman Empire
 		color1 = "yellow"		
 	}
 # Celtic Union
-	# Uses ireland flag for now
-
+	BSSER = {
+		pattern = "pattern_tricolor_horizontal_01.dds"
+		color1 = "green"
+		color2 = "white"
+		color3 = "green"		
+	}
 # Carolingian Empire
 	CAROL = {
 		pattern = "pattern_solid.dds"
@@ -719,11 +734,19 @@ WESRE = { # Roman Empire
 		color3 = "black"
 	}	
 # Gallic Empire
-	# Uses ireland flag for now
-
+	GLCEM = {
+		pattern = "pattern_tricolor_vertical_01.dds"
+		color1 = "green"
+		color2 = "black"
+		color3 = "green"
+	}	
 # Hungarian Empire
-	# Uses hungary flag for now
-
+	BSSER = {
+		pattern = "pattern_tricolor_horizontal_01.dds"
+		color1 = "red"
+		color2 = "white"
+		color3 = "green"		
+	}
 # Iberian Empire
 	FIESL = {
 		pattern = "pattern_cross.dds"
@@ -738,7 +761,10 @@ WESRE = { # Roman Empire
 		color3 = "green"
 	}	
 # Jagiellonian Empire
-	# Uses polish flag for now
+	JGLNN = {
+		pattern = "pattern_solid.dds"
+		color1 = "red"	
+	}
 	
 # Ummayad Caliphate
 	UMAYA = {
@@ -747,7 +773,10 @@ WESRE = { # Roman Empire
 	}
 	
 # Kingdom of Germany (post carolingian germany)
-	# Uses Germany flag
+	KOGER = {
+		pattern = "pattern_solid.dds"
+		color1 = "yellow"	
+	}
 
 # Lusitanian Empire
 	LUSIT = {

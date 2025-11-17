@@ -4233,7 +4233,7 @@
 					culture = culture:prussian
 				}
 				name = DCLPR
-				flag = PRU
+				flag = DCLPR
 				adjective = DCLPR_ADJ
 				tag = DCLPR
 				color = map_DCLPR
@@ -6166,7 +6166,7 @@
 		# Kyivan Rus - Non-historical
 			KYVRU = {
 				level = 4
-				required_locations_fraction = 0.75
+				required_locations_fraction = 0.15
 				rule = plausible
 				potential = {
 					has_variable = fnr_nonhistorical_enabled 
@@ -6190,7 +6190,7 @@
 				}
 				allow = { owns = location:kyiv }
 				name = KYVRU
-				flag = UKR
+				flag = KYVRU
 				adjective = KYVRU_ADJ
 				tag = KYVRU
 				color = map_KYVRU
@@ -7375,7 +7375,7 @@
 					culture = { has_culture_group = culture_group:french_group }
 				}
 				name = GLCEM
-				flag = IRE
+				flag = GLCEM
 				adjective = GLCEM_ADJ
 				tag = GLCEM
 				color = map_GLCEM
@@ -7403,7 +7403,7 @@
 					culture = { has_culture_group = culture_group:hungarian_group }
 				}
 				name = HNGEM
-				flag = HUN
+				flag = HNGEM
 				adjective = HNGEM_ADJ
 				tag = HNGEM
 				color = map_HNGEM
