@@ -1,0 +1,119 @@
+﻿# Formable Nations Settings GUI - wip
+window = {
+	name = "formable_nations_debug_window"
+	layer = windows_layer
+	parentanchor = hcenter|vcenter
+	filter_mouse = all
+	allow_outside = yes
+	visible = "[GetPlayer.IsValid]"
+	size = { 1000 300 }
+	using = bg_window_default_alt
+	#using = bg_age_event_frame
+	# Entire window
+	vbox = {
+		margin = { 100 10 }
+		window_header_alt = {
+			blockoverride "header_text" {
+				raw_text = "Formable Nations: Reworked Settings GUI"
+				margin_left = 70
+			}
+			blockoverride "button_close" {
+				button_close_normal = {
+					visible = yes
+					enabled = yes
+					onclick = "[GetVariableSystem.Toggle('formable_nations_debug_window_open')]"
+					onclick = "[ExecuteConsoleCommand('gui.ClearWidgets formable_nations_debug_window')]"
+				}
+			}
+		}
+		# Formable Settings Tab
+		header_main_tabs = {
+			blockoverride "content" {
+				button_main_tab_alt = {
+					using = layoutpolicy_expanding
+					raw_text = "Formable Nations: Reworked Settings"
+					onclick = "[GetVariableSystem.SetOrToggle('formable_settings_open', 'no')]"
+					down = "[Not(GetVariableSystem.HasValue('formable_settings_open', 'no'))]"
+				}
+			}
+		}	
+		scrollbox = {
+			layoutpolicy_horizontal = expanding
+			layoutpolicy_vertical = expanding
+			size = { 0 0 }
+
+			blockoverride "scrollbox_content" {
+				vbox = {
+					layoutpolicy_horizontal = expanding
+					spacing = 10
+					vbox = { # Group 1
+						layoutpolicy_horizontal = expanding
+						visible = "[Not(GetVariableSystem.HasValue('formable_settings_open', 'no'))]"
+						spacing = 30
+						hbox = {
+							spacing = 5
+							button_regular = { # Historical
+								size = { 220 32 }
+								raw_text = "[SelectLocalization(GetPlayer.HasVariable('fnr_historical_enabled'), 'Historical Formables: ON', 'Historical Formables: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_historical_formables').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								tooltip = "[SelectLocalization(GetPlayer.HasVariable('fnr_historical_enabled'), 'fnr_historical_tooltip_on', 'fnr_historical_tooltip_off')]"
+							}
+							button_regular = { # Non-Historical Formables
+								size = { 220 32 }
+								raw_text = "[SelectLocalization(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), 'Non-Historical Formables: ON', 'Non-Historical Formables: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_nonhistorical_formables').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								tooltip = "[SelectLocalization(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), 'fnr_nonhistorical_tooltip_on', 'fnr_nonhistorical_tooltip_off')]"
+							}
+							button_regular = { # Alt-History Formables
+								size = { 220 32 }
+								raw_text = "[SelectLocalization(GetPlayer.HasVariable('fnr_althistory_enabled'), 'Alt-history Formables: ON', 'Alt-history Formables: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_althistory_formables').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								tooltip = "[SelectLocalization(GetPlayer.HasVariable('fnr_althistory_enabled'), 'fnr_althistorical_tooltip_on', 'fnr_althistorical_tooltip_off')]"
+							}
+						}
+					}
+					vbox = { # Group 2
+						layoutpolicy_horizontal = expanding
+						visible = "[Not(GetVariableSystem.HasValue('formable_settings_open', 'no'))]"
+						spacing = 20
+						hbox = {
+							spacing = 5
+							button_regular = { # Controversial
+								size = { 220 32 }
+								raw_text = "[SelectLocalization(GetPlayer.HasVariable('fnr_controversial_enabled'), 'Controversial Formables: ON', 'Controversial Formables: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_controversial_formables').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								tooltip = "[SelectLocalization(GetPlayer.HasVariable('fnr_controversial_enabled'), 'fnr_controversial_tooltip_on', 'fnr_controversial_tooltip_off')]"
+							}
+							button_regular = { # Fantasy
+								size = { 220 32 }
+								raw_text = "[SelectLocalization(GetPlayer.HasVariable('fnr_fantasy_enabled'), 'Fantasy Formables: ON', 'Fantasy Formables: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_fantasy_formables').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								tooltip = "[SelectLocalization(GetPlayer.HasVariable('fnr_fantasy_enabled'), 'fnr_fantasy_tooltip_on', 'fnr_fantasy_tooltip_off')]"
+							}
+							button_regular = { # Meme
+								size = { 220 32 }
+								raw_text = "[SelectLocalization(GetPlayer.HasVariable('fnr_meme_enabled'), 'Meme Formables: ON', 'Meme Formables: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_meme_formables').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								tooltip = "[SelectLocalization(GetPlayer.HasVariable('fnr_meme_enabled'), 'fnr_meme_tooltip_on', 'fnr_meme_tooltip_off')]"
+							}
+						}
+					}
+					vbox = { # Group 2
+						layoutpolicy_horizontal = expanding
+						visible = "[Not(GetVariableSystem.HasValue('formable_settings_open', 'no'))]"
+						spacing = 20
+						hbox = {
+							spacing = 5
+							button_regular = { # Modern
+								size = { 220 32 }
+								raw_text = "[SelectLocalization(GetPlayer.HasVariable('fnr_modern_enabled'), 'Modern Formables: ON', 'Modern Formables: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_modern_formables').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								tooltip = "[SelectLocalization(GetPlayer.HasVariable('fnr_modern_enabled'), 'fnr_modern_tooltip_on', 'fnr_modern_tooltip_off')]"
+							}							
+						}					
+					}
+				}
+			}
+		}
+	}
+}

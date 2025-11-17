@@ -2,3 +2,219 @@
 # Left Click = Add positive (+100), Right Click = Add negative (-100)
 # Auto-cleanup: Adding one removes the opposite
 
+# Formable Nations Reworked - Scripted GUIs for Toggle Buttons
+
+
+# Toggle for Historical Formables
+# Existed after EU5 start date and not after January 1, 1837
+FormableNationReworked_toggle_historical_formables = {
+	scope = country
+	saved_scopes = { }
+	
+	is_shown = {
+		always = yes
+	}
+	
+	is_valid = {
+		always = yes
+	}
+	
+	effect = {
+		# Toggle the variable on/off
+		if = {
+			limit = { 
+				has_variable = fnr_historical_enabled 
+			}
+			remove_variable = fnr_historical_enabled
+		}
+		else = {
+			set_variable = {
+				name = fnr_historical_enabled
+				value = yes
+			}
+		}
+	}
+}
+
+# Toggle for Non-Historical Formables
+# Existed before EU5 start date
+FormableNationReworked_toggle_nonhistorical_formables = {
+	scope = country
+	saved_scopes = { }
+	
+	is_shown = {
+		always = yes
+	}
+	
+	is_valid = {
+		always = yes
+	}
+	
+	effect = {
+		if = {
+			limit = { 
+				has_variable = fnr_nonhistorical_enabled 
+			}
+			remove_variable = fnr_nonhistorical_enabled
+		}
+		else = {
+			set_variable = {
+				name = fnr_nonhistorical_enabled
+				value = yes
+			}
+		}
+	}
+}
+
+# Toggle for Alt-History Formables
+# nation that were proposed or exist in alternate timeline mods
+FormableNationReworked_toggle_althistory_formables = {
+	scope = country
+	saved_scopes = { }
+	
+	is_shown = {
+		always = yes
+	}
+	
+	is_valid = {
+		always = yes
+	}
+	
+	effect = {
+		if = {
+			limit = { 
+				has_variable = fnr_althistory_enabled 
+			}
+			remove_variable = fnr_althistory_enabled
+		}
+		else = {
+			set_variable = {
+				name = fnr_althistory_enabled
+				value = yes
+			}
+		}
+	}
+}
+
+# Toggle for Controversial Formables (starts disabled by default)
+# nazi germany, israel, rhodesia, etc
+FormableNationReworked_toggle_controversial_formables = {
+	scope = country
+	saved_scopes = { }
+	
+	is_shown = {
+		always = yes
+	}
+	
+	is_valid = {
+		always = yes
+	}
+	
+	effect = {
+		if = {
+			limit = { 
+				has_variable = fnr_controversial_enabled 
+			}
+			remove_variable = fnr_controversial_enabled
+		}
+		else = {
+			set_variable = {
+				name = fnr_controversial_enabled
+				value = yes
+			}
+		}
+	}
+}
+
+# Toggle Fantasy Formables
+# Example: camelot, atlantis any unrealstic/made up country/story countries
+FormableNationReworked_toggle_fantasy_formables = {
+	scope = country
+	saved_scopes = { }
+	
+	is_shown = {
+		always = yes
+	}
+	
+	is_valid = {
+		always = yes
+	}
+	
+	effect = {
+		if = {
+			limit = { 
+				has_variable = fnr_fantasy_enabled 
+			}
+			remove_variable = fnr_fantasy_enabled
+		}
+		else = {
+			set_variable = {
+				name = fnr_fantasy_enabled
+				value = yes
+			}
+		}
+	}
+}
+
+# Toggle for Meme Formables
+# meme countries (Hyperborea, Agartha)
+# Proto-Finnic Holy Roman Khaganate / etc
+FormableNationReworked_toggle_meme_formables = {
+	scope = country
+	saved_scopes = { }
+	
+	is_shown = {
+		always = yes
+	}
+	
+	is_valid = {
+		always = yes
+	}
+	
+	effect = {
+		if = {
+			limit = { 
+				has_variable = fnr_meme_enabled 
+			}
+			remove_variable = fnr_meme_enabled
+		}
+		else = {
+			set_variable = {
+				name = fnr_meme_enabled
+				value = yes
+			}
+		}
+	}
+}
+
+# Toggle for Modern Formables
+# Any nation existing after January 1, 1837 that isnt controversial
+FormableNationReworked_toggle_modern_formables = {
+	scope = country
+	saved_scopes = { }
+	
+	is_shown = {
+		always = yes
+	}
+	
+	is_valid = {
+		always = yes
+	}
+	
+	effect = {
+		if = {
+			limit = { 
+				has_variable = fnr_modern_enabled 
+			}
+			remove_variable = fnr_modern_enabled
+		}
+		else = {
+			set_variable = {
+				name = fnr_modern_enabled
+				value = yes
+			}
+		}
+	}
+}
+
+# TODO: group for colonies in americas for example, such as Ontario, Oklahoma, etc

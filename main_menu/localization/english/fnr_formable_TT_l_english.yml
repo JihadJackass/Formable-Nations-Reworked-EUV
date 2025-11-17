@@ -2,5 +2,34 @@
 
   # TOOLTIPS FOR FORMABLE NATIONS
 
-    # Balochistan
-    HANSALEAGUE_fnr_tt: "We must be a Republic or a member of the Hanseatic League to enact this Formable."
+    #################################
+    # Formable Requirement Tooltips #
+    #################################
+
+    # todo
+
+    ###################
+    # GUI localiation #
+    ###################
+    # Historical formables
+    fnr_historical_tooltip_on: "Click to #R DISABLE#!\n\nThis will disable Historical Formables such as French Empire, German Empire, Serbian Empire, etc"
+    fnr_historical_tooltip_off: "Click to #G ENABLE#!\n\nThis will enable Historical Formables such as French Empire, German Empire, Serbian Empire, etc"
+    # Non-historical formables
+    fnr_nonhistorical_tooltip_on: "Click to #R DISABLE#!\n\nThis will disable Non-historical Formables such as Kyivan Rus, Manchuria, Latin Empire, etc"
+    fnr_nonhistorical_tooltip_off: "Click to #G ENABLE#!\n\nThis will enable Non-historical Formables such as Kyivan Rus, Manchuria, Latin Empire, etc"
+    # Alt-history
+    fnr_althistorical_tooltip_on: "Click to #R DISABLE#!\n\nThis will disable Alt-history Formables such as Angevin Empire, Danubian Federation, Dual Monarchy, etc"
+    fnr_althistorical_tooltip_off: "Click to #G ENABLE#!\n\nThis will enable Alt-history Formables such as Angevin Empire, Danubian Federation, Dual Monarchy, etc"
+    # Controversial 
+    fnr_controversial_tooltip_on: "Click to #R DISABLE#!\n\nThis will disable Controversial Formables such as Nazi Germany, Israel, Palestine, etc"
+    fnr_controversial_tooltip_off: "Click to #G ENABLE#!\n\nThis will enable Controversial Formables such as Nazi Germany, Israel, Palestine, etc"
+    # Fantasy
+    fnr_fantasy_tooltip_on: "Click to #R DISABLE#!\n\nThis will disable Fantasy Formables such as Camelot, Adriatic Empire, Catholica Russica, etc"
+    fnr_fantasy_tooltip_off: "Click to #G ENABLE#!\n\nThis will enable Fantasy Formables such as Camelot, Adriatic Empire, Catholica Russica, etc"
+    # Meme
+    fnr_meme_tooltip_on: "Click to #R DISABLE#!\n\nThis will disable Meme Formables such as Camelot, Adriatic Empire, Catholica Russica, etc"
+    fnr_meme_tooltip_off: "Click to #G ENABLE#!\n\nThis will enable Meme Formables such as Hyperborea, Agartha, Proto-Finnic Holy Roman Khaganate, etc"
+    # Modern
+    fnr_modern_tooltip_on: "Click to #R DISABLE#!\n\nThis will disable Modern Formables such as Russian Federation, Canada, Czechoslovakia, etc"
+    fnr_modern_tooltip_off: "Click to #G ENABLE#!\n\nThis will enable Modern Formables such as Russian Federation, Canada, Czechoslovakia, etc"
+

@@ -5,630 +5,630 @@
   ########################
 
     # Balochistan
-    BLC_fnr: "Balochistan"
-    BLC_fnr_ADJ: "Balochi"
-    BLC_fnr_desc: "Balochistan is both a region and an ethnic group that historically has a distinct identity, with a significant independence movement demanding autonomy or full independence from Pakistan. It is a land of rich natural resources, but the region is also the poorest and largest province in modern-day Pakistan."
+    BALCH: "Balochistan"
+    BALCH_ADJ: "Balochi"
+    BALCH_desc: "Balochistan is both a region and an ethnic group that historically has a distinct identity, with a significant independence movement demanding autonomy or full independence from Pakistan. It is a land of rich natural resources, but the region is also the poorest and largest province in modern-day Pakistan."
     
     # Polabia
-    POLB_fnr: "Polabia"
-    POLB_fnr_ADJ: "Polabian"
-    POLB_fnr_desc: "The Polabians (German: Polaben; Latin: Polabi) were a constituent Lechitic tribe of the Obotrites who lived between the Trave and the Elbe. The main settlement of the Polabians was Racisburg (modern Ratzeburg), named after their Prince Ratibor."
+    POLBA: "Polabia"
+    POLBA_ADJ: "Polabian"
+    POLBA_desc: "The Polabians (German: Polaben; Latin: Polabi) were a constituent Lechitic tribe of the Obotrites who lived between the Trave and the Elbe. The main settlement of the Polabians was Racisburg (modern Ratzeburg), named after their Prince Ratibor."
 
     # Greater Sorbia
-    GSORB_fnr: "Greater Sorbia"
-    GSORB_fnr_ADJ: "Greater Sorbian"
-    GSORB_fnr_desc: "Long overshadowed by the great powers that surrounded them, the Sorbs endured as a resilient people, keeping their language and faith alive amid centuries of foreign rule. The unification of the Sorbian lands marks the rebirth of a nation thought lost to history which cries a beacon of Slavic endurance and identity. A Greater Sorbia rises determined to reclaim a great legacy and secure its borders."
+    GSORB: "Greater Sorbia"
+    GSORB_ADJ: "Greater Sorbian"
+    GSORB_desc: "Long overshadowed by the great powers that surrounded them, the Sorbs endured as a resilient people, keeping their language and faith alive amid centuries of foreign rule. The unification of the Sorbian lands marks the rebirth of a nation thought lost to history which cries a beacon of Slavic endurance and identity. A Greater Sorbia rises determined to reclaim a great legacy and secure its borders."
 
     # Sorbic Kingdom
-    KSORB_fnr: "Sorbic Kingdom"
-    KSORB_fnr_ADJ: "Sorbic"
+    KSORB: "Sorbic Kingdom"
+    KSORB_ADJ: "Sorbic"
     KSORB_desc: "The Sorbic Kingdom is a more centralized version of a unified Sorbian realm which contends with neighboring hostile powers and a diversive region of languages and religions."  
 
     # Kingdom of Hanover
-    KOFHN_fnr: "Kingdom of Hanover"
-    KOFHN_fnr_ADJ: "Hanoveran"
-    KOFHN_fnr_desc: "The Kingdom of Hanover was a German state that existed from 1814 to 1866, founded at the Congress of Vienna. It was ruled by the House of Hanover and was in personal union with the United Kingdom until 1837, when the constitutions of the two countries diverged and the British monarch was no longer the King of Hanover. After being a member of the German Confederation, it lost its independence in the Austro-Prussian War of 1866 and was annexed by Prussia."
+    KOFHN: "Kingdom of Hanover"
+    KOFHN_ADJ: "Hanoveran"
+    KOFHN_desc: "The Kingdom of Hanover was a German state that existed from 1814 to 1866, founded at the Congress of Vienna. It was ruled by the House of Hanover and was in personal union with the United Kingdom until 1837, when the constitutions of the two countries diverged and the British monarch was no longer the King of Hanover. After being a member of the German Confederation, it lost its independence in the Austro-Prussian War of 1866 and was annexed by Prussia."
 
     # Polynesia
-    POLYNE_fnr: "Polynesia"
-    POLYNE_fnr_ADJ: "Polynesian"
-    POLYNE_fnr_desc: "Polynesia is a subregion of Oceania consisting of over 1,000 islands scattered across the central and southern Pacific Ocean, forming a large triangle with its corners at the Hawaiian Islands, New Zealand, and Easter Island. The region's indigenous people, Polynesians, share common linguistic and cultural traits, and its independent nations include New Zealand, Samoa, and Tuvalu."
+    POLNE: "Polynesia"
+    POLNE_ADJ: "Polynesian"
+    POLNE_desc: "Polynesia is a subregion of Oceania consisting of over 1,000 islands scattered across the central and southern Pacific Ocean, forming a large triangle with its corners at the Hawaiian Islands, New Zealand, and Easter Island. The region's indigenous people, Polynesians, share common linguistic and cultural traits, and its independent nations include New Zealand, Samoa, and Tuvalu."
 
     # Hawaii
-    HAWAIII_fnr: "Hawai'i"
-    HAWAIII_fnr_ADJ: "Hawaiian"
-    HAWAIII_fnr_desc: "the historic Kingdom of Hawaii, a sovereign nation from 1795 to 1893 that was annexed by the United States, and the modern Nation of Hawaii, an independence movement and organization that advocates for Hawaiian sovereignty today. The historic Kingdom was a unified, self-governing country with a sophisticated culture and organized social system before its overthrow and annexation."
+    HAWAI: "Hawai'i"
+    HAWAI_ADJ: "Hawaiian"
+    HAWAI_desc: "the historic Kingdom of Hawaii, a sovereign nation from 1795 to 1893 that was annexed by the United States, and the modern Nation of Hawaii, an independence movement and organization that advocates for Hawaiian sovereignty today. The historic Kingdom was a unified, self-governing country with a sophisticated culture and organized social system before its overthrow and annexation."
 
     # Yugoslavia
-    YUGOSLAVIA_fnr: "Yugoslavia"
-    YUGOSLAVIA_fnr_ADJ: "Yugoslavian"
-    YUGOSLAVIA_fnr_desc: "Yugoslavia was a federal state in Central and Southeast Europe that existed from 1918 to 1992, meaning 'Land of the South Slavs'. It was a multi-ethnic and multi-religious federation initially called the Kingdom of Serbs, Croats, and Slovenes, which later became the Socialist Federal Republic of Yugoslavia after World War II. The country's complex identity, comprised of six republics, two autonomous provinces, and various ethnic groups, ultimately led to its dissolution amid rising nationalism in the early 1990s"
+    YGOSL: "Yugoslavia"
+    YGOSL_ADJ: "Yugoslavian"
+    YGOSL_desc: "Yugoslavia was a federal state in Central and Southeast Europe that existed from 1918 to 1992, meaning 'Land of the South Slavs'. It was a multi-ethnic and multi-religious federation initially called the Kingdom of Serbs, Croats, and Slovenes, which later became the Socialist Federal Republic of Yugoslavia after World War II. The country's complex identity, comprised of six republics, two autonomous provinces, and various ethnic groups, ultimately led to its dissolution amid rising nationalism in the early 1990s"
 
     # Japan
-    JAPAN_fnr: "Japan"
-    JAPAN_fnr_ADJ: "Japanese"
-    JAPAN_fnr_desc: "Japan is an East Asian island nation with a unique blend of ancient tradition and advanced technology. It is an archipelago of four main islands—Hokkaido, Honshu, Shikoku, and Kyushu—and thousands of smaller ones, with a government that is a parliamentary constitutional monarchy led by an emperor and prime minister. Characterized by mountainous terrain, Japan's population is concentrated along coastal plains, with Tokyo as its capital and largest city."
+    JAPAN: "Japan"
+    JAPAN_ADJ: "Japanese"
+    JAPAN_desc: "Japan is an East Asian island nation with a unique blend of ancient tradition and advanced technology. It is an archipelago of four main islands—Hokkaido, Honshu, Shikoku, and Kyushu—and thousands of smaller ones, with a government that is a parliamentary constitutional monarchy led by an emperor and prime minister. Characterized by mountainous terrain, Japan's population is concentrated along coastal plains, with Tokyo as its capital and largest city."
 
     # Angevin Empire
-    ANGEVINEMPIRE_fnr: "Angevin Empire"
-    ANGEVINEMPIRE_fnr_ADJ: "Angevin"
-    ANGEVINEMPIRE_fnr_desc: "The Current Flag is temporary and will be updated in the next Formable Nations: Reworked Update.\n\nThe Angevin Empire was a collection of territories ruled by the House of Plantagenet from 1154 to 1216, encompassing England and large parts of France, including Normandy, Anjou, and Aquitaine. It was a powerful but loosely connected 'composite monarchy' established by Henry II and his successors, Richard I and John."
+    AGEVN: "Angevin Empire"
+    AGEVN_ADJ: "Angevin"
+    AGEVN_desc: "The Current Flag is temporary and will be updated in the next Formable Nations: Reworked Update.\n\nThe Angevin Empire was a collection of territories ruled by the House of Plantagenet from 1154 to 1216, encompassing England and large parts of France, including Normandy, Anjou, and Aquitaine. It was a powerful but loosely connected 'composite monarchy' established by Henry II and his successors, Richard I and John."
 
     # Baltic States
-    BALTICSTATES_fnr: "Baltic States"
-    BALTICSTATES_fnr_ADJ: "Baltic"
-    BALTICSTATES_fnr_desc: "The Baltic states—Estonia, Latvia, and Lithuania—are nations in northeastern Europe on the eastern coast of the Baltic Sea, characterized by a flat landscape of forests, lakes, and rivers. Historically, they were independent after World War I, occupied by the Soviet Union, and regained sovereignty in 1991"
+    BLTST: "Baltic States"
+    BLTST_ADJ: "Baltic"
+    BLTST_desc: "The Baltic states—Estonia, Latvia, and Lithuania—are nations in northeastern Europe on the eastern coast of the Baltic Sea, characterized by a flat landscape of forests, lakes, and rivers. Historically, they were independent after World War I, occupied by the Soviet Union, and regained sovereignty in 1991"
 
     # Alsace-Lorraine
-    ALSACELORRAINE_fnr: "Alsace-Lorraine"
-    ALSACELORRAINE_fnr_ADJ: "Alsatian-Lorrainer"
-    ALSACELORRAINE_fnr_desc: "Alsace-Lorraine is a historical region in northeastern France, not a modern nation, known for its complex history of shifting between French and German control and its unique blend of cultures. The area was ceded by France to Germany in 1871 after the Franco-Prussian War and returned to France in 1919 after World War I. It has since been re-incorporated into France, now as part of the Grand Est region, but retains a special legal status and a distinct cultural identity shaped by its Franco-Germanic heritage."
+    ALSLO: "Alsace-Lorraine"
+    ALSLO_ADJ: "Alsatian-Lorrainer"
+    ALSLO_desc: "Alsace-Lorraine is a historical region in northeastern France, not a modern nation, known for its complex history of shifting between French and German control and its unique blend of cultures. The area was ceded by France to Germany in 1871 after the Franco-Prussian War and returned to France in 1919 after World War I. It has since been re-incorporated into France, now as part of the Grand Est region, but retains a special legal status and a distinct cultural identity shaped by its Franco-Germanic heritage."
 
     # Aquitaine
-    KOAQUITAINE_fnr: "Kingdom of Aquitaine"
-    KOAQUITAINE_fnr_ADJ: "Aquitanian"
-    KOAQUITAINE_fnr_desc: "Aquitaine is a historical region of southwestern France and a former administrative region - With the right connections and some effective warfare we can establish the Kingdom of Aquitaine as it's own independent nation directly opposing French Unification."
+    AQUIT: "Kingdom of Aquitaine"
+    AQUIT_ADJ: "Aquitanian"
+    AQUIT_desc: "Aquitaine is a historical region of southwestern France and a former administrative region - With the right connections and some effective warfare we can establish the Kingdom of Aquitaine as it's own independent nation directly opposing French Unification."
 
     # Rhine Confederation
-    CRHINE_fnr: "Confederation of the Rhine"
-    CRHINE_fnr_ADJ: "Rhenish"
-    CRHINE_fnr_desc: "The Confederation of the Rhine was a German client state confederation of the First French Empire from 1806 to 1813, established by Napoleon Bonaparte after his victory at Austerlitz. It included most of the German states except Austria and Prussia, serving as a buffer against French eastern borders and dissolving after Napoleon's defeat in the War of the Sixth Coalition. Though a confederation, it was not a unified state but a loose alliance under Napoleon's 'Protector' title, which allowed France to dominate Central Europe and utilize the confederation's resources for its wars."
+    RCONF: "Confederation of the Rhine"
+    RCONF_ADJ: "Rhenish"
+    RCONF_desc: "The Confederation of the Rhine was a German client state confederation of the First French Empire from 1806 to 1813, established by Napoleon Bonaparte after his victory at Austerlitz. It included most of the German states except Austria and Prussia, serving as a buffer against French eastern borders and dissolving after Napoleon's defeat in the War of the Sixth Coalition. Though a confederation, it was not a unified state but a loose alliance under Napoleon's 'Protector' title, which allowed France to dominate Central Europe and utilize the confederation's resources for its wars."
 
     # Belarus
-    BELARUS_fnr: "Belarus"
-    BELARUS_fnr_ADJ: "Belarusian"
-    BELARUS_fnr_desc: "Belarus is a landlocked country in Eastern Europe with a flat, forested landscape, bordered by Russia, Ukraine, Poland, Lithuania, and Latvia. Its capital is Minsk, and it has a population of about 9.1 million people. Historically part of the Soviet Union, it now operates as an authoritarian state with a strong government-controlled economy and significant restrictions on civil liberties."
+    BLRUS: "Belarus"
+    BLRUS_ADJ: "Belarusian"
+    BLRUS_desc: "Belarus is a landlocked country in Eastern Europe with a flat, forested landscape, bordered by Russia, Ukraine, Poland, Lithuania, and Latvia. Its capital is Minsk, and it has a population of about 9.1 million people. Historically part of the Soviet Union, it now operates as an authoritarian state with a strong government-controlled economy and significant restrictions on civil liberties."
 
     # Belgium
-    BELGIUM_fnr: "Belgium"
-    BELGIUM_fnr_ADJ: "Belgian"
-    BELGIUM_fnr_desc: "Belgium is a federal parliamentary constitutional monarchy in Western Europe, bordered by France, Germany, Luxembourg, and the Netherlands. It is known for its complex federal structure based on linguistic regions (Flemish, Walloon, and Brussels-Capital), its official languages of Dutch, French, and German, and its capital, Brussels."
+    BLGUM: "Belgium"
+    BLGUM_ADJ: "Belgian"
+    BLGUM_desc: "Belgium is a federal parliamentary constitutional monarchy in Western Europe, bordered by France, Germany, Luxembourg, and the Netherlands. It is known for its complex federal structure based on linguistic regions (Flemish, Walloon, and Brussels-Capital), its official languages of Dutch, French, and German, and its capital, Brussels."
 
     # Benelux
-    BENELUX_fnr: "Benelux"
-    BENELUX_fnr_ADJ: "Beneluxian"
-    BENELUX_fnr_desc: "Benelux refers to the political and economic union of three neighboring Western European countries: Belgium, the Netherlands, and Luxembourg. The name is a portmanteau of the first two letters of each country's name. This union, which started as a customs union in 1948, fosters cooperation on a wide range of issues including the free movement of people, goods, capital, and services."
+    BNLUX: "Benelux"
+    BNLUX_ADJ: "Beneluxian"
+    BNLUX_desc: "Benelux refers to the political and economic union of three neighboring Western European countries: Belgium, the Netherlands, and Luxembourg. The name is a portmanteau of the first two letters of each country's name. This union, which started as a customs union in 1948, fosters cooperation on a wide range of issues including the free movement of people, goods, capital, and services."
 
     # Bremen-Verden
-    BREMENVERDEN_fnr: "Bremen-Verden"
-    BREMENVERDEN_fnr_ADJ: "Bremen-Verdian"
-    BREMENVERDEN_fnr_desc: "Bremen-Verden, formally the Duchies of Bremen and Verden, were two territories and immediate fiefs of the Holy Roman Empire, which emerged and gained imperial immediacy in 1180."
+    BMNVD: "Bremen-Verden"
+    BMNVD_ADJ: "Bremen-Verdian"
+    BMNVD_desc: "Bremen-Verden, formally the Duchies of Bremen and Verden, were two territories and immediate fiefs of the Holy Roman Empire, which emerged and gained imperial immediacy in 1180."
 
     # Bulgarian Empire
-    BULGEMPIRE_fnr: "Bulgarian Empire"
-    BULGEMPIRE_fnr_ADJ: "Bulgarian"
-    BULGEMPIRE_fnr_desc: "Bulgaria was a powerful kingdom in Southeastern Europe, often competing with the Byzantine Empire. The First Bulgarian Empire (681–1018 AD) originated from the Bulgars settling south of the Danube and grew to become a major power, culturally and politically, especially under rulers like Boris I and Simeon the Great. The Second Bulgarian Empire arose after a period of Byzantine rule, beginning in 1185 and lasting until 1396."
+    BLGEM: "Bulgarian Empire"
+    BLGEM_ADJ: "Bulgarian"
+    BLGEM_desc: "Bulgaria was a powerful kingdom in Southeastern Europe, often competing with the Byzantine Empire. The First Bulgarian Empire (681–1018 AD) originated from the Bulgars settling south of the Danube and grew to become a major power, culturally and politically, especially under rulers like Boris I and Simeon the Great. The Second Bulgarian Empire arose after a period of Byzantine rule, beginning in 1185 and lasting until 1396."
 
     # British Empire
-    BRITISHEMPIRE_fnr: "British Empire"
-    BRITISHEMPIRE_fnr_ADJ: "British"
-    BRITISHEMPIRE_fnr_desc: "The British Empire was a vast global territory that began in the 16th century, reaching its peak in the 19th and early 20th centuries as the largest empire in history, ruling over 400 million people and covering 24% of the world's land area. It consisted of dominions, colonies, protectorates, and other territories ruled by the United Kingdom, with its expansion fueled by economic, nationalist, and exploration-driven motives."
+    BISHE: "British Empire"
+    BISHE_ADJ: "British"
+    BISHE_desc: "The British Empire was a vast global territory that began in the 16th century, reaching its peak in the 19th and early 20th centuries as the largest empire in history, ruling over 400 million people and covering 24% of the world's land area. It consisted of dominions, colonies, protectorates, and other territories ruled by the United Kingdom, with its expansion fueled by economic, nationalist, and exploration-driven motives."
 
     # Cisalpina
-    CISALPINA_fnr: "Cisalpina"
-    CISALPINA_fnr_ADJ: "Cisalpinan"
-    CISALPINA_fnr_desc: "The Cisalpine Republic was a sister republic or a client state of France in Northern Italy that existed from 1797 to 1799, with a second version until 1802. "
+    CSPNA: "Cisalpina"
+    CSPNA_ADJ: "Cisalpinan"
+    CSPNA_desc: "The Cisalpine Republic was a sister republic or a client state of France in Northern Italy that existed from 1797 to 1799, with a second version until 1802. "
 
     # Commonwealth of England
-    ENGLISHCOMMONWEALTH_fnr: "Commonwealth of England"
-    ENGLISHCOMMONWEALTH_fnr_ADJ: "English"
-    ENGLISHCOMMONWEALTH_fnr_desc: "The Commonwealth of England refers to the historical period from 1649 to 1660 when England was a republic without a monarch, established after the English Civil War. It was a political entity where the country was governed by a Lord Protector and Parliament, with the head of state in this case being Oliver Cromwell."
+    ENGCM: "Commonwealth of England"
+    ENGCM_ADJ: "English"
+    ENGCM_desc: "The Commonwealth of England refers to the historical period from 1649 to 1660 when England was a republic without a monarch, established after the English Civil War. It was a political entity where the country was governed by a Lord Protector and Parliament, with the head of state in this case being Oliver Cromwell."
 
     # Czechoslovakia
-    CZECKSLOVAK_fnr: "Czechoslovakia"
-    CZECKSLOVAK_fnr_ADJ: "Czechoslovak"
-    CZECKSLOVAK_fnr_desc: "Czechoslovakia is made up of the historical lands of Bohemia, Moravia, and Slovakia which allowed it to became a democratic and prosperous nation within the constantly hostile regions of Europe."
+    CZSLO: "Czechoslovakia"
+    CZSLO_ADJ: "Czechoslovak"
+    CZSLO_desc: "Czechoslovakia is made up of the historical lands of Bohemia, Moravia, and Slovakia which allowed it to became a democratic and prosperous nation within the constantly hostile regions of Europe."
 
     # Ducal Prussia
-    DUCALPRUSSIA_fnr: "Ducal Prussia"
-    DUCALPRUSSIA_fnr_ADJ: "Prussian"
-    DUCALPRUSSIA_fnr_desc: "The Duchy of Prussia or Ducal Prussia was a duchy in the region of Prussia established as a result of secularization of the Monastic Prussia, the territory that remained under the control of the State of the Teutonic Order until the Protestant Reformation in 1525."
+    DCLPR: "Ducal Prussia"
+    DCLPR_ADJ: "Prussian"
+    DCLPR_desc: "The Duchy of Prussia or Ducal Prussia was a duchy in the region of Prussia established as a result of secularization of the Monastic Prussia, the territory that remained under the control of the State of the Teutonic Order until the Protestant Reformation in 1525."
 
     # Ukraine
-    UKRAINE_fnr: "Ukraine"
-    UKRAINE_fnr_ADJ: "Ukranian"
-    UKRAINE_fnr_desc: "Ukraine is a large, historically rich Eastern European nation known for its resilience, fertile lands (often called the 'Breadbasket of Europe')\n\nUkraine is located in South-Eastern Europe and shares borders with several countries, including Russia to the east and the Black Sea to the south. The terrain is mostly flat plains (steppes), with the Carpathian Mountains in the west. It possesses rich natural resources, particularly extensive fertile 'black soil' (chernozem) and significant mineral deposits, including iron, coal, and manganese.\n\nWe care establish what is essentially a modern national state under Kyivan guidance with the right conquests."
+    UKRNE: "Ukraine"
+    UKRNE_ADJ: "Ukranian"
+    UKRNE_desc: "Ukraine is a large, historically rich Eastern European nation known for its resilience, fertile lands (often called the 'Breadbasket of Europe')\n\nUkraine is located in South-Eastern Europe and shares borders with several countries, including Russia to the east and the Black Sea to the south. The terrain is mostly flat plains (steppes), with the Carpathian Mountains in the west. It possesses rich natural resources, particularly extensive fertile 'black soil' (chernozem) and significant mineral deposits, including iron, coal, and manganese.\n\nWe care establish what is essentially a modern national state under Kyivan guidance with the right conquests."
 
     # Donetsk PR
-    DONETSKPR_fnr: "Donetsk People's Republic"
-    DONETSKPR_fnr_ADJ: "Donetsk"
-    DONETSKPR_fnr_desc: "The Donetsk People's Republic (DPR) is a self-proclaimed, now Russian-annexed state in eastern Ukraine's Donbass region, established in 2014 amid political turmoil. It is a republic of Russia with its capital in Donetsk, established on a territory that was illegally annexed in September 2022. Prior to annexation, it existed as a separatist entity with limited international recognition. Its ideology has been shaped by a mixture of Russian ultranationalism, Orthodox fundamentalism, and Soviet-era ideals."
+    DNTPR: "Donetsk People's Republic"
+    DNTPR_ADJ: "Donetsk"
+    DNTPR_desc: "The Donetsk People's Republic (DPR) is a self-proclaimed, now Russian-annexed state in eastern Ukraine's Donbass region, established in 2014 amid political turmoil. It is a republic of Russia with its capital in Donetsk, established on a territory that was illegally annexed in September 2022. Prior to annexation, it existed as a separatist entity with limited international recognition. Its ideology has been shaped by a mixture of Russian ultranationalism, Orthodox fundamentalism, and Soviet-era ideals."
 
     # Luhansk PR
-    LUHANSKPR_fnr: "Luhansk People's Republic"
-    LUHANSKPR_fnr_ADJ: "Luhansk"
-    LUHANSKPR_fnr_desc: "The Luhansk People's Republic (LPR) is a breakaway state in eastern Ukraine, located in the Donbas region, that was proclaimed in 2014 and effectively annexed by Russia in 2022. It is a disputed territory, with nearly all UN member states considering it a part of Ukraine. The LPR was formed by Russian-backed separatists following the Euromaidan revolution and is heavily supported by Russia, but it has received limited international recognition"
+    LUHPR: "Luhansk People's Republic"
+    LUHPR_ADJ: "Luhansk"
+    LUHPR_desc: "The Luhansk People's Republic (LPR) is a breakaway state in eastern Ukraine, located in the Donbas region, that was proclaimed in 2014 and effectively annexed by Russia in 2022. It is a disputed territory, with nearly all UN member states considering it a part of Ukraine. The LPR was formed by Russian-backed separatists following the Euromaidan revolution and is heavily supported by Russia, but it has received limited international recognition"
 
     # Illyria
-    ILLYRIA_fnr: "Illyria"
-    ILLYRIA_fnr_ADJ: "Illyrian"
-    ILLYRIA_fnr_desc: "Illyria was an ancient region on the western Balkan Peninsula, along the Adriatic Sea, that was home to various tribes collectively known as the Illyrians. It included territories in modern-day Albania, Montenegro, and Croatia, and was later expanded to become the Roman province of Illyricum, which stretched from the Adriatic to the Danube. The name has also been used in later historical contexts and in fiction."
+    ILYRA: "Illyria"
+    ILYRA_ADJ: "Illyrian"
+    ILYRA_desc: "Illyria was an ancient region on the western Balkan Peninsula, along the Adriatic Sea, that was home to various tribes collectively known as the Illyrians. It included territories in modern-day Albania, Montenegro, and Croatia, and was later expanded to become the Roman province of Illyricum, which stretched from the Adriatic to the Danube. The name has also been used in later historical contexts and in fiction."
 
     # Eastern Roman Empire
-    EASTROMANEMPIRE_fnr: "Eastern Roman Empire"
-    EASTROMANEMPIRE_fnr_ADJ: "Roman"
-    EASTROMANEMPIRE_fnr_desc: "The Eastern Roman Empire, also known as the Byzantine Empire, was the continuation of the Roman Empire in its eastern provinces, with its capital at Constantinople (modern-day Istanbul). Its citizens called themselves 'Romans' and the empire was a powerful hub of Eastern Orthodox Christianity, Greek culture, and classical learning that influenced the development of art, law, and government across Europe and the Middle East for over a thousand years after the Western Roman Empire's fall."
+    EASRE: "Eastern Roman Empire"
+    EASRE_ADJ: "Roman"
+    EASRE_desc: "The Eastern Roman Empire, also known as the Byzantine Empire, was the continuation of the Roman Empire in its eastern provinces, with its capital at Constantinople (modern-day Istanbul). Its citizens called themselves 'Romans' and the empire was a powerful hub of Eastern Orthodox Christianity, Greek culture, and classical learning that influenced the development of art, law, and government across Europe and the Middle East for over a thousand years after the Western Roman Empire's fall."
 
     # Western Roman Empire
-    WESTROMANEMPIRE_fnr: "Western Roman Empire"
-    WESTROMANEMPIRE_fnr_ADJ: "Roman"
-    WESTROMANEMPIRE_fnr_desc: "The Western Roman Empire was the western half of the Roman Empire that was administered separately from the East after a formal division in 395 AD. It was characterized by a capital that moved from Mediolanum to Ravenna, encompassing provinces like Italy, Gaul, and Hispania, but was weakened by economic instability, political corruption, and frequent invasions from groups like the Goths, Burgundians, and Suebi."
+    WESRE: "Western Roman Empire"
+    WESRE_ADJ: "Roman"
+    WESRE_desc: "The Western Roman Empire was the western half of the Roman Empire that was administered separately from the East after a formal division in 395 AD. It was characterized by a capital that moved from Mediolanum to Ravenna, encompassing provinces like Italy, Gaul, and Hispania, but was weakened by economic instability, political corruption, and frequent invasions from groups like the Goths, Burgundians, and Suebi."
 
     # Emilia-Romagna
-    EMILIAROMAGNA_fnr: "Emilia-Romagna"
-    EMILIAROMAGNA_fnr_ADJ: "Emilia-Romagnan"
-    EMILIAROMAGNA_fnr_desc: "Tmilia-Romagna is an Italian region known for its rich food, history, and strong economy. It is often called the 'Food Valley' due to its famous agricultural products like Parmigiano Reggiano, Parma ham, and balsamic vinegar, and it's a leader in food innovation."
+    EMLRO: "Emilia-Romagna"
+    EMLRO_ADJ: "Emilia-Romagnan"
+    EMLRO_desc: "Tmilia-Romagna is an Italian region known for its rich food, history, and strong economy. It is often called the 'Food Valley' due to its famous agricultural products like Parmigiano Reggiano, Parma ham, and balsamic vinegar, and it's a leader in food innovation."
 
     # European Union
-    EUROPEANUNION_fnr: "European Union"
-    EUROPEANUNION_fnr_ADJ: "European"
-    EUROPEANUNION_fnr_desc: "The Current Flag is temporary and will be updated in the next Formable Nations: Reworked Update.\n\nThe unification of Europe under a single banner. Born from centuries of rivalry, war, and fragile peace, the European Union stands as a beacon of cooperation and shared destiny. No longer divided by borders and crowns, Europe now moves with one voice, wielding unparalleled economic and military might."
+    EUROP: "European Union"
+    EUROP_ADJ: "European"
+    EUROP_desc: "The Current Flag is temporary and will be updated in the next Formable Nations: Reworked Update.\n\nThe unification of Europe under a single banner. Born from centuries of rivalry, war, and fragile peace, the European Union stands as a beacon of cooperation and shared destiny. No longer divided by borders and crowns, Europe now moves with one voice, wielding unparalleled economic and military might."
 
     # French Empire
-    FRENCHEMPIRE_fnr: "French Empire"
-    FRENCHEMPIRE_fnr_ADJ: "French"
-    FRENCHEMPIRE_fnr_desc: "There are two disctint moments in history which held a dominant French position, these being the First French colonial empire (16th-19th century) and the Napoleonic Empire (1804-1815). The colonial empire was the second-largest in the world at its peak and included vast territories in North America, the Caribbean, and India before most of it was lost. The Napoleonic Empire, by contrast, was a European empire centered on France and established by Napoleon Bonaparte, which conquered much of continental Europe"
+    FNCEM: "French Empire"
+    FNCEM_ADJ: "French"
+    FNCEM_desc: "There are two disctint moments in history which held a dominant French position, these being the First French colonial empire (16th-19th century) and the Napoleonic Empire (1804-1815). The colonial empire was the second-largest in the world at its peak and included vast territories in North America, the Caribbean, and India before most of it was lost. The Napoleonic Empire, by contrast, was a European empire centered on France and established by Napoleon Bonaparte, which conquered much of continental Europe"
 
     # German Empire
-    GERMANEMPIRE_fnr: "German Empire"
-    GERMANEMPIRE_fnr_ADJ: "German"
-    GERMANEMPIRE_fnr_desc: "The German Empire was a German state that existed from 1871 to 1918, formed from the unification of German states led by Prussia. It was a federal monarchy, dominated by Prussia, which provided the hereditary emperor and a significant portion of the population and territory. The empire had a bicameral parliament (the Reichstag and the Bundesrat) but real power was concentrated in the emperor and his chancellor, Otto von Bismarck, especially under his leadership.\n\nThe new constitution came into force on 16 April, changing the name of the federal state to the German Empire and introducing the title of German Emperor for Wilhelm I, King of Prussia from the House of Hohenzollern. Berlin remained its capital, and Otto von Bismarck, Minister President of Prussia, became chancellor, the head of government. After 1850, the states of Germany had rapidly become industrialized."
+    GMNEM: "German Empire"
+    GMNEM_ADJ: "German"
+    GMNEM_desc: "The German Empire was a German state that existed from 1871 to 1918, formed from the unification of German states led by Prussia. It was a federal monarchy, dominated by Prussia, which provided the hereditary emperor and a significant portion of the population and territory. The empire had a bicameral parliament (the Reichstag and the Bundesrat) but real power was concentrated in the emperor and his chancellor, Otto von Bismarck, especially under his leadership.\n\nThe new constitution came into force on 16 April, changing the name of the federal state to the German Empire and introducing the title of German Emperor for Wilhelm I, King of Prussia from the House of Hohenzollern. Berlin remained its capital, and Otto von Bismarck, Minister President of Prussia, became chancellor, the head of government. After 1850, the states of Germany had rapidly become industrialized."
 
     # German Reich
-    GERMANREICH_fnr: "German Reich"
-    GERMANREICH_fnr_ADJ: "German"
-    GERMANREICH_fnr_desc: "The Current Flag is temporary and will be updated in the next Formable Nations: Reworked Update.\n\nThe German Reich was the official name for the German nation-state from 1871 to 1945, encompassing three distinct political systems: the German Empire (1871-1918), the Weimar Republic (1919-1933), and Nazi Germany (1933-1945). The term 'German Reich' is most frequently associated with the Third Reich, or Nazi Germany, which was a totalitarian dictatorship under Adolf Hitler and the Nazi Party"
+    GMNRE: "German Reich"
+    GMNRE_ADJ: "German"
+    GMNRE_desc: "The Current Flag is temporary and will be updated in the next Formable Nations: Reworked Update.\n\nThe German Reich was the official name for the German nation-state from 1871 to 1945, encompassing three distinct political systems: the German Empire (1871-1918), the Weimar Republic (1919-1933), and Nazi Germany (1933-1945). The term 'German Reich' is most frequently associated with the Third Reich, or Nazi Germany, which was a totalitarian dictatorship under Adolf Hitler and the Nazi Party"
 
     # Greater German Reich
-    GREATERGERMANREICH_fnr: "Greater German Reich"
-    GREATERGERMANREICH_fnr_ADJ: "German"
-    GREATERGERMANREICH_fnr_desc: "he Greater German Reich was the official name for Nazi Germany from 1938 onwards, styled as the Greater Germanic Reich of the German Nation. This totalitarian state, led by Adolf Hitler, sought to expand its territorial control across Europe, annexing territories like Austria and the Sudetenland. The state's ideology was built on Nazi principles of racial superiority, aiming to establish dominance in Eastern Europe."
+    GTRGM: "Greater German Reich"
+    GTRGM_ADJ: "German"
+    GTRGM_desc: "he Greater German Reich was the official name for Nazi Germany from 1938 onwards, styled as the Greater Germanic Reich of the German Nation. This totalitarian state, led by Adolf Hitler, sought to expand its territorial control across Europe, annexing territories like Austria and the Sudetenland. The state's ideology was built on Nazi principles of racial superiority, aiming to establish dominance in Eastern Europe."
 
     # Hanseatic League
     #HANSA: "Hanseatic League"
-    HANSALEAGUE_fnr: "Hanseatic League"
-    HANSALEAGUE_fnr_ADJ: "Hanseatic"
-    HANSALEAGUE_fnr_desc: "The Hanseatic League was a powerful medieval commercial and defensive alliance of merchant guilds and market towns in Northern Europe, which controlled trade in the Baltic and North Seas from the 13th to the 17th centuries. Though not a unified nation, it functioned similarly by protecting its members' mutual trading interests, regulating commerce, and even wielding political and military influence, with Lübeck often serving as its unofficial capital. The League eventually declined with the rise of nation-states and changing trade routes."
+    HNSLG: "Hanseatic League"
+    HNSLG_ADJ: "Hanseatic"
+    HNSLG_desc: "The Hanseatic League was a powerful medieval commercial and defensive alliance of merchant guilds and market towns in Northern Europe, which controlled trade in the Baltic and North Seas from the 13th to the 17th centuries. Though not a unified nation, it functioned similarly by protecting its members' mutual trading interests, regulating commerce, and even wielding political and military influence, with Lübeck often serving as its unofficial capital. The League eventually declined with the rise of nation-states and changing trade routes."
 
     # Hesse-Nassau
-    HESSENASSAU_fnr: "Hesse-Nassau"
-    HESSENASSAU_fnr_ADJ: "Hessean"
-    HESSENASSAU_fnr_desc: "Hesse-Nassau was created as a consequence of the Austro-Prussian War of 1866 by combining the previously independent Hesse-Kassel (or Hesse-Cassel), the Duchy of Nassau, the Free City of Frankfurt, areas gained from the Kingdom of Bavaria, and areas gained from the Grand Duchy of Hesse (including part of the former Landgraviate of Hesse-Homburg from Hesse-Darmstadt)."
+    HESNA: "Hesse-Nassau"
+    HESNA_ADJ: "Hessean"
+    HESNA_desc: "Hesse-Nassau was created as a consequence of the Austro-Prussian War of 1866 by combining the previously independent Hesse-Kassel (or Hesse-Cassel), the Duchy of Nassau, the Free City of Frankfurt, areas gained from the Kingdom of Bavaria, and areas gained from the Grand Duchy of Hesse (including part of the former Landgraviate of Hesse-Homburg from Hesse-Darmstadt)."
 
     # Italian Empire
-    ITALIANEMPIRE_fnr: "Italian Empire"
-    ITALIANEMPIRE_fnr_ADJ: "Italian"
-    ITALIANEMPIRE_fnr_desc: "The Italian Empire was a colonial empire that existed between 1882 and 1960, encompassing territories in Africa, the Mediterranean, and China that were controlled by the Kingdom of Italy. At its peak (1936–1941), it included colonies in North and East Africa like Libya, Eritrea, Somalia, and Ethiopia (Africa Orientale Italiana), as well as the Dodecanese Islands, and a protectorate in Albania. Its existence was tied to the expansionist policies of the Italian government, particularly the Fascist regime under Benito Mussolini."
+    ITNEM: "Italian Empire"
+    ITNEM_ADJ: "Italian"
+    ITNEM_desc: "The Italian Empire was a colonial empire that existed between 1882 and 1960, encompassing territories in Africa, the Mediterranean, and China that were controlled by the Kingdom of Italy. At its peak (1936–1941), it included colonies in North and East Africa like Libya, Eritrea, Somalia, and Ethiopia (Africa Orientale Italiana), as well as the Dodecanese Islands, and a protectorate in Albania. Its existence was tied to the expansionist policies of the Italian government, particularly the Fascist regime under Benito Mussolini."
 
     # Kalmar Union
-    KALMARUNION_fnr: "Kalmar Union"
-    KALMARUNION_fnr_ADJ: "Kalmar"
-    KALMARUNION_fnr_desc: "The Kalmar Union (1397–1523) was a personal union that united the three sovereign kingdoms of Denmark, Sweden (including most of present-day Finland), and Norway (including Iceland, Greenland, the Faroe Islands, Orkney, and Shetland) under a single monarch. It was not a single, unified nation-state, but rather an arrangement where each country legally retained its separate laws and governing councils, while sharing a common ruler and a unified foreign policy."
+    KLMUN: "Kalmar Union"
+    KLMUN_ADJ: "Kalmar"
+    KLMUN_desc: "The Kalmar Union (1397–1523) was a personal union that united the three sovereign kingdoms of Denmark, Sweden (including most of present-day Finland), and Norway (including Iceland, Greenland, the Faroe Islands, Orkney, and Shetland) under a single monarch. It was not a single, unified nation-state, but rather an arrangement where each country legally retained its separate laws and governing councils, while sharing a common ruler and a unified foreign policy."
 
     # Latin Empire
-    LATINEMPIRE_fnr: "Latin Empire"
-    LATINEMPIRE_fnr_ADJ: "Latin"
-    LATINEMPIRE_fnr_desc: "The Latin Empire was a feudal Crusader state established in 1204 by leaders of the Fourth Crusade on lands conquered from the Byzantine Empire, intended to replace it with a Catholic ruler. Based in Constantinople, it was a short-lived state ruled by a Catholic emperor, like Baldwin I, who was crowned in 1204. The empire gradually weakened due to internal and external conflicts, ultimately falling when the Byzantines recaptured Constantinople in 1261."
+    LTNEM: "Latin Empire"
+    LTNEM_ADJ: "Latin"
+    LTNEM_desc: "The Latin Empire was a feudal Crusader state established in 1204 by leaders of the Fourth Crusade on lands conquered from the Byzantine Empire, intended to replace it with a Catholic ruler. Based in Constantinople, it was a short-lived state ruled by a Catholic emperor, like Baldwin I, who was crowned in 1204. The empire gradually weakened due to internal and external conflicts, ultimately falling when the Byzantines recaptured Constantinople in 1261."
 
     # Lombardy
-    LOMBARDY_fnr: "Lombardy"
-    LOMBARDY_fnr_ADJ: "Lombardian"
-    LOMBARDY_fnr_desc: "Lombardy is a leading industrial and cultural region in northern Italy with a population and economy comparable to a small nation. It is Italy's most populated region, with a diverse landscape that includes the Alps and lakes like Como and Garda, and is a major economic hub in Europe known for its manufacturing, finance, and fashion industries centered in the Italian region."
+    LMBDY_fnr: "Lombardy"
+    LMBDY_fnr_ADJ: "Lombardian"
+    LMBDY_fnr_desc: "Lombardy is a leading industrial and cultural region in northern Italy with a population and economy comparable to a small nation. It is Italy's most populated region, with a diverse landscape that includes the Alps and lakes like Como and Garda, and is a major economic hub in Europe known for its manufacturing, finance, and fashion industries centered in the Italian region."
 
     # Lombardy-Venetia
-    LOMBARDYVENETIA_fnr: "Lombardy–Venetia"
-    LOMBARDYVENETIA_fnr_ADJ: "Lombardo-Venetian"
-    LOMBARDYVENETIA_fnr_desc: "The Kingdom of Lombardy–Venetia was a crown land of the Austrian Empire from 1815 to 1866, encompassing the regions of Lombardy and Venetia in northern Italy. Established by the Congress of Vienna after the fall of Napoleon's Kingdom of Italy, it was a monarchy ruled by the Austrian Habsburg emperors, with a capital that moved from Milan to Venice during its existence. The kingdom dissolved when Venice was annexed by the Kingdom of Italy in 1866, following the Austro-Prussian War."
+    LMBYV: "Lombardy–Venetia"
+    LMBYV_ADJ: "Lombardo-Venetian"
+    LMBYV_desc: "The Kingdom of Lombardy–Venetia was a crown land of the Austrian Empire from 1815 to 1866, encompassing the regions of Lombardy and Venetia in northern Italy. Established by the Congress of Vienna after the fall of Napoleon's Kingdom of Italy, it was a monarchy ruled by the Austrian Habsburg emperors, with a capital that moved from Milan to Venice during its existence. The kingdom dissolved when Venice was annexed by the Kingdom of Italy in 1866, following the Austro-Prussian War."
 
     # Lower Saxony
-    LOWERSAXONY_fnr: "Lower Saxony"
-    LOWERSAXONY_fnr_ADJ: "Lower Saxon"
-    LOWERSAXONY_fnr_desc: "Lower Saxony is a German federal state in northwestern Germany, known for its diverse landscapes ranging from the North Sea coast to the Harz mountains. It is the second-largest German state by area and the fourth-largest by population, with a history shaped by regions like Hanover and significant industrial and agricultural sectors."
+    LWSXY: "Lower Saxony"
+    LWSXY_ADJ: "Lower Saxon"
+    LWSXY_desc: "Lower Saxony is a German federal state in northwestern Germany, known for its diverse landscapes ranging from the North Sea coast to the Harz mountains. It is the second-largest German state by area and the fourth-largest by population, with a history shaped by regions like Hanover and significant industrial and agricultural sectors."
 
     # Malta
-    MALTA_fnr: "Malta"
-    MALTA_fnr_ADJ: "Maltese"
-    MALTA_fnr_desc: "Malta is a small, densely populated island nation in the central Mediterranean Sea, consisting of an archipelago that includes the islands of Malta, Gozo, and Comino. Historically significant due to its strategic location, it has been shaped by centuries of foreign rule, resulting in a unique culture that blends Arab, Sicilian, Italian, and French influences. It has a rocky, low-lying landscape with a rugged coastline, no rivers or mountains, and a strong economy that includes financial services, tourism, and a forward-looking approach."
+    MALTA: "Malta"
+    MALTA_ADJ: "Maltese"
+    MALTA_desc: "Malta is a small, densely populated island nation in the central Mediterranean Sea, consisting of an archipelago that includes the islands of Malta, Gozo, and Comino. Historically significant due to its strategic location, it has been shaped by centuries of foreign rule, resulting in a unique culture that blends Arab, Sicilian, Italian, and French influences. It has a rocky, low-lying landscape with a rugged coastline, no rivers or mountains, and a strong economy that includes financial services, tourism, and a forward-looking approach."
 
     # Mercia
-    MERCIA_fnr: "Mercia"
-    MERCIA_fnr_ADJ: "Mercian"
-    MERCIA_fnr_desc: "Mercia was a powerful Anglo-Saxon kingdom in the Midlands of England, dominant from the 7th to 9th centuries. Its name comes from the Old English for 'people of the marches' or 'boundaries,' reflecting its position bordering the Celtic tribes to the west. The kingdom was known for its power during the Heptarchy, featuring influential rulers like Penda and Offa, who built Offa's Dyke to mark the border with Wales"
+    MRCIA: "Mercia"
+    MRCIA_ADJ: "Mercian"
+    MRCIA_desc: "Mercia was a powerful Anglo-Saxon kingdom in the Midlands of England, dominant from the 7th to 9th centuries. Its name comes from the Old English for 'people of the marches' or 'boundaries,' reflecting its position bordering the Celtic tribes to the west. The kingdom was known for its power during the Heptarchy, featuring influential rulers like Penda and Offa, who built Offa's Dyke to mark the border with Wales"
 
     # Nazi Germany
-    NAZIGERMANY_fnr: "Nazi Germany"
-    NAZIGERMANY_fnr_ADJ: "German"
-    NAZIGERMANY_fnr_desc: "The Current Flag is temporary and will be updated in the next Formable Nations: Reworked Update.\n\nNazi Germany was the German state from 1933 to 1945, ruled by Adolf Hitler and the Nazi Party, transforming it into a totalitarian dictatorship. It is also known as the Third Reich, a term that implied succession from the Holy Roman Empire and German Empire. Key features included extreme nationalism, virulent antisemitism, expansionist foreign policy, and the persecution of Jews and other minority groups, which ultimately led to World War II"
+    NAZIG: "Nazi Germany"
+    NAZIG_ADJ: "German"
+    NAZIG_desc: "The Current Flag is temporary and will be updated in the next Formable Nations: Reworked Update.\n\nNazi Germany was the German state from 1933 to 1945, ruled by Adolf Hitler and the Nazi Party, transforming it into a totalitarian dictatorship. It is also known as the Third Reich, a term that implied succession from the Holy Roman Empire and German Empire. Key features included extreme nationalism, virulent antisemitism, expansionist foreign policy, and the persecution of Jews and other minority groups, which ultimately led to World War II"
 
     # Russian Empire
-    RUSSIANEMPIRE_fnr: "Russian Empire"
-    RUSSIANEMPIRE_fnr_ADJ: "Russian"
-    RUSSIANEMPIRE_fnr_desc: "The Russian Empire was a vast, autocratic state spanning parts of Europe and Asia from 1721 to 1917, characterized by an absolute monarch (the Tsar), a large and mostly impoverished population of serfs, and significant territorial expansion across Siberia, Central Asia, and into Alaska. Despite some modernization, it remained a politically, socially, and economically backward society compared to Western Europe until its collapse during the February Revolution of 1917."
+    RUSEM: "Russian Empire"
+    RUSEM_ADJ: "Russian"
+    RUSEM_desc: "The Russian Empire was a vast, autocratic state spanning parts of Europe and Asia from 1721 to 1917, characterized by an absolute monarch (the Tsar), a large and mostly impoverished population of serfs, and significant territorial expansion across Siberia, Central Asia, and into Alaska. Despite some modernization, it remained a politically, socially, and economically backward society compared to Western Europe until its collapse during the February Revolution of 1917."
 
     # Russian Federation
-    RUSSIANFED_fnr: "Russian Federation"
-    RUSSIANFED_fnr_ADJ: "Russian"
-    RUSSIANFED_fnr_desc: "The Russian Federation is the largest country in the world by area, spanning Eastern Europe and Northern Asia across 11 time zones. It is a federal semi-presidential republic with a population of over 140 million and its capital is Moscow. Russia has vast natural resources, including mineral and energy reserves, and a highly urbanized population, with a history spanning from the Rurik Dynasty to the modern Russian Federation."
+    RUFED: "Russian Federation"
+    RUFED_ADJ: "Russian"
+    RUFED_desc: "The Russian Federation is the largest country in the world by area, spanning Eastern Europe and Northern Asia across 11 time zones. It is a federal semi-presidential republic with a population of over 140 million and its capital is Moscow. Russia has vast natural resources, including mineral and energy reserves, and a highly urbanized population, with a history spanning from the Rurik Dynasty to the modern Russian Federation."
 
     # Serbian Empire
-    SERBEMPIRE_fnr: "Serbian Empire"
-    SERBEMPIRE_fnr_ADJ: "Serbian"
-    SERBEMPIRE_fnr_desc: "From the mountains of Montenegro to the plains of Vojvodina, the dream of a united Serbian realm has long burned in the hearts of its people. A reborn Greater Serbia seeks to gather all Serbs under one banner, restoring the might once glimpsed in the medieval empire of Stefan Dušan. Yet such unity comes at a cost with the crown of empire comes the challenge of governing many lands, tongues, and faiths. Whether forged through liberation or conquest, this Serbian Empire will stand ready to shape the destiny of the Balkans."
+    SRBEM: "Serbian Empire"
+    SRBEM_ADJ: "Serbian"
+    SRBEM_desc: "From the mountains of Montenegro to the plains of Vojvodina, the dream of a united Serbian realm has long burned in the hearts of its people. A reborn Greater Serbia seeks to gather all Serbs under one banner, restoring the might once glimpsed in the medieval empire of Stefan Dušan. Yet such unity comes at a cost with the crown of empire comes the challenge of governing many lands, tongues, and faiths. Whether forged through liberation or conquest, this Serbian Empire will stand ready to shape the destiny of the Balkans."
 
     # Soviet Union
-    SOVIETUNION_fnr: "Soviet Union"
-    SOVIETUNION_fnr_ADJ: "Soviet"
-    SOVIETUNION_fnr_desc: "he Soviet Union, officially the Union of Soviet Socialist Republics (USSR), was a transcontinental country in Eurasia from 1922 to 1991, known for its vast size and as the world's first socialist state. It was nominally a federal union of 15 Soviet Socialist Republics but was highly centralized in practice, with its government and economy controlled by the Communist Party in Moscow. The Soviet Union was characterized by a command economy and a single-party political system that aimed to establish communism, yet failed in the attempt leading to the collapse of the Union."
+    SOVET: "Soviet Union"
+    SOVET_ADJ: "Soviet"
+    SOVET_desc: "he Soviet Union, officially the Union of Soviet Socialist Republics (USSR), was a transcontinental country in Eurasia from 1922 to 1991, known for its vast size and as the world's first socialist state. It was nominally a federal union of 15 Soviet Socialist Republics but was highly centralized in practice, with its government and economy controlled by the Communist Party in Moscow. The Soviet Union was characterized by a command economy and a single-party political system that aimed to establish communism, yet failed in the attempt leading to the collapse of the Union."
 
     # Sweden-Norway
-    SWEDENNORWAY_fnr: "Sweden-Norway"
-    SWEDENNORWAY_fnr_ADJ: "Nordic"
-    SWEDENNORWAY_fnr_desc: "The term 'Sweden-Norway' most accurately describes the former United Kingdoms of Sweden and Norway, a personal union from 1814 to 1905, but also refers to the modern countries of Sweden and Norway which are distinct nations with shared history and culture, though with different geographies."
+    SDNNW: "Sweden-Norway"
+    SDNNW_ADJ: "Nordic"
+    SDNNW_desc: "The term 'Sweden-Norway' most accurately describes the former United Kingdoms of Sweden and Norway, a personal union from 1814 to 1905, but also refers to the modern countries of Sweden and Norway which are distinct nations with shared history and culture, though with different geographies."
 
     # Swedish Empire
-    SWEDISHEMP_fnr: "Swedish Empire"
-    SWEDISHEMP_fnr_ADJ: "Swedish"
-    SWEDISHEMP_fnr_desc: "The Swedish Empire was a period in Swedish history, roughly from 1611 to 1721, when Sweden was a major European power controlling territory around the Baltic Sea. It was known for its powerful military, and during this time, Sweden expanded its dominion to include territories in modern-day Germany, Russia, and Ukraine, as well as overseas colonies in North America. The empire's power declined after the Great Northern War, which ended in 1721."
+    SWDEM: "Swedish Empire"
+    SWDEM_ADJ: "Swedish"
+    SWDEM_desc: "The Swedish Empire was a period in Swedish history, roughly from 1611 to 1721, when Sweden was a major European power controlling territory around the Baltic Sea. It was known for its powerful military, and during this time, Sweden expanded its dominion to include territories in modern-day Germany, Russia, and Ukraine, as well as overseas colonies in North America. The empire's power declined after the Great Northern War, which ended in 1721."
 
     # Turkey
-    TURKEY_fnr: "Turkey"
-    TURKEY_fnr_ADJ: "Turkish"
-    TURKEY_fnr_desc: "Turkey is a transcontinental country in Western Asia and Southeastern Europe, officially known as the Republic of Turkey. It is a republic with a mixed economy, a secular state with a predominantly Muslim population, and its capital is Ankara, while its largest city is Istanbul. The nation is renowned for its unique geography bridging two continents, rich history as the successor to the Ottoman Empire, diverse culture, and varied landscapes from mountains to coastal areas"
+    TURKY: "Turkey"
+    TURKY_ADJ: "Turkish"
+    TURKY_desc: "Turkey is a transcontinental country in Western Asia and Southeastern Europe, officially known as the Republic of Turkey. It is a republic with a mixed economy, a secular state with a predominantly Muslim population, and its capital is Ankara, while its largest city is Istanbul. The nation is renowned for its unique geography bridging two continents, rich history as the successor to the Ottoman Empire, diverse culture, and varied landscapes from mountains to coastal areas"
 
     # United Kingdom
-    UNITEDKINGDOM_fnr: "United Kingdom"
-    UNITEDKINGDOM_fnr_ADJ: "British"
-    UNITEDKINGDOM_fnr_desc: "The United Kingdom is a sovereign island nation in northwestern Europe consisting of the countries of England, Scotland, Wales, and Northern Ireland. It is a parliamentary democracy and constitutional monarchy with a total area of approximately 93,630 square miles (242,500 square kilometers) and a population of over 67 million people. Its capital city is London."
+    UKKDM: "United Kingdom"
+    UKKDM_ADJ: "British"
+    UKKDM_desc: "The United Kingdom is a sovereign island nation in northwestern Europe consisting of the countries of England, Scotland, Wales, and Northern Ireland. It is a parliamentary democracy and constitutional monarchy with a total area of approximately 93,630 square miles (242,500 square kilometers) and a population of over 67 million people. Its capital city is London."
 
     # Wendish Empire
-    WENDISHEMPIRE_fnr: "Wendish Empire"
-    WENDISHEMPIRE_fnr_ADJ: "Wendish"
-    WENDISHEMPIRE_fnr_desc: "'Wends' is a historical name for Slavs who inhabited present-day northeast Germany. It refers not to a homogeneous people, but to various people, tribes or groups depending on where and when it was used."
+    WNDEM: "Wendish Empire"
+    WNDEM_ADJ: "Wendish"
+    WNDEM_desc: "'Wends' is a historical name for Slavs who inhabited present-day northeast Germany. It refers not to a homogeneous people, but to various people, tribes or groups depending on where and when it was used."
 
     # Armenian Empire
-    ARMENIAEMPIRE_fnr: "Armenian Empire"
-    ARMENIAEMPIRE_fnr_ADJ: "Armenian"
-    ARMENIAEMPIRE_fnr_desc: "he Armenian Empire, also known as the Kingdom of Greater Armenia, was a large, ancient kingdom that existed from 331 BC to 428 AD. Its most famous period was under Tigranes the Great, who expanded its territory to include parts of the Caucasus, Turkey, Syria, and Lebanon, stretching from the Caspian to the Mediterranean Sea. The empire was characterized by successive royal dynasties (Orontid, Artaxiad, and Arsacid), the adoption of Christianity around 301 AD, and a powerful military, especially its cavalry"
+    AMNAE: "Armenian Empire"
+    AMNAE_ADJ: "Armenian"
+    AMNAE_desc: "he Armenian Empire, also known as the Kingdom of Greater Armenia, was a large, ancient kingdom that existed from 331 BC to 428 AD. Its most famous period was under Tigranes the Great, who expanded its territory to include parts of the Caucasus, Turkey, Syria, and Lebanon, stretching from the Caspian to the Mediterranean Sea. The empire was characterized by successive royal dynasties (Orontid, Artaxiad, and Arsacid), the adoption of Christianity around 301 AD, and a powerful military, especially its cavalry"
 
     # Arabian Empire
-    ARABIANEMPIRE_fnr: "Arabian Empire"
-    ARABIANEMPIRE_fnr_ADJ: "Arabian"
-    ARABIANEMPIRE_fnr_desc: "a historical term generally referring to the vast Islamic Caliphates ruled by Arab dynasties (specifically the Rashidun, Umayyad, and Abbasid Caliphates) that emerged from the Arabian Peninsula in the 7th century CE. At its peak, it was one of the largest land empires in history, characterized by its rapid military expansion, significant cultural and scientific advancements (the Islamic Golden Age), and the widespread diffusion of the Arabic language and Islam."
+    ARABE: "Arabian Empire"
+    ARABE_ADJ: "Arabian"
+    ARABE_desc: "a historical term generally referring to the vast Islamic Caliphates ruled by Arab dynasties (specifically the Rashidun, Umayyad, and Abbasid Caliphates) that emerged from the Arabian Peninsula in the 7th century CE. At its peak, it was one of the largest land empires in history, characterized by its rapid military expansion, significant cultural and scientific advancements (the Islamic Golden Age), and the widespread diffusion of the Arabic language and Islam."
 
     # Caucasia
-    CAUCASIA_fnr: "Caucasia"
-    CAUCASIA_fnr_ADJ: "Caucasian"
-    CAUCASIA_fnr_desc: "the Caucasus region, is a mountainous area between Eastern Europe and Western Asia, bordered by the Black and Caspian Seas, and includes parts of southern Russia, Georgia, Armenia, and Azerbaijan. It is known for its diverse ethnicities and languages, unique cultures, and stunning geography, including Europe's highest peak, Mount Elbrus. The region is strategically located and has a history as a crossroads for empires, which has influenced its rich, complex cultures and geopolitical landscape."
+    CCASA: "Caucasia"
+    CCASA_ADJ: "Caucasian"
+    CCASA_desc: "the Caucasus region, is a mountainous area between Eastern Europe and Western Asia, bordered by the Black and Caspian Seas, and includes parts of southern Russia, Georgia, Armenia, and Azerbaijan. It is known for its diverse ethnicities and languages, unique cultures, and stunning geography, including Europe's highest peak, Mount Elbrus. The region is strategically located and has a history as a crossroads for empires, which has influenced its rich, complex cultures and geopolitical landscape."
 
-    CHINAEMPIRE_fnr: "Empire of China"
-    CHINAEMPIRE_fnr_ADJ: "Chinese"
-    CHINAEMPIRE_fnr_desc: "the short-lived 'Hongxian Monarchy' (1915–1916) and the long-standing 'Chinese Empire' ruled by various dynasties - The Hongxian Monarchy was a failed attempt by Yuan Shikai to reinstate the monarchy after the collapse of the Qing Dynasty, while the 'Chinese Empire' is a general term for the rule of dynasties like the Qin, Han, Ming, and Qing, which spanned centuries"
+    CNAEM: "Empire of China"
+    CNAEM_ADJ: "Chinese"
+    CNAEM_desc: "the short-lived 'Hongxian Monarchy' (1915–1916) and the long-standing 'Chinese Empire' ruled by various dynasties - The Hongxian Monarchy was a failed attempt by Yuan Shikai to reinstate the monarchy after the collapse of the Qing Dynasty, while the 'Chinese Empire' is a general term for the rule of dynasties like the Qin, Han, Ming, and Qing, which spanned centuries"
 
     # Goguryeo
-    GOGURYEO_fnr: "Goguryeo"
-    GOGURYEO_fnr_ADJ: "Goguryeo"
-    GOGURYEO_fnr_desc: "Goguryeo was a powerful, militaristic Korean kingdom that existed from 37 BC to 668 AD, located in Manchuria and the northern Korean peninsula. It was one of the Three Kingdoms of Korea and became a dominant force in East Asia, reaching its peak in the 5th century under Kings Gwanggaeto the Great and Jangsu. The kingdom was known for its military strength, including its defeat of a massive Sui dynasty invasion, and its territorial expansion into Manchuria and parts of the Korean peninsula. It was eventually conquered by the allied forces of the Tang dynasty and the Silla kingdom."
+    GGURY: "Goguryeo"
+    GGURY_ADJ: "Goguryeo"
+    GGURY_desc: "Goguryeo was a powerful, militaristic Korean kingdom that existed from 37 BC to 668 AD, located in Manchuria and the northern Korean peninsula. It was one of the Three Kingdoms of Korea and became a dominant force in East Asia, reaching its peak in the 5th century under Kings Gwanggaeto the Great and Jangsu. The kingdom was known for its military strength, including its defeat of a massive Sui dynasty invasion, and its territorial expansion into Manchuria and parts of the Korean peninsula. It was eventually conquered by the allied forces of the Tang dynasty and the Silla kingdom."
 
-    MANCHURIA_fnr: "Manchuria"
-    MANCHURIA_fnr_ADJ: "Manchurian"
-    MANCHURIA_fnr_desc: "Manchuria is a historical and geographical region in Northeast Asia, most commonly referring to the three northeastern provinces of modern China: Liaoning, Jilin, and Heilongjiang. Historically, it also included parts of the Russian Far East, a territory ceded to Russia in the 19th century and now known as Outer Manchuria. The region is the ancestral homeland of the Manchu people and has been a historical crossroads for various ethnic groups, including Mongols, Koreans, and Han Chinese"
+    MNCRA: "Manchuria"
+    MNCRA_ADJ: "Manchurian"
+    MNCRA_desc: "Manchuria is a historical and geographical region in Northeast Asia, most commonly referring to the three northeastern provinces of modern China: Liaoning, Jilin, and Heilongjiang. Historically, it also included parts of the Russian Far East, a territory ceded to Russia in the 19th century and now known as Outer Manchuria. The region is the ancestral homeland of the Manchu people and has been a historical crossroads for various ethnic groups, including Mongols, Koreans, and Han Chinese"
 
     # Korea
-    KOREA_fnr: "Korea"
-    KOREA_fnr_ADJ: "Korean"
-    KOREA_fnr_desc: "Korea is a peninsular region in East Asia, now politically divided into two nations: North Korea and South Korea, located at the 38th parallel. South Korea, officially the Republic of Korea, is a democratic republic with a strong economy, a mountainous terrain, and four distinct seasons, bordered by North Korea, the Yellow Sea, and the Sea of Japan."
+    KOREA: "Korea"
+    KOREA_ADJ: "Korean"
+    KOREA_desc: "Korea is a peninsular region in East Asia, now politically divided into two nations: North Korea and South Korea, located at the 38th parallel. South Korea, officially the Republic of Korea, is a democratic republic with a strong economy, a mountainous terrain, and four distinct seasons, bordered by North Korea, the Yellow Sea, and the Sea of Japan."
 
     # Himalayan Empire
-    HIMALAYA_fnr: "Himalayan Empire"
-    HIMALAYA_fnr_ADJ: "Himalayan"
-    HIMALAYA_fnr_desc: "The Himalayan Empire was a mountainous country in the Himalayas, mentioned in the Puranas. In the puranas, Himavat was its ruler and his daughter Parvati was a princess from this kingdom. The Indian epic Mahabharata doesn't mention a kingdom named Himalaya, but mentions many kingdoms in the Himalaya mountains like the Kuninda, Parvata, Nepa, Kirata, Kimpurusha, and Kinnara."
+    HMLAY: "Himalayan Empire"
+    HMLAY_ADJ: "Himalayan"
+    HMLAY_desc: "The Himalayan Empire was a mountainous country in the Himalayas, mentioned in the Puranas. In the puranas, Himavat was its ruler and his daughter Parvati was a princess from this kingdom. The Indian epic Mahabharata doesn't mention a kingdom named Himalaya, but mentions many kingdoms in the Himalaya mountains like the Kuninda, Parvata, Nepa, Kirata, Kimpurusha, and Kinnara."
 
     # Afghanistan
-    AFGHANISTAN_fnr: "Afghanistan"
-    AFGHANISTAN_fnr_ADJ: "Afghani"
-    AFGHANISTAN_fnr_desc: "Afghanistan is a landlocked, mountainous country located at the crossroads of Central and South Asia, with a diverse, multi-ethnic population and official languages of Pashto and Dari. Its geography is dominated by the Hindu Kush mountains and deserts, with fertile valleys and plains situated between them. The country's long history is marked by its strategic location on trade routes, attracting numerous invaders, and its culture is deeply influenced by Islamic values and a strong sense of personal honor, hospitality, and loyalty."
+    AFGAN: "Afghanistan"
+    AFGAN_ADJ: "Afghani"
+    AFGAN_desc: "Afghanistan is a landlocked, mountainous country located at the crossroads of Central and South Asia, with a diverse, multi-ethnic population and official languages of Pashto and Dari. Its geography is dominated by the Hindu Kush mountains and deserts, with fertile valleys and plains situated between them. The country's long history is marked by its strategic location on trade routes, attracting numerous invaders, and its culture is deeply influenced by Islamic values and a strong sense of personal honor, hospitality, and loyalty."
 
     # Islamic State (ISIS)
-    ISIS_fnr: "Islamic State"
-    ISIS_fnr_ADJ: "ISIS"
-    ISIS_fnr_desc: "ISIS or ISIL, is a radical Sunni Muslim militant and terrorist organization that unilaterally declared itself a worldwide caliphate (an Islamic state) in June 2014. This self-proclaimed state, which is not recognized by any other nation or the international community, aimed to establish a transnational, totalitarian Islamic state governed by its extreme interpretation of Sharia law."
+    ISISS: "Islamic State"
+    ISISS_ADJ: "ISIS"
+    ISISS_desc: "ISIS or ISIL, is a radical Sunni Muslim militant and terrorist organization that unilaterally declared itself a worldwide caliphate (an Islamic state) in June 2014. This self-proclaimed state, which is not recognized by any other nation or the international community, aimed to establish a transnational, totalitarian Islamic state governed by its extreme interpretation of Sharia law."
 
     # Mingrelia
-    MINGRELIA_fnr: "Mingrelia"
-    MINGRELIA_fnr_ADJ: "Mingrelian"
-    MINGRELIA_fnr_desc: "The Mingrelians are a group compactly settled in the western province of Mingrelia, situated on the Black Sea coast. Prior to the conflict in Abkhazia, Mingrelians made up the overwhelming majority of the Georgian population there, particularly in Abkhazia's southernmost Gali district."
+    MNGRL: "Mingrelia"
+    MNGRL_ADJ: "Mingrelian"
+    MNGRL_desc: "The Mingrelians are a group compactly settled in the western province of Mingrelia, situated on the Black Sea coast. Prior to the conflict in Abkhazia, Mingrelians made up the overwhelming majority of the Georgian population there, particularly in Abkhazia's southernmost Gali district."
 
     # North Korea
-    NORTHKOREA_fnr: "North Korea"
-    NORTHKOREA_fnr_ADJ: "North Korean"
-    NORTHKOREA_fnr_desc: "North Korea (officially the Democratic People's Republic of Korea) is a totalitarian state in East Asia, occupying the northern half of the Korean peninsula. It is a one-party state with a hereditary dictatorship, characterized by a repressive regime, severe human rights abuses, and a focus on its military and nuclear weapons programs. The government strictly controls all media and freedoms, while the economy is centrally planned and faces significant challenges."
+    NKORA: "North Korea"
+    NKORA_ADJ: "North Korean"
+    NKORA_desc: "North Korea (officially the Democratic People's Republic of Korea) is a totalitarian state in East Asia, occupying the northern half of the Korean peninsula. It is a one-party state with a hereditary dictatorship, characterized by a repressive regime, severe human rights abuses, and a focus on its military and nuclear weapons programs. The government strictly controls all media and freedoms, while the economy is centrally planned and faces significant challenges."
 
     # South Korea
-    SOUTHKOREA_fnr: "South Korea"
-    SOUTHKOREA_fnr_ADJ: "South Korean"
-    SOUTHKOREA_fnr_desc: "South Korea, or the Republic of Korea, is an East Asian nation on the southern Korean Peninsula, known for its strong, export-driven economy, advanced technology sector, and dynamic culture. It is a democratic republic with a presidential system, a population of over 51 million, and a distinctive writing system called Hangeul. The country features four distinct seasons, a mountainous terrain, and is globally recognized for its popular music (K-pop), television dramas (K-dramas), and emphasis on education."
+    SKORA: "South Korea"
+    SKORA_ADJ: "South Korean"
+    SKORA_desc: "South Korea, or the Republic of Korea, is an East Asian nation on the southern Korean Peninsula, known for its strong, export-driven economy, advanced technology sector, and dynamic culture. It is a democratic republic with a presidential system, a population of over 51 million, and a distinctive writing system called Hangeul. The country features four distinct seasons, a mountainous terrain, and is globally recognized for its popular music (K-pop), television dramas (K-dramas), and emphasis on education."
 
     # Omani Empire
-    OMANIEMPIRE_fnr: "Omani Empire"
-    OMANIEMPIRE_fnr_ADJ: "Omani"
-    OMANIEMPIRE_fnr_desc: "The Omani Empire was a major maritime power that dominated trade routes across the Indian Ocean from the 17th to the 19th century, with its territory at its peak extending from the Persian Gulf to modern-day Pakistan and as far south as Mozambique. Unlike many land-based empires, its strength was based on a network of ports and a powerful navy, not a large army. Key aspects include its control of maritime trade, its expansion into East Africa, its multi-ethnic population, and its eventual decline due to the rise of European powers."
+    OMANE: "Omani Empire"
+    OMANE_ADJ: "Omani"
+    OMANE_desc: "The Omani Empire was a major maritime power that dominated trade routes across the Indian Ocean from the 17th to the 19th century, with its territory at its peak extending from the Persian Gulf to modern-day Pakistan and as far south as Mozambique. Unlike many land-based empires, its strength was based on a network of ports and a powerful navy, not a large army. Key aspects include its control of maritime trade, its expansion into East Africa, its multi-ethnic population, and its eventual decline due to the rise of European powers."
 
     # People's Republic of China (PRC)
-    PRC_fnr: "People's Republic of China"
-    PRC_fnr_ADJ: "Chinese"
-    PRC_fnr_desc: "China, officially the People's Republic of China (PRC) is a country in East Asia. With a population exceeding 1.4 billion, it is the second-most populous country after India, representing 17% of the world population."
+    PRCCN: "People's Republic of China"
+    PRCCN_ADJ: "Chinese"
+    PRCCN_desc: "China, officially the People's Republic of China (PRC) is a country in East Asia. With a population exceeding 1.4 billion, it is the second-most populous country after India, representing 17% of the world population."
 
     # Republic of China (ROC)
-    ROC_fnr: "Republic of China"
-    ROC_fnr_ADJ: "Chinese"
-    ROC_fnr_desc: "The Republic of China (ROC) was established on 1 January 1912 as a sovereign state in mainland China following the 1911 Revolution, which overthrew the Manchu-led Qing dynasty and ended China's imperial history. From 1927, the Kuomintang (KMT) reunified the country and initially ruled it as a one-party state with Nanjing as the national capital."
+    ROCCN: "Republic of China"
+    ROCCN_ADJ: "Chinese"
+    ROCCN_desc: "The Republic of China (ROC) was established on 1 January 1912 as a sovereign state in mainland China following the 1911 Revolution, which overthrew the Manchu-led Qing dynasty and ended China's imperial history. From 1927, the Kuomintang (KMT) reunified the country and initially ruled it as a one-party state with Nanjing as the national capital."
 
     # Philippines
-    PHILIPPINES_fnr: "Philippines"
-    PHILIPPINES_fnr_ADJ: "Filipino"
-    PHILIPPINES_fnr_desc: "The Philippines is an archipelagic nation in Southeast Asia, known for its unique geography of over 7,000 islands, diverse culture, and history shaped by Malay, Spanish, and American influences. It is located in the western Pacific Ocean, with a capital in Manila and a government system based on the US model."
+    FILPN: "Philippines"
+    FILPN_ADJ: "Filipino"
+    FILPN_desc: "The Philippines is an archipelagic nation in Southeast Asia, known for its unique geography of over 7,000 islands, diverse culture, and history shaped by Malay, Spanish, and American influences. It is located in the western Pacific Ocean, with a capital in Manila and a government system based on the US model."
 
     # Saudi Arabia
-    SAUDIS_fnr: "Saudi Arabia"
-    SAUDIS_fnr_ADJ: "Saudi"
-    SAUDIS_fnr_desc: "Saudi Arabia is a monarchy in Western Asia that covers most of the Arabian Peninsula and is the birthplace of Islam, home to its two holiest cities, Mecca and Medina. It is the largest country in the Middle East, with a large desert landscape, and is a major global oil producer with an economy heavily dependent on petroleum. The modern kingdom was founded in 1932 by Abdulaziz Al-Saud."
+    SAUDI: "Saudi Arabia"
+    SAUDI_ADJ: "Saudi"
+    SAUDI_desc: "Saudi Arabia is a monarchy in Western Asia that covers most of the Arabian Peninsula and is the birthplace of Islam, home to its two holiest cities, Mecca and Medina. It is the largest country in the Middle East, with a large desert landscape, and is a major global oil producer with an economy heavily dependent on petroleum. The modern kingdom was founded in 1932 by Abdulaziz Al-Saud."
 
     # Sulawesi
-    SULAWESI_fnr: "Sulawesi"
-    SULAWESI_fnr_ADJ: "Sulawesian"
-    SULAWESI_fnr_desc: "ulawesi sits centrally within the Indonesian archipelago, with its four protruding arms reaching out in all directions, creating an intriguing outline between the Celebes, Java and Banda Seas. Owing to this – no place in Sulawesi is more than 100km from the sea."
+    SULAW: "Sulawesi"
+    SULAW_ADJ: "Sulawesian"
+    SULAW_desc: "ulawesi sits centrally within the Indonesian archipelago, with its four protruding arms reaching out in all directions, creating an intriguing outline between the Celebes, Java and Banda Seas. Owing to this – no place in Sulawesi is more than 100km from the sea."
 
     # Taiping
-    TAIPING_fnr: "Taiping Heavenly Kingdom"
-    TAIPING_fnr_ADJ: "Taiping"
-    TAIPING_fnr_desc: "he Taiping Heavenly Kingdom was a theocratic monarchy that existed from 1851–1864 in southern and central China, with its capital at Nanjing. It was led by Hong Xiuquan and aimed to overthrow the Qing dynasty through a rebellion based on a form of Christianity, common ownership of land, and radical social reforms such as abolishing foot-binding and granting women equal rights. Despite initial success in seizing major cities, the kingdom ultimately failed due to internal strife and Qing forces, ultimately collapsing in 1864"
+    TPING: "Taiping Heavenly Kingdom"
+    TPING_ADJ: "Taiping"
+    TPING_desc: "he Taiping Heavenly Kingdom was a theocratic monarchy that existed from 1851–1864 in southern and central China, with its capital at Nanjing. It was led by Hong Xiuquan and aimed to overthrow the Qing dynasty through a rebellion based on a form of Christianity, common ownership of land, and radical social reforms such as abolishing foot-binding and granting women equal rights. Despite initial success in seizing major cities, the kingdom ultimately failed due to internal strife and Qing forces, ultimately collapsing in 1864"
 
     # Taliban
-    TALIBAN_fnr: "Taliban"
-    TALIBAN_fnr_ADJ: "Taliban"
-    TALIBAN_fnr_desc: "Under the Taliban, Afghanistan is a theocratic de facto state known as the Islamic Emirate of Afghanistan. The regime is characterized by a strict, hardline interpretation and enforcement of Sharia law, severe human rights violations (particularly against women and girls), and a lack of international recognition."
+    TLBAN: "Taliban"
+    TLBAN_ADJ: "Taliban"
+    TLBAN_desc: "Under the Taliban, Afghanistan is a theocratic de facto state known as the Islamic Emirate of Afghanistan. The regime is characterized by a strict, hardline interpretation and enforcement of Sharia law, severe human rights violations (particularly against women and girls), and a lack of international recognition."
 
     # Tengoku
-    TENGOKU_fnr: "Tengoku"
-    TENGOKU_fnr_ADJ: "Tengoku"
-    TENGOKU_fnr_desc: "From the ashes of civil strife and foreign faith, a new dawn rises over the islands of the East. Once fractured by warlords and divided by belief, Japan has been reborn under the banner of the Cross. Tengoku “the Heavenly Kingdom” stands as a testament to divine providence, where the sword and scripture walk hand in hand. Guided by faith and sanctified rule, this realm seeks not only to unite the islands but to spread the light of Heaven across all Asia."
+    TNGKU: "Tengoku"
+    TNGKU_ADJ: "Tengoku"
+    TNGKU_desc: "From the ashes of civil strife and foreign faith, a new dawn rises over the islands of the East. Once fractured by warlords and divided by belief, Japan has been reborn under the banner of the Cross. Tengoku “the Heavenly Kingdom” stands as a testament to divine providence, where the sword and scripture walk hand in hand. Guided by faith and sanctified rule, this realm seeks not only to unite the islands but to spread the light of Heaven across all Asia."
 
     # The Horde
-    HORDE_fnr: "The Horde"
-    HORDE_fnr_ADJ: "Horde"
-    HORDE_fnr_desc: "The endless plains once thundered with the hooves of a thousand khans each claiming descent from ancient conquerors, each dreaming of dominion over the world. Now, all have fallen silent. From the Volga to the Yellow Sea, from the Siberian tundra to the Persian sands, only one banner remains: The Horde.\n\nThe steppe has been united at last, its tribes forged into a single will of iron and fire. The last khan stands as heir to the legacy of every rider who ever rode out of the steppe — Genghis, Timur, Batu, and beyond. There are no rivals left among the horse lords… only the world to conquer."
+    HORDE: "The Horde"
+    HORDE_ADJ: "Horde"
+    HORDE_desc: "The endless plains once thundered with the hooves of a thousand khans each claiming descent from ancient conquerors, each dreaming of dominion over the world. Now, all have fallen silent. From the Volga to the Yellow Sea, from the Siberian tundra to the Persian sands, only one banner remains: The Horde.\n\nThe steppe has been united at last, its tribes forged into a single will of iron and fire. The last khan stands as heir to the legacy of every rider who ever rode out of the steppe — Genghis, Timur, Batu, and beyond. There are no rivals left among the horse lords… only the world to conquer."
 
     # Tibetan Empire
-    TIBETEMPIRE_fnr: "Empire of Tibet"
-    TIBETEMPIRE_fnr_ADJ: "Tibetan"
-    TIBETEMPIRE_fnr_desc: "The Tibetan Empire was a powerful, unified empire that existed from the 7th to 9th centuries, centered on the Tibetan Plateau. At its greatest extent, it stretched from parts of modern-day Afghanistan in the west to the Bay of Bengal and Yunnan in the east, and reached its peak under emperors like Songtsen Gampo, Trisong Detsen, and Ralpachen. The empire collapsed in the late 9th century due to internal conflict and secession of territories."
+    TBETE: "Empire of Tibet"
+    TBETE_ADJ: "Tibetan"
+    TBETE_desc: "The Tibetan Empire was a powerful, unified empire that existed from the 7th to 9th centuries, centered on the Tibetan Plateau. At its greatest extent, it stretched from parts of modern-day Afghanistan in the west to the Bay of Bengal and Yunnan in the east, and reached its peak under emperors like Songtsen Gampo, Trisong Detsen, and Ralpachen. The empire collapsed in the late 9th century due to internal conflict and secession of territories."
 
     # United Arab Republic
-    UAR_fnr: "United Arab Republic"
-    UAR_fnr_ADJ: "Arab"
-    UAR_fnr_desc: "he United Arab Republic (UAR) was a short-lived political union of Egypt and Syria from 1958 to 1961, driven by pan-Arab nationalism. Egypt continued to use the name 'United Arab Republic' until 1971. The union ended after a military coup in Syria, but it was part of a larger vision for Arab unity that also included a loose confederation with North Yemen."
+    UNARR: "United Arab Republic"
+    UNARR_ADJ: "Arab"
+    UNARR_desc: "he United Arab Republic (UAR) was a short-lived political union of Egypt and Syria from 1958 to 1961, driven by pan-Arab nationalism. Egypt continued to use the name 'United Arab Republic' until 1971. The union ended after a military coup in Syria, but it was part of a larger vision for Arab unity that also included a loose confederation with North Yemen."
 
     # Vietnam
-    VIETNAM_fnr: "Vietnam"
-    VIETNAM_fnr_ADJ: "Vietnamese"
-    VIETNAM_fnr_desc: "Vietnam is a long, S-shaped country in Southeast Asia bordered by China to the north and Laos and Cambodia to the west, with a long coastline along the South China Sea to the east. It is a one-party Communist state with a population of over 100 million and a diverse geography of mountains and fertile river deltas. The economy is growing rapidly, but the country faces challenges with corruption and human rights"
+    VTNAM: "Vietnam"
+    VTNAM_ADJ: "Vietnamese"
+    VTNAM_desc: "Vietnam is a long, S-shaped country in Southeast Asia bordered by China to the north and Laos and Cambodia to the west, with a long coastline along the South China Sea to the east. It is a one-party Communist state with a population of over 100 million and a diverse geography of mountains and fertile river deltas. The economy is growing rapidly, but the country faces challenges with corruption and human rights"
 
     # Burma
-    BURMA_fnr: "Burma"
-    BURMA_fnr_ADJ: "Burmese"
-    BURMA_fnr_desc: "Burma, now officially known as Myanmar, is a diverse Southeast Asian country bordered by China, India, Bangladesh, Laos, and Thailand. It is the largest country in mainland Southeast Asia with a rich culture rooted in Theravada Buddhism, evident in its temples and pagodas. The nation is geographically diverse, featuring the Irrawaddy River valley, rugged highlands, and coastal areas, and its population is made up of many ethnic groups. While largely agrarian, it is also rich in natural resources"
+    BURMA: "Burma"
+    BURMA_ADJ: "Burmese"
+    BURMA_desc: "Burma, now officially known as Myanmar, is a diverse Southeast Asian country bordered by China, India, Bangladesh, Laos, and Thailand. It is the largest country in mainland Southeast Asia with a rich culture rooted in Theravada Buddhism, evident in its temples and pagodas. The nation is geographically diverse, featuring the Irrawaddy River valley, rugged highlands, and coastal areas, and its population is made up of many ethnic groups. While largely agrarian, it is also rich in natural resources"
 
     # Chola Empire
-    CHOLA_fnr: "Empire of Chola"
-    CHOLA_fnr_ADJ: "Cholan"
-    CHOLA_fnr_desc: "The Chola Empire was a medieval thalassocratic (maritime) empire in southern India (c. 848–1279) known for its strong navy and overseas influence in Southeast Asia. It was characterized by a centralized government, disciplined bureaucracy, and significant advancements in art, architecture, and literature. The empire reached its peak under kings like Rajaraja Chola I, who expanded its territory and commissioned monumental structures like the Brihadisvara Temple at Thanjavur."
+    CHOLA: "Empire of Chola"
+    CHOLA_ADJ: "Cholan"
+    CHOLA_desc: "The Chola Empire was a medieval thalassocratic (maritime) empire in southern India (c. 848–1279) known for its strong navy and overseas influence in Southeast Asia. It was characterized by a centralized government, disciplined bureaucracy, and significant advancements in art, architecture, and literature. The empire reached its peak under kings like Rajaraja Chola I, who expanded its territory and commissioned monumental structures like the Brihadisvara Temple at Thanjavur."
 
     # Ceylon
-    CEYLON_fnr: "Ceylon"
-    CEYLON_fnr_ADJ: "Ceylan"
-    CEYLON_fnr_desc: "Ceylon is the former name for the island nation of Sri Lanka, which gained independence from the British in 1948 and became a republic in 1972. It is located in the Indian Ocean, just south of India, and is a tropical island with diverse cultures, languages, and ethnicities. The legislative capital is Sri Jayawardenepura Kotte, and the administrative capital is Colombo"
+    CYLON: "Ceylon"
+    CYLON_ADJ: "Ceylan"
+    CYLON_desc: "Ceylon is the former name for the island nation of Sri Lanka, which gained independence from the British in 1948 and became a republic in 1972. It is located in the Indian Ocean, just south of India, and is a tropical island with diverse cultures, languages, and ethnicities. The legislative capital is Sri Jayawardenepura Kotte, and the administrative capital is Colombo"
 
     # Abyssinia
-    ABYSSINIA_fnr: "Abyssinia"
-    ABYSSINIA_fnr_ADJ: "Abyssinian"
-    ABYSSINIA_fnr_desc: "Abyssinia was the ancient and medieval name for a region in the Horn of Africa, corresponding to the northern highlands of modern-day Ethiopia and Eritrea. It was also used as a synonym for the Ethiopian Empire, a sovereign state that existed from around 1270 until 1974 and was known for its ancient Ethiopian Orthodox Christian heritage and long history of statehood. The term was commonly used by foreigners, while the people referred to themselves as Ethiopia"
+    ABYSA: "Abyssinia"
+    ABYSA_ADJ: "Abyssinian"
+    ABYSA_desc: "Abyssinia was the ancient and medieval name for a region in the Horn of Africa, corresponding to the northern highlands of modern-day Ethiopia and Eritrea. It was also used as a synonym for the Ethiopian Empire, a sovereign state that existed from around 1270 until 1974 and was known for its ancient Ethiopian Orthodox Christian heritage and long history of statehood. The term was commonly used by foreigners, while the people referred to themselves as Ethiopia"
 
     # Chad
-    CHAD_fnr: "Chad"
-    CHAD_fnr_ADJ: "Chadan"
-    CHAD_fnr_desc: "Chad is a landlocked country in north-central Africa, bordered by Libya, Sudan, the Central African Republic, Cameroon, Nigeria, and Niger. It is characterized by diverse geography, ranging from the Sahara Desert in the north to a tropical savannah in the south, with a climate that varies significantly from arid to rainy depending on the region and season. Chad is home to over 200 ethnic and linguistic groups, with French and Arabic as official languages."
+    ACHAD: "Chad"
+    ACHAD_ADJ: "Chadan"
+    ACHAD_desc: "Chad is a landlocked country in north-central Africa, bordered by Libya, Sudan, the Central African Republic, Cameroon, Nigeria, and Niger. It is characterized by diverse geography, ranging from the Sahara Desert in the north to a tropical savannah in the south, with a climate that varies significantly from arid to rainy depending on the region and season. Chad is home to over 200 ethnic and linguistic groups, with French and Arabic as official languages."
 
     # Madagascar
-    MADAGASCAR_fnr: "Madagascar"
-    MADAGASCAR_fnr_ADJ: "Madagascaran"
-    MADAGASCAR_fnr_desc: "Madagascar is a large island nation in the Indian Ocean off the coast of Africa, known for its unique biodiversity, which evolved in isolation and includes a high percentage of species found nowhere else on Earth. The country's economy is primarily based on agriculture, with a population facing high poverty and structural challenges. Its diverse geography includes tropical coasts, temperate plateaus, and arid regions, with a semi-presidential republic as its political system."
+    MDGSC: "Madagascar"
+    MDGSC_ADJ: "Madagascaran"
+    MDGSC_desc: "Madagascar is a large island nation in the Indian Ocean off the coast of Africa, known for its unique biodiversity, which evolved in isolation and includes a high percentage of species found nowhere else on Earth. The country's economy is primarily based on agriculture, with a population facing high poverty and structural challenges. Its diverse geography includes tropical coasts, temperate plateaus, and arid regions, with a semi-presidential republic as its political system."
 
     # Rhodesia
-    RHODESIA_fnr: "Rhodesia"
-    RHODESIA_fnr_ADJ: "Rhodesian"
-    RHODESIA_fnr_desc: "Rhodesia was an unrecognised country in Southern Africa from 1965 to 1979, which was the de facto successor to the British colony of Southern Rhodesia. It was characterized by a white-minority government that issued a unilateral declaration of independence (UDI) and faced internal conflict, and the territory eventually became modern-day Zimbabwe."
+    RHDSA: "Rhodesia"
+    RHDSA_ADJ: "Rhodesian"
+    RHDSA_desc: "Rhodesia was an unrecognised country in Southern Africa from 1965 to 1979, which was the de facto successor to the British colony of Southern Rhodesia. It was characterized by a white-minority government that issued a unilateral declaration of independence (UDI) and faced internal conflict, and the territory eventually became modern-day Zimbabwe."
 
     # Palestine
-    PALESTINE_fnr: "Palestine"
-    PALESTINE_fnr_ADJ: "Palestinian"
-    PALESTINE_fnr_desc: "Generally, Palestine is used to refer to the geographic region spanning from the Mediterranean Sea in the east to the Jordan River in the west. Historical Palestine is made up of the current Palestinian territories of the Gaza Strip and the West Bank—referred to as the State of Palestine."
+    PLSTN: "Palestine"
+    PLSTN_ADJ: "Palestinian"
+    PLSTN_desc: "Generally, Palestine is used to refer to the geographic region spanning from the Mediterranean Sea in the east to the Jordan River in the west. Historical Palestine is made up of the current Palestinian territories of the Gaza Strip and the West Bank—referred to as the State of Palestine."
 
     # Israel
-    ISRAEL_fnr: "Israel"
-    ISRAEL_fnr_ADJ: "Israeli"
-    ISRAEL_fnr_desc: "Israel is a small, modern, and highly developed parliamentary democracy located in the Middle East on the eastern shore of the Mediterranean Sea. It is defined as the world's only Jewish state, serving as the historic and cultural homeland for the Jewish people."
+    ISREL: "Israel"
+    ISREL_ADJ: "Israeli"
+    ISREL_desc: "Israel is a small, modern, and highly developed parliamentary democracy located in the Middle East on the eastern shore of the Mediterranean Sea. It is defined as the world's only Jewish state, serving as the historic and cultural homeland for the Jewish people."
 
   ############################
   # NON-HISTORICAL FORMABLES #
   ############################
 
     # Alaska
-    ALASKA_fnr: "Alaska"
-    ALASKA_fnr_ADJ: "Alaskan"
-    ALASKA_fnr_desc: "Alaska is the 'Last Frontier,' a vast and diverse US state known for its dramatic landscapes, rich wilderness, and vibrant Alaska Native cultures. Its geography includes everything from arctic tundra to coastal rainforests, with abundant wildlife and natural phenomena like the Northern Lights."
+    ALSKA: "Alaska"
+    ALSKA_ADJ: "Alaskan"
+    ALSKA_desc: "Alaska is the 'Last Frontier,' a vast and diverse US state known for its dramatic landscapes, rich wilderness, and vibrant Alaska Native cultures. Its geography includes everything from arctic tundra to coastal rainforests, with abundant wildlife and natural phenomena like the Northern Lights."
 
     # Arpitania
-    ARPIT_fnr: "Arpitania"
-    ARPIT_fnr_ADJ: "Arpitanian"
-    ARPIT_fnr_desc: "Arpitania is a cultural and linguistic region in the Western Alps, encompassing parts of France, Switzerland, and Italy, and is defined by the use of the Arpitan language (also called Franco-Provençal). It was historically centered on the Duchy of Savoy but has never been a single political entity. Key Arpitan areas include the French departments of Ain, Savoie, and Haute-Savoie, the Swiss region of Romandy, and the Italian Aosta Valley."
+    ARPIT: "Arpitania"
+    ARPIT_ADJ: "Arpitanian"
+    ARPIT_desc: "Arpitania is a cultural and linguistic region in the Western Alps, encompassing parts of France, Switzerland, and Italy, and is defined by the use of the Arpitan language (also called Franco-Provençal). It was historically centered on the Duchy of Savoy but has never been a single political entity. Key Arpitan areas include the French departments of Ain, Savoie, and Haute-Savoie, the Swiss region of Romandy, and the Italian Aosta Valley."
 
     # Adriatic Empire
-    ADRIATICEMP_fnr: "Adriatic Empire"
-    ADRIATICEMP_fnr_ADJ: "Adriatic"
-    ADRIATICEMP_fnr_desc: "Born from trade, tempered by war, and bound together by the tides, the Adriatic Empire rules the waters that once divided it. From Venice to Ragusa, from the Istrian coast to the Dalmatian isles, merchants and admirals alike have woven a realm of gold and salt, commerce and conquest. The Empire thrives not through sheer might, but through mastery of the sea."
+    ADREM: "Adriatic Empire"
+    ADREM_ADJ: "Adriatic"
+    ADREM_desc: "Born from trade, tempered by war, and bound together by the tides, the Adriatic Empire rules the waters that once divided it. From Venice to Ragusa, from the Istrian coast to the Dalmatian isles, merchants and admirals alike have woven a realm of gold and salt, commerce and conquest. The Empire thrives not through sheer might, but through mastery of the sea."
 
-    ALPLAND_fnr: "Alpland"
-    ALPLAND_fnr_ADJ: "Alplands"
-    ALPLAND_fnr_desc: "mong the clouds and crags of the great mountains, a new power has taken root. Forged from the hardy peoples of the Alps — shepherds, merchants, warriors, and republics alike — Alpland stands as a bastion of unity amid stone and snow. Where others see only cold and peril, the Alplanders see strength, freedom, and opportunity. Their passes channel the wealth of Europe; their peaks guard against invasion.\n\nNeither empire nor mere federation, Alpland is a nation of the heights — resilient, disciplined, and eternally watchful."
+    ALPLN: "Alpland"
+    ALPLN_ADJ: "Alplands"
+    ALPLN_desc: "mong the clouds and crags of the great mountains, a new power has taken root. Forged from the hardy peoples of the Alps — shepherds, merchants, warriors, and republics alike — Alpland stands as a bastion of unity amid stone and snow. Where others see only cold and peril, the Alplanders see strength, freedom, and opportunity. Their passes channel the wealth of Europe; their peaks guard against invasion.\n\nNeither empire nor mere federation, Alpland is a nation of the heights — resilient, disciplined, and eternally watchful."
 
-    ANGLODUTCH_fnr: "Anglo-Dutch Union"
-    ANGLODUTCH_fnr_ADJ: "Anglo-Dutch"
-    ANGLODUTCH_fnr_desc: "The Anglo-Dutch Union was a personal union between Great Britain and the Netherlands, lasting from 1692 to 1712 under monarch William III. It was a period where the same king ruled both countries, leading to a powerful maritime alliance and shared colonial empires, with London and The Hague serving as de facto capitals. This union ended after William III's death in 1712, when the two entities were separated, though the Palatinate and the Netherlands remained in a separate personal union until 1744"
+    ANDUH: "Anglo-Dutch Union"
+    ANDUH_ADJ: "Anglo-Dutch"
+    ANDUH_desc: "The Anglo-Dutch Union was a personal union between Great Britain and the Netherlands, lasting from 1692 to 1712 under monarch William III. It was a period where the same king ruled both countries, leading to a powerful maritime alliance and shared colonial empires, with London and The Hague serving as de facto capitals. This union ended after William III's death in 1712, when the two entities were separated, though the Palatinate and the Netherlands remained in a separate personal union until 1744"
 
-    AUSTRIANEMPIRE_fnr: "Austrian Empire"
-    AUSTRIANEMPIRE_fnr_ADJ: "Austrian"
-    AUSTRIANEMPIRE_fnr_desc: "The Austrian Empire was a multinational European great power from 1804 to 1867, which was ruled by the Habsburgs and became the basis for the later Austro-Hungarian Empire. It was a large, diverse country with various ethnic groups and languages, but it struggled with internal nationalistic tensions. In 1867, the empire was restructured into the Dual Monarchy of Austria-Hungary, where Hungary gained more autonomy, though a single monarch still ruled both states. "
+    AUSEM: "Austrian Empire"
+    AUSEM_ADJ: "Austrian"
+    AUSEM_desc: "The Austrian Empire was a multinational European great power from 1804 to 1867, which was ruled by the Habsburgs and became the basis for the later Austro-Hungarian Empire. It was a large, diverse country with various ethnic groups and languages, but it struggled with internal nationalistic tensions. In 1867, the empire was restructured into the Dual Monarchy of Austria-Hungary, where Hungary gained more autonomy, though a single monarch still ruled both states. "
 
-    AUSTRIABAVARIA_fnr: "Austria-Bavaria"
-    AUSTRIABAVARIA_fnr_ADJ: "Austro-Bavarian"
-    AUSTRIABAVARIA_fnr_desc: "Austria and Bavaria — long divided by pride, faith, and ambition now stand united at the heart of Europe. This new realm blends the imperial tradition of Vienna with the cultural vigor of Munich, commanding the gateways between Italy and Germany, East and West."
+    ASTBV: "Austria-Bavaria"
+    ASTBV_ADJ: "Austro-Bavarian"
+    ASTBV_desc: "Austria and Bavaria — long divided by pride, faith, and ambition now stand united at the heart of Europe. This new realm blends the imperial tradition of Vienna with the cultural vigor of Munich, commanding the gateways between Italy and Germany, East and West."
 
-    BALKLEAGUE_fnr: "Balkan League"
-    BALKLEAGUE_fnr_ADJ: "Balkan"
-    BALKLEAGUE_fnr_desc: "The Current Flag is temporary and will be updated in the next Formable Nations: Reworked Update.\n\nThe Balkan League was a military alliance of Bulgaria, Serbia, Greece, and Montenegro, formed in 1912 with the goal of driving the Ottoman Empire out of southeastern Europe and gaining territory. While initially successful in the First Balkan War, the alliance quickly disintegrated over disputes about how to divide the captured lands, which led to the Second Balkan War in 1913"
+    BLKLG: "Balkan League"
+    BLKLG_ADJ: "Balkan"
+    BLKLG_desc: "The Current Flag is temporary and will be updated in the next Formable Nations: Reworked Update.\n\nThe Balkan League was a military alliance of Bulgaria, Serbia, Greece, and Montenegro, formed in 1912 with the goal of driving the Ottoman Empire out of southeastern Europe and gaining territory. While initially successful in the First Balkan War, the alliance quickly disintegrated over disputes about how to divide the captured lands, which led to the Second Balkan War in 1913"
 
-    BASQUECOUN_fnr: "Basque Country"
-    BASQUECOUN_fnr_ADJ: "Basque"
-    BASQUECOUN_fnr_desc: "The Basque Country consists of seven provinces that stretch from the Pyrenees to the Bay of Biscay in the country's north, plus a small area reaching into southwestern France. In Spanish, it's known as País Vasco; in Euskara—the ancient Basque language that predates Greek and Latin — Eusakadi."
+    BASQU: "Basque Country"
+    BASQU_ADJ: "Basque"
+    BASQU_desc: "The Basque Country consists of seven provinces that stretch from the Pyrenees to the Bay of Biscay in the country's north, plus a small area reaching into southwestern France. In Spanish, it's known as País Vasco; in Euskara—the ancient Basque language that predates Greek and Latin — Eusakadi."
 
     # bosnia serbia
-    BOSNIASERBIA_fnr: "Bosnia-Serbia"
-    BOSNIASERBIA_fnr_ADJ: "Bosno-Serbian"
-    BOSNIASERBIA_fnr_desc: "Bosnia and Serbia now stand united — a bastion of Slavic strength in the heart of the Balkans.\n\nThis new kingdom inherits the resilience of Bosnia and the martial legacy of Serbia, blending western and eastern traditions into a single, unyielding state. Together, they guard the crossroads of empires and carve their own destiny amid the shifting powers of the continent."
+    BSSER: "Bosnia-Serbia"
+    BSSER_ADJ: "Bosno-Serbian"
+    BSSER_desc: "Bosnia and Serbia now stand united — a bastion of Slavic strength in the heart of the Balkans.\n\nThis new kingdom inherits the resilience of Bosnia and the martial legacy of Serbia, blending western and eastern traditions into a single, unyielding state. Together, they guard the crossroads of empires and carve their own destiny amid the shifting powers of the continent."
 
     # Catholica Russica
-    CATHOLICARUS_fnr: "Catholica Russica"
-    CATHOLICARUS_fnr_ADJ: "Catholica Russican"
-    CATHOLICARUS_fnr_desc: "'Catholica Russica' (or Russian Catholic) refers to the Russian Greek Catholic Church, a small, self-governing (sui iuris) Eastern Catholic particular church that is in full communion with the Pope and the worldwide Catholic Church."
+    CATRU: "Catholica Russica"
+    CATRU_ADJ: "Catholica Russican"
+    CATRU_desc: "'Catholica Russica' (or Russian Catholic) refers to the Russian Greek Catholic Church, a small, self-governing (sui iuris) Eastern Catholic particular church that is in full communion with the Pope and the worldwide Catholic Church."
 
     # Celtic Union
-    CELTICUNION_fnr: "Celtic Union"
-    CELTICUNION_fnr_ADJ: "Celtic"
-    CELTICUNION_fnr_desc: "A 'Celtic Union' is a hypothetical or fictional political entity that would unite the modern Celtic nations. In these fictional descriptions, it often includes Scotland, Ireland, Wales, the Isle of Man, Cornwall, and Brittany, sometimes with other regions claiming Celtic heritage like Galicia. These concepts vary widely but generally focus on uniting these areas for economic, cultural, or political reasons, though their real-world implementation is complex and unsupported by the majority of the public in the regions involved."
+    CTUNN: "Celtic Union"
+    CTUNN_ADJ: "Celtic"
+    CTUNN_desc: "A 'Celtic Union' is a hypothetical or fictional political entity that would unite the modern Celtic nations. In these fictional descriptions, it often includes Scotland, Ireland, Wales, the Isle of Man, Cornwall, and Brittany, sometimes with other regions claiming Celtic heritage like Galicia. These concepts vary widely but generally focus on uniting these areas for economic, cultural, or political reasons, though their real-world implementation is complex and unsupported by the majority of the public in the regions involved."
 
     # Carolingian Empire
-    CAROLINGIAN_fnr: "Carolingian Empire"
-    CAROLINGIAN_fnr_ADJ: "Carolingian"
-    CAROLINGIAN_fnr_desc: "The Current Flag is temporary and will be updated in the next Formable Nations: Reworked Update.\n\nThe Carolingian Empire was a Frankish-dominated state in Western and Central Europe from 800 to 888 CE, founded by Charlemagne who was crowned emperor by the Pope. It was the most powerful empire in Western Europe for its time, stretching from Spain to modern-day Germany, and served as a predecessor to the Holy Roman Empire and the modern states of France and Germany."
+    CAROL: "Carolingian Empire"
+    CAROL_ADJ: "Carolingian"
+    CAROL_desc: "The Current Flag is temporary and will be updated in the next Formable Nations: Reworked Update.\n\nThe Carolingian Empire was a Frankish-dominated state in Western and Central Europe from 800 to 888 CE, founded by Charlemagne who was crowned emperor by the Pope. It was the most powerful empire in Western Europe for its time, stretching from Spain to modern-day Germany, and served as a predecessor to the Holy Roman Empire and the modern states of France and Germany."
 
     # Cordoba
-    CORDOBA_fnr: "Cordoba"
-    CORDOBA_fnr_ADJ: "Cordoban"
-    CORDOBA_fnr_desc: "The Caliphate of Córdoba was an Islamic state centered in Córdoba, Spain, that existed from 929 to 1031 CE. It was the peak of Muslim rule in the Iberian Peninsula (known as al-Andalus), a period of great cultural, scientific, and architectural advancement, considered the 'golden age' of Muslim Spain. At its height, the caliphate was a prosperous and advanced urban civilization with a sophisticated economy and a capital city that was the largest and most important in Western Europe."
+    CDOBA: "Cordoba"
+    CDOBA_ADJ: "Cordoban"
+    CDOBA_desc: "The Caliphate of Córdoba was an Islamic state centered in Córdoba, Spain, that existed from 929 to 1031 CE. It was the peak of Muslim rule in the Iberian Peninsula (known as al-Andalus), a period of great cultural, scientific, and architectural advancement, considered the 'golden age' of Muslim Spain. At its height, the caliphate was a prosperous and advanced urban civilization with a sophisticated economy and a capital city that was the largest and most important in Western Europe."
 
     # Dacia
-    DACIA_fnr: "Dacia"
-    DACIA_fnr_ADJ: "Dacian"
-    DACIA_fnr_desc: "Dacia was an ancient kingdom located in what is now modern-day Romania, known for its wealthy gold mines and skilled warriors who clashed with the Roman Empire. It was home to the Dacians, a people of Thracian stock, who were eventually conquered by Emperor Trajan and became a Roman province in the early 2nd century AD. The Romans ruled for about 170 years before withdrawing in 271 AD, leaving a lasting cultural and historical legacy in the region."
+    DACIA: "Dacia"
+    DACIA_ADJ: "Dacian"
+    DACIA_desc: "Dacia was an ancient kingdom located in what is now modern-day Romania, known for its wealthy gold mines and skilled warriors who clashed with the Roman Empire. It was home to the Dacians, a people of Thracian stock, who were eventually conquered by Emperor Trajan and became a Roman province in the early 2nd century AD. The Romans ruled for about 170 years before withdrawing in 271 AD, leaving a lasting cultural and historical legacy in the region."
 
     # Dual Monarchy
-    DUALMONARCHY_fnr: "Dual Monarchy"
-    DUALMONARCHY_ADJ: "Dual-Monarchical"
-    DUALMONARCHY_fnr_desc: "The Current Flag is temporary and will be updated in the next Formable Nations: Reworked Update.\n\n~~Alternate History~~\n\nThe dual monarchy of England and France was a period from 1422 to 1453 where the infant King Henry VI of England was recognized as the monarch of both England and France, though his claim was disputed. It was established by the Treaty of Troyes following Henry V's invasion and English control of northern France during the Hundred Years' War. The claim was contested by the Dauphin Charles, who controlled southern France, and it ended when the French, led by Charles VII, gradually expelled the English from all territories except Calais."
+    DLMON: "Dual Monarchy"
+    DLMON_ADJ: "Dual Monarchy"
+    DLMON_desc: "The Current Flag is temporary and will be updated in the next Formable Nations: Reworked Update.\n\n~~Alternate History~~\n\nThe dual monarchy of England and France was a period from 1422 to 1453 where the infant King Henry VI of England was recognized as the monarch of both England and France, though his claim was disputed. It was established by the Treaty of Troyes following Henry V's invasion and English control of northern France during the Hundred Years' War. The claim was contested by the Dauphin Charles, who controlled southern France, and it ended when the French, led by Charles VII, gradually expelled the English from all territories except Calais."
 
     # East Slavia
-    EASTSLAVIA_fnr: "East Slavia"
-    EASTSLAVIA_fnr_ADJ: "East Slavian"
-    EASTSLAVIA_fnr_desc: "A hypothetical nation and a real-world group of people. As a fictional nation, it is a unitary republic with a capital in Kiev, languages including Ukrainian, Belarusian, and Russian, and a population of about 54 million. The real-world East Slavs are a subgroup of Slavs, comprising the Belarusians, Russians, and Ukrainians, who speak East Slavic languages."
+    ESLAV: "East Slavia"
+    ESLAV_ADJ: "East Slavian"
+    ESLAV_desc: "A hypothetical nation and a real-world group of people. As a fictional nation, it is a unitary republic with a capital in Kiev, languages including Ukrainian, Belarusian, and Russian, and a population of about 54 million. The real-world East Slavs are a subgroup of Slavs, comprising the Belarusians, Russians, and Ukrainians, who speak East Slavic languages."
 
     # Franco-Iberian Empire
-    FRANCOIBERIANEMP_fnr: "Franco-Iberian Empire"
-    FRANCOIBERIANEMP_fnr_ADJ: "Franco-Iberian"
-    FRANCOIBERIANEMP_fnr_desc: "~~Alternate History~~\n\nin 1579, France and Spain were allied to form the Franco-Iberian Empire as known as The Three Crowns (Spain, France and Portugal) and The colonization Had started into New viceroyalities by Three languages (Portuguese, Spanish and French), and colonies have merged Together into a new empire, the Franco-Iberia, in 1732 The United Kingdom of Great Britain and Ireland have become a dual monarchy with Scottish Queen as The United Kingdom of England, Scotland and Ireland, in 1776 The Mexican Revolutionary War and American Revolutionary War has started and ended in 1778. "
+    FNCIB: "Franco-Iberian Empire"
+    FNCIB_ADJ: "Franco-Iberian"
+    FNCIB_desc: "~~Alternate History~~\n\nin 1579, France and Spain were allied to form the Franco-Iberian Empire as known as The Three Crowns (Spain, France and Portugal) and The colonization Had started into New viceroyalities by Three languages (Portuguese, Spanish and French), and colonies have merged Together into a new empire, the Franco-Iberia, in 1732 The United Kingdom of Great Britain and Ireland have become a dual monarchy with Scottish Queen as The United Kingdom of England, Scotland and Ireland, in 1776 The Mexican Revolutionary War and American Revolutionary War has started and ended in 1778. "
 
     # Frieslande
-    FRIESLANDE_fnr: "Frieslande"
-    FRIESLANDE_fnr_ADJ: "Frieslande"
-    FRIESLANDE_fnr_desc: "Friesland is a province in the northern Netherlands known for its unique culture, distinct language (West Frisian), and strong connection to its history as a seafaring people. It is characterized by flat, low-lying polders, numerous lakes, canals, and a strong agricultural sector, especially dairy farming."
+    FIESL: "Frieslande"
+    FIESL_ADJ: "Frieslande"
+    FIESL_desc: "Friesland is a province in the northern Netherlands known for its unique culture, distinct language (West Frisian), and strong connection to its history as a seafaring people. It is characterized by flat, low-lying polders, numerous lakes, canals, and a strong agricultural sector, especially dairy farming."
 
     # Gallic Empire
-    GALLICEMPIRE_fnr: "Gallic Empire"
-    GALLICEMPIRE_fnr_ADJ: "Gallic"
-    GALLICEMPIRE_fnr_desc: "The Current Flag is temporary and will be updated in the next Formable Nations: Reworked Update.\n\nThe Gallic Empire was a breakaway part of the Roman Empire that existed from 260 to 274 AD, during the Crisis of the Third Century. It was established by the Roman commander Postumus and included the territories of Gaul, Britannia, and Hispania. The empire had its own government and mint."
+    GLCEM: "Gallic Empire"
+    GLCEM_ADJ: "Gallic"
+    GLCEM_desc: "The Current Flag is temporary and will be updated in the next Formable Nations: Reworked Update.\n\nThe Gallic Empire was a breakaway part of the Roman Empire that existed from 260 to 274 AD, during the Crisis of the Third Century. It was established by the Roman commander Postumus and included the territories of Gaul, Britannia, and Hispania. The empire had its own government and mint."
 
     # Hungarian Empire
-    HUNGARIANEMPIRE_fnr: "Hungarian Empire"
-    HUNGARIANEMPIRE_fnr_ADJ: "Hungarian"
+    HNGEM: "Hungarian Empire"
+    HNGEM_ADJ: "Hungarian"
     HUNGARIANEMPIRE_desc: "The Hungarians once stood as the principal nation of Europe and held potential for Great Power status but were devastated by the Bubonic Plague, and the subjugated by the Austrians leading to the Austro-Hungarian Union.\n\nSuch a fate is unacceptable to the historical Magyar Realm and with the right determination we can establish an Empire of Hungarians for Hungarians."
 
     # Iberian Empire
-    IBERIANEMPIRE_fnr: "Iberian Empire"
-    IBERIANEMPIRE_fnr_ADJ: "Iberian"
-    IBERIANEMPIRE_fnr_desc: "The Iberian Union describes the period from 1580 to 1640 in which the Monarchy of Spain under the Habsburg dynasty, then the personal union of the crowns of Castile and Aragon, brought in personal union also the Kingdom of Portugal. It incorporated the entire Iberian Peninsula except Andorra."
+    IBNEM: "Iberian Empire"
+    IBNEM_ADJ: "Iberian"
+    IBNEM_desc: "The Iberian Union describes the period from 1580 to 1640 in which the Monarchy of Spain under the Habsburg dynasty, then the personal union of the crowns of Castile and Aragon, brought in personal union also the Kingdom of Portugal. It incorporated the entire Iberian Peninsula except Andorra."
 
     # Italian Merchant Alliance
-    ITALIANMERCHANT_fnr: "Italian Merchant Alliance"
-    ITALIANMERCHANT_fnr_ADJ: "Italian"
-    ITALIANMERCHANT_fnr_desc: "he maritime republics also called merchant republics were Italian thalassocratic port cities which, starting from the Middle Ages, enjoyed political autonomy and economic prosperity brought about by their maritime activities. The term, coined during the 19th century, generally refers to four Italian cities, whose coats of arms have been shown since 1947 on the flags of the Italian Navy and the Italian Merchant Navy\n\nIf we manage to Unite the republics into a single entity we can establish one of the strongest trade empires in history."
+    ITMCH: "Italian Merchant Alliance"
+    ITMCH_ADJ: "Italian"
+    ITMCH_desc: "he maritime republics also called merchant republics were Italian thalassocratic port cities which, starting from the Middle Ages, enjoyed political autonomy and economic prosperity brought about by their maritime activities. The term, coined during the 19th century, generally refers to four Italian cities, whose coats of arms have been shown since 1947 on the flags of the Italian Navy and the Italian Merchant Navy\n\nIf we manage to Unite the republics into a single entity we can establish one of the strongest trade empires in history."
 
     # Jagiellonian Empire
-    JAGIELLONIAN_fnr: "Jagiellonian Empire"
-    JAGIELLONIAN_fnr_ADJ: "Jagiellonian"
-    JAGIELLONIAN_fnr_desc: "The 'Jagiellonian Empire' refers to the vast territories ruled by the Jagiellonian dynasty between the 14th and 16th centuries, which included the Kingdom of Poland, the Grand Duchy of Lithuania, and at times, the Kingdoms of Hungary and Bohemia. While not a single empire with one emperor, the personal union between Poland and Lithuania grew into the Polish–Lithuanian Commonwealth and is sometimes considered an empire due to its immense size and influence, ruling over modern-day Poland, Lithuania, Belarus, and western Ukraine."
+    JGLNN: "Jagiellonian Empire"
+    JGLNN_ADJ: "Jagiellonian"
+    JGLNN_desc: "The 'Jagiellonian Empire' refers to the vast territories ruled by the Jagiellonian dynasty between the 14th and 16th centuries, which included the Kingdom of Poland, the Grand Duchy of Lithuania, and at times, the Kingdoms of Hungary and Bohemia. While not a single empire with one emperor, the personal union between Poland and Lithuania grew into the Polish–Lithuanian Commonwealth and is sometimes considered an empire due to its immense size and influence, ruling over modern-day Poland, Lithuania, Belarus, and western Ukraine."
 
     # Kyivan Rus
-    KYIVANRUS_fnr: "Kyivan Rus"
-    KYIVANRUS_fnr_ADJ: "Kyivan"
-    KYIVANRUS_fnr_desc: "Kyivan Rus' was a medieval state in Eastern Europe, established by Norse (Varangian) settlers who unified East Slavic tribes and ruled from the city of Kyiv, from the late 9th to the mid-13th century. It was a confederation of principalities that grew wealthy from trade routes, and at its peak, it stretched from the Baltic to the Black Sea and the Carpathian to the Volga rivers."
+    KYVRU: "Kyivan Rus"
+    KYVRU_ADJ: "Kyivan"
+    KYVRU_desc: "Kyivan Rus' was a medieval state in Eastern Europe, established by Norse (Varangian) settlers who unified East Slavic tribes and ruled from the city of Kyiv, from the late 9th to the mid-13th century. It was a confederation of principalities that grew wealthy from trade routes, and at its peak, it stretched from the Baltic to the Black Sea and the Carpathian to the Volga rivers."
 
     # Ummayads
-    UMMAYADS_fnr: "Ummayad Caliphate"
-    UMMAYADS_fnr_ADJ: "Ummayad"
-    UMMAYADS_fnr_desc: "The Umayyad Caliphate (661–750 CE) was the first major Islamic dynasty, transforming the Muslim community into a vast, centralized Arab-Islamic empire. Ruled from its capital in Damascus, Syria, it became one of the largest unitary states in history, stretching from the Iberian Peninsula (Spain and Portugal) in the west to India and Central Asia in the east."
+    UMAYA: "Ummayad Caliphate"
+    UMAYA_ADJ: "Ummayad"
+    UMAYA_desc: "The Umayyad Caliphate (661–750 CE) was the first major Islamic dynasty, transforming the Muslim community into a vast, centralized Arab-Islamic empire. Ruled from its capital in Damascus, Syria, it became one of the largest unitary states in history, stretching from the Iberian Peninsula (Spain and Portugal) in the west to India and Central Asia in the east."
 
     # Kingdom of Germany
-    KOFGERMANY_fnr: "Kingdom of Germany"
-    KOFGERMANY_fnr_ADJ: "German"
-    KOFGERMANY_fnr_desc: "The 'Kingdom of Germany' refers to East Francia, the eastern part of the Carolingian Empire that was established after the Treaty of Verdun. It was primarily Germanic-speaking and was ruled by the Carolingian dynasty until 911, after which it became an elective monarchy before eventually developing into the Holy Roman Empire"
+    KOGER: "Kingdom of Germany"
+    KOGER_ADJ: "German"
+    KOGER_desc: "The 'Kingdom of Germany' refers to East Francia, the eastern part of the Carolingian Empire that was established after the Treaty of Verdun. It was primarily Germanic-speaking and was ruled by the Carolingian dynasty until 911, after which it became an elective monarchy before eventually developing into the Holy Roman Empire"
 
     # Kingdom of God
-    KOFGOD_fnr: "Kingdom of God"
-    KOFGOD_fnr_ADJ: "Heavenly"
-    KOFGOD_fnr_desc: "The Kingdom of God is primarily described as the dynamic reign, rule, and authority of God rather than a physical, geographical nation state in the current age. It is both a present spiritual reality experienced by believers and a future physical reality that will be fully established on Earth at the second coming of Jesus Christ"
+    KOGOD: "Kingdom of God"
+    KOGOD_ADJ: "Heavenly"
+    KOGOD_desc: "The Kingdom of God is primarily described as the dynamic reign, rule, and authority of God rather than a physical, geographical nation state in the current age. It is both a present spiritual reality experienced by believers and a future physical reality that will be fully established on Earth at the second coming of Jesus Christ"
 
     # Langobards
-    LANGOBARDS_fnr: "Langobards"
-    LANGOBARDS_fnr_ADJ: "Langobard"
-    LANGOBARDS_fnr_desc: "The Lombards, Longobards or Langobards (Latin: Langobardi) were a Germanic people who conquered most of the Italian Peninsula between 568 and 774."
+    LNGBD: "Langobards"
+    LNGBD_ADJ: "Langobard"
+    LNGBD_desc: "The Lombards, Longobards or Langobards (Latin: Langobardi) were a Germanic people who conquered most of the Italian Peninsula between 568 and 774."
 
     # Lusitanian Empire
-    LUSITANIANEMP_fnr: "Lusitanian Empire"
-    LUSITANIANEMP_fnr_ADJ: "Lusitanian"
-    LUSITANIANEMP_fnr_desc: "The Lusitanians were an Indo-European-speaking people living in the far west of the Iberian Peninsula, in present-day central Portugal and the regions of Extremadura and Castilla y León of Spain. It is uncertain whether the Lusitanians were Celts or Celticized Iberians, related to the Lusones."
+    LUSIT: "Lusitanian Empire"
+    LUSIT_ADJ: "Lusitanian"
+    LUSIT_desc: "The Lusitanians were an Indo-European-speaking people living in the far west of the Iberian Peninsula, in present-day central Portugal and the regions of Extremadura and Castilla y León of Spain. It is uncertain whether the Lusitanians were Celts or Celticized Iberians, related to the Lusones."
 
     # Macedon
-    MACEDONIA_fnr: "Macedon"
-    MACEDONIA_fnr_ADJ: "Macedonian"
-    MACEDONIA_fnr_desc: "TODO: content, description, color & flag + anything else it needs"
+    MACED: "Macedon"
+    MACED_ADJ: "Macedonian"
+    MACED_desc: "TODO: content, description, color & flag + anything else it needs"
 
     # Macedonian Empire
-    MACEDONIAEMPIRE_fnr: "Macedonian Empire"
-    MACEDONIAEMPIRE_fnr_ADJ: "Macedonian"
-    MACEDONIAEMPIRE_fnr_desc: "The boundaries of the region have changed over time. The ancient Kingdom of Macedon, famous for figures like Alexander the Great, was a dominant power in the region before its fragmentation after the Roman Empire's decline."
+    MCDEM: "Macedonian Empire"
+    MCDEM_ADJ: "Macedonian"
+    MCDEM_desc: "The boundaries of the region have changed over time. The ancient Kingdom of Macedon, famous for figures like Alexander the Great, was a dominant power in the region before its fragmentation after the Roman Empire's decline."
 
     # North Sea Empire
-    NORTHSEAEMPIRE_fnr: "North Sea Empire"
-    NORTHSEAEMPIRE_fnr_ADJ: "Anglo-Scandinavian"
-    NORTHSEAEMPIRE_fnr_desc: "The North Sea Empire was a historical personal union of England, Denmark, and Norway from 1013 to 1042, ruled by Norse kings like Sweyn Forkbeard and Cnut the Great. It was a thalassocracy, dependent on the sea for connection and unity. The empire was a product of the late Viking Age and was a personal union rather than a single, unified state, with each territory maintaining its own autonomy and laws"
+    NOSEM: "North Sea Empire"
+    NOSEM_ADJ: "Anglo-Scandinavian"
+    NOSEM_desc: "The North Sea Empire was a historical personal union of England, Denmark, and Norway from 1013 to 1042, ruled by Norse kings like Sweyn Forkbeard and Cnut the Great. It was a thalassocracy, dependent on the sea for connection and unity. The empire was a product of the late Viking Age and was a personal union rather than a single, unified state, with each territory maintaining its own autonomy and laws"
 
     # Occitania
-    OCCITANIA_fnr: "Occitania"
-    OCCITANIA_fnr_ADJ: "Occitanian"
-    OCCITANIA_fnr_desc: "a historical and cultural region in southwestern Europe, defined by the historical use of the Occitan language. It spans much of southern France, plus parts of Spain (Aran Valley), Monaco, and Italy (Occitan Valleys). Today, a French administrative region is named 'Occitanie' after this historical area, but it does not represent the entirety of the traditional Occitan lands."
+    OCCIT: "Occitania"
+    OCCIT_ADJ: "Occitanian"
+    OCCIT_desc: "a historical and cultural region in southwestern Europe, defined by the historical use of the Occitan language. It spans much of southern France, plus parts of Spain (Aran Valley), Monaco, and Italy (Occitan Valleys). Today, a French administrative region is named 'Occitanie' after this historical area, but it does not represent the entirety of the traditional Occitan lands."
 
     # Pontus
-    PONTUS_fnr: "Pontus"
-    PONTUS_fnr_ADJ: "Pontic"
-    PONTUS_fnr_desc: "Pontus was a Hellenistic kingdom centered in the historical region of Pontus in modern-day Turkey, and ruled by the Mithridatic dynasty of Persian origin, which may have been directly related to Darius the Great of the Achaemenid dynasty. The kingdom was proclaimed by Mithridates I in 281 BC and lasted until its conquest by the Roman Republic in 63 BC. The Kingdom of Pontus reached its greatest extent under Mithridates VI the Great, who conquered Colchis, Cappadocia, Bithynia, the Greek colonies of the Tauric Chersonesos, and for a brief time the Roman province of Asia. After a long struggle with Rome in the Mithridatic Wars, Pontus was defeated."
+    PONTU: "Pontus"
+    PONTU_ADJ: "Pontic"
+    PONTU_desc: "Pontus was a Hellenistic kingdom centered in the historical region of Pontus in modern-day Turkey, and ruled by the Mithridatic dynasty of Persian origin, which may have been directly related to Darius the Great of the Achaemenid dynasty. The kingdom was proclaimed by Mithridates I in 281 BC and lasted until its conquest by the Roman Republic in 63 BC. The Kingdom of Pontus reached its greatest extent under Mithridates VI the Great, who conquered Colchis, Cappadocia, Bithynia, the Greek colonies of the Tauric Chersonesos, and for a brief time the Roman province of Asia. After a long struggle with Rome in the Mithridatic Wars, Pontus was defeated."
 
 

@@ -1,0 +1,12 @@
+﻿# fnr_on_actions.txt
+on_game_start = {
+	effect = {
+		every_country = {
+			# Historical formables enabled by default
+			set_variable = {
+				name = fnr_historical_enabled
+				value = yes
+			}
+		}
+	}
+}

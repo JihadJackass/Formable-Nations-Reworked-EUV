@@ -26,7 +26,7 @@ NSE_WHITE_FNR = { # North Sea Empire
 }
 
 # Illyria
-ILLYRIA_fnr = {
+ILYRA = {
 	pattern = "pattern_tricolor_horizontal_01.dds"
 	color1 = "green"
 	color2 = "white"
@@ -34,7 +34,7 @@ ILLYRIA_fnr = {
 }
 
 # Eastern Roman Empire
-EASTROMANEMPIRE_fnr = { # Roman Empire
+EASRE = { # Roman Empire
 	pattern = "pattern_solid.dds"
 	color1 = "purple_mid"
 	color2 = "yellow"
@@ -57,7 +57,7 @@ EASTROMANEMPIRE_fnr = { # Roman Empire
 }
 
 # Western Roman Empire
-WESTROMANEMPIRE_fnr = { # Roman Empire
+WESRE = { # Roman Empire
 	pattern = "pattern_solid.dds"
 	color1 = "red"
 	color2 = "yellow"
@@ -80,167 +80,167 @@ WESTROMANEMPIRE_fnr = { # Roman Empire
 }
 
 # Confederation of the Rhine
-	CRHINE_fnr = {
+	RCONF = {
 		pattern = "pattern_tricolor_horizontal_01.dds"
 		color1 = "green"
 		color2 = "white"
 		color3 = "blue"
 	}
 # Austrian Empire
-	AUSTRIANEMPIRE_fnr = {
+	AUSEM = {
 		pattern = "pattern_horizontal_split_01.dds"
 		color1 = "black"
 		color2 = "yellow"
 	}
 # Balochistan
-	BLC_fnr = {
+	BALCH = {
 		pattern = "pattern_horizontal_split_01.dds"
 		color1 = "green"
 		color2 = "red"
 	}
 # Polabia
-	POLB_fnr = {
+	POLBA = {
 		pattern = "pattern_jurchen_checky_colours.dds"
 		color1 = "blue"
 		color2 = "red"
 		color3 = "white"
 	}
 # Greater Sorbia
-	GSORB_fnr = {
+	GSORB = {
 		pattern = "pattern_jurchen_checky_colours.dds"
 		color1 = "red"
 		color2 = "blue"
 		color3 = "white"
 	}
 # Sorbic Kingdom TODO: fix
-	KSORB_fnr = {
+	KSORB = {
 		pattern = "pattern_jurchen_checky_colours.dds"
 		color1 = "red"
 		color2 = "blue"
 		color3 = "white"
 	}
 # Kingdom of Hanover TODO: fix
-	KOFHN_fnr = {
+	KOFHN = {
 		pattern = "pattern_horizontal_split_01.dds"
 		color1 = "yellow"
 		color2 = "white"
 	}
 # Polynesia
-	POLYNE_fnr = {
+	POLNE = {
 		pattern = "pattern_jurchen_checky_colours.dds"
 		color1 = "red"
 		color2 = "white"
 		color3 = "red"
 	}
 # Hawaii TODO: fix
-	HAWAIII_fnr = {
+	HAWAI = {
 		pattern = "pattern_jurchen_checky_colours.dds"
 		color1 = "red"
 		color2 = "white"
 		color3 = "blue"
 	}
 # Yugoslavia
-	YUGOSLAVIA_fnr = {
+	YGOSL = {
 		pattern = "pattern_jurchen_checky_colours.dds"
 		color1 = "blue"
 		color2 = "white"
 		color3 = "red"
 	}
 # Japan
-	JAPAN_fnr = {
+	JAPAN = {
 		pattern = "pattern_mena_round_frame_shield.dds"
 		color1 = "white"
 		color2 = "red"
 	}
 # Angevin Empire TODO: fix
-	ANGEVINEMPIRE_fnr = {
+	AGEVN = {
 		pattern = "pattern_solid.dds"
 		color1 = "red"
 	}
 # Baltic States	
-	BALTICSTATES_fnr = {
+	BLTST = {
 		pattern = "pattern_cross.dds"
 		color1 = "white"
 		color2 = "black"
 	}
 # Alsace-Lorraine
-	ALSACELORRAINE_fnr = {
+	ALSLO = {
 		pattern = "pattern_horizontal_split_01.dds"
 		color1 = "red"
 		color2 = "white"
 	}
 # Austria-Bavaria TODO: fix
-	AUSTRIABAVARIA_fnr = {
+	ASTBV = {
 		pattern = "pattern_jurchen_checky_colours.dds"
 		color1 = "blue"
 		color2 = "white"
 		color3 = "red"
 	}
 # Basque Country TODO: fix
-	BASQUECOUN_fnr = {
+	BASQU = {
 		pattern = "pattern_cross.dds"
 		color1 = "red"
 		color2 = "white"
 	}
 # Belarus
-	BELARUS_fnr = {
+	BLRUS = {
 		pattern = "pattern_jurchen_checky_colours.dds"
 		color1 = "green"
 		color2 = "red"
 		color3 = "red"
 	}
 # Belgium	
-	BELGIUM_fnr = {
+	BLGUM = {
 		pattern = "pattern_tricolor_vertical_01.dds"
 		color1 = "black"
 		color2 = "yellow"
 		color3 = "red"
 	}
 # Benelux
-	BENELUX_fnr = {
+	BNLUX = {
 		pattern = "pattern_tricolor_horizontal_01.dds"
 		color1 = "red"
 		color2 = "white"
 		color3 = "blue"
 	}
 # Bremen-Verden TODO: fix
-	BREMENVERDEN_fnr = {
+	BMNVD = {
 		pattern = "pattern_solid.dds"
 		color1 = "red"
 	}
 # Bulgarian Empire
-	BULGEMPIRE_fnr = {
+	BLGEM = {
 		pattern = "pattern_tricolor_horizontal_01.dds"
 		color1 = "white"
 		color2 = "green"
 		color3 = "red"
 	}
 # British Empire
-	BRITISHEMPIRE_fnr = {
+	BISHE = {
 		pattern = "pattern_cross.dds"
 		color1 = "white"
 		color2 = "red"
 	}
 # Alpland TODO: fix
-	ALPLAND_fnr = {
+	ALPLN = {
 		pattern = "pattern_solid.dds"
 		color1 = "blue_sky"	
 	}
 # Cisalpina	
-	CISALPINA_fnr = {
+	CSPNA = {
 		pattern = "pattern_tricolor_horizontal_01.dds"
 		color1 = "red"
 		color2 = "white"
 		color3 = "green"
 	}	
 # Commonwealth of England # TODO
-	ENGLISHCOMMONWEALTH_fnr = {
+	ENGCM = {
 		pattern = "pattern_cross.dds"
 		color1 = "white"
 		color2 = "red"
 	}
 # Czechoslovakia # TODO
-	CZECKSLOVAK_fnr = {
+	CZSLO = {
 		pattern = "pattern_horizontal_split_01.dds"
 		color1 = "white"
 		color2 = "red"
@@ -249,91 +249,91 @@ WESTROMANEMPIRE_fnr = { # Roman Empire
 # Ducal Prussia
 	# TODO: uses prussia flag for now
 # Ukraine
-	UKRAINE_fnr = {
+	UKRNE = {
 		pattern = "pattern_horizontal_split_01.dds"
 		color1 = "blue"
 		color2 = "yellow"
 	}
 # Donetsk People's Republic
-	DONETSKPR_fnr = {
+	DNTPR = {
 		pattern = "pattern_horizontal_split_01.dds"
 		color1 = "red"
 		color2 = "blue"
 		color3 = "black"
 	}
 # Luhansk People's Republic
-	LUHANSKPR_fnr = {
+	LUHPR = {
 		pattern = "pattern_horizontal_split_01.dds"
 		color1 = "blue_sky"
 		color2 = "blue"
 		color3 = "red"
 	}
 # Emilia-Romagna
-	EMILIAROMAGNA_fnr = {
+	EMLRO = {
 		pattern = "pattern_cross.dds"
 		color1 = "white"
 		color2 = "red"
 	}
 # European Union # TODO
-	EUROPEANUNION_fnr = {
+	EUROP = {
 		pattern = "pattern_solid.dds"
 		color1 = "blue"
 	}
 # French Empire
-	FRENCHEMPIRE_fnr = {
+	FNCEM = {
 		pattern = "pattern_tricolor_vertical_01.dds"
 		color1 = "blue"
 		color2 = "white"
 		color3 = "red"
 	}
 # German Empire
-	GERMANEMPIRE_fnr = {
+	GMNEM = {
 		pattern = "pattern_tricolor_horizontal_01.dds"
 		color1 = "black"
 		color2 = "white"
 		color3 = "red"
 	}
 # German Reich
-	GERMANREICH_fnr = {
+	GMNRE = {
 		pattern = "pattern_mena_round_frame_shield.dds"
 		color1 = "red"
 		color2 = "white"
 	}	
 # Greater German Reich
-	GREATERGERMANREICH_fnr = {
+	GTRGM = {
 		pattern = "pattern_tricolor_horizontal_01.dds"
 		color1 = "black"
 		color2 = "white"
 		color3 = "red"
 	}
 # Nazi Germany
-	NAZIGERMANY_fnr = {
+	NAZIG = {
 		pattern = "pattern_mena_round_frame_shield.dds"
 		color1 = "red"
 		color2 = "white"
 	}
 # Hanseatic League
-	HANSALEAGUE_fnr = {
+	HNSLG = {
 		pattern = "pattern_horizontal_split_01.dds"
 		color1 = "red"
 		color2 = "white"
 	}
 # Hanseatic League
-	HESSENASSAU_fnr = {
+	HESNA = {
 		pattern = "pattern_tricolor_horizontal_01.dds"
 		color1 = "red"
 		color2 = "white"
 		color3 = "blue_sky"
 	}
 # Italian Empire
-	ITALIANEMPIRE_fnr = {
+	ITNEM = {
 		pattern = "pattern_tricolor_horizontal_01.dds"
 		color1 = "red"
 		color2 = "white"
 		color3 = "green"
 	}
 # Kalmar Union
-	KALMARUNION_fnr = {
+	KLMUN = {
 		pattern = "pattern_cross.dds"
 		color1 = "red"
 		color2 = "yellow"
@@ -350,334 +350,334 @@ WESTROMANEMPIRE_fnr = { # Roman Empire
 		color1 = "green"
 	}
 # Lombardy-Venetia
-	LOMBARDYVENETIA_fnr = {
+	LMBYV = {
 		pattern = "pattern_border_thin.dds"
 		color1 = "green_pine"
 		color2 = "black"
 	}
 # Lower Saxony
-	LOWERSAXONY_fnr = {
+	LWSXY = {
 		pattern = "pattern_tricolor_horizontal_01.dds"
 		color1 = "black"
 		color2 = "red"
 		color3 = "yelow"		
 	}
 # Malta
-	MALTA_fnr = {
+	MALTA = {
 		pattern = "pattern_vertical_split_01.dds"
 		color1 = "white"
 		color2 = "red"
 	}
 # Mercia
-	MERCIA_fnr = { # TODO
+	MRCIA = { # TODO
 		pattern = "pattern_cross.dds"
 		color1 = "blue"
 		color2 = "yellow"
 	}
 # Russian Empire
-	RUSSIANEMPIRE_fnr = {
+	RUSEM = {
 		pattern = "pattern_tricolor_horizontal_01.dds"
 		color1 = "black"
 		color2 = "yellow"
 		color3 = "white"
 	}
 # Russian Federation
-	RUSSIANFED_fnr = {
+	RUFED = {
 		pattern = "pattern_tricolor_horizontal_01.dds"
 		color1 = "white"
 		color2 = "blue"
 		color3 = "red"
 	}
 # Serbian Empire
-	SERBEMPIRE_fnr = {
+	SRBEM = {
 		pattern = "pattern_tricolor_horizontal_01.dds"
 		color1 = "red"
 		color2 = "blue_light"
 		color3 = "white"		
 	}
 # Soviet Union	
-	SOVIETUNION_fnr = {
+	SOVET = {
 		pattern = "pattern_solid.dds"
 		color1 = "red_scarlet"	
 	}
 # Sweden-Norway
-	SWEDENNORWAY_fnr = {
+	SDNNW = {
 		pattern = "pattern_cross.dds"
 		color1 = "blue"
 		color2 = "yellow"
 	}
 # Turkey
-	TURKEY_fnr = {
+	TURKY = {
 		pattern = "pattern_solid.dds"
 		color1 = "red"	
 	}	
 # The United Kingdom TODO: fix
-	UNITEDKINGDOM_fnr = {
+	UKKDM = {
 		pattern = "pattern_cross.dds"
 		color1 = "white"
 		color2 = "red"
 	}
 # Wendish Empire
-	WENDISHEMPIRE_fnr = {
+	WNDEM = {
 		pattern = "pattern_solid.dds"
 		color1 = "red"	
 	}	
 # Armenian Empire
-	ARMENIAEMPIRE_fnr = {
+	AMNAE = {
 		pattern = "pattern_solid.dds"
 		color1 = "red_scarlet"	
 	}	
 # Arabian Empire
-	ARABIANEMPIRE_fnr = {
+	ARABE = {
 		pattern = "pattern_solid.dds"
 		color1 = "green"	
 	}	
 # Caucasia
-	CAUCASIA_fnr = {
+	CCASA = {
 		pattern = "pattern_horizontal_stripes_01.dds"
 		color1 = "green"	
 		color2 = "white"	
 	}	
 # Empire of China
-	CHINAEMPIRE_fnr = {
+	CNAEM = {
 		pattern = "pattern_jurchen_checky_colours.dds"
 		color1 = "blue"	
 		color2 = "white"	
 		color3 = "yellow"	
 	}	
 # Goguryeo
-	GOGURYEO_fnr = {
+	GGURY = {
 		pattern = "pattern_solid.dds"
 		color1 = "brick"		
 	}	
 # Korea
-	KOREA_fnr = {
+	KOREA = {
 		pattern = "pattern_mena_round_frame_shield.dds"
 		color1 = "white"
 		color2 = "blue"	
 	}	
 # Himalayan Empire
-	HIMALAYA_fnr = {
+	HMLAY = {
 		pattern = "pattern_solid.dds"
 		color1 = "white"	
 	}	
 # Afghanistan	
-	AFGHANISTAN_fnr = {
+	AFGAN = {
 		pattern = "pattern_tricolor_vertical_01.dds"
 		color1 = "black"
 		color2 = "red"
 		color3 = "green"
 	}
 # Mingrelia
-	MINGRELIA_fnr = {
+	MNGRL = {
 		pattern = "pattern_quarterly_q2_q3_per_pale.dds"
 		color1 = "blue"
 		color2 = "red"	
 		color3 = "yellow"	
 	}
 # North Korea
-	NORTHKOREA_fnr = {
+	NKORA = {
 		pattern = "pattern_mena_round_frame_shield.dds"
 		color1 = "white"
 		color2 = "blue"	
 	}	
 # South Korea
-	SOUTHKOREA_fnr = {
+	SKORA = {
 		pattern = "pattern_mena_round_frame_shield.dds"
 		color1 = "white"
 		color2 = "blue"	
 	}	
 # Omani Empire	
-	OMANIEMPIRE_fnr = {
+	OMANE = {
 		pattern = "pattern_solid.dds"
 		color1 = "red"	
 	}	
 # People's Republic of China
-	PRC_fnr = {
+	PRCCN = {
 		pattern = "pattern_solid.dds"
 		color1 = "red"	
 	}	
 # Republic of China	
-	ROC_fnr = {
+	ROCCN = {
 		pattern = "pattern_canton_02.dds"
 		color1 = "blue"	
 		color2 = "red"	
 	}	
 # Philippines	
-	PHILIPPINES_fnr = {
+	FILPN = {
 		pattern = "pattern_solid.dds"
 		color1 = "blue"	
 	}		
 # Saudi Arabia
-	SAUDIS_fnr = {
+	SAUDI = {
 		pattern = "pattern_solid.dds"
 		color1 = "green"	
 	}	
 # Sulawesi
-	SULAWESI_fnr = {
+	SULAW = {
 		pattern = "pattern_mena_round_frame_shield.dds"
 		color1 = "white"
 		color2 = "orange"	
 	}	
 # Taiping
-	TAIPING_fnr = {
+	TPING = {
 		pattern = "pattern_solid.dds"
 		color1 = "yellow"	
 	}	
 # Taliban
-	TALIBAN_fnr = {
+	TLBAN = {
 		pattern = "pattern_mena_round_frame_shield.dds"
 		color1 = "white"
 		color2 = "black"
 	}	
 # Tengoku
-	TENGOKU_fnr = {
+	TNGKU = {
 		pattern = "pattern_mena_round_frame_shield.dds"
 		color1 = "white"
 		color2 = "yellow"
 	}
 # The Horde	
-	HORDE_fnr = {
+	HORDE = {
 		pattern = "pattern_mena_round_frame_shield.dds"
 		color1 = "green_pine"
 		color2 = "green"
 	}	
 # Tibetan Empire
-	TIBETEMPIRE_fnr = {
+	TBETE = {
 		pattern = "pattern_tricolor_vertical_01.dds"
 		color1 = "red"
 		color2 = "blue"
 		color3 = "red"
 	}
 # United Arab Republic
-	UAR_fnr = {
+	UNARR = {
 		pattern = "pattern_tricolor_vertical_01.dds"
 		color1 = "black"
 		color2 = "white"
 		color3 = "red"
 	}
 # Vietnam
-	VIETNAM_fnr = {
+	VTNAM = {
 		pattern = "pattern_mena_round_frame_shield.dds"
 		color1 = "yellow"
 		color2 = "red"
 	}	
 # Burma
-	BURMA_fnr = {
+	BURMA = {
 		pattern = "pattern_tricolor_vertical_01.dds"
 		color1 = "red"
 		color2 = "green"
 		color3 = "yellow"
 	}	
 # Chola
-	CHOLA_fnr = {
+	CHOLA = {
 		pattern = "pattern_per_saltire_shield.dds"
 		color1 = "red"
 		color2 = "white"
 		color3 = "red"
 	}	
 # Ceylon		
-	CHOLA_fnr = {
+	CHOLA = {
 		pattern = "pattern_border_venice.dds"
 		color1 = "yellow"
 		color2 = "brick"
 	}	
 # Abyssinia
-	ABYSSINIA_fnr = {
+	ABYSA = {
 		pattern = "pattern_tricolor_vertical_01.dds"
 		color1 = "red"
 		color2 = "yellow"
 		color3 = "green"
 	}	
 # Chad
-	CHAD_fnr = {
+	ACHAD = {
 		pattern = "pattern_tricolor_horizontal_01.dds"
 		color1 = "blue"
 		color2 = "yellow"
 		color3 = "red"
 	}
 # Madagascar
- 	MADAGASCAR_fnr = {
+ 	MDGSC = {
 		pattern = "pattern_tricolor_horizontal_01.dds"
 		color1 = "white"
 		color2 = "yellow"
 		color3 = "red"
 	}		
 # Rhodesia
- 	RHODESIA_fnr = {
+ 	RHDSA = {
 		pattern = "pattern_tricolor_horizontal_01.dds"
 		color1 = "green"
 		color2 = "white"
 		color3 = "green"
 	}	
 # Manchuria
- 	MANCHURIA_fnr = {
+ 	MNCRA = {
 		pattern = "pattern_solid.dds"
 		color1 = "yellow"
 	}	
 # Israel
- 	ISRAEL_fnr = {
+ 	ISREL = {
 		pattern = "pattern_solid.dds"
 		color1 = "white"
 	}				
 # Palestine
- 	PALESTINE_fnr = {
+ 	PLSTN = {
 		pattern = "pattern_tricolor_horizontal_01.dds"
 		color1 = "green"
 		color2 = "white"
 		color3 = "black"
 	}				
 # Alaska
- 	ALASKA_fnr = {
+ 	ALSKA = {
 		pattern = "pattern_solid.dds"
 		color1 = "blue_sky"
 	}	
 # Arpitania
- 	ARPIT_fnr = {
+ 	ARPIT = {
 		pattern = "pattern_cross.dds"
 		color1 = "white"
 		color2 = "red_mid"
 	}	
 # Adriatic Empire
- 	ADRIATICEMP_fnr = {
+ 	ADREM = {
 		pattern = "pattern_tricolor_horizontal_01.dds"
 		color1 = "red"
 		color2 = "white"
 		color3 = "red"
 	}	
 # Anglo-Dutch Union
-	ANGLODUTCH_fnr = {
+	ANDUH = {
 		pattern = "pattern_tricolor_vertical_01.dds"
 		color1 = "orange"
 		color2 = "white"
 		color3 = "blue"
 	}	
 # Kingdom of Aquitaine
- 	KOAQUITAINE_fnr = {
+ 	AQUIT = {
 		pattern = "pattern_solid.dds"
 		color1 = "red"
 	}	
 # Occitania	
- 	OCCITANIA_fnr = {
+ 	OCCIT = {
 		pattern = "pattern_solid.dds"
 		color1 = "red_mid"
 	}	
 # Balkan League
-	BALKLEAGUE_fnr = {
+	BLKLG = {
 		pattern = "pattern_tricolor_horizontal_01.dds"
 		color1 = "red"
 		color2 = "blue_light"
 		color3 = "white"		
 	}
 # Bosnia-Serbia
-	BOSNIASERBIA_fnr = {
+	BSSER = {
 		pattern = "pattern_tricolor_horizontal_01.dds"
 		color1 = "red"
 		color2 = "blue"
 		color3 = "white"		
 	}
 # Catholica Russica
-	CATHOLICARUS_fnr = {
+	CATRU = {
 		pattern = "pattern_solid.dds"
 		color1 = "yellow"		
 	}
@@ -685,34 +685,34 @@ WESTROMANEMPIRE_fnr = { # Roman Empire
 	# Uses ireland flag for now
 
 # Carolingian Empire
-	CAROLINGIAN_fnr = {
+	CAROL = {
 		pattern = "pattern_solid.dds"
 		color1 = "orange"		
 	}	
 # Dacia
-	DACIA_fnr = {
+	DACIA = {
 		pattern = "pattern_solid.dds"
 		color1 = "indigo"		
 	}	
 # Dual Monarchy	
-	DUALMONARCHY_fnr = {
+	DLMON = {
 		pattern = "pattern_solid.dds"
 		color1 = "indigo"		
 	}	
 # East Slavia
-	EASTSLAVIA_fnr = {
+	ESLAV = {
 		pattern = "pattern_solid.dds"
 		color1 = "purple_mid"		
 	}	
 # Franco-Iberian Empire		
-	FRANCOIBERIANEMP_fnr = {
+	FNCIB = {
 		pattern = "pattern_tricolor_vertical_01.dds"
 		color1 = "red"
 		color2 = "yellow"
 		color3 = "blue"		
 	}		
 # Frieslande (Germanized Dutch basically)
-	FRIESLANDE_fnr = {
+	FIESL = {
 		pattern = "pattern_tricolor_vertical_01.dds"
 		color1 = "orange"
 		color2 = "white"
@@ -725,13 +725,13 @@ WESTROMANEMPIRE_fnr = { # Roman Empire
 	# Uses hungary flag for now
 
 # Iberian Empire
-	FRIESLANDE_fnr = {
+	FIESL = {
 		pattern = "pattern_cross.dds"
 		color1 = "yellow"
 		color2 = "red"
 	}	
 # Italian Merchant Alliance
-	ITALIANMERCHANT_fnr = {
+	ITMCH = {
 		pattern = "pattern_tricolor_horizontal_01.dds"
 		color1 = "red"
 		color2 = "white"
@@ -741,7 +741,7 @@ WESTROMANEMPIRE_fnr = { # Roman Empire
 	# Uses polish flag for now
 	
 # Ummayad Caliphate
-	UMMAYADS_fnr = {
+	UMAYA = {
 		pattern = "pattern_solid.dds"
 		color1 = "white"	
 	}
@@ -750,29 +750,29 @@ WESTROMANEMPIRE_fnr = { # Roman Empire
 	# Uses Germany flag
 
 # Lusitanian Empire
-	LUSITANIANEMP_fnr = {
+	LUSIT = {
 		pattern = "pattern_vertical_split_01.dds"
 		color1 = "blue_sky"
 		color2 = "white"
 	}
 # Macedonia
-	MACEDONIA_fnr = {
+	MACED = {
 		pattern = "pattern_solid.dds"
 		color1 = "purple_mid"	
 	}
 # Macedonian Empire
-	MACEDONIA_fnr = {
+	MACED = {
 		pattern = "pattern_solid.dds"
 		color1 = "purple"	
 	}
 # North Sea Empire	
-	NORTHSEAEMPIRE_fnr = {
+	NOSEM = {
 		pattern = "pattern_cross.dds"
 		color1 = "white"
 		color2 = "black"
 	}	
 # Pontus
-	PONTUS_fnr = {
+	PONTU = {
 		pattern = "pattern_solid.dds"
 		color1 = "blue_sky"	
 	}	

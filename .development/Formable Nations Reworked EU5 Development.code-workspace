@@ -1,14 +1,10 @@
 {
-	"folders": [
-		{
-			"path": ".."
-		},
-		{
-			"path": "D:/SteamLibrary/steamapps/common/Europa Universalis V"
-		},
-		{
-			"path": "../../../logs"
-		}
-	],
-	"settings": {}
+    "folders": [
+        {
+            "path": ".."
+        },
+        {
+            "path": "D:/SteamLibrary/steamapps/common/Europa Universalis V"
+        }
+    ]
 }

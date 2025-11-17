@@ -1,13 +1,16 @@
 {
 	"folders": [
 		{
+			"name": "Formable Nations Reworked",
 			"path": "."
 		},
 		{
-			"path": "../../logs"
+			"name": "Europa Universalis V",
+			"path": "D:/SteamLibrary/steamapps/common/Europa Universalis V"
 		},
 		{
-			"path": "D:/SteamLibrary/steamapps/common/Europa Universalis V"
+			"name": "logs",
+			"path": "../../logs"
 		}
 	],
 	"settings": {}
