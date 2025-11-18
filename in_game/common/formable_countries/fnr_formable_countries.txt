@@ -1466,12 +1466,14 @@
 		}
 	}
 
+	# Celtic Union
 	CEL_f = {
 		level = 3
 		required_locations_fraction = 0.9
 		rule = plausible
 		
 		potential = {
+			has_variable = fnr_althistory_enabled 
 			culture = { has_culture_group = culture_group:celtic_group }
 		}
 
@@ -4107,7 +4109,7 @@
 		# Basque Country - Non-historical
 			BASQU = {
 				level = 3
-				required_locations_fraction = 0.15
+				required_locations_fraction = 0.65
 				rule = plausible
 				potential = {
 					has_variable = fnr_nonhistorical_enabled
@@ -4220,10 +4222,11 @@
 		# Ducal Prussia
 			DCLPR = {
 				level = 2
-				required_locations_fraction = 0.30
+				required_locations_fraction = 0.70
 				rule = plausible
 				potential = {
 					has_variable = fnr_historical_enabled 
+					tag = TEU
 					NOT = { 
 						OR = {
 							tag = DCLPR
@@ -4570,6 +4573,14 @@
 					}
 					culture = { has_culture_group = culture_group:german_group }
 				}
+				allow = {
+					AND = {
+						owns = location:vienna
+						owns = location:salzburg
+						owns = location:landshut
+						owns = location:munich
+					}
+				}
 				name = ASTBV
 				flag = ASTBV
 				adjective = ASTBV_ADJ
@@ -4587,8 +4598,31 @@
 				}
 				form_effect = {
 					if = {
-						limit = { country_rank_level < 4 }
-						set_country_rank_effect = { rank = country_rank:rank_empire }
+						limit = { country_rank_level < 3 }
+						set_country_rank_effect = { rank = country_rank:rank_kingdom }
+					}
+					custom_tooltip = { text = ASTBV_formable_trigger_1_tt }
+					custom_tooltip = { text = ASTBV_formable_trigger_2_tt }
+					if = {
+						limit = {
+							OR = {
+								tag = LBV
+								tag = UBV
+								tag = BAV
+							}
+						}
+						location:salzburg = { rename_location = Mittnland }
+						location:vienna = { rename_location = Ostmark }
+					}
+					if = {
+						limit = {
+							OR = {
+								tag = HAB
+								tag = SAL
+							}
+						}
+						location:salzburg = { rename_location = Isarburg }
+						location:munich = { rename_location = Monachium }					
 					}
 				}
 			}	
@@ -6004,7 +6038,7 @@
 		# French Empire - Historical
 			FNCEM = {
 				level = 4
-				required_locations_fraction = 0.10
+				required_locations_fraction = 0.75
 				rule = plausible
 				potential = {
 					has_variable = fnr_historical_enabled 
@@ -6166,7 +6200,7 @@
 		# Kyivan Rus - Non-historical
 			KYVRU = {
 				level = 4
-				required_locations_fraction = 0.15
+				required_locations_fraction = 0.65
 				rule = plausible
 				potential = {
 					has_variable = fnr_nonhistorical_enabled 
@@ -6760,7 +6794,10 @@
 							tag_exists = CTUNN
 						}
 					}
-					culture = { has_culture_group = culture_group:british_group }
+					OR = {
+						tag = BRI
+						culture = { has_culture_group = culture_group:celtic_group }
+					}
 				}
 				name = CTUNN
 				flag = IRE_green
@@ -7138,7 +7175,7 @@
 		# The Horde - Fantasy (KILL ALL OTHER HORDES AND BECOME THE ONLY HORDE)
 			HORDE = {
 				level = 5
-				required_locations_fraction = 1
+				required_locations_fraction = 0.5
 				rule = plausible
 				potential = { 
 					has_variable = fnr_fantasy_enabled
@@ -7160,7 +7197,7 @@
 		# Carolingian Empire - Non-historical (TODO: finish, lots of territory)
 			CAROL = {
 				level = 5
-				required_locations_fraction = 0.90
+				required_locations_fraction = 0.01
 				rule = plausible
 				potential = {
 					has_variable = fnr_nonhistorical_enabled 
@@ -7256,7 +7293,7 @@
 					}
 				}
 				name = DLMON
-				flag = GBR_fleurs
+				flag = DLMON
 				adjective = DLMON_ADJ
 				tag = DLMON
 				color = map_DLMON

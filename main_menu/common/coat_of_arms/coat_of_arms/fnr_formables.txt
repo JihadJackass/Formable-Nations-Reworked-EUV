@@ -25,14 +25,6 @@ NSE_WHITE_FNR = { # North Sea Empire
 	}
 }
 
-# Illyria
-ILYRA = {
-	pattern = "pattern_tricolor_horizontal_01.dds"
-	color1 = "green"
-	color2 = "white"
-	color3 = "green"
-}
-
 # Eastern Roman Empire
 EASRE = { # Roman Empire
 	pattern = "pattern_solid.dds"
@@ -142,9 +134,9 @@ WESRE = { # Roman Empire
 # Yugoslavia
 	YGOSL = {
 		pattern = "pattern_jurchen_checky_colours.dds"
-		color1 = "blue"
+		color1 = "red"
 		color2 = "white"
-		color3 = "red"
+		color3 = "blue"
 	}
 # Japan
 	JAPAN = {
@@ -166,19 +158,6 @@ WESRE = { # Roman Empire
 # Alsace-Lorraine
 	ALSLO = {
 		pattern = "pattern_horizontal_split_01.dds"
-		color1 = "red"
-		color2 = "white"
-	}
-# Austria-Bavaria TODO: fix
-	ASTBV = {
-		pattern = "pattern_jurchen_checky_colours.dds"
-		color1 = "blue"
-		color2 = "white"
-		color3 = "red"
-	}
-# Basque Country TODO: fix
-	BASQU = {
-		pattern = "pattern_cross.dds"
 		color1 = "red"
 		color2 = "white"
 	}
@@ -356,7 +335,7 @@ WESRE = { # Roman Empire
 		color2 = "yellow"
 	}
 # Lombardy # TODO
-	LOMBARDY_fnr = {
+	LMBDY = {
 		pattern = "pattern_solid.dds"
 		color1 = "green"
 	}
@@ -398,13 +377,6 @@ WESRE = { # Roman Empire
 		color1 = "white"
 		color2 = "blue"
 		color3 = "red"
-	}
-# Serbian Empire
-	SRBEM = {
-		pattern = "pattern_tricolor_horizontal_01.dds"
-		color1 = "red"
-		color2 = "blue_light"
-		color3 = "white"		
 	}
 # Soviet Union	
 	SOVET = {
@@ -547,12 +519,6 @@ WESRE = { # Roman Empire
 		color1 = "white"
 		color2 = "yellow"
 	}
-# The Horde	
-	HORDE = {
-		pattern = "pattern_mena_round_frame_shield.dds"
-		color1 = "green_pine"
-		color2 = "green"
-	}	
 # Tibetan Empire
 	TBETE = {
 		pattern = "pattern_tricolor_vertical_01.dds"
@@ -692,25 +658,8 @@ WESRE = { # Roman Empire
 		pattern = "pattern_solid.dds"
 		color1 = "yellow"		
 	}
-# Celtic Union
-	BSSER = {
-		pattern = "pattern_tricolor_horizontal_01.dds"
-		color1 = "green"
-		color2 = "white"
-		color3 = "green"		
-	}
-# Carolingian Empire
-	CAROL = {
-		pattern = "pattern_solid.dds"
-		color1 = "orange"		
-	}	
 # Dacia
 	DACIA = {
-		pattern = "pattern_solid.dds"
-		color1 = "indigo"		
-	}	
-# Dual Monarchy	
-	DLMON = {
 		pattern = "pattern_solid.dds"
 		color1 = "indigo"		
 	}	

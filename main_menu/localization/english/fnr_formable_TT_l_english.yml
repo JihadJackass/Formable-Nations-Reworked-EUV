@@ -6,7 +6,8 @@
     # Formable Requirement Tooltips #
     #################################
 
-    # todo
+    ASTBV_formable_trigger_1_tt: "If #Y Austria-Bavaria#! is formed by [GetCountry('HAB').GetNameWithFlag] various Bavarian locations will be renamed in an #Y Austrian-linguistic#! style."
+    ASTBV_formable_trigger_2_tt: "If #Y Austria-Bavaria#! is formed by #Y Bavaria#!, [GetCountry('LBV').GetNameWithFlag] or [GetCountry('UBV').GetNameWithFlag] various Austrian locations will be renamed in an #Y Bavarian-linguistic#! style."
 
     ###################
     # GUI localiation #

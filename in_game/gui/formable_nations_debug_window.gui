@@ -5,11 +5,23 @@ window = {
 	parentanchor = hcenter|vcenter
 	filter_mouse = all
 	allow_outside = yes
-	visible = "[GetPlayer.IsValid]"
+	#visible = "[GetPlayer.IsValid]" # TODO: fix this making it show upon startup
 	size = { 1000 300 }
+	visible = "[GetVariableSystem.Exists('formable_nations_debug_window_open')]"
 	using = bg_window_default_alt
 	#using = bg_age_event_frame
 	# Entire window
+	widget = {
+		parentanchor = top|right
+		position = { -15 15 }
+		size = { 40 40 }
+		
+		button_close_alt = {
+			blockoverride "close_onclick" {
+				onclick = "[GetVariableSystem.Toggle('formable_nations_debug_window_open')]"
+			}
+		}
+	}
 	vbox = {
 		margin = { 100 10 }
 		window_header_alt = {
@@ -19,10 +31,9 @@ window = {
 			}
 			blockoverride "button_close" {
 				button_close_normal = {
-					visible = yes
-					enabled = yes
+					parentanchor = top|right
+					position = { -10 10 }
 					onclick = "[GetVariableSystem.Toggle('formable_nations_debug_window_open')]"
-					onclick = "[ExecuteConsoleCommand('gui.ClearWidgets formable_nations_debug_window')]"
 				}
 			}
 		}

@@ -1,0 +1,254 @@
+# FNR CUSTOM FLAG SUBS
+
+# Basque Country
+BASQU = {
+    sub = {
+        parent = "sub_fnr_BASQU"
+    }
+}
+sub_fnr_BASQU = {
+    pattern = "pattern_solid.dds"
+    color1 = "red"      # RED background (was green)
+    color2 = "white"
+    color3 = "green"
+    colored_emblem = {
+        texture = "ce_saltire_thin.dds"
+        color1 = color3   # GREEN saltire
+        color2 = color3
+    }
+    colored_emblem = {
+        texture = "ce_basque_cross.dds"
+        color1 = color2   # WHITE cross on top
+        color2 = color2
+    }
+}
+# Serbian Empire
+SRBEM = {
+    sub = {
+        parent = "sub_fnr_SRBEM"
+    }
+}
+sub_fnr_SRBEM = {
+    pattern = "pattern_solid.dds"
+    color1 = hsv360{ 45 35 100 }    # Golden yellow
+    color2 = hsv360{ 0 80 80 }     # Red for the eagle
+    
+    colored_emblem = {
+        texture = "ce_eagle_double_headed_shield.dds"  # or your custom eagle
+        color1 = color2
+        color2 = color2
+        instance = { 
+            position = { 0.5 0.5 }
+            scale = { 0.6 0.6 }
+        }
+    }
+}
+# Dual Monarchy
+DLMON = {
+    pattern = "pattern_solid.dds"
+    color1 = "blue"
+    color2 = "white"
+    color3 = "red"
+    color4 = "yellow"
+    
+    # White-bordered red cross
+    colored_emblem = {
+        texture = "ce_cross_fimbriated.dds"  # Cross with white border
+        color1 = color2  # White border
+        color2 = color3  # Red cross
+    }
+    
+    # Top-left: 2 English lions
+    colored_emblem = {
+        texture = "ce_lion_passant.dds"
+        color1 = color4
+        color2 = color4
+        instance = { position = { 0.20 0.10 } scale = { 0.5 0.20 } }
+    }
+    colored_emblem = {
+        texture = "ce_lion_passant.dds"
+        color1 = color4
+        color2 = color4
+        instance = { position = { 0.20 0.25 } scale = { 0.5 0.20 } }
+    }
+    
+    # Top-right: Fleur-de-lis
+    colored_emblem = {
+        texture = "ce_fleur_de_lis.dds"
+        color1 = color4
+        color2 = color4
+        instance = { position = { 0.80 0.15 } scale = { 0.25 0.25 } }
+    }
+    
+    # Bottom-left: Fleur-de-lis
+    colored_emblem = {
+        texture = "ce_fleur_de_lis.dds"
+        color1 = color4
+        color2 = color4
+        instance = { position = { 0.20 0.85 } scale = { 0.25 0.25 } }
+    }
+    
+    # Bottom-right: Fleur-de-lis
+    colored_emblem = {
+        texture = "ce_fleur_de_lis.dds"
+        color1 = color4
+        color2 = color4
+        instance = { position = { 0.80 0.85 } scale = { 0.25 0.25 } }
+    }
+}
+# Carolingian Empire
+CAROL = {
+    sub = {
+        parent = "sub_fnr_HORDE"
+    }
+}
+sub_fnr_CAROL = {
+    pattern = "pattern_vertical_split_01.dds"  # Vertical split down middle
+    color1 = "yellow"   # Left side (gold)
+    color2 = "blue"     # Right side
+    color3 = "black"    # Eagle
+    color4 = "yellow"   # Fleur-de-lis
+    
+    # Black eagle on left half
+    colored_emblem = {
+        texture = "ce_eagle_half.dds"  # or ce_eagle_displayed.dds
+        color1 = color3
+        color2 = color3
+        instance = { position = { 0.48 0.5 } scale = { 1.5 1 } }
+    }
+    colored_emblem = { # top left
+        texture = "ce_fleur_de_lis.dds"
+        color1 = color4
+        color2 = color4
+        instance = { position = { 0.60 0.20 } scale = { 0.30 0.30 } }
+    }
+    colored_emblem = { # center top
+        texture = "ce_fleur_de_lis.dds"
+        color1 = color4
+        color2 = color4
+        instance = { position = { 0.75 0.35 } scale = { 0.30 0.30 } }
+    }
+    colored_emblem = { # top right
+        texture = "ce_fleur_de_lis.dds"
+        color1 = color4
+        color2 = color4
+        instance = { position = { 0.90 0.20 } scale = { 0.30 0.30 } }
+    }
+    colored_emblem = { # bottom left
+        texture = "ce_fleur_de_lis.dds"
+        color1 = color4
+        color2 = color4
+        instance = { position = { 0.60 0.55 } scale = { 0.30 0.30 } }
+    }
+    colored_emblem = { # top right
+        texture = "ce_fleur_de_lis.dds"
+        color1 = color4
+        color2 = color4
+        instance = { position = { 0.90 0.55 } scale = { 0.30 0.30 } }
+    }
+    colored_emblem = { # center bottom
+        texture = "ce_fleur_de_lis.dds"
+        color1 = color4
+        color2 = color4
+        instance = { position = { 0.75 0.75 } scale = { 0.30 0.30 } }
+    }
+}	
+# The Horde	
+HORDE = {
+    sub = {
+        parent = "sub_fnr_HORDE"
+    }
+}
+sub_fnr_HORDE = {
+    pattern = "pattern_solid.dds"
+    color1 = "green"
+    color2 = "yellow"
+    color3 = "red"
+    colored_emblem = { # thin border
+        texture = "ce_border_thin.dds"
+        color1 = color3  # Red
+        color2 = color3
+       # instance = { position = { 0.5 0.5 } scale = { 0.85 0.85 } }
+    }
+    colored_emblem = { # Red star acting as stroke behind yellow star
+        texture = "ce_horde.dds"
+        color1 = color3  # Red
+        color2 = color3
+        instance = { position = { 0.5 0.5 } scale = { 0.85 0.85 } }
+    }
+    colored_emblem = { # Yellow star
+        texture = "ce_horde.dds"
+        color1 = color2  # Yellow
+        color2 = color2
+        instance = { position = { 0.5 0.5 } scale = { 0.70 0.70 } }
+    }
+    colored_emblem = { # Red star acting as stroke behind yellow star
+        texture = "ce_horde.dds"
+        color1 = color3  # Red
+        color2 = color3
+        instance = { position = { 0.5 0.5 } scale = { 0.55 0.55 } }
+    }
+}
+# Austria-Bavaria TODO: fix
+ASTBV = {
+    sub = {
+        parent = "sub_fnr_ASTBV"
+    }
+}
+sub_fnr_ASTBV = {
+    pattern = "pattern_quarterly_flag.dds"
+    color1 = "blue"     # Top-left quarter
+    color2 = "red"      # Top-right quarter  
+    color3 = "red"      # Bottom-left quarter
+    color4 = "blue"     # Bottom-right quarter
+    color5 = "white"    # For lozenges
+    # Bavaria lozenges in top-left quarter
+    colored_emblem = {
+        texture = "ce_lozengy_bend_shield.dds"
+        color1 = color1  # Blue
+        color2 = color5  # White
+        instance = { 
+            position = { 0.25 0.25 } 
+            scale = { 0.50 0.50 }
+        }
+    }
+    # Bavaria lozenges in bottom-right quarter
+    colored_emblem = {
+        texture = "ce_lozengy_bend_shield.dds"
+        color1 = color1
+        color2 = color5
+        instance = { 
+            position = { 0.75 0.75 } 
+            scale = { 0.50 0.50 }
+        }
+    }
+    # Austria tricolor in top-right quarter
+    colored_emblem = {
+        texture = "ce_tricolor_horizontal.dds"
+        color1 = "red"    # Top stripe
+        color2 = "white"  # Middle stripe
+        color3 = "red"    # Bottom stripe
+        instance = { 
+            position = { 0.75 0.25 } 
+            scale = { 0.50 0.50 }
+        }
+    }
+
+    # Austria tricolor in bottom-left quarter
+    colored_emblem = {
+        texture = "ce_tricolor_horizontal.dds"
+        color1 = "red"
+        color2 = "white"
+        color3 = "red"
+        instance = { 
+            position = { 0.25 0.75 } 
+            scale = { 0.50 0.50 }
+        }
+    }
+}
+# Illyria
+ILYRA = {
+	pattern = "pattern_horizontal_split_01.dds"
+	color1 = "white"
+	color2 = "red"
+}

@@ -20,17 +20,21 @@ FormableNationReworked_toggle_historical_formables = {
 	}
 	
 	effect = {
-		# Toggle the variable on/off
+		# Check player's current state
 		if = {
-			limit = { 
-				has_variable = fnr_historical_enabled 
+			limit = { has_variable = fnr_historical_enabled }
+			# Currently enabled, so disable for ALL countries
+			every_country = {
+				remove_variable = fnr_historical_enabled
 			}
-			remove_variable = fnr_historical_enabled
 		}
 		else = {
-			set_variable = {
-				name = fnr_historical_enabled
-				value = yes
+			# Currently disabled, so enable for ALL countries
+			every_country = {
+				set_variable = {
+					name = fnr_historical_enabled
+					value = yes
+				}
 			}
 		}
 	}
@@ -51,16 +55,21 @@ FormableNationReworked_toggle_nonhistorical_formables = {
 	}
 	
 	effect = {
+		# Check player's current state
 		if = {
-			limit = { 
-				has_variable = fnr_nonhistorical_enabled 
+			limit = { has_variable = fnr_nonhistorical_enabled }
+			# Currently enabled, so disable for ALL countries
+			every_country = {
+				remove_variable = fnr_nonhistorical_enabled
 			}
-			remove_variable = fnr_nonhistorical_enabled
 		}
 		else = {
-			set_variable = {
-				name = fnr_nonhistorical_enabled
-				value = yes
+			# Currently disabled, so enable for ALL countries
+			every_country = {
+				set_variable = {
+					name = fnr_nonhistorical_enabled
+					value = yes
+				}
 			}
 		}
 	}
@@ -81,16 +90,21 @@ FormableNationReworked_toggle_althistory_formables = {
 	}
 	
 	effect = {
+		# Check player's current state
 		if = {
-			limit = { 
-				has_variable = fnr_althistory_enabled 
+			limit = { has_variable = fnr_althistory_enabled }
+			# Currently enabled, so disable for ALL countries
+			every_country = {
+				remove_variable = fnr_althistory_enabled
 			}
-			remove_variable = fnr_althistory_enabled
 		}
 		else = {
-			set_variable = {
-				name = fnr_althistory_enabled
-				value = yes
+			# Currently disabled, so enable for ALL countries
+			every_country = {
+				set_variable = {
+					name = fnr_althistory_enabled
+					value = yes
+				}
 			}
 		}
 	}
@@ -111,16 +125,21 @@ FormableNationReworked_toggle_controversial_formables = {
 	}
 	
 	effect = {
+		# Check player's current state
 		if = {
-			limit = { 
-				has_variable = fnr_controversial_enabled 
+			limit = { has_variable = fnr_controversial_enabled }
+			# Currently enabled, so disable for ALL countries
+			every_country = {
+				remove_variable = fnr_controversial_enabled
 			}
-			remove_variable = fnr_controversial_enabled
 		}
 		else = {
-			set_variable = {
-				name = fnr_controversial_enabled
-				value = yes
+			# Currently disabled, so enable for ALL countries
+			every_country = {
+				set_variable = {
+					name = fnr_controversial_enabled
+					value = yes
+				}
 			}
 		}
 	}
@@ -142,17 +161,21 @@ FormableNationReworked_toggle_fantasy_formables = {
 	
 	effect = {
 		if = {
-			limit = { 
-				has_variable = fnr_fantasy_enabled 
+			limit = { has_variable = fnr_fantasy_enabled }
+			# Currently enabled, so disable for ALL countries
+			every_country = {
+				remove_variable = fnr_fantasy_enabled
 			}
-			remove_variable = fnr_fantasy_enabled
 		}
 		else = {
-			set_variable = {
-				name = fnr_fantasy_enabled
-				value = yes
+			# Currently disabled, so enable for ALL countries
+			every_country = {
+				set_variable = {
+					name = fnr_fantasy_enabled
+					value = yes
+				}
 			}
-		}
+		}		
 	}
 }
 
@@ -173,15 +196,19 @@ FormableNationReworked_toggle_meme_formables = {
 	
 	effect = {
 		if = {
-			limit = { 
-				has_variable = fnr_meme_enabled 
+			limit = { has_variable = fnr_meme_enabled }
+			# Currently enabled, so disable for ALL countries
+			every_country = {
+				remove_variable = fnr_meme_enabled
 			}
-			remove_variable = fnr_meme_enabled
 		}
 		else = {
-			set_variable = {
-				name = fnr_meme_enabled
-				value = yes
+			# Currently disabled, so enable for ALL countries
+			every_country = {
+				set_variable = {
+					name = fnr_meme_enabled
+					value = yes
+				}
 			}
 		}
 	}
@@ -203,15 +230,19 @@ FormableNationReworked_toggle_modern_formables = {
 	
 	effect = {
 		if = {
-			limit = { 
-				has_variable = fnr_modern_enabled 
+			limit = { has_variable = fnr_modern_enabled }
+			# Currently enabled, so disable for ALL countries
+			every_country = {
+				remove_variable = fnr_modern_enabled
 			}
-			remove_variable = fnr_modern_enabled
 		}
 		else = {
-			set_variable = {
-				name = fnr_modern_enabled
-				value = yes
+			# Currently disabled, so enable for ALL countries
+			every_country = {
+				set_variable = {
+					name = fnr_modern_enabled
+					value = yes
+				}
 			}
 		}
 	}

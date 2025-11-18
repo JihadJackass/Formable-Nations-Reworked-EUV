@@ -211,9 +211,9 @@
     LTNEM_desc: "The Latin Empire was a feudal Crusader state established in 1204 by leaders of the Fourth Crusade on lands conquered from the Byzantine Empire, intended to replace it with a Catholic ruler. Based in Constantinople, it was a short-lived state ruled by a Catholic emperor, like Baldwin I, who was crowned in 1204. The empire gradually weakened due to internal and external conflicts, ultimately falling when the Byzantines recaptured Constantinople in 1261."
 
     # Lombardy
-    LMBDY_fnr: "Lombardy"
-    LMBDY_fnr_ADJ: "Lombardian"
-    LMBDY_fnr_desc: "Lombardy is a leading industrial and cultural region in northern Italy with a population and economy comparable to a small nation. It is Italy's most populated region, with a diverse landscape that includes the Alps and lakes like Como and Garda, and is a major economic hub in Europe known for its manufacturing, finance, and fashion industries centered in the Italian region."
+    LMBDY: "Lombardy"
+    LMBDY_ADJ: "Lombardian"
+    LMBDY_desc: "Lombardy is a leading industrial and cultural region in northern Italy with a population and economy comparable to a small nation. It is Italy's most populated region, with a diverse landscape that includes the Alps and lakes like Como and Garda, and is a major economic hub in Europe known for its manufacturing, finance, and fashion industries centered in the Italian region."
 
     # Lombardy-Venetia
     LMBYV: "Lombardy–Venetia"
