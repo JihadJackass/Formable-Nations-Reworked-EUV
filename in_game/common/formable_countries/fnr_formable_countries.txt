@@ -13,6 +13,7 @@
 # VANILLA / BASE GAME FORMABLES #
 #################################
 
+	# Scandinavia
 	SCA_f = {
 
 		level = 3
@@ -42,6 +43,7 @@
 		}
 	}
 
+	# Sweden
 	sweden_f = {
 
 		level = 2	
@@ -72,7 +74,7 @@
 		}
 	}
 
-
+	# Denmark
 	denmark_f = {
 
 		level = 2	
@@ -100,8 +102,7 @@
 		}
 	}
 
-
-
+	# 
 	DRD_f = {
 		level = 2	
 		required_locations_fraction = 0.75
@@ -139,6 +140,7 @@
 		}
 	}
 
+	# Great Britain
 	GBR_f = {
 		level = 3
 		required_locations_fraction = 0.75
@@ -224,6 +226,7 @@
 		}
 	}
 
+	# England
 	ENG_f = {
 		level = 2
 		required_locations_fraction = 0.75
@@ -258,6 +261,7 @@
 		}
 	}
 
+	# Wales
 	WLS_f = {
 		level = 2
 		required_locations_fraction = 0.75
@@ -287,6 +291,7 @@
 		}
 	}
 
+	# Scotland
 	SCO_f = {
 		level = 2
 		required_locations_fraction = 0.75
@@ -315,6 +320,7 @@
 		}
 	}
 
+	# 
 	NOL_f = {
 		level = 1
 		required_locations_fraction = 0.5
@@ -342,6 +348,7 @@
 		}
 	}
 
+	# Ireland
 	IRE_f = {
 
 		level = 2
@@ -390,6 +397,7 @@
 		}
 	}
 
+	# Netherlands
 	NED_f = {
 		level = 2
 		required_locations_fraction = 0.3
@@ -419,6 +427,7 @@
 		}
 	}
 
+	# Switzerland
 	SWI_f = {
 		level = 2
 		required_locations_fraction = 0.75
@@ -461,6 +470,7 @@
 		}
 	}
 
+	# Spain
 	SPA_f = {
 
 		level = 3
@@ -502,6 +512,7 @@
 		}
 	}
 
+	# Andalusia
 	ADU_f = { 
 
 		level = 3
@@ -546,7 +557,8 @@
 		}
 	}
 
-	AIA_f = { # Arabia 
+	# Arabia 
+	AIA_f = {
 
 		level = 3
 		required_locations_fraction = 0.75
@@ -572,6 +584,7 @@
 		}
 	}
 
+	# Egypt
 	EGY_f = { 
 
 		level = 3
@@ -629,6 +642,7 @@
 		}
 	}
 
+	# Latin Empire
 	LAT_f = { 
 
 		level = 3
@@ -659,6 +673,7 @@
 		}
 	}
 
+	# Sardinia
 	SAR_f = { 
 
 		level = 2
@@ -686,6 +701,7 @@
 		}
 	}
 
+	# Mossi
 	MSI_f = { 
 
 		level = 1
@@ -713,6 +729,7 @@
 		}
 	}
 
+	# 
 	BEJ_f = { 
 
 		level = 1
@@ -743,6 +760,7 @@
 		}
 	}
 
+	# Ethiopia
 	ETH_f = { 
 
 		level = 3
@@ -780,6 +798,7 @@
 		}
 	}
 
+	# Bavaria
 	BAV_f = { 
 
 		level = 2
@@ -815,6 +834,7 @@
 		}
 	}
 
+	# Austria
 	HAB_f = { 
 
 		level = 2
@@ -854,6 +874,7 @@
 		}
 	}
 
+	# Bohemia
 	BOH_f = { 
 		level = 2
 		required_locations_fraction = 0.75
@@ -883,7 +904,8 @@
 		}
 	}
 
-	SAX_f = { # Saxony
+	# Saxony
+	SAX_f = {
 
 		level = 2
 		required_locations_fraction = 0.25
@@ -921,7 +943,8 @@
 		}
 	}
 
-	NSA_f = { # Nassau
+	# Nassau
+	NSA_f = {
 
 		level = 1
 		required_locations_fraction = 1
@@ -947,6 +970,7 @@
 		}
 	}
 
+	# Mecklenburg
 	MKL_f = { 
 
 		required_locations_fraction = 0.75
@@ -969,6 +993,7 @@
 		}
 	}
 
+	# Pomerania
 	POM_f = { 
 
 		level = 2
@@ -993,7 +1018,8 @@
 		}
 	}
 
-	PRU_f = { #Prussia
+	# Prussia
+	PRU_f = {
 		level = 2
 		required_locations_fraction = 0.75
 		capital_required = no
@@ -1043,6 +1069,7 @@
 		}
 	}
 
+	# Latvia
 	LVA_f = { 
 		required_locations_fraction = 0.75
 		level = 2
@@ -1064,6 +1091,7 @@
 		}
 	}
 
+	# Germany
 	GER_f = {
 
 		level = 4
@@ -1091,6 +1119,7 @@
 		}
 	}
 
+	# Holy Roman Empire
 	HRE_f = {
 
 		level = 4
@@ -1122,6 +1151,7 @@
 		}
 	}
 
+	# Moldavia
 	MOL_f = {
 		required_locations_fraction = 0.9
 		level = 2
@@ -1143,7 +1173,8 @@
 		}
 	}
 
-	MAZ_f = { # Mazovia
+	# Mazovia
+	MAZ_f = {
 		level = 1
 		required_locations_fraction = 0.9
 		rule = plausible
@@ -1167,6 +1198,7 @@
 		}
 	}
 
+	# Silesia
 	SIL_f = { 
 
 		level = 2
@@ -1194,6 +1226,7 @@
 		}
 	}
 
+	# Poland
 	POL_f = { 
 
 		level = 2
@@ -1223,12 +1256,22 @@
 		}
 	}
 
+	# Polish-Lithuanian Commonwealth - Historical
 	PLC_f = { 
 
 		level = 3
 		required_locations_fraction = 0.5
 		rule = plausible
 		potential = {
+			has_variable = fnr_historical_enabled 
+			NOT = { 
+				OR = {
+					tag = PLC
+					tag_exists = PLC
+					# Prevent formable spam
+					tag = BLRUS
+				}
+			}
 			OR = {
 				culture = { has_culture_group = culture_group:polish_group }
 				culture = { has_culture_group = culture_group:lithuanian_group }
@@ -1291,7 +1334,8 @@
 		}
 	}
 
-	UKR_f = { #Ruthenia
+	# Ruthenia
+	UKR_f = {
 
 		level = 3
 		required_locations_fraction = 0.6
@@ -1326,8 +1370,9 @@
 		}
 	}
 
+	# Roman Empire
 	ROM_f = {
-		level = 4
+		level = 6
 		required_locations_fraction = 0.75
 		rule = plausible
 		
@@ -1391,6 +1436,7 @@
 		}
 	}
 
+	# Carthage
 	CTH_f = {
 		level = 2
 		required_locations_fraction = 0.7
@@ -1423,6 +1469,7 @@
 		}
 	}
 
+	# North Sea Empire
 	NSE_f = {
 		level = 4
 		required_locations_fraction = 0.5
@@ -1509,6 +1556,7 @@
 		}
 	}
 
+	#
 	MLC_f = { 
 
 		level = 2
@@ -1533,6 +1581,7 @@
 		}
 	}
 
+	# European Union
 	EUR_f = {
 		level = 5
 		required_locations_fraction = 0.5
@@ -1615,6 +1664,7 @@
 		}
 	}
 
+	# Italy
 	ITA_f = {
 		level = 3
 		required_locations_fraction = 0.75
@@ -1643,6 +1693,7 @@
 		}
 	}
 
+	# France
 	FRA_f = {
 		level = 3
 		required_locations_fraction = 0.75
@@ -1669,6 +1720,7 @@
 		}
 	}
 
+	# Lotharingia
 	LOT_f = {
 		level = 3
 		required_locations_fraction = 0.5
@@ -1676,6 +1728,7 @@
 
 		potential = {
 			OR = {
+				tag = AAC
 				culture = culture:rhine_alemannic
 				culture = culture:burgundian
 				culture = culture:franc_comtois
@@ -1712,6 +1765,7 @@
 		}
 	}
 
+	# Burgundy
 	BGP_f = {
 		level = 2
 		required_locations_fraction = 0.5
@@ -1750,6 +1804,7 @@
 		}
 	}
 
+	#
 	TWS_f = {
 		level = 2
 		required_locations_fraction = 0.8
@@ -1803,6 +1858,7 @@
 		}
 	}
 
+	# Russia
 	RUS_f = {
 		level = 4
 		required_locations_fraction = 0.5
@@ -1837,6 +1893,7 @@
 		}
 	}
 
+	# Greece
 	GRE_f = {
 		level = 2
 		required_locations_fraction = 0.5
@@ -1867,6 +1924,7 @@
 		}
 	}
 
+	# Byzantium
 	BYZ_f = {
 		level = 4
 		required_locations_fraction = 0.5
@@ -1906,6 +1964,7 @@
 		}
 	}
 
+	#
 	HEN_f = {
 		level = 2
 		required_locations_fraction = 0.5
@@ -1932,6 +1991,7 @@
 		}
 	}
 
+	# United States of America (USA) - Historical
 	USA_f = {
 		level = 4
 		required_locations_fraction = 0.35
@@ -1960,6 +2020,7 @@
 		}
 	}
 
+	# Canada
 	CAN_f = {
 		level = 3
 		required_locations_fraction = 0.35
@@ -1991,6 +2052,7 @@
 		}
 	}
 
+	# Mexico
 	MEX_f = {
 		level = 3
 		required_locations_fraction = 0.5
@@ -2026,6 +2088,7 @@
 		}
 	}
 
+	# Bengal
 	BNG_f = {
 		level = 3
 		required_locations_fraction = 0.8
@@ -2048,6 +2111,7 @@
 		}
 	}
 
+	# Delhi
 	DLH_f = {
 		level = 3
 		required_locations_fraction = 0.7
@@ -2087,6 +2151,7 @@
 		}
 	}
 
+	# Nepal
 	NPL_f = {
 		level = 2
 		required_locations_fraction = 0.7
@@ -2106,6 +2171,7 @@
 		}
 	}
 
+	# Mughals
 	MUG_f = {
 		level = 4
 		required_locations_fraction = 0.8
@@ -2142,6 +2208,7 @@
 		}
 	}
 
+	# Deccan
 	DEC_f = {
 		level = 3
 		required_locations_fraction = 0.5
@@ -2172,6 +2239,7 @@
 		}
 	}
 
+	# Maharatha
 	MHR_f = {
 		level = 3
 		required_locations_fraction = 0.5
@@ -2198,6 +2266,7 @@
 		}
 	}
 
+	# Hindustan
 	HIN_f = {
 		level = 4
 		required_locations_fraction = 0.7
@@ -2218,6 +2287,7 @@
 		}
 	}
 
+	# Punjab
 	PUN_f = {
 		level = 3
 		required_locations_fraction = 0.8
@@ -2243,6 +2313,7 @@
 		}
 	}
 
+	# Rajphutana
 	RJP_f = {
 		level = 3
 		required_locations_fraction = 0.8
@@ -2268,6 +2339,7 @@
 		}
 	}
 
+	# Gujarat
 	GUJ_f = {
 		level = 3
 		required_locations_fraction = 0.6
@@ -2295,6 +2367,7 @@
 		}
 	}
 
+	#
 	SHA_f = {
 		level = 3
 		required_locations_fraction = 0.9
@@ -2320,6 +2393,7 @@
 		}
 	}
 
+	#
 	MSA_f = {
 		level = 3
 		required_locations_fraction = 0.9
@@ -2346,6 +2420,7 @@
 		}
 	}
 
+	# Siam
 	SIA_f = {
 		level = 3
 		required_locations_fraction = 0.75
@@ -2372,6 +2447,7 @@
 		}
 	}
 
+	# Bangladesh
 	BAN_f = {
 		level = 3
 		required_locations_fraction = 0.5
@@ -2401,6 +2477,7 @@
 		}
 	}
 
+	# Iran
 	IRA_f = {
 		level = 4
 		required_locations_fraction = 0.5
@@ -2426,6 +2503,7 @@
 		}
 	}
 
+	# Tibet
 	TIB_f = {
 		level = 2
 		required_locations_fraction = 0.6
@@ -2445,6 +2523,7 @@
 		}
 	}
 
+	#
 	SKO_f = {
 		level = 3
 		required_locations_fraction = 0.75
@@ -2473,6 +2552,7 @@
 		}
 	}
 
+	#
 	HAU_f = {
 		level = 2
 		required_locations_fraction = 0.5
@@ -2499,6 +2579,7 @@
 		}
 	}
 
+	#
 	KON_f = {
 		level = 3
 		required_locations_fraction = 0.5
@@ -2525,6 +2606,7 @@
 		}
 	}
 
+	#
 	NTR_f = {
 		level = 2
 		required_locations_fraction = 0.5
@@ -2550,6 +2632,7 @@
 		}
 	}
 
+	#
 	AIR_f = {
 		level = 1
 		required_locations_fraction = 0.75
@@ -2576,6 +2659,7 @@
 		}
 	}
 
+	# Navarre
 	NAV_f = {
 		level = 2
 		required_locations_fraction = 0.8
@@ -2613,6 +2697,7 @@
 		}
 	}
 
+	# Kingdom of Jerusalem
 	KOJ_f = {
 		level = 2
 		required_locations_fraction = 0.75
@@ -2658,6 +2743,7 @@
 		}
 	}
 
+	# Inca Empire
 	INC_f = {
 		level = 3
 		required_locations_fraction = 0.8
@@ -2703,6 +2789,7 @@
 		}
 	}
 
+	# Timurids
 	TIM_f = {
 		level = 3
 		required_locations_fraction = 0.8
@@ -2727,6 +2814,7 @@
 		}
 	}
 
+	# Serbia
 	SER_f = {
 		level = 2
 		required_locations_fraction = 0.8
@@ -2749,6 +2837,7 @@
 		}
 	}
 
+	# Manchu
 	MCH_f = {
 		level = 3
 		required_locations_fraction = 0.5
@@ -2777,6 +2866,7 @@
 		}
 	}
 
+	# Yamato
 	YMT_f = {
 		level = 3
 		rule = plausible
@@ -2792,6 +2882,7 @@
 		}
 	}
 
+	#
 	SHL_f = {
 		level = 2
 		required_locations_fraction = 0.75
@@ -2813,6 +2904,7 @@
 		}
 	}
 
+	# Rum
 	RUM_f = {
 		level = 4
 		required_locations_fraction = 0.85
@@ -2846,6 +2938,7 @@
 		}
 	}
 
+	#
 	MGE_f = {
 		level = 4
 		required_locations_fraction = 0.85
@@ -2920,6 +3013,7 @@
 		}
 	}
 
+	# Ilkhanate
 	ILK_f = {
 
 		level = 4
@@ -2966,6 +3060,7 @@
 		}
 	}
 
+	# Georgia
 	GEO_f = {
 
 		level = 2	
@@ -2993,6 +3088,7 @@
 		}
 	}
 
+	# Armenia
 	ARM_f = {
 
 		level = 2	
@@ -3023,6 +3119,7 @@
 		}
 	}
 
+	# Ayyutaya
 	AYU_f = {
 		level = 2	
 		rule = plausible
@@ -3048,6 +3145,7 @@
 
 	}
 
+	# Albania
 	ALB_f = {
 
 		level = 2	
@@ -3076,6 +3174,7 @@
 		}
 	}
 
+	# Bamamanis
 	BAH_f = {
 		level = 2	
 		rule = plausible
@@ -3102,6 +3201,7 @@
 
 	}
 
+	# Golden Horde
 	GLD_f = {
 		level = 2	
 		rule = plausible
@@ -3127,6 +3227,7 @@
 		}
 	}
 
+	#
 	DAH_f = {
 		level = 2	
 		rule = plausible
@@ -3152,6 +3253,7 @@
 		}
 	}
 
+	# Maya
 	MAY_f = {
 		level = 2
 		required_locations_fraction = 0.5
@@ -3185,7 +3287,7 @@
 		}
 	}
 
-
+	#
 	KRY_f = {
 		level = 1
 		required_locations_fraction = 1
@@ -3214,6 +3316,7 @@
 		}
 	}
 
+	# Ryukyu
 	RYU_f = {
 		level = 3
 		required_locations_fraction = 1
@@ -3241,6 +3344,7 @@
 
 	}
 
+	# China
 	CHI_f = {
 		level = 4
 		required_locations_fraction = 0.7
@@ -3269,7 +3373,8 @@
 
 	}
 
-	IRO_f = { # Haudenosaunee / Iroquois Confederacy
+	# Haudenosaunee / Iroquois Confederacy
+	IRO_f = {
 
 		level = 3
 		required_locations_fraction = 0.80
@@ -3302,7 +3407,8 @@
 		}
 	}
 
-	PUE_f = { # United Pueblo
+	# United Pueblo
+	PUE_f = {
 
 		level = 2
 		required_locations_fraction = 1
@@ -3351,6 +3457,7 @@
 		}
 	}
 
+	# Romania
 	RMN_f = {
 		level = 2
 		required_locations_fraction = 0.5
@@ -3380,6 +3487,7 @@
 		}
 	}
 
+	# Swabia
 	SWA_f = {
 		level = 2
 		required_locations_fraction = 0.8
@@ -3407,6 +3515,7 @@
 		}
 	}
 
+	# Westphalia
 	WES_f = {
 		level = 2
 		required_locations_fraction = 0.75
@@ -3442,38 +3551,9 @@
 		}
 	}
 
-	BEL_f = {
-		level = 2
-		required_locations_fraction = 0.75
-		rule = plausible #how did a fantasy country get in here?
+	# Belgium - REMOVED FOR FNR FORMABLE
 
-		potential = {
-			OR = {
-				culture = culture:walloon
-				culture = culture:low_franconian
-			}
-			current_age_or_later = { age = age_6_revolutions }
-		}
-		allow = {
-			
-		}
-
-		name = BEL
-		flag = BEL	
-		adjective = BEL_ADJ
-		tag = BEL
-		color = map_BEL
-
-		areas = {
-			wallonia_area
-			flanders_area
-		}
-
-		form_effect = {
-			
-		}
-	}
-
+	# Franconia
 	FKN_f = {
 		level = 2
 		required_locations_fraction = 0.6
@@ -3501,6 +3581,7 @@
 		}
 	}
 
+	# Hanover
 	HAN_f = {
 		level = 2
 		required_locations_fraction = 0.6
@@ -3528,6 +3609,7 @@
 		}
 	}
 
+	# Tuscany
 	TUS_f = {
 		level = 1
 		required_locations_fraction = 0.75
@@ -3555,6 +3637,7 @@
 		}
 	}
 
+	# Bulgaria
 	BUL_f = {
 		level = 1
 		required_locations_fraction = 0.9
@@ -3581,6 +3664,7 @@
 		}
 	}
 
+	# Dalmatia
 	DAL_f = {
 		level = 1
 		required_locations_fraction = 0.75
@@ -3610,6 +3694,7 @@
 		}
 	}
 
+	# Hungary
 	HUN_f = {
 		level = 3
 		required_locations_fraction = 0.75
@@ -3646,6 +3731,7 @@
 		}
 	}
 
+	# Kurdistan
 	KRS_f = {
 		level = 3
 		required_locations_fraction = 0.25
@@ -3688,6 +3774,7 @@
 		}
 	}
 
+	# Somalia
 	SOI_f = {
 		level = 2
 		required_locations_fraction = 0.5
@@ -3714,6 +3801,7 @@
 		}
 	}
 
+	# Croatia
 	CRO_f = {
 		level = 2
 		required_locations_fraction = 0.5
@@ -3741,6 +3829,7 @@
 		}
 	}
 
+	# Transylvania
 	TRA_f = {
 		level = 2
 		required_locations_fraction = 0.75
@@ -3772,6 +3861,7 @@
 		}
 	}
 
+	# 
 	MAL_f = {
 		level = 2
 		required_locations_fraction = 0.75
@@ -3800,6 +3890,7 @@
 		}
 	}
 
+	# Nubia
 	NUB_f = {
 		level = 2
 		required_locations_fraction = 0.75
@@ -3827,6 +3918,7 @@
 		}
 	}
 
+	# Finland
 	FIN_f = {
 		level = 1
 		required_locations_fraction = 0.5
@@ -3853,6 +3945,7 @@
 		}
 	}
 
+	# Iceland
 	ICE_f = {
 		level = 1
 		required_locations_fraction = 0.75
@@ -3879,6 +3972,7 @@
 		}
 	}
 
+	# Kaz
 	KAZ_f = {
 		level = 1
 		required_locations_fraction = 0.75
@@ -3906,6 +4000,7 @@
 		}
 	}
 
+	#
 	MIR_f = {
 		level = 2
 		required_locations_fraction = 0.75
@@ -3932,6 +4027,7 @@
 		}
 	}
 
+	# Morocco
 	MOR_f = {
 		level = 2
 		required_locations_fraction = 0.75
@@ -3959,6 +4055,7 @@
 		}
 	}
 
+	#
 	NUS_f = {
 		level = 3
 		required_locations_fraction = 0.5
@@ -3990,6 +4087,7 @@
 		}
 	}
 
+	# Slovakia
 	SLO_f = {
 		level = 3
 		required_locations_fraction = 0.75
@@ -4016,7 +4114,8 @@
 		}
 	}
 
-	BNO_f = { # Borneo
+	# Borneo
+	BNO_f = {
 		level = 3
 		required_locations_fraction = 0.90
 		rule = plausible
@@ -4042,7 +4141,8 @@
 		}
 	}
 
-	CIR_f = { # Circassia
+	# Circassia
+	CIR_f = {
 		level = 1
 		required_locations_fraction = 0.60
 		rule = plausible
@@ -4067,6 +4167,7 @@
 		}
 	}
 
+	# Aztecs
 	AZT_f = {
 
 		level = 3
@@ -4106,42 +4207,18 @@
 # FORMABLE NATIONS REWORKED FORMABLES #
 #######################################
 	# Rank 1
-		# Basque Country - Non-historical
-			BASQU = {
-				level = 3
-				required_locations_fraction = 0.65
-				rule = plausible
-				potential = {
-					has_variable = fnr_nonhistorical_enabled
-					NOT = { 
-						OR = {
-							tag = BASQU
-							tag_exists = BASQU
-						}
-					}
-					OR = {
-						tag = NAV
-						culture = culture:basque
-					}
-				}
-				name = BASQU
-				flag = BASQU
-				adjective = BASQU_ADJ
-				tag = BASQU
-				color = map_BASQU
-				areas = { navarre_area }
-				provinces = { bayonne_province }
-				locations = { orthez dax tosse }
-			}
-
+		#
 	# Rank 2
-		# Arpitania
+		# Arpitania - Fantasy
 			ARPIT = {
 				level = 2
 				required_locations_fraction = 0.07
 				rule = plausible
 				potential = { 
-					has_variable = fnr_fantasy_enabled 	
+					OR = {
+						has_variable = fnr_fantasy_enabled
+						has_variable = fnr_basque_enabled
+					}	
 					NOT = { 
 						OR = {
 							tag = ARPIT
@@ -4161,7 +4238,7 @@
 		# Polabia - Non-historical
 			POLBA = {
 				level = 2
-				required_locations_fraction = 0.05
+				required_locations_fraction = 0.35
 				rule = plausible
 				potential = {
 					has_variable = fnr_nonhistorical_enabled 
@@ -4173,26 +4250,12 @@
 					}
 					culture = { has_culture_group = culture_group:polish_group }
 				}
-				
-				allow = {
-				}
-
 				name = POLBA
 				flag = POLBA
 				adjective = POLBA_ADJ
 				tag = POLBA
 				color = map_POLBA
-
-				regions = {
-					baltic_region
-				}
-				areas = {
-					greater_poland_area
-					central_poland_area
-					lesser_poland_area
-				}
-				form_effect = {
-				}
+				areas = { silesia_area }
 			}
 		# Bremen-Verden - Historical
 			BMNVD = {
@@ -4219,10 +4282,10 @@
 				color = map_BMNVD
 				areas = { lower_saxony_area }
 			}
-		# Ducal Prussia
+		# Ducal Prussia - Historical
 			DCLPR = {
 				level = 2
-				required_locations_fraction = 0.70
+				required_locations_fraction = 0.1
 				rule = plausible
 				potential = {
 					has_variable = fnr_historical_enabled 
@@ -4243,6 +4306,38 @@
 				areas = { prussia_area }
 			}
 	# Rank 3
+		# TODO: Brandenburg-Prussia
+
+		# Basque Country - Non-historical
+			BASQU = {
+				level = 3
+				required_locations_fraction = 0.65
+				rule = plausible
+				potential = {
+					OR = {
+						has_variable = fnr_nonhistorical_enabled
+						has_variable = fnr_basque_enabled
+					}
+					NOT = { 
+						OR = {
+							tag = BASQU
+							tag_exists = BASQU
+						}
+					}
+					OR = {
+						tag = NAV
+						culture = culture:basque
+					}
+				}
+				name = BASQU
+				flag = BASQU
+				adjective = BASQU_ADJ
+				tag = BASQU
+				color = map_BASQU
+				areas = { navarre_area }
+				provinces = { bayonne_province }
+				locations = { orthez dax tosse }
+			}	
 		# Balochistan - Modern
 			BALCH = {
 				level = 3
@@ -4272,6 +4367,7 @@
 				rule = plausible
 				potential = {
 					has_variable = fnr_nonhistorical_enabled 
+					#tag = KSORB
 					NOT = { 
 						OR = {
 							tag = GSORB
@@ -4279,6 +4375,9 @@
 						}
 					}
 					culture = { has_culture_group = culture_group:german_group }
+				}
+				allow = {
+					tag = KSORB
 				}
 				name = GSORB
 				flag = GSORB
@@ -4290,7 +4389,7 @@
 		# Sorbic Kingdom - Non-Historical
 			KSORB = {
 				level = 3
-				required_locations_fraction = 0.40
+				required_locations_fraction = 0.60
 				rule = plausible
 				potential = {
 					has_variable = fnr_nonhistorical_enabled 
@@ -4312,7 +4411,7 @@
 		# Kingdom of Hanover - Historical
 			KOFHN = {
 				level = 3
-				required_locations_fraction = 0.46
+				required_locations_fraction = 0.01 # 0.46
 				rule = plausible	
 				potential = {
 					has_variable = fnr_historical_enabled 
@@ -4379,7 +4478,7 @@
 		# Hawai'i (Kingdom - add modern variant) - Non-Historical
 			HAWAI = {
 				level = 3
-				required_locations_fraction = 0.13
+				required_locations_fraction = 0.01 # 0.13
 				rule = plausible
 				potential = {
 					has_variable = fnr_nonhistorical_enabled 
@@ -4489,7 +4588,7 @@
 		# Belarus - Modern
 			BLRUS = {
 				level = 3
-				required_locations_fraction = 0.09
+				required_locations_fraction = 0.01 # 0.85
 				rule = plausible
 				potential = {
 					has_variable = fnr_modern_enabled 
@@ -4509,7 +4608,8 @@
 				adjective = BLRUS_ADJ
 				tag = BLRUS
 				color = map_BLRUS
-				regions = { ruthenia_region }
+				areas = { white_ruthenia_area }
+				provinces = { breslauja_province svir_province }
 			}
 		# Belgium - Historical
 			BLGUM = {
@@ -4524,7 +4624,11 @@
 							tag_exists = BLGUM
 						}
 					}
-					culture = culture:low_franconian 
+					OR = {
+						culture = culture:walloon
+						culture = culture:low_franconian
+					}
+					current_age_or_later = { age = age_6_revolutions }
 				}
 				name = BLGUM
 				flag = BLGUM
@@ -4716,6 +4820,8 @@
 						OR = {
 							tag = UKRNE
 							tag_exists = UKRNE
+							# Prevent formable spam
+							tag = BLRUS
 						}
 					}
 					OR = {
@@ -5844,7 +5950,7 @@
 		# Illyria - Fantasty - TODO: Illyria (non-napoleonic kingdom) # TODO: illyrian kingdom (nonhistorical)
 			ILYRA = {
 				level = 3
-				required_locations_fraction = 0.50
+				required_locations_fraction = 0.50 # 0.50
 				rule = plausible
 				potential = {
 					has_variable = fnr_fantasy_enabled
@@ -6208,6 +6314,8 @@
 						OR = {
 							tag = KYVRU
 							tag_exists = KYVRU
+							# Prevent formable spam
+							tag = BLRUS
 						}
 					}
 					OR = {
@@ -6274,6 +6382,8 @@
 						OR = {
 							tag = RUSEM
 							tag_exists = RUSEM
+							# Prevent formable spam
+							tag = BLRUS
 						}
 					}
 					culture = { has_culture_group = culture_group:russian_group  }
@@ -6308,6 +6418,8 @@
 						OR = {
 							tag = RUFED
 							tag_exists = RUFED
+							# Prevent formable spam
+							tag = BLRUS
 						}
 					}
 					culture = { 
@@ -7051,6 +7163,8 @@
 						OR = {
 							tag = SOVET
 							tag_exists = SOVET
+							# Prevent formable spam
+							tag = BLRUS
 						}
 					}
 					culture = {  has_culture_group = culture_group:russian_group }
@@ -7175,7 +7289,7 @@
 		# The Horde - Fantasy (KILL ALL OTHER HORDES AND BECOME THE ONLY HORDE)
 			HORDE = {
 				level = 5
-				required_locations_fraction = 0.5
+				required_locations_fraction = 0.50
 				rule = plausible
 				potential = { 
 					has_variable = fnr_fantasy_enabled
@@ -7197,7 +7311,7 @@
 		# Carolingian Empire - Non-historical (TODO: finish, lots of territory)
 			CAROL = {
 				level = 5
-				required_locations_fraction = 0.01
+				required_locations_fraction = 0.60	
 				rule = plausible
 				potential = {
 					has_variable = fnr_nonhistorical_enabled 
@@ -7291,6 +7405,22 @@
 						culture = { has_culture_group = culture_group:british_group }
 						culture = { has_culture_group = culture_group:french_group }
 					}
+				}
+				allow = {
+					calc_true_if = { # Great Britain
+						amount >= 12
+						any_scope_state = {
+							state_region = { has_region_tag = great_britain_region }
+							owner = ROOT
+						}
+					}
+					calc_true_if = { # France Region
+						amount >= 17
+						any_scope_state = {
+							state_region = { has_region_tag = france_region }
+							owner = ROOT
+						}
+					}					
 				}
 				name = DLMON
 				flag = DLMON

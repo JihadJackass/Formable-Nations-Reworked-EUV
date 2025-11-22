@@ -249,3 +249,36 @@ FormableNationReworked_toggle_modern_formables = {
 }
 
 # TODO: group for colonies in americas for example, such as Ontario, Oklahoma, etc
+
+# Individual Formable List
+# Toggle for Basque Country
+FormableNationReworked_toggle_basque = {
+	scope = country
+	saved_scopes = { }
+	
+	is_shown = {
+		always = yes
+	}
+	
+	is_valid = {
+		always = yes
+	}
+	
+	effect = {
+		if = {
+			limit = { has_variable = fnr_basque_enabled }
+			every_country = {
+				remove_variable = fnr_basque_enabled
+			}
+		}
+		else = {
+			every_country = {
+				set_variable = {
+					name = fnr_basque_enabled
+					value = yes
+				}
+			}
+		}
+	}
+}
+

@@ -1,0 +1,178 @@
+﻿# Formable Nations Individual List Window
+window = {
+	name = "formable_nations_list_window"
+	layer = windows_layer
+	parentanchor = center
+	size = { 800 600 }
+	visible = "[GetVariableSystem.Exists('formable_list_window_open')]"
+	using = bg_window_default_alt
+	
+	button_close_alt = {
+		parentanchor = top|right
+		position = { -15 15 }
+		size = { 40 40 }
+		blockoverride "close_onclick" {
+			onclick = "[GetVariableSystem.Clear('formable_list_window_open')]"
+		}
+	}
+	
+	vbox = {
+		margin = { 20 60 20 20 }
+		layoutpolicy_horizontal = expanding
+		layoutpolicy_vertical = expanding
+		
+		text_single = {
+			text = "Individual Formables List"
+			using = header_font
+			margin_bottom = 10
+		}
+		
+		scrollbox = {
+			layoutpolicy_horizontal = expanding
+			layoutpolicy_vertical = expanding
+			size = { 0 0 }
+			
+			blockoverride "scrollbox_content" {
+				vbox = {
+					layoutpolicy_horizontal = expanding
+					spacing = 5
+					margin = { 10 10 }
+					
+					# Rank 1 Formables
+						#
+					# Rank 2 Formables
+					vbox = {
+						layoutpolicy_horizontal = expanding
+						spacing = 5
+						
+						button_main_tab_alt = {
+							using = layoutpolicy_expanding
+							raw_text = "Rank II Formables"
+							onclick = "[GetVariableSystem.Toggle('rank2_open')]"
+							down = "[GetVariableSystem.Exists('rank2_open')]"
+						}
+
+						vbox = {
+							layoutpolicy_horizontal = expanding
+							visible = "[GetVariableSystem.Exists('rank2_open')]"
+							spacing = 3
+							margin = { 10 5 }
+							
+							# Arpitania
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "Arpitania"
+							}
+						}
+					}
+					
+					# Rank 3 Formables
+					vbox = {
+						layoutpolicy_horizontal = expanding
+						spacing = 5
+						
+						button_main_tab_alt = {
+							using = layoutpolicy_expanding
+							raw_text = "Rank III Formables"
+							onclick = "[GetVariableSystem.Toggle('rank3_open')]"
+							down = "[GetVariableSystem.Exists('rank3_open')]"
+						}
+
+						vbox = {
+							layoutpolicy_horizontal = expanding
+							visible = "[GetVariableSystem.Exists('rank3_open')]"
+							spacing = 3
+							margin = { 10 5 }
+							
+							# Basque Country
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(GetPlayer.HasVariable('fnr_basque_enabled'), 'Basque Country: ON', 'Basque Country: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_basque').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								tooltip = "[SelectLocalization(GetPlayer.HasVariable('fnr_basque_enabled'), 'Click to DISABLE Basque Country', 'Click to ENABLE Basque Country')]"
+							}
+						}
+					}
+					
+					# Rank 4 Formables
+					vbox = {
+						layoutpolicy_horizontal = expanding
+						spacing = 5
+						
+						button_main_tab_alt = {
+							using = layoutpolicy_expanding
+							raw_text = "Rank IV Formables"
+							onclick = "[GetVariableSystem.Toggle('rank4_open')]"
+							down = "[GetVariableSystem.Exists('rank4_open')]"
+						}
+
+						vbox = {
+							layoutpolicy_horizontal = expanding
+							visible = "[GetVariableSystem.Exists('rank4_open')]"
+							spacing = 3
+							margin = { 10 5 }
+							
+							# Add Rank 4 formable buttons here
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "Japan"
+							}
+						}
+					}
+					
+					# Rank 5 Formables
+					vbox = {
+						layoutpolicy_horizontal = expanding
+						spacing = 5
+						
+						button_main_tab_alt = {
+							using = layoutpolicy_expanding
+							raw_text = "Rank V Formables"
+							onclick = "[GetVariableSystem.Toggle('rank5_open')]"
+							down = "[GetVariableSystem.Exists('rank5_open')]"
+						}
+
+						vbox = {
+							layoutpolicy_horizontal = expanding
+							visible = "[GetVariableSystem.Exists('rank5_open')]"
+							spacing = 3
+							margin = { 10 5 }
+							
+							# Add Rank 5 formable buttons here
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "British Empire"
+							}
+						}
+					}
+					
+					# Rank 6 Formables
+					vbox = {
+						layoutpolicy_horizontal = expanding
+						spacing = 5
+						
+						button_main_tab_alt = {
+							using = layoutpolicy_expanding
+							raw_text = "Rank VI Formables"
+							onclick = "[GetVariableSystem.Toggle('rank6_open')]"
+							down = "[GetVariableSystem.Exists('rank6_open')]"
+						}
+
+						vbox = {
+							layoutpolicy_horizontal = expanding
+							visible = "[GetVariableSystem.Exists('rank6_open')]"
+							spacing = 3
+							margin = { 10 5 }
+							
+							# Add Rank 6 formable buttons here
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "Roman Empire"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

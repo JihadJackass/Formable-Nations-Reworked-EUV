@@ -2,6 +2,13 @@
 
   # TOOLTIPS FOR FORMABLE NATIONS
 
+    # Archduchy
+    fnr_rank_archduchy: "Archduchy"
+    fnr_archduchy_reform: "Archduchy"
+    flavor_fnr.1005.title: "TODO TITLE"
+    flavor_fnr.1005.desc: "TODO DESC"
+    flavor_fnr.1005.a: "TODO OPTION A"
+
     #################################
     # Formable Requirement Tooltips #
     #################################

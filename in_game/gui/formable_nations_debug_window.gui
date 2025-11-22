@@ -120,8 +120,23 @@ window = {
 								raw_text = "[SelectLocalization(GetPlayer.HasVariable('fnr_modern_enabled'), 'Modern Formables: ON', 'Modern Formables: OFF')]"
 								onclick = "[GetScriptedGui('FormableNationReworked_toggle_modern_formables').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								tooltip = "[SelectLocalization(GetPlayer.HasVariable('fnr_modern_enabled'), 'fnr_modern_tooltip_on', 'fnr_modern_tooltip_off')]"
-							}							
-						}					
+							}			
+						}
+					}
+					vbox = {
+						layoutpolicy_horizontal = expanding
+						visible = "[Not(GetVariableSystem.HasValue('formable_settings_open', 'no'))]"
+						spacing = 20
+						
+						hbox = {
+							spacing = 5
+							button_regular = {
+								size = { 220 32 }
+								raw_text = "Individual Formables List"
+								onclick = "[GetVariableSystem.Set('formable_list_window_open', 'yes')]"
+								tooltip = "Open a list to enable/disable specific formables"
+							}
+						}
 					}
 				}
 			}

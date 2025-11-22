@@ -1,1 +1,2 @@
 ﻿gui/formable_nations_debug_window.gui = formable_nations_debug_window
+gui/formable_nations_list_window.gui = formable_nations_list_window
