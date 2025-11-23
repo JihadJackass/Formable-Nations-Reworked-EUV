@@ -1,0 +1,13 @@
+﻿l_english:
+
+  # events FOR FORMABLE NATIONS
+
+    # Sweden-Norway flag choice
+    flavor_SDNNW.1.title: "The Crown of Sweden-Norway"
+    flavor_SDNNW.1.desc: "The decision of our national flag depends on the priority of our union between the regions of Sweden, and Norway - we are able to decide which we find more fitting for our union."
+    flavor_SDNNW.1.a: "Sweden-Oriented Flag"
+    flavor_SDNNW.1.b: "Norway Domination Supreme!"
+
+    SDNNW_S: "Flag of Sweden (1844–1905)"
+    SDNNW_N: "Flag of Norway (1844–1899)"
+

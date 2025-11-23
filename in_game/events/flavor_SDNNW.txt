@@ -1,0 +1,34 @@
+﻿flavor_SDNNW.1 = { # Sweden-Norway Flag Choice
+	type = country_event
+	title = flavor_SDNNW.1.title
+	desc = flavor_SDNNW.1.desc
+
+	option = { # Sweden-Dominated flag
+		name = flavor_SDNNW.1.a
+		add_reform = government_reform:swedish_administration_major
+		add_reform = government_reform:norwegian_administration_minor
+		set_variable = {
+			name = fnr_sweden_norway_sweden_major
+			value = yes
+		}
+		set_variable = {
+			name = fnr_sweden_norway_norway_minor
+			value = yes
+		}
+		change_country_flag = SDNNW_S
+	}
+	option = { # Norway-Dominated flag
+		name = flavor_SDNNW.1.b
+		add_reform = government_reform:norwegian_administration_major
+		add_reform = government_reform:swedish_administration_minor
+		set_variable = {
+			name = fnr_sweden_norway_norway_major
+			value = yes
+		}
+		set_variable = {
+			name = fnr_sweden_norway_sweden_minor
+			value = yes
+		}
+		change_country_flag = SDNNW_N
+	}
+}

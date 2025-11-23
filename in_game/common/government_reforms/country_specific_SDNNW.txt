@@ -1,0 +1,88 @@
+﻿# Sweden-Norway Specific Government Reforms
+
+	# Major if player chooses swedish domination - TODO: BALANCE ALL 4
+		swedish_administration_major = {
+			major = yes
+			unique = yes
+			government = monarchy
+			potential = {
+				tag = SDNNW
+				has_reform = government_reform:swedish_administration
+				has_variable = fnr_sweden_norway_sweden_major
+			}
+			allow ={
+				tag = SDNNW
+			}
+			country_modifier = {
+				army_infantry_power = 0.05
+				discipline = 0.05
+				monthly_towards_centralization = societal_value_minor_monthly_move
+				monthly_army_tradition = 0.035
+				global_levy_size_modifier = -0.1
+				government_reform_slots = 1
+			}
+			block_for_rebel = yes
+		}
+
+	# non-major norwegian - TODO: BALANCE ALL 4
+		norwegian_administration_minor = {
+			unique = yes
+			government = monarchy
+			potential = {
+				tag = SDNNW
+				has_reform = government_reform:norwegian_administration_minor
+				has_variable = fnr_sweden_norway_norway_minor
+			}
+			allow =  {
+				tag = SDNNW
+			}
+			country_modifier = {
+				global_maritime_presence_modifier = 0.05
+				navy_galley_power = 0.10
+				navy_galley_build_cost_modifier = 0.0350
+			}
+			block_for_rebel = yes
+		}
+
+	# Major if player chooses norwegian domination - TODO: BALANCE ALL 4
+		norwegian_administration_major = {
+			unique = yes
+			government = monarchy
+			potential = {
+				tag = SDNNW
+				has_reform = government_reform:norwegian_administration_minor
+				has_variable = fnr_sweden_norway_norway_major
+			}
+			allow =  {
+			}
+			country_modifier = {
+				global_maritime_presence_modifier = 0.05
+				navy_galley_power = 0.10
+				navy_galley_build_cost_modifier = 0.0350
+			}
+			block_for_rebel = yes
+		}
+
+	# non-major swedish - TODO: BALANCE ALL 4
+		swedish_administration_major = {
+			major = yes
+			unique = yes
+			government = monarchy
+			potential = {
+				tag = SDNNW
+				has_reform = government_reform:swedish_administration
+				has_variable = fnr_sweden_norway_sweden_minor
+			}
+			allow ={
+				tag = SDNNW
+			}
+			country_modifier = {
+				army_infantry_power = 0.05
+				discipline = 0.05
+				monthly_towards_centralization = societal_value_minor_monthly_move
+				monthly_army_tradition = 0.035
+				global_levy_size_modifier = -0.1
+				government_reform_slots = 1
+			}
+			block_for_rebel = yes
+		}

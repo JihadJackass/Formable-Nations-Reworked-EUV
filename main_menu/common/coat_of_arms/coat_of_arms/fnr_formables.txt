@@ -761,16 +761,34 @@ WESRE = { # Roman Empire
 	}	
 # Greater German Reich
 	GTRGM = {
-		pattern = "pattern_tricolor_horizontal_01.dds"
-		color1 = "black"
+		pattern = "pattern_solid.dds"
+		color1 = "red"
 		color2 = "white"
-		color3 = "red"
+		color3 = "black"
+		colored_emblem = {
+			texture = "ce_greater_german_reich.dds"
+			color1 = color1
+			color2 = color3
+			color3 = color2
+			#instance = { scale = { 0.55 0.75 } }
+		}
+
 	}
 # Nazi Germany
 	NAZIG = {
 		pattern = "pattern_mena_round_frame_shield.dds"
 		color1 = "red"
 		color2 = "white"
+		color3 = "black"
+		colored_emblem = {
+			texture = "ce_cross_gammate_45.dds"
+			color1 = color3
+			instance = {
+				position = { 0.50 0.45 }
+				scale = { 0.60 0.60 } 
+				#rotation = 45
+			}
+		}
 	}
 # Hanseatic League
 	HNSLG = {
@@ -850,24 +868,25 @@ WESRE = { # Roman Empire
 		pattern = "pattern_tricolor_horizontal_01.dds"
 		color1 = "black"
 		color2 = "red"
-		color3 = "yelow"
+		color3 = "yellow"
+		color4 = "white"
 		colored_emblem = {
 			texture = "ce_shield.dds"
-			color1 = color4
-			color2 = color3
+			color1 = color2
+			color2 = color1
 			instance = { 
-				position = { 0.50 0.55 }
-				scale = { 0.70 0.65 } 
+				position = { 0.50 0.50 }
+				scale = { 0.75 0.75 } 
 			}
 		}
 		colored_emblem = {
 			texture = "ce_horse_salient_variant.dds"
-			color1 = color2
+			color1 = color4
 			color2 = color2
 			color3 = color2
 			instance = { 
-				position = { 0.50 0.50 }
-				scale = { 0.40 0.40 } 
+				position = { 0.50 0.45 }
+				scale = { 0.45 0.45 } 
 			}
 		}
 	}
@@ -876,12 +895,25 @@ WESRE = { # Roman Empire
 		pattern = "pattern_vertical_split_01.dds"
 		color1 = "white"
 		color2 = "red"
+		colored_emblem = {
+			texture = "ce_cross_shield_double_layer_thick.dds"
+			color1 = color1
+			instance = {
+				position = { 0.20 0.25 }
+				scale = { 0.30 0.30 } 
+			}
+		}
 	}
 # Mercia
 	MRCIA = { # TODO
-		pattern = "pattern_cross.dds"
+		pattern = "pattern_solid.dds"
 		color1 = "blue"
-		color2 = "yellow"
+		color3 = "yellow"
+		colored_emblem = {
+			texture = "ce_cross_overall_saltire_field.dds"
+			color1 = color1
+			color2 = color3
+		}
 	}
 # Russian Empire
 	RUSEM = {
@@ -900,18 +932,76 @@ WESRE = { # Roman Empire
 # Soviet Union	
 	SOVET = {
 		pattern = "pattern_solid.dds"
-		color1 = "red_scarlet"	
-	}
-# Sweden-Norway
-	SDNNW = {
-		pattern = "pattern_cross.dds"
-		color1 = "blue"
+		color1 = "red"
 		color2 = "yellow"
+		color3 = "white"
+		colored_emblem = {
+			texture = "ce_soviet_union.dds"
+			color1 = color1
+			color2 = color2
+			color3 = color1
+			color4 = color4
+			instance = { position = { 0.50 0.50 } scale = { 2.05 2.05 } }
+		}
+		colored_emblem = {
+			texture = "ce_soviet_union_hs.dds"
+			color1 = color2
+			color2 = color2
+			color3 = color2
+			color4 = color2
+			instance = { position = { 0.40 0.40 } scale = { 0.90 0.80 } }
+		}
+	}
+# Sweden-Norway - Sweden
+	SDNNW_S = {
+		pattern = "pattern_solid.dds"
+		color1 = "yellow"
+		color2 = "blue"
+		color3 = "green" # placeholder to bypass, needed
+		color4 = "red"
+		textured_emblem = {
+			texture = "te_sweden_norway_canton.dds"
+			instance = { position = { 0.15 0.20 } scale = { 0.45 0.45 }  }
+		}	
+		colored_emblem = {
+			texture = "ce_sweden_norway_main.dds"
+			color2 = color1
+			color3 = color2
+		}	
+	}
+# Sweden-Norway - Norway
+	SDNNW_N = {
+		pattern = "pattern_solid.dds"
+		color1 = "yellow"
+		color2 = hsv360{ 219 100 36 } # Blue
+		color3 = "green" # placeholder to bypass, needed
+		color4 = hsv360{ 348 94 73 } # red
+		color5 = "white"
+		textured_emblem = {
+			texture = "te_sweden_norway_canton.dds"
+			instance = { position = { 0.14 0.18 } scale = { 0.39 0.42 }  }
+		}	
+		colored_emblem = {
+			texture = "ce_sweden_norway_norwaydom.dds"
+			color1 = color5
+			color2 = color4
+			color3 = color2
+			color4 = color5
+		}	
 	}
 # Turkey
 	TURKY = {
 		pattern = "pattern_solid.dds"
-		color1 = "red"	
+		color1 = hsv360{ 356 96 89 } # red
+		color2 = "white"
+		colored_emblem = {
+			texture = "ce_crescent_star_turkey.dds"
+			color1 = color2
+			instance = {
+				position = { 0.45 }
+				scale = { 0.60 0.60 } 
+			}
+		}
 	}	
 # The United Kingdom TODO: fix
 	UKKDM = {
@@ -936,9 +1026,23 @@ WESRE = { # Roman Empire
 	}	
 # Caucasia
 	CCASA = {
-		pattern = "pattern_horizontal_stripes_01.dds"
-		color1 = "green"	
-		color2 = "white"	
+		pattern = "pattern_solid.dds"
+		color1 = "green"
+		color2 = "white"
+		color3 = "yellow"
+		color4 = "blue"
+		colored_emblem = {
+			texture = "ce_dual_color_stripes_horizontal_07.dds"
+			color1 = color1
+			color3 = color2
+		}
+		colored_emblem = {
+			texture = "ce_caucasia_canton.dds"
+			color1 = color4
+			color2 = color3
+			color3 = color3
+			instance = { position = { 0.27 0.20 } scale = { 0.55 0.44 } }
+		}		
 	}	
 # Empire of China
 	CNAEM = {
@@ -954,9 +1058,14 @@ WESRE = { # Roman Empire
 	}	
 # Korea
 	KOREA = {
-		pattern = "pattern_mena_round_frame_shield.dds"
+		pattern = "pattern_solid.dds"
 		color1 = "white"
-		color2 = "blue"	
+		color2 = hsv360{ 201 100 79 } # unified korea blue
+		colored_emblem = {
+			texture = "ce_korea_united.dds"
+			color1 = color1
+			color2 = color2
+		}
 	}	
 # Himalayan Empire
 	HMLAY = {
@@ -965,29 +1074,58 @@ WESRE = { # Roman Empire
 	}	
 # Afghanistan	
 	AFGAN = {
-		pattern = "pattern_tricolor_vertical_01.dds"
-		color1 = "black"
-		color2 = "red"
-		color3 = "green"
+		pattern = "pattern_solid.dds"
+		color1 = "white"
+		color2 = "black"
+		color3 = "red"
+		color4 = "green"
+		colored_emblem = {
+			texture = "ce_afghan_early.dds"
+			color1 = color4
+			color2 = color1
+			color3 = color1
+		}
 	}
 # Mingrelia
 	MNGRL = {
-		pattern = "pattern_quarterly_q2_q3_per_pale.dds"
-		color1 = "blue"
-		color2 = "red"	
-		color3 = "yellow"	
+		pattern = "pattern_solid.dds"
+		color1 = "white"
+		color2 = hsv360{ 226 90 42 } # blue
+		color3 = hsv360{ 0 100 64 } # red 
+		color4 = hsv360{ 51 100 100 } # yellow 
+		colored_emblem = {
+			texture = "ce_mingrelia.dds"
+			color1 = color3
+			color2 = color4
+			color3 = color2
+		}
 	}
 # North Korea
 	NKORA = {
-		pattern = "pattern_mena_round_frame_shield.dds"
+		pattern = "pattern_solid.dds"
 		color1 = "white"
 		color2 = "blue"	
+		color3 = "red"
+		colored_emblem = {
+			texture = "ce_north_korea.dds"
+			color1 = color2
+			color2 = color1
+			color3 = color3
+		}
 	}	
 # South Korea
 	SKORA = {
-		pattern = "pattern_mena_round_frame_shield.dds"
+		pattern = "pattern_solid.dds"
 		color1 = "white"
 		color2 = "blue"	
+		color3 = "red"	
+		color4 = "black"	
+		colored_emblem = {
+			texture = "ce_korea_modern_taeguk.dds"
+			color1 = color3
+			color2 = color2
+			color3 = color4
+		}
 	}	
 # Omani Empire	
 	OMANE = {
@@ -1008,35 +1146,92 @@ WESRE = { # Roman Empire
 # Philippines	
 	FILPN = {
 		pattern = "pattern_solid.dds"
-		color1 = "blue"	
+		color1 = "white"
+		color2 = "blue"	
+		color3 = "red"	
+		color4 = "black"	
+		color5 = "yellow"	
+		colored_emblem = {
+			texture = "ce_czechoslovakia_2.dds"
+			color1 = color1
+			color2 = color3
+			color3 = color2
+		}
+		colored_emblem = {
+			texture = "ce_phillipine_gold_stars.dds"
+			color2 = color5
+		}
 	}		
 # Saudi Arabia
 	SAUDI = {
 		pattern = "pattern_solid.dds"
-		color1 = "green"	
+		color1 = "blue"
+		color2 = "green"	
+		color3 = "white"	
+		color4 = "black"	
+		color5 = "yellow"	
+		colored_emblem = {
+			texture = "ce_saudi_arabia.dds"
+			color1 = color1
+			color2 = color2
+			color3 = color3
+		}
 	}	
 # Sulawesi
 	SULAW = {
-		pattern = "pattern_mena_round_frame_shield.dds"
-		color1 = "white"
-		color2 = "orange"	
+		pattern = "pattern_solid.dds"
+		color1 = "blue"
+		color2 = "green"	
+		color3 = "white"	
+		color4 = "orange"	
+		color5 = "yellow"	
+		colored_emblem = {
+			texture = "ce_sulawesi.dds"
+			color1 = color1
+			color2 = color3
+			color3 = color4
+		}	
 	}	
 # Taiping
 	TPING = {
 		pattern = "pattern_solid.dds"
-		color1 = "yellow"	
+		color1 = hsv360{ 52 100 99 } # yellow 
+		color2 = "blue"
+		color3 = "green" # placeholder to bypass, needed
+		color4 = "red"
+		textured_emblem = {
+			texture = "te_taiping_dragon.dds"
+			instance = { position = { 0.50 0.50 } scale = { 0.75 0.80 }  }
+		}	
+		colored_emblem = {
+			texture = "pattern_solid.dds"
+			color2 = color1
+			color3 = color2
+		}	
 	}	
 # Taliban
 	TLBAN = {
-		pattern = "pattern_mena_round_frame_shield.dds"
+		pattern = "pattern_solid.dds"
 		color1 = "white"
 		color2 = "black"
+		colored_emblem = {
+			texture = "ce_taliban.dds"
+			color2 = color2
+			color3 = color1
+		}
 	}	
 # Tengoku
 	TNGKU = {
-		pattern = "pattern_mena_round_frame_shield.dds"
-		color1 = "white"
+		pattern = "pattern_solid.dds"
+		color1 = "red"
 		color2 = "yellow"
+		color3 = "white" 
+		colored_emblem = {
+			texture = "ce_tengoku.dds"
+			color1 = color1
+			color2 = color1
+			color3 = color3
+		}
 	}
 # Tibetan Empire
 	TBETE = {
@@ -1047,17 +1242,39 @@ WESRE = { # Roman Empire
 	}
 # United Arab Republic
 	UNARR = {
-		pattern = "pattern_tricolor_vertical_01.dds"
-		color1 = "black"
-		color2 = "white"
-		color3 = "red"
+		pattern = "pattern_solid.dds"
+		color1 = "red"
+		color2 = "black"
+		color3 = "white"
+		color4 = "green"
+		colored_emblem = {
+			texture = "ce_uar.dds"
+			color1 = color1
+			color2 = color2
+			color3 = color3
+		}
+		colored_emblem = {
+			texture = "ce_uar_stars.dds"
+			color1 = color1
+			color2 = color4
+			color3 = color3
+			instance = { position = { 0.50 0.50 } scale = { 0.30 0.30 } }
+		}
 	}
 # Vietnam
 	VTNAM = {
-		pattern = "pattern_mena_round_frame_shield.dds"
-		color1 = "yellow"
-		color2 = "red"
-	}	
+		pattern = "pattern_solid.dds"
+		color1 = "red"
+		color2 = "yellow"
+		color3 = "white"
+		color4 = "green"
+		colored_emblem = {
+			texture = "ce_vietnam.dds"
+			color1 = color1
+			color2 = color2
+			color3 = color2
+		}
+	}
 # Burma
 	BURMA = {
 		pattern = "pattern_tricolor_vertical_01.dds"
@@ -1251,6 +1468,10 @@ WESRE = { # Roman Empire
 		pattern = "pattern_vertical_split_01.dds"
 		color1 = "blue_sky"
 		color2 = "white"
+		textured_emblem = {
+			texture = "te_lusitanian_coa.dds"
+			instance = { scale = { 0.40 0.75 } }
+		}
 	}
 # Macedonia
 	MACED = {

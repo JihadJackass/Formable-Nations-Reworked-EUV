@@ -21,6 +21,14 @@
 		rule = plausible
 		
 		potential = {
+			has_variable = fnr_historical_enabled 
+			NOT = { 
+				OR = {
+					tag = SCA_f
+					tag_exists = SCA_f
+					tag = SDNNW
+				}
+			}
 			culture = { has_culture_group = culture_group:scandinavian_group }
 		}
 		
@@ -51,6 +59,16 @@
 		rule = plausible
 
 		potential = {
+			has_variable = fnr_historical_enabled 
+			NOT = { 
+				OR = {
+					tag = SWE
+					tag_exists = SWE
+					# redice spam
+					tag = KLMUN
+					tag = SDNNW
+				}
+			}
 			culture = culture:swedish
 		}
 		
@@ -2910,6 +2928,15 @@
 		required_locations_fraction = 0.85
 		rule = plausible
 		potential = {
+			has_variable = fnr_nonhistorical_enabled
+			NOT = { 
+				OR = {
+					tag = RUM
+					tag_exists = RUM
+					# reduce spam
+					tag = TURKY
+				}
+			}
 			culture = { has_culture_group = culture_group:turkic_group }
 			religion.group = religion_group:muslim
 		}
@@ -2944,6 +2971,14 @@
 		required_locations_fraction = 0.85
 		rule = plausible
 		potential = {
+			has_variable = fnr_fantasy_enabled
+			NOT = { 
+				OR = {
+					tag = MGE
+					tag_exists = MGE
+					tag = HORDE
+				}
+			}
 			OR = {
 				tag = TIM
 				AND = {
@@ -4411,7 +4446,7 @@
 		# Kingdom of Hanover - Historical
 			KOFHN = {
 				level = 3
-				required_locations_fraction = 0.01 # 0.46
+				required_locations_fraction = 0.76 # 0.46
 				rule = plausible	
 				potential = {
 					has_variable = fnr_historical_enabled 
@@ -4996,6 +5031,8 @@
 						OR = {
 							tag = KLMUN
 							tag_exists = KLMUN
+							# redice spam
+							tag = SDNNW
 						}
 					}
 					culture = { has_culture_group = culture_group:scandinavian_group }
@@ -5057,7 +5094,7 @@
 		# Lower Saxony - Alt-history
 			LWSXY = {
 				level = 3
-				required_locations_fraction = 0.80
+				required_locations_fraction = 0.01 # 0.80
 				rule = plausible
 				potential = { 
 					has_variable = fnr_althistory_enabled
@@ -5090,7 +5127,20 @@
 						}
 					}
 					OR = {
-						#capital = { location = location:malta }
+						AND = {
+							owns = location:malta
+							capital = { location = location:malta }
+						}
+						culture = culture:maltese
+						culture = culture:greek_culture
+					}
+				}
+				allow = {
+					OR = {
+						AND = {
+							owns = location:malta
+							capital = { location = location:malta }
+						}
 						culture = culture:maltese
 						culture = culture:greek_culture
 					}
@@ -5118,6 +5168,7 @@
 					culture = culture:english 
 				}
 				allow = {
+					in_civil_war = no
 					NOT = { tag = ENG }
 				}
 				name = MRCIA
@@ -5131,7 +5182,7 @@
 		# Sweden-Norway - History
 			SDNNW = {
 				level = 3
-				required_locations_fraction = 0.85
+				required_locations_fraction = 0.80 # 0.80
 				rule = plausible
 				potential = {
 					has_variable = fnr_historical_enabled 
@@ -5143,18 +5194,24 @@
 					}
 					culture = { has_culture_group = culture_group:scandinavian_group }
 				}
+				allow = {
+					in_civil_war = no
+					#NOT = { tag_exists = NOR }
+				}
 				name = SDNNW
-				flag = SDNNW
+				flag = SDNNW_S
 				adjective = SDNNW_ADJ
 				tag = SDNNW
 				color = map_SDNNW
-				regions = { scandinavian_region }
-				areas = { iceland_area }
+				areas = { skaneland_area gotaland_area svealand_area norrland_area syd_norge_area nord_norge_area }
+				form_effect = {
+					trigger_event_non_silently = flavor_SDNNW.1
+				}
 			}
 		# Turkey - Modern
 			TURKY = {
-				level = 3
-				required_locations_fraction = 0.85
+				level = 5
+				required_locations_fraction = 0.85 # 0.85
 				rule = plausible
 				potential = {
 					has_variable = fnr_modern_enabled 
@@ -5164,9 +5221,15 @@
 							tag_exists = TURKY
 						}
 					}
-					AND = {
-						TAG = TUR
-						culture = culture:turkish_culture
+					OR = {
+						AND = {
+							TAG = TUR
+							culture = culture:turkish_culture
+						}	
+						AND = {
+							NOT = { TAG = TUR }
+							culture = culture:turkish_culture
+						}					
 					}
 				}
 				name = TURKY
@@ -5175,11 +5238,14 @@
 				tag = TURKY
 				color = map_TURKY
 				regions = { anatolia_region }
+				form_effect = {
+					set_country_rank_effect = { rank = country_rank:rank_kingdom }
+				}
 			}
 		# Caucasia - Alt-history
 			CCASA = {
 				level = 3
-				required_locations_fraction = 0.68
+				required_locations_fraction = 0.68 # 0.68
 				rule = plausible
 				potential = {
 					has_variable = fnr_althistory_enabled 
@@ -5190,6 +5256,9 @@
 						}
 					}
 					culture = { has_culture_group = culture_group:caucasian_group }
+				}
+				allow = {
+					in_civil_war = no
 				}
 				name = CCASA
 				flag = CCASA
@@ -5212,6 +5281,10 @@
 						}
 					}
 					culture = { has_culture_group = culture_group:confucian_group }
+				}
+				allow = {
+					in_civil_war = no
+					current_age_or_later = { age = age_6_revolutions }
 				}
 				name = KOREA
 				flag = KOREA
@@ -5303,6 +5376,9 @@
 						}
 					}
 					culture = { has_culture_group = culture_group:confucian_group }
+				}
+				allow = {
+					current_age_or_later = { age = age_6_revolutions }
 				}
 				name = SKORA
 				flag = SKORA
@@ -5408,6 +5484,20 @@
 				tag = TPING
 				color = map_TPING
 				regions = { east_china_region }
+				form_effect = { # TODO: fix these effects (perhaps add a major reform to assimilate)
+					change_religion = religion:catholic
+					change_religion_for_ruler_and_family = { country = ROOT religion = religion:catholic }
+					random_owned_location = {
+						change_pop_religion = root.religion
+					}
+					random_owned_location = {
+						change_pop_religion = root.religion
+					}
+					every_owned_location = {
+						limit = { area = area:zhejiang_area }
+						change_pop_religion = root.religion
+					}
+				}
 			}
 		# Taliban - Modern
 			TLBAN = {
@@ -5433,6 +5523,7 @@
 				tag = TLBAN
 				color = map_TLBAN
 				areas = { sistan_area baluchistan_area }
+
 			}
 		# Tengoku - Fantasy
 			TNGKU = {
@@ -5488,7 +5579,7 @@
 		# Vietnam - Modern
 			VTNAM = {
 				level = 3
-				required_locations_fraction = 0.20
+				required_locations_fraction = 0.65
 				rule = plausible
 				potential = {
 					has_variable = fnr_modern_enabled 
@@ -5508,8 +5599,7 @@
 				adjective = VTNAM_ADJ
 				tag = VTNAM
 				color = map_VTNAM
-				regions = { indochina_region }
-				areas = { red_river_area champa_area }
+				areas = { red_river_area champa_area red_river_delta_area }
 			}
 		# Burma - Modern
 			BURMA = {
@@ -6626,6 +6716,9 @@
 					}
 					culture = { has_culture_group = culture_group:confucian_group }
 				}
+				allow = {
+					current_age_or_later = { age = age_2_renaissance }
+				}
 				name = GGURY
 				flag = GGURY
 				adjective = GGURY_ADJ
@@ -6641,12 +6734,12 @@
 				potential = {
 					has_variable = fnr_fantasy_enabled 
 					NOT = { 
+						tag = DLH
 						OR = {
 							tag = HMLAY
 							tag_exists = HMLAY
 						}
 					}
-					NOT = { tag = DLH }
 					OR = {
 						culture = { has_culture_group = culture_group:indo_aryan_group }
 						culture = { has_culture_group = culture_group:tibeto_burman_group }
@@ -7121,7 +7214,7 @@
 		# Greater German Reich - Controversial
 			GTRGM = {
 				level = 5
-				required_locations_fraction = 0.60
+				required_locations_fraction = 0.60 # 0.60
 				rule = plausible
 				potential = {
 					has_variable = fnr_controversial_enabled 
@@ -7289,7 +7382,7 @@
 		# The Horde - Fantasy (KILL ALL OTHER HORDES AND BECOME THE ONLY HORDE)
 			HORDE = {
 				level = 5
-				required_locations_fraction = 0.50
+				required_locations_fraction = 0.80
 				rule = plausible
 				potential = { 
 					has_variable = fnr_fantasy_enabled
@@ -7306,7 +7399,8 @@
 				adjective = HORDE_ADJ
 				tag = HORDE
 				color = map_HORDE
-				regions = { steppes_region }
+				regions = { steppes_region  }
+				sub_continents = { central_asia }
 			}
 		# Carolingian Empire - Non-historical (TODO: finish, lots of territory)
 			CAROL = {

@@ -181,7 +181,7 @@ colors = {
 	# Nazi Germany
 	map_NAZIG = rgb { 15 4 4 }
 	# North Korea
-	map_NKORA = rgb { 117 3 5 }
+	map_NKORA = hsv360 { 358 88 93 } 
 	# North Sea Empire
 	map_NOSEM = rgb { 112 11 13 }
 	# Occitania
@@ -215,13 +215,13 @@ colors = {
 	# Sorbic Kingdom
 	map_KSORB = rgb { 28 16 180 }
 	# South Korea
-	map_SKORA = rgb { 90 106 148 }
+	map_SKORA = hsv360 { 227 225 225 } 
 	# Soviet Union
 	map_SOVET = rgb { 113 0 1 }
 	# Sulawesi
 	map_SULAW = rgb { 68 11 3 }
 	# Sweden-Norway
-	map_SDNNW = rgb { 0 0 62 }
+	map_SDNNW = hsv360{ 217 100 41 } 
 	# Swedish Empire
 	map_SWDEM = rgb { 5 9 120 }
 	# Taiping

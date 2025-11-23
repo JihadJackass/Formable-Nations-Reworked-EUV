@@ -1,0 +1,12 @@
+﻿l_english:
+
+  # ESTATE LOCALIZATION
+
+    # Lusitanian Empire
+    crown_estate_estate_LUSIT_crown: "Crown"
+    nobles_estate_LUSIT_fidalgo: "Fidalgos"
+    burgers_estate_LUSIT_burgueses: "Burgueses"
+    clergy_estate_LUSIT_clerigo: "Clérigo"
+    commoners_estate_LUSIT_compartes: "Compartes"
+
+

@@ -9,6 +9,14 @@
     flavor_fnr.1005.desc: "TODO DESC"
     flavor_fnr.1005.a: "TODO OPTION A"
 
+  # reforms
+
+    swedish_administration: "Administration of the Swedish Crown"
+    swedish_administration_desc: "The unification of Sweden-Norway required significant concessions to the nobility of both kingdoms. However, by codifying these privileges and tying noble support to the Crown's interests, we can leverage their desire to maintain these exceptional rights. In exchange for guaranteeing noble privileges, we secure their loyalty and resources for state purposes, strengthening royal authority."
+
+    norwegian_administration: "Administration of the Norwegian Crown"
+    norwegian_administration_desc: "The union with Sweden has elevated Norway's nobility to a position of unprecedented influence within the joint realm. While granting these privileges strains our autonomy, the Norwegian Crown can leverage noble ambition to strengthen our position. By guaranteeing their status and rights, we secure noble support for royal initiatives and ensure Norwegian interests are represented at the highest levels of the Union."
+
     #################################
     # Formable Requirement Tooltips #
     #################################

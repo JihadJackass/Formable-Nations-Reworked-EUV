@@ -1,0 +1,22 @@
+	# Swedish Nobility - major
+	illustration_image = { #Alpha 0
+		texture_file = "gfx/interface/icons/government_reforms/illustrations/swedish_administration.dds"
+		priority = 100
+		#scope = character
+		trigger = {
+			has_reform = government_reform:swedish_administration
+		}
+	}
+	# Norwegian nobility - minor
+	illustration_image = { #Alpha 0
+		texture_file = "gfx/interface/icons/government_reforms/illustrations/modern_imperial_army.dds"
+		priority = 100
+		#scope = character
+		trigger = {
+			has_reform = government_reform:norwegian_administration
+		}
+	}
+
+	# Swedish Nobility - minor
+
+	# Norwegian nobility - major
