@@ -997,10 +997,7 @@ WESRE = { # Roman Empire
 		colored_emblem = {
 			texture = "ce_crescent_star_turkey.dds"
 			color1 = color2
-			instance = {
-				position = { 0.45 }
-				scale = { 0.60 0.60 } 
-			}
+			instance = { position = { 0.45 } scale = { 0.60 0.60 }  }
 		}
 	}	
 # The United Kingdom TODO: fix
@@ -1014,6 +1011,18 @@ WESRE = { # Roman Empire
 		pattern = "pattern_solid.dds"
 		color1 = "red"	
 	}	
+# Swedish Empire
+	SWDEM = {
+		pattern = "pattern_solid.dds"
+		color1 = hsv360{ 217 100 41 } # swedish blue
+		color2 = hsv360{ 49 97 98 }
+		colored_emblem = {
+			texture = "ce_swedish_empire.dds"
+			color1 = color1
+			color2 = color2
+			color3 = color1
+		}
+	}
 # Armenian Empire
 	AMNAE = {
 		pattern = "pattern_solid.dds"
@@ -1277,23 +1286,39 @@ WESRE = { # Roman Empire
 	}
 # Burma
 	BURMA = {
-		pattern = "pattern_tricolor_vertical_01.dds"
+		pattern = "pattern_tricolor_horizontal_01.dds"
 		color1 = "red"
 		color2 = "green"
 		color3 = "yellow"
+		color4 = "white"
+		color5 = "blue"
+		colored_emblem = {
+			texture = "ce_star_05.dds"
+			color1 = color4
+			color2 = color4
+			color3 = color2
+			instance = { position = { 0.50 0.50 } scale = { 0.80 0.80 } }
+		}
 	}	
 # Chola
 	CHOLA = {
-		pattern = "pattern_per_saltire_shield.dds"
-		color1 = "red"
+		pattern = "pattern_solid.dds"
+		color1 = hsv360{ 0 92 87 } # red
 		color2 = "white"
 		color3 = "red"
+		textured_emblem = {
+			texture = "te_chola.dds"
+			instance = { position = { 0.50 0.50 } scale = { 0.95 0.90 }  }
+		}	
 	}	
 # Ceylon		
-	CHOLA = {
-		pattern = "pattern_border_venice.dds"
-		color1 = "yellow"
-		color2 = "brick"
+	CYLON = {
+		pattern = "pattern_solid.dds"
+		color1 = "red"
+		color2 = "black"
+		color3 = "yellow"
+		color4 = "white"
+		color5 = "blue"
 	}	
 # Abyssinia
 	ABYSA = {

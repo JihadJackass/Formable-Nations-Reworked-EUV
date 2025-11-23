@@ -7,7 +7,7 @@
 			government = monarchy
 			potential = {
 				tag = SDNNW
-				has_reform = government_reform:swedish_administration
+				has_reform = government_reform:swedish_administration_major
 				has_variable = fnr_sweden_norway_sweden_major
 			}
 			allow ={
@@ -21,6 +21,12 @@
 				global_levy_size_modifier = -0.1
 				government_reform_slots = 1
 			}
+			locked = {
+				is_locked_mechanic = {
+					mechanic = government_reform
+					type = swedish_administration_major
+				}
+			}			
 			block_for_rebel = yes
 		}
 
@@ -41,16 +47,23 @@
 				navy_galley_power = 0.10
 				navy_galley_build_cost_modifier = 0.0350
 			}
+			locked = {
+				is_locked_mechanic = {
+					mechanic = government_reform
+					type = norwegian_administration_minor
+				}
+			}
 			block_for_rebel = yes
 		}
 
 	# Major if player chooses norwegian domination - TODO: BALANCE ALL 4
 		norwegian_administration_major = {
+			major = yes
 			unique = yes
 			government = monarchy
 			potential = {
 				tag = SDNNW
-				has_reform = government_reform:norwegian_administration_minor
+				has_reform = government_reform:norwegian_administration_major
 				has_variable = fnr_sweden_norway_norway_major
 			}
 			allow =  {
@@ -58,31 +71,43 @@
 			country_modifier = {
 				global_maritime_presence_modifier = 0.05
 				navy_galley_power = 0.10
-				navy_galley_build_cost_modifier = 0.0350
+				monthly_towards_decentralization = societal_value_minor_monthly_move
+				navy_galley_build_cost_modifier = -0.0350
+				monthly_navy_tradition = 0.03
+				colonial_range_modifier = 0.02
+				government_reform_slots = 1
+			}
+			locked = {
+				is_locked_mechanic = {
+					mechanic = government_reform
+					type = norwegian_administration_major
+				}
 			}
 			block_for_rebel = yes
 		}
 
 	# non-major swedish - TODO: BALANCE ALL 4
-		swedish_administration_major = {
-			major = yes
+		swedish_administration_minor = {
 			unique = yes
 			government = monarchy
 			potential = {
 				tag = SDNNW
-				has_reform = government_reform:swedish_administration
+				has_reform = government_reform:swedish_administration_minor
 				has_variable = fnr_sweden_norway_sweden_minor
 			}
 			allow ={
 				tag = SDNNW
 			}
 			country_modifier = {
-				army_infantry_power = 0.05
-				discipline = 0.05
-				monthly_towards_centralization = societal_value_minor_monthly_move
-				monthly_army_tradition = 0.035
-				global_levy_size_modifier = -0.1
-				government_reform_slots = 1
+				discipline = 0.03
+				army_infantry_power = 0.03
+				global_levy_size_modifier = -0.05
+			}
+			locked = {
+				is_locked_mechanic = {
+					mechanic = government_reform
+					type = swedish_administration_minor
+				}
 			}
 			block_for_rebel = yes
 		}

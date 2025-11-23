@@ -1,5 +1,11 @@
 ﻿l_english:
 
+  # vanilla formables
+
+    # Russian Tsardom
+    RUS: "Tsardom of Russia"
+    RUS_ADJ: "Russian"
+
   ########################
   # HISTORICAL FORMABLES #
   ########################

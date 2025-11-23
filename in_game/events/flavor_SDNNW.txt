@@ -1,4 +1,5 @@
-﻿flavor_SDNNW.1 = { # Sweden-Norway Flag Choice
+﻿# TODO: ADD TOOLTIPS EXPLAINING THE 
+flavor_SDNNW.1 = { # Sweden-Norway Flag Choice
 	type = country_event
 	title = flavor_SDNNW.1.title
 	desc = flavor_SDNNW.1.desc
