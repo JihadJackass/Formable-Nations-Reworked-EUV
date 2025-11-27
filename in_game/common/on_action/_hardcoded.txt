@@ -1,10 +1,8 @@
 ﻿on_game_start = {
 	effect = {
-		# FNR - # Historical formables enabled by default
+		# FNR - # Historical formables enabled by default, rest disabled
 		every_country = {
-			limit = {
-				has_variable = fnr_historical_enabled
-			}
+			# Historical Formables
 			set_variable = {
 				name = fnr_historical_enabled
 				value = yes

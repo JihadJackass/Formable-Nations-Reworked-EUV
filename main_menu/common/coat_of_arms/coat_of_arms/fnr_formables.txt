@@ -3,561 +3,481 @@
 ###########################################
 
 # North Sea Empire (White)
-NSE_WHITE_FNR = { # North Sea Empire
-	pattern = "pattern_solid.dds"
-	color1 = "white"
-	color2 = "black"
-	
-	colored_emblem = {
-		#texture = "ce_double_tressure_fleury.dds"
-		color1 = color2
-		color2 = color2
-		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }			
+	NSE_WHITE_FNR = { # North Sea Empire
+		pattern = "pattern_solid.dds"
+		color1 = "white"
+		color2 = "black"
+		colored_emblem = {
+			#texture = "ce_double_tressure_fleury.dds"
+			color1 = color2
+			color2 = color2
+			instance = { 
+				position = { 0.5 0.5 } 
+				scale = { 1.0 1.0 } 
+			}			
+		}
+		colored_emblem = {
+			texture = "ce_lymphad_mcdonald.dds"
+			color1 = color2
+			color2 = "white"
+			color3 = "white"
+			instance = { 
+				position = { 0.275 0.38 } 
+				scale = { 0.5 0.5 }  
+			}
+			instance = { 
+				position = { 0.725 0.38 } 
+				scale = { 0.5 0.5 }  
+			}
+			instance = { 
+				position = { 0.5 0.64 } 
+				scale = { 0.5 0.5 }  
+			}				
+		}
 	}
-	colored_emblem = {
-		texture = "ce_lymphad_mcdonald.dds"
-		color1 = color2
-		color2 = "white"
-		color3 = "white"
-		instance = { position = { 0.275 0.38 } scale = { 0.5 0.5 }  }
-		instance = { position = { 0.725 0.38 } scale = { 0.5 0.5 }  }
-		instance = { position = { 0.5 0.64 } scale = { 0.5 0.5 }  }				
-	}
-}
-
 # Arpitania
-ARPIT = {
-    sub = {
-        parent = "sub_fnr_ARPIT"
-    }
-}
-sub_fnr_ARPIT = {
-    pattern = "pattern_horizontal_split_01.dds"
-    color1 = "red"
-    color2 = "white"
-    color3 = "yellow"
-    colored_emblem = {
-        texture = "ce_stars_circle_13.dds"
-        color1 = color3
-        instance = { position = { 0.35 0.5 } scale = { 0.75 0.75 } }
-    }
-    colored_emblem = {
-        texture = "ce_star_07_half_top.dds"
-        color1 = color2
-        instance = { position = { 0.35 0.5 } scale = { 0.65 0.65 } }
-    }
-    colored_emblem = {
-        texture = "ce_star_07_half_bottom.dds"
-        color1 = color1
-        instance = { position = { 0.35 0.5 } scale = { 0.65 0.65 } }
-    }
-}
-
-# Polba
-POLBA = {
-    sub = {
-        parent = "sub_fnr_POLBA"
-    }
-}
-sub_fnr_POLBA = {
-    color1 = "red"
-    color2 = "white"
-    color3 = "blue"
-    colored_emblem = {
-        texture = "ce_quarterly_cross.dds"
-        color1 = color1
-        color2 = color2
-        color3 = color3
-    }
-}
-
+	ARPIT = {
+		textured_emblem = {
+			texture = "te_arpitania.dds"
+		}
+	}
+# Polaba
+	POLBA = {
+		color1 = "red"
+		color2 = "white"
+		color3 = "blue"
+		colored_emblem = {
+			texture = "ce_quarterly_cross.dds"
+			color1 = color1
+			color2 = color2
+			color3 = color3
+		}
+	}
 # Great Sorbia
-GSORB = {
-    sub = {
-        parent = "sub_fnr_GSORB"
-    }
-}
-sub_fnr_GSORB = {
-    pattern = "pattern_tricolor_horizontal_01.dds"
-    color1 = "blue"
-    color2 = "red"
-    color3 = "white"
-    color4 = "black"
-    colored_emblem = {
-        texture = "ce_eagle.dds"
-        color1 = color4
-        color2 = color2
-        color3 = color2
-        instance = { scale = { 1 1 } }
-    }
-}
-
+	GSORB = {
+		pattern = "pattern_tricolor_horizontal_01.dds"
+		color1 = "blue"
+		color2 = "red"
+		color3 = "white"
+		color4 = "black"
+		colored_emblem = {
+			texture = "ce_eagle.dds"
+			color1 = color4
+			color2 = color2
+			color3 = color2
+			instance = { scale = { 1 1 } }
+		}
+	}
 # Sorbic Kingdom
-KSORB = {
-    sub = {
-        parent = "sub_fnr_KSORB"
-    }
-}
-sub_fnr_KSORB = {
-    pattern = "pattern_tricolor_horizontal_01.dds"
-    color1 = "blue"
-    color2 = "red"
-    color3 = "white"
-    color4 = "black"
-	textured_emblem = {
-		texture = "te_coa_shcherbatov.dds"
-        instance = { scale = { 0.33 0.33 } }
+	KSORB = {
+		pattern = "pattern_tricolor_horizontal_01.dds"
+		color1 = "blue"
+		color2 = "red"
+		color3 = "white"
+		color4 = "black"
+		textured_emblem = {
+			texture = "te_coa_shcherbatov.dds"
+			instance = { scale = { 0.33 0.33 } }
+		}
 	}
-}
-
 # Kingdom of Hanover
-KOFHN = {
-    sub = {
-        parent = "sub_fnr_KOFHN"
-    }
-}
-sub_fnr_KOFHN = {
-    pattern = "pattern_horizontal_split_01.dds"
-    color1 = "yellow"
-    color2 = "white"
-    color3 = "black"
-    color4 = "red"
-	textured_emblem = {
-		texture = "te_crown.dds"
-        instance = { 
-            position = { 0.50 0.20 }
-            scale = { 0.50 0.50 } 
-        }
+	KOFHN = {
+		pattern = "pattern_horizontal_split_01.dds"
+		color1 = "yellow"
+		color2 = "white"
+		color3 = "black"
+		color4 = "red"
+		textured_emblem = {
+			texture = "te_crown.dds"
+			instance = { 
+				position = { 0.50 0.20 }
+				scale = { 0.50 0.50 } 
+			}
+		}
+		colored_emblem = {
+			texture = "ce_shield.dds"
+			color1 = color4
+			color2 = color3
+			instance = { 
+				position = { 0.50 0.55 }
+				scale = { 0.70 0.65 } 
+			}
+		}
+		colored_emblem = {
+			texture = "ce_horse_salient_variant.dds"
+			color1 = color2
+			color2 = color2
+			color3 = color2
+			instance = { 
+				position = { 0.50 0.50 }
+				scale = { 0.40 0.40 } 
+			}
+		}
 	}
-    colored_emblem = {
-        texture = "ce_shield.dds"
-        color1 = color4
-        color2 = color3
-        instance = { 
-            position = { 0.50 0.55 }
-            scale = { 0.70 0.65 } 
-        }
-    }
-    colored_emblem = {
-        texture = "ce_horse_salient_variant.dds"
-        color1 = color2
-        color2 = color2
-        color3 = color2
-        instance = { 
-            position = { 0.50 0.50 }
-            scale = { 0.40 0.40 } 
-        }
-    }
-}
-
 # Bremen-Verden
-BMNVD = {
-    sub = {
-        parent = "sub_fnr_BMNVD"
-    }
-}
-sub_fnr_BMNVD = {
-    pattern = "pattern_vertical_split_01.dds"
-    color1 = "red"
-    color2 = "white"
-    color3 = "yellow"
-    color4 = "black"
-    colored_emblem = {
-        texture = "ce_keys_saltire.dds"
-        color1 = color3
-        instance = { position = { 0.25 0.50 } scale = { 0.65 0.65 } }
-    }
-    colored_emblem = {
-        texture = "ce_cross_order_christ_hoist_plain.dds"
-        color1 = color4
-        instance = { position = { 0.90 0.50 } scale = { 0.65 0.65 } }
-    }
-}
-
+	BMNVD = {
+		pattern = "pattern_vertical_split_01.dds"
+		color1 = "red"
+		color2 = "white"
+		color3 = "yellow"
+		color4 = "black"
+		colored_emblem = {
+			texture = "ce_keys_saltire.dds"
+			color1 = color3
+			instance = { position = { 0.25 0.50 } scale = { 0.65 0.65 } }
+		}
+		colored_emblem = {
+			texture = "ce_cross_order_christ_hoist_plain.dds"
+			color1 = color4
+			instance = { position = { 0.90 0.50 } scale = { 0.65 0.65 } }
+		}
+	}
 # Ducal Prussia
-DCLPR = {
-    sub = {
-        parent = "sub_fnr_DCLPR"
-    }
-}
-sub_fnr_DCLPR = {
-    pattern = "pattern_solid.dds"
-    color1 = "white"
-    color2 = "black"
-    color3 = "yellow"
-    colored_emblem = {
-        texture = "ce_eagle_crowned_boned_wide_prussia.dds"
-        color1 = color2
-        color2 = color3
-        instance = { scale = { 0.70 0.70 } }
-    }
-}
-
+	DCLPR = {
+		pattern = "pattern_solid.dds"
+		color1 = "white"
+		color2 = "black"
+		color3 = "yellow"
+		colored_emblem = {
+			texture = "ce_eagle_crowned_boned_wide_prussia.dds"
+			color1 = color2
+			color2 = color3
+			instance = { scale = { 0.70 0.70 } }
+		}
+	}
 # Balochistan
-BALCH = {
-    sub = {
-        parent = "sub_fnr_BALCH"
-    }
-}
-sub_fnr_BALCH = {
-    pattern = "pattern_solid.dds"
-    color1 = "green"
-    color2 = "black"
-    color3 = "white"
-    colored_emblem = {
-        texture = "ce_crescent_star_05.dds"
-        color1 = color3
-        instance = { 
-            scale = { 0.70 0.70 }
-            rotation = 230
-        }
-    }
-}
-
+	BALCH = {
+		pattern = "pattern_solid.dds"
+		color1 = "green"
+		color2 = "black"
+		color3 = "white"
+		colored_emblem = {
+			texture = "ce_crescent_star_05.dds"
+			color1 = color3
+			instance = { 
+				scale = { 0.70 0.70 }
+				rotation = 230
+			}
+		}
+	}
 # Basque Country
-BASQU = {
-    sub = {
-        parent = "sub_fnr_BASQU"
-    }
-}
-sub_fnr_BASQU = {
-    pattern = "pattern_solid.dds"
-    color1 = "red"      # RED background (was green)
-    color2 = "white"
-    color3 = "green"
-    colored_emblem = {
-        texture = "ce_saltire_thin.dds"
-        color1 = color3   # GREEN saltire
-        color2 = color3
-    }
-    colored_emblem = {
-        texture = "ce_basque_cross.dds"
-        color1 = color2   # WHITE cross on top
-        color2 = color2
-    }
-}
-
+	BASQU = {
+		pattern = "pattern_solid.dds"
+		color1 = "red"      # RED background (was green)
+		color2 = "white"
+		color3 = "green"
+		colored_emblem = {
+			texture = "ce_saltire_thin.dds"
+			color1 = color3   # GREEN saltire
+			color2 = color3
+		}
+		colored_emblem = {
+			texture = "ce_basque_cross.dds"
+			color1 = color2   # WHITE cross on top
+			color2 = color2
+		}
+	}
 # Serbian Empire
-SRBEM = {
-    sub = {
-        parent = "sub_fnr_SRBEM"
-    }
-}
-sub_fnr_SRBEM = {
-    pattern = "pattern_solid.dds"
-    color1 = hsv360{ 45 35 100 }    # Golden yellow
-    color2 = hsv360{ 0 80 80 }     # Red for the eagle
-    
-    colored_emblem = {
-        texture = "ce_eagle_double_headed_shield.dds"  # or your custom eagle
-        color1 = color2
-        color2 = color2
-        instance = { 
-            position = { 0.5 0.5 }
-            scale = { 0.6 0.6 }
-        }
-    }
-}
-
+	SRBEM = {
+		pattern = "pattern_solid.dds"
+		color1 = hsv360{ 45 35 100 }    # Golden yellow
+		color2 = hsv360{ 0 80 80 }     # Red for the eagle
+		
+		colored_emblem = {
+			texture = "ce_eagle_double_headed_shield.dds"  # or your custom eagle
+			color1 = color2
+			color2 = color2
+			instance = { 
+				position = { 0.5 0.5 }
+				scale = { 0.6 0.6 }
+			}
+		}
+	}
 # Dual Monarchy
-DLMON = {
-    pattern = "pattern_solid.dds"
-    color1 = "blue"
-    color2 = "white"
-    color3 = "red"
-    color4 = "yellow"
-    
-    # White-bordered red cross
-    colored_emblem = {
-        texture = "ce_cross_fimbriated.dds"  # Cross with white border
-        color1 = color2  # White border
-        color2 = color3  # Red cross
-    }
-    
-    # Top-left: 2 English lions
-    colored_emblem = {
-        texture = "ce_lion_passant.dds"
-        color1 = color4
-        color2 = color4
-        instance = { position = { 0.20 0.10 } scale = { 0.5 0.20 } }
-    }
-    colored_emblem = {
-        texture = "ce_lion_passant.dds"
-        color1 = color4
-        color2 = color4
-        instance = { position = { 0.20 0.25 } scale = { 0.5 0.20 } }
-    }
-    
-    # Top-right: Fleur-de-lis
-    colored_emblem = {
-        texture = "ce_fleur_de_lis.dds"
-        color1 = color4
-        color2 = color4
-        instance = { position = { 0.80 0.15 } scale = { 0.25 0.25 } }
-    }
-    
-    # Bottom-left: Fleur-de-lis
-    colored_emblem = {
-        texture = "ce_fleur_de_lis.dds"
-        color1 = color4
-        color2 = color4
-        instance = { position = { 0.20 0.85 } scale = { 0.25 0.25 } }
-    }
-    
-    # Bottom-right: Fleur-de-lis
-    colored_emblem = {
-        texture = "ce_fleur_de_lis.dds"
-        color1 = color4
-        color2 = color4
-        instance = { position = { 0.80 0.85 } scale = { 0.25 0.25 } }
-    }
-}
-
+	DLMON = {
+		pattern = "pattern_solid.dds"
+		color1 = "blue"
+		color2 = "white"
+		color3 = "red"
+		color4 = "yellow"
+		
+		# White-bordered red cross
+		colored_emblem = {
+			texture = "ce_cross_fimbriated.dds"  # Cross with white border
+			color1 = color2  # White border
+			color2 = color3  # Red cross
+		}
+		
+		# Top-left: 2 English lions
+		colored_emblem = {
+			texture = "ce_lion_passant.dds"
+			color1 = color4
+			color2 = color4
+			instance = { position = { 0.20 0.10 } scale = { 0.5 0.20 } }
+		}
+		colored_emblem = {
+			texture = "ce_lion_passant.dds"
+			color1 = color4
+			color2 = color4
+			instance = { position = { 0.20 0.25 } scale = { 0.5 0.20 } }
+		}
+		
+		# Top-right: Fleur-de-lis
+		colored_emblem = {
+			texture = "ce_fleur_de_lis.dds"
+			color1 = color4
+			color2 = color4
+			instance = { position = { 0.80 0.15 } scale = { 0.25 0.25 } }
+		}
+		
+		# Bottom-left: Fleur-de-lis
+		colored_emblem = {
+			texture = "ce_fleur_de_lis.dds"
+			color1 = color4
+			color2 = color4
+			instance = { position = { 0.20 0.85 } scale = { 0.25 0.25 } }
+		}
+		
+		# Bottom-right: Fleur-de-lis
+		colored_emblem = {
+			texture = "ce_fleur_de_lis.dds"
+			color1 = color4
+			color2 = color4
+			instance = { position = { 0.80 0.85 } scale = { 0.25 0.25 } }
+		}
+	}
 # Carolingian Empire
-CAROL = {
-    sub = {
-        parent = "sub_fnr_CAROL"
-    }
-}
-sub_fnr_CAROL = {
-    pattern = "pattern_vertical_split_01.dds"  # Vertical split down middle
-    color1 = "yellow"   # Left side (gold)
-    color2 = "blue"     # Right side
-    color3 = "black"    # Eagle
-    color4 = "yellow"   # Fleur-de-lis
-    
-    # Black eagle on left half
-    colored_emblem = {
-        texture = "ce_eagle_half.dds"  # or ce_eagle_displayed.dds
-        color1 = color3
-        color2 = color3
-        instance = { position = { 0.48 0.5 } scale = { 1.5 1 } }
-    }
-    colored_emblem = { # top left
-        texture = "ce_fleur_de_lis.dds"
-        color1 = color4
-        color2 = color4
-        instance = { position = { 0.60 0.20 } scale = { 0.30 0.30 } }
-    }
-    colored_emblem = { # center top
-        texture = "ce_fleur_de_lis.dds"
-        color1 = color4
-        color2 = color4
-        instance = { position = { 0.75 0.35 } scale = { 0.30 0.30 } }
-    }
-    colored_emblem = { # top right
-        texture = "ce_fleur_de_lis.dds"
-        color1 = color4
-        color2 = color4
-        instance = { position = { 0.90 0.20 } scale = { 0.30 0.30 } }
-    }
-    colored_emblem = { # bottom left
-        texture = "ce_fleur_de_lis.dds"
-        color1 = color4
-        color2 = color4
-        instance = { position = { 0.60 0.55 } scale = { 0.30 0.30 } }
-    }
-    colored_emblem = { # top right
-        texture = "ce_fleur_de_lis.dds"
-        color1 = color4
-        color2 = color4
-        instance = { position = { 0.90 0.55 } scale = { 0.30 0.30 } }
-    }
-    colored_emblem = { # center bottom
-        texture = "ce_fleur_de_lis.dds"
-        color1 = color4
-        color2 = color4
-        instance = { position = { 0.75 0.75 } scale = { 0.30 0.30 } }
-    }
-}
-
+	CAROL = {
+		pattern = "pattern_vertical_split_01.dds"  # Vertical split down middle
+		color1 = "yellow"   # Left side (gold)
+		color2 = "blue"     # Right side
+		color3 = "black"    # Eagle
+		color4 = "yellow"   # Fleur-de-lis
+		
+		# Black eagle on left half
+		colored_emblem = {
+			texture = "ce_eagle_half.dds"  # or ce_eagle_displayed.dds
+			color1 = color3
+			color2 = color3
+			instance = { position = { 0.48 0.5 } scale = { 1.5 1 } }
+		}
+		colored_emblem = { # top left
+			texture = "ce_fleur_de_lis.dds"
+			color1 = color4
+			color2 = color4
+			instance = { position = { 0.60 0.20 } scale = { 0.30 0.30 } }
+		}
+		colored_emblem = { # center top
+			texture = "ce_fleur_de_lis.dds"
+			color1 = color4
+			color2 = color4
+			instance = { position = { 0.75 0.35 } scale = { 0.30 0.30 } }
+		}
+		colored_emblem = { # top right
+			texture = "ce_fleur_de_lis.dds"
+			color1 = color4
+			color2 = color4
+			instance = { position = { 0.90 0.20 } scale = { 0.30 0.30 } }
+		}
+		colored_emblem = { # bottom left
+			texture = "ce_fleur_de_lis.dds"
+			color1 = color4
+			color2 = color4
+			instance = { position = { 0.60 0.55 } scale = { 0.30 0.30 } }
+		}
+		colored_emblem = { # top right
+			texture = "ce_fleur_de_lis.dds"
+			color1 = color4
+			color2 = color4
+			instance = { position = { 0.90 0.55 } scale = { 0.30 0.30 } }
+		}
+		colored_emblem = { # center bottom
+			texture = "ce_fleur_de_lis.dds"
+			color1 = color4
+			color2 = color4
+			instance = { position = { 0.75 0.75 } scale = { 0.30 0.30 } }
+		}
+	}
 # The Horde	
-HORDE = {
-    sub = {
-        parent = "sub_fnr_HORDE"
-    }
-}
-sub_fnr_HORDE = {
-    pattern = "pattern_solid.dds"
-    color1 = "green"
-    color2 = "yellow"
-    color3 = "red"
-    colored_emblem = { # thin border
-        texture = "ce_border_thin.dds"
-        color1 = color3  # Red
-        color2 = color3
-       # instance = { position = { 0.5 0.5 } scale = { 0.85 0.85 } }
-    }
-    colored_emblem = { # Red star acting as stroke behind yellow star
-        texture = "ce_horde.dds"
-        color1 = color3  # Red
-        color2 = color3
-        instance = { 
-            position = { 0.5 0.5 } 
-            scale = { 0.85 0.85 } 
-        }
-    }
-    colored_emblem = { # Yellow star
-        texture = "ce_horde.dds"
-        color1 = color2  # Yellow
-        color2 = color2
-        instance = { 
-            position = { 0.5 0.5 } 
-            scale = { 0.70 0.70 } 
-        }
-    }
-    colored_emblem = { # Red star acting as stroke behind yellow star
-        texture = "ce_horde.dds"
-        color1 = color3  # Red
-        color2 = color3
-        instance = { 
-            position = { 0.5 0.5 } 
-            scale = { 0.55 0.55 } 
-        }
-    }
-}
+	HORDE = {
+		pattern = "pattern_solid.dds"
+		color1 = "green"
+		color2 = "yellow"
+		color3 = "red"
+		colored_emblem = { # thin border
+			texture = "ce_border_thin.dds"
+			color1 = color3  # Red
+			color2 = color3
+		# instance = { position = { 0.5 0.5 } scale = { 0.85 0.85 } }
+		}
+		colored_emblem = { # Red star acting as stroke behind yellow star
+			texture = "ce_horde.dds"
+			color1 = color3  # Red
+			color2 = color3
+			instance = { 
+				position = { 0.5 0.5 } 
+				scale = { 0.85 0.85 } 
+			}
+		}
+		colored_emblem = { # Yellow star
+			texture = "ce_horde.dds"
+			color1 = color2  # Yellow
+			color2 = color2
+			instance = { 
+				position = { 0.5 0.5 } 
+				scale = { 0.70 0.70 } 
+			}
+		}
+		colored_emblem = { # Red star acting as stroke behind yellow star
+			texture = "ce_horde.dds"
+			color1 = color3  # Red
+			color2 = color3
+			instance = { 
+				position = { 0.5 0.5 } 
+				scale = { 0.55 0.55 } 
+			}
+		}
+	}
+# Austria-Bavaria
+	ASTBV = {
+		pattern = "pattern_quarterly_flag.dds"
+		color1 = "blue"     # Top-left quarter
+		color2 = "red"      # Top-right quarter  
+		color3 = "red"      # Bottom-left quarter
+		color4 = "blue"     # Bottom-right quarter
+		color5 = "white"    # For lozenges
+		# Bavaria lozenges in top-left quarter
+		colored_emblem = {
+			texture = "ce_lozengy_bend_shield.dds"
+			color1 = color1  # Blue
+			color2 = color5  # White
+			instance = { 
+				position = { 0.25 0.25 } 
+				scale = { 0.50 0.50 }
+			}
+		}
+		# Bavaria lozenges in bottom-right quarter
+		colored_emblem = {
+			texture = "ce_lozengy_bend_shield.dds"
+			color1 = color1
+			color2 = color5
+			instance = { 
+				position = { 0.75 0.75 } 
+				scale = { 0.50 0.50 }
+			}
+		}
+		# Austria tricolor in top-right quarter
+		colored_emblem = {
+			texture = "ce_tricolor_horizontal.dds"
+			color1 = "red"    # Top stripe
+			color2 = "white"  # Middle stripe
+			color3 = "red"    # Bottom stripe
+			instance = { 
+				position = { 0.75 0.25 } 
+				scale = { 0.50 0.50 }
+			}
+		}
 
-# Austria-Bavaria TODO: fix
-ASTBV = {
-    sub = {
-        parent = "sub_fnr_ASTBV"
-    }
-}
-sub_fnr_ASTBV = {
-    pattern = "pattern_quarterly_flag.dds"
-    color1 = "blue"     # Top-left quarter
-    color2 = "red"      # Top-right quarter  
-    color3 = "red"      # Bottom-left quarter
-    color4 = "blue"     # Bottom-right quarter
-    color5 = "white"    # For lozenges
-    # Bavaria lozenges in top-left quarter
-    colored_emblem = {
-        texture = "ce_lozengy_bend_shield.dds"
-        color1 = color1  # Blue
-        color2 = color5  # White
-        instance = { 
-            position = { 0.25 0.25 } 
-            scale = { 0.50 0.50 }
-        }
-    }
-    # Bavaria lozenges in bottom-right quarter
-    colored_emblem = {
-        texture = "ce_lozengy_bend_shield.dds"
-        color1 = color1
-        color2 = color5
-        instance = { 
-            position = { 0.75 0.75 } 
-            scale = { 0.50 0.50 }
-        }
-    }
-    # Austria tricolor in top-right quarter
-    colored_emblem = {
-        texture = "ce_tricolor_horizontal.dds"
-        color1 = "red"    # Top stripe
-        color2 = "white"  # Middle stripe
-        color3 = "red"    # Bottom stripe
-        instance = { 
-            position = { 0.75 0.25 } 
-            scale = { 0.50 0.50 }
-        }
-    }
-
-    # Austria tricolor in bottom-left quarter
-    colored_emblem = {
-        texture = "ce_tricolor_horizontal.dds"
-        color1 = "red"
-        color2 = "white"
-        color3 = "red"
-        instance = { 
-            position = { 0.25 0.75 } 
-            scale = { 0.50 0.50 }
-        }
-    }
-}
-
+		# Austria tricolor in bottom-left quarter
+		colored_emblem = {
+			texture = "ce_tricolor_horizontal.dds"
+			color1 = "red"
+			color2 = "white"
+			color3 = "red"
+			instance = { 
+				position = { 0.25 0.75 } 
+				scale = { 0.50 0.50 }
+			}
+		}
+	}
 # Illyria
-ILYRA = {
-	pattern = "pattern_horizontal_split_01.dds"
-	color1 = "white"
-	color2 = "red"
-	color3 = "black"
-	color4 = "yellow"
-    colored_emblem = {
-        texture = "ce_eagle_doubleheaded_crowned_wide.dds"
-        color1 = color3 
-        color2 = color4
-        color3 = color4
-        instance = { 
-            position = { 0.5 0.5 } 
-            scale = { 0.55 0.55 } 
-        }
-    }
-}
-
+	ILYRA = {
+		pattern = "pattern_horizontal_split_01.dds"
+		color1 = "white"
+		color2 = "red"
+		color3 = "black"
+		color4 = "yellow"
+		colored_emblem = {
+			texture = "ce_eagle_doubleheaded_crowned_wide.dds"
+			color1 = color3 
+			color2 = color4
+			color3 = color4
+			instance = { 
+				position = { 0.5 0.5 } 
+				scale = { 0.55 0.55 } 
+			}
+		}
+	}
 # Polynesia
-POLNE = {
-	pattern = "pattern_jurchen_checky_colours.dds"
-	color1 = "red"
-	color2 = "white"
-	color3 = "red"
-	color4 = "orange"
-    colored_emblem = {
-        texture = "ce_sun_polynesian.dds"
-        color1 = color4
-        instance = { 
-            position = { 0.5 0.5 } 
-            scale = { 0.65 0.65 } 
-        }
-    }
-}
-
-
+	POLNE = {
+		pattern = "pattern_jurchen_checky_colours.dds"
+		color1 = "red"
+		color2 = "white"
+		color3 = "red"
+		color4 = "orange"
+		colored_emblem = {
+			texture = "ce_sun_polynesian.dds"
+			color1 = color4
+			instance = { 
+				position = { 0.5 0.5 } 
+				scale = { 0.65 0.65 } 
+			}
+		}
+	}
 # Eastern Roman Empire
-EASRE = { # Roman Empire
-	pattern = "pattern_solid.dds"
-	color1 = "purple_mid"
-	color2 = "yellow"
-	color3 = "white"
-	color4 = "red"
-
-	colored_emblem = {
-		texture = "ce_laurel_wreath.dds"
-		color1 = color2
-		color2 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.975 0.975 } }			
-	}	
-	colored_emblem = {
-		texture = "ce_roman_aquila.dds"
-		color1 = color2
-		color2 = hsv360 	{	25	70	33	} 	
-		color3 = color1
-		instance = { position = { 0.5 0.55 } scale = { 0.7 0.7 } }			
-	}			
-}
-
+	EASRE = {
+		pattern = "pattern_solid.dds"
+		color1 = "purple_mid"
+		color2 = "yellow"
+		color3 = "white"
+		color4 = "red"
+		colored_emblem = {
+			texture = "ce_laurel_wreath.dds"
+			color1 = color2
+			color2 = color3
+			instance = { 
+				position = { 0.5 0.5 } 
+				scale = { 0.975 0.975 } 
+			}			
+		}	
+		colored_emblem = {
+			texture = "ce_roman_aquila.dds"
+			color1 = color2
+			color2 = hsv360 	{	25	70	33	} 	
+			color3 = color1
+			instance = { 
+				position = { 0.5 0.55 } 
+				scale = { 0.7 0.7 } 
+			}			
+		}			
+	}
 # Western Roman Empire
-WESRE = { # Roman Empire
-	pattern = "pattern_solid.dds"
-	color1 = "red"
-	color2 = "yellow"
-	color3 = "white"
-	color4 = "red"
-
-	colored_emblem = {
-		texture = "ce_laurel_wreath.dds"
-		color1 = color2
-		color2 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.975 0.975 } }			
-	}	
-	colored_emblem = {
-		texture = "ce_roman_aquila.dds"
-		color1 = color2
-		color2 = hsv360 	{	25	70	33	} 	
-		color3 = color1
-		instance = { position = { 0.5 0.55 } scale = { 0.7 0.7 } }			
-	}			
-}
-
+	WESRE = {
+		pattern = "pattern_solid.dds"
+		color1 = "red"
+		color2 = "yellow"
+		color3 = "white"
+		color4 = "red"
+		colored_emblem = {
+			texture = "ce_laurel_wreath.dds"
+			color1 = color2
+			color2 = color3
+			instance = { 
+				position = { 0.5 0.5 } 
+				scale = { 0.975 0.975 } 
+			}			
+		}	
+		colored_emblem = {
+			texture = "ce_roman_aquila.dds"
+			color1 = color2
+			color2 = hsv360 { 25 70 33 } 	
+			color3 = color1
+			instance = { 
+				position = { 0.5 0.55 } 
+				scale = { 0.7 0.7 } 
+			}			
+		}			
+	}
 # Confederation of the Rhine
 	RCONF = {
 		pattern = "pattern_tricolor_horizontal_01.dds"
@@ -573,12 +493,12 @@ WESRE = { # Roman Empire
 	}
 # Hawaii
 	HAWAI = {
-		pattern = "ce_hawaii.dds"  # Check what stripe patterns exist
+		#pattern = "ce_hawaii.dds"  # Check what stripe patterns exist
+		pattern = "pattern_solid.dds"  # Check what stripe patterns exist
 		color1 = "white"
 		color2 = "red"
 		color3 = "blue"
-	}
-	
+	}	
 # Yugoslavia
 	YGOSL = {
 		pattern = "pattern_jurchen_checky_colours.dds"
@@ -592,11 +512,24 @@ WESRE = { # Roman Empire
 		color1 = "white"
 		color2 = "red"
 	}
-# Angevin Empire TODO: fix
+# Angevin Empire
 	AGEVN = {
-		pattern = "pattern_solid.dds"
-		color1 = "red"
+		textured_emblem = {
+			texture = "te_angevin.dds"
+		}
 	}
+# Langobards
+	LNGBD = {
+		textured_emblem = {
+			texture = "te_langobards.dds"
+		}
+	}
+# Islamic State (ISIS)
+	ISISS = {
+		textured_emblem = {
+			texture = "te_islamic_state.dds"
+		}	
+	}	
 # Baltic States	
 	BLTST = {
 		pattern = "pattern_cross.dds"
@@ -612,7 +545,10 @@ WESRE = { # Roman Empire
 		colored_emblem = {
 			texture = "ce_cross_alsace.dds"
 			color1 = color3
-			instance = { position = { 0.20 0.25 } scale = { 0.50 0.50 } }			
+			instance = { 
+				position = { 0.20 0.25 } 
+				scale = { 0.50 0.50 } 
+			}			
 		}	
 	}
 # Belarus
@@ -657,17 +593,46 @@ WESRE = { # Roman Empire
 		color1 = "white"
 		color2 = "red"
 	}
-# Alpland TODO: fix
+# Alpland
 	ALPLN = {
 		pattern = "pattern_solid.dds"
-		color1 = "blue_sky"	
+		color1 = "yellow"
+		color2 = "white"
+		color3 = hsv360{ 223 92 65 } # blue
+		colored_emblem = {
+			texture = "ce_alpland.dds"
+			color1 = color2
+			color2 = color2
+			color3 = color3
+		}
+		colored_emblem = {
+			texture = "ce_star_05.dds"
+			color1 = color1
+			instance = { 
+				position = { 0.50 0.50 } 
+				scale = { 0.60 0.60 } 
+			}
+		}
 	}
 # Cisalpina	
 	CSPNA = {
-		pattern = "pattern_tricolor_vertical_01.dds"
+		pattern = "pattern_solid.dds"
 		color1 = "green"
 		color2 = "white"
 		color3 = "red"
+		colored_emblem = {
+			texture = "ce_cisalpina.dds"
+			color1 = color1
+			color2 = color3
+			color3 = color2
+		}
+		textured_emblem = {
+			texture = "te_cisalpina.dds"
+			instance = { 
+				position = { 0.50 0.50 }
+				scale = { 0.70 0.70 }
+			}
+		}
 	}	
 # Commonwealth of England
 	ENGCM = {
@@ -677,11 +642,6 @@ WESRE = { # Roman Empire
 	}
 # Czechoslovakia
 	CZSLO = {
-		sub = {
-			parent = "sub_fnr_CZSLO"
-		}
-	}
-	sub_fnr_CZSLO = {
 		color1 = "white"
 		color2 = "red"
 		color3 = "blue"
@@ -692,7 +652,6 @@ WESRE = { # Roman Empire
 			color3 = color3
 		}
 	}
-
 # Ducal Prussia
 	DCLPR = {
 		pattern = "pattern_horizontal_split_01.dds"
@@ -731,13 +690,35 @@ WESRE = { # Roman Empire
 			color1 = color2
 			color2 = color3
 			color3 = color3
-			instance = { scale = { 0.55 0.75 } }
+			instance = { 
+				scale = { 0.55 0.75 } 
+			}
 		}
 	}
-# European Union # TODO
+# European Union
 	EUROP = {
 		pattern = "pattern_solid.dds"
 		color1 = "blue"
+		color2 = "yellow"
+
+		@eur_star_scale = 0.17
+
+		colored_emblem = {
+			texture = "ce_star_05.dds"
+			color1 = color2
+			instance = { position = { 0.61 0.78 } scale = { @eur_star_scale @eur_star_scale } }
+			instance = { position = { 0.69 0.66 } scale = { @eur_star_scale @eur_star_scale } }
+			instance = { position = { 0.69 0.33 } scale = { @eur_star_scale @eur_star_scale } }
+			instance = { position = { 0.61 0.21 } scale = { @eur_star_scale @eur_star_scale } }
+			instance = { position = { 0.72 0.49 } scale = { @eur_star_scale @eur_star_scale } }
+			instance = { position = { 0.39 0.78 } scale = { @eur_star_scale @eur_star_scale } }
+			instance = { position = { 0.31 0.66 } scale = { @eur_star_scale @eur_star_scale } }
+			instance = { position = { 0.31 0.33 } scale = { @eur_star_scale @eur_star_scale } }
+			instance = { position = { 0.39 0.21 } scale = { @eur_star_scale @eur_star_scale } }
+			instance = { position = { 0.28 0.49 } scale = { @eur_star_scale @eur_star_scale } }
+			instance = { position = { 0.50 0.83 } scale = { @eur_star_scale @eur_star_scale } }
+			instance = { position = { 0.50 0.16 } scale = { @eur_star_scale @eur_star_scale } }
+		}
 	}
 # French Empire
 	FNCEM = {
@@ -755,9 +736,7 @@ WESRE = { # Roman Empire
 	}
 # German Reich
 	GMNRE = {
-		pattern = "pattern_mena_round_frame_shield.dds"
-		color1 = "red"
-		color2 = "white"
+		textured_emblem = { texture = "te_german_reich.dds" }
 	}	
 # Greater German Reich
 	GTRGM = {
@@ -805,10 +784,9 @@ WESRE = { # Roman Empire
 	}
 # Italian Empire
 	ITNEM = {
-		pattern = "pattern_tricolor_horizontal_01.dds"
-		color1 = "red"
-		color2 = "white"
-		color3 = "green"
+		textured_emblem = {
+			texture = "te_italian_empire.dds"
+		}
 	}
 # Kalmar Union
 	KLMUN = {
@@ -818,29 +796,25 @@ WESRE = { # Roman Empire
 	}
 # Kyivan Rus
 	KYVRU = {
-		pattern = "pattern_horizontal_split_01.dds"
-		color1 = "blue"
-		color2 = "yellow"
+		textured_emblem = {
+			texture = "te_kyivan_rus.dds"
+		}
 	}
 # Latin Empire
 	LTNEM = {
-		pattern = "pattern_horizontal_split_01.dds"
-		color1 = "red"
-		color2 = "yellow"
+		textured_emblem = {
+			texture = "te_latin_empire.dds"
+		}
 	}
 # Lombardy
 	LMBDY = {
-		sub = {
-			parent = "sub_fnr_LMBDY"
-		}
-	}
-	sub_fnr_LMBDY = {
 		pattern = "pattern_solid.dds"
 		color1 = hsv360{ 144 100 63 }
 		color2 = "white"
 		colored_emblem = {
 			texture = "ce_lombardy_3.dds"
-			color1 = color2
+			color1 = color1
+			color2 = color2
 		}
 	}
 # Lombardy-Venetia
@@ -940,7 +914,6 @@ WESRE = { # Roman Empire
 			color1 = color1
 			color2 = color2
 			color3 = color1
-			color4 = color4
 			instance = { position = { 0.50 0.50 } scale = { 2.05 2.05 } }
 		}
 		colored_emblem = {
@@ -948,7 +921,6 @@ WESRE = { # Roman Empire
 			color1 = color2
 			color2 = color2
 			color3 = color2
-			color4 = color2
 			instance = { position = { 0.40 0.40 } scale = { 0.90 0.80 } }
 		}
 	}
@@ -962,12 +934,12 @@ WESRE = { # Roman Empire
 		textured_emblem = {
 			texture = "te_sweden_norway_canton.dds"
 			instance = { position = { 0.15 0.20 } scale = { 0.45 0.45 }  }
-		}	
+		}
 		colored_emblem = {
 			texture = "ce_sweden_norway_main.dds"
 			color2 = color1
 			color3 = color2
-		}	
+		}
 	}
 # Sweden-Norway - Norway
 	SDNNW_N = {
@@ -986,7 +958,6 @@ WESRE = { # Roman Empire
 			color1 = color5
 			color2 = color4
 			color3 = color2
-			color4 = color5
 		}	
 	}
 # Turkey
@@ -1002,14 +973,31 @@ WESRE = { # Roman Empire
 	}	
 # The United Kingdom TODO: fix
 	UKKDM = {
-		pattern = "pattern_cross.dds"
-		color1 = "white"
-		color2 = "red"
+		pattern = "pattern_tricolor_horizontal_01.dds"
+		color1 = hsv360{ 350 92 78 } # british red
+		color2 = "white"
+		color3 = hsv360{ 222 99 41 } # british blue
+		colored_emblem = {
+			texture = "ce_united_kingdom.dds"
+			color1 = color1
+			color2 = color2
+			color3 = color3
+			instance = { position = { 0.50 0.50 } }
+		}
 	}
 # Wendish Empire
 	WNDEM = {
 		pattern = "pattern_solid.dds"
-		color1 = "red"	
+		color1 = hsv360{ 353 94 81 } # wends red (adjusted)
+		color2 = "yellow"
+		color3 = "black"
+		textured_emblem = {
+			texture = "te_wends.dds"
+			instance = { 
+				position = { 0.50 0.50 } 
+				scale = { 0.70 0.95 }  
+			}
+		}	
 	}	
 # Swedish Empire
 	SWDEM = {
@@ -1026,12 +1014,29 @@ WESRE = { # Roman Empire
 # Armenian Empire
 	AMNAE = {
 		pattern = "pattern_solid.dds"
-		color1 = "red_scarlet"	
+		color1 = hsv360{ 350 100 59 } # armenian red
+		color2 = hsv360{ 39 56 93 } # armenian gold
+		colored_emblem = {
+			texture = "ce_armenian_empire.dds"
+			color1 = color1
+			color2 = color2
+			color3 = color1
+		}
 	}	
 # Arabian Empire
 	ARABE = {
 		pattern = "pattern_solid.dds"
-		color1 = "green"	
+		color1 = hsv360{ 151 100 38 } # arabian green
+		color2 = "white"
+		color3 = "yellow"
+		color4 = "black"
+		textured_emblem = {
+			texture = "te_arabian_empire.dds"
+			instance = { 
+				position = { 0.50 0.50 } 
+				scale = { 0.65 0.65 }  
+			}
+		}
 	}	
 # Caucasia
 	CCASA = {
@@ -1055,15 +1060,25 @@ WESRE = { # Roman Empire
 	}	
 # Empire of China
 	CNAEM = {
-		pattern = "pattern_jurchen_checky_colours.dds"
-		color1 = "blue"	
-		color2 = "white"	
-		color3 = "yellow"	
+		textured_emblem = {
+			texture = "te_empire_of_china.dds"
+		}
 	}	
 # Goguryeo
 	GGURY = {
 		pattern = "pattern_solid.dds"
-		color1 = "brick"		
+		color1 = hsv360{ 43 46 99 } # goguryeo
+		color2 = "white"
+		color3 = "yellow"
+		color4 = "black"
+		color5 = "blue"
+		textured_emblem = {
+			texture = "te_gorgeryeo.dds"
+			instance = { 
+				position = { 0.40 0.50 } 
+				scale = { 0.95 0.95 }  
+			}
+		}		
 	}	
 # Korea
 	KOREA = {
@@ -1139,19 +1154,26 @@ WESRE = { # Roman Empire
 # Omani Empire	
 	OMANE = {
 		pattern = "pattern_solid.dds"
-		color1 = "red"	
+		color1 = hsv360{ 358 90 86 } # red
 	}	
 # People's Republic of China
 	PRCCN = {
-		pattern = "pattern_solid.dds"
-		color1 = "red"	
+		textured_emblem = {
+			texture = "te_prc.dds"
+		}
 	}	
 # Republic of China	
 	ROCCN = {
-		pattern = "pattern_canton_02.dds"
-		color1 = "blue"	
-		color2 = "red"	
-	}	
+		textured_emblem = {
+			texture = "te_roc_early.dds"
+		}
+	}
+# Cordoba
+	CDOBA = {
+		textured_emblem = {
+			texture = "te_cordoba.dds"
+		}
+	}		
 # Philippines	
 	FILPN = {
 		pattern = "pattern_solid.dds"
@@ -1267,7 +1289,10 @@ WESRE = { # Roman Empire
 			color1 = color1
 			color2 = color4
 			color3 = color3
-			instance = { position = { 0.50 0.50 } scale = { 0.30 0.30 } }
+			instance = { 
+				position = { 0.50 0.50 } 
+				scale = { 0.30 0.30 } 
+			}
 		}
 	}
 # Vietnam
@@ -1297,7 +1322,10 @@ WESRE = { # Roman Empire
 			color1 = color4
 			color2 = color4
 			color3 = color2
-			instance = { position = { 0.50 0.50 } scale = { 0.80 0.80 } }
+			instance = { 
+				position = { 0.50 0.50 } 
+				scale = { 0.80 0.80 } 
+			}
 		}
 	}	
 # Chola
@@ -1308,7 +1336,10 @@ WESRE = { # Roman Empire
 		color3 = "red"
 		textured_emblem = {
 			texture = "te_chola.dds"
-			instance = { position = { 0.50 0.50 } scale = { 0.95 0.90 }  }
+			instance = { 
+				position = { 0.50 0.50 } 
+				scale = { 0.95 0.90 }  
+			}
 		}	
 	}	
 # Ceylon		
@@ -1322,107 +1353,206 @@ WESRE = { # Roman Empire
 	}	
 # Abyssinia
 	ABYSA = {
-		pattern = "pattern_tricolor_vertical_01.dds"
-		color1 = "red"
-		color2 = "yellow"
-		color3 = "green"
+		textured_emblem = {
+			texture = "te_abyssinia.dds"
+		}
 	}	
 # Chad
 	ACHAD = {
-		pattern = "pattern_tricolor_horizontal_01.dds"
+		pattern = "pattern_tricolor_vertical_01.dds"
 		color1 = "blue"
 		color2 = "yellow"
 		color3 = "red"
 	}
 # Madagascar
  	MDGSC = {
-		pattern = "pattern_tricolor_horizontal_01.dds"
+		pattern = "pattern_solid.dds"
 		color1 = "white"
-		color2 = "yellow"
-		color3 = "red"
+		color2 = hsv360{ 3 77 98 } # red
+		color3 = hsv360{ 148 100 52 } # green
+		colored_emblem = {
+			texture = "ce_madagascar.dds"
+			color1 = color1
+			color2 = color3
+			color3 = color2
+			instance = { 
+				position = { 0.50 0.50 }
+			}
+		}
 	}		
 # Rhodesia
  	RHDSA = {
-		pattern = "pattern_tricolor_horizontal_01.dds"
+		pattern = "pattern_tricolor_vertical_01.dds"
 		color1 = "green"
 		color2 = "white"
 		color3 = "green"
+		textured_emblem = {
+			texture = "te_rhodesia.dds"
+			instance = { 
+				position = { 0.50 0.50 } 
+				scale = { 0.95 0.95 }  
+			}
+		}
 	}	
 # Manchuria
  	MNCRA = {
 		pattern = "pattern_solid.dds"
-		color1 = "yellow"
+		color1 = hsv360{ 46 100 100 } # yellow
+		textured_emblem = {
+			texture = "te_manchuria.dds"
+			instance = { 
+				position = { 0.25 0.25 } 
+				scale = { 0.50 0.50 }  
+			}
+		}
 	}	
 # Israel
  	ISREL = {
 		pattern = "pattern_solid.dds"
 		color1 = "white"
+		color2 = hsv360{ 222 100 72 } # israeli blue
+		colored_emblem = {
+			texture = "ce_israel.dds"
+			color1 = color2
+			color2 = color1
+			color3 = color1
+		}
 	}				
 # Palestine
  	PLSTN = {
 		pattern = "pattern_tricolor_horizontal_01.dds"
-		color1 = "green"
+		color1 = "black"
 		color2 = "white"
-		color3 = "black"
+		color3 = hsv360{ 143 100 59 } # palestine green
+		textured_emblem = {
+			texture = "te_palestine.dds"
+		}
 	}				
 # Alaska
  	ALSKA = {
 		pattern = "pattern_solid.dds"
-		color1 = "blue_sky"
-	}	
-# Arpitania
- 	ARPIT = {
-		pattern = "pattern_cross.dds"
-		color1 = "white"
-		color2 = "red_mid"
+		color1 = hsv360{ 223 80 29 } # alaska blue
+		color2 = hsv360{ 42 93 100 } # alaska yellow
+		colored_emblem = {
+			texture = "ce_alaska.dds"
+			color1 = color1
+			color2 = color2
+			color3 = color2
+		}
 	}	
 # Adriatic Empire
  	ADREM = {
+		textured_emblem = {
+			texture = "te_adriatic_empire.dds"
+		}
+	}	
+# Celtic Union
+ 	CTUNN = {
+		textured_emblem = {
+			texture = "te_celtic_union.dds"
+		}
+	}	
+# Kingdom of God
+ 	KOGOD = {
 		pattern = "pattern_tricolor_horizontal_01.dds"
 		color1 = "red"
 		color2 = "white"
 		color3 = "red"
-	}	
+		color4 = "blue"
+		colored_emblem = {
+			texture = "ce_kog.dds"
+			color1 = color4
+			color2 = color4
+			color3 = color2
+			instance = { position = { 0.50 0.50 } }
+		}
+	}
 # Anglo-Dutch Union
 	ANDUH = {
-		pattern = "pattern_tricolor_vertical_01.dds"
-		color1 = "orange"
-		color2 = "white"
-		color3 = "blue"
+		textured_emblem = {
+			texture = "te_agu.dds"
+		}
 	}	
 # Kingdom of Aquitaine
  	AQUIT = {
-		pattern = "pattern_solid.dds"
-		color1 = "red"
+		pattern = "pattern_quarterly_flag.dds"
+		color1 = "red"	
+		color2 = "blue"	
+		color3 = "yellow"	
+		colored_emblem = { # top right
+			texture = "ce_cross_toulouse.dds"
+			color1 = color3 # Toulouse cross
+			instance = { 
+				position = { 0.75 0.25 } 
+				scale = { 0.45 0.45 } 
+			}
+		}
+		colored_emblem = { # bottom left
+			texture = "ce_cross_toulouse.dds"
+			color1 = color3 # Toulouse cross
+			instance = { 
+				position = { 0.25 0.75 } 
+				scale = { 0.45 0.45 } 
+			}
+		}
+		colored_emblem = { # top left
+			texture = "ce_lion_passant_guardant_long_wide.dds"
+			color1 = color3 # lion
+			color2 = color2 # extra
+			instance = { 
+				position = { 0.25 0.25 } 
+				scale = { 0.45 0.45 } 
+			}
+		}
+		colored_emblem = { # bottom right
+			texture = "ce_lion_passant_guardant_long_wide.dds"
+			color1 = color3 # lion
+			color2 = color2 # extra
+			instance = { 
+				position = { 0.75 0.75 } 
+				scale = { 0.45 0.45 } 
+			}
+		}
 	}	
 # Occitania	
  	OCCIT = {
 		pattern = "pattern_solid.dds"
-		color1 = "red_mid"
+		color2 = "yellow"
+		color4 = "red"
+		colored_emblem = {
+			texture = "ce_occitania.dds"
+			color1 = color4
+			color3 = color2
+			instance = { position = { 0.50 0.50 } }
+		}
 	}	
 # Balkan League
 	BLKLG = {
-		pattern = "pattern_tricolor_horizontal_01.dds"
-		color1 = "red"
-		color2 = "blue_light"
-		color3 = "white"		
+		pattern = "pattern_solid.dds"
+		color1 = "black"
+		color2 = "white"
+		color3 = "green"
+		textured_emblem = {
+			texture = "te_balkan.dds"
+		}		
 	}
 # Bosnia-Serbia
 	BSSER = {
-		pattern = "pattern_tricolor_horizontal_01.dds"
-		color1 = "red"
-		color2 = "blue"
-		color3 = "white"		
+		textured_emblem = {
+			texture = "te_bosnia_serbia.dds"
+		}	
 	}
 # Catholica Russica
 	CATRU = {
-		pattern = "pattern_solid.dds"
-		color1 = "yellow"		
+		textured_emblem = {
+			texture = "te_cath_rus.dds"
+		}
 	}
 # Dacia
 	DACIA = {
-		pattern = "pattern_solid.dds"
-		color1 = "indigo"		
+		textured_emblem = {
+			texture = "te_dacia.dds"
+		}
 	}	
 # East Slavia
 	ESLAV = {
@@ -1432,62 +1562,140 @@ WESRE = { # Roman Empire
 # Franco-Iberian Empire		
 	FNCIB = {
 		pattern = "pattern_tricolor_vertical_01.dds"
-		color1 = "red"
-		color2 = "yellow"
-		color3 = "blue"		
+		color1 = "blue"
+		color2 = "white"
+		color3 = "red"
+		color4 = "green"
+		textured_emblem = {
+			texture = "te_franco_iberian_empire_texture_2.dds"
+			instance = { 
+				position = { 0.50 0.50 } 
+				scale = { 0.35 0.65 }  
+			}
+		}	
 	}		
 # Frieslande (Germanized Dutch basically)
 	FIESL = {
-		pattern = "pattern_tricolor_vertical_01.dds"
-		color1 = "orange"
-		color2 = "white"
-		color3 = "black"
+		textured_emblem = {
+			texture = "te_frieslande.dds"
+		}
 	}	
 # Gallic Empire
 	GLCEM = {
-		pattern = "pattern_tricolor_vertical_01.dds"
-		color1 = "green"
-		color2 = "black"
-		color3 = "green"
+		textured_emblem = {
+			texture = "te_gallic_empire.dds"
+		}
 	}	
-# Hungarian Empire
-	BSSER = {
-		pattern = "pattern_tricolor_horizontal_01.dds"
-		color1 = "red"
-		color2 = "white"
-		color3 = "green"		
-	}
 # Iberian Empire
-	FIESL = {
-		pattern = "pattern_cross.dds"
-		color1 = "yellow"
-		color2 = "red"
+	IBNEM = {
+		pattern = "pattern_solid.dds"
+		color1 = "blue"
+		color2 = "yellow"
+		color3 = "red"
+		color4 = "green"
+		colored_emblem = {
+			texture = "ce_iberian_union_main.dds"
+			color1 = color3
+			color2 = color2
+			color3 = color4
+			instance = { position = { 0.50 0.50 } }
+		}
+		textured_emblem = {
+			texture = "te_iberian_union_texture.dds"
+			instance = { position = { 0.39 0.50 } scale = { 0.45 0.50 }  }
+		}
 	}	
 # Italian Merchant Alliance
 	ITMCH = {
-		pattern = "pattern_tricolor_horizontal_01.dds"
+		pattern = "pattern_tricolor_vertical_01.dds"
 		color1 = "red"
 		color2 = "white"
 		color3 = "green"
+		color4 = "blue"
+		textured_emblem = {
+			texture = "te_italian_merchant_alliance.dds"
+			instance = { position = { 0.50 0.50 } scale = { 0.30 0.45 }  }
+		}
 	}	
 # Jagiellonian Empire
 	JGLNN = {
-		pattern = "pattern_solid.dds"
-		color1 = "red"	
+		pattern = "pattern_tricolor_horizontal_01.dds"
+		color1 = hsv360{ 0 97 80 } # polish pink
+		color2 = "white"
+		color3 = hsv360{ 0 97 80 } # polish pink
+		color4 = "blue"
+		textured_emblem = {
+			texture = "te_jagiellonian_empire.dds"
+			instance = { position = { 0.50 0.50 } scale = { 0.45 0.55 }  }
+		}
 	}
-	
 # Ummayad Caliphate
 	UMAYA = {
-		pattern = "pattern_solid.dds"
+		pattern = "pattern_border_thin.dds"
 		color1 = "white"	
+		color2 = "green"	
 	}
-	
-# Kingdom of Germany (post carolingian germany)
+# Hungarian Empire
+	HNGEM = {
+		pattern = "pattern_tricolor_horizontal_01.dds"
+		color1 = hsv360{ 353 80 80 } # hungarian pink
+		color2 = "white"
+		color3 = hsv360{ 134 40 44 } # hungarian green
+		textured_emblem = {
+			texture = "te_hungarian_empire_2.dds"
+			instance = { 
+				position = { 0.50 0.50 } 
+				scale = { 0.35 0.75 }  
+			}
+		}
+	}
+# East Francia (post carolingian germany)
 	KOGER = {
-		pattern = "pattern_solid.dds"
-		color1 = "yellow"	
+		pattern = "pattern_quarterly_flag.dds"
+		color1 = "black"	
+		color2 = "yellow"	
+		color3 = "red"	
+		colored_emblem = { # top right
+			texture = "ce_eagle_wide.dds"
+			color1 = color1 # eagle
+			color2 = color3 # feet
+			color3 = color3
+			instance = { 
+				position = { 0.75 0.25 } 
+				scale = { 0.45 0.45 } 
+			}
+		}
+		colored_emblem = { # bottom left
+			texture = "ce_eagle_wide.dds"
+			color1 = color1 # eagle
+			color2 = color3 # feet
+			color3 = color3
+			instance = { 
+				position = { 0.25 0.75 } 
+				scale = { 0.45 0.45 } 
+			}
+		}
+		colored_emblem = { # top left
+			texture = "ce_eagle_wide.dds"
+			color1 = color2 # eagle
+			color2 = color3 # feet
+			color3 = color3
+			instance = { 
+				position = { 0.25 0.25 } 
+				scale = { 0.45 0.45 } 
+			}
+		}
+		colored_emblem = { # bottom right
+			texture = "ce_eagle_wide.dds"
+			color1 = color2 # eagle
+			color2 = color3 # feet
+			color3 = color3
+			instance = { 
+				position = { 0.75 0.75 } 
+				scale = { 0.45 0.45 } 
+			}
+		}
 	}
-
 # Lusitanian Empire
 	LUSIT = {
 		pattern = "pattern_vertical_split_01.dds"
@@ -1500,13 +1708,15 @@ WESRE = { # Roman Empire
 	}
 # Macedonia
 	MACED = {
-		pattern = "pattern_solid.dds"
-		color1 = "purple_mid"	
+		textured_emblem = {
+			texture = "te_macedon.dds"
+		}
 	}
 # Macedonian Empire
 	MACED = {
-		pattern = "pattern_solid.dds"
-		color1 = "purple"	
+		textured_emblem = {
+			texture = "te_macedonian_empire.dds"
+		}
 	}
 # North Sea Empire	
 	NOSEM = {
@@ -1516,6 +1726,7 @@ WESRE = { # Roman Empire
 	}	
 # Pontus
 	PONTU = {
-		pattern = "pattern_solid.dds"
-		color1 = "blue_sky"	
+		textured_emblem = {
+			texture = "te_pontus.dds"
+		}
 	}	

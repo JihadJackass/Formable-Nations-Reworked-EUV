@@ -58,7 +58,7 @@
     # Angevin Empire
     AGEVN: "Angevin Empire"
     AGEVN_ADJ: "Angevin"
-    AGEVN_desc: "The Current Flag is temporary and will be updated in the next Formable Nations: Reworked Update.\n\nThe Angevin Empire was a collection of territories ruled by the House of Plantagenet from 1154 to 1216, encompassing England and large parts of France, including Normandy, Anjou, and Aquitaine. It was a powerful but loosely connected 'composite monarchy' established by Henry II and his successors, Richard I and John."
+    AGEVN_desc: "The Angevin Empire was a collection of territories ruled by the House of Plantagenet from 1154 to 1216, encompassing England and large parts of France, including Normandy, Anjou, and Aquitaine. It was a powerful but loosely connected 'composite monarchy' established by Henry II and his successors, Richard I and John."
 
     # Baltic States
     BLTST: "Baltic States"
@@ -168,7 +168,7 @@
     # European Union
     EUROP: "European Union"
     EUROP_ADJ: "European"
-    EUROP_desc: "The Current Flag is temporary and will be updated in the next Formable Nations: Reworked Update.\n\nThe unification of Europe under a single banner. Born from centuries of rivalry, war, and fragile peace, the European Union stands as a beacon of cooperation and shared destiny. No longer divided by borders and crowns, Europe now moves with one voice, wielding unparalleled economic and military might."
+    EUROP_desc: "The unification of Europe under a single banner. Born from centuries of rivalry, war, and fragile peace, the European Union stands as a beacon of cooperation and shared destiny. No longer divided by borders and crowns, Europe now moves with one voice, wielding unparalleled economic and military might."
 
     # French Empire
     FNCEM: "French Empire"
@@ -183,7 +183,7 @@
     # German Reich
     GMNRE: "German Reich"
     GMNRE_ADJ: "German"
-    GMNRE_desc: "The Current Flag is temporary and will be updated in the next Formable Nations: Reworked Update.\n\nThe German Reich was the official name for the German nation-state from 1871 to 1945, encompassing three distinct political systems: the German Empire (1871-1918), the Weimar Republic (1919-1933), and Nazi Germany (1933-1945). The term 'German Reich' is most frequently associated with the Third Reich, or Nazi Germany, which was a totalitarian dictatorship under Adolf Hitler and the Nazi Party"
+    GMNRE_desc: "The German Reich was the official name for the German nation-state from 1871 to 1945, encompassing three distinct political systems: the German Empire (1871-1918), the Weimar Republic (1919-1933), and Nazi Germany (1933-1945). The term 'German Reich' is most frequently associated with the Third Reich, or Nazi Germany, which was a totalitarian dictatorship under Adolf Hitler and the Nazi Party"
 
     # Greater German Reich
     GTRGM: "Greater German Reich"
@@ -244,7 +244,7 @@
     # Nazi Germany
     NAZIG: "Nazi Germany"
     NAZIG_ADJ: "German"
-    NAZIG_desc: "The Current Flag is temporary and will be updated in the next Formable Nations: Reworked Update.\n\nNazi Germany was the German state from 1933 to 1945, ruled by Adolf Hitler and the Nazi Party, transforming it into a totalitarian dictatorship. It is also known as the Third Reich, a term that implied succession from the Holy Roman Empire and German Empire. Key features included extreme nationalism, virulent antisemitism, expansionist foreign policy, and the persecution of Jews and other minority groups, which ultimately led to World War II"
+    NAZIG_desc: "Nazi Germany was the German state from 1933 to 1945, ruled by Adolf Hitler and the Nazi Party, transforming it into a totalitarian dictatorship. It is also known as the Third Reich, a term that implied succession from the Holy Roman Empire and German Empire. Key features included extreme nationalism, virulent antisemitism, expansionist foreign policy, and the persecution of Jews and other minority groups, which ultimately led to World War II"
 
     # Russian Empire
     RUSEM: "Russian Empire"
@@ -325,7 +325,7 @@
     KOREA_desc: "Korea is a peninsular region in East Asia, now politically divided into two nations: North Korea and South Korea, located at the 38th parallel. South Korea, officially the Republic of Korea, is a democratic republic with a strong economy, a mountainous terrain, and four distinct seasons, bordered by North Korea, the Yellow Sea, and the Sea of Japan."
 
     # Himalayan Empire
-    HMLAY: "Himalayan Empire"
+    HMLAY: "Empire of the Himalayas"
     HMLAY_ADJ: "Himalayan"
     HMLAY_desc: "The Himalayan Empire was a mountainous country in the Himalayas, mentioned in the Puranas. In the puranas, Himavat was its ruler and his daughter Parvati was a princess from this kingdom. The Indian epic Mahabharata doesn't mention a kingdom named Himalaya, but mentions many kingdoms in the Himalaya mountains like the Kuninda, Parvata, Nepa, Kirata, Kimpurusha, and Kinnara."
 
@@ -501,7 +501,7 @@
 
     BLKLG: "Balkan League"
     BLKLG_ADJ: "Balkan"
-    BLKLG_desc: "The Current Flag is temporary and will be updated in the next Formable Nations: Reworked Update.\n\nThe Balkan League was a military alliance of Bulgaria, Serbia, Greece, and Montenegro, formed in 1912 with the goal of driving the Ottoman Empire out of southeastern Europe and gaining territory. While initially successful in the First Balkan War, the alliance quickly disintegrated over disputes about how to divide the captured lands, which led to the Second Balkan War in 1913"
+    BLKLG_desc: "The Balkan League was a military alliance of Bulgaria, Serbia, Greece, and Montenegro, formed in 1912 with the goal of driving the Ottoman Empire out of southeastern Europe and gaining territory. While initially successful in the First Balkan War, the alliance quickly disintegrated over disputes about how to divide the captured lands, which led to the Second Balkan War in 1913"
 
     BASQU: "Basque Country"
     BASQU_ADJ: "Basque"
@@ -525,7 +525,7 @@
     # Carolingian Empire
     CAROL: "Carolingian Empire"
     CAROL_ADJ: "Carolingian"
-    CAROL_desc: "The Current Flag is temporary and will be updated in the next Formable Nations: Reworked Update.\n\nThe Carolingian Empire was a Frankish-dominated state in Western and Central Europe from 800 to 888 CE, founded by Charlemagne who was crowned emperor by the Pope. It was the most powerful empire in Western Europe for its time, stretching from Spain to modern-day Germany, and served as a predecessor to the Holy Roman Empire and the modern states of France and Germany."
+    CAROL_desc: "The Carolingian Empire was a Frankish-dominated state in Western and Central Europe from 800 to 888 CE, founded by Charlemagne who was crowned emperor by the Pope. It was the most powerful empire in Western Europe for its time, stretching from Spain to modern-day Germany, and served as a predecessor to the Holy Roman Empire and the modern states of France and Germany."
 
     # Cordoba
     CDOBA: "Cordoba"
@@ -540,7 +540,7 @@
     # Dual Monarchy
     DLMON: "Dual Monarchy"
     DLMON_ADJ: "Dual Monarchy"
-    DLMON_desc: "The Current Flag is temporary and will be updated in the next Formable Nations: Reworked Update.\n\n~~Alternate History~~\n\nThe dual monarchy of England and France was a period from 1422 to 1453 where the infant King Henry VI of England was recognized as the monarch of both England and France, though his claim was disputed. It was established by the Treaty of Troyes following Henry V's invasion and English control of northern France during the Hundred Years' War. The claim was contested by the Dauphin Charles, who controlled southern France, and it ended when the French, led by Charles VII, gradually expelled the English from all territories except Calais."
+    DLMON_desc: "~~Alternate History~~\n\nThe dual monarchy of England and France was a period from 1422 to 1453 where the infant King Henry VI of England was recognized as the monarch of both England and France, though his claim was disputed. It was established by the Treaty of Troyes following Henry V's invasion and English control of northern France during the Hundred Years' War. The claim was contested by the Dauphin Charles, who controlled southern France, and it ended when the French, led by Charles VII, gradually expelled the English from all territories except Calais."
 
     # East Slavia
     ESLAV: "East Slavia"
@@ -560,7 +560,7 @@
     # Gallic Empire
     GLCEM: "Gallic Empire"
     GLCEM_ADJ: "Gallic"
-    GLCEM_desc: "The Current Flag is temporary and will be updated in the next Formable Nations: Reworked Update.\n\nThe Gallic Empire was a breakaway part of the Roman Empire that existed from 260 to 274 AD, during the Crisis of the Third Century. It was established by the Roman commander Postumus and included the territories of Gaul, Britannia, and Hispania. The empire had its own government and mint."
+    GLCEM_desc: "The Gallic Empire was a breakaway part of the Roman Empire that existed from 260 to 274 AD, during the Crisis of the Third Century. It was established by the Roman commander Postumus and included the territories of Gaul, Britannia, and Hispania. The empire had its own government and mint."
 
     # Hungarian Empire
     HNGEM: "Hungarian Empire"
@@ -568,7 +568,7 @@
     HUNGARIANEMPIRE_desc: "The Hungarians once stood as the principal nation of Europe and held potential for Great Power status but were devastated by the Bubonic Plague, and the subjugated by the Austrians leading to the Austro-Hungarian Union.\n\nSuch a fate is unacceptable to the historical Magyar Realm and with the right determination we can establish an Empire of Hungarians for Hungarians."
 
     # Iberian Empire
-    IBNEM: "Iberian Empire"
+    IBNEM: "Iberian Union"
     IBNEM_ADJ: "Iberian"
     IBNEM_desc: "The Iberian Union describes the period from 1580 to 1640 in which the Monarchy of Spain under the Habsburg dynasty, then the personal union of the crowns of Castile and Aragon, brought in personal union also the Kingdom of Portugal. It incorporated the entire Iberian Peninsula except Andorra."
 
@@ -592,10 +592,10 @@
     UMAYA_ADJ: "Umayyad"
     UMAYA_desc: "The Umayyad Caliphate (661–750 CE) was the first major Islamic dynasty, transforming the Muslim community into a vast, centralized Arab-Islamic empire. Ruled from its capital in Damascus, Syria, it became one of the largest unitary states in history, stretching from the Iberian Peninsula (Spain and Portugal) in the west to India and Central Asia in the east."
 
-    # Kingdom of Germany
-    KOGER: "Kingdom of Germany"
-    KOGER_ADJ: "German"
-    KOGER_desc: "The 'Kingdom of Germany' refers to East Francia, the eastern part of the Carolingian Empire that was established after the Treaty of Verdun. It was primarily Germanic-speaking and was ruled by the Carolingian dynasty until 911, after which it became an elective monarchy before eventually developing into the Holy Roman Empire"
+    # East Francia
+    KOGER: "East Francia"
+    KOGER_ADJ: "East Francian"
+    KOGER_desc: "East Francia, otherwise known as the 'Kingdom of Germany' is the eastern part of the Carolingian Empire that was established after the Treaty of Verdun. It was primarily Germanic-speaking and was ruled by the Carolingian dynasty until 911, after which it became an elective monarchy before eventually developing into the Holy Roman Empire"
 
     # Kingdom of God
     KOGOD: "Kingdom of God"

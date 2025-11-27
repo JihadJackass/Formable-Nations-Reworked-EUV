@@ -1487,92 +1487,9 @@
 		}
 	}
 
-	# North Sea Empire
-	NSE_f = {
-		level = 4
-		required_locations_fraction = 0.5
-		rule = plausible
-		
-		potential = {
-			OR = {
-				culture = { has_culture_group = culture_group:british_group }
-				culture = { has_culture_group = culture_group:scandinavian_group }
-			}
-			any_owned_location = { 
-				OR = {
-					region = region:scandinavian_region 
-					region = region:north_atlantic_islands_region 
-				}
-			}
-			any_owned_location = { 
-				OR = {
-					region = region:great_britain_region 
-					region = region:ireland_region 
-				}
-			}
-		}
+	# North Sea Empire - removed for fnr
 
-		allow = {
-		}
-		
-		name = NSE
-		flag = NSE
-		adjective = NSE_ADJ
-		tag = NSE
-		color = map_NSE
-
-		regions = {
-			great_britain_region
-			ireland_region
-			scandinavian_region
-			north_atlantic_islands_region
-		}
-		form_effect = {
-		}
-	}
-
-	# Celtic Union
-	CEL_f = {
-		level = 3
-		required_locations_fraction = 0.9
-		rule = plausible
-		
-		potential = {
-			has_variable = fnr_althistory_enabled 
-			culture = { has_culture_group = culture_group:celtic_group }
-		}
-
-		allow = {
-			culture = { has_culture_group = culture_group:celtic_group }
-			has_reform = government_reform:celtic_traditions_reform
-			OR = {
-				court_language = language:brythonic_language
-				court_language = language:gaelic_language
-			}
-		}
-		
-		name = CEL
-		flag = CEL
-		adjective = CEL_ADJ
-		tag = CEL
-		color = map_CEL
-
-		regions = {
-			ireland_region
-		}
-		areas = {
-			wales_area
-			scottish_lowlands_area
-			scottish_highlands_area
-			hebrides_area
-			brittany_area
-		}
-		provinces = {
-			cornwall_province
-		}
-		form_effect = {
-		}
-	}
+	# Celtic Union - removed for fnr
 
 	#
 	MLC_f = { 
@@ -1599,32 +1516,7 @@
 		}
 	}
 
-	# European Union
-	EUR_f = {
-		level = 5
-		required_locations_fraction = 0.5
-		rule = plausible	
-
-		potential = {
-			num_locations > 1500
-		}
-
-		allow = {
-			is_hegemon = yes
-		}
-		
-		name = EUR
-		flag = EUR
-		adjective = EUR_ADJ
-		tag = EUR
-		color = map_EUR
-
-		continents = {
-			europe
-		}
-		form_effect = {
-		}
-	}
+	# European Union - Disabled in favor of FNR
 
 	ULS_f = {
 		level = 1
@@ -3131,6 +3023,15 @@
 		rule = plausible
 
 		potential = {
+			has_variable = fnr_historical_enabled 
+			NOT = { 
+				OR = {
+					tag = ARM_f
+					tag_exists = ARM_f
+					# reduce spam
+					tag = AMNAE
+				}
+			}
 			culture = culture:armenian_culture
 		}
 		
@@ -4252,8 +4153,8 @@
 				potential = { 
 					OR = {
 						has_variable = fnr_fantasy_enabled
-						has_variable = fnr_basque_enabled
-					}	
+						#has_variable = fnr_arpitania_enabled
+					}
 					NOT = { 
 						OR = {
 							tag = ARPIT
@@ -4351,7 +4252,7 @@
 				potential = {
 					OR = {
 						has_variable = fnr_nonhistorical_enabled
-						has_variable = fnr_basque_enabled
+						#has_variable = fnr_basque_enabled
 					}
 					NOT = { 
 						OR = {
@@ -5129,7 +5030,7 @@
 					OR = {
 						AND = {
 							owns = location:malta
-							capital = { location = location:malta }
+							#capital = { location = location:malta } TODO busted
 						}
 						culture = culture:maltese
 						culture = culture:greek_culture
@@ -5139,7 +5040,7 @@
 					OR = {
 						AND = {
 							owns = location:malta
-							capital = { location = location:malta }
+							#capital = { locations = location:malta } TODO: causes  Script system error! Invalid left side during comparison 'location'
 						}
 						culture = culture:maltese
 						culture = culture:greek_culture
@@ -5487,16 +5388,6 @@
 				form_effect = { # TODO: fix these effects (perhaps add a major reform to assimilate)
 					change_religion = religion:catholic
 					change_religion_for_ruler_and_family = { country = ROOT religion = religion:catholic }
-					random_owned_location = {
-						change_pop_religion = root.religion
-					}
-					random_owned_location = {
-						change_pop_religion = root.religion
-					}
-					every_owned_location = {
-						limit = { area = area:zhejiang_area }
-						change_pop_religion = root.religion
-					}
 				}
 			}
 		# Taliban - Modern
@@ -5692,7 +5583,7 @@
 				color = map_MDGSC
 				regions = { madagascar_region }
 			}
-		# Rhodesia # add modern zimbabwe - Controversial
+		# Rhodesia - Controversial
 			RHDSA = {
 				level = 3
 				required_locations_fraction = 0.40
@@ -5714,6 +5605,8 @@
 				color = map_RHDSA
 				regions = { zimbabwe_region }
 			}
+		# Zimbabwe - Modern
+			# TODO
 		# Manchuria - non-historical
 			MNCRA = {
 				level = 3
@@ -5739,12 +5632,13 @@
 				color = map_MNCRA
 				regions = { manchuria_region }
 			}
-		# Israel (todo add beta israel) - Controversial
+		# Beta Israel
+			# TODO
+		# Israel - Controversial
 			ISREL = {
 				level = 3
 				required_locations_fraction = 0.40
 				rule = plausible
-
 				potential = {
 					has_variable = fnr_controversial_enabled 
 					NOT = { 
@@ -5763,22 +5657,13 @@
 						}
 					}
 				}
-				allow = {
-					
-				}
-
-				name = PLSTN
-				flag = PLSTN
-				adjective = PLSTN_ADJ
-				tag = PLSTN
+				name = ISREL
+				flag = ISREL
+				adjective = ISREL_ADJ
+				tag = ISREL
 				color = map_ISREL
-
-				areas = {
-					levant_area
-				}
-
-				form_effect = {
-				}
+				areas = { levant_area }
+				form_effect = { }
 			}
 		# Palestine - Controversial
 			PLSTN = {
@@ -6124,7 +6009,7 @@
 					culture = { has_culture_group = culture_group:british_group }
 				}
 				name = AGEVN
-				flag = NAP_simple
+				flag = AGEVN
 				adjective = AGEVN_ADJ
 				tag = AGEVN
 				color = map_AGEVN
@@ -6203,7 +6088,7 @@
 			}
 		# Austro-Hungarian Empire (TODO)
 			#
-		# Bulgarian Empire - Modern (TODO: perhaps firsts and second bulg empire)
+		# Bulgaria - Modern
 			BLGEM = {
 				level = 4
 				required_locations_fraction = 0.60
@@ -6231,6 +6116,12 @@
 					}
 				}
 			}
+		# First Bulgarian Empire
+			# TODO
+		# Second Bulgarian Empire
+			# TODO
+		# Third Bulgarian Empire
+			# TODO
 		# French Empire - Historical
 			FNCEM = {
 				level = 4
@@ -6267,7 +6158,13 @@
 				required_locations_fraction = 0.60
 				rule = plausible
 				potential = {
-					has_variable = fnr_historical_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_historical_enabled        # ✓ TRUE (group enabled)
+							has_variable = fnr_germanempire_enabled      # ✗ FALSE
+						}                                                 # OR = TRUE
+						NOT = { has_variable = fnr_germanempire_disabled }  # ✗ FALSE (disabled IS set!)
+					}                                                     # TRUE AND FALSE = FALSE                                              # TRUE AND FALSE = FALSE
 					NOT = { 
 						OR = {
 							tag = GMNEM
@@ -6380,7 +6277,7 @@
 				}
 				allow = { tag = ITA_f }
 				name = ITNEM
-				flag = ITA
+				flag = ITNEM
 				adjective = ITNEM_ADJ
 				tag = ITNEM
 				color = map_ITNEM
@@ -6480,6 +6377,7 @@
 				}
 				allow = {
 					#value = age_6_revolutions
+					NOT = { parliament_type != parliament_type:no_parliament }
 					owns = location:moscow
 					owns = location:novgorod
 				}
@@ -6517,6 +6415,7 @@
 					}
 				}
 				allow = {
+					parliament_type != parliament_type:no_parliament
 					owns = location:moscow
 					owns = location:novgorod
 				}
@@ -6608,7 +6507,7 @@
 					culture = { has_culture_group = culture_group:british_group }
 				}
 				name = UKKDM
-				flag = GBR_uk
+				flag = UKKDM
 				adjective = UKKDM_ADJ
 				tag = UKKDM
 				color = map_UKKDM
@@ -6688,10 +6587,10 @@
 						culture = { has_culture_group = culture_group:arabian_group }
 					}
 				}
-				name = AMNAE
-				flag = AMNAE
-				adjective = AMNAE_ADJ
-				tag = AMNAE
+				name = ARABE
+				flag = ARABE
+				adjective = ARABE_ADJ
+				tag = ARABE
 				color = map_ARABE
 				regions = { arabia_region crescent_region }
 				form_effect = {
@@ -7004,8 +6903,16 @@
 						culture = { has_culture_group = culture_group:celtic_group }
 					}
 				}
+				allow = {
+					culture = { has_culture_group = culture_group:celtic_group }
+					has_reform = government_reform:celtic_traditions_reform
+					OR = {
+						court_language = language:brythonic_language
+						court_language = language:gaelic_language
+					}
+				}
 				name = CTUNN
-				flag = IRE_green
+				flag = CTUNN
 				adjective = CTUNN_ADJ
 				tag = CTUNN
 				color = map_CTUNN
@@ -7156,7 +7063,7 @@
 				}
 				
 				name = EUROP
-				flag = EUR
+				flag = EUROP
 				adjective = EUROP_ADJ
 				tag = EUROP
 				color = map_EUROP
@@ -7501,20 +7408,7 @@
 					}
 				}
 				allow = {
-					calc_true_if = { # Great Britain
-						amount >= 12
-						any_scope_state = {
-							state_region = { has_region_tag = great_britain_region }
-							owner = ROOT
-						}
-					}
-					calc_true_if = { # France Region
-						amount >= 17
-						any_scope_state = {
-							state_region = { has_region_tag = france_region }
-							owner = ROOT
-						}
-					}					
+					# TODO: add a check for owning at least 50% land in both Britain AND france					
 				}
 				name = DLMON
 				flag = DLMON
@@ -7724,7 +7618,7 @@
 				}
 				allow = { government_type = government_type:republic }
 				name = ITMCH
-				flag = VEN
+				flag = ITMCH
 				adjective = ITMCH_ADJ
 				tag = ITMCH
 				color = map_ITMCH
@@ -7758,7 +7652,7 @@
 					}
 				}
 				name = JGLNN
-				flag = POL
+				flag = JGLNN
 				adjective = JGLNN_ADJ
 				tag = JGLNN
 				color = map_JGLNN
@@ -7804,7 +7698,7 @@
 					}
 				}
 			}
-		# Kingdom of Germany - Non-historical (post carolingian germany)
+		# East Francia - Non-historical (post carolingian germany)
 			KOGER = {
 				level = 3
 				required_locations_fraction = 0.40
@@ -7820,7 +7714,7 @@
 					culture = { has_culture_group = culture_group:german_group }
 				}
 				name = KOGER
-				flag = GER
+				flag = KOGER
 				adjective = KOGER_ADJ
 				tag = KOGER
 				color = map_KOGER
@@ -7980,6 +7874,18 @@
 					OR = {
 						culture = { has_culture_group = culture_group:british_group }
 						culture = { has_culture_group = culture_group:scandinavian_group }
+					}
+					any_owned_location = { 
+						OR = {
+							region = region:scandinavian_region 
+							region = region:north_atlantic_islands_region 
+						}
+					}
+					any_owned_location = { 
+						OR = {
+							region = region:great_britain_region 
+							region = region:ireland_region 
+						}
 					}
 				}
 				name = NOSEM

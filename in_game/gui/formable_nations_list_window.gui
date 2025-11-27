@@ -17,12 +17,12 @@ window = {
 	}
 	
 	vbox = {
-		margin = { 20 60 20 20 }
+		margin = { 20 60 }
 		layoutpolicy_horizontal = expanding
 		layoutpolicy_vertical = expanding
 		
 		text_single = {
-			text = "Individual Formables List"
+			raw_text = "Individual Formables List"
 			using = header_font
 			margin_bottom = 10
 		}
@@ -39,7 +39,8 @@ window = {
 					margin = { 10 10 }
 					
 					# Rank 1 Formables
-						#
+						# TODO
+
 					# Rank 2 Formables
 					vbox = {
 						layoutpolicy_horizontal = expanding
@@ -47,7 +48,8 @@ window = {
 						
 						button_main_tab_alt = {
 							using = layoutpolicy_expanding
-							raw_text = "Rank II Formables"
+							tooltip = "fnr_debug_window_formable_list_loc_rank_2"
+							raw_text = "fnr_debug_window_formable_list_loc_rank_2"
 							onclick = "[GetVariableSystem.Toggle('rank2_open')]"
 							down = "[GetVariableSystem.Exists('rank2_open')]"
 						}
@@ -61,6 +63,7 @@ window = {
 							# Arpitania
 							button_regular = {
 								size = { 400 32 }
+								tooltip = "fnr_debug_window_formable_list_loc_rank_2_arpitania"
 								raw_text = "Arpitania"
 							}
 						}
@@ -73,6 +76,7 @@ window = {
 						
 						button_main_tab_alt = {
 							using = layoutpolicy_expanding
+							tooltip = "fnr_debug_window_formable_list_loc_rank_3"
 							raw_text = "Rank III Formables"
 							onclick = "[GetVariableSystem.Toggle('rank3_open')]"
 							down = "[GetVariableSystem.Exists('rank3_open')]"
@@ -87,6 +91,7 @@ window = {
 							# Basque Country
 							button_regular = {
 								size = { 400 32 }
+								tooltip = ""
 								raw_text = "[SelectLocalization(GetPlayer.HasVariable('fnr_basque_enabled'), 'Basque Country: ON', 'Basque Country: OFF')]"
 								onclick = "[GetScriptedGui('FormableNationReworked_toggle_basque').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								tooltip = "[SelectLocalization(GetPlayer.HasVariable('fnr_basque_enabled'), 'Click to DISABLE Basque Country', 'Click to ENABLE Basque Country')]"
@@ -101,6 +106,7 @@ window = {
 						
 						button_main_tab_alt = {
 							using = layoutpolicy_expanding
+							tooltip = ""
 							raw_text = "Rank IV Formables"
 							onclick = "[GetVariableSystem.Toggle('rank4_open')]"
 							down = "[GetVariableSystem.Exists('rank4_open')]"
@@ -112,10 +118,12 @@ window = {
 							spacing = 3
 							margin = { 10 5 }
 							
-							# Add Rank 4 formable buttons here
+						# Rank 4 formables
+							# German Empire
 							button_regular = {
 								size = { 400 32 }
-								raw_text = "Japan"
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_historical_enabled'), GetPlayer.HasVariable('fnr_germanempire_enabled')), Not(GetPlayer.HasVariable('fnr_germanempire_disabled'))), 'German Empire: ON', 'German Empire: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_germanempire').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 							}
 						}
 					}
@@ -127,6 +135,7 @@ window = {
 						
 						button_main_tab_alt = {
 							using = layoutpolicy_expanding
+							tooltip = ""
 							raw_text = "Rank V Formables"
 							onclick = "[GetVariableSystem.Toggle('rank5_open')]"
 							down = "[GetVariableSystem.Exists('rank5_open')]"
@@ -141,6 +150,7 @@ window = {
 							# Add Rank 5 formable buttons here
 							button_regular = {
 								size = { 400 32 }
+								tooltip = ""
 								raw_text = "British Empire"
 							}
 						}

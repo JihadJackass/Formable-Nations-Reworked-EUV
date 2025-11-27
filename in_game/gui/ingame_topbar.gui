@@ -765,6 +765,7 @@ widget = {
 				button = {
 					parentanchor = center
 					size = { 40 40 }
+					tooltip = "fnr_debug_window_formable_list_loc_topbar"
 					
 					onclick = "[GetScriptedGui('FormableNationsReworkedDebug_initialize').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 					onclick = "[GetVariableSystem.Toggle('formable_nations_debug_window_open')]"
