@@ -134,6 +134,12 @@
 				tag = WESRE
 				tag = WNDEM
 				tag = YGOSL
+				tag = ASYRI
+				tag = RSHDN
+				tag = ABSID
+				# dutch
+				has_variable = NED_DR_var
+				has_variable = NED_UP_var
 			}
 		}
 	}

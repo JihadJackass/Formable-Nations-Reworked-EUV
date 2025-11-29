@@ -493,11 +493,9 @@
 	}
 # Hawaii
 	HAWAI = {
-		#pattern = "ce_hawaii.dds"  # Check what stripe patterns exist
-		pattern = "pattern_solid.dds"  # Check what stripe patterns exist
-		color1 = "white"
-		color2 = "red"
-		color3 = "blue"
+		textured_emblem = {
+			texture = "te_hawaii.dds"
+		}
 	}	
 # Yugoslavia
 	YGOSL = {
@@ -1233,12 +1231,7 @@
 		textured_emblem = {
 			texture = "te_taiping_dragon.dds"
 			instance = { position = { 0.50 0.50 } scale = { 0.75 0.80 }  }
-		}	
-		colored_emblem = {
-			texture = "pattern_solid.dds"
-			color2 = color1
-			color3 = color2
-		}	
+		}		
 	}	
 # Taliban
 	TLBAN = {
@@ -1247,8 +1240,8 @@
 		color2 = "black"
 		colored_emblem = {
 			texture = "ce_taliban.dds"
-			color2 = color2
-			color3 = color1
+			color1 = color2
+			color2 = color1
 		}
 	}	
 # Tengoku
@@ -1472,7 +1465,18 @@
 		textured_emblem = {
 			texture = "te_agu.dds"
 		}
+	}
+# Netherlands
+	NED_UP_FLAG = {
+		textured_emblem = {
+			texture = "NED_UP_FLAG.dds"
+		}		
 	}	
+	NED_DR_FLAG = {
+		textured_emblem = {
+			texture = "NED_DR_FLAG.dds"
+		}		
+	}
 # Kingdom of Aquitaine
  	AQUIT = {
 		pattern = "pattern_quarterly_flag.dds"
@@ -1634,6 +1638,27 @@
 		pattern = "pattern_border_thin.dds"
 		color1 = "white"	
 		color2 = "green"	
+	}
+# Rashidun Caliphate
+	RSHDN = {
+		pattern = "pattern_solid.dds"
+		color1 = "green"	
+	}
+# Abbasid Caliphate
+	ABSID = {
+		pattern = "pattern_solid.dds"
+		color1 = "black"	
+	}
+# Fatimid Caliphate
+	FTMID = {
+		pattern = "pattern_solid.dds"
+		color1 = hsv360{ 120 100 62 }
+	}
+# Assyria
+	ASYRI = {
+		textured_emblem = {
+			texture = "te_assyria.dds"
+		}
 	}
 # Hungarian Empire
 	HNGEM = {

@@ -90,6 +90,13 @@
     BLGUM_ADJ: "Belgian"
     BLGUM_desc: "Belgium is a federal parliamentary constitutional monarchy in Western Europe, bordered by France, Germany, Luxembourg, and the Netherlands. It is known for its complex federal structure based on linguistic regions (Flemish, Walloon, and Brussels-Capital), its official languages of Dutch, French, and German, and its capital, Brussels."
 
+    # Netherlands
+    NED_UP: "United Provinces"
+    NED_UP_ADJ: "United Provinces"
+
+    NED_DR: "Dutch Republic"
+    NED_DR_ADJ: "Dutch"
+
     # Benelux
     BNLUX: "Benelux"
     BNLUX_ADJ: "Beneluxian"
@@ -552,6 +559,11 @@
     FNCIB_ADJ: "Franco-Iberian"
     FNCIB_desc: "~~Alternate History~~\n\nin 1579, France and Spain were allied to form the Franco-Iberian Empire as known as The Three Crowns (Spain, France and Portugal) and The colonization Had started into New viceroyalities by Three languages (Portuguese, Spanish and French), and colonies have merged Together into a new empire, the Franco-Iberia, in 1732 The United Kingdom of Great Britain and Ireland have become a dual monarchy with Scottish Queen as The United Kingdom of England, Scotland and Ireland, in 1776 The Mexican Revolutionary War and American Revolutionary War has started and ended in 1778. "
 
+    # Assyria
+    ASYRI: "Assyria"
+    ASYRI_ADJ: "Assyrian"
+    ASYRI_desc: "Assyria was a major Mesopotamian kingdom and one of the earliest great empires in the ancient Middle East, located in what is now northern Iraq and southeastern Turkey. It is also the name for the homeland of the Assyrian people, a region within Upper Mesopotamia that is now divided between present-day Iraq, Turkey, Iran, and Syria. The empire, known for its military might and large territory that stretched from the Persian Gulf to the Mediterranean Sea between 900 and 600 BC, took its name from its first capital city, Ashur."
+
     # Frieslande
     FIESL: "Frieslande"
     FIESL_ADJ: "Frieslande"
@@ -591,6 +603,20 @@
     UMAYA: "Umayyad Caliphate"
     UMAYA_ADJ: "Umayyad"
     UMAYA_desc: "The Umayyad Caliphate (661–750 CE) was the first major Islamic dynasty, transforming the Muslim community into a vast, centralized Arab-Islamic empire. Ruled from its capital in Damascus, Syria, it became one of the largest unitary states in history, stretching from the Iberian Peninsula (Spain and Portugal) in the west to India and Central Asia in the east."
+
+    # Rashidun Caliphate
+    RSHDN: "Rashidun Caliphate"
+    RSHDN_ADJ: "Rashidun"
+    RSHDN_desc: "The Rashidun Caliphate, meaning 'Rightly Guided,' was the early Islamic empire that existed from 632 to 661 CE, led by the first four caliphs: Abu Bakr, Umar, Uthman, and Ali. It was a period of rapid territorial expansion across the Middle East, North Africa, and the Arabian Peninsula, built on a foundation of swift military victories. The caliphate also established crucial administrative, legal, and military institutions that shaped the future of Islamic states."
+
+    FTMID: "Fatimid Caliphate"
+    FTMID_ADJ: "Fatimid Caliphate"
+    FTMID_desc: "The Fatimid Caliphate was a medieval Islamic dynasty that ruled parts of North Africa and the Middle East from 909 to 1171 CE, with its capital later moved to Cairo, Egypt. As followers of the Isma'ili Shia Islam branch, they claimed descent from the Prophet Muhammad's daughter, Fatima, and challenged the Sunni Abbasid Caliphate for leadership of the Muslim world. They were known for their advanced urban planning in Cairo, religious tolerance, and contributions to scholarship and trade."
+
+    # Abbasid Caliphate
+    ABSID: "Abbasid Caliphate"
+    ABSID_ADJ: "Abbasid"
+    ABSID_desc: "The Abbasid Caliphate was a powerful Islamic dynasty that ruled from 750 to 1258 CE, succeeding the Umayyad Caliphate. It is best known for overseeing the Islamic Golden Age, marked by significant cultural, scientific, and intellectual advancements, and for establishing Baghdad as its capital. Though its power waned and parts of the empire broke away, the caliphate maintained spiritual authority until it was destroyed by the Mongol invasion in 1258. "
 
     # East Francia
     KOGER: "East Francia"

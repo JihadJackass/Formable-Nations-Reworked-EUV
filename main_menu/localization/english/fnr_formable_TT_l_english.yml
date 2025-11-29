@@ -11,6 +11,18 @@
     ASTBV_formable_trigger_1_tt: "If #Y Austria-Bavaria#! is formed by [GetCountry('HAB').GetNameWithFlag] various Bavarian locations will be renamed in an #Y Austrian-linguistic#! style."
     ASTBV_formable_trigger_2_tt: "If #Y Austria-Bavaria#! is formed by #Y Bavaria#!, [GetCountry('LBV').GetNameWithFlag] or [GetCountry('UBV').GetNameWithFlag] various Austrian locations will be renamed in an #Y Bavarian-linguistic#! style."
 
+    #################################
+    # Formable Requirement Tooltips #
+    #################################
+
+    GMNEM_f_tt: "The #Y $GMNEM$ #!will annex all #Y German Subjects #! including #Y Personal Unions #!into the newly proclaimed #Y $GMNEM$ #!."
+    GMNEM_f_tt2: "The #Y $GMNEM$ #!will gain cores an all #Y Historical German Empire#! claims in #Y Alsace-Lorraine #!and #Y Poland#!, as well as all currently controlled territory within the #Y German-speaking regions#!."
+
+    NED_f_tt2: "If #Y $NED$ #!is formed with #Y Decentralization #!as the dominant value, then we will be known as the #Y United Provinces #!and will only be given one opportunity afterwards to establish the #Y Dutch Republic #!as our offical name otherwise we will remain as the #Y United Provinces#!\nThe opposite applies if we form the Netherlands with #Y Centralization #!as the dominant value in that we will be known as the #Y Dutch Republic#! and will #R NOT#! be given an opportunity to establish the #Y United Provinces#!.\nIf we have a balanced centralization societal value of between #R -5#! and #G +5#! then we will remain as the #Y Netherlands#!."
+
+    NED_DR_FLAG: "Prince's Orange"
+    NED_UP_FLAG: "United Provinces of the Netherlands"
+
     ###################
     # GUI localiation #
     ###################

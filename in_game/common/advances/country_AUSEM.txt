@@ -1,0 +1,12 @@
+﻿# Habsburg Empire
+AUSEM_habsburg_empire = {
+	age = age_6_revolutions
+	potential = {
+		has_or_had_tag = AUSEM
+	}
+	cultures_capacity = 2
+	diplomatic_reputation = 2
+	army_infantry_maintenance_cost_modifier = -0.025
+
+	requires = rights_of_man
+}

@@ -415,35 +415,7 @@
 		}
 	}
 
-	# Netherlands
-	NED_f = {
-		level = 2
-		required_locations_fraction = 0.3
-		rule = plausible
-
-		potential = {
-			culture = { has_culture_group = culture_group:netherlandish_group }
-		}
-
-		allow = {
-		}
-		
-		name = NED
-		flag = NED
-		adjective = NED_ADJ
-		tag = NED
-		color = map_NED
-
-		areas = {
-			brabant_area
-			flanders_area
-			friesland_area
-			holland_area
-			wallonia_area
-		}
-		form_effect = {
-		}
-	}
+	# Netherlands - replaced with fnr one
 
 	# Switzerland
 	SWI_f = {
@@ -4151,9 +4123,12 @@
 				required_locations_fraction = 0.07
 				rule = plausible
 				potential = { 
-					OR = {
-						has_variable = fnr_fantasy_enabled
-						#has_variable = fnr_arpitania_enabled
+					AND = {
+						OR = {
+							has_variable = fnr_fantasy_enabled
+							has_variable = fnr_arpitania_enabled
+						}
+						NOT = { has_variable = fnr_arpitania_disabled }
 					}
 					NOT = { 
 						OR = {
@@ -4177,7 +4152,13 @@
 				required_locations_fraction = 0.35
 				rule = plausible
 				potential = {
-					has_variable = fnr_nonhistorical_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_nonhistorical_enabled
+							has_variable = fnr_polabia_enabled
+						}
+						NOT = { has_variable = fnr_polabia_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = POLBA
@@ -4199,17 +4180,20 @@
 				required_locations_fraction = 0.44
 				rule = plausible
 				potential = {
-					has_variable = fnr_historical_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_historical_enabled
+							has_variable = fnr_bremenverden_enabled
+						}
+						NOT = { has_variable = fnr_bremenverden_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = BMNVD
 							tag_exists = BMNVD
 						}
 					}
-					OR = {
-						culture = culture:lower_saxon
-						culture = { has_culture_group = culture_group:indian_group }
-					}
+					culture = culture:lower_saxon
 				}
 				name = BMNVD
 				flag = BMNVD
@@ -4224,7 +4208,13 @@
 				required_locations_fraction = 0.1
 				rule = plausible
 				potential = {
-					has_variable = fnr_historical_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_historical_enabled
+							has_variable = fnr_ducalprussia_enabled
+						}
+						NOT = { has_variable = fnr_ducalprussia_disabled }
+					}
 					tag = TEU
 					NOT = { 
 						OR = {
@@ -4241,18 +4231,138 @@
 				color = map_DCLPR
 				areas = { prussia_area }
 			}
+		# Dacia - Non-historical
+			DACIA = {
+				level = 2
+				required_locations_fraction = 0.70
+				rule = plausible
+				potential = {
+					AND = {
+						OR = {
+							has_variable = fnr_nonhistorical_enabled
+							has_variable = fnr_dacia_enabled
+						}
+						NOT = { has_variable = fnr_carolingian_disabled }
+					}
+					NOT = { 
+						OR = {
+							tag = DACIA
+							tag_exists = DACIA
+						}
+					}
+					OR = {
+						culture = culture:bulgarian
+						culture = culture:wallachian
+						culture = culture:moldovan
+					}
+				}
+				name = DACIA
+				flag = DACIA
+				adjective = DACIA_ADJ
+				tag = DACIA
+				color = map_DACIA 
+				areas = { bulgaria_area wallachia_area moldavia_area }
+			}
+		# Netherlands
+			NED_f = {
+				level = 2
+				required_locations_fraction = 0.3
+				rule = plausible
+				potential = {
+					culture = { has_culture_group = culture_group:netherlandish_group }
+				}
+				name = NED
+				flag = NED
+				adjective = NED_ADJ
+				tag = NED
+				color = map_NED
+				areas = { brabant_area flanders_area friesland_area holland_area wallonia_area }
+				form_effect = {
+					custom_tooltip = {
+						text = NED_f_tt2
+					}
+					if = { # Option 1: Decentralized (-6 or lower) → United Provinces
+						limit = {
+							AND = {
+								has_societal_value = societal_value_type:centralization_vs_decentralization
+								societal_value:centralization_vs_decentralization > -5
+							}
+						}
+						# Become United Provinces
+						change_country_name = NED_UP
+						set_variable = NED_UP_var # Set variable allowing future switch to Dutch Republic
+						hidden_effect = { change_country_flag = NED_UP_FLAG }
+					}
+					else_if = { # Option 2: Centralized (+6 or higher) → Dutch Republic
+						limit = {
+							AND = {
+								has_societal_value = societal_value_type:centralization_vs_decentralization
+								societal_value:centralization_vs_decentralization < 5
+							}
+						}
+						# Become Dutch Republic
+						change_country_name = NED_DR
+						set_variable = NED_DR_var
+						hidden_effect = { change_country_flag = NED_DR_FLAG }
+						# Do NOT set variable - cannot switch to United Provinces
+					}
+					else = { # Option 3: Balanced (-5 to +5) → Netherlands
+						limit = {
+							AND = {
+								has_societal_value = societal_value_type:centralization_vs_decentralization
+								societal_value:centralization_vs_decentralization < -6
+								has_societal_value = societal_value_type:centralization_vs_decentralization
+								societal_value:centralization_vs_decentralization > 6
+							}
+						}
+						add_prestige = 5
+						# Remain as Netherlands (NED)
+						# No cosmetic tag change needed
+					}
+				}
+			}
+		# Assyria - Fantasy
+			ASYRI = {
+				level = 2
+				required_locations_fraction = 0.90
+				rule = plausible
+				potential = {
+					AND = {
+						OR = {
+							has_variable = fnr_fantasy_enabled
+							has_variable = fnr_assyria_enabled
+						}
+						NOT = { has_variable = fnr_assyria_disabled }
+					}
+					NOT = { 
+						OR = {
+							tag = ASYRI
+							tag_exists = ASYRI
+						}
+					}
+					culture = culture:syriac_culture
+				}
+				name = ASYRI
+				flag = ASYRI
+				adjective = ASYRI_ADJ
+				tag = ASYRI
+				color = map_ASYRI
+				provinces = { nusaybin_province amadiya_province bitlis_province }
+			}
 	# Rank 3
-		# TODO: Brandenburg-Prussia
-
+		# TODO: Brandenburg-Prussia (TODO)
 		# Basque Country - Non-historical
 			BASQU = {
 				level = 3
 				required_locations_fraction = 0.65
 				rule = plausible
 				potential = {
-					OR = {
-						has_variable = fnr_nonhistorical_enabled
-						#has_variable = fnr_basque_enabled
+					AND = {
+						OR = {
+							has_variable = fnr_nonhistorical_enabled
+							has_variable = fnr_basquecountry_enabled
+						}
+						NOT = { has_variable = fnr_basquecountry_disabled }
 					}
 					NOT = { 
 						OR = {
@@ -4280,7 +4390,13 @@
 				required_locations_fraction = 0.60
 				rule = plausible
 				potential = {
-					has_variable = fnr_modern_enabled
+					AND = {
+						OR = {
+							has_variable = fnr_modern_enabled
+							has_variable = fnr_balochistan_enabled
+						}
+						NOT = { has_variable = fnr_balochistan_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = BALCH
@@ -4302,8 +4418,14 @@
 				required_locations_fraction = 0.60
 				rule = plausible
 				potential = {
-					has_variable = fnr_nonhistorical_enabled 
-					#tag = KSORB
+					AND = {
+						OR = {
+							has_variable = fnr_nonhistorical_enabled
+							has_variable = fnr_greatsorbia_enabled
+						}
+						NOT = { has_variable = fnr_greatsorbia_disabled }
+					}
+					tag = KSORB
 					NOT = { 
 						OR = {
 							tag = GSORB
@@ -4328,7 +4450,13 @@
 				required_locations_fraction = 0.60
 				rule = plausible
 				potential = {
-					has_variable = fnr_nonhistorical_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_nonhistorical_enabled
+							has_variable = fnr_sorbickingdom_enabled
+						}
+						NOT = { has_variable = fnr_sorbickingdom_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = KSORB
@@ -4350,7 +4478,13 @@
 				required_locations_fraction = 0.76 # 0.46
 				rule = plausible	
 				potential = {
-					has_variable = fnr_historical_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_historical_enabled
+							has_variable = fnr_kingdomofhanover_enabled
+						}
+						NOT = { has_variable = fnr_kingdomofhanover_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = KOFHN
@@ -4372,7 +4506,13 @@
 				required_locations_fraction = 0.26
 				rule = plausible
 				potential = {
-					has_variable = fnr_historical_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_nonhistorical_enabled
+							has_variable = fnr_polynesia_enabled
+						}
+						NOT = { has_variable = fnr_polynesia_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = POLNE
@@ -4411,13 +4551,19 @@
 					samoa_area
 				}
 			}
-		# Hawai'i (Kingdom - add modern variant) - Non-Historical
+		# Hawaii - Non-Historical
 			HAWAI = {
 				level = 3
-				required_locations_fraction = 0.01 # 0.13
+				required_locations_fraction = 0.90
 				rule = plausible
 				potential = {
-					has_variable = fnr_nonhistorical_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_nonhistorical_enabled
+							has_variable = fnr_hawaii_enabled
+						}
+						NOT = { has_variable = fnr_hawaii_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = HAWAI
@@ -4434,16 +4580,21 @@
 				adjective = HAWAI_ADJ
 				tag = HAWAI
 				color = map_HAWAI
-				regions = { polynesia_region }
 				areas = { hawaii_area }
 			}
-		# Yugoslavia (Kingdom) - Modern
+		# Yugoslavia - Modern
 			YGOSL = {
 				level = 3
 				required_locations_fraction = 0.80
 				rule = plausible
 				potential = {
-					has_variable = fnr_modern_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_modern_enabled
+							has_variable = fnr_yugoslavkingdom_enabled
+						}
+						NOT = { has_variable = fnr_yugoslavkingdom_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = YGOSL
@@ -4479,7 +4630,13 @@
 				required_locations_fraction = 0.80
 				rule = plausible
 				potential = { 
-					has_variable = fnr_althistory_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_althistory_enabled
+							has_variable = fnr_balticstates_enabled
+						}
+						NOT = { has_variable = fnr_balticstates_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = BLTST
@@ -4502,7 +4659,13 @@
 				required_locations_fraction = 0.60
 				rule = plausible
 				potential = {
-					has_variable = fnr_historical_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_historical_enabled
+							has_variable = fnr_alsacelorraine_enabled
+						}
+						NOT = { has_variable = fnr_alsacelorraine_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = ALSLO
@@ -4527,7 +4690,13 @@
 				required_locations_fraction = 0.01 # 0.85
 				rule = plausible
 				potential = {
-					has_variable = fnr_modern_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_modern_enabled
+							has_variable = fnr_belarus_enabled
+						}
+						NOT = { has_variable = fnr_belarus_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = BLRUS
@@ -4553,7 +4722,13 @@
 				required_locations_fraction = 0.44
 				rule = plausible	
 				potential = { 
-					has_variable = fnr_historical_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_historical_enabled
+							has_variable = fnr_belgium_enabled
+						}
+						NOT = { has_variable = fnr_belgium_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = BLGUM
@@ -4579,7 +4754,13 @@
 				required_locations_fraction = 0.44
 				rule = plausible
 				potential = {
-					has_variable = fnr_nonhistorical_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_nonhistorical_enabled
+							has_variable = fnr_benelux_enabled
+						}
+						NOT = { has_variable = fnr_benelux_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = BNLUX
@@ -4604,7 +4785,13 @@
 				required_locations_fraction = 0.60
 				rule = plausible
 				potential = {
-					has_variable = fnr_nonhistorical_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_nonhistorical_enabled
+							has_variable = fnr_austriabavaria_enabled
+						}
+						NOT = { has_variable = fnr_austriabavaria_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = ASTBV
@@ -4666,13 +4853,19 @@
 					}
 				}
 			}	
-		# Cisalpina (Cisalpine Republic) - Historical
+		# Cisalpina - Historical
 			CSPNA = {
 				level = 3
 				required_locations_fraction = 0.80
 				rule = plausible
 				potential = {
-					has_variable = fnr_historical_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_historical_enabled
+							has_variable = fnr_cisalpine_enabled
+						}
+						NOT = { has_variable = fnr_cisalpine_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = CSPNA
@@ -4697,7 +4890,13 @@
 				required_locations_fraction = 0.99
 				rule = plausible
 				potential = {
-					has_variable = fnr_historical_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_historical_enabled
+							has_variable = fnr_commonwealthengland_enabled
+						}
+						NOT = { has_variable = fnr_commonwealthengland_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = ENGCM
@@ -4725,7 +4924,13 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = {
-					has_variable = fnr_modern_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_modern_enabled
+							has_variable = fnr_czechoslovakia_enabled
+						}
+						NOT = { has_variable = fnr_czechoslovakia_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = CZSLO
@@ -4751,7 +4956,13 @@
 				required_locations_fraction = 0.75
 				rule = plausible
 				potential = {
-					has_variable = fnr_modern_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_modern_enabled
+							has_variable = fnr_ukraine_enabled
+						}
+						NOT = { has_variable = fnr_ukraine_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = UKRNE
@@ -4780,13 +4991,19 @@
 				color = map_UKRNE
 				regions = { ruthenia_region }
 			}
-		# Donetsk People's Republic - Modern
+		# Donetsk Peoples Republic - Modern
 			DNTPR = {
 				level = 3
 				required_locations_fraction = 0.01
 				rule = plausible
 				potential = {
-					has_variable = fnr_modern_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_modern_enabled
+							has_variable = fnr_dpr_enabled
+						}
+						NOT = { has_variable = fnr_dpr_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = DNTPR
@@ -4806,13 +5023,19 @@
 				color = map_DNTPR
 				regions = { steppes_region ruthenia_region }
 			}
-		# Luhansk People's Republic - Modern
+		# Luhansk Peoples Republic - Modern
 			LUHPR = {
 				level = 3
 				required_locations_fraction = 0.01
 				rule = plausible
 				potential = {
-					has_variable = fnr_modern_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_modern_enabled
+							has_variable = fnr_lpr_enabled
+						}
+						NOT = { has_variable = fnr_lpr_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = LUHPR
@@ -4838,7 +5061,13 @@
 				required_locations_fraction = 0.80
 				rule = plausible
 				potential = {
-					has_variable = fnr_althistory_enabled
+					AND = {
+						OR = {
+							has_variable = fnr_althistory_enabled
+							has_variable = fnr_emiliaromagna_enabled
+						}
+						NOT = { has_variable = fnr_emiliaromagna_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = EMLRO
@@ -4860,7 +5089,13 @@
 				required_locations_fraction = 0.80
 				rule = plausible
 				potential = {
-					has_variable = fnr_althistory_enabled
+					AND = {
+						OR = {
+							has_variable = fnr_althistory_enabled
+							has_variable = fnr_hessenassau_enabled
+						}
+						NOT = { has_variable = fnr_hessenassau_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = HESNA
@@ -4883,7 +5118,13 @@
 				required_locations_fraction = 0.04
 				rule = plausible
 				potential = {
-					has_variable = fnr_althistory_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_althistory_enabled
+							has_variable = fnr_hansa_enabled
+						}
+						NOT = { has_variable = fnr_hansa_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = HNSLG
@@ -4927,7 +5168,13 @@
 				required_locations_fraction = 0.75
 				rule = plausible
 				potential = {
-					has_variable = fnr_historical_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_historical_enabled
+							has_variable = fnr_kalmarunion_enabled
+						}
+						NOT = { has_variable = fnr_kalmarunion_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = KLMUN
@@ -4954,7 +5201,13 @@
 				required_locations_fraction = 0.90
 				rule = plausible
 				potential = {
-					has_variable = fnr_althistory_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_althistory_enabled
+							has_variable = fnr_lombardy_enabled
+						}
+						NOT = { has_variable = fnr_lombardy_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = LMBDY
@@ -4976,7 +5229,13 @@
 				required_locations_fraction = 0.90
 				rule = plausible
 				potential = {
-					has_variable = fnr_historical_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_historical_enabled
+							has_variable = fnr_lombardyvenetia_enabled
+						}
+						NOT = { has_variable = fnr_lombardyvenetia_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = LMBYV
@@ -4995,10 +5254,16 @@
 		# Lower Saxony - Alt-history
 			LWSXY = {
 				level = 3
-				required_locations_fraction = 0.01 # 0.80
+				required_locations_fraction = 0.80 # 0.80
 				rule = plausible
 				potential = { 
-					has_variable = fnr_althistory_enabled
+					AND = {
+						OR = {
+							has_variable = fnr_althistory_enabled
+							has_variable = fnr_lowersaxony_enabled
+						}
+						NOT = { has_variable = fnr_lowersaxony_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = LWSXY
@@ -5014,13 +5279,20 @@
 				color = map_LWSXY
 				areas = { lower_saxony_area }
 			}
-		# Malta (TODO: add knights of malta - fix, cant form it???) - Modern
+		# Malta - Modern
+			# PLANNEDTODO: add knights of malta
 			MALTA = {
 				level = 3
 				required_locations_fraction = 1
 				rule = plausible	
 				potential = {
-					has_variable = fnr_modern_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_modern_enabled
+							has_variable = fnr_malta_enabled
+						}
+						NOT = { has_variable = fnr_malta_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = MALTA
@@ -5059,7 +5331,13 @@
 				required_locations_fraction = 0.95
 				rule = plausible
 				potential = { 
-					has_variable = fnr_althistory_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_althistory_enabled
+							has_variable = fnr_mercia_enabled
+						}
+						NOT = { has_variable = fnr_mercia_disabled }
+					} 
 					NOT = { 
 						OR = {
 							tag = MRCIA
@@ -5079,14 +5357,20 @@
 				color = map_MRCIA
 				areas = { midlands_area }
 			}
-		# TODO: add northumbria
+		# Northumbria (TODO)
 		# Sweden-Norway - History
 			SDNNW = {
 				level = 3
 				required_locations_fraction = 0.80 # 0.80
 				rule = plausible
 				potential = {
-					has_variable = fnr_historical_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_historical_enabled
+							has_variable = fnr_swedennorway_enabled
+						}
+						NOT = { has_variable = fnr_swedennorway_disabled }
+					} 
 					NOT = { 
 						OR = {
 							tag = SDNNW
@@ -5115,7 +5399,13 @@
 				required_locations_fraction = 0.85 # 0.85
 				rule = plausible
 				potential = {
-					has_variable = fnr_modern_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_modern_enabled
+							has_variable = fnr_turkey_enabled
+						}
+						NOT = { has_variable = fnr_turkey_disabled }
+					} 
 					NOT = { 
 						OR = {
 							tag = TURKY
@@ -5149,7 +5439,13 @@
 				required_locations_fraction = 0.68 # 0.68
 				rule = plausible
 				potential = {
-					has_variable = fnr_althistory_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_althistory_enabled
+							has_variable = fnr_caucasia_enabled
+						}
+						NOT = { has_variable = fnr_caucasia_disabled }
+					} 
 					NOT = { 
 						OR = {
 							tag = CCASA
@@ -5174,7 +5470,13 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = {
-					has_variable = fnr_modern_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_modern_enabled
+							has_variable = fnr_korea_enabled
+						}
+						NOT = { has_variable = fnr_korea_disabled }
+					} 
 					NOT = { 
 						OR = {
 							tag = KOREA
@@ -5200,7 +5502,13 @@
 				required_locations_fraction = 0.80
 				rule = plausible
 				potential = {
-					has_variable = fnr_modern_enabled
+					AND = {
+						OR = {
+							has_variable = fnr_modern_enabled
+							has_variable = fnr_afghanistan_enabled
+						}
+						NOT = { has_variable = fnr_afghanistan_disabled }
+					} 
 					NOT = { 
 						OR = {
 							tag = AFGAN
@@ -5225,7 +5533,13 @@
 				required_locations_fraction = 0.68
 				rule = plausible
 				potential = {
-					has_variable = fnr_historical_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_historical_enabled
+							has_variable = fnr_mingrelia_enabled
+						}
+						NOT = { has_variable = fnr_mingrelia_disabled }
+					} 
 					NOT = { 
 						OR = {
 							tag = MNGRL
@@ -5247,7 +5561,13 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = {
-					has_variable = fnr_modern_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_modern_enabled
+							has_variable = fnr_northkorea_enabled
+						}
+						NOT = { has_variable = fnr_northkorea_disabled }
+					} 
 					NOT = { 
 						OR = {
 							tag = NKORA
@@ -5269,7 +5589,13 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = {
-					has_variable = fnr_modern_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_modern_enabled
+							has_variable = fnr_southkorea_enabled
+						}
+						NOT = { has_variable = fnr_southkorea_disabled }
+					} 
 					NOT = { 
 						OR = {
 							tag = SKORA
@@ -5294,7 +5620,13 @@
 				required_locations_fraction = 0.67
 				rule = plausible
 				potential = {
-					has_variable = fnr_modern_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_modern_enabled
+							has_variable = fnr_philippines_enabled
+						}
+						NOT = { has_variable = fnr_philippines_disabled }
+					} 
 					NOT = { 
 						OR = {
 							tag = FILPN
@@ -5316,7 +5648,13 @@
 				required_locations_fraction = 0.70
 				rule = plausible
 				potential = {
-					has_variable = fnr_modern_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_modern_enabled
+							has_variable = fnr_saudiarabia_enabled
+						}
+						NOT = { has_variable = fnr_saudiarabia_disabled }
+					} 
 					NOT = { 
 						OR = {
 							tag = SAUDI
@@ -5338,7 +5676,13 @@
 				required_locations_fraction = 0.75
 				rule = plausible
 				potential = {
-					has_variable = fnr_althistory_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_althistory_enabled
+							has_variable = fnr_sulawesi_enabled
+						}
+						NOT = { has_variable = fnr_sulawesi_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = SULAW
@@ -5363,7 +5707,13 @@
 				required_locations_fraction = 0.68
 				rule = plausible
 				potential = {
-					has_variable = fnr_nonhistorical_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_nonhistorical_enabled
+							has_variable = fnr_taiping_enabled
+						}
+						NOT = { has_variable = fnr_taiping_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = TPING
@@ -5396,7 +5746,13 @@
 				required_locations_fraction = 0.85
 				rule = plausible
 				potential = {
-					has_variable = fnr_modern_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_modern_enabled
+							has_variable = fnr_taliban_enabled
+						}
+						NOT = { has_variable = fnr_taliban_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = TLBAN
@@ -5422,7 +5778,13 @@
 				required_locations_fraction = 0.90
 				rule = plausible
 				potential = { 
-					has_variable = fnr_fantasy_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_fantasy_enabled
+							has_variable = fnr_tengoku_enabled
+						}
+						NOT = { has_variable = fnr_tengoku_disabled }
+					} 
 					NOT = { 
 						OR = {
 							tag = TNGKU
@@ -5445,7 +5807,13 @@
 				required_locations_fraction = 0.90
 				rule = plausible
 				potential = {
-					has_variable = fnr_modern_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_modern_enabled
+							has_variable = fnr_uar_enabled
+						}
+						NOT = { has_variable = fnr_uar_disabled }
+					} 
 					NOT = { 
 						OR = {
 							tag = UNARR
@@ -5473,7 +5841,13 @@
 				required_locations_fraction = 0.65
 				rule = plausible
 				potential = {
-					has_variable = fnr_modern_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_modern_enabled
+							has_variable = fnr_vietnam_enabled
+						}
+						NOT = { has_variable = fnr_vietnam_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = VTNAM
@@ -5498,7 +5872,13 @@
 				required_locations_fraction = 0.60
 				rule = plausible
 				potential = { 
-					has_variable = fnr_modern_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_modern_enabled
+							has_variable = fnr_burma_enabled
+						}
+						NOT = { has_variable = fnr_burma_disabled }
+					} 
 					NOT = { 
 						OR = {
 							tag = VTNAM
@@ -5514,13 +5894,20 @@
 				color = map_BURMA
 				areas = { irrawady_area hill_area kachin_area arakhan_area irrawady_delta_area shan_highland_area }
 			}
-		# Ceylon # TODO: add sri lanka - Modern
+		# Ceylon - Modern
+			# PLANNEDTODO: add sri lanka
 			CYLON = {
 				level = 3
 				required_locations_fraction = 0.95
 				rule = plausible
 				potential = {
-					has_variable = fnr_modern_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_modern_enabled
+							has_variable = fnr_ceylon_enabled
+						}
+						NOT = { has_variable = fnr_ceylon_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = CYLON
@@ -5545,7 +5932,13 @@
 				required_locations_fraction = 0.95
 				rule = plausible
 				potential = {
-					has_variable = fnr_modern_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_modern_enabled
+							has_variable = fnr_chad_enabled
+						}
+						NOT = { has_variable = fnr_chad_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = ACHAD
@@ -5567,7 +5960,13 @@
 				required_locations_fraction = 0.90
 				rule = plausible
 				potential = {
-					has_variable = fnr_modern_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_modern_enabled
+							has_variable = fnr_madagascar_enabled
+						}
+						NOT = { has_variable = fnr_madagascar_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = MDGSC
@@ -5589,7 +5988,13 @@
 				required_locations_fraction = 0.40
 				rule = plausible
 				potential = {
-					has_variable = fnr_controversial_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_controversial_enabled
+							has_variable = fnr_rhodesia_enabled
+						}
+						NOT = { has_variable = fnr_rhodesia_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = MDGSC
@@ -5605,15 +6010,21 @@
 				color = map_RHDSA
 				regions = { zimbabwe_region }
 			}
-		# Zimbabwe - Modern
+		# Zimbabwe - Modern (TODO)
 			# TODO
-		# Manchuria - non-historical
+		# Manchuria - Non-historical
 			MNCRA = {
 				level = 3
 				required_locations_fraction = 0.40
 				rule = plausible
 				potential = {
-					has_variable = fnr_nonhistorical_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_nonhistorical_enabled
+							has_variable = fnr_manchuria_enabled
+						}
+						NOT = { has_variable = fnr_manchuria_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = MNCRA
@@ -5632,7 +6043,7 @@
 				color = map_MNCRA
 				regions = { manchuria_region }
 			}
-		# Beta Israel
+		# Beta Israel (TODO)
 			# TODO
 		# Israel - Controversial
 			ISREL = {
@@ -5640,7 +6051,13 @@
 				required_locations_fraction = 0.40
 				rule = plausible
 				potential = {
-					has_variable = fnr_controversial_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_controversial_enabled
+							has_variable = fnr_israel_enabled
+						}
+						NOT = { has_variable = fnr_israel_disabled }
+					} 
 					NOT = { 
 						OR = {
 							tag = ISREL
@@ -5671,7 +6088,13 @@
 				required_locations_fraction = 0.40
 				rule = plausible
 				potential = {
-					has_variable = fnr_controversial_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_controversial_enabled
+							has_variable = fnr_palestine_enabled
+						}
+						NOT = { has_variable = fnr_palestine_disabled }
+					} 
 					NOT = { 
 						OR = {
 							tag = PLSTN
@@ -5696,7 +6119,13 @@
 				required_locations_fraction = 0.70
 				rule = plausible
 				potential = {
-					has_variable = fnr_modern_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_modern_enabled
+							has_variable = fnr_alaska_enabled
+						}
+						NOT = { has_variable = fnr_alaska_disabled }
+					} 
 					NOT = { 
 						OR = {
 							tag = ALSKA
@@ -5725,7 +6154,13 @@
 				required_locations_fraction = 0.65
 				rule = plausible
 				potential = {
-					has_variable = fnr_fantasy_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_fantasy_enabled
+							has_variable = fnr_alpland_enabled
+						}
+						NOT = { has_variable = fnr_alpland_disabled }
+					} 
 					NOT = { 
 						OR = {
 							tag = ALPLN
@@ -5764,7 +6199,13 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = {
-					has_variable = fnr_historical_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_historical_enabled
+							has_variable = fnr_rhineconfed_enabled
+						}
+						NOT = { has_variable = fnr_rhineconfed_disabled }
+					} 
 					NOT = { 
 						OR = {
 							tag = RCONF
@@ -5859,7 +6300,13 @@
 				required_locations_fraction = 0.65
 				rule = plausible
 				potential = { 
-					has_variable = fnr_fantasy_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_fantasy_enabled
+							has_variable = fnr_kingdomofaquitaine_enabled
+						}
+						NOT = { has_variable = fnr_kingdomofaquitaine_disabled }
+					} 
 					NOT = { 
 						OR = {
 							tag = AQUIT
@@ -5881,7 +6328,13 @@
 				required_locations_fraction = 0.35
 				rule = plausible
 				potential = {
-					has_variable = fnr_fantasy_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_fantasy_enabled
+							has_variable = fnr_occitania_enabled
+						}
+						NOT = { has_variable = fnr_occitania_disabled }
+					} 
 					NOT = { 
 						OR = {
 							tag = OCCIT
@@ -5903,7 +6356,13 @@
 				required_locations_fraction = 0.50
 				rule = plausible
 				potential = {
-					has_variable = fnr_althistory_enabled
+					AND = {
+						OR = {
+							has_variable = fnr_althistory_enabled
+							has_variable = fnr_balkanleague_enabled
+						}
+						NOT = { has_variable = fnr_balkanleague_disabled }
+					} 
 					NOT = { 
 						OR = {
 							tag = BLKLG
@@ -5922,13 +6381,21 @@
 				color = map_BLKLG
 				areas = { bosnia_area slavonia_area croatia_area serbia_area albania_area macedonia_area bulgaria_area thrace_area northern_greece_area }
 			}
-		# Illyria - Fantasty - TODO: Illyria (non-napoleonic kingdom) # TODO: illyrian kingdom (nonhistorical)
+		# Illyria - Fantasy
+			# PLANNEDTODO: Illyria (non-napoleonic kingdom) 
+			# PLANNEDTODO: illyrian kingdom (nonhistorical)
 			ILYRA = {
 				level = 3
 				required_locations_fraction = 0.50 # 0.50
 				rule = plausible
 				potential = {
-					has_variable = fnr_fantasy_enabled
+					AND = {
+						OR = {
+							has_variable = fnr_fantasy_enabled
+							has_variable = fnr_illyria_enabled
+						}
+						NOT = { has_variable = fnr_illyria_disabled }
+					} 
 					NOT = { 
 						OR = {
 							tag = ILYRA
@@ -5947,13 +6414,20 @@
 				provinces = { illyria_province prilep_province lower_carniola_province }
 				locations = { kruje debar skopje tirana durres }
 			}
-		# Bosnia-Serbia - Controversial (todo: add republica srbska)
+		# Bosnia-Serbia - Controversial 
+			# PLANNEDTODO: add republica srbska
 			BSSER = {
 				level = 3
 				required_locations_fraction = 0.75
 				rule = plausible
 				potential = {
-					has_variable = fnr_controversial_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_controversial_enabled
+							has_variable = fnr_bosniaserbia_enabled
+						}
+						NOT = { has_variable = fnr_bosniaserbia_disabled }
+					} 
 					NOT = { 
 						OR = {
 							tag = BSSER
@@ -5969,7 +6443,244 @@
 				tag = BSSER
 				color = map_BSSER
 				areas = { bosnia_area serbia_area }
-			}					
+			}	
+		# Cordoba - Non-historical
+			CDOBA = { 
+				level = 3
+				required_locations_fraction = 0.44
+				rule = plausible
+				potential = {
+					AND = {
+						OR = {
+							has_variable = fnr_nonhistorical_enabled
+							has_variable = fnr_cordoba_enabled
+						}
+						NOT = { has_variable = fnr_carolingian_disabled }
+					} 
+					NOT = { 
+						OR = {
+							tag = CDOBA
+							tag_exists = CDOBA
+						}
+					}
+					religion.group = religion_group:muslim
+					OR = {
+						culture = { has_culture_group = culture_group:maghrebi_group }
+						culture = { has_culture_group = culture_group:iberian_group }
+					}
+				}
+				name = CDOBA
+				flag = CDOBA
+				adjective = CDOBA_ADJ
+				tag = CDOBA
+				color = map_CDOBA
+				areas = { andalusia_area granada_area extremadura_area murcia_area }
+			}
+		# East Slavia - Alt-history
+			ESLAV = {
+				level = 3
+				required_locations_fraction = 0.10
+				rule = plausible
+				potential = {
+					AND = {
+						OR = {
+							has_variable = fnr_althistory_enabled
+							has_variable = fnr_eastslavia_enabled
+						}
+						NOT = { has_variable = fnr_carolingian_disabled }
+					}
+					NOT = { 
+						OR = {
+							tag = ESLAV
+							tag_exists = ESLAV
+						}
+					}
+					OR = {
+						culture = culture:halychian_culture
+						culture = culture:polatskian_culture
+						culture = culture:polesian_culture
+						culture = culture:ruthenian
+						culture = culture:severian
+						culture = culture:volhynian_culture
+						culture = culture:rusyn_culture
+						culture = culture:cossack_culture
+						culture = culture:smolenskian_culture
+					}
+				}
+				name = ESLAV
+				flag = ESLAV
+				adjective = ESLAV_ADJ
+				tag = ESLAV
+				color = map_ESLAV
+				regions = { ruthenia_region steppes_region baltic_region russian_region }
+				form_effect = {
+					if = {
+						limit = { country_rank_level < 3 }
+						set_country_rank_effect = { rank = country_rank:rank_kingdom }
+					}
+				}
+			}
+		# Frieslande - Alt-history (Germanized Dutch basically)
+			FIESL = {
+				level = 3
+				required_locations_fraction = 1
+				rule = plausible
+				potential = {
+					AND = {
+						OR = {
+							has_variable = fnr_althistory_enabled
+							has_variable = fnr_frieslande_enabled
+						}
+						NOT = { has_variable = fnr_frieslande_disabled }
+					}
+					NOT = { 
+						OR = {
+							tag = FNCIB
+							tag_exists = FNCIB
+						}
+					}
+					culture = culture:frisian 
+				}
+				name = FIESL
+				flag = FIESL
+				adjective = FIESL_ADJ
+				tag = FIESL
+				color = map_FIESL
+				areas = { friesland_area }
+			}
+		# Kingdom of God - Fantasy # TODO: wont show for papacy, I'm assuming it is prevented from seeing formables or something
+			KOGOD = {
+				level = 3
+				required_locations_fraction = 0.35
+				rule = plausible
+				potential = {
+					AND = {
+						OR = {
+							has_variable = fnr_fantasy_enabled
+							has_variable = fnr_kog_enabled
+						}
+						NOT = { has_variable = fnr_kog_disabled }
+					}
+					NOT = { 
+						OR = {
+							tag = KOGOD
+							tag_exists = KOGOD
+						}
+					}
+					AND = {
+						culture = { has_culture_group = culture_group:italian_group }
+						tag = PAP
+					}
+				}
+				allow = { tag = c:PAP }
+				name = KOGOD
+				flag = KOGOD
+				adjective = KOGOD_ADJ
+				tag = KOGOD
+				color = map_KOGOD
+				regions = { italy_region }
+			}
+		# Langobards - Non-historical
+			LNGBD = {
+				level = 3
+				required_locations_fraction = 0.45
+				rule = plausible
+				potential = {
+					AND = {
+						OR = {
+							has_variable = fnr_nonhistorical_enabled
+							has_variable = fnr_langobards_enabled
+						}
+						NOT = { has_variable = fnr_langobards_disabled }
+					}
+					NOT = { 
+						OR = {
+							tag = LNGBD
+							tag_exists = LNGBD
+						}
+					}
+					culture = { has_culture_group = culture_group:italian_group }
+				}
+				name = LNGBD
+				flag = LNGBD
+				adjective = LNGBD_ADJ
+				tag = LNGBD
+				color = map_LNGBD
+				regions = { italy_region }
+			}	
+		# Macedonia - Non-historical
+			MACED = {
+				level = 3
+				required_locations_fraction = 0.75
+				rule = plausible
+				potential = {
+					AND = {
+						OR = {
+							has_variable = fnr_nonhistorical_enabled
+							has_variable = fnr_macedonia_enabled
+						}
+						NOT = { has_variable = fnr_macedonia_disabled }
+					}
+					NOT = { 
+						OR = {
+							tag = MACED
+							tag_exists = MACED
+						}
+					}
+					OR = {
+						culture = culture:hellenic
+						culture = { has_culture_group = culture_group:greek_group }
+					}
+				}
+				allow = {
+					not = { tag = BYZ }
+				}
+
+				name = MACED
+				flag = MACED
+				adjective = MACED_ADJ
+				tag = MACED
+				color = map_MACED
+				provinces = { north_epirus_province }
+				areas = { macedonia_area northern_greece_area }
+			}
+		# Pontus - Non-historical
+			PONTU = {
+				level = 3
+				required_locations_fraction = 0.75
+				rule = plausible
+				potential = {
+					AND = {
+						OR = {
+							has_variable = fnr_nonhistorical_enabled
+							has_variable = fnr_pontus_enabled
+						}
+						NOT = { has_variable = fnr_pontus_disabled }
+					}
+					NOT = { 
+						OR = {
+							tag = PONTU
+							tag_exists = PONTU
+						}
+					}
+					culture = culture:pontic_greek_culture
+				}
+
+				allow = {
+				}
+
+				name = PONTU
+				flag = PONTU
+				adjective = PONTU_ADJ
+				tag = PONTU
+				color = map_PONTU
+				
+				areas = {
+					pontus_area
+					crimea_area
+					matrega_area
+				}
+			}	
 	# Rank 4
 		# Japan - Modern
 			JAPAN = {
@@ -5977,7 +6688,13 @@
 				required_locations_fraction = 0.90
 				rule = plausible
 				potential = {
-					has_variable = fnr_modern_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_modern_enabled
+							has_variable = fnr_japan_enabled
+						}
+						NOT = { has_variable = fnr_japan_disabled }
+					} 
 					NOT = { 
 						OR = {
 							tag = JAPAN
@@ -5993,13 +6710,20 @@
 				color = map_JAPAN 
 				regions = { japan_region }
 			}	
-		# Angevin Empire - Alt history (todo: unlocked via winning 100 years war)
+		# Angevin Empire - Alt history 
+			#(todo: unlocked via winning 100 years war)
 			AGEVN = {
 				level = 4
 				required_locations_fraction = 0.65
 				rule = plausible
 				potential = {
-					has_variable = fnr_althistory_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_althistory_enabled
+							has_variable = fnr_angevinempire_enabled
+						}
+						NOT = { has_variable = fnr_angevinempire_disabled }
+					} 
 					NOT = { 
 						OR = {
 							tag = AGEVN
@@ -6035,7 +6759,13 @@
 				required_locations_fraction = 0.75
 				rule = plausible
 				potential = {
-					has_variable = fnr_historical_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_historical_enabled
+							has_variable = fnr_austrianempire_enabled
+						}
+						NOT = { has_variable = fnr_austrianempire_disabled }
+					} 
 					NOT = { 
 						OR = {
 							tag = AUSEM
@@ -6094,7 +6824,13 @@
 				required_locations_fraction = 0.60
 				rule = plausible
 				potential = {
-					has_variable = fnr_modern_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_modern_enabled
+							has_variable = fnr_bulgaria_enabled
+						}
+						NOT = { has_variable = fnr_bulgaria_disabled }
+					} 
 					NOT = { 
 						OR = {
 							tag = BLGEM
@@ -6116,11 +6852,11 @@
 					}
 				}
 			}
-		# First Bulgarian Empire
+		# First Bulgarian Empire (TODO)
 			# TODO
-		# Second Bulgarian Empire
+		# Second Bulgarian Empire (TODO)
 			# TODO
-		# Third Bulgarian Empire
+		# Third Bulgarian Empire (TODO)
 			# TODO
 		# French Empire - Historical
 			FNCEM = {
@@ -6128,7 +6864,13 @@
 				required_locations_fraction = 0.75
 				rule = plausible
 				potential = {
-					has_variable = fnr_historical_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_historical_enabled
+							has_variable = fnr_frenchempire_enabled
+						}
+						NOT = { has_variable = fnr_frenchempire_disabled }
+					} 
 					NOT = { 
 						OR = {
 							tag = FNCEM
@@ -6154,17 +6896,17 @@
 			}
 		# German Empire - Historical
 			GMNEM = {
-				level = 4
-				required_locations_fraction = 0.60
+				level = 5
+				required_locations_fraction = 0.85 # 0.85
 				rule = plausible
 				potential = {
 					AND = {
 						OR = {
-							has_variable = fnr_historical_enabled        # ✓ TRUE (group enabled)
-							has_variable = fnr_germanempire_enabled      # ✗ FALSE
-						}                                                 # OR = TRUE
-						NOT = { has_variable = fnr_germanempire_disabled }  # ✗ FALSE (disabled IS set!)
-					}                                                     # TRUE AND FALSE = FALSE                                              # TRUE AND FALSE = FALSE
+							has_variable = fnr_historical_enabled
+							has_variable = fnr_germanempire_enabled
+						}
+						NOT = { has_variable = fnr_germanempire_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = GMNEM
@@ -6195,9 +6937,46 @@
 					bavaria_area
 					silesia_area
 				}
-				provinces = { holstein_province slesvig_province sonderjylland_province arnskrone_province pays_messin_province lower_alsace_province sarregueminois_province }
+				provinces = { 
+					holstein_province 
+					slesvig_province 
+					sonderjylland_province 
+					arnskrone_province 
+				}
 				locations = { zlotow wyrzysk naklo }
 				form_effect = {
+					custom_tooltip = {
+						text = GMNEM_f_tt2
+					}
+					# Add cores to Alsace-Lorraine
+					hidden_effect = {
+						every_province = {
+							limit = { this = province:pays_messin_province }
+							every_location_in_province = { add_core = root }
+						}
+						every_province = {
+							limit = { this = province:lower_alsace_province }
+							every_location_in_province = { add_core = root }
+						}
+						every_province = {
+							limit = { this = province:sarregueminois_province }
+							every_location_in_province = { add_core = root }
+						}
+					}
+					custom_tooltip = {
+						text = GMNEM_f_tt
+					}
+					hidden_effect = {
+						every_subject = {
+							root = {
+								annex_country = { 
+									country = prev
+									reason = Diplomatic
+									transfer = yes
+								}
+							}
+						}
+					}					
 					if = {
 						limit = { country_rank_level < 4 }
 						set_country_rank_effect = { rank = country_rank:rank_empire }
@@ -6210,7 +6989,13 @@
 				required_locations_fraction = 0.60
 				rule = plausible
 				potential = {
-					has_variable = fnr_controversial_enabled
+					AND = {
+						OR = {
+							has_variable = fnr_controversial_enabled
+							has_variable = fnr_germanreich_enabled
+						}
+						NOT = { has_variable = fnr_germanreich_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = GMNRE
@@ -6234,11 +7019,17 @@
 			}
 		# Nazi Germany - Controversial
 			NAZIG = {
-				level = 4
+				level = 5
 				required_locations_fraction = 0.70
 				rule = plausible
 				potential = {
-					has_variable = fnr_controversial_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_controversial_enabled
+							has_variable = fnr_nazigermany_enabled
+						}
+						NOT = { has_variable = fnr_nazigermany_disabled }
+					} 
 					NOT = { 
 						OR = {
 							tag = NAZIG
@@ -6266,7 +7057,13 @@
 				required_locations_fraction = 0.90
 				rule = plausible
 				potential = {
-					has_variable = fnr_modern_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_modern_enabled
+							has_variable = fnr_italianempire_enabled
+						}
+						NOT = { has_variable = fnr_italianempire_disabled }
+					} 
 					NOT = { 
 						OR = {
 							tag = ITNEM
@@ -6296,7 +7093,13 @@
 				required_locations_fraction = 0.65
 				rule = plausible
 				potential = {
-					has_variable = fnr_nonhistorical_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_nonhistorical_enabled
+							has_variable = fnr_kyivanrus_enabled
+						}
+						NOT = { has_variable = fnr_kyivanrus_disabled }
+					} 
 					NOT = { 
 						OR = {
 							tag = KYVRU
@@ -6332,7 +7135,13 @@
 				required_locations_fraction = 0.40
 				rule = plausible
 				potential = {
-					has_variable = fnr_nonhistorical_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_nonhistorical_enabled
+							has_variable = fnr_latinempire_enabled
+						}
+						NOT = { has_variable = fnr_latinempire_disabled }
+					}  
 					NOT = { 
 						OR = {
 							tag = LTNEM
@@ -6364,7 +7173,13 @@
 				required_locations_fraction = 0.88
 				rule = plausible
 				potential = {
-					has_variable = fnr_historical_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_historical_enabled
+							has_variable = fnr_russianempire_enabled
+						}
+						NOT = { has_variable = fnr_russianempire_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = RUSEM
@@ -6401,7 +7216,13 @@
 				required_locations_fraction = 0.01
 				rule = plausible
 				potential = {
-					has_variable = fnr_modern_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_modern_enabled
+							has_variable = fnr_russianfed_enabled
+						}
+						NOT = { has_variable = fnr_russianfed_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = RUFED
@@ -6438,7 +7259,13 @@
 				required_locations_fraction = 0.60
 				rule = plausible
 				potential = { 
-					has_variable = fnr_historical_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_historical_enabled
+							has_variable = fnr_serbianempire_enabled
+						}
+						NOT = { has_variable = fnr_serbianempire_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = SRBEM
@@ -6466,7 +7293,13 @@
 				required_locations_fraction = 0.85
 				rule = plausible
 				potential = {
-					has_variable = fnr_historical_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_historical_enabled
+							has_variable = fnr_swedishempire_enabled
+						}
+						NOT = { has_variable = fnr_swedishempire_disabled }
+					} 
 					NOT = { 
 						OR = {
 							tag = SWDEM
@@ -6497,7 +7330,13 @@
 				required_locations_fraction = 0.75
 				rule = plausible
 				potential = {
-					has_variable = fnr_modern_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_modern_enabled
+							has_variable = fnr_uk_enabled
+						}
+						NOT = { has_variable = fnr_uk_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = UKKDM
@@ -6519,7 +7358,13 @@
 				required_locations_fraction = 0.75
 				rule = plausible
 				potential = {
-					has_variable = fnr_althistory_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_althistory_enabled
+							has_variable = fnr_wendishempire_enabled
+						}
+						NOT = { has_variable = fnr_wendishempire_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = WNDEM
@@ -6547,7 +7392,13 @@
 				required_locations_fraction = 0.75
 				rule = plausible
 				potential = { 
-					has_variable = fnr_nonhistorical_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_nonhistorical_enabled
+							has_variable = fnr_armenianempire_enabled
+						}
+						NOT = { has_variable = fnr_armenianempire_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = AMNAE
@@ -6575,7 +7426,13 @@
 				required_locations_fraction = 0.75
 				rule = plausible
 				potential = {
-					has_variable = fnr_fantasy_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_fantasy_enabled
+							has_variable = fnr_arabianempire_enabled
+						}
+						NOT = { has_variable = fnr_arabianempire_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = ARABE
@@ -6606,7 +7463,13 @@
 				required_locations_fraction = 0.95
 				rule = plausible
 				potential = {
-					has_variable = fnr_nonhistorical_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_nonhistorical_enabled
+							has_variable = fnr_goguryeo_enabled
+						}
+						NOT = { has_variable = fnr_goguryeo_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = GGURY
@@ -6631,7 +7494,13 @@
 				required_locations_fraction = 0.20
 				rule = plausible
 				potential = {
-					has_variable = fnr_fantasy_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_fantasy_enabled
+							has_variable = fnr_himalayanempire_enabled
+						}
+						NOT = { has_variable = fnr_himalayanempire_disabled }
+					}
 					NOT = { 
 						tag = DLH
 						OR = {
@@ -6663,7 +7532,13 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = { 
-					has_variable = fnr_historical_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_historical_enabled
+							has_variable = fnr_omaniempire_enabled
+						}
+						NOT = { has_variable = fnr_omaniempire_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = HMLAY
@@ -6691,7 +7566,13 @@
 				required_locations_fraction = 0.80
 				rule = plausible
 				potential = {
-					has_variable = fnr_nonhistorical_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_nonhistorical_enabled
+							has_variable = fnr_tibetanempire_enabled
+						}
+						NOT = { has_variable = fnr_tibetanempire_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = TBETE
@@ -6719,7 +7600,13 @@
 				required_locations_fraction = 0.30
 				rule = plausible
 				potential = { 
-					has_variable = fnr_nonhistorical_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_nonhistorical_enabled
+							has_variable = fnr_cholaempire_enabled
+						}
+						NOT = { has_variable = fnr_cholaempire_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = CHOLA
@@ -6747,7 +7634,13 @@
 				required_locations_fraction = 0.95
 				rule = plausible
 				potential = {
-					has_variable = fnr_althistory_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_althistory_enabled
+							has_variable = fnr_abyssinia_enabled
+						}
+						NOT = { has_variable = fnr_abyssinia_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = ABYSA
@@ -6772,7 +7665,13 @@
 				required_locations_fraction = 0.65
 				rule = plausible
 				potential = {
-					has_variable = fnr_fantasy_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_fantasy_enabled
+							has_variable = fnr_adriaticempire_enabled
+						}
+						NOT = { has_variable = fnr_adriaticempire_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = ADREM
@@ -6813,7 +7712,13 @@
 				rule = plausible
 				
 				potential = {
-					has_variable = fnr_fantasy_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_fantasy_enabled
+							has_variable = fnr_anglodutchunion_enabled
+						}
+						NOT = { has_variable = fnr_anglodutchunion_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = ANDUH
@@ -6853,7 +7758,13 @@
 				required_locations_fraction = 0.5
 				rule = plausible
 				potential = {
-					has_variable = fnr_fantasy_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_fantasy_enabled
+							has_variable = fnr_catholicarussica_enabled
+						}
+						NOT = { has_variable = fnr_catholicarussica_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = CATRU
@@ -6891,7 +7802,13 @@
 				required_locations_fraction = 0.65
 				rule = plausible
 				potential = {
-					has_variable = fnr_althistory_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_althistory_enabled
+							has_variable = fnr_celticunion_enabled
+						}
+						NOT = { has_variable = fnr_celticunion_disabled }
+					} 
 					NOT = { 
 						OR = {
 							tag = CTUNN
@@ -6919,7 +7836,541 @@
 				regions = { ireland_region }
 				areas = { brittany_area wales_area scottish_lowlands_area scottish_highlands_area hebrides_area galicia_area }
 				provinces = { cornwall_province devon_province }
-			}							
+			}	
+		# Dual Monarchy - Alt-history
+			DLMON = {
+				level = 4
+				required_locations_fraction = 0.45
+				rule = plausible
+				potential = {
+					AND = {
+						OR = {
+							has_variable = fnr_althistory_enabled
+							has_variable = fnr_dualmonarchy_enabled
+						}
+						NOT = { has_variable = fnr_dualmonarchy_disabled }
+					}
+					NOT = { 
+						OR = {
+							tag = DLMON
+							tag_exists = DLMON
+						}
+					}
+					OR = {
+						culture = { has_culture_group = culture_group:british_group }
+						culture = { has_culture_group = culture_group:french_group }
+					}
+				}
+				allow = {
+					# TODO: add a check for owning at least 50% land in both Britain AND france					
+				}
+				name = DLMON
+				flag = DLMON
+				adjective = DLMON_ADJ
+				tag = DLMON
+				color = map_DLMON
+				regions = { france_region great_britain_region }
+				form_effect = {
+					if = {
+						limit = { country_rank_level < 4 }
+						set_country_rank_effect = { rank = country_rank:rank_empire }
+					}
+				}
+			}
+		# Franco-Iberian Empire - Fantasy
+			FNCIB = {
+				level = 4
+				required_locations_fraction = 0.67
+				rule = plausible
+				potential = {
+					AND = {
+						OR = {
+							has_variable = fnr_fantasy_enabled
+							has_variable = fnr_francoiberia_enabled
+						}
+						NOT = { has_variable = fnr_francoiberia_disabled }
+					} 
+					NOT = { 
+						OR = {
+							tag = FNCIB
+							tag_exists = FNCIB
+						}
+					}
+					OR = {
+						culture = { has_culture_group = culture_group:iberian_group }
+						culture = { has_culture_group = culture_group:french_group }
+					}
+				}
+				name = FNCIB
+				flag = FNCIB
+				adjective = FNCIB_ADJ
+				tag = FNCIB
+				color = map_FNCIB
+				regions = { france_region iberia_region }
+				form_effect = {
+					if = {
+						limit = { country_rank_level < 4 }
+						set_country_rank_effect = { rank = country_rank:rank_empire }
+					}
+				}
+			}
+		# Gallic Empire - Non-historical
+			GLCEM = {
+				level = 4
+				required_locations_fraction = 0.60
+				rule = plausible
+				potential = {
+					AND = {
+						OR = {
+							has_variable = fnr_nonhistorical_enabled
+							has_variable = fnr_gallicempire_enabled
+						}
+						NOT = { has_variable = fnr_gallicempire_disabled }
+					} 
+					NOT = { 
+						OR = {
+							tag = GLCEM
+							tag_exists = GLCEM
+						}
+					}
+					culture = { has_culture_group = culture_group:french_group }
+				}
+				name = GLCEM
+				flag = GLCEM
+				adjective = GLCEM_ADJ
+				tag = GLCEM
+				color = map_GLCEM
+				regions = { france_region }
+				form_effect = {
+					if = {
+						limit = { country_rank_level < 4 }
+						set_country_rank_effect = { rank = country_rank:rank_empire }
+					}
+				}
+			}
+		# Hungarian Empire - Alt-history
+			HNGEM = {
+				level = 4
+				required_locations_fraction = 0.85
+				rule = plausible
+				potential = {
+					AND = {
+						OR = {
+							has_variable = fnr_althistory_enabled
+							has_variable = fnr_hungarianempire_enabled
+						}
+						NOT = { has_variable = fnr_hungarianempire_disabled }
+					} 
+					NOT = { 
+						OR = {
+							tag = HNGEM
+							tag_exists = HNGEM
+						}
+					}
+					culture = { has_culture_group = culture_group:hungarian_group }
+				}
+				name = HNGEM
+				flag = HNGEM
+				adjective = HNGEM_ADJ
+				tag = HNGEM
+				color = map_HNGEM
+				regions = { carpathia_region }
+				form_effect = {
+					if = {
+						limit = { country_rank_level < 4 }
+						set_country_rank_effect = { rank = country_rank:rank_empire }
+					}
+				}
+			}
+		# Iberian Empire - Fantasy
+			IBNEM = {
+				level = 4
+				required_locations_fraction = 0.85
+				rule = plausible	
+				potential = {
+					AND = {
+						OR = {
+							has_variable = fnr_fantasy_enabled
+							has_variable = fnr_iberianempire_enabled
+						}
+						NOT = { has_variable = fnr_iberianempire_disabled }
+					} 
+					NOT = { 
+						OR = {
+							tag = IBNEM
+							tag_exists = IBNEM
+						}
+					}
+					culture = { has_culture_group = culture_group:iberian_group }
+				}
+				name = IBNEM
+				flag = IBNEM
+				adjective = IBNEM_ADJ
+				tag = IBNEM
+				color = map_IBNEM
+				regions = { iberia_region }
+				form_effect = {
+					if = {
+						limit = { country_rank_level < 4 }
+						set_country_rank_effect = { rank = country_rank:rank_empire }
+					}
+				}
+			}
+		# Italian Merchant Alliance - Alt-history
+			ITMCH = {
+				level = 3
+				required_locations_fraction = 0.35
+				rule = plausible
+				potential = {
+					AND = {
+						OR = {
+							has_variable = fnr_althistory_enabled
+							has_variable = fnr_italianmerchants_enabled
+						}
+						NOT = { has_variable = fnr_italianmerchants_disabled }
+					} 
+					NOT = { 
+						OR = {
+							tag = ITMCH
+							tag_exists = ITMCH
+						}
+					}
+					AND = {
+						government_type = government_type:republic
+						culture = { has_culture_group = culture_group:italian_group }
+					}
+				}
+				allow = { government_type = government_type:republic }
+				name = ITMCH
+				flag = ITMCH
+				adjective = ITMCH_ADJ
+				tag = ITMCH
+				color = map_ITMCH
+				regions = { italy_region }
+			}
+		# Jagiellonian Empire - Non-historical
+			JGLNN = {
+				level = 4
+				required_locations_fraction = 0.75
+				rule = plausible
+				potential = {
+					AND = {
+						OR = {
+							has_variable = fnr_nonhistorical_enabled
+							has_variable = fnr_jagiellonianempire_enabled
+						}
+						NOT = { has_variable = fnr_jagiellonianempire_disabled }
+					} 
+					NOT = { 
+						OR = {
+							tag = JGLNN
+							tag_exists = JGLNN
+						}
+					}
+					OR = {
+						culture = { has_culture_group = culture_group:polish_group }
+						culture = culture:polish
+						culture = culture:halychian_culture
+						culture = culture:polatskian_culture
+						culture = culture:polesian_culture
+						culture = culture:ruthenian
+						culture = culture:severian
+						culture = culture:volhynian_culture
+						culture = culture:rusyn_culture
+						culture = culture:cossack_culture
+						culture = culture:smolenskian_culture
+					}
+				}
+				name = JGLNN
+				flag = JGLNN
+				adjective = JGLNN_ADJ
+				tag = JGLNN
+				color = map_JGLNN
+				regions = { ruthenia_region baltic_region }
+				form_effect = {
+					if = {
+						limit = { country_rank_level < 4 }
+						set_country_rank_effect = { rank = country_rank:rank_empire }
+					}
+				}
+			}
+		# Ummayad Caliphate - Non-historical
+			UMAYA = {
+				level = 4
+				required_locations_fraction = 0.35
+				rule = plausible
+				potential = {
+					AND = {
+						OR = {
+							has_variable = fnr_nonhistorical_enabled
+							has_variable = fnr_ummayads_enabled
+						}
+						NOT = { has_variable = fnr_ummayads_disabled }
+					} 
+					NOT = { 
+						OR = {
+							tag = UMAYA
+							tag_exists = UMAYA
+						}
+					}
+					OR = {
+						culture = { has_culture_group = culture_group:iranian_group }
+						culture = { has_culture_group = culture_group:arabic_group }
+						culture = { has_culture_group = culture_group:maghrebi_group }
+						culture = { has_culture_group = culture_group:iberian_group }
+					}
+				}
+				name = UMAYA
+				flag = UMAYA
+				adjective = UMAYA_ADJ
+				tag = UMAYA
+				color = map_UMAYA
+				regions = { crescent_region caucasus_region persia_region egypt_region maghreb_region iberia_region }
+				areas = { cilicia_area }
+				form_effect = {
+					if = {
+						limit = { country_rank_level < 4 }
+						set_country_rank_effect = { rank = country_rank:rank_empire }
+					}
+				}
+			}
+		# Rashidun Caliphate - Non-historical
+			RSHDN = {
+				level = 4
+				required_locations_fraction = 0.35
+				rule = plausible
+				potential = {
+					AND = {
+						OR = {
+							has_variable = fnr_nonhistorical_enabled
+							has_variable = fnr_rashidun_enabled
+						}
+						NOT = { has_variable = fnr_rashidun_disabled }
+					} 
+					NOT = { 
+						OR = {
+							tag = RSHDN
+							tag_exists = RSHDN
+						}
+					}
+					OR = {
+						culture = { has_culture_group = culture_group:iranian_group }
+						culture = { has_culture_group = culture_group:arabic_group }
+						culture = { has_culture_group = culture_group:maghrebi_group }
+						culture = { has_culture_group = culture_group:iberian_group }
+					}
+				}
+				name = RSHDN
+				flag = RSHDN
+				adjective = RSHDN_ADJ
+				tag = RSHDN
+				color = map_RSHDN
+				provinces = {
+					cyprus_province
+				}
+				regions = { crescent_region caucasus_region persia_region egypt_region }
+				form_effect = {
+					if = {
+						limit = { country_rank_level < 4 }
+						set_country_rank_effect = { rank = country_rank:rank_empire }
+					}
+				}
+			}
+		# Abbasid Caliphate - Non-historical
+			ABSID = {
+				level = 4
+				required_locations_fraction = 0.35
+				rule = plausible
+				potential = {
+					AND = {
+						OR = {
+							has_variable = fnr_nonhistorical_enabled
+							has_variable = fnr_abbasid_enabled
+						}
+						NOT = { has_variable = fnr_abbasid_disabled }
+					} 
+					NOT = { 
+						OR = {
+							tag = ABSID
+							tag_exists = ABSID
+						}
+					}
+					OR = {
+						culture = { has_culture_group = culture_group:iranian_group }
+						culture = { has_culture_group = culture_group:arabic_group }
+						culture = { has_culture_group = culture_group:maghrebi_group }
+						culture = { has_culture_group = culture_group:iberian_group }
+					}
+				}
+				name = ABSID
+				flag = ABSID
+				adjective = ABSID_ADJ
+				tag = ABSID
+				color = map_ABSID
+				provinces = {
+					cyprus_province crete_province
+				}
+				regions = { crescent_region caucasus_region persia_region egypt_region }
+				form_effect = {
+					if = {
+						limit = { country_rank_level < 4 }
+						set_country_rank_effect = { rank = country_rank:rank_empire }
+					}
+				}
+			}	
+		# Fatimid Caliphate - Non-historical
+			FTMID = {
+				level = 4
+				required_locations_fraction = 0.35
+				rule = plausible
+				potential = {
+					AND = {
+						OR = {
+							has_variable = fnr_nonhistorical_enabled
+							has_variable = fnr_fatimid_enabled
+						}
+						NOT = { has_variable = fnr_fatimid_disabled }
+					} 
+					NOT = { 
+						OR = {
+							tag = FTMID
+							tag_exists = FTMID
+						}
+					}
+					OR = {
+						culture = { has_culture_group = culture_group:iranian_group }
+						culture = { has_culture_group = culture_group:arabic_group }
+						culture = { has_culture_group = culture_group:maghrebi_group }
+						culture = { has_culture_group = culture_group:iberian_group }
+					}
+				}
+				name = FTMID
+				flag = FTMID
+				adjective = FTMID_ADJ
+				tag = FTMID
+				color = map_FTMID
+				provinces = {
+					cyprus_province crete_province
+				}
+				regions = { crescent_region caucasus_region persia_region egypt_region }
+				form_effect = {
+					if = {
+						limit = { country_rank_level < 4 }
+						set_country_rank_effect = { rank = country_rank:rank_empire }
+					}
+				}
+			}	
+		# East Francia - Non-historical (post carolingian germany)
+			KOGER = {
+				level = 4
+				required_locations_fraction = 0.40
+				rule = plausible
+				potential = {
+					AND = {
+						OR = {
+							has_variable = fnr_nonhistorical_enabled
+							has_variable = fnr_eastfrancia_enabled
+						}
+						NOT = { has_variable = fnr_eastfrancia_disabled }
+					} 
+					NOT = { 
+						OR = {
+							tag = KOGER
+							tag_exists = KOGER
+						}
+					}
+					culture = { has_culture_group = culture_group:german_group }
+				}
+				name = KOGER
+				flag = KOGER
+				adjective = KOGER_ADJ
+				tag = KOGER
+				color = map_KOGER
+				regions = { north_german_region south_german_region italy_region }
+			}
+		# Lusitanian Empire - Non-historical
+			LUSIT = {
+				level = 4
+				required_locations_fraction = 0.95
+				rule = plausible
+				potential = { 
+					AND = {
+						OR = {
+							has_variable = fnr_nonhistorical_enabled
+							has_variable = fnr_lusitanianempire_enabled
+						}
+						NOT = { has_variable = fnr_lusitanianempire_disabled }
+					}
+					NOT = { 
+						OR = {
+							tag = LUSIT
+							tag_exists = LUSIT
+						}
+					}
+					culture = culture:portuguese 
+				}
+				name = LUSIT
+				flag = LUSIT
+				adjective = LUSIT_ADJ
+				tag = LUSIT
+				color = map_LUSIT
+				areas = { north_portugal_area south_portugal_area galicia_area }
+				form_effect = {
+					if = {
+						limit = { country_rank_level < 4 }
+						set_country_rank_effect = { rank = country_rank:rank_empire }
+					}
+				}
+			}
+		# North Sea Empire - Non-historical
+			NOSEM = {
+				level = 4
+				required_locations_fraction = 0.75
+				rule = plausible
+				potential = {
+					AND = {
+						OR = {
+							has_variable = fnr_nonhistorical_enabled
+							has_variable = fnr_nse_enabled
+						}
+						NOT = { has_variable = fnr_nse_disabled }
+					}
+					NOT = { 
+						OR = {
+							tag = NOSEM
+							tag_exists = NOSEM
+						}
+					}
+					OR = {
+						culture = { has_culture_group = culture_group:british_group }
+						culture = { has_culture_group = culture_group:scandinavian_group }
+					}
+					any_owned_location = { 
+						OR = {
+							region = region:scandinavian_region 
+							region = region:north_atlantic_islands_region 
+						}
+					}
+					any_owned_location = { 
+						OR = {
+							region = region:great_britain_region 
+							region = region:ireland_region 
+						}
+					}
+				}
+				name = NOSEM
+				flag = NSE_WHITE_FNR
+				adjective = NOSEM_ADJ
+				tag = NOSEM
+				color = map_NOSEM
+				areas = { home_counties_area midlands_area east_anglia_area northumbria_area denmark_area skaneland_area syd_norge_area nord_norge_area }
+				form_effect = {
+					if = {
+						limit = { country_rank_level < 4 }
+						set_country_rank_effect = { rank = country_rank:rank_empire }
+					}
+				}
+			}				
 	# Rank 5
 		# British Empire - Historical (TODO: finish, lots of territory)
 			BISHE = {
@@ -6927,7 +8378,13 @@
 				required_locations_fraction = 0.90
 				rule = plausible	
 				potential = {
-					has_variable = fnr_historical_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_historical_enabled
+							has_variable = fnr_britishempire_enabled
+						}
+						NOT = { has_variable = fnr_britishempire_disabled }
+					} 
 					NOT = { 
 						OR = {
 							tag = BISHE
@@ -6955,7 +8412,13 @@
 				required_locations_fraction = 0.60
 				rule = plausible
 				potential = {
-					has_variable = fnr_nonhistorical_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_nonhistorical_enabled
+							has_variable = fnr_easternrome_enabled
+						}
+						NOT = { has_variable = fnr_easternrome_disabled }
+					} 
 					NOT = { 
 						OR = {
 							tag = EASRE
@@ -7002,7 +8465,13 @@
 				required_locations_fraction = 0.60
 				rule = plausible
 				potential = {
-					has_variable = fnr_nonhistorical_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_nonhistorical_enabled
+							has_variable = fnr_westernrome_enabled
+						}
+						NOT = { has_variable = fnr_westernrome_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = WESRE
@@ -7037,9 +8506,14 @@
 				level = 5
 				required_locations_fraction = 0.34
 				rule = plausible
-
 				potential = {
-					has_variable = fnr_modern_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_modern_enabled
+							has_variable = fnr_eu_enabled
+						}
+						NOT = { has_variable = fnr_eu_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = EUROP
@@ -7124,7 +8598,13 @@
 				required_locations_fraction = 0.60 # 0.60
 				rule = plausible
 				potential = {
-					has_variable = fnr_controversial_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_controversial_enabled
+							has_variable = fnr_greatergermanreich_enabled
+						}
+						NOT = { has_variable = fnr_greatergermanreich_disabled }
+					} 
 					NOT = { 
 						OR = {
 							tag = GTRGM
@@ -7158,7 +8638,13 @@
 				required_locations_fraction = 0.92
 				rule = plausible
 				potential = {
-					has_variable = fnr_modern_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_modern_enabled
+							has_variable = fnr_sovietunion_enabled
+						}
+						NOT = { has_variable = fnr_sovietunion_disabled }
+					}  
 					NOT = { 
 						OR = {
 							tag = SOVET
@@ -7192,7 +8678,13 @@
 				required_locations_fraction = 0.78
 				rule = plausible
 				potential = {
-					has_variable = fnr_modern_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_modern_enabled
+							has_variable = fnr_empireofchina_enabled
+						}
+						NOT = { has_variable = fnr_empireofchina_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = CNAEM
@@ -7217,13 +8709,20 @@
 					}
 				}
 			}
-		# Islamic State - Modern (TODO: PREVENT EARLY FORM)
+		# Islamic State - Modern 
+			# PLANNEDTODO: PREVENT EARLY FORM
 			ISISS = {
 				level = 5
 				required_locations_fraction = 0.80
 				rule = plausible
 				potential = {
-					has_variable = fnr_modern_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_modern_enabled
+							has_variable = fnr_islamicstate_enabled
+						}
+						NOT = { has_variable = fnr_islamicstate_disabled }
+					} 
 					NOT = { 
 						OR = {
 							tag = ISISS
@@ -7242,13 +8741,19 @@
 				color = map_ISISS
 				areas = { jazira_area }
 			}
-		# People's Republic of China - Modern
+		# Peoples Republic of China - Modern
 			PRCCN = {
 				level = 5
 				required_locations_fraction = 0.85
 				rule = plausible
 				potential = {
-					has_variable = fnr_modern_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_modern_enabled
+							has_variable = fnr_prc_enabled
+						}
+						NOT = { has_variable = fnr_prc_disabled }
+					} 
 					NOT = { 
 						OR = {
 							tag = PRCCN
@@ -7270,7 +8775,13 @@
 				required_locations_fraction = 0.76
 				rule = plausible
 				potential = {
-					has_variable = fnr_modern_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_modern_enabled
+							has_variable = fnr_roc_enabled
+						}
+						NOT = { has_variable = fnr_roc_disabled }
+					}  
 					NOT = { 
 						OR = {
 							tag = ROCCN
@@ -7292,7 +8803,13 @@
 				required_locations_fraction = 0.80
 				rule = plausible
 				potential = { 
-					has_variable = fnr_fantasy_enabled
+					AND = {
+						OR = {
+							has_variable = fnr_fantasy_enabled
+							has_variable = fnr_horde_enabled
+						}
+						NOT = { has_variable = fnr_horde_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = HORDE
@@ -7315,7 +8832,13 @@
 				required_locations_fraction = 0.60	
 				rule = plausible
 				potential = {
-					has_variable = fnr_nonhistorical_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_nonhistorical_enabled
+							has_variable = fnr_carolingian_enabled
+						}
+						NOT = { has_variable = fnr_carolingian_disabled }
+					} 
 					NOT = { 
 						OR = {
 							tag = CAROL
@@ -7337,502 +8860,19 @@
 					}
 				}
 			}
-		# Cordoba - Non-historical
-			CDOBA = { 
-				level = 3
-				required_locations_fraction = 0.44
-				rule = plausible
-				potential = {
-					has_variable = fnr_nonhistorical_enabled 
-					NOT = { 
-						OR = {
-							tag = CDOBA
-							tag_exists = CDOBA
-						}
-					}
-					religion.group = religion_group:muslim
-					OR = {
-						culture = { has_culture_group = culture_group:maghrebi_group }
-						culture = { has_culture_group = culture_group:iberian_group }
-					}
-				}
-				name = CDOBA
-				flag = CDOBA
-				adjective = CDOBA_ADJ
-				tag = CDOBA
-				color = map_CDOBA
-				areas = { andalusia_area granada_area extremadura_area murcia_area }
-			}
-		# Dacia - Non-historical
-			DACIA = {
-				level = 2
-				required_locations_fraction = 0.70
-				rule = plausible
-				potential = {
-					has_variable = fnr_nonhistorical_enabled 
-					NOT = { 
-						OR = {
-							tag = DACIA
-							tag_exists = DACIA
-						}
-					}
-					OR = {
-						culture = culture:bulgarian
-						culture = culture:wallachian
-						culture = culture:moldovan
-					}
-				}
-				name = DACIA
-				flag = DACIA
-				adjective = DACIA_ADJ
-				tag = DACIA
-				color = map_DACIA 
-				areas = { bulgaria_area wallachia_area moldavia_area }
-			}
-		# Dual Monarchy - Alt-history
-			DLMON = {
-				level = 4
-				required_locations_fraction = 0.45
-				rule = plausible
-				potential = {
-					has_variable = fnr_althistory_enabled 
-					NOT = { 
-						OR = {
-							tag = DLMON
-							tag_exists = DLMON
-						}
-					}
-					OR = {
-						culture = { has_culture_group = culture_group:british_group }
-						culture = { has_culture_group = culture_group:french_group }
-					}
-				}
-				allow = {
-					# TODO: add a check for owning at least 50% land in both Britain AND france					
-				}
-				name = DLMON
-				flag = DLMON
-				adjective = DLMON_ADJ
-				tag = DLMON
-				color = map_DLMON
-				regions = { france_region great_britain_region }
-				form_effect = {
-					if = {
-						limit = { country_rank_level < 4 }
-						set_country_rank_effect = { rank = country_rank:rank_empire }
-					}
-				}
-			}
-		# East Slavia - Alt-history
-			ESLAV = {
-				level = 3
-				required_locations_fraction = 0.10
-				rule = plausible
-				potential = {
-					has_variable = fnr_althistory_enabled 
-					NOT = { 
-						OR = {
-							tag = ESLAV
-							tag_exists = ESLAV
-						}
-					}
-					OR = {
-						culture = culture:halychian_culture
-						culture = culture:polatskian_culture
-						culture = culture:polesian_culture
-						culture = culture:ruthenian
-						culture = culture:severian
-						culture = culture:volhynian_culture
-						culture = culture:rusyn_culture
-						culture = culture:cossack_culture
-						culture = culture:smolenskian_culture
-					}
-				}
-				name = ESLAV
-				flag = ESLAV
-				adjective = ESLAV_ADJ
-				tag = ESLAV
-				color = map_ESLAV
-				regions = { ruthenia_region steppes_region baltic_region russian_region }
-				form_effect = {
-					if = {
-						limit = { country_rank_level < 3 }
-						set_country_rank_effect = { rank = country_rank:rank_kingdom }
-					}
-				}
-			}
-		# Franco-Iberian Empire - Fantasy
-			FNCIB = {
-				level = 4
-				required_locations_fraction = 0.67
-				rule = plausible
-				potential = {
-					has_variable = fnr_fantasy_enabled 
-					NOT = { 
-						OR = {
-							tag = FNCIB
-							tag_exists = FNCIB
-						}
-					}
-					OR = {
-						culture = { has_culture_group = culture_group:iberian_group }
-						culture = { has_culture_group = culture_group:french_group }
-					}
-				}
-				name = FNCIB
-				flag = FNCIB
-				adjective = FNCIB_ADJ
-				tag = FNCIB
-				color = map_FNCIB
-				regions = { france_region iberia_region }
-				form_effect = {
-					if = {
-						limit = { country_rank_level < 4 }
-						set_country_rank_effect = { rank = country_rank:rank_empire }
-					}
-				}
-			}
-		# Frieslande - Alt-history (Germanized Dutch basically)
-			FIESL = {
-				level = 3
-				required_locations_fraction = 1
-				rule = plausible
-				potential = {
-					has_variable = fnr_althistory_enabled 
-					NOT = { 
-						OR = {
-							tag = FNCIB
-							tag_exists = FNCIB
-						}
-					}
-					culture = culture:frisian 
-				}
-				name = FIESL
-				flag = FIESL
-				adjective = FIESL_ADJ
-				tag = FIESL
-				color = map_FIESL
-				areas = { friesland_area }
-			}
-		# Gallic Empire - Non-historical
-			GLCEM = {
-				level = 4
-				required_locations_fraction = 0.60
-				rule = plausible
-				potential = {
-					has_variable = fnr_nonhistorical_enabled 
-					NOT = { 
-						OR = {
-							tag = GLCEM
-							tag_exists = GLCEM
-						}
-					}
-					culture = { has_culture_group = culture_group:french_group }
-				}
-				name = GLCEM
-				flag = GLCEM
-				adjective = GLCEM_ADJ
-				tag = GLCEM
-				color = map_GLCEM
-				regions = { france_region }
-				form_effect = {
-					if = {
-						limit = { country_rank_level < 4 }
-						set_country_rank_effect = { rank = country_rank:rank_empire }
-					}
-				}
-			}
-		# Hungarian Empire - Alt-history
-			HNGEM = {
-				level = 4
-				required_locations_fraction = 0.85
-				rule = plausible
-				potential = {
-					has_variable = fnr_althistory_enabled 
-					NOT = { 
-						OR = {
-							tag = HNGEM
-							tag_exists = HNGEM
-						}
-					}
-					culture = { has_culture_group = culture_group:hungarian_group }
-				}
-				name = HNGEM
-				flag = HNGEM
-				adjective = HNGEM_ADJ
-				tag = HNGEM
-				color = map_HNGEM
-				regions = { carpathia_region }
-				form_effect = {
-					if = {
-						limit = { country_rank_level < 4 }
-						set_country_rank_effect = { rank = country_rank:rank_empire }
-					}
-				}
-			}
-		# Iberian Empire - Fantasy
-			IBNEM = {
-				level = 4
-				required_locations_fraction = 0.85
-				rule = plausible	
-				potential = {
-					has_variable = fnr_fantasy_enabled 
-					NOT = { 
-						OR = {
-							tag = IBNEM
-							tag_exists = IBNEM
-						}
-					}
-					culture = { has_culture_group = culture_group:iberian_group }
-				}
-				name = IBNEM
-				flag = IBNEM
-				adjective = IBNEM_ADJ
-				tag = IBNEM
-				color = map_IBNEM
-				regions = { iberia_region }
-				form_effect = {
-					if = {
-						limit = { country_rank_level < 4 }
-						set_country_rank_effect = { rank = country_rank:rank_empire }
-					}
-				}
-			}
-		# Italian Merchant Alliance - Alt-history
-			ITMCH = {
-				level = 3
-				required_locations_fraction = 0.35
-				rule = plausible
-				potential = {
-					has_variable = fnr_althistory_enabled 
-					NOT = { 
-						OR = {
-							tag = ITMCH
-							tag_exists = ITMCH
-						}
-					}
-					AND = {
-						government_type = government_type:republic
-						culture = { has_culture_group = culture_group:italian_group }
-					}
-				}
-				allow = { government_type = government_type:republic }
-				name = ITMCH
-				flag = ITMCH
-				adjective = ITMCH_ADJ
-				tag = ITMCH
-				color = map_ITMCH
-				regions = { italy_region }
-			}
-		# Jagiellonian Empire - Non-historical
-			JGLNN = {
-				level = 3
-				required_locations_fraction = 0.75
-				rule = plausible
-				potential = {
-					has_variable = fnr_nonhistorical_enabled 
-					NOT = { 
-						OR = {
-							tag = JGLNN
-							tag_exists = JGLNN
-						}
-					}
-					OR = {
-						culture = { has_culture_group = culture_group:polish_group }
-						culture = culture:polish
-						culture = culture:halychian_culture
-						culture = culture:polatskian_culture
-						culture = culture:polesian_culture
-						culture = culture:ruthenian
-						culture = culture:severian
-						culture = culture:volhynian_culture
-						culture = culture:rusyn_culture
-						culture = culture:cossack_culture
-						culture = culture:smolenskian_culture
-					}
-				}
-				name = JGLNN
-				flag = JGLNN
-				adjective = JGLNN_ADJ
-				tag = JGLNN
-				color = map_JGLNN
-				regions = { ruthenia_region baltic_region }
-				form_effect = {
-					if = {
-						limit = { country_rank_level < 4 }
-						set_country_rank_effect = { rank = country_rank:rank_empire }
-					}
-				}
-			}
-		# Ummayad Caliphate - Non-historical
-			UMAYA = {
-				level = 4
-				required_locations_fraction = 0.35
-				rule = plausible
-				potential = {
-					has_variable = fnr_nonhistorical_enabled 
-					NOT = { 
-						OR = {
-							tag = UMAYA
-							tag_exists = UMAYA
-						}
-					}
-					OR = {
-						culture = { has_culture_group = culture_group:iranian_group }
-						culture = { has_culture_group = culture_group:arabic_group }
-						culture = { has_culture_group = culture_group:maghrebi_group }
-						culture = { has_culture_group = culture_group:iberian_group }
-					}
-				}
-				name = UMAYA
-				flag = UMAYA
-				adjective = UMAYA_ADJ
-				tag = UMAYA
-				color = map_UMAYA
-				regions = { crescent_region caucasus_region persia_region egypt_region maghreb_region iberia_region }
-				areas = { cilicia_area }
-				form_effect = {
-					if = {
-						limit = { country_rank_level < 4 }
-						set_country_rank_effect = { rank = country_rank:rank_empire }
-					}
-				}
-			}
-		# East Francia - Non-historical (post carolingian germany)
-			KOGER = {
-				level = 3
-				required_locations_fraction = 0.40
-				rule = plausible
-				potential = {
-					has_variable = fnr_nonhistorical_enabled 
-					NOT = { 
-						OR = {
-							tag = KOGER
-							tag_exists = KOGER
-						}
-					}
-					culture = { has_culture_group = culture_group:german_group }
-				}
-				name = KOGER
-				flag = KOGER
-				adjective = KOGER_ADJ
-				tag = KOGER
-				color = map_KOGER
-				regions = { north_german_region south_german_region italy_region }
-			}
-		# Kingdom of God - Fantasy # TODO: wont show for papacy, I'm assuming it is prevented from seeing formables or something
-			KOGOD = {
-				level = 3
-				required_locations_fraction = 0.35
-				rule = plausible
-				potential = {
-					has_variable = fnr_fantasy_enabled 
-					NOT = { 
-						OR = {
-							tag = KOGOD
-							tag_exists = KOGOD
-						}
-					}
-					AND = {
-						culture = { has_culture_group = culture_group:italian_group }
-						tag = PAP
-					}
-				}
-				allow = { tag = c:PAP }
-				name = KOGOD
-				flag = KOGOD
-				adjective = KOGOD_ADJ
-				tag = KOGOD
-				color = map_KOGOD
-				regions = { italy_region }
-			}
-		# Langobards - Non-historical
-			LNGBD = {
-				level = 3
-				required_locations_fraction = 0.45
-				rule = plausible
-				potential = {
-					has_variable = fnr_nonhistorical_enabled 
-					NOT = { 
-						OR = {
-							tag = LNGBD
-							tag_exists = LNGBD
-						}
-					}
-					culture = { has_culture_group = culture_group:italian_group }
-				}
-				name = LNGBD
-				flag = LNGBD
-				adjective = LNGBD_ADJ
-				tag = LNGBD
-				color = map_LNGBD
-				regions = { italy_region }
-			}	
-		# Lusitanian Empire - Non-historical
-			LUSIT = {
-				level = 4
-				required_locations_fraction = 0.95
-				rule = plausible
-				potential = { 
-					has_variable = fnr_nonhistorical_enabled 
-					NOT = { 
-						OR = {
-							tag = LUSIT
-							tag_exists = LUSIT
-						}
-					}
-					culture = culture:portuguese 
-				}
-				name = LUSIT
-				flag = LUSIT
-				adjective = LUSIT_ADJ
-				tag = LUSIT
-				color = map_LUSIT
-				areas = { north_portugal_area south_portugal_area galicia_area }
-				form_effect = {
-					if = {
-						limit = { country_rank_level < 4 }
-						set_country_rank_effect = { rank = country_rank:rank_empire }
-					}
-				}
-			}
-		# Macedonia - Non-historical
-			MACED = {
-				level = 3
-				required_locations_fraction = 0.75
-				rule = plausible
-				potential = {
-					has_variable = fnr_nonhistorical_enabled 
-					NOT = { 
-						OR = {
-							tag = MACED
-							tag_exists = MACED
-						}
-					}
-					OR = {
-						culture = culture:hellenic
-						culture = { has_culture_group = culture_group:greek_group }
-					}
-				}
-				allow = {
-					not = { tag = BYZ }
-				}
-
-				name = MACED
-				flag = MACED
-				adjective = MACED_ADJ
-				tag = MACED
-				color = map_MACED
-				provinces = { north_epirus_province }
-				areas = { macedonia_area northern_greece_area }
-			}
 		# Macedonian Empire - Non-historical
 			MCDEM = {
-				level = 4
+				level = 5
 				required_locations_fraction = 0.75
 				rule = plausible
 				potential = {
-					has_variable = fnr_nonhistorical_enabled 
+					AND = {
+						OR = {
+							has_variable = fnr_nonhistorical_enabled
+							has_variable = fnr_macedonianempire_enabled
+						}
+						NOT = { has_variable = fnr_macedonianempire_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = MCDEM
@@ -7856,80 +8896,6 @@
 						limit = { country_rank_level < 4 }
 						set_country_rank_effect = { rank = country_rank:rank_empire }
 					}
-				}
-			}
-		# North Sea Empire - Non-historical
-			NOSEM = {
-				level = 4
-				required_locations_fraction = 0.75
-				rule = plausible
-				potential = {
-					has_variable = fnr_nonhistorical_enabled 
-					NOT = { 
-						OR = {
-							tag = NOSEM
-							tag_exists = NOSEM
-						}
-					}
-					OR = {
-						culture = { has_culture_group = culture_group:british_group }
-						culture = { has_culture_group = culture_group:scandinavian_group }
-					}
-					any_owned_location = { 
-						OR = {
-							region = region:scandinavian_region 
-							region = region:north_atlantic_islands_region 
-						}
-					}
-					any_owned_location = { 
-						OR = {
-							region = region:great_britain_region 
-							region = region:ireland_region 
-						}
-					}
-				}
-				name = NOSEM
-				flag = NSE_WHITE_FNR
-				adjective = NOSEM_ADJ
-				tag = NOSEM
-				color = map_NOSEM
-				areas = { home_counties_area midlands_area east_anglia_area northumbria_area denmark_area skaneland_area syd_norge_area nord_norge_area }
-				form_effect = {
-					if = {
-						limit = { country_rank_level < 4 }
-						set_country_rank_effect = { rank = country_rank:rank_empire }
-					}
-				}
-			}
-		# Pontus - Non-historical
-			PONTU = {
-				level = 3
-				required_locations_fraction = 0.75
-				rule = plausible
-				potential = {
-					has_variable = fnr_nonhistorical_enabled 
-					NOT = { 
-						OR = {
-							tag = PONTU
-							tag_exists = PONTU
-						}
-					}
-					culture = culture:pontic_greek_culture
-				}
-
-				allow = {
-				}
-
-				name = PONTU
-				flag = PONTU
-				adjective = PONTU_ADJ
-				tag = PONTU
-				color = map_PONTU
-				
-				areas = {
-					pontus_area
-					crimea_area
-					matrega_area
 				}
 			}
 	

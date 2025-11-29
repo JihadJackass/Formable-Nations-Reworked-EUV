@@ -1,0 +1,13 @@
+﻿on_monthly_pulse_country = {
+    on_actions = {
+        fnr_netherlands_events 
+    }
+}
+
+# United Provinces opportunity to become Dutch Republic
+fnr_netherlands_events = {
+    random_events = {
+        119 = 0  # Nothing happens
+        1 = flavor_DUTCH.1  # event fires
+    }
+}

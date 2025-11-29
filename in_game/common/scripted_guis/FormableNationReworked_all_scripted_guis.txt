@@ -1,10 +1,8 @@
-﻿# FORMABLE NATIONS DUAL SCRIPTED GUIS - Left/Right Click Support
-# Left Click = Add positive (+100), Right Click = Add negative (-100)
-# Auto-cleanup: Adding one removes the opposite
+﻿# FORMABLE NATIONS DUAL SCRIPTED GUIS
 
 # Formable Nations Reworked - Scripted GUIs for Toggle Buttons
 
-# Toggle for Historical Formables
+# Toggle for Historical Formables - fnr_historical_enabled
 	# Existed after EU5 start date and not after January 1, 1837
 	FormableNationReworked_toggle_historical_formables = {
 		scope = country
@@ -31,20 +29,13 @@
 		}
 	}
 
-# Toggle for Non-Historical Formables
+# Toggle for Non-Historical Formables - fnr_nonhistorical_enabled
 	# Existed before EU5 start date
 	FormableNationReworked_toggle_nonhistorical_formables = {
 		scope = country
 		saved_scopes = { }
-		
-		is_shown = {
-			always = yes
-		}
-		
-		is_valid = {
-			always = yes
-		}
-		
+		is_shown = { always = yes }
+		is_valid = { always = yes }
 		effect = {
 			# Check player's current state
 			if = {
@@ -66,20 +57,13 @@
 		}
 	}
 
-# Toggle for Alt-History Formables
+# Toggle for Alt-History Formables - fnr_althistory_enabled
 	# nation that were proposed or exist in alternate timeline mods
 	FormableNationReworked_toggle_althistory_formables = {
 		scope = country
 		saved_scopes = { }
-		
-		is_shown = {
-			always = yes
-		}
-		
-		is_valid = {
-			always = yes
-		}
-		
+		is_shown = { always = yes }
+		is_valid = { always = yes }
 		effect = {
 			# Check player's current state
 			if = {
@@ -101,20 +85,13 @@
 		}
 	}
 
-# Toggle for Controversial Formables (starts disabled by default)
+# Toggle for Controversial Formables - fnr_controversial_enabled
 	# nazi germany, israel, rhodesia, etc
 	FormableNationReworked_toggle_controversial_formables = {
 		scope = country
 		saved_scopes = { }
-		
-		is_shown = {
-			always = yes
-		}
-		
-		is_valid = {
-			always = yes
-		}
-		
+		is_shown = { always = yes }
+		is_valid = { always = yes }
 		effect = {
 			# Check player's current state
 			if = {
@@ -136,20 +113,13 @@
 		}
 	}
 
-# Toggle Fantasy Formables
+# Toggle Fantasy Formables - fnr_fantasy_enabled
 	# Example: camelot, atlantis any unrealstic/made up country/story countries
 	FormableNationReworked_toggle_fantasy_formables = {
 		scope = country
 		saved_scopes = { }
-		
-		is_shown = {
-			always = yes
-		}
-		
-		is_valid = {
-			always = yes
-		}
-		
+		is_shown = { always = yes }
+		is_valid = { always = yes }
 		effect = {
 			if = {
 				limit = { has_variable = fnr_fantasy_enabled }
@@ -170,21 +140,14 @@
 		}
 	}
 
-# Toggle for Meme Formables
-# meme countries (Hyperborea, Agartha)
+# Toggle for Meme Formables - fnr_meme_enabled
+	# meme countries (Hyperborea, Agartha)
 	# Proto-Finnic Holy Roman Khaganate / etc
 	FormableNationReworked_toggle_meme_formables = {
 		scope = country
 		saved_scopes = { }
-		
-		is_shown = {
-			always = yes
-		}
-		
-		is_valid = {
-			always = yes
-		}
-		
+		is_shown = { always = yes }
+		is_valid = { always = yes }
 		effect = {
 			if = {
 				limit = { has_variable = fnr_meme_enabled }
@@ -205,20 +168,13 @@
 		}
 	}
 
-# Toggle for Modern Formables
+# Toggle for Modern Formables - fnr_modern_enabled
 	# Any nation existing after January 1, 1837 that isnt controversial
 	FormableNationReworked_toggle_modern_formables = {
 		scope = country
 		saved_scopes = { }
-		
-		is_shown = {
-			always = yes
-		}
-		
-		is_valid = {
-			always = yes
-		}
-		
+		is_shown = { always = yes }
+		is_valid = { always = yes }
 		effect = {
 			if = {
 				limit = { has_variable = fnr_modern_enabled }
@@ -243,45 +199,3978 @@
 
 # Individual Formable Toggle List
 	# Rank 2
-
-	# Rank 3
-
-	# Rank 4
-		# German Empire
-		FormableNationReworked_toggle_germanempire = {
-			scope = country
-			is_shown = { always = yes }
-			is_valid = { always = yes }
-			
-			effect = {
-				# Cycle: Default → Force OFF → Force ON → Default
-				if = {
-					limit = {
-						NOT = { has_variable = fnr_germanempire_enabled }
-						NOT = { has_variable = fnr_germanempire_disabled }
+		# Arpitania - Fantasy
+			FormableNationReworked_toggle_arpitania = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_arpitania_enabled }
+							NOT = { has_variable = fnr_arpitania_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_arpitania_disabled value = yes }
+						}
 					}
-					# Currently DEFAULT → Force OFF
-					every_country = {
-						set_variable = { name = fnr_germanempire_disabled value = yes }
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_arpitania_disabled }
+						every_country = { 
+							remove_variable = fnr_arpitania_disabled
+							set_variable = { name = fnr_arpitania_enabled value = yes }
+						}
 					}
-				}
-				else_if = {
-					limit = { has_variable = fnr_germanempire_disabled }
-					# Currently FORCE OFF → Force ON
-					every_country = {
-						remove_variable = fnr_germanempire_disabled
-						set_variable = { name = fnr_germanempire_enabled value = yes }
-					}
-				}
-				else_if = {
-					limit = { has_variable = fnr_germanempire_enabled }
-					# Currently FORCE ON → Default
-					every_country = {
-						remove_variable = fnr_germanempire_enabled
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_arpitania_enabled }
+						every_country = {
+							remove_variable = fnr_arpitania_enabled
+						}
 					}
 				}
 			}
-		}
+
+		# Polabia - Nonhistorical
+			FormableNationReworked_toggle_polabia = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_polabia_enabled }
+							NOT = { has_variable = fnr_polabia_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_polabia_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_polabia_disabled }
+						every_country = { 
+							remove_variable = fnr_polabia_disabled
+							set_variable = { name = fnr_polabia_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_polabia_enabled }
+						every_country = {
+							remove_variable = fnr_polabia_enabled
+						}
+					}
+				}
+			}
+
+		# Bremen-Verden - Historical
+			FormableNationReworked_toggle_bremenverden = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_bremenverden_enabled }
+							NOT = { has_variable = fnr_bremenverden_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_bremenverden_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_bremenverden_disabled }
+						every_country = { 
+							remove_variable = fnr_bremenverden_disabled
+							set_variable = { name = fnr_bremenverden_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_bremenverden_enabled }
+						every_country = {
+							remove_variable = fnr_bremenverden_enabled
+						}
+					}
+				}
+			}
+
+		# Ducal Prussia - Historical
+			FormableNationReworked_toggle_ducalprussia = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_ducalprussia_enabled }
+							NOT = { has_variable = fnr_ducalprussia_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_ducalprussia_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_ducalprussia_disabled }
+						every_country = { 
+							remove_variable = fnr_ducalprussia_disabled
+							set_variable = { name = fnr_ducalprussia_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_ducalprussia_enabled }
+						every_country = {
+							remove_variable = fnr_ducalprussia_enabled
+						}
+					}
+				}
+			}
+
+		# Dacia - Nonhistorical
+			FormableNationReworked_toggle_dacia = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_dacia_enabled }
+							NOT = { has_variable = fnr_dacia_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_dacia_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_dacia_disabled }
+						every_country = { 
+							remove_variable = fnr_dacia_disabled
+							set_variable = { name = fnr_dacia_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_dacia_enabled }
+						every_country = {
+							remove_variable = fnr_dacia_enabled
+						}
+					}
+				}
+			}
+
+	# Rank 3
+		# Basque Country - Nonhistorical
+			FormableNationReworked_toggle_basquecountry = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_basquecountry_enabled }
+							NOT = { has_variable = fnr_basquecountry_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_basquecountry_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_basquecountry_disabled }
+						every_country = { 
+							remove_variable = fnr_basquecountry_disabled
+							set_variable = { name = fnr_basquecountry_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_basquecountry_enabled }
+						every_country = {
+							remove_variable = fnr_basquecountry_enabled
+						}
+					}
+				}
+			}
+
+		# Balochistan - Modern
+			FormableNationReworked_toggle_balochistan = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_balochistan_enabled }
+							NOT = { has_variable = fnr_balochistan_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_balochistan_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_balochistan_disabled }
+						every_country = { 
+							remove_variable = fnr_balochistan_disabled
+							set_variable = { name = fnr_balochistan_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_balochistan_enabled }
+						every_country = {
+							remove_variable = fnr_balochistan_enabled
+						}
+					}
+				}
+			}
+
+		# Great Sorbia - Nonhistorical
+			FormableNationReworked_toggle_greatsorbia = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_greatsorbia_enabled }
+							NOT = { has_variable = fnr_greatsorbia_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_greatsorbia_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_greatsorbia_disabled }
+						every_country = { 
+							remove_variable = fnr_greatsorbia_disabled
+							set_variable = { name = fnr_greatsorbia_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_greatsorbia_enabled }
+						every_country = {
+							remove_variable = fnr_greatsorbia_enabled
+						}
+					}
+				}
+			}
+
+		# Sorbic Kingdom - Nonhistorical
+			FormableNationReworked_toggle_sorbickingdom = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_sorbickingdom_enabled }
+							NOT = { has_variable = fnr_sorbickingdom_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_sorbickingdom_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_sorbickingdom_disabled }
+						every_country = { 
+							remove_variable = fnr_sorbickingdom_disabled
+							set_variable = { name = fnr_sorbickingdom_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_sorbickingdom_enabled }
+						every_country = {
+							remove_variable = fnr_sorbickingdom_enabled
+						}
+					}
+				}
+			}
+
+		# Kingdom of Hanover - Historical
+			FormableNationReworked_toggle_kingdomofhanover = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_kingdomofhanover_enabled }
+							NOT = { has_variable = fnr_kingdomofhanover_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_kingdomofhanover_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_kingdomofhanover_disabled }
+						every_country = { 
+							remove_variable = fnr_kingdomofhanover_disabled
+							set_variable = { name = fnr_kingdomofhanover_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_kingdomofhanover_enabled }
+						every_country = {
+							remove_variable = fnr_kingdomofhanover_enabled
+						}
+					}
+				}
+			}
+
+		# Polynesia - Nonhistorical
+			FormableNationReworked_toggle_polynesia = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_polynesia_enabled }
+							NOT = { has_variable = fnr_polynesia_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_polynesia_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_polynesia_disabled }
+						every_country = { 
+							remove_variable = fnr_polynesia_disabled
+							set_variable = { name = fnr_polynesia_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_polynesia_enabled }
+						every_country = {
+							remove_variable = fnr_polynesia_enabled
+						}
+					}
+				}
+			}
+
+		# Hawaii - Nonhistorical
+			FormableNationReworked_toggle_hawaii = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_hawaii_enabled }
+							NOT = { has_variable = fnr_hawaii_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_hawaii_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_hawaii_disabled }
+						every_country = { 
+							remove_variable = fnr_hawaii_disabled
+							set_variable = { name = fnr_hawaii_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_hawaii_enabled }
+						every_country = {
+							remove_variable = fnr_hawaii_enabled
+						}
+					}
+				}
+			}
+
+		# Yugoslavia - Modern
+			FormableNationReworked_toggle_yugoslavia = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_yugoslavia_enabled }
+							NOT = { has_variable = fnr_yugoslavia_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_yugoslavia_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_yugoslavia_disabled }
+						every_country = { 
+							remove_variable = fnr_yugoslavia_disabled
+							set_variable = { name = fnr_yugoslavia_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_yugoslavia_enabled }
+						every_country = {
+							remove_variable = fnr_yugoslavia_enabled
+						}
+					}
+				}
+			}
+
+		# Baltic States - Alt - Althistory
+			FormableNationReworked_toggle_balticstates = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_balticstates_enabled }
+							NOT = { has_variable = fnr_balticstates_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_balticstates_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_balticstates_disabled }
+						every_country = { 
+							remove_variable = fnr_balticstates_disabled
+							set_variable = { name = fnr_balticstates_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_balticstates_enabled }
+						every_country = {
+							remove_variable = fnr_balticstates_enabled
+						}
+					}
+				}
+			}
+
+		# Alsace-Lorraine - Historical
+			FormableNationReworked_toggle_alsacelorraine = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_alsacelorraine_enabled }
+							NOT = { has_variable = fnr_alsacelorraine_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_alsacelorraine_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_alsacelorraine_disabled }
+						every_country = { 
+							remove_variable = fnr_alsacelorraine_disabled
+							set_variable = { name = fnr_alsacelorraine_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_alsacelorraine_enabled }
+						every_country = {
+							remove_variable = fnr_alsacelorraine_enabled
+						}
+					}
+				}
+			}
+
+		# Belarus - Modern
+			FormableNationReworked_toggle_belarus = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_belarus_enabled }
+							NOT = { has_variable = fnr_belarus_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_belarus_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_belarus_disabled }
+						every_country = { 
+							remove_variable = fnr_belarus_disabled
+							set_variable = { name = fnr_belarus_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_belarus_enabled }
+						every_country = {
+							remove_variable = fnr_belarus_enabled
+						}
+					}
+				}
+			}
+
+		# Belgium - Historical
+			FormableNationReworked_toggle_belgium = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_belgium_enabled }
+							NOT = { has_variable = fnr_belgium_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_belgium_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_belgium_disabled }
+						every_country = { 
+							remove_variable = fnr_belgium_disabled
+							set_variable = { name = fnr_belgium_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_belgium_enabled }
+						every_country = {
+							remove_variable = fnr_belgium_enabled
+						}
+					}
+				}
+			}
+
+		# Benelux - Nonhistorical
+			FormableNationReworked_toggle_benelux = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_benelux_enabled }
+							NOT = { has_variable = fnr_benelux_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_benelux_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_benelux_disabled }
+						every_country = { 
+							remove_variable = fnr_benelux_disabled
+							set_variable = { name = fnr_benelux_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_benelux_enabled }
+						every_country = {
+							remove_variable = fnr_benelux_enabled
+						}
+					}
+				}
+			}
+
+		# Austria-Bavaria - Nonhistorical
+			FormableNationReworked_toggle_austriabavaria = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_austriabavaria_enabled }
+							NOT = { has_variable = fnr_austriabavaria_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_austriabavaria_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_austriabavaria_disabled }
+						every_country = { 
+							remove_variable = fnr_austriabavaria_disabled
+							set_variable = { name = fnr_austriabavaria_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_austriabavaria_enabled }
+						every_country = {
+							remove_variable = fnr_austriabavaria_enabled
+						}
+					}
+				}
+			}
+
+		# Cisalpina - Historical
+			FormableNationReworked_toggle_cisalpina = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_cisalpina_enabled }
+							NOT = { has_variable = fnr_cisalpina_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_cisalpina_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_cisalpina_disabled }
+						every_country = { 
+							remove_variable = fnr_cisalpina_disabled
+							set_variable = { name = fnr_cisalpina_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_cisalpina_enabled }
+						every_country = {
+							remove_variable = fnr_cisalpina_enabled
+						}
+					}
+				}
+			}
+
+		# Commonwealth of England - Historical
+			FormableNationReworked_toggle_commonwealthofengland = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_commonwealthofengland_enabled }
+							NOT = { has_variable = fnr_commonwealthofengland_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_commonwealthofengland_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_commonwealthofengland_disabled }
+						every_country = { 
+							remove_variable = fnr_commonwealthofengland_disabled
+							set_variable = { name = fnr_commonwealthofengland_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_commonwealthofengland_enabled }
+						every_country = {
+							remove_variable = fnr_commonwealthofengland_enabled
+						}
+					}
+				}
+			}
+
+		# Czechoslovakia - Modern
+			FormableNationReworked_toggle_czechoslovakia = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_czechoslovakia_enabled }
+							NOT = { has_variable = fnr_czechoslovakia_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_czechoslovakia_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_czechoslovakia_disabled }
+						every_country = { 
+							remove_variable = fnr_czechoslovakia_disabled
+							set_variable = { name = fnr_czechoslovakia_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_czechoslovakia_enabled }
+						every_country = {
+							remove_variable = fnr_czechoslovakia_enabled
+						}
+					}
+				}
+			}
+
+		# Ukraine - Modern
+			FormableNationReworked_toggle_ukraine = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_ukraine_enabled }
+							NOT = { has_variable = fnr_ukraine_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_ukraine_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_ukraine_disabled }
+						every_country = { 
+							remove_variable = fnr_ukraine_disabled
+							set_variable = { name = fnr_ukraine_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_ukraine_enabled }
+						every_country = {
+							remove_variable = fnr_ukraine_enabled
+						}
+					}
+				}
+			}
+
+		# Donetsk Peoples Republic - Modern
+			FormableNationReworked_toggle_donetskpeoplesrepublic = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_dpr_enabled }
+							NOT = { has_variable = fnr_dpr_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_dpr_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_dpr_disabled }
+						every_country = { 
+							remove_variable = fnr_dpr_disabled
+							set_variable = { name = fnr_dpr_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_dpr_enabled }
+						every_country = {
+							remove_variable = fnr_dpr_enabled
+						}
+					}
+				}
+			}
+
+		# Luhansk Peoples Republic - Modern
+			FormableNationReworked_toggle_luhanskpeoplesrepublic = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_lpr_enabled }
+							NOT = { has_variable = fnr_lpr_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_lpr_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_lpr_disabled }
+						every_country = { 
+							remove_variable = fnr_lpr_disabled
+							set_variable = { name = fnr_lpr_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_lpr_enabled }
+						every_country = {
+							remove_variable = fnr_lpr_enabled
+						}
+					}
+				}
+			}
+
+		# Emilia-Romagna - Althistory
+			FormableNationReworked_toggle_emiliaromagna = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_emiliaromagna_enabled }
+							NOT = { has_variable = fnr_emiliaromagna_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_emiliaromagna_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_emiliaromagna_disabled }
+						every_country = { 
+							remove_variable = fnr_emiliaromagna_disabled
+							set_variable = { name = fnr_emiliaromagna_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_emiliaromagna_enabled }
+						every_country = {
+							remove_variable = fnr_emiliaromagna_enabled
+						}
+					}
+				}
+			}
+
+		# Hesse-Nassau - Althistory
+			FormableNationReworked_toggle_hessenassau = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_hessenassau_enabled }
+							NOT = { has_variable = fnr_hessenassau_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_hessenassau_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_hessenassau_disabled }
+						every_country = { 
+							remove_variable = fnr_hessenassau_disabled
+							set_variable = { name = fnr_hessenassau_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_hessenassau_enabled }
+						every_country = {
+							remove_variable = fnr_hessenassau_enabled
+						}
+					}
+				}
+			}
+
+		# Hanseatic League - Althistory
+			FormableNationReworked_toggle_hanseaticleague = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_hansa_enabled }
+							NOT = { has_variable = fnr_hansa_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_hansa_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_hansa_disabled }
+						every_country = { 
+							remove_variable = fnr_hansa_disabled
+							set_variable = { name = fnr_hansa_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_hansa_enabled }
+						every_country = {
+							remove_variable = fnr_hansa_enabled
+						}
+					}
+				}
+			}
+
+		# Kalmar Union - Historical
+			FormableNationReworked_toggle_kalmarunion = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_kalmarunion_enabled }
+							NOT = { has_variable = fnr_kalmarunion_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_kalmarunion_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_kalmarunion_disabled }
+						every_country = { 
+							remove_variable = fnr_kalmarunion_disabled
+							set_variable = { name = fnr_kalmarunion_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_kalmarunion_enabled }
+						every_country = {
+							remove_variable = fnr_kalmarunion_enabled
+						}
+					}
+				}
+			}
+
+		# Lombardy - Althistory
+			FormableNationReworked_toggle_lombardy = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_lombardy_enabled }
+							NOT = { has_variable = fnr_lombardy_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_lombardy_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_lombardy_disabled }
+						every_country = { 
+							remove_variable = fnr_lombardy_disabled
+							set_variable = { name = fnr_lombardy_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_lombardy_enabled }
+						every_country = {
+							remove_variable = fnr_lombardy_enabled
+						}
+					}
+				}
+			}
+
+		# Lombardy-Venetia - Historical
+			FormableNationReworked_toggle_lombardyvenetia = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_lombardyvenetia_enabled }
+							NOT = { has_variable = fnr_lombardyvenetia_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_lombardyvenetia_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_lombardyvenetia_disabled }
+						every_country = { 
+							remove_variable = fnr_lombardyvenetia_disabled
+							set_variable = { name = fnr_lombardyvenetia_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_lombardyvenetia_enabled }
+						every_country = {
+							remove_variable = fnr_lombardyvenetia_enabled
+						}
+					}
+				}
+			}
+
+		# Lower Saxony - Althistory
+			FormableNationReworked_toggle_lowersaxony = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_lowersaxony_enabled }
+							NOT = { has_variable = fnr_lowersaxony_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_lowersaxony_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_lowersaxony_disabled }
+						every_country = { 
+							remove_variable = fnr_lowersaxony_disabled
+							set_variable = { name = fnr_lowersaxony_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_lowersaxony_enabled }
+						every_country = {
+							remove_variable = fnr_lowersaxony_enabled
+						}
+					}
+				}
+			}
+
+		# Malta - Modern
+			FormableNationReworked_toggle_malta = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_malta_enabled }
+							NOT = { has_variable = fnr_malta_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_malta_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_malta_disabled }
+						every_country = { 
+							remove_variable = fnr_malta_disabled
+							set_variable = { name = fnr_malta_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_malta_enabled }
+						every_country = {
+							remove_variable = fnr_malta_enabled
+						}
+					}
+				}
+			}
+
+		# Mercia - Althistory
+			FormableNationReworked_toggle_mercia = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_mercia_enabled }
+							NOT = { has_variable = fnr_mercia_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_mercia_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_mercia_disabled }
+						every_country = { 
+							remove_variable = fnr_mercia_disabled
+							set_variable = { name = fnr_mercia_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_mercia_enabled }
+						every_country = {
+							remove_variable = fnr_mercia_enabled
+						}
+					}
+				}
+			}
+
+		# Sweden-Norway - Historical
+			FormableNationReworked_toggle_swedennorway = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_swedennorway_enabled }
+							NOT = { has_variable = fnr_swedennorway_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_swedennorway_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_swedennorway_disabled }
+						every_country = { 
+							remove_variable = fnr_swedennorway_disabled
+							set_variable = { name = fnr_swedennorway_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_swedennorway_enabled }
+						every_country = {
+							remove_variable = fnr_swedennorway_enabled
+						}
+					}
+				}
+			}
+
+		# Caucasia - Althistory
+			FormableNationReworked_toggle_caucasia = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_caucasia_enabled }
+							NOT = { has_variable = fnr_caucasia_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_caucasia_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_caucasia_disabled }
+						every_country = { 
+							remove_variable = fnr_caucasia_disabled
+							set_variable = { name = fnr_caucasia_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_caucasia_enabled }
+						every_country = {
+							remove_variable = fnr_caucasia_enabled
+						}
+					}
+				}
+			}
+
+		# Korea - Modern
+			FormableNationReworked_toggle_korea = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_korea_enabled }
+							NOT = { has_variable = fnr_korea_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_korea_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_korea_disabled }
+						every_country = { 
+							remove_variable = fnr_korea_disabled
+							set_variable = { name = fnr_korea_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_korea_enabled }
+						every_country = {
+							remove_variable = fnr_korea_enabled
+						}
+					}
+				}
+			}
+
+		# Afghanistan - Modern
+			FormableNationReworked_toggle_afghanistan = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_afghanistan_enabled }
+							NOT = { has_variable = fnr_afghanistan_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_afghanistan_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_afghanistan_disabled }
+						every_country = { 
+							remove_variable = fnr_afghanistan_disabled
+							set_variable = { name = fnr_afghanistan_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_afghanistan_enabled }
+						every_country = {
+							remove_variable = fnr_afghanistan_enabled
+						}
+					}
+				}
+			}
+
+		# Mingrelia - Historical
+			FormableNationReworked_toggle_mingrelia = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_mingrelia_enabled }
+							NOT = { has_variable = fnr_mingrelia_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_mingrelia_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_mingrelia_disabled }
+						every_country = { 
+							remove_variable = fnr_mingrelia_disabled
+							set_variable = { name = fnr_mingrelia_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_mingrelia_enabled }
+						every_country = {
+							remove_variable = fnr_mingrelia_enabled
+						}
+					}
+				}
+			}
+
+		# North Korea - Modern
+			FormableNationReworked_toggle_northkorea = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_northkorea_enabled }
+							NOT = { has_variable = fnr_northkorea_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_northkorea_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_northkorea_disabled }
+						every_country = { 
+							remove_variable = fnr_northkorea_disabled
+							set_variable = { name = fnr_northkorea_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_northkorea_enabled }
+						every_country = {
+							remove_variable = fnr_northkorea_enabled
+						}
+					}
+				}
+			}
+
+		# South Korea - Modern
+			FormableNationReworked_toggle_southkorea = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_southkorea_enabled }
+							NOT = { has_variable = fnr_southkorea_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_southkorea_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_southkorea_disabled }
+						every_country = { 
+							remove_variable = fnr_southkorea_disabled
+							set_variable = { name = fnr_southkorea_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_southkorea_enabled }
+						every_country = {
+							remove_variable = fnr_southkorea_enabled
+						}
+					}
+				}
+			}
+
+		# Philippines - Modern
+			FormableNationReworked_toggle_philippines = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_philippines_enabled }
+							NOT = { has_variable = fnr_philippines_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_philippines_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_philippines_disabled }
+						every_country = { 
+							remove_variable = fnr_philippines_disabled
+							set_variable = { name = fnr_philippines_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_philippines_enabled }
+						every_country = {
+							remove_variable = fnr_philippines_enabled
+						}
+					}
+				}
+			}
+
+		# Saudi Arabia - Modern
+			FormableNationReworked_toggle_saudiarabia = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_saudiarabia_enabled }
+							NOT = { has_variable = fnr_saudiarabia_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_saudiarabia_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_saudiarabia_disabled }
+						every_country = { 
+							remove_variable = fnr_saudiarabia_disabled
+							set_variable = { name = fnr_saudiarabia_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_saudiarabia_enabled }
+						every_country = {
+							remove_variable = fnr_saudiarabia_enabled
+						}
+					}
+				}
+			}
+
+		# Sulawesi - Althistory
+			FormableNationReworked_toggle_sulawesi = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_sulawesi_enabled }
+							NOT = { has_variable = fnr_sulawesi_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_sulawesi_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_sulawesi_disabled }
+						every_country = { 
+							remove_variable = fnr_sulawesi_disabled
+							set_variable = { name = fnr_sulawesi_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_sulawesi_enabled }
+						every_country = {
+							remove_variable = fnr_sulawesi_enabled
+						}
+					}
+				}
+			}
+
+		# Taiping - Nonhistorical
+			FormableNationReworked_toggle_taiping = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_taiping_enabled }
+							NOT = { has_variable = fnr_taiping_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_taiping_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_taiping_disabled }
+						every_country = { 
+							remove_variable = fnr_taiping_disabled
+							set_variable = { name = fnr_taiping_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_taiping_enabled }
+						every_country = {
+							remove_variable = fnr_taiping_enabled
+						}
+					}
+				}
+			}
+
+		# Taliban - Modern
+			FormableNationReworked_toggle_taliban = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_taliban_enabled }
+							NOT = { has_variable = fnr_taliban_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_taliban_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_taliban_disabled }
+						every_country = { 
+							remove_variable = fnr_taliban_disabled
+							set_variable = { name = fnr_taliban_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_taliban_enabled }
+						every_country = {
+							remove_variable = fnr_taliban_enabled
+						}
+					}
+				}
+			}
+
+		# Tengoku - Fantasy
+			FormableNationReworked_toggle_tengoku = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_tengoku_enabled }
+							NOT = { has_variable = fnr_tengoku_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_tengoku_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_tengoku_disabled }
+						every_country = { 
+							remove_variable = fnr_tengoku_disabled
+							set_variable = { name = fnr_tengoku_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_tengoku_enabled }
+						every_country = {
+							remove_variable = fnr_tengoku_enabled
+						}
+					}
+				}
+			}
+
+		# United Arab Republic - Modern
+			FormableNationReworked_toggle_unitedarabrepublic = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_uar_enabled }
+							NOT = { has_variable = fnr_uar_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_uar_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_uar_disabled }
+						every_country = { 
+							remove_variable = fnr_uar_disabled
+							set_variable = { name = fnr_uar_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_uar_enabled }
+						every_country = {
+							remove_variable = fnr_uar_enabled
+						}
+					}
+				}
+			}
+
+		# Vietnam - Modern
+			FormableNationReworked_toggle_vietnam = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_vietnam_enabled }
+							NOT = { has_variable = fnr_vietnam_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_vietnam_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_vietnam_disabled }
+						every_country = { 
+							remove_variable = fnr_vietnam_disabled
+							set_variable = { name = fnr_vietnam_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_vietnam_enabled }
+						every_country = {
+							remove_variable = fnr_vietnam_enabled
+						}
+					}
+				}
+			}
+
+		# Burma - Modern
+			FormableNationReworked_toggle_burma = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_burma_enabled }
+							NOT = { has_variable = fnr_burma_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_burma_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_burma_disabled }
+						every_country = { 
+							remove_variable = fnr_burma_disabled
+							set_variable = { name = fnr_burma_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_burma_enabled }
+						every_country = {
+							remove_variable = fnr_burma_enabled
+						}
+					}
+				}
+			}
+
+		# Ceylon - Modern
+			FormableNationReworked_toggle_ceylon = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_ceylon_enabled }
+							NOT = { has_variable = fnr_ceylon_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_ceylon_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_ceylon_disabled }
+						every_country = { 
+							remove_variable = fnr_ceylon_disabled
+							set_variable = { name = fnr_ceylon_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_ceylon_enabled }
+						every_country = {
+							remove_variable = fnr_ceylon_enabled
+						}
+					}
+				}
+			}
+
+		# Chad - Modern
+			FormableNationReworked_toggle_chad = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_chad_enabled }
+							NOT = { has_variable = fnr_chad_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_chad_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_chad_disabled }
+						every_country = { 
+							remove_variable = fnr_chad_disabled
+							set_variable = { name = fnr_chad_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_chad_enabled }
+						every_country = {
+							remove_variable = fnr_chad_enabled
+						}
+					}
+				}
+			}
+
+		# Madagascar - Modern
+			FormableNationReworked_toggle_madagascar = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_madagascar_enabled }
+							NOT = { has_variable = fnr_madagascar_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_madagascar_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_madagascar_disabled }
+						every_country = { 
+							remove_variable = fnr_madagascar_disabled
+							set_variable = { name = fnr_madagascar_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_madagascar_enabled }
+						every_country = {
+							remove_variable = fnr_madagascar_enabled
+						}
+					}
+				}
+			}
+
+		# Rhodesia - Controversial
+			FormableNationReworked_toggle_rhodesia = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_rhodesia_enabled }
+							NOT = { has_variable = fnr_rhodesia_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_rhodesia_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_rhodesia_disabled }
+						every_country = { 
+							remove_variable = fnr_rhodesia_disabled
+							set_variable = { name = fnr_rhodesia_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_rhodesia_enabled }
+						every_country = {
+							remove_variable = fnr_rhodesia_enabled
+						}
+					}
+				}
+			}
+
+		# Manchuria - Nonhistorical
+			FormableNationReworked_toggle_manchuria = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_manchuria_enabled }
+							NOT = { has_variable = fnr_manchuria_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_manchuria_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_manchuria_disabled }
+						every_country = { 
+							remove_variable = fnr_manchuria_disabled
+							set_variable = { name = fnr_manchuria_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_manchuria_enabled }
+						every_country = {
+							remove_variable = fnr_manchuria_enabled
+						}
+					}
+				}
+			}
+
+		# Israel - Controversial
+			FormableNationReworked_toggle_israel = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_israel_enabled }
+							NOT = { has_variable = fnr_israel_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_israel_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_israel_disabled }
+						every_country = { 
+							remove_variable = fnr_israel_disabled
+							set_variable = { name = fnr_israel_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_israel_enabled }
+						every_country = {
+							remove_variable = fnr_israel_enabled
+						}
+					}
+				}
+			}
+
+		# Palestine - Controversial
+			FormableNationReworked_toggle_palestine = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_palestine_enabled }
+							NOT = { has_variable = fnr_palestine_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_palestine_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_palestine_disabled }
+						every_country = { 
+							remove_variable = fnr_palestine_disabled
+							set_variable = { name = fnr_palestine_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_palestine_enabled }
+						every_country = {
+							remove_variable = fnr_palestine_enabled
+						}
+					}
+				}
+			}
+
+		# Alaska - Modern
+			FormableNationReworked_toggle_alaska = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_alaska_enabled }
+							NOT = { has_variable = fnr_alaska_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_alaska_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_alaska_disabled }
+						every_country = { 
+							remove_variable = fnr_alaska_disabled
+							set_variable = { name = fnr_alaska_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_alaska_enabled }
+						every_country = {
+							remove_variable = fnr_alaska_enabled
+						}
+					}
+				}
+			}
+
+		# Alpland - Fantasy
+			FormableNationReworked_toggle_alpland = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_alpland_enabled }
+							NOT = { has_variable = fnr_alpland_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_alpland_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_alpland_disabled }
+						every_country = { 
+							remove_variable = fnr_alpland_disabled
+							set_variable = { name = fnr_alpland_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_alpland_enabled }
+						every_country = {
+							remove_variable = fnr_alpland_enabled
+						}
+					}
+				}
+			}
+
+		# The Rhine Confederation - Historical
+			FormableNationReworked_toggle_therhineconfederation = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_therhineconfederation_enabled }
+							NOT = { has_variable = fnr_therhineconfederation_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_therhineconfederation_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_therhineconfederation_disabled }
+						every_country = { 
+							remove_variable = fnr_therhineconfederation_disabled
+							set_variable = { name = fnr_therhineconfederation_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_therhineconfederation_enabled }
+						every_country = {
+							remove_variable = fnr_therhineconfederation_enabled
+						}
+					}
+				}
+			}
+
+		# Kingdom of Aquitaine - Fantasy
+			FormableNationReworked_toggle_kingdomofaquitaine = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_kingdomofaquitaine_enabled }
+							NOT = { has_variable = fnr_kingdomofaquitaine_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_kingdomofaquitaine_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_kingdomofaquitaine_disabled }
+						every_country = { 
+							remove_variable = fnr_kingdomofaquitaine_disabled
+							set_variable = { name = fnr_kingdomofaquitaine_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_kingdomofaquitaine_enabled }
+						every_country = {
+							remove_variable = fnr_kingdomofaquitaine_enabled
+						}
+					}
+				}
+			}
+
+		# Occitania - Fantasy
+			FormableNationReworked_toggle_occitania = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_occitania_enabled }
+							NOT = { has_variable = fnr_occitania_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_occitania_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_occitania_disabled }
+						every_country = { 
+							remove_variable = fnr_occitania_disabled
+							set_variable = { name = fnr_occitania_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_occitania_enabled }
+						every_country = {
+							remove_variable = fnr_occitania_enabled
+						}
+					}
+				}
+			}
+
+		# Balkan League - Althistory
+			FormableNationReworked_toggle_balkanleague = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_balkanleague_enabled }
+							NOT = { has_variable = fnr_balkanleague_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_balkanleague_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_balkanleague_disabled }
+						every_country = { 
+							remove_variable = fnr_balkanleague_disabled
+							set_variable = { name = fnr_balkanleague_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_balkanleague_enabled }
+						every_country = {
+							remove_variable = fnr_balkanleague_enabled
+						}
+					}
+				}
+			}
+
+		# Illyria - Fantasy
+			FormableNationReworked_toggle_illyria = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_illyria_enabled }
+							NOT = { has_variable = fnr_illyria_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_illyria_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_illyria_disabled }
+						every_country = { 
+							remove_variable = fnr_illyria_disabled
+							set_variable = { name = fnr_illyria_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_illyria_enabled }
+						every_country = {
+							remove_variable = fnr_illyria_enabled
+						}
+					}
+				}
+			}
+
+		# Bosnia-Serbia - Controversial
+			FormableNationReworked_toggle_bosniaserbia = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_bosniaserbia_enabled }
+							NOT = { has_variable = fnr_bosniaserbia_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_bosniaserbia_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_bosniaserbia_disabled }
+						every_country = { 
+							remove_variable = fnr_bosniaserbia_disabled
+							set_variable = { name = fnr_bosniaserbia_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_bosniaserbia_enabled }
+						every_country = {
+							remove_variable = fnr_bosniaserbia_enabled
+						}
+					}
+				}
+			}
+
+		# Cordoba - Nonhistorical
+			FormableNationReworked_toggle_cordoba = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_cordoba_enabled }
+							NOT = { has_variable = fnr_cordoba_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_cordoba_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_cordoba_disabled }
+						every_country = { 
+							remove_variable = fnr_cordoba_disabled
+							set_variable = { name = fnr_cordoba_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_cordoba_enabled }
+						every_country = {
+							remove_variable = fnr_cordoba_enabled
+						}
+					}
+				}
+			}
+
+		# East Slavia - Althistory
+			FormableNationReworked_toggle_eastslavia = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_eastslavia_enabled }
+							NOT = { has_variable = fnr_eastslavia_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_eastslavia_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_eastslavia_disabled }
+						every_country = { 
+							remove_variable = fnr_eastslavia_disabled
+							set_variable = { name = fnr_eastslavia_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_eastslavia_enabled }
+						every_country = {
+							remove_variable = fnr_eastslavia_enabled
+						}
+					}
+				}
+			}
+
+		# Frieslande - Althistory
+			FormableNationReworked_toggle_frieslande = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_frieslande_enabled }
+							NOT = { has_variable = fnr_frieslande_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_frieslande_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_frieslande_disabled }
+						every_country = { 
+							remove_variable = fnr_frieslande_disabled
+							set_variable = { name = fnr_frieslande_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_frieslande_enabled }
+						every_country = {
+							remove_variable = fnr_frieslande_enabled
+						}
+					}
+				}
+			}
+
+		# Kingdom of God - Fantasy
+			FormableNationReworked_toggle_kingdomofgod = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_kingdomofgod_enabled }
+							NOT = { has_variable = fnr_kingdomofgod_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_kingdomofgod_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_kingdomofgod_disabled }
+						every_country = { 
+							remove_variable = fnr_kingdomofgod_disabled
+							set_variable = { name = fnr_kingdomofgod_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_kingdomofgod_enabled }
+						every_country = {
+							remove_variable = fnr_kingdomofgod_enabled
+						}
+					}
+				}
+			}
+
+		# Langobards - Nonhistorical
+			FormableNationReworked_toggle_langobards = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_langobards_enabled }
+							NOT = { has_variable = fnr_langobards_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_langobards_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_langobards_disabled }
+						every_country = { 
+							remove_variable = fnr_langobards_disabled
+							set_variable = { name = fnr_langobards_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_langobards_enabled }
+						every_country = {
+							remove_variable = fnr_langobards_enabled
+						}
+					}
+				}
+			}
+
+		# Macedonia - Nonhistorical
+			FormableNationReworked_toggle_macedonia = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_macedonia_enabled }
+							NOT = { has_variable = fnr_macedonia_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_macedonia_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_macedonia_disabled }
+						every_country = { 
+							remove_variable = fnr_macedonia_disabled
+							set_variable = { name = fnr_macedonia_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_macedonia_enabled }
+						every_country = {
+							remove_variable = fnr_macedonia_enabled
+						}
+					}
+				}
+			}
+
+		# Pontus - Nonhistorical
+			FormableNationReworked_toggle_pontus = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_pontus_enabled }
+							NOT = { has_variable = fnr_pontus_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_pontus_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_pontus_disabled }
+						every_country = { 
+							remove_variable = fnr_pontus_disabled
+							set_variable = { name = fnr_pontus_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_pontus_enabled }
+						every_country = {
+							remove_variable = fnr_pontus_enabled
+						}
+					}
+				}
+			}
+
+		# Italian Merchant Alliance - Althistory
+			FormableNationReworked_toggle_italianmerchantalliance = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_italianmerchants_enabled }
+							NOT = { has_variable = fnr_italianmerchants_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_italianmerchants_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_italianmerchants_disabled }
+						every_country = { 
+							remove_variable = fnr_italianmerchants_disabled
+							set_variable = { name = fnr_italianmerchants_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_italianmerchants_enabled }
+						every_country = {
+							remove_variable = fnr_italianmerchants_enabled
+						}
+					}
+				}
+			}
+
+	# Rank 4
+		# Japan - Modern
+			FormableNationReworked_toggle_japan = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_japan_enabled }
+							NOT = { has_variable = fnr_japan_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_japan_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_japan_disabled }
+						every_country = { 
+							remove_variable = fnr_japan_disabled
+							set_variable = { name = fnr_japan_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_japan_enabled }
+						every_country = {
+							remove_variable = fnr_japan_enabled
+						}
+					}
+				}
+			}
+
+		# Austrian Empire - Historical
+			FormableNationReworked_toggle_austrianempire = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_austrianempire_enabled }
+							NOT = { has_variable = fnr_austrianempire_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_austrianempire_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_austrianempire_disabled }
+						every_country = { 
+							remove_variable = fnr_austrianempire_disabled
+							set_variable = { name = fnr_austrianempire_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_austrianempire_enabled }
+						every_country = {
+							remove_variable = fnr_austrianempire_enabled
+						}
+					}
+				}
+			}
+
+		# Bulgaria - Modern
+			FormableNationReworked_toggle_bulgaria = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_bulgaria_enabled }
+							NOT = { has_variable = fnr_bulgaria_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_bulgaria_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_bulgaria_disabled }
+						every_country = { 
+							remove_variable = fnr_bulgaria_disabled
+							set_variable = { name = fnr_bulgaria_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_bulgaria_enabled }
+						every_country = {
+							remove_variable = fnr_bulgaria_enabled
+						}
+					}
+				}
+			}
+
+		# French Empire - Historical
+			FormableNationReworked_toggle_frenchempire = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_frenchempire_enabled }
+							NOT = { has_variable = fnr_frenchempire_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_frenchempire_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_frenchempire_disabled }
+						every_country = { 
+							remove_variable = fnr_frenchempire_disabled
+							set_variable = { name = fnr_frenchempire_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_frenchempire_enabled }
+						every_country = {
+							remove_variable = fnr_frenchempire_enabled
+						}
+					}
+				}
+			}
+
+		# German Empire - Historical
+			FormableNationReworked_toggle_germanempire = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_germanempire_enabled }
+							NOT = { has_variable = fnr_germanempire_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_germanempire_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_germanempire_disabled }
+						every_country = { 
+							remove_variable = fnr_germanempire_disabled
+							set_variable = { name = fnr_germanempire_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_germanempire_enabled }
+						every_country = {
+							remove_variable = fnr_germanempire_enabled
+						}
+					}
+				}
+			}
+
+		# German Reich - Controversial
+			FormableNationReworked_toggle_germanreich = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_germanreich_enabled }
+							NOT = { has_variable = fnr_germanreich_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_germanreich_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_germanreich_disabled }
+						every_country = { 
+							remove_variable = fnr_germanreich_disabled
+							set_variable = { name = fnr_germanreich_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_germanreich_enabled }
+						every_country = {
+							remove_variable = fnr_germanreich_enabled
+						}
+					}
+				}
+			}
+
+		# Nazi Germany - Controversial
+			FormableNationReworked_toggle_nazigermany = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_nazigermany_enabled }
+							NOT = { has_variable = fnr_nazigermany_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_nazigermany_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_nazigermany_disabled }
+						every_country = { 
+							remove_variable = fnr_nazigermany_disabled
+							set_variable = { name = fnr_nazigermany_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_nazigermany_enabled }
+						every_country = {
+							remove_variable = fnr_nazigermany_enabled
+						}
+					}
+				}
+			}
+
+		# Italian Empire - Modern
+			FormableNationReworked_toggle_italianempire = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_italianempire_enabled }
+							NOT = { has_variable = fnr_italianempire_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_italianempire_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_italianempire_disabled }
+						every_country = { 
+							remove_variable = fnr_italianempire_disabled
+							set_variable = { name = fnr_italianempire_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_italianempire_enabled }
+						every_country = {
+							remove_variable = fnr_italianempire_enabled
+						}
+					}
+				}
+			}
+
+		# Kyivan Rus - Nonhistorical
+			FormableNationReworked_toggle_kyivanrus = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_kyivanrus_enabled }
+							NOT = { has_variable = fnr_kyivanrus_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_kyivanrus_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_kyivanrus_disabled }
+						every_country = { 
+							remove_variable = fnr_kyivanrus_disabled
+							set_variable = { name = fnr_kyivanrus_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_kyivanrus_enabled }
+						every_country = {
+							remove_variable = fnr_kyivanrus_enabled
+						}
+					}
+				}
+			}
+
+		# Latin Empire - Nonhistorical
+			FormableNationReworked_toggle_latinempire = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_latinempire_enabled }
+							NOT = { has_variable = fnr_latinempire_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_latinempire_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_latinempire_disabled }
+						every_country = { 
+							remove_variable = fnr_latinempire_disabled
+							set_variable = { name = fnr_latinempire_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_latinempire_enabled }
+						every_country = {
+							remove_variable = fnr_latinempire_enabled
+						}
+					}
+				}
+			}
+
+		# Russian Empire - Historical
+			FormableNationReworked_toggle_russianempire = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_russianempire_enabled }
+							NOT = { has_variable = fnr_russianempire_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_russianempire_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_russianempire_disabled }
+						every_country = { 
+							remove_variable = fnr_russianempire_disabled
+							set_variable = { name = fnr_russianempire_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_russianempire_enabled }
+						every_country = {
+							remove_variable = fnr_russianempire_enabled
+						}
+					}
+				}
+			}
+
+		# Russian Federation - Modern
+			FormableNationReworked_toggle_russianfederation = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_russianfed_enabled }
+							NOT = { has_variable = fnr_russianfed_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_russianfed_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_russianfed_disabled }
+						every_country = { 
+							remove_variable = fnr_russianfed_disabled
+							set_variable = { name = fnr_russianfed_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_russianfed_enabled }
+						every_country = {
+							remove_variable = fnr_russianfed_enabled
+						}
+					}
+				}
+			}
+
+		# Serbian Empire - Historical
+			FormableNationReworked_toggle_serbianempire = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_serbianempire_enabled }
+							NOT = { has_variable = fnr_serbianempire_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_serbianempire_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_serbianempire_disabled }
+						every_country = { 
+							remove_variable = fnr_serbianempire_disabled
+							set_variable = { name = fnr_serbianempire_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_serbianempire_enabled }
+						every_country = {
+							remove_variable = fnr_serbianempire_enabled
+						}
+					}
+				}
+			}
+
+		# Swedish Empire - Historical
+			FormableNationReworked_toggle_swedishempire = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_swedishempire_enabled }
+							NOT = { has_variable = fnr_swedishempire_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_swedishempire_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_swedishempire_disabled }
+						every_country = { 
+							remove_variable = fnr_swedishempire_disabled
+							set_variable = { name = fnr_swedishempire_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_swedishempire_enabled }
+						every_country = {
+							remove_variable = fnr_swedishempire_enabled
+						}
+					}
+				}
+			}
+
+		# The United Kingdom - Modern
+			FormableNationReworked_toggle_theunitedkingdom = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_uk_enabled }
+							NOT = { has_variable = fnr_uk_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_uk_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_uk_disabled }
+						every_country = { 
+							remove_variable = fnr_uk_disabled
+							set_variable = { name = fnr_uk_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_uk_enabled }
+						every_country = {
+							remove_variable = fnr_uk_enabled
+						}
+					}
+				}
+			}
+
+		# Wendish Empire - Althistory
+			FormableNationReworked_toggle_wendishempire = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_wendishempire_enabled }
+							NOT = { has_variable = fnr_wendishempire_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_wendishempire_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_wendishempire_disabled }
+						every_country = { 
+							remove_variable = fnr_wendishempire_disabled
+							set_variable = { name = fnr_wendishempire_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_wendishempire_enabled }
+						every_country = {
+							remove_variable = fnr_wendishempire_enabled
+						}
+					}
+				}
+			}
+
+		# Armenian Empire - Nonhistorical
+			FormableNationReworked_toggle_armenianempire = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_armenianempire_enabled }
+							NOT = { has_variable = fnr_armenianempire_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_armenianempire_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_armenianempire_disabled }
+						every_country = { 
+							remove_variable = fnr_armenianempire_disabled
+							set_variable = { name = fnr_armenianempire_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_armenianempire_enabled }
+						every_country = {
+							remove_variable = fnr_armenianempire_enabled
+						}
+					}
+				}
+			}
+
+		# Arabian Empire - Fantasy
+			FormableNationReworked_toggle_arabianempire = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_arabianempire_enabled }
+							NOT = { has_variable = fnr_arabianempire_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_arabianempire_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_arabianempire_disabled }
+						every_country = { 
+							remove_variable = fnr_arabianempire_disabled
+							set_variable = { name = fnr_arabianempire_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_arabianempire_enabled }
+						every_country = {
+							remove_variable = fnr_arabianempire_enabled
+						}
+					}
+				}
+			}
+
+		# Goguryeo - Nonhistorical
+			FormableNationReworked_toggle_goguryeo = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_goguryeo_enabled }
+							NOT = { has_variable = fnr_goguryeo_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_goguryeo_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_goguryeo_disabled }
+						every_country = { 
+							remove_variable = fnr_goguryeo_disabled
+							set_variable = { name = fnr_goguryeo_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_goguryeo_enabled }
+						every_country = {
+							remove_variable = fnr_goguryeo_enabled
+						}
+					}
+				}
+			}
+
+		# Himalayan Empire - Fantasy
+			FormableNationReworked_toggle_himalayanempire = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_himalayanempire_enabled }
+							NOT = { has_variable = fnr_himalayanempire_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_himalayanempire_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_himalayanempire_disabled }
+						every_country = { 
+							remove_variable = fnr_himalayanempire_disabled
+							set_variable = { name = fnr_himalayanempire_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_himalayanempire_enabled }
+						every_country = {
+							remove_variable = fnr_himalayanempire_enabled
+						}
+					}
+				}
+			}
+
+		# Omani Empire - Historical
+			FormableNationReworked_toggle_omaniempire = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_omaniempire_enabled }
+							NOT = { has_variable = fnr_omaniempire_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_omaniempire_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_omaniempire_disabled }
+						every_country = { 
+							remove_variable = fnr_omaniempire_disabled
+							set_variable = { name = fnr_omaniempire_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_omaniempire_enabled }
+						every_country = {
+							remove_variable = fnr_omaniempire_enabled
+						}
+					}
+				}
+			}
+
+		# Tibetan Empire - Nonhistorical
+			FormableNationReworked_toggle_tibetanempire = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_tibetanempire_enabled }
+							NOT = { has_variable = fnr_tibetanempire_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_tibetanempire_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_tibetanempire_disabled }
+						every_country = { 
+							remove_variable = fnr_tibetanempire_disabled
+							set_variable = { name = fnr_tibetanempire_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_tibetanempire_enabled }
+						every_country = {
+							remove_variable = fnr_tibetanempire_enabled
+						}
+					}
+				}
+			}
+
+		# Chola Empire - Nonhistorical
+			FormableNationReworked_toggle_cholaempire = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_cholaempire_enabled }
+							NOT = { has_variable = fnr_cholaempire_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_cholaempire_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_cholaempire_disabled }
+						every_country = { 
+							remove_variable = fnr_cholaempire_disabled
+							set_variable = { name = fnr_cholaempire_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_cholaempire_enabled }
+						every_country = {
+							remove_variable = fnr_cholaempire_enabled
+						}
+					}
+				}
+			}
+
+		# Abyssinia - Althistory
+			FormableNationReworked_toggle_abyssinia = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_abyssinia_enabled }
+							NOT = { has_variable = fnr_abyssinia_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_abyssinia_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_abyssinia_disabled }
+						every_country = { 
+							remove_variable = fnr_abyssinia_disabled
+							set_variable = { name = fnr_abyssinia_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_abyssinia_enabled }
+						every_country = {
+							remove_variable = fnr_abyssinia_enabled
+						}
+					}
+				}
+			}
+
+		# Adriatic Empire - Fantasy
+			FormableNationReworked_toggle_adriaticempire = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_adriaticempire_enabled }
+							NOT = { has_variable = fnr_adriaticempire_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_adriaticempire_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_adriaticempire_disabled }
+						every_country = { 
+							remove_variable = fnr_adriaticempire_disabled
+							set_variable = { name = fnr_adriaticempire_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_adriaticempire_enabled }
+						every_country = {
+							remove_variable = fnr_adriaticempire_enabled
+						}
+					}
+				}
+			}
+
+		# Angevin Empire - Althistory 
+			FormableNationReworked_toggle_angevinempire = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_angevinempire_enabled }
+							NOT = { has_variable = fnr_angevinempire_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_angevinempire_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_angevinempire_disabled }
+						every_country = { 
+							remove_variable = fnr_angevinempire_disabled
+							set_variable = { name = fnr_angevinempire_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_angevinempire_enabled }
+						every_country = {
+							remove_variable = fnr_angevinempire_enabled
+						}
+					}
+				}
+			}
+
+		# Anglo-Dutch Union - Fantasy
+			FormableNationReworked_toggle_anglodutchunion = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_anglodutchunion_enabled }
+							NOT = { has_variable = fnr_anglodutchunion_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_anglodutchunion_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_anglodutchunion_disabled }
+						every_country = { 
+							remove_variable = fnr_anglodutchunion_disabled
+							set_variable = { name = fnr_anglodutchunion_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_anglodutchunion_enabled }
+						every_country = {
+							remove_variable = fnr_anglodutchunion_enabled
+						}
+					}
+				}
+			}
+
+		# Catholica Russica - Fantasy
+			FormableNationReworked_toggle_catholicarussica = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_catholicarussica_enabled }
+							NOT = { has_variable = fnr_catholicarussica_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_catholicarussica_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_catholicarussica_disabled }
+						every_country = { 
+							remove_variable = fnr_catholicarussica_disabled
+							set_variable = { name = fnr_catholicarussica_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_catholicarussica_enabled }
+						every_country = {
+							remove_variable = fnr_catholicarussica_enabled
+						}
+					}
+				}
+			}
+
+		# Celtic Union - Althistory
+			FormableNationReworked_toggle_celticunion = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_celticunion_enabled }
+							NOT = { has_variable = fnr_celticunion_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_celticunion_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_celticunion_disabled }
+						every_country = { 
+							remove_variable = fnr_celticunion_disabled
+							set_variable = { name = fnr_celticunion_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_celticunion_enabled }
+						every_country = {
+							remove_variable = fnr_celticunion_enabled
+						}
+					}
+				}
+			}
+
+		# Dual Monarchy - Althistory
+			FormableNationReworked_toggle_dualmonarchy = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_dualmonarchy_enabled }
+							NOT = { has_variable = fnr_dualmonarchy_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_dualmonarchy_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_dualmonarchy_disabled }
+						every_country = { 
+							remove_variable = fnr_dualmonarchy_disabled
+							set_variable = { name = fnr_dualmonarchy_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_dualmonarchy_enabled }
+						every_country = {
+							remove_variable = fnr_dualmonarchy_enabled
+						}
+					}
+				}
+			}
+
+		# Franco-Iberian Empire - Fantasy
+			FormableNationReworked_toggle_francoiberianempire = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_francoiberia_enabled }
+							NOT = { has_variable = fnr_francoiberia_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_francoiberia_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_francoiberia_disabled }
+						every_country = { 
+							remove_variable = fnr_francoiberia_disabled
+							set_variable = { name = fnr_francoiberia_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_francoiberia_enabled }
+						every_country = {
+							remove_variable = fnr_francoiberia_enabled
+						}
+					}
+				}
+			}
+
+		# Gallic Empire - Nonhistorical
+			FormableNationReworked_toggle_gallicempire = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_gallicempire_enabled }
+							NOT = { has_variable = fnr_gallicempire_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_gallicempire_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_gallicempire_disabled }
+						every_country = { 
+							remove_variable = fnr_gallicempire_disabled
+							set_variable = { name = fnr_gallicempire_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_gallicempire_enabled }
+						every_country = {
+							remove_variable = fnr_gallicempire_enabled
+						}
+					}
+				}
+			}
+
+		# Hungarian Empire - Althistory
+			FormableNationReworked_toggle_hungarianempire = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_hungarianempire_enabled }
+							NOT = { has_variable = fnr_hungarianempire_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_hungarianempire_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_hungarianempire_disabled }
+						every_country = { 
+							remove_variable = fnr_hungarianempire_disabled
+							set_variable = { name = fnr_hungarianempire_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_hungarianempire_enabled }
+						every_country = {
+							remove_variable = fnr_hungarianempire_enabled
+						}
+					}
+				}
+			}
+
+		# Iberian Empire - Fantasy
+			FormableNationReworked_toggle_iberianempire = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_iberianempire_enabled }
+							NOT = { has_variable = fnr_iberianempire_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_iberianempire_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_iberianempire_disabled }
+						every_country = { 
+							remove_variable = fnr_iberianempire_disabled
+							set_variable = { name = fnr_iberianempire_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_iberianempire_enabled }
+						every_country = {
+							remove_variable = fnr_iberianempire_enabled
+						}
+					}
+				}
+			}
+
+		# Jagiellonian Empire - Nonhistorical
+			FormableNationReworked_toggle_jagiellonianempire = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_jagiellonianempire_enabled }
+							NOT = { has_variable = fnr_jagiellonianempire_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_jagiellonianempire_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_jagiellonianempire_disabled }
+						every_country = { 
+							remove_variable = fnr_jagiellonianempire_disabled
+							set_variable = { name = fnr_jagiellonianempire_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_jagiellonianempire_enabled }
+						every_country = {
+							remove_variable = fnr_jagiellonianempire_enabled
+						}
+					}
+				}
+			}
+
+		# Ummayad Caliphate - Nonhistorical
+			FormableNationReworked_toggle_ummayadcaliphate = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_ummayadcaliphate_enabled }
+							NOT = { has_variable = fnr_ummayadcaliphate_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_ummayadcaliphate_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_ummayadcaliphate_disabled }
+						every_country = { 
+							remove_variable = fnr_ummayadcaliphate_disabled
+							set_variable = { name = fnr_ummayadcaliphate_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_ummayadcaliphate_enabled }
+						every_country = {
+							remove_variable = fnr_ummayadcaliphate_enabled
+						}
+					}
+				}
+			}
+
+		# Rashidun Caliphate - Nonhistorical
+			FormableNationReworked_toggle_rashidun = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_rashidun_enabled }
+							NOT = { has_variable = fnr_rashidun_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_rashidun_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_rashidun_disabled }
+						every_country = { 
+							remove_variable = fnr_rashidun_disabled
+							set_variable = { name = fnr_rashidun_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_rashidun_enabled }
+						every_country = {
+							remove_variable = fnr_rashidun_enabled
+						}
+					}
+				}
+			}
+
+		# Abbasid Caliphate - Nonhistorical
+			FormableNationReworked_toggle_abbasid = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_abbasid_enabled }
+							NOT = { has_variable = fnr_abbasid_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_abbasid_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_abbasid_disabled }
+						every_country = { 
+							remove_variable = fnr_abbasid_disabled
+							set_variable = { name = fnr_abbasid_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_abbasid_enabled }
+						every_country = {
+							remove_variable = fnr_abbasid_enabled
+						}
+					}
+				}
+			}
+
+		# East Francia - Nonhistorical
+			FormableNationReworked_toggle_eastfrancia = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_eastfrancia_enabled }
+							NOT = { has_variable = fnr_eastfrancia_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_eastfrancia_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_eastfrancia_disabled }
+						every_country = { 
+							remove_variable = fnr_eastfrancia_disabled
+							set_variable = { name = fnr_eastfrancia_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_eastfrancia_enabled }
+						every_country = {
+							remove_variable = fnr_eastfrancia_enabled
+						}
+					}
+				}
+			}
+
+		# Lusitanian Empire - Nonhistorical
+			FormableNationReworked_toggle_lusitanianempire = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_lusitanianempire_enabled }
+							NOT = { has_variable = fnr_lusitanianempire_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_lusitanianempire_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_lusitanianempire_disabled }
+						every_country = { 
+							remove_variable = fnr_lusitanianempire_disabled
+							set_variable = { name = fnr_lusitanianempire_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_lusitanianempire_enabled }
+						every_country = {
+							remove_variable = fnr_lusitanianempire_enabled
+						}
+					}
+				}
+			}
+
+		# North Sea Empire - Nonhistorical
+			FormableNationReworked_toggle_northseaempire = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_northseaempire_enabled }
+							NOT = { has_variable = fnr_northseaempire_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_northseaempire_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_northseaempire_disabled }
+						every_country = { 
+							remove_variable = fnr_northseaempire_disabled
+							set_variable = { name = fnr_northseaempire_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_northseaempire_enabled }
+						every_country = {
+							remove_variable = fnr_northseaempire_enabled
+						}
+					}
+				}
+			}
+
+	# Rank 5
+		# Turkey - Modern
+			FormableNationReworked_toggle_turkey = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_turkey_enabled }
+							NOT = { has_variable = fnr_turkey_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_turkey_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_turkey_disabled }
+						every_country = { 
+							remove_variable = fnr_turkey_disabled
+							set_variable = { name = fnr_turkey_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_turkey_enabled }
+						every_country = {
+							remove_variable = fnr_turkey_enabled
+						}
+					}
+				}
+			}
+
+		# British Empire - Historical
+			FormableNationReworked_toggle_britishempire = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_britishempire_enabled }
+							NOT = { has_variable = fnr_britishempire_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_britishempire_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_britishempire_disabled }
+						every_country = { 
+							remove_variable = fnr_britishempire_disabled
+							set_variable = { name = fnr_britishempire_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_britishempire_enabled }
+						every_country = {
+							remove_variable = fnr_britishempire_enabled
+						}
+					}
+				}
+			}
+
+		# Eastern Roman Empire - Nonhistorical
+			FormableNationReworked_toggle_easternromanempire = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_easternrome_enabled }
+							NOT = { has_variable = fnr_easternrome_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_easternrome_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_easternrome_disabled }
+						every_country = { 
+							remove_variable = fnr_easternrome_disabled
+							set_variable = { name = fnr_easternrome_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_easternrome_enabled }
+						every_country = {
+							remove_variable = fnr_easternrome_enabled
+						}
+					}
+				}
+			}
+
+		# Western Roman Empire - Nonhistorical
+			FormableNationReworked_toggle_westernromanempire = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_westernromanempire_enabled }
+							NOT = { has_variable = fnr_westernromanempire_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_westernromanempire_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_westernromanempire_disabled }
+						every_country = { 
+							remove_variable = fnr_westernromanempire_disabled
+							set_variable = { name = fnr_westernromanempire_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_westernromanempire_enabled }
+						every_country = {
+							remove_variable = fnr_westernromanempire_enabled
+						}
+					}
+				}
+			}
+
+		# European Union - Modern
+			FormableNationReworked_toggle_europeanunion = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_eu_enabled }
+							NOT = { has_variable = fnr_eu_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_eu_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_eu_disabled }
+						every_country = { 
+							remove_variable = fnr_eu_disabled
+							set_variable = { name = fnr_eu_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_eu_enabled }
+						every_country = {
+							remove_variable = fnr_eu_enabled
+						}
+					}
+				}
+			}
+
+		# Greater German Reich - Controversial
+			FormableNationReworked_toggle_greatergermanreich = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_greatergermanreich_enabled }
+							NOT = { has_variable = fnr_greatergermanreich_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_greatergermanreich_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_greatergermanreich_disabled }
+						every_country = { 
+							remove_variable = fnr_greatergermanreich_disabled
+							set_variable = { name = fnr_greatergermanreich_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_greatergermanreich_enabled }
+						every_country = {
+							remove_variable = fnr_greatergermanreich_enabled
+						}
+					}
+				}
+			}
+
+		# Soviet Union - Modern
+			FormableNationReworked_toggle_sovietunion = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_sovietunion_enabled }
+							NOT = { has_variable = fnr_sovietunion_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_sovietunion_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_sovietunion_disabled }
+						every_country = { 
+							remove_variable = fnr_sovietunion_disabled
+							set_variable = { name = fnr_sovietunion_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_sovietunion_enabled }
+						every_country = {
+							remove_variable = fnr_sovietunion_enabled
+						}
+					}
+				}
+			}
+
+		# Empire of China - Modern
+			FormableNationReworked_toggle_empireofchina = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_empireofchina_enabled }
+							NOT = { has_variable = fnr_empireofchina_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_empireofchina_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_empireofchina_disabled }
+						every_country = { 
+							remove_variable = fnr_empireofchina_disabled
+							set_variable = { name = fnr_empireofchina_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_empireofchina_enabled }
+						every_country = {
+							remove_variable = fnr_empireofchina_enabled
+						}
+					}
+				}
+			}
+
+		# Islamic State - Modern
+			FormableNationReworked_toggle_islamicstate = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_islamicstate_enabled }
+							NOT = { has_variable = fnr_islamicstate_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_islamicstate_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_islamicstate_disabled }
+						every_country = { 
+							remove_variable = fnr_islamicstate_disabled
+							set_variable = { name = fnr_islamicstate_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_islamicstate_enabled }
+						every_country = {
+							remove_variable = fnr_islamicstate_enabled
+						}
+					}
+				}
+			}
+
+		# Peoples Republic of China - Modern
+			FormableNationReworked_toggle_peoplesrepublicofchina = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_prc_enabled }
+							NOT = { has_variable = fnr_prc_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_prc_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_prc_disabled }
+						every_country = { 
+							remove_variable = fnr_prc_disabled
+							set_variable = { name = fnr_prc_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_prc_enabled }
+						every_country = {
+							remove_variable = fnr_prc_enabled
+						}
+					}
+				}
+			}
+
+		# Republic of China - Modern
+			FormableNationReworked_toggle_republicofchina = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_roc_enabled }
+							NOT = { has_variable = fnr_roc_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_roc_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_roc_disabled }
+						every_country = { 
+							remove_variable = fnr_roc_disabled
+							set_variable = { name = fnr_roc_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_roc_enabled }
+						every_country = {
+							remove_variable = fnr_roc_enabled
+						}
+					}
+				}
+			}
+
+		# The Horde - Fantasy
+			FormableNationReworked_toggle_thehorde = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_horde_enabled }
+							NOT = { has_variable = fnr_horde_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_horde_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_horde_disabled }
+						every_country = { 
+							remove_variable = fnr_horde_disabled
+							set_variable = { name = fnr_horde_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_horde_enabled }
+						every_country = {
+							remove_variable = fnr_horde_enabled
+						}
+					}
+				}
+			}
+
+		# Carolingian Empire - Nonhistorical
+			FormableNationReworked_toggle_carolingianempire = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_carolingian_enabled }
+							NOT = { has_variable = fnr_carolingian_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_carolingian_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_carolingian_disabled }
+						every_country = { 
+							remove_variable = fnr_carolingian_disabled
+							set_variable = { name = fnr_carolingian_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_carolingian_enabled }
+						every_country = {
+							remove_variable = fnr_carolingian_enabled
+						}
+					}
+				}
+			}
+
+		# Macedonian Empire - Nonhistorical
+			FormableNationReworked_toggle_macedonianempire = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_macedonianempire_enabled }
+							NOT = { has_variable = fnr_macedonianempire_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_macedonianempire_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_macedonianempire_disabled }
+						every_country = { 
+							remove_variable = fnr_macedonianempire_disabled
+							set_variable = { name = fnr_macedonianempire_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_macedonianempire_enabled }
+						every_country = {
+							remove_variable = fnr_macedonianempire_enabled
+						}
+					}
+				}
+			}
+
+
 
 # Flag Selection List
 

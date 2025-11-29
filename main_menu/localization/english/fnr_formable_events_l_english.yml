@@ -11,3 +11,9 @@
     SDNNW_S: "Flag of Sweden (1844–1905)"
     SDNNW_N: "Flag of Norway (1844–1899)"
 
+    # Dutch Republic Opportunity to Centralize
+    flavor_DUTCH.1.title: "Resolution regarding the United Provinces"
+    flavor_DUTCH.1.desc: "The United Provinces stand as a testament to decentralized governance, each province jealously guarding its autonomy and traditional rights. Yet as our nation grows in stature and faces mounting challenges both at home and abroad, voices have begun calling for a stronger, more unified state.\n\nSome argue that only through centralization can we effectively coordinate our defenses, streamline our commerce, and speak with one voice in international affairs. They point to the inefficiencies of our current system, where each province may veto decisions vital to the nation's interests.\n\nOthers warn that abandoning our cherished provincial liberties would betray the very principles upon which our union was founded. The strength of the United Provinces, they insist, lies precisely in the balance of power between sovereign provinces - a safeguard against tyranny and a wellspring of innovation.\n\nThe question now falls to us: shall we forge a centralized Dutch Republic, or preserve the equality that has defined our confederation?"
+    flavor_DUTCH.1.a: "We shall Proclaim the Dutch Republic!"
+    flavor_DUTCH.1.b: "The United Provinces remain strong in equality!"
+

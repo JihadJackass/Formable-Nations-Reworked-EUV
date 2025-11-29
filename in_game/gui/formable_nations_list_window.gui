@@ -26,6 +26,16 @@ window = {
 			using = header_font
 			margin_bottom = 10
 		}
+		text_single = {
+			raw_text = "NOTE: You may need to click the toggle a few times."
+			using = header_font
+			margin_bottom = 10
+		}
+		text_single = {
+			raw_text = "It will cycle through (Cycle: Default → Force OFF → Force ON → Default)"
+			using = header_font
+			margin_bottom = 10
+		}
 		
 		scrollbox = {
 			layoutpolicy_horizontal = expanding
@@ -38,9 +48,6 @@ window = {
 					spacing = 5
 					margin = { 10 10 }
 					
-					# Rank 1 Formables
-						# TODO
-
 					# Rank 2 Formables
 					vbox = {
 						layoutpolicy_horizontal = expanding
@@ -48,23 +55,46 @@ window = {
 						
 						button_main_tab_alt = {
 							using = layoutpolicy_expanding
-							tooltip = "fnr_debug_window_formable_list_loc_rank_2"
-							raw_text = "fnr_debug_window_formable_list_loc_rank_2"
+							raw_text = "Rank II Formables"
 							onclick = "[GetVariableSystem.Toggle('rank2_open')]"
 							down = "[GetVariableSystem.Exists('rank2_open')]"
 						}
-
+						
 						vbox = {
 							layoutpolicy_horizontal = expanding
 							visible = "[GetVariableSystem.Exists('rank2_open')]"
 							spacing = 3
 							margin = { 10 5 }
 							
-							# Arpitania
+							# Arpitania - Fantasy
 							button_regular = {
 								size = { 400 32 }
-								tooltip = "fnr_debug_window_formable_list_loc_rank_2_arpitania"
-								raw_text = "Arpitania"
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_fantasy_enabled'), GetPlayer.HasVariable('fnr_arpitania_enabled')), Not(GetPlayer.HasVariable('fnr_arpitania_disabled'))), 'Arpitania: ON', 'Arpitania: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_arpitania').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Polabia - Nonhistorical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), GetPlayer.HasVariable('fnr_polabia_enabled')), Not(GetPlayer.HasVariable('fnr_polabia_disabled'))), 'Polabia: ON', 'Polabia: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_polabia').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Bremen-Verden - Historical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_historical_enabled'), GetPlayer.HasVariable('fnr_bremenverden_enabled')), Not(GetPlayer.HasVariable('fnr_bremenverden_disabled'))), 'Bremen-Verden: ON', 'Bremen-Verden: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_bremenverden').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Ducal Prussia - Historical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_historical_enabled'), GetPlayer.HasVariable('fnr_ducalprussia_enabled')), Not(GetPlayer.HasVariable('fnr_ducalprussia_disabled'))), 'Ducal Prussia: ON', 'Ducal Prussia: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_ducalprussia').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Dacia - Nonhistorical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), GetPlayer.HasVariable('fnr_dacia_enabled')), Not(GetPlayer.HasVariable('fnr_dacia_disabled'))), 'Dacia: ON', 'Dacia: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_dacia').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 							}
 						}
 					}
@@ -76,25 +106,424 @@ window = {
 						
 						button_main_tab_alt = {
 							using = layoutpolicy_expanding
-							tooltip = "fnr_debug_window_formable_list_loc_rank_3"
 							raw_text = "Rank III Formables"
 							onclick = "[GetVariableSystem.Toggle('rank3_open')]"
 							down = "[GetVariableSystem.Exists('rank3_open')]"
 						}
-
+						
 						vbox = {
 							layoutpolicy_horizontal = expanding
 							visible = "[GetVariableSystem.Exists('rank3_open')]"
 							spacing = 3
 							margin = { 10 5 }
 							
-							# Basque Country
+							# Basque Country - Nonhistorical
 							button_regular = {
 								size = { 400 32 }
-								tooltip = ""
-								raw_text = "[SelectLocalization(GetPlayer.HasVariable('fnr_basque_enabled'), 'Basque Country: ON', 'Basque Country: OFF')]"
-								onclick = "[GetScriptedGui('FormableNationReworked_toggle_basque').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-								tooltip = "[SelectLocalization(GetPlayer.HasVariable('fnr_basque_enabled'), 'Click to DISABLE Basque Country', 'Click to ENABLE Basque Country')]"
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), GetPlayer.HasVariable('fnr_basquecountry_enabled')), Not(GetPlayer.HasVariable('fnr_basquecountry_disabled'))), 'Basque Country: ON', 'Basque Country: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_basquecountry').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Balochistan - Modern
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_modern_enabled'), GetPlayer.HasVariable('fnr_balochistan_enabled')), Not(GetPlayer.HasVariable('fnr_balochistan_disabled'))), 'Balochistan: ON', 'Balochistan: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_balochistan').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Great Sorbia - Nonhistorical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), GetPlayer.HasVariable('fnr_greatsorbia_enabled')), Not(GetPlayer.HasVariable('fnr_greatsorbia_disabled'))), 'Great Sorbia: ON', 'Great Sorbia: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_greatsorbia').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Sorbic Kingdom - Nonhistorical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), GetPlayer.HasVariable('fnr_sorbickingdom_enabled')), Not(GetPlayer.HasVariable('fnr_sorbickingdom_disabled'))), 'Sorbic Kingdom: ON', 'Sorbic Kingdom: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_sorbickingdom').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Kingdom of Hanover - Historical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_historical_enabled'), GetPlayer.HasVariable('fnr_kingdomofhanover_enabled')), Not(GetPlayer.HasVariable('fnr_kingdomofhanover_disabled'))), 'Kingdom of Hanover: ON', 'Kingdom of Hanover: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_kingdomofhanover').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Polynesia - Nonhistorical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), GetPlayer.HasVariable('fnr_polynesia_enabled')), Not(GetPlayer.HasVariable('fnr_polynesia_disabled'))), 'Polynesia: ON', 'Polynesia: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_polynesia').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Hawaii - Nonhistorical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), GetPlayer.HasVariable('fnr_hawaii_enabled')), Not(GetPlayer.HasVariable('fnr_hawaii_disabled'))), 'Hawaii: ON', 'Hawaii: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_hawaii').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Yugoslavia - Modern
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_modern_enabled'), GetPlayer.HasVariable('fnr_yugoslavia_enabled')), Not(GetPlayer.HasVariable('fnr_yugoslavia_disabled'))), 'Yugoslavia: ON', 'Yugoslavia: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_yugoslavia').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Baltic States - Althistory
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_althistory_enabled'), GetPlayer.HasVariable('fnr_balticstates_enabled')), Not(GetPlayer.HasVariable('fnr_balticstatesalt_disabled'))), 'Baltic States: ON', 'Baltic States: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_balticstates').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Alsace-Lorraine - Historical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_historical_enabled'), GetPlayer.HasVariable('fnr_alsacelorraine_enabled')), Not(GetPlayer.HasVariable('fnr_alsacelorraine_disabled'))), 'Alsace-Lorraine: ON', 'Alsace-Lorraine: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_alsacelorraine').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Belarus - Modern
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_modern_enabled'), GetPlayer.HasVariable('fnr_belarus_enabled')), Not(GetPlayer.HasVariable('fnr_belarus_disabled'))), 'Belarus: ON', 'Belarus: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_belarus').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Belgium - Historical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_historical_enabled'), GetPlayer.HasVariable('fnr_belgium_enabled')), Not(GetPlayer.HasVariable('fnr_belgium_disabled'))), 'Belgium: ON', 'Belgium: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_belgium').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Benelux - Nonhistorical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), GetPlayer.HasVariable('fnr_benelux_enabled')), Not(GetPlayer.HasVariable('fnr_benelux_disabled'))), 'Benelux: ON', 'Benelux: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_benelux').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Austria-Bavaria - Nonhistorical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), GetPlayer.HasVariable('fnr_austriabavaria_enabled')), Not(GetPlayer.HasVariable('fnr_austriabavaria_disabled'))), 'Austria-Bavaria: ON', 'Austria-Bavaria: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_austriabavaria').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Cisalpina - Historical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_historical_enabled'), GetPlayer.HasVariable('fnr_cisalpina_enabled')), Not(GetPlayer.HasVariable('fnr_cisalpina_disabled'))), 'Cisalpina: ON', 'Cisalpina: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_cisalpina').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Commonwealth of England - Historical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_historical_enabled'), GetPlayer.HasVariable('fnr_commonwealthofengland_enabled')), Not(GetPlayer.HasVariable('fnr_commonwealthofengland_disabled'))), 'Commonwealth of England: ON', 'Commonwealth of England: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_commonwealthofengland').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Czechoslovakia - Modern
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_modern_enabled'), GetPlayer.HasVariable('fnr_czechoslovakia_enabled')), Not(GetPlayer.HasVariable('fnr_czechoslovakia_disabled'))), 'Czechoslovakia: ON', 'Czechoslovakia: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_czechoslovakia').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Ukraine - Modern
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_modern_enabled'), GetPlayer.HasVariable('fnr_ukraine_enabled')), Not(GetPlayer.HasVariable('fnr_ukraine_disabled'))), 'Ukraine: ON', 'Ukraine: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_ukraine').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Donetsk Peoples Republic - Modern
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_modern_enabled'), GetPlayer.HasVariable('fnr_dpr_enabled')), Not(GetPlayer.HasVariable('fnr_dpr_disabled'))), 'Donetsk Peoples Republic: ON', 'Donetsk Peoples Republic: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_donetskpeoplesrepublic').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Luhansk Peoples Republic - Modern
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_modern_enabled'), GetPlayer.HasVariable('fnr_lpr_enabled')), Not(GetPlayer.HasVariable('fnr_lpr_disabled'))), 'Luhansk Peoples Republic: ON', 'Luhansk Peoples Republic: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_luhanskpeoplesrepublic').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Emilia-Romagna - Althistory
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_althistory_enabled'), GetPlayer.HasVariable('fnr_emiliaromagna_enabled')), Not(GetPlayer.HasVariable('fnr_emiliaromagna_disabled'))), 'Emilia-Romagna: ON', 'Emilia-Romagna: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_emiliaromagna').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Hesse-Nassau - Althistory
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_althistory_enabled'), GetPlayer.HasVariable('fnr_hessenassau_enabled')), Not(GetPlayer.HasVariable('fnr_hessenassau_disabled'))), 'Hesse-Nassau: ON', 'Hesse-Nassau: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_hessenassau').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Hanseatic League - Althistory
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_althistory_enabled'), GetPlayer.HasVariable('fnr_hansa_enabled')), Not(GetPlayer.HasVariable('fnr_hansa_disabled'))), 'Hanseatic League: ON', 'Hanseatic League: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_hanseaticleague').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Kalmar Union - Historical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_historical_enabled'), GetPlayer.HasVariable('fnr_kalmarunion_enabled')), Not(GetPlayer.HasVariable('fnr_kalmarunion_disabled'))), 'Kalmar Union: ON', 'Kalmar Union: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_kalmarunion').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Lombardy - Althistory
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_althistory_enabled'), GetPlayer.HasVariable('fnr_lombardy_enabled')), Not(GetPlayer.HasVariable('fnr_lombardy_disabled'))), 'Lombardy: ON', 'Lombardy: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_lombardy').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Lombardy-Venetia - Historical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_historical_enabled'), GetPlayer.HasVariable('fnr_lombardyvenetia_enabled')), Not(GetPlayer.HasVariable('fnr_lombardyvenetia_disabled'))), 'Lombardy-Venetia: ON', 'Lombardy-Venetia: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_lombardyvenetia').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Lower Saxony - Althistory
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_althistory_enabled'), GetPlayer.HasVariable('fnr_lowersaxony_enabled')), Not(GetPlayer.HasVariable('fnr_lowersaxony_disabled'))), 'Lower Saxony: ON', 'Lower Saxony: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_lowersaxony').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Malta - Modern
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_modern_enabled'), GetPlayer.HasVariable('fnr_malta_enabled')), Not(GetPlayer.HasVariable('fnr_malta_disabled'))), 'Malta: ON', 'Malta: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_malta').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Mercia - Althistory
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_althistory_enabled'), GetPlayer.HasVariable('fnr_mercia_enabled')), Not(GetPlayer.HasVariable('fnr_mercia_disabled'))), 'Mercia: ON', 'Mercia: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_mercia').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Sweden-Norway - Historical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_historical_enabled'), GetPlayer.HasVariable('fnr_swedennorway_enabled')), Not(GetPlayer.HasVariable('fnr_swedennorway_disabled'))), 'Sweden-Norway: ON', 'Sweden-Norway: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_swedennorway').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Caucasia - Althistory
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_althistory_enabled'), GetPlayer.HasVariable('fnr_caucasia_enabled')), Not(GetPlayer.HasVariable('fnr_caucasia_disabled'))), 'Caucasia: ON', 'Caucasia: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_caucasia').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Korea - Modern
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_modern_enabled'), GetPlayer.HasVariable('fnr_korea_enabled')), Not(GetPlayer.HasVariable('fnr_korea_disabled'))), 'Korea: ON', 'Korea: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_korea').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Afghanistan - Modern
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_modern_enabled'), GetPlayer.HasVariable('fnr_afghanistan_enabled')), Not(GetPlayer.HasVariable('fnr_afghanistan_disabled'))), 'Afghanistan: ON', 'Afghanistan: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_afghanistan').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Mingrelia - Historical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_historical_enabled'), GetPlayer.HasVariable('fnr_mingrelia_enabled')), Not(GetPlayer.HasVariable('fnr_mingrelia_disabled'))), 'Mingrelia: ON', 'Mingrelia: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_mingrelia').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# North Korea - Modern
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_modern_enabled'), GetPlayer.HasVariable('fnr_northkorea_enabled')), Not(GetPlayer.HasVariable('fnr_northkorea_disabled'))), 'North Korea: ON', 'North Korea: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_northkorea').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# South Korea - Modern
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_modern_enabled'), GetPlayer.HasVariable('fnr_southkorea_enabled')), Not(GetPlayer.HasVariable('fnr_southkorea_disabled'))), 'South Korea: ON', 'South Korea: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_southkorea').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Philippines - Modern
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_modern_enabled'), GetPlayer.HasVariable('fnr_philippines_enabled')), Not(GetPlayer.HasVariable('fnr_philippines_disabled'))), 'Philippines: ON', 'Philippines: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_philippines').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Saudi Arabia - Modern
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_modern_enabled'), GetPlayer.HasVariable('fnr_saudiarabia_enabled')), Not(GetPlayer.HasVariable('fnr_saudiarabia_disabled'))), 'Saudi Arabia: ON', 'Saudi Arabia: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_saudiarabia').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Sulawesi - Althistory
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_althistory_enabled'), GetPlayer.HasVariable('fnr_sulawesi_enabled')), Not(GetPlayer.HasVariable('fnr_sulawesi_disabled'))), 'Sulawesi: ON', 'Sulawesi: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_sulawesi').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Taiping - Nonhistorical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), GetPlayer.HasVariable('fnr_taiping_enabled')), Not(GetPlayer.HasVariable('fnr_taiping_disabled'))), 'Taiping: ON', 'Taiping: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_taiping').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Taliban - Modern
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_modern_enabled'), GetPlayer.HasVariable('fnr_taliban_enabled')), Not(GetPlayer.HasVariable('fnr_taliban_disabled'))), 'Taliban: ON', 'Taliban: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_taliban').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Tengoku - Fantasy
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_fantasy_enabled'), GetPlayer.HasVariable('fnr_tengoku_enabled')), Not(GetPlayer.HasVariable('fnr_tengoku_disabled'))), 'Tengoku: ON', 'Tengoku: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_tengoku').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# United Arab Republic - Modern
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_modern_enabled'), GetPlayer.HasVariable('fnr_uar_enabled')), Not(GetPlayer.HasVariable('fnr_uar_disabled'))), 'United Arab Republic: ON', 'United Arab Republic: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_unitedarabrepublic').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Vietnam - Modern
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_modern_enabled'), GetPlayer.HasVariable('fnr_vietnam_enabled')), Not(GetPlayer.HasVariable('fnr_vietnam_disabled'))), 'Vietnam: ON', 'Vietnam: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_vietnam').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Burma - Modern
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_modern_enabled'), GetPlayer.HasVariable('fnr_burma_enabled')), Not(GetPlayer.HasVariable('fnr_burma_disabled'))), 'Burma: ON', 'Burma: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_burma').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Ceylon - Modern
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_modern_enabled'), GetPlayer.HasVariable('fnr_ceylon_enabled')), Not(GetPlayer.HasVariable('fnr_ceylon_disabled'))), 'Ceylon: ON', 'Ceylon: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_ceylon').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Chad - Modern
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_modern_enabled'), GetPlayer.HasVariable('fnr_chad_enabled')), Not(GetPlayer.HasVariable('fnr_chad_disabled'))), 'Chad: ON', 'Chad: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_chad').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Madagascar - Modern
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_modern_enabled'), GetPlayer.HasVariable('fnr_madagascar_enabled')), Not(GetPlayer.HasVariable('fnr_madagascar_disabled'))), 'Madagascar: ON', 'Madagascar: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_madagascar').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Rhodesia - Controversial
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_controversial_enabled'), GetPlayer.HasVariable('fnr_rhodesia_enabled')), Not(GetPlayer.HasVariable('fnr_rhodesia_disabled'))), 'Rhodesia: ON', 'Rhodesia: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_rhodesia').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Manchuria - Nonhistorical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), GetPlayer.HasVariable('fnr_manchuria_enabled')), Not(GetPlayer.HasVariable('fnr_manchuria_disabled'))), 'Manchuria: ON', 'Manchuria: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_manchuria').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Israel - Controversial
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_controversial_enabled'), GetPlayer.HasVariable('fnr_israel_enabled')), Not(GetPlayer.HasVariable('fnr_israel_disabled'))), 'Israel: ON', 'Israel: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_israel').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Palestine - Controversial
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_controversial_enabled'), GetPlayer.HasVariable('fnr_palestine_enabled')), Not(GetPlayer.HasVariable('fnr_palestine_disabled'))), 'Palestine: ON', 'Palestine: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_palestine').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Alaska - Modern
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_modern_enabled'), GetPlayer.HasVariable('fnr_alaska_enabled')), Not(GetPlayer.HasVariable('fnr_alaska_disabled'))), 'Alaska: ON', 'Alaska: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_alaska').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Alpland - Fantasy
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_fantasy_enabled'), GetPlayer.HasVariable('fnr_alpland_enabled')), Not(GetPlayer.HasVariable('fnr_alpland_disabled'))), 'Alpland: ON', 'Alpland: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_alpland').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# The Rhine Confederation - Historical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_historical_enabled'), GetPlayer.HasVariable('fnr_therhineconfederation_enabled')), Not(GetPlayer.HasVariable('fnr_therhineconfederation_disabled'))), 'The Rhine Confederation: ON', 'The Rhine Confederation: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_therhineconfederation').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Kingdom of Aquitaine - Fantasy
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_fantasy_enabled'), GetPlayer.HasVariable('fnr_kingdomofaquitaine_enabled')), Not(GetPlayer.HasVariable('fnr_kingdomofaquitaine_disabled'))), 'Kingdom of Aquitaine: ON', 'Kingdom of Aquitaine: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_kingdomofaquitaine').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Occitania - Fantasy
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_fantasy_enabled'), GetPlayer.HasVariable('fnr_occitania_enabled')), Not(GetPlayer.HasVariable('fnr_occitania_disabled'))), 'Occitania: ON', 'Occitania: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_occitania').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Balkan League - Althistory
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_althistory_enabled'), GetPlayer.HasVariable('fnr_balkanleague_enabled')), Not(GetPlayer.HasVariable('fnr_balkanleague_disabled'))), 'Balkan League: ON', 'Balkan League: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_balkanleague').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Illyria - Fantasy
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_fantasy_enabled'), GetPlayer.HasVariable('fnr_illyria_enabled')), Not(GetPlayer.HasVariable('fnr_illyria_disabled'))), 'Illyria: ON', 'Illyria: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_illyria').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Bosnia-Serbia - Controversial
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_controversial_enabled'), GetPlayer.HasVariable('fnr_bosniaserbia_enabled')), Not(GetPlayer.HasVariable('fnr_bosniaserbia_disabled'))), 'Bosnia-Serbia: ON', 'Bosnia-Serbia: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_bosniaserbia').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Cordoba - Nonhistorical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), GetPlayer.HasVariable('fnr_cordoba_enabled')), Not(GetPlayer.HasVariable('fnr_cordoba_disabled'))), 'Cordoba: ON', 'Cordoba: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_cordoba').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# East Slavia - Althistory
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_althistory_enabled'), GetPlayer.HasVariable('fnr_eastslavia_enabled')), Not(GetPlayer.HasVariable('fnr_eastslavia_disabled'))), 'East Slavia: ON', 'East Slavia: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_eastslavia').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Frieslande - Althistory
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_althistory_enabled'), GetPlayer.HasVariable('fnr_frieslande_enabled')), Not(GetPlayer.HasVariable('fnr_frieslande_disabled'))), 'Frieslande: ON', 'Frieslande: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_frieslande').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Kingdom of God - Fantasy
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_fantasy_enabled'), GetPlayer.HasVariable('fnr_kingdomofgod_enabled')), Not(GetPlayer.HasVariable('fnr_kingdomofgod_disabled'))), 'Kingdom of God: ON', 'Kingdom of God: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_kingdomofgod').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Langobards - Nonhistorical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), GetPlayer.HasVariable('fnr_langobards_enabled')), Not(GetPlayer.HasVariable('fnr_langobards_disabled'))), 'Langobards: ON', 'Langobards: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_langobards').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Macedonia - Nonhistorical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), GetPlayer.HasVariable('fnr_macedonia_enabled')), Not(GetPlayer.HasVariable('fnr_macedonia_disabled'))), 'Macedonia: ON', 'Macedonia: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_macedonia').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Pontus - Nonhistorical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), GetPlayer.HasVariable('fnr_pontus_enabled')), Not(GetPlayer.HasVariable('fnr_pontus_disabled'))), 'Pontus: ON', 'Pontus: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_pontus').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Italian Merchant Alliance - Althistory
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_althistory_enabled'), GetPlayer.HasVariable('fnr_italianmerchants_enabled')), Not(GetPlayer.HasVariable('fnr_italianmerchants_disabled'))), 'Italian Merchant Alliance: ON', 'Italian Merchant Alliance: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_italianmerchantalliance').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 							}
 						}
 					}
@@ -106,24 +535,262 @@ window = {
 						
 						button_main_tab_alt = {
 							using = layoutpolicy_expanding
-							tooltip = ""
 							raw_text = "Rank IV Formables"
 							onclick = "[GetVariableSystem.Toggle('rank4_open')]"
 							down = "[GetVariableSystem.Exists('rank4_open')]"
 						}
-
+						
 						vbox = {
 							layoutpolicy_horizontal = expanding
 							visible = "[GetVariableSystem.Exists('rank4_open')]"
 							spacing = 3
 							margin = { 10 5 }
 							
-						# Rank 4 formables
-							# German Empire
+							# Japan - Modern
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_modern_enabled'), GetPlayer.HasVariable('fnr_japan_enabled')), Not(GetPlayer.HasVariable('fnr_japan_disabled'))), 'Japan: ON', 'Japan: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_japan').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Austrian Empire - Historical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_historical_enabled'), GetPlayer.HasVariable('fnr_austrianempire_enabled')), Not(GetPlayer.HasVariable('fnr_austrianempire_disabled'))), 'Austrian Empire: ON', 'Austrian Empire: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_austrianempire').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Bulgaria - Modern
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_modern_enabled'), GetPlayer.HasVariable('fnr_bulgaria_enabled')), Not(GetPlayer.HasVariable('fnr_bulgaria_disabled'))), 'Bulgaria: ON', 'Bulgaria: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_bulgaria').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# French Empire - Historical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_historical_enabled'), GetPlayer.HasVariable('fnr_frenchempire_enabled')), Not(GetPlayer.HasVariable('fnr_frenchempire_disabled'))), 'French Empire: ON', 'French Empire: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_frenchempire').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# German Empire - Historical
 							button_regular = {
 								size = { 400 32 }
 								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_historical_enabled'), GetPlayer.HasVariable('fnr_germanempire_enabled')), Not(GetPlayer.HasVariable('fnr_germanempire_disabled'))), 'German Empire: ON', 'German Empire: OFF')]"
 								onclick = "[GetScriptedGui('FormableNationReworked_toggle_germanempire').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# German Reich - Controversial
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_controversial_enabled'), GetPlayer.HasVariable('fnr_germanreich_enabled')), Not(GetPlayer.HasVariable('fnr_germanreich_disabled'))), 'German Reich: ON', 'German Reich: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_germanreich').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Nazi Germany - Controversial
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_controversial_enabled'), GetPlayer.HasVariable('fnr_nazigermany_enabled')), Not(GetPlayer.HasVariable('fnr_nazigermany_disabled'))), 'Nazi Germany: ON', 'Nazi Germany: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_nazigermany').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Italian Empire - Modern
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_modern_enabled'), GetPlayer.HasVariable('fnr_italianempire_enabled')), Not(GetPlayer.HasVariable('fnr_italianempire_disabled'))), 'Italian Empire: ON', 'Italian Empire: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_italianempire').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Kyivan Rus - Nonhistorical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), GetPlayer.HasVariable('fnr_kyivanrus_enabled')), Not(GetPlayer.HasVariable('fnr_kyivanrus_disabled'))), 'Kyivan Rus: ON', 'Kyivan Rus: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_kyivanrus').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Latin Empire - Nonhistorical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), GetPlayer.HasVariable('fnr_latinempire_enabled')), Not(GetPlayer.HasVariable('fnr_latinempire_disabled'))), 'Latin Empire: ON', 'Latin Empire: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_latinempire').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Russian Empire - Historical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_historical_enabled'), GetPlayer.HasVariable('fnr_russianempire_enabled')), Not(GetPlayer.HasVariable('fnr_russianempire_disabled'))), 'Russian Empire: ON', 'Russian Empire: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_russianempire').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Russian Federation - Modern
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_modern_enabled'), GetPlayer.HasVariable('fnr_russianfed_enabled')), Not(GetPlayer.HasVariable('fnr_russianfed_disabled'))), 'Russian Federation: ON', 'Russian Federation: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_russianfederation').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Serbian Empire - Historical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_historical_enabled'), GetPlayer.HasVariable('fnr_serbianempire_enabled')), Not(GetPlayer.HasVariable('fnr_serbianempire_disabled'))), 'Serbian Empire: ON', 'Serbian Empire: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_serbianempire').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Swedish Empire - Historical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_historical_enabled'), GetPlayer.HasVariable('fnr_swedishempire_enabled')), Not(GetPlayer.HasVariable('fnr_swedishempire_disabled'))), 'Swedish Empire: ON', 'Swedish Empire: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_swedishempire').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# The United Kingdom - Modern
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_modern_enabled'), GetPlayer.HasVariable('fnr_uk_enabled')), Not(GetPlayer.HasVariable('fnr_uk_disabled'))), 'The United Kingdom: ON', 'The United Kingdom: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_theunitedkingdom').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Wendish Empire - Althistory
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_althistory_enabled'), GetPlayer.HasVariable('fnr_wendishempire_enabled')), Not(GetPlayer.HasVariable('fnr_wendishempire_disabled'))), 'Wendish Empire: ON', 'Wendish Empire: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_wendishempire').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Armenian Empire - Nonhistorical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), GetPlayer.HasVariable('fnr_armenianempire_enabled')), Not(GetPlayer.HasVariable('fnr_armenianempire_disabled'))), 'Armenian Empire: ON', 'Armenian Empire: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_armenianempire').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Arabian Empire - Fantasy
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_fantasy_enabled'), GetPlayer.HasVariable('fnr_arabianempire_enabled')), Not(GetPlayer.HasVariable('fnr_arabianempire_disabled'))), 'Arabian Empire: ON', 'Arabian Empire: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_arabianempire').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Goguryeo - Nonhistorical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), GetPlayer.HasVariable('fnr_goguryeon_enabled')), Not(GetPlayer.HasVariable('fnr_goguryeo_disabled'))), 'Goguryeo: ON', 'Goguryeo: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_goguryeo').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Himalayan Empire - Fantasy
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_fantasy_enabled'), GetPlayer.HasVariable('fnr_himalayanempire_enabled')), Not(GetPlayer.HasVariable('fnr_himalayanempire_disabled'))), 'Himalayan Empire: ON', 'Himalayan Empire: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_himalayanempire').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Omani Empire - Historical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_historical_enabled'), GetPlayer.HasVariable('fnr_omaniempire_enabled')), Not(GetPlayer.HasVariable('fnr_omaniempire_disabled'))), 'Omani Empire: ON', 'Omani Empire: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_omaniempire').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Tibetan Empire - Nonhistorical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), GetPlayer.HasVariable('fnr_tibetanempire_enabled')), Not(GetPlayer.HasVariable('fnr_tibetanempire_disabled'))), 'Tibetan Empire: ON', 'Tibetan Empire: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_tibetanempire').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Chola Empire - Nonhistorical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), GetPlayer.HasVariable('fnr_cholaempire_enabled')), Not(GetPlayer.HasVariable('fnr_cholaempire_disabled'))), 'Chola Empire: ON', 'Chola Empire: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_cholaempire').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Abyssinia - Althistory
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_althistory_enabled'), GetPlayer.HasVariable('fnr_abyssinia_enabled')), Not(GetPlayer.HasVariable('fnr_abyssinia_disabled'))), 'Abyssinia: ON', 'Abyssinia: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_abyssinia').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Adriatic Empire - Fantasy
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_fantasy_enabled'), GetPlayer.HasVariable('fnr_adriaticempire_enabled')), Not(GetPlayer.HasVariable('fnr_adriaticempire_disabled'))), 'Adriatic Empire: ON', 'Adriatic Empire: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_adriaticempire').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Adriatic Empire - Fantasy
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_fantasy_enabled'), GetPlayer.HasVariable('fnr_angevinempire_enabled')), Not(GetPlayer.HasVariable('fnr_angevinempire_disabled'))), 'Angevin Empire: ON', 'Angevin Empire: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_angevinempire').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Anglo-Dutch Union - Fantasy
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_fantasy_enabled'), GetPlayer.HasVariable('fnr_anglodutchunion_enabled')), Not(GetPlayer.HasVariable('fnr_anglodutchunion_disabled'))), 'Anglo-Dutch Union: ON', 'Anglo-Dutch Union: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_anglodutchunion').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Catholica Russica - Fantasy
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_fantasy_enabled'), GetPlayer.HasVariable('fnr_catholicarussica_enabled')), Not(GetPlayer.HasVariable('fnr_catholicarussica_disabled'))), 'Catholica Russica: ON', 'Catholica Russica: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_catholicarussica').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Celtic Union - Althistory
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_althistory_enabled'), GetPlayer.HasVariable('fnr_celticunion_enabled')), Not(GetPlayer.HasVariable('fnr_celticunion_disabled'))), 'Celtic Union: ON', 'Celtic Union: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_celticunion').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Dual Monarchy - Althistory
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_althistory_enabled'), GetPlayer.HasVariable('fnr_dualmonarchy_enabled')), Not(GetPlayer.HasVariable('fnr_dualmonarchy_disabled'))), 'Dual Monarchy: ON', 'Dual Monarchy: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_dualmonarchy').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Franco-Iberian Empire - Fantasy
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_fantasy_enabled'), GetPlayer.HasVariable('fnr_francoiberia_enabled')), Not(GetPlayer.HasVariable('fnr_francoiberia_disabled'))), 'Franco-Iberian Empire: ON', 'Franco-Iberian Empire: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_francoiberianempire').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Gallic Empire - Nonhistorical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), GetPlayer.HasVariable('fnr_gallicempire_enabled')), Not(GetPlayer.HasVariable('fnr_gallicempire_disabled'))), 'Gallic Empire: ON', 'Gallic Empire: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_gallicempire').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Hungarian Empire - Althistory
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_althistory_enabled'), GetPlayer.HasVariable('fnr_hungarianempire_enabled')), Not(GetPlayer.HasVariable('fnr_hungarianempire_disabled'))), 'Hungarian Empire: ON', 'Hungarian Empire: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_hungarianempire').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Iberian Empire - Fantasy
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_fantasy_enabled'), GetPlayer.HasVariable('fnr_iberianempire_enabled')), Not(GetPlayer.HasVariable('fnr_iberianempire_disabled'))), 'Iberian Empire: ON', 'Iberian Empire: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_iberianempire').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Jagiellonian Empire - Nonhistorical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), GetPlayer.HasVariable('fnr_jagiellonianempire_enabled')), Not(GetPlayer.HasVariable('fnr_jagiellonianempire_disabled'))), 'Jagiellonian Empire: ON', 'Jagiellonian Empire: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_jagiellonianempire').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Ummayad Caliphate - Nonhistorical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), GetPlayer.HasVariable('fnr_ummayadcaliphate_enabled')), Not(GetPlayer.HasVariable('fnr_ummayadcaliphate_disabled'))), 'Ummayad Caliphate: ON', 'Ummayad Caliphate: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_ummayadcaliphate').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Rashidun Caliphate - Nonhistorical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), GetPlayer.HasVariable('fnr_rashidun_enabled')), Not(GetPlayer.HasVariable('fnr_rashidun_disabled'))), 'Rashidun Caliphate: ON', 'Rashidun Caliphate: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_rashidun').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Abbasid Caliphate - Nonhistorical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), GetPlayer.HasVariable('fnr_abbasid_enabled')), Not(GetPlayer.HasVariable('fnr_abbasid_disabled'))), 'Abbasid Caliphate: ON', 'Abbasid Caliphate: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_abbasid').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# East Francia - Nonhistorical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), GetPlayer.HasVariable('fnr_eastfrancia_enabled')), Not(GetPlayer.HasVariable('fnr_eastfrancia_disabled'))), 'East Francia: ON', 'East Francia: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_eastfrancia').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Lusitanian Empire - Nonhistorical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), GetPlayer.HasVariable('fnr_lusitanianempire_enabled')), Not(GetPlayer.HasVariable('fnr_lusitanianempire_disabled'))), 'Lusitanian Empire: ON', 'Lusitanian Empire: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_lusitanianempire').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# North Sea Empire - Nonhistorical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), GetPlayer.HasVariable('fnr_northseaempire_enabled')), Not(GetPlayer.HasVariable('fnr_northseaempire_disabled'))), 'North Sea Empire: ON', 'North Sea Empire: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_northseaempire').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 							}
 						}
 					}
@@ -135,52 +802,104 @@ window = {
 						
 						button_main_tab_alt = {
 							using = layoutpolicy_expanding
-							tooltip = ""
 							raw_text = "Rank V Formables"
 							onclick = "[GetVariableSystem.Toggle('rank5_open')]"
 							down = "[GetVariableSystem.Exists('rank5_open')]"
 						}
-
+						
 						vbox = {
 							layoutpolicy_horizontal = expanding
 							visible = "[GetVariableSystem.Exists('rank5_open')]"
 							spacing = 3
 							margin = { 10 5 }
 							
-							# Add Rank 5 formable buttons here
+							# Turkey - Modern
 							button_regular = {
 								size = { 400 32 }
-								tooltip = ""
-								raw_text = "British Empire"
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_modern_enabled'), GetPlayer.HasVariable('fnr_turkey_enabled')), Not(GetPlayer.HasVariable('fnr_turkey_disabled'))), 'Turkey: ON', 'Turkey: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_turkey').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# British Empire - Historical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_historical_enabled'), GetPlayer.HasVariable('fnr_britishempire_enabled')), Not(GetPlayer.HasVariable('fnr_britishempire_disabled'))), 'British Empire: ON', 'British Empire: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_britishempire').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Eastern Roman Empire - Nonhistorical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), GetPlayer.HasVariable('fnr_easternrome_enabled')), Not(GetPlayer.HasVariable('fnr_easternrome_disabled'))), 'Eastern Roman Empire: ON', 'Eastern Roman Empire: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_easternromanempire').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Western Roman Empire - Nonhistorical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), GetPlayer.HasVariable('fnr_westernromanempire_enabled')), Not(GetPlayer.HasVariable('fnr_westernromanempire_disabled'))), 'Western Roman Empire: ON', 'Western Roman Empire: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_westernromanempire').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# European Union - Modern
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_modern_enabled'), GetPlayer.HasVariable('fnr_eu_enabled')), Not(GetPlayer.HasVariable('fnr_eu_disabled'))), 'European Union: ON', 'European Union: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_europeanunion').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Greater German Reich - Controversial
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_controversial_enabled'), GetPlayer.HasVariable('fnr_greatergermanreich_enabled')), Not(GetPlayer.HasVariable('fnr_greatergermanreich_disabled'))), 'Greater German Reich: ON', 'Greater German Reich: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_greatergermanreich').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Soviet Union - Modern
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_modern_enabled'), GetPlayer.HasVariable('fnr_sovietunion_enabled')), Not(GetPlayer.HasVariable('fnr_sovietunion_disabled'))), 'Soviet Union: ON', 'Soviet Union: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_sovietunion').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Empire of China - Modern
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_modern_enabled'), GetPlayer.HasVariable('fnr_empireofchina_enabled')), Not(GetPlayer.HasVariable('fnr_empireofchina_disabled'))), 'Empire of China: ON', 'Empire of China: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_empireofchina').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Islamic State - Modern
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_modern_enabled'), GetPlayer.HasVariable('fnr_islamicstate_enabled')), Not(GetPlayer.HasVariable('fnr_islamicstate_disabled'))), 'Islamic State: ON', 'Islamic State: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_islamicstate').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Peoples Republic of China - Modern
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_modern_enabled'), GetPlayer.HasVariable('fnr_prc_enabled')), Not(GetPlayer.HasVariable('fnr_prc_disabled'))), 'Peoples Republic of China: ON', 'Peoples Republic of China: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_peoplesrepublicofchina').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Republic of China - Modern
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_modern_enabled'), GetPlayer.HasVariable('fnr_roc_enabled')), Not(GetPlayer.HasVariable('fnr_roc_disabled'))), 'Republic of China: ON', 'Republic of China: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_republicofchina').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# The Horde - Fantasy
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_fantasy_enabled'), GetPlayer.HasVariable('fnr_horde_enabled')), Not(GetPlayer.HasVariable('fnr_horde_disabled'))), 'The Horde: ON', 'The Horde: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_thehorde').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Carolingian Empire - Nonhistorical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), GetPlayer.HasVariable('fnr_carolingian_enabled')), Not(GetPlayer.HasVariable('fnr_carolingian_disabled'))), 'Carolingian Empire: ON', 'Carolingian Empire: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_carolingianempire').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+							# Macedonian Empire - Nonhistorical
+							button_regular = {
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), GetPlayer.HasVariable('fnr_macedonianempire_enabled')), Not(GetPlayer.HasVariable('fnr_macedonianempire_disabled'))), 'Macedonian Empire: ON', 'Macedonian Empire: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_macedonianempire').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 							}
 						}
 					}
 					
-					# Rank 6 Formables
-					vbox = {
-						layoutpolicy_horizontal = expanding
-						spacing = 5
-						
-						button_main_tab_alt = {
-							using = layoutpolicy_expanding
-							raw_text = "Rank VI Formables"
-							onclick = "[GetVariableSystem.Toggle('rank6_open')]"
-							down = "[GetVariableSystem.Exists('rank6_open')]"
-						}
-
-						vbox = {
-							layoutpolicy_horizontal = expanding
-							visible = "[GetVariableSystem.Exists('rank6_open')]"
-							spacing = 3
-							margin = { 10 5 }
-							
-							# Add Rank 6 formable buttons here
-							button_regular = {
-								size = { 400 32 }
-								raw_text = "Roman Empire"
-							}
-						}
-					}
 				}
 			}
 		}

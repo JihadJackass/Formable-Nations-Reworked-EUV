@@ -244,6 +244,14 @@ colors = {
 	map_UKRNE = rgb { 29 87 136 }
 	# Ummayad Caliphate
 	map_UMAYA = rgb { 170 170 170 }
+	# Rashidun Caliphate
+	map_RSHDN = hsv360 { 126 100 50 } 
+	# Abbasid Caliphate
+	map_ABSID = hsv360 { 126 75 15 } 
+	# Fatimid Caliphate
+	map_FTMID = hsv360 { 100 50 15 } 
+	# Assyria
+	map_ASYRI = hsv360 { 27 41 50 }
 	# United Arab Republic
 	map_UNARR = rgb { 4 24 0 }
 	# Vietnam

@@ -1,0 +1,23 @@
+﻿l_english:
+
+  # ADVANCES LOCALIZATION
+
+    # Formable Specific
+      # Lusitanian Empire
+      AUSEM_habsburg_empire: "Habsburg Empire" 
+      AUSEM_habsburg_empire_desc: "" 
+
+    # REPLACERS (COPIES VANILLA ADVANCES FOR FORMABLES)
+      fnr_german_imperial_roads: "Imperial Road Network"
+      fnr_german_imperial_roads_desc: ""
+      fnr_german_fair_towns: "Reichsmessestädte"
+      fnr_german_fair_towns_desc: ""
+      fnr_german_biedermeier: "Biedermeier"
+      fnr_german_biedermeier_desc: ""
+
+      fnr_german_fair_towns: "Reichsmessestädte"
+      fnr_german_fair_towns_desc: ""
+      fnr_dutch_education: "Dutch Education"
+      fnr_dutch_education_desc: ""
+
+
