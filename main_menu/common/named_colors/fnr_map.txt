@@ -211,7 +211,7 @@ colors = {
 	# Saudi Arabia
 	map_SAUDI = rgb { 3 34 4 }
 	# Serbian Empire
-	map_SRBEM = rgb { 94 110 22 }
+	map_SRBEM = hsv360 { 49 33 100 }
 	# Sorbic Kingdom
 	map_KSORB = rgb { 28 16 180 }
 	# South Korea

@@ -8,15 +8,14 @@
       AUSEM_habsburg_empire_desc: "" 
 
     # REPLACERS (COPIES VANILLA ADVANCES FOR FORMABLES)
+      # german
       fnr_german_imperial_roads: "Imperial Road Network"
       fnr_german_imperial_roads_desc: ""
       fnr_german_fair_towns: "Reichsmessestädte"
       fnr_german_fair_towns_desc: ""
       fnr_german_biedermeier: "Biedermeier"
       fnr_german_biedermeier_desc: ""
-
-      fnr_german_fair_towns: "Reichsmessestädte"
-      fnr_german_fair_towns_desc: ""
+      # dutch
       fnr_dutch_education: "Dutch Education"
       fnr_dutch_education_desc: ""
 

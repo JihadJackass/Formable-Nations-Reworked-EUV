@@ -5,23 +5,17 @@ flavor_DUTCH.1 = { # United Provinces opportunity to centralize into the Dutch R
 	title = flavor_DUTCH.1.title
 	desc = flavor_DUTCH.1.desc
 	fire_only_once = yes
-
-	trigger = {
-		has_variable = NED_UP_var
-	}
-
+	trigger = { has_variable = NED_UP_var }
+	immediate = { remove_variable = NED_UP_var }
 	option = { # We shall Proclaim the Dutch Republic!
 		name = flavor_DUTCH.1.a
 		change_country_name = NED_DR
-		set_variable = NED_DR_var # TODO: remove old variable
-		# TODO: add centralization
+		# TODO: add centralization + bonuses
 		change_country_flag = NED_DR_FLAG
 	}
 	option = { # The United Provinces remain strong in equality!
 		name = flavor_DUTCH.1.b
-		set_variable = NED_UP_var # TODO: is this needed?
 		change_country_flag = NED_UP_FLAG
-		# Set variable allowing future switch to Dutch Republic
-		set_variable = { name = can_become_dutch_republic value = yes }
+		# TODO: add decentralization + bonuses
 	}
 }

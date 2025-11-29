@@ -4687,7 +4687,7 @@
 		# Belarus - Modern
 			BLRUS = {
 				level = 3
-				required_locations_fraction = 0.01 # 0.85
+				required_locations_fraction = 0.85 # 0.85
 				rule = plausible
 				potential = {
 					AND = {
@@ -4994,7 +4994,7 @@
 		# Donetsk Peoples Republic - Modern
 			DNTPR = {
 				level = 3
-				required_locations_fraction = 0.01
+				required_locations_fraction = 0.90
 				rule = plausible
 				potential = {
 					AND = {
@@ -5026,7 +5026,7 @@
 		# Luhansk Peoples Republic - Modern
 			LUHPR = {
 				level = 3
-				required_locations_fraction = 0.01
+				required_locations_fraction = 0.90
 				rule = plausible
 				potential = {
 					AND = {
@@ -7213,7 +7213,7 @@
 		# Russian Federation - Modern
 			RUFED = {
 				level = 4
-				required_locations_fraction = 0.01
+				required_locations_fraction = 0.85
 				rule = plausible
 				potential = {
 					AND = {
@@ -7840,7 +7840,7 @@
 		# Dual Monarchy - Alt-history
 			DLMON = {
 				level = 4
-				required_locations_fraction = 0.45
+				required_locations_fraction = 0.90
 				rule = plausible
 				potential = {
 					AND = {

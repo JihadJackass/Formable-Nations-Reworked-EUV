@@ -354,6 +354,36 @@
 				}
 			}
 
+		# Assyria
+			FormableNationReworked_toggle_assyria = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_assyria_enabled }
+							NOT = { has_variable = fnr_assyria_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_assyria_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_assyria_disabled }
+						every_country = { 
+							remove_variable = fnr_assyria_disabled
+							set_variable = { name = fnr_assyria_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_assyria_enabled }
+						every_country = {
+							remove_variable = fnr_assyria_enabled
+						}
+					}
+				}
+			}
 	# Rank 3
 		# Basque Country - Nonhistorical
 			FormableNationReworked_toggle_basquecountry = {
@@ -580,24 +610,24 @@
 				effect = {
 					if = { # Cycle: Default → Force OFF → Force ON → Default
 						limit = {
-							NOT = { has_variable = fnr_yugoslavia_enabled }
-							NOT = { has_variable = fnr_yugoslavia_disabled }
+							NOT = { has_variable = fnr_yugoslavkingdom_enabled }
+							NOT = { has_variable = fnr_yugoslavkingdom_disabled }
 						}
 						every_country = { # Currently DEFAULT → Force OFF
-							set_variable = { name = fnr_yugoslavia_disabled value = yes }
+							set_variable = { name = fnr_yugoslavkingdom_disabled value = yes }
 						}
 					}
 					else_if = { # Currently FORCE OFF → Force ON
-						limit = { has_variable = fnr_yugoslavia_disabled }
+						limit = { has_variable = fnr_yugoslavkingdom_disabled }
 						every_country = { 
-							remove_variable = fnr_yugoslavia_disabled
-							set_variable = { name = fnr_yugoslavia_enabled value = yes }
+							remove_variable = fnr_yugoslavkingdom_disabled
+							set_variable = { name = fnr_yugoslavkingdom_enabled value = yes }
 						}
 					}
 					else_if = { # Currently FORCE ON → Default
-						limit = { has_variable = fnr_yugoslavia_enabled }
+						limit = { has_variable = fnr_yugoslavkingdom_enabled }
 						every_country = {
-							remove_variable = fnr_yugoslavia_enabled
+							remove_variable = fnr_yugoslavkingdom_enabled
 						}
 					}
 				}
@@ -797,24 +827,24 @@
 				effect = {
 					if = { # Cycle: Default → Force OFF → Force ON → Default
 						limit = {
-							NOT = { has_variable = fnr_cisalpina_enabled }
-							NOT = { has_variable = fnr_cisalpina_disabled }
+							NOT = { has_variable = fnr_cisalpine_enabled }
+							NOT = { has_variable = fnr_cisalpine_disabled }
 						}
 						every_country = { # Currently DEFAULT → Force OFF
-							set_variable = { name = fnr_cisalpina_disabled value = yes }
+							set_variable = { name = fnr_cisalpine_disabled value = yes }
 						}
 					}
 					else_if = { # Currently FORCE OFF → Force ON
-						limit = { has_variable = fnr_cisalpina_disabled }
+						limit = { has_variable = fnr_cisalpine_disabled }
 						every_country = { 
-							remove_variable = fnr_cisalpina_disabled
-							set_variable = { name = fnr_cisalpina_enabled value = yes }
+							remove_variable = fnr_cisalpine_disabled
+							set_variable = { name = fnr_cisalpine_enabled value = yes }
 						}
 					}
 					else_if = { # Currently FORCE ON → Default
-						limit = { has_variable = fnr_cisalpina_enabled }
+						limit = { has_variable = fnr_cisalpine_enabled }
 						every_country = {
-							remove_variable = fnr_cisalpina_enabled
+							remove_variable = fnr_cisalpine_enabled
 						}
 					}
 				}
@@ -828,24 +858,24 @@
 				effect = {
 					if = { # Cycle: Default → Force OFF → Force ON → Default
 						limit = {
-							NOT = { has_variable = fnr_commonwealthofengland_enabled }
-							NOT = { has_variable = fnr_commonwealthofengland_disabled }
+							NOT = { has_variable = fnr_commonwealthengland_enabled }
+							NOT = { has_variable = fnr_commonwealthengland_disabled }
 						}
 						every_country = { # Currently DEFAULT → Force OFF
-							set_variable = { name = fnr_commonwealthofengland_disabled value = yes }
+							set_variable = { name = fnr_commonwealthengland_disabled value = yes }
 						}
 					}
 					else_if = { # Currently FORCE OFF → Force ON
-						limit = { has_variable = fnr_commonwealthofengland_disabled }
+						limit = { has_variable = fnr_commonwealthengland_disabled }
 						every_country = { 
-							remove_variable = fnr_commonwealthofengland_disabled
-							set_variable = { name = fnr_commonwealthofengland_enabled value = yes }
+							remove_variable = fnr_commonwealthengland_disabled
+							set_variable = { name = fnr_commonwealthengland_enabled value = yes }
 						}
 					}
 					else_if = { # Currently FORCE ON → Default
-						limit = { has_variable = fnr_commonwealthofengland_enabled }
+						limit = { has_variable = fnr_commonwealthengland_enabled }
 						every_country = {
-							remove_variable = fnr_commonwealthofengland_enabled
+							remove_variable = fnr_commonwealthengland_enabled
 						}
 					}
 				}
@@ -2037,24 +2067,24 @@
 				effect = {
 					if = { # Cycle: Default → Force OFF → Force ON → Default
 						limit = {
-							NOT = { has_variable = fnr_therhineconfederation_enabled }
-							NOT = { has_variable = fnr_therhineconfederation_disabled }
+							NOT = { has_variable = fnr_rhineconfed_enabled }
+							NOT = { has_variable = fnr_rhineconfed_disabled }
 						}
 						every_country = { # Currently DEFAULT → Force OFF
-							set_variable = { name = fnr_therhineconfederation_disabled value = yes }
+							set_variable = { name = fnr_rhineconfed_disabled value = yes }
 						}
 					}
 					else_if = { # Currently FORCE OFF → Force ON
-						limit = { has_variable = fnr_therhineconfederation_disabled }
+						limit = { has_variable = fnr_rhineconfed_disabled }
 						every_country = { 
-							remove_variable = fnr_therhineconfederation_disabled
-							set_variable = { name = fnr_therhineconfederation_enabled value = yes }
+							remove_variable = fnr_rhineconfed_disabled
+							set_variable = { name = fnr_rhineconfed_enabled value = yes }
 						}
 					}
 					else_if = { # Currently FORCE ON → Default
-						limit = { has_variable = fnr_therhineconfederation_enabled }
+						limit = { has_variable = fnr_rhineconfed_enabled }
 						every_country = {
-							remove_variable = fnr_therhineconfederation_enabled
+							remove_variable = fnr_rhineconfed_enabled
 						}
 					}
 				}
@@ -2316,24 +2346,24 @@
 				effect = {
 					if = { # Cycle: Default → Force OFF → Force ON → Default
 						limit = {
-							NOT = { has_variable = fnr_kingdomofgod_enabled }
-							NOT = { has_variable = fnr_kingdomofgod_disabled }
+							NOT = { has_variable = fnr_kog_enabled }
+							NOT = { has_variable = fnr_kog_disabled }
 						}
 						every_country = { # Currently DEFAULT → Force OFF
-							set_variable = { name = fnr_kingdomofgod_disabled value = yes }
+							set_variable = { name = fnr_kog_disabled value = yes }
 						}
 					}
 					else_if = { # Currently FORCE OFF → Force ON
-						limit = { has_variable = fnr_kingdomofgod_disabled }
+						limit = { has_variable = fnr_kog_disabled }
 						every_country = { 
-							remove_variable = fnr_kingdomofgod_disabled
-							set_variable = { name = fnr_kingdomofgod_enabled value = yes }
+							remove_variable = fnr_kog_disabled
+							set_variable = { name = fnr_kog_enabled value = yes }
 						}
 					}
 					else_if = { # Currently FORCE ON → Default
-						limit = { has_variable = fnr_kingdomofgod_enabled }
+						limit = { has_variable = fnr_kog_enabled }
 						every_country = {
-							remove_variable = fnr_kingdomofgod_enabled
+							remove_variable = fnr_kog_enabled
 						}
 					}
 				}
@@ -3557,24 +3587,24 @@
 				effect = {
 					if = { # Cycle: Default → Force OFF → Force ON → Default
 						limit = {
-							NOT = { has_variable = fnr_ummayadcaliphate_enabled }
-							NOT = { has_variable = fnr_ummayadcaliphate_disabled }
+							NOT = { has_variable = fnr_ummayads_enabled }
+							NOT = { has_variable = fnr_ummayads_disabled }
 						}
 						every_country = { # Currently DEFAULT → Force OFF
-							set_variable = { name = fnr_ummayadcaliphate_disabled value = yes }
+							set_variable = { name = fnr_ummayads_disabled value = yes }
 						}
 					}
 					else_if = { # Currently FORCE OFF → Force ON
-						limit = { has_variable = fnr_ummayadcaliphate_disabled }
+						limit = { has_variable = fnr_ummayads_disabled }
 						every_country = { 
-							remove_variable = fnr_ummayadcaliphate_disabled
-							set_variable = { name = fnr_ummayadcaliphate_enabled value = yes }
+							remove_variable = fnr_ummayads_disabled
+							set_variable = { name = fnr_ummayads_enabled value = yes }
 						}
 					}
 					else_if = { # Currently FORCE ON → Default
-						limit = { has_variable = fnr_ummayadcaliphate_enabled }
+						limit = { has_variable = fnr_ummayads_enabled }
 						every_country = {
-							remove_variable = fnr_ummayadcaliphate_enabled
+							remove_variable = fnr_ummayads_enabled
 						}
 					}
 				}
@@ -3637,6 +3667,37 @@
 						limit = { has_variable = fnr_abbasid_enabled }
 						every_country = {
 							remove_variable = fnr_abbasid_enabled
+						}
+					}
+				}
+			}
+
+		# Fatimid Caliphate - Nonhistorical
+			FormableNationReworked_toggle_fatimidcaliphate = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_fatimid_enabled }
+							NOT = { has_variable = fnr_fatimid_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_fatimid_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_fatimid_disabled }
+						every_country = { 
+							remove_variable = fnr_fatimid_disabled
+							set_variable = { name = fnr_fatimid_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_fatimid_enabled }
+						every_country = {
+							remove_variable = fnr_fatimid_enabled
 						}
 					}
 				}
@@ -3712,24 +3773,24 @@
 				effect = {
 					if = { # Cycle: Default → Force OFF → Force ON → Default
 						limit = {
-							NOT = { has_variable = fnr_northseaempire_enabled }
-							NOT = { has_variable = fnr_northseaempire_disabled }
+							NOT = { has_variable = fnr_nse_enabled }
+							NOT = { has_variable = fnr_nse_disabled }
 						}
 						every_country = { # Currently DEFAULT → Force OFF
-							set_variable = { name = fnr_northseaempire_disabled value = yes }
+							set_variable = { name = fnr_nse_disabled value = yes }
 						}
 					}
 					else_if = { # Currently FORCE OFF → Force ON
-						limit = { has_variable = fnr_northseaempire_disabled }
+						limit = { has_variable = fnr_nse_disabled }
 						every_country = { 
-							remove_variable = fnr_northseaempire_disabled
-							set_variable = { name = fnr_northseaempire_enabled value = yes }
+							remove_variable = fnr_nse_disabled
+							set_variable = { name = fnr_nse_enabled value = yes }
 						}
 					}
 					else_if = { # Currently FORCE ON → Default
-						limit = { has_variable = fnr_northseaempire_enabled }
+						limit = { has_variable = fnr_nse_enabled }
 						every_country = {
-							remove_variable = fnr_northseaempire_enabled
+							remove_variable = fnr_nse_enabled
 						}
 					}
 				}
@@ -3837,24 +3898,24 @@
 				effect = {
 					if = { # Cycle: Default → Force OFF → Force ON → Default
 						limit = {
-							NOT = { has_variable = fnr_westernromanempire_enabled }
-							NOT = { has_variable = fnr_westernromanempire_disabled }
+							NOT = { has_variable = fnr_westernrome_enabled }
+							NOT = { has_variable = fnr_westernrome_disabled }
 						}
 						every_country = { # Currently DEFAULT → Force OFF
-							set_variable = { name = fnr_westernromanempire_disabled value = yes }
+							set_variable = { name = fnr_westernrome_disabled value = yes }
 						}
 					}
 					else_if = { # Currently FORCE OFF → Force ON
-						limit = { has_variable = fnr_westernromanempire_disabled }
+						limit = { has_variable = fnr_westernrome_disabled }
 						every_country = { 
-							remove_variable = fnr_westernromanempire_disabled
-							set_variable = { name = fnr_westernromanempire_enabled value = yes }
+							remove_variable = fnr_westernrome_disabled
+							set_variable = { name = fnr_westernrome_enabled value = yes }
 						}
 					}
 					else_if = { # Currently FORCE ON → Default
-						limit = { has_variable = fnr_westernromanempire_enabled }
+						limit = { has_variable = fnr_westernrome_enabled }
 						every_country = {
-							remove_variable = fnr_westernromanempire_enabled
+							remove_variable = fnr_westernrome_enabled
 						}
 					}
 				}
