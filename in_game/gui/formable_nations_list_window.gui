@@ -102,6 +102,13 @@ window = {
 								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), GetPlayer.HasVariable('fnr_dacia_enabled')), Not(GetPlayer.HasVariable('fnr_dacia_disabled'))), 'Dacia: ON', 'Dacia: OFF')]"
 								onclick = "[GetScriptedGui('FormableNationReworked_toggle_dacia').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 							}
+							# Assyria
+							button_regular = {
+								tooltip = "fnr_placeholder"
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), GetPlayer.HasVariable('fnr_assyria_enabled')), Not(GetPlayer.HasVariable('fnr_assyria_disabled'))), 'Assyria: ON', 'Assyria: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_assyria').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
 						}
 					}
 					

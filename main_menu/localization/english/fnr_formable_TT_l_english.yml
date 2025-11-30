@@ -52,9 +52,9 @@
 
     # Formable List loc
     fnr_debug_window_formable_list_loc_toggle: "Formable Nations: Reworked"
-    fnr_debug_window_formable_list_loc: "Open a list to enable/disable specific formables"
+    fnr_debug_window_formable_list_loc: "Open a list to enable/disable specific formables for the Player and the AI"
     fnr_debug_window_formable_list_loc_topbar: "Click to open Formable Settings GUI"
-    fnr_debug_window_formable_list_loc_flag_selection: "Flag Selection"
+    fnr_debug_window_formable_list_loc_flag_selection: "Flag Selection - The Flag Selection feature is currently not functional and is a work-in-progress. It will be functional in a future major update."
     fnr_debug_window_formable_list_loc_rank_2: "Rank II Formables"
     fnr_debug_window_formable_list_loc_rank_2_arpitania: "Arpitania"
     fnr_debug_window_formable_list_loc_rank_3: "Rank III Formables"

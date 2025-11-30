@@ -4340,7 +4340,10 @@
 							tag_exists = ASYRI
 						}
 					}
-					culture = culture:syriac_culture
+					OR = {
+						culture = culture:syriac_culture
+						has_accepted_culture = culture:syriac_culture
+					}
 				}
 				name = ASYRI
 				flag = ASYRI
