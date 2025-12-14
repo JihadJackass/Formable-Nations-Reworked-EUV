@@ -2,13 +2,6 @@
 # FORMABLE NATIONS REWORKED FORMABLES #
 #######################################
 
-# TODO LIST:
-# - Oraganize this list based on Alphabetical
-# - FLAGS
-# - DESCRIPTIONS
-# - rule = plausible (set proper formable rule for all)
-# - ONCE MAJORITY FORMABLES ARE DONE, GO OVER EVERY ONE AND IMPROVE/FIX
-
 #################################
 # VANILLA / BASE GAME FORMABLES #
 #################################
@@ -1010,7 +1003,7 @@
 
 	# Prussia
 	PRU_f = {
-		level = 2
+		#level = 2
 		required_locations_fraction = 0.75
 		capital_required = no
 		rule = plausible
@@ -1368,7 +1361,8 @@
 		
 		potential = {
 			OR = {
-				tag = c:BYZ
+				tag = BYZ
+				tag = EASRE
 				AND = {
 					owns = location:rome
 					NOT = {
@@ -1385,8 +1379,11 @@
 			is_hegemon = yes
 
 			trigger_if = {
-				limit = { NOT = { tag = c:BYZ } }
-				NOT = { country_exists = c:BYZ }
+				OR = {
+					tag = BYZ
+					tag = EASRE
+					tag = WESRE
+				}
 			}
 			OR = {
 				religion.group = religion_group:christian
@@ -2921,7 +2918,11 @@
 		potential = {
 			exists = international_organization:ilkhanate
 			is_member_of_international_organization = international_organization:ilkhanate
-			NOT = { tag = IRA }
+			NOT = { 
+				tag = IRA
+				tag = ASYRI
+				tag = ASYRE
+			}
 		}
 
 		allow = {
@@ -3685,7 +3686,7 @@
 	# Somalia
 	SOI_f = {
 		level = 2
-		required_locations_fraction = 0.5
+		required_locations_fraction = 0.85 # adjusted from 0.50 to 0.85 (shame on u pdx)
 		rule = plausible
 
 		potential = {
@@ -4117,6 +4118,10 @@
 	# Rank 1
 		#
 	# Rank 2
+		# Kham
+		# Amdo	
+		# Dzungaria
+		# Kingdom of Gobi
 		# Arpitania - Fantasy
 			ARPIT = {
 				level = 2
@@ -4321,9 +4326,10 @@
 					}
 				}
 			}
+	# Rank 3
 		# Assyria - Fantasy
 			ASYRI = {
-				level = 2
+				level = 3
 				required_locations_fraction = 0.90
 				rule = plausible
 				potential = {
@@ -4339,6 +4345,7 @@
 							tag = ASYRI
 							tag_exists = ASYRI
 						}
+						tag = ASYRE
 					}
 					OR = {
 						culture = culture:syriac_culture
@@ -4351,9 +4358,370 @@
 				tag = ASYRI
 				color = map_ASYRI
 				provinces = { nusaybin_province amadiya_province bitlis_province }
+				form_effect = {
+					if = {
+						limit = { country_rank_level < 3 }
+						set_country_rank_effect = { rank = country_rank:rank_kingdom }
+					}					
+				}
+			}		
+		# Oklahoma - Modern
+			OKLAH = {
+				level = 3
+				required_locations_fraction = 1
+				rule = plausible
+				potential = { 
+					AND = {
+						OR = {
+							has_variable = fnr_modern_enabled
+							has_variable = fnr_oklahoma_enabled
+						}
+						NOT = { has_variable = fnr_oklahoma_disabled }
+					}
+					NOT = { 
+						OR = {
+							tag = OKLAH
+							tag_exists = OKLAH
+						}
+					}			
+					OR = {
+						culture ?= {
+							is_culture_native_american = no
+							OR = {
+								has_culture_group = culture_group:british_group
+								has_culture_group = culture_group:french_group
+							}
+						}
+						OR = {
+							owns = location:tulsa
+							culture = culture:hohokam_culture
+							culture = culture:taovaya_culture
+							culture = culture:kitikitish_culture
+							culture = culture:cayas_culture
+							culture = culture:tula_culture
+						}
+					}
+				}
+				name = OKLAH
+				flag = OKLAH
+				adjective = OKLAH_ADJ
+				tag = OKLAH
+				color = map_OKLAH
+				#regions = { great_plains_region }
+				locations = { tulsa wewoka washita kiamichi nanatsoho tawehash wakhakukdhin headdhetanwan pasukhdin chikaskia nixgu oktahutchee gulvau hawaastatkiicu guichita nigitai kicpahat gulvau honih_hiyo_he }
 			}
-	# Rank 3
+		# Missouri - Modern
+			MISSR = {
+				level = 3
+				required_locations_fraction = 1
+				rule = plausible
+				potential = { 
+					AND = {
+						OR = {
+							has_variable = fnr_modern_enabled
+							has_variable = fnr_missouri_enabled
+						}
+						NOT = { has_variable = fnr_missouri_disabled }
+					}
+					NOT = { 
+						OR = {
+							tag = MISSR
+							tag_exists = MISSR
+						}
+					}			
+					OR = {
+						culture ?= {
+							is_culture_native_american = no
+							OR = {
+								has_culture_group = culture_group:british_group
+								has_culture_group = culture_group:french_group
+							}
+						}
+						OR = {
+							owns = location:tamaroa
+							culture = culture:hohokam_culture
+							culture = culture:taovaya_culture
+							culture = culture:kitikitish_culture
+							culture = culture:cayas_culture
+							culture = culture:tula_culture
+						}
+					}
+				}
+				name = MISSR
+				flag = MISSR
+				adjective = MISSR_ADJ
+				tag = MISSR
+				color = map_MISSR
+				areas = { missouri_area }
+			}
+		# Flordia - Modern
+			FLRDA = {
+				level = 3
+				required_locations_fraction = 1
+				rule = plausible
+				potential = { 
+					AND = {
+						OR = {
+							has_variable = fnr_modern_enabled
+							has_variable = fnr_florida_enabled
+						}
+						NOT = { has_variable = fnr_florida_disabled }
+					}
+					NOT = { 
+						OR = {
+							tag = FLRDA
+							tag_exists = FLRDA
+						}
+					}			
+					OR = {
+						culture ?= {
+							is_culture_native_american = no
+							has_culture_group = culture_group:spanish_group
+						}
+						OR = {
+							owns = location:mayaimi
+							culture = culture:calusa_culture
+							culture = culture:tocobaga_culture
+							culture = culture:ais_culture
+							culture = culture:timucua_culture
+							culture = culture:apalachee_culture
+							culture = culture:chatot_culture
+						}
+					}
+				}
+				name = FLRDA
+				flag = FLRDA
+				adjective = FLRDA_ADJ
+				tag = FLRDA
+				color = map_FLRDA
+				#regions = { great_plains_region }
+				locations = { tulsa wewoka washita kiamichi nanatsoho tawehash wakhakukdhin headdhetanwan pasukhdin chikaskia nixgu oktahutchee gulvau hawaastatkiicu guichita nigitai kicpahat gulvau honih_hiyo_he }
+			}
+		# West Florida - Alt-history
+		# Georgia - Modern
+
+		# Alabama - Modern
+		# South Carolina - Modern
+		# North Carolina - Modern
+		# Tennessee - Modern
+		# Kentucky - Modern
+		# Ohio - Modern
+		# Virginia - Modern
+		# West Virginia - Modern
+		# Maryland - Modern
+		# Pennsylvania - Modern
+		# New Jersey - Modern
+		# Louisiana - Modern
+		# Arkansas - Modern
+		# Iowa - Modern
+		# California - Modern
+		# Cascadia - Modern
+		# Wyoming - Modern
+		# Ontario - Modern
+		# Quebec - Modern
+		# Newfoundland - Modern
+		# Texas - Modern
+		# Michigan - Modern
+		# Wisconsin - Modern
+		# Washington
+		# Oregan
+		# Nevada
+		# Utah
+		# Arizona
+		# New Mexico
+		# Kansas
+		# Nebraska
+		# South Dakota
+		# North Dakota
+		# Montana
+		# Indiana
+		# Illinois
+		# Maine
+		# Connecticut
+		# Massachusetts
+		# Rhode Island
+		# Vermont
+		# New York
+		# Vancouver - Modern
+		# Mexico - Modern - Modern
+			MEXCO = {
+				level = 3
+				required_locations_fraction = 0.67
+				rule = plausible
+				potential = { 
+					AND = {
+						OR = {
+							has_variable = fnr_modern_enabled
+							has_variable = fnr_mexico_enabled
+						}
+						NOT = { has_variable = fnr_mexico_disabled }
+					}
+					NOT = { 
+						OR = {
+							tag = MEXCO
+							tag_exists = MEXCO
+						}
+					}			
+					OR = {
+						owns = location:tenochtitlan
+						OR = {
+							religion = religion:nahuatl
+							culture = culture:nahua_culture
+						}
+					}
+				}
+				name = MEXCO
+				flag = MEXCO
+				adjective = MEXCO_ADJ
+				tag = MEXCO
+				color = map_MEXCO
+				regions = { mesoamerica_region }
+				areas = { guachichil_area tamaulipeco_area culiacan_area tahejoc_area zacatecas_area }
+				locations = { sobaipuri jocome }
+			}	
 		# TODO: Brandenburg-Prussia (TODO)
+		# Poland-Hungary - althistory
+			PLHUN = {
+				level = 3
+				required_locations_fraction = 0.65
+				rule = plausible
+				potential = {
+					AND = {
+						OR = {
+							has_variable = fnr_fantasy_enabled
+							has_variable = fnr_camelotcountry_enabled
+						}
+						NOT = { has_variable = fnr_camelotcountry_disabled }
+					}
+					NOT = {
+						OR = {
+							tag = PLHUN
+							tag_exists = PLHUN
+						}
+					}
+					OR = {
+						tag = POL
+						tag = HUN
+						culture = culture:polish
+						culture = culture:hungarian
+					}
+				}
+				name = PLHUN
+				flag = PLHUN
+				adjective = PLHUN_ADJ
+				tag = PLHUN
+				color = map_PLHUN
+				areas = { lesser_poland_area central_poland_area greater_poland_area slovakia_area north_alfold_area transdanubia_area south_alfold_area transylvania_area mazovia_area red_ruthenia_area volhynia_area }
+			}				
+		# Camelot - Fantasy
+			CMLOT = {
+				level = 3
+				required_locations_fraction = 0.65
+				rule = plausible
+				potential = {
+					AND = {
+						OR = {
+							has_variable = fnr_fantasy_enabled
+							has_variable = fnr_camelotcountry_enabled
+						}
+						NOT = { has_variable = fnr_camelotcountry_disabled }
+					}
+					NOT = {
+						OR = {
+							tag = CMLOT
+							tag_exists = CMLOT
+						}
+					}
+					OR = {
+						tag = CRN
+						culture = culture:cornish
+					}
+				}
+				name = CMLOT
+				flag = CMLOT
+				adjective = CMLOT_ADJ
+				tag = CMLOT
+				color = map_CMLOT
+				areas = { west_country_area }
+			}	
+		# Great Moravia - historical
+			GMORV = {
+				level = 3
+				required_locations_fraction = 0.65
+				rule = plausible
+				potential = {
+					AND = {
+						OR = {
+							has_variable = fnr_historical_enabled
+							has_variable = fnr_greatmoraviacountry_enabled
+						}
+						NOT = { has_variable = fnr_greatmoraviacountry_disabled }
+					}
+					NOT = {
+						OR = {
+							tag = GMORV
+							tag_exists = GMORV
+						}
+					}
+					OR = {
+						tag = MVA
+						culture = culture:moravian
+					}
+				}
+				name = GMORV
+				flag = GMORV
+				adjective = GMORV_ADJ
+				tag = GMORV
+				color = map_GMORV
+				areas = { moravia_area bohemia_area silesia_area }
+				form_effect = {
+					add_reform = government_reform:fnr_heirs_of_nitra
+					custom_tooltip = { text = GMORV_formable_trigger_1_tt }
+					hidden_effect = {
+						every_pop = {
+							limit = {
+								religion != religion:hussite
+								religion.group = religion_group:christian
+							}
+							split_pop = {
+								fraction = 0.05
+								religion = religion:hussite
+							}
+						}
+					}
+				}
+			}	
+		# Gothia - non-historical
+			GOTIA = {
+				level = 3
+				required_locations_fraction = 0.65
+				rule = plausible
+				potential = {
+					AND = {
+						OR = {
+							has_variable = fnr_nonhistorical_enabled
+							has_variable = fnr_gothiacountry_enabled
+						}
+						NOT = { has_variable = fnr_gothiacountry_disabled }
+					}
+					NOT = { 
+						OR = {
+							tag = GOTIA
+							tag_exists = GOTIA
+						}
+					}
+					OR = {
+						tag = FEO
+						culture = culture:gothic_culture
+					}
+				}
+				name = GOTIA
+				flag = GOTIA
+				adjective = GOTIA_ADJ
+				tag = GOTIA
+				color = map_GOTIA
+				areas = { crimea_area yedisan_area }
+			}		
 		# Basque Country - Non-historical
 			BASQU = {
 				level = 3
@@ -4908,7 +5276,10 @@
 					}
 					culture = { has_culture_group = culture_group:british_group }
 				}
-				allow = { government_type = government_type:republic }
+				allow = {
+					current_age_or_later = { age = age_5_absolutism }
+					government_type = government_type:republic 
+				}
 				name = ENGCM
 				flag = GBR_republic
 				adjective = ENGCM_ADJ
@@ -5225,6 +5596,92 @@
 				tag = LMBDY
 				color = map_LMBDY
 				areas = { lombardy_area }
+			}
+		# Sardinia–Piedmont
+			SDPDM = {
+				level = 3
+				required_locations_fraction = 0.85
+				rule = plausible
+				potential = {
+					AND = {
+						OR = {
+							has_variable = fnr_althistory_enabled
+							has_variable = fnr_sardiniapiedmont_enabled
+						}
+						NOT = { has_variable = fnr_sardiniapiedmont_disabled }
+					}
+					NOT = { 
+						OR = {
+							tag = SDPDM
+							tag_exists = SDPDM
+						}
+					}
+					culture = { has_culture_group = culture_group:italian_group }
+				}
+				name = SDPDM
+				flag = SDPDM
+				adjective = SDPDM_ADJ
+				tag = SDPDM
+				color = map_SDPDM
+				locations = { peschiera }
+				provinces = { punente_province levante_province  }
+				areas = { lombardy_area piemonte_area sardinia_area  }
+			}
+		# North Italian Confederation
+			NITAC = {
+				level = 3
+				required_locations_fraction = 0.90
+				rule = plausible
+				potential = {
+					AND = {
+						OR = {
+							has_variable = fnr_althistory_enabled
+							has_variable = fnr_northitalianconfed_enabled
+						}
+						NOT = { has_variable = fnr_northitalianconfed_disabled }
+					}
+					NOT = { 
+						OR = {
+							tag = NITAC
+							tag_exists = NITAC
+						}
+					}
+					culture = { has_culture_group = culture_group:italian_group }
+				}
+				name = NITAC
+				flag = NITAC
+				adjective = NITAC_ADJ
+				tag = NITAC
+				color = map_NITAC
+				areas = { lombardy_area emilia_area piemonte_area veneto_area tuscany_area liguria_area }
+			}
+		# South Italian Confederation
+			SITAC = {
+				level = 3
+				required_locations_fraction = 0.90
+				rule = plausible
+				potential = {
+					AND = {
+						OR = {
+							has_variable = fnr_althistory_enabled
+							has_variable = fnr_southitalianconfed_enabled
+						}
+						NOT = { has_variable = fnr_southitalianconfed_disabled }
+					}
+					NOT = { 
+						OR = {
+							tag = SITAC
+							tag_exists = SITAC
+						}
+					}
+					culture = { has_culture_group = culture_group:italian_group }
+				}
+				name = SITAC
+				flag = SITAC
+				adjective = SITAC_ADJ
+				tag = SITAC
+				color = map_SITAC
+				areas = { marche_area lazio_area abruzzo_area campania_area apulia_area basilicata_area sicily_area sardinia_area }
 			}
 		# Lombardy-Venetia - Historical
 			LMBYV = {
@@ -5707,7 +6164,7 @@
 		# Taiping - Non-historical
 			TPING = {
 				level = 3
-				required_locations_fraction = 0.68
+				required_locations_fraction = 0.51
 				rule = plausible
 				potential = {
 					AND = {
@@ -5729,18 +6186,48 @@
 					}
 				}
 				allow = {
-					religion = religion:catholic
-					NOT = { tag = c:CHI }
+					OR = {
+						religion = religion:catholic
+						NOT = { tag = c:CHI }
+					}
 				}
 				name = TPING
 				flag = TPING
 				adjective = TPING_ADJ
 				tag = TPING
 				color = map_TPING
-				regions = { east_china_region }
-				form_effect = { # TODO: fix these effects (perhaps add a major reform to assimilate)
-					change_religion = religion:catholic
-					change_religion_for_ruler_and_family = { country = ROOT religion = religion:catholic }
+				areas = { zhejiang_area fujian_area jiangxi_area jiangnan_area guangdong_area hubei_area hunan_area guangxi_area huaidong_area }
+				form_effect = {
+					change_religion = religion:fnr_god_worshipping_society_taiping
+					change_religion_for_ruler_and_family = { country = ROOT religion = religion:fnr_god_worshipping_society_taiping }
+					custom_tooltip = { text = TPING_formable_trigger_1_tt }
+					custom_tooltip = { text = TPING_formable_trigger_2_tt }
+					hidden_effect = {
+						every_pop = {
+							limit = {
+								OR = {
+									NOT = {
+										religion = religion:fnr_god_worshipping_society_taiping
+									}
+								}
+							}
+							split_pop = {
+								fraction = 0.25
+								religion = religion:fnr_god_worshipping_society_taiping
+							}
+						}
+						every_pop = { # Catholic
+							limit = {
+								NOT = {
+									religion = religion:catholic
+								}
+							}
+							split_pop = {
+								fraction = 0.025
+								religion = religion:catholic
+							}
+						}
+					}
 				}
 			}
 		# Taliban - Modern
@@ -5841,7 +6328,7 @@
 		# Vietnam - Modern
 			VTNAM = {
 				level = 3
-				required_locations_fraction = 0.65
+				required_locations_fraction = 0.80
 				rule = plausible
 				potential = {
 					AND = {
@@ -6552,6 +7039,7 @@
 				areas = { friesland_area }
 			}
 		# Kingdom of God - Fantasy # TODO: wont show for papacy, I'm assuming it is prevented from seeing formables or something
+		# TODO: papacy locks formables, so perhaps an event for papacy when they control 35% of italy to create the formable
 			KOGOD = {
 				level = 3
 				required_locations_fraction = 0.35
@@ -6572,7 +7060,8 @@
 					}
 					AND = {
 						culture = { has_culture_group = culture_group:italian_group }
-						tag = PAP
+						has_reform = government_reform:papacy_reform
+						tag = PAP # Pointless tbh
 					}
 				}
 				allow = { tag = c:PAP }
@@ -6685,6 +7174,89 @@
 				}
 			}	
 	# Rank 4
+		# Hyperborea
+			HPBRA = {
+				level = 4
+				required_locations_fraction = 0.65
+				rule = plausible
+				potential = {
+					AND = {
+						OR = {
+							has_variable = fnr_meme_enabled
+							has_variable = fnr_hyperborea_enabled
+						}
+						NOT = { has_variable = fnr_assyriaempire_disabled }
+					}
+					NOT = { 
+						OR = {
+							tag = HPBRA
+							tag_exists = HPBRA
+						}
+					}
+				}
+				name = HPBRA
+				flag = HPBRA
+				adjective = HPBRA_ADJ
+				tag = HPBRA
+				color = map_HPBRA
+				regions = { east_siberia_region west_siberia_region alaska_region }
+				form_effect = {
+					if = {
+						limit = { country_rank_level < 4 }
+						set_country_rank_effect = { rank = country_rank:rank_empire }
+					}					
+				}
+			}
+		# Assyrian Empire - Fantasy
+			ASYRE = {
+				level = 4
+				required_locations_fraction = 0.90
+				rule = plausible
+				potential = {
+					AND = {
+						OR = {
+							has_variable = fnr_fantasy_enabled
+							has_variable = fnr_assyriaempire_enabled
+						}
+						NOT = { has_variable = fnr_assyriaempire_disabled }
+					}
+					tag = ASYRI
+					NOT = { 
+						OR = {
+							tag = ASYRE
+							tag_exists = ASYRE
+						}
+					}
+					OR = {
+						culture = culture:syriac_culture
+						has_accepted_culture = culture:syriac_culture
+					}
+				}
+				name = ASYRE
+				flag = ASYRE
+				adjective = ASYRE_ADJ
+				tag = ASYRE
+				color = map_ASYRE
+				regions = { crescent_region }
+				areas = { levant_area armenian_highlands_area }
+				form_effect = {
+					# City Rename Handler (TODO: rework later to grow instead as dynamic optional events)
+					location:mosul = { rename_location = Nineveh }
+					location:erbil = { rename_location = Arbela }	
+					location:kirkuk = { rename_location = Arrapha }	
+					location:duhok = { rename_location = Nohadra }
+					location:tikrit = { rename_location = Aššur }
+					location:akre = { rename_location = Nohadra }					
+					custom_tooltip = { text = ASYRE_f_tt1 }	
+					hidden_effect = {
+												
+					}
+					if = {
+						limit = { country_rank_level < 3 }
+						set_country_rank_effect = { rank = country_rank:rank_empire }
+					}					
+				}
+			}
 		# Japan - Modern
 			JAPAN = {
 				level = 4
@@ -6734,6 +7306,44 @@
 						}
 					}
 					culture = { has_culture_group = culture_group:british_group }
+				}
+				allow = {
+					OR = {
+						AND = {
+							region:france_region = {
+								any_ownable_location_in_region = {
+									custom_tooltip = {
+										text = fnr_dm_owned_by_eng_tt
+										owner = { this = c:ENG }
+									}
+									count > 120
+								}
+							}
+							region:great_britain_region = {
+								any_ownable_location_in_region = {
+									custom_tooltip = {
+										text = fnr_dm_owned_by_eng_tt
+										owner = { this = c:ENG }
+									}
+									count > 140
+								}
+							}
+						}	
+						# TODO: England has full control of the French Region
+						custom_tooltip = {
+							text = england_has_enforced_union_through_claim_french_throne_treaty_tt
+							c:ENG = {
+								in_union_with = c:FRA
+								union ?= {
+									international_organization_has_policy = policy:union_establish_seniority_policy
+									country_has_special_status = {
+										type = special_status:senior_partner
+										country = c:ENG
+									}
+								}
+							}
+						}
+					}
 				}
 				name = AGEVN
 				flag = AGEVN
@@ -7494,7 +8104,7 @@
 		# Himalayan Empire - Fantasy
 			HMLAY = {
 				level = 4
-				required_locations_fraction = 0.20
+				required_locations_fraction = 0.35
 				rule = plausible
 				potential = {
 					AND = {
@@ -7521,7 +8131,9 @@
 				adjective = HMLAY_ADJ
 				tag = HMLAY
 				color = map_HMLAY
-				regions = { hindustan_region tibet_region }
+				regions = { tibet_region }
+				areas = { nepal_area upper_indus_area monyul_area }
+				provinces = { kangra_province punjab_hills_province }
 				form_effect = {
 					if = {
 						limit = { country_rank_level < 4 }
@@ -7713,7 +8325,6 @@
 				level = 4
 				required_locations_fraction = 0.75
 				rule = plausible
-				
 				potential = {
 					AND = {
 						OR = {
@@ -7733,10 +8344,9 @@
 						culture = culture:low_franconian
 					}
 				}
-
 				allow = {
+					dynasty = "orange_nassau" 
 				}
-				
 				name = ANDUH
 				flag = ANDUH
 				adjective = ANDUH_ADJ
@@ -7747,10 +8357,13 @@
 					home_counties_area
 					east_anglia_area
 					west_country_area
+					northumbria_area
 					midlands_area
 					flanders_area
 					holland_area
 					friesland_area
+					brabant_area
+					wallonia_area
 				}
 				form_effect = {
 				}
@@ -7858,6 +8471,7 @@
 							tag = DLMON
 							tag_exists = DLMON
 						}
+						tag = AGEVN
 					}
 					OR = {
 						culture = { has_culture_group = culture_group:british_group }
@@ -7865,19 +8479,63 @@
 					}
 				}
 				allow = {
-					# TODO: add a check for owning at least 50% land in both Britain AND france					
+					OR = {
+						AND = { # England
+							region:france_region = {
+								any_ownable_location_in_region = {
+									custom_tooltip = {
+										text = fnr_dm_owned_by_eng_tt
+										owner = { this = c:ENG }
+									}
+									count > 200
+								}
+							}
+							region:great_britain_region = {
+								any_ownable_location_in_region = {
+									custom_tooltip = {
+										text = fnr_dm_owned_by_eng_tt
+										owner = { this = c:ENG }
+									}
+									count > 200
+								}
+							}
+						}
+						AND = { # France
+							region:france_region = {
+								any_ownable_location_in_region = {
+									custom_tooltip = {
+										text = fnr_dm_owned_by_fra_tt
+										owner = { this = c:FRA }
+									}
+									count > 200
+								}
+							}
+							region:great_britain_region = {
+								any_ownable_location_in_region = {
+									custom_tooltip = {
+										text = fnr_dm_owned_by_fra_tt
+										owner = { this = c:FRA }
+									}
+									count > 200
+								}
+							}
+						}
+					}			
 				}
 				name = DLMON
 				flag = DLMON
 				adjective = DLMON_ADJ
 				tag = DLMON
 				color = map_DLMON
-				regions = { france_region great_britain_region }
+				areas = { west_country_area home_counties_area east_anglia_area midlands_area northumbria_area wales_area brittany_area normandy_area anjou_area guyenne_area gascony_area languedoc_area poitou_area limousin_province ile_de_france_area orleanais_area  }
+				regions = { ireland_region }
+				locations = { mann }
 				form_effect = {
 					if = {
 						limit = { country_rank_level < 4 }
 						set_country_rank_effect = { rank = country_rank:rank_empire }
 					}
+					change_culture = fnr_anglois
 				}
 			}
 		# Franco-Iberian Empire - Fantasy
@@ -7920,7 +8578,7 @@
 		# Gallic Empire - Non-historical
 			GLCEM = {
 				level = 4
-				required_locations_fraction = 0.60
+				required_locations_fraction = 0.01 # 0.60
 				rule = plausible
 				potential = {
 					AND = {
@@ -7936,7 +8594,10 @@
 							tag_exists = GLCEM
 						}
 					}
-					culture = { has_culture_group = culture_group:french_group }
+					AND = {
+						culture = culture:gallo
+						NOT = { culture = culture:french }
+					}
 				}
 				name = GLCEM
 				flag = GLCEM
@@ -7949,8 +8610,205 @@
 						limit = { country_rank_level < 4 }
 						set_country_rank_effect = { rank = country_rank:rank_empire }
 					}
+					change_culture = culture:fnr_gallo_roman
+					set_liturgical_language = dialect:fnr_gaulish_language
+					set_court_language = dialect:fnr_gaulish_language
+					custom_tooltip = { text = GLCEM_formable_trigger_1_tt }
+					hidden_effect = {
+						every_pop = {
+							limit = {
+								NOT = {
+									culture = culture:fnr_gallo_roman
+								}
+							}
+							split_pop = {
+								fraction = 0.225
+								culture = culture:fnr_gallo_roman
+							}
+						}
+					}
+					change_religion = religion:fnr_gallo_roman_religion
+					change_religion_for_ruler_and_family = { country = ROOT religion = religion:fnr_gallo_roman_religion }
+					custom_tooltip = { text = GLCEM_formable_trigger_3_tt }
+					hidden_effect = {
+						every_pop = {
+							limit = {
+								NOT = {
+									religion = religion:fnr_gallo_roman_religion
+								}
+							}
+							split_pop = {
+								fraction = 0.225
+								religion = religion:fnr_gallo_roman_religion
+							}
+						}
+					}
+					custom_tooltip = { text = GLCEM_formable_trigger_2_tt }
+					hidden_effect = {
+					# Tarraconensis	
+						every_owned_location = {
+							limit = {
+								region = iberia_region
+							}
+							save_scope_as = target_location
+						}
+						scope:target_location = {
+							create_country_from_location = {
+								save_scope_as = fnr_tarraconensis
+								set_country_rank = country_rank:rank_kingdom
+							}
+						}
+						scope:fnr_tarraconensis = {
+							form_country = formable_country:TRCNS
+							change_country_color = map_TRCNS
+							set_new_ruler = root.ruler
+							change_religion = religion:fnr_gallo_roman_religion
+							change_religion_for_ruler_and_family = { country = scope:fnr_tarraconensis religion = religion:fnr_gallo_roman_religion }
+							make_subject_of = {
+								target = root
+								type = subject_type:vassal
+							}
+						}
+						every_owned_location = {
+							limit = {
+								region = iberia_region
+							}
+							change_location_owner = scope:fnr_tarraconensis
+							add_core = scope:fnr_tarraconensis
+							change_integration_level = core
+						}
+					# Brittania
+						every_owned_location = {
+							limit = {
+								region = great_britain_region
+							}
+							save_scope_as = target_location
+						}
+						scope:target_location = {
+							create_country_from_location = {
+								save_scope_as = fnr_brittania
+								set_country_rank = country_rank:rank_kingdom
+							}
+						}
+						scope:fnr_brittania = {
+							form_country = formable_country:BRTNA
+							change_country_color = map_BRTNA
+							set_new_ruler = root.ruler
+							change_religion = religion:fnr_gallo_roman_religion
+							change_religion_for_ruler_and_family = { country = scope:fnr_brittania religion = religion:fnr_gallo_roman_religion }
+							make_subject_of = {
+								target = root
+								type = subject_type:vassal
+							}
+						}
+						every_owned_location = {
+							limit = {
+								region = great_britain_region
+							}
+							change_location_owner = scope:fnr_brittania
+							add_core = scope:fnr_brittania
+							change_integration_level = core
+						}
+					}
+					custom_tooltip = { text = GLCEM_formable_trigger_4_tt }
 				}
 			}
+		# Tarraconensis
+			TRCNS = {
+				level = 3
+				required_locations_fraction = 0.85
+				rule = plausible	
+				potential = {
+					AND = {
+						OR = {
+							has_variable = fnr_fantasy_enabled
+							has_variable = fnr_iberianempire_enabled
+						}
+						NOT = { has_variable = fnr_iberianempire_disabled }
+					} 
+					NOT = { 
+						OR = {
+							tag = TRCNS
+							tag_exists = TRCNS
+						}
+					}
+					culture = { has_culture_group = culture_group:iberian_group }
+				}
+				name = TRCNS
+				flag = TRCNS
+				adjective = TRCNS_ADJ
+				tag = TRCNS
+				color = map_TRCNS
+				areas = {
+					aragon_area
+					catalonia_area
+					valencia_area
+					murcia_area
+					toledo_area
+					navarre_area
+					castile_area
+					galicia_area
+				}
+				provinces = {
+					west_asturias_province
+					east_asturias_province
+					astorga_province
+					leon_province
+					benavente_province
+					zamora_province
+				}
+				form_effect = {
+					if = {
+						limit = { country_rank_level < 3 }
+						set_country_rank_effect = { rank = country_rank:rank_kingdom }
+					}
+				}
+			}			
+		# Britannia
+			BRTNA = {
+				level = 3
+				required_locations_fraction = 0.85
+				rule = plausible	
+				potential = {
+					AND = {
+						OR = {
+							has_variable = fnr_fantasy_enabled
+							has_variable = fnr_britannia_enabled
+						}
+						NOT = { has_variable = fnr_britannia_disabled }
+					} 
+					NOT = { 
+						OR = {
+							tag = BRTNA
+							tag_exists = BRTNA
+						}
+					}
+					culture = { has_culture_group = culture_group:iberian_group }
+				}
+				name = BRTNA
+				flag = BRTNA
+				adjective = BRTNA_ADJ
+				tag = BRTNA
+				color = map_BRTNA
+				area = {
+					west_country_area
+					home_counties_area
+					east_anglia_area
+					murcia_area
+					wales_area
+					midlands_area					
+				}
+				form_effect = {
+					if = {
+						limit = { country_rank_level < 3 }
+						set_country_rank_effect = { rank = country_rank:rank_kingdom }
+					}
+				}
+			}
+		# Lusitania
+
+		# Baetica
+
 		# Hungarian Empire - Alt-history
 			HNGEM = {
 				level = 4
@@ -7971,6 +8829,11 @@
 						}
 					}
 					culture = { has_culture_group = culture_group:hungarian_group }
+				}
+				allow = {
+					OR = {
+
+					}
 				}
 				name = HNGEM
 				flag = HNGEM
@@ -8099,7 +8962,7 @@
 			}
 		# Ummayad Caliphate - Non-historical
 			UMAYA = {
-				level = 4
+				level = 5
 				required_locations_fraction = 0.35
 				rule = plausible
 				potential = {
@@ -8115,6 +8978,8 @@
 							tag = UMAYA
 							tag_exists = UMAYA
 						}
+						tag = ASYRI
+						tag = ASYRE
 					}
 					OR = {
 						culture = { has_culture_group = culture_group:iranian_group }
@@ -8155,6 +9020,8 @@
 							tag = RSHDN
 							tag_exists = RSHDN
 						}
+						tag = ASYRI
+						tag = ASYRE
 					}
 					OR = {
 						culture = { has_culture_group = culture_group:iranian_group }
@@ -8197,6 +9064,8 @@
 							tag = ABSID
 							tag_exists = ABSID
 						}
+						tag = ASYRI
+						tag = ASYRE
 					}
 					OR = {
 						culture = { has_culture_group = culture_group:iranian_group }
@@ -8239,6 +9108,8 @@
 							tag = FTMID
 							tag_exists = FTMID
 						}
+						tag = ASYRI
+						tag = ASYRE
 					}
 					OR = {
 						culture = { has_culture_group = culture_group:iranian_group }
@@ -8266,7 +9137,7 @@
 		# East Francia - Non-historical (post carolingian germany)
 			KOGER = {
 				level = 4
-				required_locations_fraction = 0.40
+				required_locations_fraction = 0.70
 				rule = plausible
 				potential = {
 					AND = {
@@ -8289,7 +9160,8 @@
 				adjective = KOGER_ADJ
 				tag = KOGER
 				color = map_KOGER
-				regions = { north_german_region south_german_region italy_region }
+				areas = { holstein_area lower_saxony_area westphalia_area hesse_area franconia_area bavaria_area swabia_area austria_area upper_austria_area slovenia_area }
+				provinces = { altmark_province thuringer_wald_province lower_carinthia_province upper_styria_province pongau_province salzburger_land_province odenwald_province }
 			}
 		# Lusitanian Empire - Non-historical
 			LUSIT = {
@@ -8396,12 +9268,20 @@
 					}
 					culture = { has_culture_group = culture_group:british_group }
 				}
+				allow = {
+					current_age_or_later = { age = age_6_revolutions }
+					OR = {
+						tag = GBR
+						tag = UKKDM
+					}
+				}
 				name = BISHE
 				flag = GBR_uk
 				adjective = BISHE_ADJ
 				tag = BISHE
 				color = map_BISHE
 				regions = { great_britain_region deccan_region central_india_region }
+				locations = { gibraltar ciudadela_de_menorca }
 				form_effect = {
 					if = {
 						limit = { country_rank_level < 4 }
@@ -8866,7 +9746,7 @@
 		# Macedonian Empire - Non-historical
 			MCDEM = {
 				level = 5
-				required_locations_fraction = 0.75
+				required_locations_fraction = 0.69
 				rule = plausible
 				potential = {
 					AND = {
@@ -8885,6 +9765,23 @@
 					OR = {
 						culture = culture:hellenic
 						culture = { has_culture_group = culture_group:greek_group }
+					}
+				}
+				allow = {
+					not = { tag = BYZ }
+					OR = {
+						religion.group = religion_group:christian
+						religion = religion:hellenism_religion
+					}
+					trigger_if = {
+						OR = {
+							culture = culture:hellenic
+							culture = { has_culture_group = culture_group:greek_group }
+						}
+						OR = {
+							religion.group = religion_group:christian
+							religion = religion:hellenism_religion
+						}
 					}
 				}
 				name = MCDEM

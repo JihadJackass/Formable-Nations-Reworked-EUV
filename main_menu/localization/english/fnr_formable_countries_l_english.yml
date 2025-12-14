@@ -1,5 +1,18 @@
 ﻿l_english:
 
+  # customizable loc "$PREFIX$ $RANK$ of $ARTICLE$ $NAME$"
+
+
+
+    fnr_country_name_construction_name: "$NAME$"
+    fnr_country_name_construction_name_map: "$NAME$"
+    fnr_country_name_construction_prefix_rank_of_name_but_map_is_just_prefix_rank: "$PREFIX$ $RANK$ of $ARTICLE$ $NAME$"
+    fnr_country_name_construction_prefix_name: "$PREFIX$ $NAME$"
+    fnr_country_name_construction_prefix_name_rank: "$PREFIX$ $NAME$ $RANK$"
+    fnr_country_name_construction_prefix_adjective_rank: "$PREFIX$ $ADJ$ $RANK$"
+
+
+
   # vanilla formables
 
     # Russian Tsardom
@@ -394,7 +407,7 @@
     # Taiping
     TPING: "Taiping Heavenly Kingdom"
     TPING_ADJ: "Taiping"
-    TPING_desc: "he Taiping Heavenly Kingdom was a theocratic monarchy that existed from 1851–1864 in southern and central China, with its capital at Nanjing. It was led by Hong Xiuquan and aimed to overthrow the Qing dynasty through a rebellion based on a form of Christianity, common ownership of land, and radical social reforms such as abolishing foot-binding and granting women equal rights. Despite initial success in seizing major cities, the kingdom ultimately failed due to internal strife and Qing forces, ultimately collapsing in 1864"
+    TPING_desc: "The Taiping Heavenly Kingdom was a theocratic monarchy that existed from 1851–1864 in southern and central China, with its capital at Nanjing. It was led by Hong Xiuquan and aimed to overthrow the Qing dynasty through a rebellion based on a form of Christianity, common ownership of land, and radical social reforms such as abolishing foot-binding and granting women equal rights. Despite initial success in seizing major cities, the kingdom ultimately failed due to internal strife and Qing forces, ultimately collapsing in 1864"
 
     # Taliban
     TLBAN: "Taliban"
@@ -475,6 +488,56 @@
   # NON-HISTORICAL FORMABLES #
   ############################
 
+    # Sardinia-Piedmont
+    SDPDM: "Sardinia-Piedmont"
+    SDPDM_ADJ: "Sardinian-Piedmontese"
+    SDPDM_desc: "Sardinia-Piedmont was a powerful Italian state ruled by the House of Savoy, uniting the island of Sardinia with the mainland territories of Piedmont after 1720, becoming a key player in Italian unification (Risorgimento) under Victor Emmanuel II, culminating in it becoming the foundation for the unified Kingdom of Italy in 1861, despite French interruptions and wars with Austria."
+
+    # North Italian Confederation
+    NITAC: "North Italian Confederation"
+    NITAC_ADJ: "North Italian"
+    NITAC_desc: "The 'North Italian Confederation' generally refers to hypothetical or historical alternative scenarios rather than a single, long-standing historical state. In actual history, northern Italy was a collection of various independent states, city-states, and territories under foreign control (notably Austrian) before the unification of Italy in 1861."
+
+    # South Italian Confederation
+    SITAC: "South Italian Confederation"
+    SITAC_ADJ: "South Italian"
+    SITAC_desc: "The 'South Italian Confederation' generally refers to hypothetical or historical alternative scenarios rather than a single, long-standing historical state. In actual history, southern Italy was a collection of various independent states, city-states, and territories under foreign control (notably Austrian) before the unification of Italy in 1861."
+
+    # Mexico
+    MEXCO: "Mexico"
+    MEXCO_ADJ: "Mexican"
+    MEXCO_desc: "From the deserts of the north to the jungles of the south, from the shores of two great oceans to the highlands of the interior, these lands have witnessed the rise and fall of mighty civilizations. The legacy of the Mexica, the Maya, and countless other peoples runs deep in this earth.\n\nBy uniting the diverse peoples and territories of this vast region, we forge México - a nation rich in silver, abundant in crops, and unmatched in cultural heritage. Here, ancient cities stand beside colonial settlements, and the wealth of the land flows through our hands. Let all powers recognize that México stands as master of its own destiny, a sovereign realm worthy of respect and fear."
+
+    # Oklahoma
+    OKLAH: "Oklahoma"
+    OKLAH_ADJ: "Oklahoman"
+    OKLAH_desc: "The lands between the Red River and the Arkansas span prairies, woodlands, and hills - home to the Caddo, Wichita, Osage, and numerous other peoples. These territories stand at the crossroads of competing powers, yet offer rich soil, abundant game, and strategic river valleys.\n\nBy uniting the settlements and tribes of this region, we forge a nation that controls vital trade routes between the Great Plains and the forested East. Oklahoma - named for the Choctaw words meaning 'red people' - shall stand as a sovereign power, drawing strength from the diversity of its inhabitants and the wealth of its land."
+
+    # Florida
+    FLRDA: "Florida"
+    FLRDA_ADJ: "Floridian"
+    FLRDA_desc: ""
+
+    # Poland-Hungary
+    PLHUN: "Poland-Hungary"
+    PLHUN_ADJ: "Polish-Hungarian"
+    PLHUN_desc: "The Poland-Hungary union was a personal union that occurred twice, where one monarch ruled both kingdoms without merging their institutions. The first was from 1370 to 1382 under Louis I of Hungary, and the second from 1440 to 1444 under Władysław III of Poland. Both unions were temporary and ended due to succession issues or the death of the monarch."
+
+    # Camelot
+    CMLOT: "Camelot"
+    CMLOT_ADJ: "Camelot"
+    CMLOT_desc: "Camelot refers to the legendary court of King Arthur, a symbol of a just and utopian kingdom built around the Knights of the Round Table\n\nThe story often focuses on the ideals of Camelot being threatened by the love triangle between Queen Guenevere and Sir Lancelot, and the treachery of Arthur's illegitimate son, Mordred. Ultimately, the conflict leads to the downfall of Arthur's dream of a perfect kingdom, though the legend endures as a symbol of greatness and an idealized time."
+
+    # Great Moravia
+    GMORV: "Great Moravia"
+    GMORV_ADJ: "Moravian"
+    GMORV_desc: "Great Moravia was a significant West Slavic state in Central Europe from roughly 833 to 907, with its heartland in modern-day Czech Republic and Slovakia. It was a major hub for the Christianization of the Slavs, notable for the missionary work of Cyril and Methodius, and laid the foundation for future Slavic literature and culture. At its peak under ruler Svatopluk I, it was a powerful state that acted as a buffer between the Frankish Empire and nomadic tribes. Its decline was triggered by internal conflicts and invasions, notably from the Magyars"
+
+    # Gothia
+    GOTIA: "Gothia"
+    GOTIA_ADJ: "Gothian"
+    GOTIA_desc: "Historically, 'Gothia' referred to various territories settled and ruled by the Germanic Goth people in the Roman and Late Antique periods. These regions included areas north of the lower Danube in modern Romania, Moldova, and Ukraine, as well as a Roman province in the 4th century AD."
+
     # Alaska
     ALSKA: "Alaska"
     ALSKA_ADJ: "Alaskan"
@@ -546,7 +609,7 @@
 
     # Dual Monarchy
     DLMON: "Dual Monarchy"
-    DLMON_ADJ: "Dual Monarchy"
+    DLMON_ADJ: "Anglois"
     DLMON_desc: "~~Alternate History~~\n\nThe dual monarchy of England and France was a period from 1422 to 1453 where the infant King Henry VI of England was recognized as the monarch of both England and France, though his claim was disputed. It was established by the Treaty of Troyes following Henry V's invasion and English control of northern France during the Hundred Years' War. The claim was contested by the Dauphin Charles, who controlled southern France, and it ended when the French, led by Charles VII, gradually expelled the English from all territories except Calais."
 
     # East Slavia
@@ -564,6 +627,15 @@
     ASYRI_ADJ: "Assyrian"
     ASYRI_desc: "Assyria was a major Mesopotamian kingdom and one of the earliest great empires in the ancient Middle East, located in what is now northern Iraq and southeastern Turkey. It is also the name for the homeland of the Assyrian people, a region within Upper Mesopotamia that is now divided between present-day Iraq, Turkey, Iran, and Syria. The empire, known for its military might and large territory that stretched from the Persian Gulf to the Mediterranean Sea between 900 and 600 BC, took its name from its first capital city, Ashur."
 
+    # Assyrian Empire
+    ASYRE: "Assyrian Empire"
+    ASYRE_ADJ: "Assyrian"
+    ASYRE_desc: "From the ancient city of #color_yellow Ashur#! on the Tigris, the #color_yellow Assyrian Empire#! once dominated the Near East through military might and administrative genius. At its height under kings like #color_yellow Ashurbanipal#! and #color_yellow Sennacherib#!, Assyrian armies marched from the mountains of #color_yellow Anatolia#! to the deserts of #color_yellow Egypt#!, from the Mediterranean coast to the #color_yellow Persian highlands#!. The great capital of #color_yellow Nineveh#! housed the world's first systematically organized library, while Assyrian governors ruled distant provinces through an intricate network of roads, messengers, and garrisons. Though the empire fell to the combined forces of #color_yellow Babylon#! and #color_yellow Media#! in 612 BCE, its legacy endures in the ruins of palaces and the memory of peoples across these lands. By reuniting the territories once governed from #color_yellow Nineveh#! and #color_yellow Ashur#!, we do not merely conquer cities and provinces. We resurrect an empire that brought law, learning, and order to the civilized world. The Akkadian tongue of our ancestors shall be honored, and the name of #color_yellow Assyria#! shall strike fear into our enemies once more."
+
+    HPBRA: "Hyperborea"
+    HPBRA_ADJ: "Hyperborean"
+    HPBRA_desc: "Hyperborea is a legendary land from Greek mythology, envisioned as a perfect, sun-blessed utopia in the far North where people lived long and happy lives, beyond the reach of the North Wind (Boreas)."
+
     # Frieslande
     FIESL: "Frieslande"
     FIESL_ADJ: "Frieslande"
@@ -573,6 +645,14 @@
     GLCEM: "Gallic Empire"
     GLCEM_ADJ: "Gallic"
     GLCEM_desc: "The Gallic Empire was a breakaway part of the Roman Empire that existed from 260 to 274 AD, during the Crisis of the Third Century. It was established by the Roman commander Postumus and included the territories of Gaul, Britannia, and Hispania. The empire had its own government and mint."
+
+    TRCNS: "Tarraconensis"
+    TRCNS_ADJ: "Tarraconensis"
+    TRCNS_desc: "todo"
+
+    BRTNA: "Britannia"
+    BRTNA_ADJ: "Britannian"
+    BRTNA: "Britannia"
 
     # Hungarian Empire
     HNGEM: "Hungarian Empire"

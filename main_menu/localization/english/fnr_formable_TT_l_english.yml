@@ -3,6 +3,7 @@
   # TOOLTIPS FOR FORMABLE NATIONS
 
     fnr_placeholder: ""
+    PAPAL_KINGDOM_OF_GOD_INFO: "#Y As #color_yellow Papal States#!, the Holy See holds a unique position in the world. Unlike other nations, we are bound by sacred duty to shepherd #color_yellow Christendom#! rather than pursue worldly dominion - we cannot form new countries or abandon our divinely ordained role. Yet through divine providence and righteous conquest, we may transform our spiritual authority into temporal sovereignty by establishing the #color_yellow Kingdom of God on Earth#! - a realm where the authority of Christ's Vicar extends beyond spiritual matters to temporal dominion over all #color_yellow Catholic#! lands. An event will present itself when the faithful have rallied sufficiently to our banner and support our claim.#!\n\n#Y Upon conquest of at least #G 50%#! of #color_yellow Italian Territory#! as the #color_yellow Papal States#! we will be presented with the #color_pure_white 'God's Kingdom on Earth'#! event in which we will be offered the title of #color_yellow King of God#! under the newly proclaimed #color_yellow Kingdom of God#!.#!"
 
   # reforms
 
@@ -10,8 +11,23 @@
     # Formable Requirement Tooltips #
     #################################
 
+    fnr_dm_owned_by_fra_tt: "[owner|e] is [GetCountry('FRA').GetName]"
+    fnr_dm_owned_by_eng_tt: "[owner|e] is [GetCountry('ENG').GetName]"
+
+    GMORV_formable_trigger_1_tt: "#G 5%#! of our pops will convert to [ShowReligionName('hussite')] in a spread of religious fervor due to the nature of our national reformation."
+
+    GLCEM_formable_trigger_1_tt: "#G 22.5%#! of our pops will convert to [ShowCultureName('fnr_gallo_roman')]."
+    GLCEM_formable_trigger_2_tt: "If we own territory in [ShowRegionName('iberia_region')] and [ShowRegionName('great_britain_region')] upon formation of the Gallic Empire then we will be given the option of establishing Tarraconensis and Britannia respectively as well as Baetica and Lusitania in [ShowRegionName('iberia_region')]."
+    GLCEM_formable_trigger_3_tt: "#G 12%#! of our pops will convert to [ShowReligionName('fnr_gallo_roman_religion')]."
+    GLCEM_formable_trigger_4_tt: "Upon formation of the Gallic Empire we will be given the option to choose our name styling as Gallic Empire or Gallia."
+
+    TPING_formable_trigger_1_tt: "#G 25%#! of our pops will convert to [ShowReligionName('fnr_god_worshipping_society_taiping')] in full support of the #color_yellow Taiping Rebellion#!."
+    TPING_formable_trigger_2_tt: "#G 0.25%#! of our pops will convert to [ShowReligionName('catholic')]."
+
     ASTBV_formable_trigger_1_tt: "If #Y Austria-Bavaria#! is formed by [GetCountry('HAB').GetNameWithFlag] various Bavarian locations will be renamed in an #Y Austrian-linguistic#! style."
     ASTBV_formable_trigger_2_tt: "If #Y Austria-Bavaria#! is formed by #Y Bavaria#!, [GetCountry('LBV').GetNameWithFlag] or [GetCountry('UBV').GetNameWithFlag] various Austrian locations will be renamed in an #Y Bavarian-linguistic#! style."
+
+    ASYRE_f_tt1: "Various provinces across the #color_yellow Assyrian Empire#! from #color_yellow Upper Mesopotamia#! to #color_yellow Ecbatana#! and as far away from the capital as the Ancient tower city of #color_yellow Migdal#! will be legally changed to the naming structure of the #color_yellow Assyrian language#!."
 
     #################################
     # Formable Requirement Tooltips #

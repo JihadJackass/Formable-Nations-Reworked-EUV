@@ -1,0 +1,21 @@
+﻿fnr_cult_of_personality = {
+	religion = fnr_god_worshipping_society_taiping
+
+	enabled = {
+		is_ai = no
+		always = yes
+	}
+
+	modifier = {
+		rebel_monthly_progress = -0.10
+		land_morale = 0.05
+		pop_leave_rebels_threshold = -0.05
+		monthly_towards_communalism = societal_value_monthly_move
+	}
+
+	opinions = {
+		#adamite_services = 10
+	}
+}
+
+

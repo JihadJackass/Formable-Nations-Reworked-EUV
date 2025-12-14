@@ -1,7 +1,68 @@
 ###########################################
 # Formable Nation Reworked Scripted Flags #
 ###########################################
-
+# Sardinia-Piedmont
+	SDPDM = {
+		textured_emblem = {
+			texture = "te_sardiniapiedmont.dds"
+		}		
+	}
+# North Italian Confederation
+	NITAC = {
+		textured_emblem = {
+			texture = "te_north_italy_confed_base.dds"
+		}
+		textured_emblem = {
+			texture = "te_north_italy_confed.dds"
+			instance = { scale = { 1.5 1.5 } }
+		}		
+	}
+# South Italian Confederation
+	SITAC = {
+		textured_emblem = {
+			texture = "te_north_italy_confed_base.dds"
+		}
+		textured_emblem = {
+			texture = "te_south_italy_confed.dds"
+			instance = { scale = { 0.30 0.55 } }
+		}		
+	}
+# Mexico
+	MEXCO = {
+		textured_emblem = {
+			texture = "te_mexico.dds"
+		}		
+	}
+# Oklahoma
+	OKLAH = {
+		textured_emblem = {
+			texture = "te_oklahoma.dds"
+		}
+	}
+# Poland-Hungary
+	PLHUN = {
+		textured_emblem = {
+			texture = "te_poland_hungary.dds"
+		}
+	}
+# Camelot
+	CMLOT = {
+		textured_emblem = {
+			texture = "te_camelot.dds"
+		}
+	}
+# Great Moravia
+	GMORV = {
+		textured_emblem = {
+			texture = "te_great_moravia.dds"
+		}
+	}
+# Gothia
+	GOTIA = {
+		textured_emblem = {
+			texture = "te_gotia.dds"
+		}
+	}
 # North Sea Empire (White)
 	NSE_WHITE_FNR = { # North Sea Empire
 		pattern = "pattern_solid.dds"
@@ -500,9 +561,9 @@
 # Yugoslavia
 	YGOSL = {
 		pattern = "pattern_jurchen_checky_colours.dds"
-		color1 = "red"
+		color1 = "blue"
 		color2 = "white"
-		color3 = "blue"
+		color3 = "red"
 	}
 # Japan
 	JAPAN = {
@@ -809,10 +870,8 @@
 		pattern = "pattern_solid.dds"
 		color1 = hsv360{ 144 100 63 }
 		color2 = "white"
-		colored_emblem = {
-			texture = "ce_lombardy_3.dds"
-			color1 = color1
-			color2 = color2
+		textured_emblem = {
+			texture = "te_lombardy.dds"
 		}
 	}
 # Lombardy-Venetia
@@ -1091,9 +1150,16 @@
 	}	
 # Himalayan Empire
 	HMLAY = {
-		pattern = "pattern_solid.dds"
-		color1 = "white"	
-	}	
+		textured_emblem = {
+			texture = "te_himalayas.dds"
+		}	
+	}
+# Hyperborea
+	HPBRA = {
+		textured_emblem = {
+			texture = "te_hyperborea.dds"
+		}	
+	}		
 # Afghanistan	
 	AFGAN = {
 		pattern = "pattern_solid.dds"
@@ -1560,8 +1626,9 @@
 	}	
 # East Slavia
 	ESLAV = {
-		pattern = "pattern_solid.dds"
-		color1 = "purple_mid"		
+		textured_emblem = {
+			texture = "te_east_slavia.dds"
+		}	
 	}	
 # Franco-Iberian Empire		
 	FNCIB = {
@@ -1589,7 +1656,19 @@
 		textured_emblem = {
 			texture = "te_gallic_empire.dds"
 		}
-	}	
+	}
+# Tarraconensis
+	TRCNS = {
+		textured_emblem = {
+			texture = "te_tarraconensis.dds"
+		}
+	}
+# Britannia
+	BRTNA = {
+		textured_emblem = {
+			texture = "te_roman_brittania.dds"
+		}
+	}		
 # Iberian Empire
 	IBNEM = {
 		pattern = "pattern_solid.dds"
@@ -1658,6 +1737,12 @@
 	ASYRI = {
 		textured_emblem = {
 			texture = "te_assyria.dds"
+		}
+	}
+# Assyrian Empire
+	ASYRE = {
+		textured_emblem = {
+			texture = "te_assyriaempire.dds"
 		}
 	}
 # Hungarian Empire
@@ -1738,7 +1823,7 @@
 		}
 	}
 # Macedonian Empire
-	MACED = {
+	MCDEM = {
 		textured_emblem = {
 			texture = "te_macedonian_empire.dds"
 		}

@@ -1,0 +1,20 @@
+﻿l_english:
+
+  # RELIGIONS
+
+    fnr_god_worshipping_society_taiping: "God Worshipping Society"
+    fnr_god_worshipping_society_taiping_ADJ: "God Worshipping Society"
+    fnr_god_worshipping_society_taiping_desc: "The polytheistic Chinese religious movement formed under the influence of Protestant Christianity, incorporating elements of Chinese folk religion and Buddhist concepts was founded by Hong Xiuquan in 1843, viewing God (Shangdi) as supreme and Hong as God's second son, leading to the massive Taiping Rebellion (1850-1864) against the Qing dynasty, which sought social equality, radical reforms, and established the Heavenly Kingdom before its eventual brutal defeat."
+
+    fnr_gallo_roman_religion: "Gallo-Roman"
+    fnr_gallo_roman_religion_ADJ: "Gallo-Roman"
+    fnr_gallo_roman_religion_desc: "Gallo-Roman religion is a fusion of the traditional religious practices of the Gauls, who were originally Gaulish language speakers, and the Roman and Hellenistic religions introduced to the region under Roman Imperial rule. It was the result of selective acculturation."
+
+  # Aspects
+
+    fnr_cult_of_personality: "Cult of Personality"
+    fnr_cult_of_personality_desc: "Hong Xiuquan's God Worshipping Society (Bai Shangdi Hui) is widely described by historians as a cult that leveraged a strong cult of personality centered on his claim to be the younger brother of Jesus Christ. This messianic identity was central to the group's theology and his authority as leader of the Taiping Rebellion"
+
+  # Religious Actions
+
+    fnr_expand_cult: "Expand Cult of Personality"

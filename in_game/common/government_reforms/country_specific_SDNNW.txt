@@ -10,7 +10,7 @@
 				has_reform = government_reform:swedish_administration_major
 				has_variable = fnr_sweden_norway_sweden_major
 			}
-			allow ={
+			allow = {
 				tag = SDNNW
 			}
 			country_modifier = {
@@ -39,7 +39,7 @@
 				has_reform = government_reform:norwegian_administration_minor
 				has_variable = fnr_sweden_norway_norway_minor
 			}
-			allow =  {
+			allow = {
 				tag = SDNNW
 			}
 			country_modifier = {
@@ -66,7 +66,8 @@
 				has_reform = government_reform:norwegian_administration_major
 				has_variable = fnr_sweden_norway_norway_major
 			}
-			allow =  {
+			allow = {
+				tag = SDNNW
 			}
 			country_modifier = {
 				global_maritime_presence_modifier = 0.05
@@ -95,7 +96,7 @@
 				has_reform = government_reform:swedish_administration_minor
 				has_variable = fnr_sweden_norway_sweden_minor
 			}
-			allow ={
+			allow = {
 				tag = SDNNW
 			}
 			country_modifier = {

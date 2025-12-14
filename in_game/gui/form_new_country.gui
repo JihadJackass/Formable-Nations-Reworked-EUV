@@ -638,9 +638,43 @@ lateralview = {
 				}
 
 				blockoverride "scroll_list_layout" {
+					
 					vbox = {
 						margin = {2 0}
 						margin_top = 10
+						
+						# Papal Kingdom of God message
+						widget = {
+							visible = "[GetPlayer.HasVariable('fnr_is_papacy')]"
+							layoutpolicy_horizontal = expanding
+							size = { -1 0 }
+							
+							using = bg_paper_card_fancy
+							blockoverride "card_fancy_shadow" {
+								margin = { 1 2 }
+								margin_top = -1
+							}
+							using = bg_cabinet_card_frame
+							using = bg_corner_flavor_wood
+							margin = { 5 7 }
+							margin_bottom = 5
+							
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								margin = { 10 10 }
+								spacing = 5
+								
+								text_multi = {
+									layoutpolicy_horizontal = expanding
+									autoresize = yes
+									max_width = 500
+									text = "PAPAL_KINGDOM_OF_GOD_INFO"
+									default_format = "#emphasis"
+									align = left
+								}
+							}
+						}
+
 						vbox = {
 							spacing = 10
 							layoutpolicy_horizontal = expanding

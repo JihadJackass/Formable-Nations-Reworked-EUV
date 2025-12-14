@@ -8,6 +8,14 @@
 				value = yes
 			}
 		}
+        # Papal States - set variable for GUI visibility
+        every_country = {
+            limit = {
+				has_reform = government_reform:papacy_reform
+				tag = PAP
+            }
+            set_variable = fnr_is_papacy
+        }
 		#catholics
 		every_country = {
 			limit = {

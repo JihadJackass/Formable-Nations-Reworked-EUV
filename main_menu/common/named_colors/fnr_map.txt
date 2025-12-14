@@ -2,6 +2,28 @@
 # Formable Nations Reworked Colors #
 ####################################
 colors = {
+	# RELIGIOUS COLORS
+	color_fnr_gws_religion = rgb { 223 214 113 }
+	color_fnr_gallo_roman_religion = rgb { 124 169 114 } # greenish
+	# END RELIGIOUS COLORS
+	# North Italian Confederation
+	map_NITAC = hsv360 { 150 44 46 }
+	# Sardinia-Piedmont
+	map_SDPDM = hsv360 { 204 53 83 }
+	# South Italian Confederation
+	map_SITAC = hsv360 { 204 38 54 }
+	# Mexico
+	map_MEXCO = hsv360 { 141 42 69 }
+	# Oklahoma
+	map_OKLAH = hsv360 { 241 33 91 }
+	# Poland-Hungary
+	map_PLHUN = hsv360 { 328 35 66 }
+	# Camelot
+	map_CMLOT = hsv360 { 328 42 75 }
+	# Great Moravia
+	map_GMORV = hsv360 { 328 48 85 }
+	# Gothia
+	map_GOTIA = hsv360 { 281 20 75 }
 	# Abyssinia
 	map_ABYSA = rgb { 22 68 7 }
 	# Adriatic Empire
@@ -83,7 +105,7 @@ colors = {
 	# Ducal Prussia
 	map_DCLPR = rgb { 55 56 60 }
 	# East Slavia
-	map_ESLAV = rgb { 17 4 29 }
+	map_ESLAV = hsv360 { 230 29 49 }
 	# Eastern Roman Empire
 	map_EASRE = rgb { 97 2 94 }
 	# Emilia-Romagna
@@ -100,6 +122,10 @@ colors = {
 	map_FIESL = rgb { 52 63 102 }
 	# Gallic Empire
 	map_GLCEM = rgb { 6 29 0 }
+	# Tarraconensis
+	map_TRCNS = rgb { 120 167 110 }
+	# Britannia
+	map_BRTNA = rgb { 192 130 178 }
 	# German Empire
 	map_GMNEM = rgb { 37 37 56 }
 	# German Reich
@@ -112,6 +138,8 @@ colors = {
 	map_GTRGM = rgb { 15 8 8 }
 	# Hanseatic League
 	map_HNSLG = rgb { 49 54 9 }
+	# Hyperborea
+	map_HPBRA = hsv360 { 230 56 37 }
 	# Hawai'i
 	map_HAWAI = rgb { 123 104 7 }
 	# Hesse-Nassau
@@ -165,9 +193,9 @@ colors = {
 	# Lusitanian Empire
 	map_LUSIT = rgb { 80 97 211 }
 	# Macedonia 
-	map_MACED = rgb { 49 3 62 }
-	# Macedonian Empire
-	map_MCDEM = rgb { 40 12 48 }
+	map_MACED = hsv360 { 230 20 54 }
+	# Macedonian Empire 230 45 75
+	map_MCDEM = hsv360 { 230 27 76 }
 	# Madagascar
 	map_MDGSC = rgb { 29 97 16 }
 	# Malta
@@ -250,6 +278,8 @@ colors = {
 	map_ABSID = hsv360 { 126 75 15 } 
 	# Fatimid Caliphate
 	map_FTMID = hsv360 { 100 50 15 } 
+	# Assyrian Empire
+	map_ASYRE = hsv360 { 45 45 50 }
 	# Assyria
 	map_ASYRI = hsv360 { 27 41 50 }
 	# United Arab Republic

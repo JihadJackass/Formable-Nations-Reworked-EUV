@@ -8,6 +8,7 @@
 					tag = PAP
 					has_reform = government_reform:papacy_reform
 				}
+				# TODO: add a setting to disable static prefix
 				tag = ABYSA
 				tag = ACHAD
 				tag = ADREM
@@ -137,6 +138,21 @@
 				tag = ASYRI
 				tag = RSHDN
 				tag = ABSID
+				tag = GOTIA
+				tag = GMORV
+				tag = CMLOT
+				tag = PLHUN
+				tag = NITAC
+				tag = SITAC
+				tag = SDPDM
+				tag = ASYRE
+				tag = HPBRA
+				tag = TRCNS
+				# US States
+				tag = OKLAH
+				tag = FLRDA
+				# Modern Americas Formables
+				tag = MEXCO
 				# dutch
 				has_variable = NED_DR_var
 				has_variable = NED_UP_var

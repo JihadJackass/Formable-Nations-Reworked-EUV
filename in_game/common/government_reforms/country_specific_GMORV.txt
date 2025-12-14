@@ -1,0 +1,29 @@
+﻿# Great Moravia Specific Government Reforms
+
+	# Heirs of Nitra
+		fnr_heirs_of_nitra = {
+			major = yes
+			unique = yes
+			government = monarchy
+			potential = {
+				tag = GMORV
+				has_reform = government_reform:fnr_heirs_of_nitra
+			}
+			allow = {
+				tag = GMORV
+			}
+			country_modifier = {
+				country_child_education = 0.30
+				global_distance_from_capital_cost_modifier = -0.05
+				monthly_towards_decentralization = 0.05
+			}
+			locked = {
+				is_locked_mechanic = {
+					mechanic = government_reform
+					type = fnr_heirs_of_nitra
+				}
+			}			
+			block_for_rebel = yes
+		}
+
+		

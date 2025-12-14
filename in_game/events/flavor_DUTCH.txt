@@ -6,7 +6,7 @@ flavor_DUTCH.1 = { # United Provinces opportunity to centralize into the Dutch R
 	desc = flavor_DUTCH.1.desc
 	fire_only_once = yes
 	trigger = { has_variable = NED_UP_var }
-	immediate = { remove_variable = NED_UP_var }
+	#immediate = { remove_variable = NED_UP_var } Needed for rename
 	option = { # We shall Proclaim the Dutch Republic!
 		name = flavor_DUTCH.1.a
 		change_country_name = NED_DR
