@@ -2,8 +2,6 @@
 
   # customizable loc "$PREFIX$ $RANK$ of $ARTICLE$ $NAME$"
 
-
-
     fnr_country_name_construction_name: "$NAME$"
     fnr_country_name_construction_name_map: "$NAME$"
     fnr_country_name_construction_prefix_rank_of_name_but_map_is_just_prefix_rank: "$PREFIX$ $RANK$ of $ARTICLE$ $NAME$"
@@ -23,6 +21,17 @@
   # HISTORICAL FORMABLES #
   ########################
 
+    # Rhineland - Alternate flags coded by Tawani
+    RHLND: "Rhineland"
+    RHLND_ADJ: "Rhenish"
+    RHLND_desc: "The Rhine has enriched countless masters but served none exclusively. Prince-bishoprics, free cities, and petty duchies fragmented Europe's greatest trade artery for centuries. Through conquest, we unite the Rhineland under single authority. The tolls, trade, and strategic position once divided among hundreds now serve one realm. France cannot ignore us, German princes must negotiate with us, and the Low Countries need our cooperation. We control the Rhine. We control the wealth."
+    RHLND_ducal: "United Duchies"
+    RHLND_ducal_ADJ: "Ducal"
+    RHLND_comital: "United Counties"
+    RHLND_comital_ADJ: "Comital"
+    RHLND_republic: "United Republics"
+    RHLND_republic_ADJ: "Republican"
+
     # Balochistan
     BALCH: "Balochistan"
     BALCH_ADJ: "Balochi"
@@ -38,8 +47,19 @@
     GSORB_ADJ: "Greater Sorbian"
     GSORB_desc: "Long overshadowed by the great powers that surrounded them, the Sorbs endured as a resilient people, keeping their language and faith alive amid centuries of foreign rule. The unification of the Sorbian lands marks the rebirth of a nation thought lost to history which cries a beacon of Slavic endurance and identity. A Greater Sorbia rises determined to reclaim a great legacy and secure its borders."
 
+    # Baden-Alsace
+    BDALS: "Baden-Alsace"
+    BDALS_ADJ: "Baden-Alsatian"
+    BDALS_desc: "The Rhine divides lands that share language, culture, and commerce. Through conquest, we unite Baden and Alsace under one banner, correcting the political borders that separated kindred peoples. Our realm commands the vital crossroads between France and Germany, profiting from Rhine trade while defending our independence. Let neither Paris nor Vienna control our destiny."
+
+    # Zapadoslavia
+    ZPDSL: "Zapadoslavia"
+    ZPDSL_ADJ: "Zapadoslavian"
+    ZPDSL_desc: "Poles, Czechs, Slovaks, and Sorbs share language, culture, and centuries of struggle against Germanic and Russian expansion. Through conquest, we unite the West Slavic peoples into Zapadoslavia. Our strategic position in Central Europe makes us the bridge between East and West, strong enough to resist foreign domination. Where our ancestors fell divided, we stand united. The West Slavs have awakened."
+
     # Sorbic Kingdom
     KSORB: "Sorbic Kingdom"
+    KSORB_ALT: "Sorbia"
     KSORB_ADJ: "Sorbic"
     KSORB_desc: "The Sorbic Kingdom is a more centralized version of a unified Sorbian realm which contends with neighboring hostile powers and a diversive region of languages and religions."  
 
@@ -103,6 +123,26 @@
     BLGUM_ADJ: "Belgian"
     BLGUM_desc: "Belgium is a federal parliamentary constitutional monarchy in Western Europe, bordered by France, Germany, Luxembourg, and the Netherlands. It is known for its complex federal structure based on linguistic regions (Flemish, Walloon, and Brussels-Capital), its official languages of Dutch, French, and German, and its capital, Brussels."
 
+    # Papal States Dominates HRE
+    PAP_HRE_EMPIRE_1: "Imperium Christianum"
+    PAP_HRE_EMPIRE_1_ADJ: "Papal"
+
+    PAP_HRE_EMPIRE_2: "Holy Empire"
+    PAP_HRE_EMPIRE_2_ADJ: "Papal"
+
+    PAP_HRE_EMPIRE_3: "Sacred Empire"
+    PAP_HRE_EMPIRE_3_ADJ: "Papal"
+
+    PAP_HRE_EMPIRE_4: "Universal Monarchy"
+    PAP_HRE_EMPIRE_4_ADJ: "Papal"
+
+    PAP_HRE_EMPIRE_5: "Empire of Christendom"
+    PAP_HRE_EMPIRE_5_ADJ: "Papal"
+
+    PAP_HRE_EMPIRE_6: "The Dominion of St. Peter"
+    PAP_HRE_EMPIRE_6_ADJ: "Papal"
+
+
     # Netherlands
     NED_UP: "United Provinces"
     NED_UP_ADJ: "United Provinces"
@@ -150,6 +190,11 @@
     DCLPR_ADJ: "Prussian"
     DCLPR_desc: "The Duchy of Prussia or Ducal Prussia was a duchy in the region of Prussia established as a result of secularization of the Monastic Prussia, the territory that remained under the control of the State of the Teutonic Order until the Protestant Reformation in 1525."
 
+    # # Brandenburg-Prussia - Historical
+    BNDPR: "Brandenburg-Prussia"
+    BNDPR_ADJ: "Brandenburg-Prussian"
+    BNDPR_desc: "Brandenburg-Prussia (1618-1701) was a personal union of the Electorate of Brandenburg and the Duchy of Prussia, ruled by the Hohenzollern dynasty, forming the core of what would become the Kingdom of Prussia and later the German Empire. Key developments included the devastating Thirty Years' War, the rise of the 'Great Elector' Frederick William who built a strong army and expanded territories (like Pomerania), and the eventual elevation of the state to a kingdom under Frederick I in 1701, solidifying its power in central Europe."
+
     # Ukraine
     UKRNE: "Ukraine"
     UKRNE_ADJ: "Ukranian"
@@ -195,6 +240,31 @@
     FNCEM_ADJ: "French"
     FNCEM_desc: "There are two disctint moments in history which held a dominant French position, these being the First French colonial empire (16th-19th century) and the Napoleonic Empire (1804-1815). The colonial empire was the second-largest in the world at its peak and included vast territories in North America, the Caribbean, and India before most of it was lost. The Napoleonic Empire, by contrast, was a European empire centered on France and established by Napoleon Bonaparte, which conquered much of continental Europe"
 
+    # North German Confederation
+    NGCFD: "North German Confederation"
+    NGCFD_ADJ: "North German"
+    NGCFD_desc: "A federal state dominated by Prussia that united the German states north of the Main River, excluding Austria. Formed after Prussia's victory in the Austro-Prussian War, it served as the foundation for German unification, featuring a federal structure with a Prussian-controlled military and foreign policy. Led by Otto von Bismarck, it preceded the German Empire by four years."
+
+    # Baden-Wurttemberg
+    BDWTB: "Baden-Wurttemberg"
+    BDWTB_ADJ: "Baden-Württembergisch"
+    BDWTB_desc: "A unified southwestern German state formed by merging Baden and Württemberg, creating a powerful Swabian confederation. This union combines the industrial prowess and liberal traditions of Baden with Württemberg's administrative efficiency, establishing a 'third way' between Prussian militarism and Bavarian conservatism. A regional powerhouse asserting southwestern German autonomy and influence."
+
+    # Sassanids
+    SSNID: "Sassanids"
+    SSNID_ADJ: "Sassanids"
+    SSNID_desc: "An Iranian nationalist movement seeking to restore the glory of the last pre-Islamic Iranian empire. Led by Persia, it revives Zoroastrianism as the state religion, reclaims ancient territories from Mesopotamia to Central Asia, and rejects centuries of Arab and Turkic influence. This neo-Sassanid state embraces the legacy of Shapur, Khosrow, and the ancient Kings of Kings, restoring Persian language, culture, and imperial administration."
+
+    # Magna Graecia (Greek Naples)
+    MGGCA: "Magna Graecia"
+    MGGCA_ADJ: "Magna Graecian"
+    MGGCA_desc: "A cultural revival movement led by Naples or a southern Italian power seeking to restore the ancient Greek heritage of Southern Italy. Embracing the legacy of the Greek colonies that once flourished from Calabria to Sicily, this state promotes Hellenization, Greek language revival, and Byzantine-inspired governance to reclaim the region's identity as 'Great Greece' - the western jewel of Hellenic civilization."
+
+    # South German Confederation
+    SGCFD: "South German Confederation"
+    SGCFD_ADJ: "South German"
+    SGCFD_desc: "A Catholic-dominated federation of southern German states (Bavaria, Württemberg, Baden, and southern Hesse) formed as a counterweight to Prussian influence in the north. Led by either Austria or Bavaria, it represents an alternate path to German unity that preserves Catholic interests and resists Protestant Prussian hegemony. This confederation maintains closer ties to the Habsburg sphere while defending southern German autonomy."
+
     # German Empire
     GMNEM: "German Empire"
     GMNEM_ADJ: "German"
@@ -214,7 +284,7 @@
     #HANSA: "Hanseatic League"
     HNSLG: "Hanseatic League"
     HNSLG_ADJ: "Hanseatic"
-    HNSLG_desc: "The Hanseatic League was a powerful medieval commercial and defensive alliance of merchant guilds and market towns in Northern Europe, which controlled trade in the Baltic and North Seas from the 13th to the 17th centuries. Though not a unified nation, it functioned similarly by protecting its members' mutual trading interests, regulating commerce, and even wielding political and military influence, with Lübeck often serving as its unofficial capital. The League eventually declined with the rise of nation-states and changing trade routes."
+    HNSLG_desc: "The Hanseatic League was a powerful medieval commercial and defensive alliance of merchant guilds and market towns in Northern Europe, which controlled trade in the Baltic and North Seas from the 13th to the 17th centuries."
 
     # Hesse-Nassau
     HESNA: "Hesse-Nassau"
@@ -394,6 +464,16 @@
     FILPN_ADJ: "Filipino"
     FILPN_desc: "The Philippines is an archipelagic nation in Southeast Asia, known for its unique geography of over 7,000 islands, diverse culture, and history shaped by Malay, Spanish, and American influences. It is located in the western Pacific Ocean, with a capital in Manila and a government system based on the US model."
 
+    # Philippines
+    FLPNN: "Saribayan"
+    FLPNN_ADJ: "Saribayan"
+    FLPNN_desc: "Our archipelago has long been divided into countless barangays, each led by its own datu, each following its own customs. Yet we share common blood, common seas, and common destiny. Through trade with China, Siam, and distant lands, we have grown prosperous, but divided we remain vulnerable.\n\nNow we unite these scattered communities into Saribayan as one realm."
+
+    # Brunei Darussalam
+    BNDSM: "Brunei Darussalam"
+    BNDSM_ADJ: "Brunei Darussalam"
+    BNDSM_desc: "The Sultanate of Brunei once ruled the coasts of Borneo and commanded tribute from distant islands. Our fleets controlled vital trade routes, carrying camphor, spices, and precious goods across Southeast Asian seas.\n\nIslamic law and the Sultan's authority brought prosperity and stability to our realm, earning us the title Darussalam, the Abode of Peace. Foreign powers and internal conflicts diminished our dominion, but we have not forgotten our legacy. By reclaiming the territories that once bowed to Brunei, we restore the Sultanate to greatness. Our strategic position and naval strength shall make us masters of these waters once more. The Abode of Peace returns to command the respect it deserves."
+
     # Saudi Arabia
     SAUDI: "Saudi Arabia"
     SAUDI_ADJ: "Saudi"
@@ -516,17 +596,174 @@
     # Florida
     FLRDA: "Florida"
     FLRDA_ADJ: "Floridian"
-    FLRDA_desc: ""
+    FLRDA_desc: "TODO"
+
+    # Maryland
+    MRYLN: "Maryland"
+    MRYLN_ADJ: "TODO"
+    MRYLN_desc: "TODO"
+
+    # Pennsylvania
+    PNSLV: "Pennsylvania"
+    PNSLV_ADJ: "TODO"
+    PNSLV_desc: "TODO"
+
+    # New Jersey
+    NWJSY: "New Jersey"
+    NWJSY_ADJ: "TODO"
+    NWJSY_desc: "TODO"
+
+    # Louisiana
+    LOSNA: "Louisiana"
+    LOSNA_ADJ: "TODO"
+    LOSNA_desc: "TODO"
+
+    # Arkansas
+    ARKNS: "Arkansas"
+    ARKNS_ADJ: "TODO"
+    ARKNS_desc: "TODO"
+
+    # Iowa
+    IOWAU: "Iowa"
+    IOWAU_ADJ: "TODO"
+    IOWAU_desc: "TODO"
+
+    # California
+    CLFRN: "California"
+    CLFRN_ADJ: "TODO"
+    CLFRN_desc: "TODO"
+
+    # Cascadia
+    CSCDA: "Cascadia"
+    CSCDA_ADJ: "TODO"
+    CSCDA_desc: "TODO"
+
+    # Wyoming
+    WYMNG: "Wyoming"
+    WYMNG_ADJ: "TODO"
+    WYMNG_desc: "TODO"
+
+    # Texas
+    TEXAS: "Texas"
+    TEXAS_ADJ: "TODO"
+    TEXAS_desc: "TODO"
+
+    # Michigan
+    MCHGN: "Michigan"
+    MCHGN_ADJ: "TODO"
+    MCHGN_desc: "TODO"
+
+    # Wisconsin
+    WSCNS: "Wisconsin"
+    WSCNS_ADJ: "TODO"
+    WSCNS_desc: "TODO"
+
+    # Washington
+    WSHNT: "Washington"
+    WSHNT_ADJ: "TODO"
+    WSHNT_desc: "TODO"
+
+    # Oregan
+    OREGN: "Oregan"
+    OREGN_ADJ: "TODO"
+    OREGN_desc: "TODO"
+
+    # Missouri
+    MISSR: "Missouri"
+    MISSR_ADJ: "TODO"
+    MISSR_desc: "TODO"
+
+    # Georgia
+    GRGUS: "Georgia"
+    GRGUS_ADJ: "Georgian"
+    GRGUS_desc: "TODO"
+
+    # Alabama
+    ALBMA: "Alabama"
+    ALBMA_ADJ: "Alabaman"
+    ALBMA_desc: "TODO"
+
+    # South Carolina
+    SCRLA: "South Carolina"
+    SCRLA_ADJ: "South Carolinian"
+    SCRLA_desc: "TODO"
+
+    # North Carolina
+    NCRLA: "North Carolina"
+    NCRLA_ADJ: "North Carolinian"
+    NCRLA_desc: "TODO"
+
+    # Tennessee
+    TNNSS: "Tennessee"
+    TNNSS_ADJ: "Tennesseean"
+    TNNSS_desc: "TODO"
+
+    # Kentucky
+    KNTKY: "Kentucky"
+    KNTKY_ADJ: "Kentuckan"
+    KNTKY_desc: "TODO"
+
+    # Ohio
+    OHIOU: "Ohio"
+    OHIOU_ADJ: "Ohian"
+    OHIOU_desc: "TODO"
+
+    # Virginia
+    VRGNA: "Virginia"
+    VRGNA_ADJ: "Virginian"
+    VRGNA_desc: "TODO"
+
+    # West Virginia
+    WVGNA: "West Virginia"
+    WVGNA_ADJ: "West Virginian"
+    WVGNA_desc: "TODO"
 
     # Poland-Hungary
     PLHUN: "Poland-Hungary"
     PLHUN_ADJ: "Polish-Hungarian"
     PLHUN_desc: "The Poland-Hungary union was a personal union that occurred twice, where one monarch ruled both kingdoms without merging their institutions. The first was from 1370 to 1382 under Louis I of Hungary, and the second from 1440 to 1444 under Władysław III of Poland. Both unions were temporary and ended due to succession issues or the death of the monarch."
 
+    # Kingdom of Swabia
+    SWBIA: "Kingdom of Swabia"
+    SWBIA_ADJ: "Swabian"
+    SWBIA_desc: "TODO"
+
+    # Felvidek (North Hunary)
+    FLVDK: "Felvidek"
+    FLVDK_ADJ: "Hungarian"
+    FLVDK_desc: "TODO"
+
+    # Hephthalite Empire / White Huns
+    HPEMP: "Hephthalites"
+    HPEMP_ADJ: "Hephthalites"
+    HPEMP_desc: "TODO"
+
+    # Hungary-Romania
+    HNRMN_f: "Hungary-Romania"
+    HNRMN: "Hungary-Romania"
+    HNRMN_ADJ: "Hungary-Romanian"
+    HNRMN_desc: ""
+
     # Camelot
     CMLOT: "Camelot"
     CMLOT_ADJ: "Camelot"
     CMLOT_desc: "Camelot refers to the legendary court of King Arthur, a symbol of a just and utopian kingdom built around the Knights of the Round Table\n\nThe story often focuses on the ideals of Camelot being threatened by the love triangle between Queen Guenevere and Sir Lancelot, and the treachery of Arthur's illegitimate son, Mordred. Ultimately, the conflict leads to the downfall of Arthur's dream of a perfect kingdom, though the legend endures as a symbol of greatness and an idealized time."
+
+    # Galicia-Lodomeria
+    GLD_f: "Galicia-Lodomeria"
+    GLCLD: "Galicia-Lodomeria"
+    GLCLD_ADJ: "Galician-Lodomerian"
+    GLCLD_desc: "The Kingdom of Galicia and Lodomeria was a large crown land of the Habsburg Monarchy, created from Polish-Lithuanian Commonwealth lands after the First Partition of Poland in 1772, encompassing modern-day western Ukraine and parts of southern Poland. It served as a major Austrian province, incorporating Ruthenian (Ukrainian) and Polish territories, with Lviv (Lemberg) as its capital, and existed until the dissolution of Austria-Hungary after World War I in 1918, after which its territories were divided between Poland and Ukraine."
+
+    # Gran Columbia
+    GCOLM: "Gran Columbia"
+    GCOLM_ADJ: "Gran Columbian"
+    GCOLM_desc: "Gran Colombia (1819-1831) was a short-lived South American republic created by Simón Bolívar, uniting modern-day Colombia, Panama, Venezuela, and Ecuador, plus parts of Peru and Brazil, to form a powerful unified state. Despite ambitious goals for Latin American unity, it was plagued by political instability, regional rivalries (centralists vs. federalists), and internal conflicts, leading to its dissolution into separate nations (Venezuela, Ecuador, and New Granada - the precursor to modern Colombia) by 1831, with Panama later separating from New Granada."
+
+    # Elbian Federation
+    ELBNF: "Elbian Federation"
+    ELBNF_ADJ: "Elbian"
+    ELBNF_desc: "From the headwaters of the Krkonoše Mountains to the bustling ports of Hamburg, the Elbe has long been Central Europe's commercial artery. The Elbian Federation unites the merchant princes of Saxony, the industrial cities of Bohemia, and the Hanseatic traditions of the North under a federal charter that prioritizes trade, cultural autonomy, and shared prosperity over military domination.\n\nNeither wholly German nor purely Slavic, the Federation embraces its multicultural identity. German burghers, Czech craftsmen, and Sorbian farmers coexist under a constitution guaranteeing linguistic and religious freedoms. The capital of either [ShowLocationName('dresden')] or [ShowLocationName('prague')] - #color_yellow depending on the choice upon formation#! - which serves as the federal capital, a baroque jewel at the crossroads of European culture.\n\nEconomically powerful but militarily cautious, the Elbian Federation seeks to be Europe's Switzerland: a neutral arbiter and financial center, enriched by river trade, mining, and advanced manufacturing. Where Prussia offers the sword and Austria the crown, Elbian offers the ledger and the loom."
 
     # Great Moravia
     GMORV: "Great Moravia"
@@ -561,6 +798,23 @@
     ANDUH_ADJ: "Anglo-Dutch"
     ANDUH_desc: "The Anglo-Dutch Union was a personal union between Great Britain and the Netherlands, lasting from 1692 to 1712 under monarch William III. It was a period where the same king ruled both countries, leading to a powerful maritime alliance and shared colonial empires, with London and The Hague serving as de facto capitals. This union ended after William III's death in 1712, when the two entities were separated, though the Palatinate and the Netherlands remained in a separate personal union until 1744"
 
+    # Great Scotia
+    GSCTL: "Great Scotia"
+    GSCTL_ADJ: "Scottish"
+    GSCTL_desc: "For centuries, Scotland endured as the defiant northern kingdom, bloodied but unbowed. No longer content with mere survival, the time has come for Scotland to claim its place as a great power.\n\nGreat Scotia unites the Lowlands and Highlands under one crown and extends Scottish governance across the Celtic lands, contested borderlands, and overseas territories. From Edinburgh to the Clyde shipyards, from Shetland to Ulster, the Scottish nation expands.\n\nOur Presbyterian Kirk provides moral foundation, our universities produce Europe's finest minds, and our regiments have proven themselves on every battlefield. The Scots have long punched above their weight. Now we shall have the weight to match.\n\nScotland is no longer the northern periphery. We are Great Scotia, and we bow to no one."
+
+    # Austro-Hungarian Empire
+    ASHNG: "Austro-Hungarian Empire"
+    ASHNG_ADJ: "Austro-Hungarian"
+    ASHNG_desc: "The Austro-Hungarian Empire (1867-1918) was a dual monarchy in Central Europe, uniting the Austrian Empire and the Kingdom of Hungary under a single Habsburg monarch, Emperor Franz Joseph. Formed by the 1867 Compromise (Ausgleich), it featured separate governments for Austria and Hungary but shared foreign policy, military, and finance, managing a diverse collection of ethnicities. A major power, its internal ethnic tensions and nationalism, exacerbated by World War I, ultimately led to its collapse and dissolution into new nations by 1918."
+
+    ASHNG_NAME_SHORT: "Austria-Hungary"
+    ASHNG_NAME_SHORT_ADJ: "Austro-Hungarian"
+
+    ASHNG_NAME_LONG: "Austro-Hungarian Empire"
+    ASHNG_NAME_LONG_ADJ: "Austro-Hungarian"
+
+    # Austrian Empire
     AUSEM: "Austrian Empire"
     AUSEM_ADJ: "Austrian"
     AUSEM_desc: "The Austrian Empire was a multinational European great power from 1804 to 1867, which was ruled by the Habsburgs and became the basis for the later Austro-Hungarian Empire. It was a large, diverse country with various ethnic groups and languages, but it struggled with internal nationalistic tensions. In 1867, the empire was restructured into the Dual Monarchy of Austria-Hungary, where Hungary gained more autonomy, though a single monarch still ruled both states. "
@@ -607,10 +861,15 @@
     DACIA_ADJ: "Dacian"
     DACIA_desc: "Dacia was an ancient kingdom located in what is now modern-day Romania, known for its wealthy gold mines and skilled warriors who clashed with the Roman Empire. It was home to the Dacians, a people of Thracian stock, who were eventually conquered by Emperor Trajan and became a Roman province in the early 2nd century AD. The Romans ruled for about 170 years before withdrawing in 271 AD, leaving a lasting cultural and historical legacy in the region."
 
+    # Serene Republic of Australia
+    SROAU: "Serene Republic of Australia"
+    SROAU_ADJ: "Australian"
+    SROAU_desc: "TThe southern continent, long isolated from global trade, now stands united under merchant rule. From harbors spanning Australia to New Zealand, our fleets dominate Pacific and Indian Ocean trade routes, carrying wool, minerals, and exotic goods to distant markets.\n\nUnlike feudal kingdoms elsewhere, our republic is governed by merchant princes elected from great trading houses. Political power flows from wealth, ensuring policy serves commerce rather than dynasty. Our strategic isolation protects us from foreign armies while our scattered ports create a fortified network across the Pacific.\n\nWe are merchants before warriors, preferring profit to conquest. Yet our armed merchant marines and private garrison forces defend commercial interests when necessary. Let others fight for thrones. We have built an empire on trade alone.ODO"
+
     # Dual Monarchy
     DLMON: "Dual Monarchy"
     DLMON_ADJ: "Anglois"
-    DLMON_desc: "~~Alternate History~~\n\nThe dual monarchy of England and France was a period from 1422 to 1453 where the infant King Henry VI of England was recognized as the monarch of both England and France, though his claim was disputed. It was established by the Treaty of Troyes following Henry V's invasion and English control of northern France during the Hundred Years' War. The claim was contested by the Dauphin Charles, who controlled southern France, and it ended when the French, led by Charles VII, gradually expelled the English from all territories except Calais."
+    DLMON_desc: "The dual monarchy of England and France was a period from 1422 to 1453 where the infant King Henry VI of England was recognized as the monarch of both England and France, though his claim was disputed. It was established by the Treaty of Troyes following Henry V's invasion and English control of northern France during the Hundred Years' War. The claim was contested by the Dauphin Charles, who controlled southern France, and it ended when the French, led by Charles VII, gradually expelled the English from all territories except Calais."
 
     # East Slavia
     ESLAV: "East Slavia"
@@ -620,7 +879,12 @@
     # Franco-Iberian Empire
     FNCIB: "Franco-Iberian Empire"
     FNCIB_ADJ: "Franco-Iberian"
-    FNCIB_desc: "~~Alternate History~~\n\nin 1579, France and Spain were allied to form the Franco-Iberian Empire as known as The Three Crowns (Spain, France and Portugal) and The colonization Had started into New viceroyalities by Three languages (Portuguese, Spanish and French), and colonies have merged Together into a new empire, the Franco-Iberia, in 1732 The United Kingdom of Great Britain and Ireland have become a dual monarchy with Scottish Queen as The United Kingdom of England, Scotland and Ireland, in 1776 The Mexican Revolutionary War and American Revolutionary War has started and ended in 1778. "
+    FNCIB_desc: "in 1579, France and Spain were allied to form the Franco-Iberian Empire as known as The Three Crowns (Spain, France and Portugal) and The colonization Had started into New viceroyalities by Three languages (Portuguese, Spanish and French), and colonies have merged Together into a new empire, the Franco-Iberia, in 1732 The United Kingdom of Great Britain and Ireland have become a dual monarchy with Scottish Queen as The United Kingdom of England, Scotland and Ireland, in 1776 The Mexican Revolutionary War and American Revolutionary War has started and ended in 1778. "
+
+    # Babylon
+    BBLON: "Babylon"
+    BBLON_ADJ: "Babylon"
+    BBLON_desc: "Babylon"
 
     # Assyria
     ASYRI: "Assyria"
@@ -646,13 +910,25 @@
     GLCEM_ADJ: "Gallic"
     GLCEM_desc: "The Gallic Empire was a breakaway part of the Roman Empire that existed from 260 to 274 AD, during the Crisis of the Third Century. It was established by the Roman commander Postumus and included the territories of Gaul, Britannia, and Hispania. The empire had its own government and mint."
 
+    # Tarraconensis
     TRCNS: "Tarraconensis"
     TRCNS_ADJ: "Tarraconensis"
-    TRCNS_desc: "todo"
+    TRCNS_desc: "TODO"
 
+    # Britannia
     BRTNA: "Britannia"
     BRTNA_ADJ: "Britannian"
-    BRTNA: "Britannia"
+    BRTNA_desc: "TODO"
+
+    # Kingdom of Jerusalem
+    JRSLM: "Kingdom of Jerusalem"
+    JRSLM_ADJ: "Jerusalemite"
+    JRSLM_desc: "TODO"
+
+    # Beta Israel
+    BISRA: "Beta Israel"
+    BISRA_ADJ: "Beta Israeli"
+    BISRA_desc: "TODO"
 
     # Hungarian Empire
     HNGEM: "Hungarian Empire"
@@ -668,6 +944,11 @@
     ITMCH: "Italian Merchant Alliance"
     ITMCH_ADJ: "Italian"
     ITMCH_desc: "he maritime republics also called merchant republics were Italian thalassocratic port cities which, starting from the Middle Ages, enjoyed political autonomy and economic prosperity brought about by their maritime activities. The term, coined during the 19th century, generally refers to four Italian cities, whose coats of arms have been shown since 1947 on the flags of the Italian Navy and the Italian Merchant Navy\n\nIf we manage to Unite the republics into a single entity we can establish one of the strongest trade empires in history."
+
+    # Federal Republic of Central America
+    FROCA: "Federal Republic of Central America"
+    FROCA_ADJ: "Central American"
+    FROCA_desc: "TODO"
 
     # Jagiellonian Empire
     JGLNN: "Jagiellonian Empire"

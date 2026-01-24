@@ -1,0 +1,64 @@
+﻿# Austro-Hungarian Empire Specific Government Reforms
+
+	# The Hungarian Compromise
+		fnr_ASHNG_hungarian_compromise = {
+			major = yes
+			unique = yes
+			government = monarchy
+			potential = {
+				tag = ASHNG
+				has_reform = government_reform:fnr_ASHNG_hungarian_compromise
+			}
+			allow = {
+				tag = ASHNG
+			}
+			country_modifier = {
+				government_reform_slots = 1
+				cultures_capacity = 0.50
+				diplomatic_reputation = 1
+				global_nobles_estate_power = 0.15
+				legislative_efficiency = -0.10
+				tax_income_efficiency = -0.05
+				country_cabinet_efficiency = 0.10
+			}
+			locked = {
+				is_locked_mechanic = {
+					mechanic = government_reform
+					type = fnr_ASHNG_hungarian_compromise
+				}
+			}			
+			block_for_rebel = yes
+		}
+
+	# Imperial and Royal Administration
+		fnr_ASHNG_imperial_and_royal_administration = {
+			major = yes
+			unique = yes
+			government = monarchy
+			potential = {
+				tag = ASHNG
+				has_reform = government_reform:fnr_ASHNG_imperial_and_royal_administration
+			}
+			allow = {
+				tag = ASHNG
+			}
+			country_modifier = {
+				government_reform_slots = 1
+				remove_accepted_culture_cost_modifier = 0.05
+				religious_unity_importance_modifier = 0.05
+				cultures_capacity = 2
+				government_size = -1
+				global_defensive = 0.05
+				monthly_towards_decentralization = 0.05
+				monthly_nationalist_rebel_growth = -0.025
+			}
+			locked = {
+				is_locked_mechanic = {
+					mechanic = government_reform
+					type = fnr_ASHNG_imperial_and_royal_administration
+				}
+			}			
+			block_for_rebel = yes
+		}		
+
+		

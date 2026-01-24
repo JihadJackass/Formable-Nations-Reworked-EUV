@@ -1,6 +1,5 @@
 ﻿namespace = flavor_SDNNW
 
-# TODO: ADD TOOLTIPS EXPLAINING THE REFORM SYSTEM
 flavor_SDNNW.1 = { # Sweden-Norway Flag Choice
 	type = country_event
 	title = flavor_SDNNW.1.title

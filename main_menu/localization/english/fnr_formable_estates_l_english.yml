@@ -8,5 +8,36 @@
     burgers_estate_LUSIT_burgueses: "Burgueses"
     clergy_estate_LUSIT_clerigo: "Clérigo"
     commoners_estate_LUSIT_compartes: "Compartes"
+  
+  # ESTATE PRIVILEGES
+
+    # Great Moravia
+    fnr_great_moravia_winemakers_of_balaton: "The Wine of Balaton"
+    fnr_great_moravia_winemakers_of_balaton_desc: "The wines of Lake Balaton stand among Europe's finest. Only Burgundy, Italy, and distant Georgia produce vintages of comparable quality. Our volcanic soils and favorable climate yield grapes coveted by connoisseurs throughout the continent."
+
+    fnr_great_moravia_druzhina: "Druzhina"
+    fnr_great_moravia_druzhina_desc: "In ancient times, men of privilege and princes maintained personal retinues known as druzhina, small elite forces trained and paid by those they served. By allowing nobles to maintain limited warrior retinues at their own expense, we restore this venerable tradition. These professional soldiers must answer the crown's call to war. The 10th century Arab scholar Ibrahim ibn Yakub noted that the Duke of Poland commanded a druzhina of 3,000 men, demonstrating the military value of such arrangements."
+
+    fnr_great_moravia_shepherds: "Shepherds Farmer Culture"
+    fnr_great_moravia_shepherds_desc: "Our land has from time immemorial been mostly rural, that reflects on our people as well. Most live in tighlty knitted villages and communities where everybody knows each other. The most prelevant among the professions is farmer and shepherd. Farmer families in fertille flatland, while shepherd communities in mountains and valleys. It would be foolish to change these deep rooted ways of life."
+
+    fnr_great_moravia_laborer_protection: "Laborer Protection"
+    fnr_great_moravia_laborer_protection_desc: "Laborers have become as vital to our economy as peasants to our fields. They toil in workshops, mines, and manufactories, producing the goods that generate our wealth. We extend royal protection to these workers through basic safeguards against exploitation and legal recourse against abuse. These modest concessions ensure a compliant, productive workforce while preventing the unrest that cripples rival realms."
+
+    # Hanseatic League
+    fnr_HNSLG_federal_trade_monopolies: "Federal Trade Monopolies"
+    fnr_HNSLG_federal_trade_monopolies_desc: "Grant the merchant estate exclusive control over strategic exports throughout our territorial federation. Unlike the old kontor system where monopolies applied only within foreign enclaves, our territorial sovereignty allows us to enforce trade restrictions across entire provinces. Timber from Pomerania, grain from Prussia, fish from Holstein—all flow through Hanseatic merchants who pay generous taxes in exchange for guaranteed profits."
+
+    fnr_HNSLG_urban_development_authority: "Urban Development Authority"
+    fnr_HNSLG_urban_development_authority_desc: "Empower wealthy merchants to direct urban expansion and infrastructure projects in our territorial cities. The merchant estate receives authority to construct markets, harbors, and warehouses using private capital, transforming our conquered provinces into thriving commercial centers. Unlike the old system where kontors existed as isolated islands in foreign cities, we now reshape entire urban landscapes to serve our economic vision."
+
+    fnr_HNSLG_integrated_guild_regulations: "Integrated Guild Regulations"
+    fnr_HNSLG_integrated_guild_regulations_desc: "Establish unified production standards and quality controls enforced by merchant guilds across all our territories. Where the old Hansa could only regulate goods passing through kontors, our territorial authority allows comprehensive oversight of manufacturing, ensuring that all products bearing the Hanseatic seal meet exacting standards. This protects our commercial reputation while preventing unfair competition between member cities."
+
+    fnr_HNSLG_territorial_fleet_requisition: "Territorial Fleet Requisition"
+    fnr_HNSLG_territorial_fleet_requisition_desc: "Require merchant houses to contribute vessels to our national navy in proportion to their wealth. Unlike the old voluntary system where cities might refuse naval cooperation, our territorial government can compel participation in collective defense. In exchange, participating merchants receive priority access to newly conquered ports and exemption from certain harbor fees, ensuring that private interests align with national security."
+
+    fnr_HNSLG_provincial_trading_companies: "Provincial Trading Companies"   
+    fnr_HNSLG_provincial_trading_companies_desc: "Authorize the formation of joint-stock trading companies with monopoly rights over commerce in specific conquered regions. These territorial companies operate differently from old kontor networks—rather than maintaining enclaves in foreign cities, they administer entire provinces as economic enterprises. Merchant shareholders profit from regional trade while bearing costs of local administration and development."   
 
 

@@ -1,0 +1,15 @@
+﻿namespace = flavor_KSORB
+
+flavor_KSORB.1 = { # Sorbic Kingdom Name Choice
+	type = country_event
+	title = flavor_KSORB.1.title
+	desc = flavor_KSORB.1.desc
+
+	option = { # Keep name
+		name = flavor_KSORB.1.a
+	}
+	option = { # Sorbia
+		name = flavor_SDNNW.1.b
+		change_country_name = KSORB_ALT
+	}
+}

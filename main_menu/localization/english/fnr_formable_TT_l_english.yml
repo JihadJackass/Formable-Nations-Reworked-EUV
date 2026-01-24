@@ -3,18 +3,77 @@
   # TOOLTIPS FOR FORMABLE NATIONS
 
     fnr_placeholder: ""
+
+    # Formable Tooltips
+
     PAPAL_KINGDOM_OF_GOD_INFO: "#Y As #color_yellow Papal States#!, the Holy See holds a unique position in the world. Unlike other nations, we are bound by sacred duty to shepherd #color_yellow Christendom#! rather than pursue worldly dominion - we cannot form new countries or abandon our divinely ordained role. Yet through divine providence and righteous conquest, we may transform our spiritual authority into temporal sovereignty by establishing the #color_yellow Kingdom of God on Earth#! - a realm where the authority of Christ's Vicar extends beyond spiritual matters to temporal dominion over all #color_yellow Catholic#! lands. An event will present itself when the faithful have rallied sufficiently to our banner and support our claim.#!\n\n#Y Upon conquest of at least #G 50%#! of #color_yellow Italian Territory#! as the #color_yellow Papal States#! we will be presented with the #color_pure_white 'God's Kingdom on Earth'#! event in which we will be offered the title of #color_yellow King of God#! under the newly proclaimed #color_yellow Kingdom of God#!.#!"
 
-  # reforms
+  # Government Reforms
+
+  # Estate Privilege
+
+    fnr_great_moravia_druzhina_tt: "We will unlock the [ShowUnitDefinitionName('fnr_druzhina')] unit type."
 
     #################################
     # Formable Requirement Tooltips #
     #################################
 
+    # Rhineland
+    RHLND_formable_trigger_1_tt: "[ShowCultureName('rhine_franconian')], [ShowCultureName('ripuarian_franconian')], [ShowCultureName('rhine_alemannic')], and [ShowCultureName('moselle_franconian')] will all respectively become #color_green Kindred#! of each other."
+
+    # Papal States conquers the HRE
+    PAPAL_hre_tt_1: "The [GetInternationalOrganizationType('hre').GetName] will be destroyed!"
+    PAPAL_hre_tt_2: "This option will dissolve the Holy Roman Empire, We will become Empire Rank, and two following events will fire which allow us to change our official name and establish a new flag for the realm."
+    PAPAL_hre_tt_3: "We will assume the role of Emperor of the [GetInternationalOrganizationType('hre').GetName]."
+
+    PAP_HRE_EMPIRE_1_FLAG: "New Style"
+    PAP_HRE_EMPIRE_2_FLAG: "Quaternion Eagle"
+    PAP_HRE_EMPIRE_3_FLAG: "[GetInternationalOrganizationType('hre').GetName] Flag"
+
+    fnr_papal_hre_established_tt: "The Holy Roman Empire is dissolved. A new sacred confederation under papal authority is established."
+    fnr_keep_old_hre_tt: "The Holy Roman Empire continues under our leadership."
+
+    HNSLG_formable_trigger_2_tt: "Every [ShowBuildingTypeName('hanseatic_kontor')], [ShowBuildingTypeName('hanseatic_shipwright_guild')], and [ShowBuildingTypeName('hanseatic_town_hall')] will be destroyed and [GetCountry('HSA').GetNameWithFlag] will become defunct by our newly established #color_yellow Hanseatic League Federation#!."
+    HNSLG_formable_trigger_1_tt: "All provinces which contain [ShowBuildingTypeName('hanseatic_kontor')], [ShowBuildingTypeName('hanseatic_shipwright_guild')], and [ShowBuildingTypeName('hanseatic_town_hall')] and therefore have influence from [GetCountry('HSA').GetNameWithFlag] buildings must be controlled"
+    HNSLG_formable_trigger_3_tt: "#color_yellow Hanseatic League#! will gain access to the unique [ShowGovernmentReformName('fnr_BISHE_accelerated_domain_status')] Government Reform upon conquering at least #G 25%#! of [ShowRegionName('baltic_region')] coastal territory."
+    HNSLG_formable_trigger_4_tt: "#color_yellow Hanseatic League#! will gain access to the unique [ShowGovernmentReformName('fnr_HNSLG_guild_integration_reforms')] Government Reform when [ShowEstateTypeName('burghers_estate')] [estate_power|e] is at least #G 50%#! and [ShowEstateTypeName('burghers_estate')] [estate_satisfaction|e] is at least #G 80%#!."
+    HNSLG_formable_trigger_5_tt: "#color_yellow Hanseatic League#! will be able to unlock [ShowEstateTypeName('burghers_estate')] specific privileges [ShowEstatePrivilegeName('fnr_HNSLG_integrated_guild_regulations')], [ShowEstatePrivilegeName('fnr_HNSLG_territorial_fleet_requisition')], and [ShowEstatePrivilegeName('fnr_HNSLG_provincial_trading_companies')] ."
+
+    # Elbian Federation unlocks
+    ELBNF_fnr_formable_trigger_1_tt: "Elbian Federation will gain access to the unique [ShowUnitDefinitionName('fnr_stahlwagen')] unit during the Age of Discovery."    
+
+    # British Empire unlocks
+    BISHE_fnr_formable_trigger_1_tt: "#color_yellow The British Empire#! will gain access to five new possible reforms: [ShowGovernmentReformName('fnr_BISHE_imperial_federation')], [ShowGovernmentReformName('fnr_BISHE_accelerated_domain_status')], [ShowGovernmentReformName('fnr_BISHE_economic_development_charter')], [ShowGovernmentReformName('fnr_BISHE_racial_equality_act')], and [ShowGovernmentReformName('fnr_BISHE_racial_equality_act')]."
+
+    # Poland PU path
+    JGLNN_U_fnr_formable_trigger_1_tt: "As [GetCountry('POL').GetNameWithFlag] we have a Personal Union over [GetCountry('HUN').GetNameWithFlag], [GetCountry('LIT').GetNameWithFlag], and [GetCountry('BOH').GetNameWithFlag]"
+    # Hungary PU path
+    JGLNN_U_fnr_formable_trigger_2_tt: "As [GetCountry('HUN').GetNameWithFlag] we have a Personal Union over [GetCountry('POL').GetNameWithFlag], [GetCountry('LIT').GetNameWithFlag], and [GetCountry('BOH').GetNameWithFlag]"
+    # Lithuania Path
+    JGLNN_U_fnr_formable_trigger_3_tt: "As [GetCountry('LIT').GetNameWithFlag] we have a Personal Union over [GetCountry('POL').GetNameWithFlag], [GetCountry('HUN').GetNameWithFlag], and [GetCountry('BOH').GetNameWithFlag]"
+    # Bohemia Path
+    JGLNN_U_fnr_formable_trigger_4_tt: "As [GetCountry('BOH').GetNameWithFlag] we have a Personal Union over [GetCountry('POL').GetNameWithFlag], [GetCountry('LIT').GetNameWithFlag], and [GetCountry('HUN').GetNameWithFlag]"
+
+    # Poland path
+    PLHUN_U_fnr_formable_trigger_1_tt: "As [GetCountry('POL').GetNameWithFlag] we have a Personal Union over [GetCountry('HUN').GetNameWithFlag]"  
+    # Hungary path
+    PLHUN_U_fnr_formable_trigger_2_tt: "As [GetCountry('HUN').GetNameWithFlag] we have a Personal Union over [GetCountry('POL').GetNameWithFlag]"  
+
+    # Hungary-Romania (Hungary)
+    HNRMN_fnr_formable_trigger_1_tt: "As [GetCountry('HUN').GetNameWithFlag] we have a Personal Union over [GetCountry('RMN').GetNameWithFlag]"  
+    # Hungary-Romania (Romania)
+    HNRMN_fnr_formable_trigger_2_tt: "As [GetCountry('RMN').GetNameWithFlag] we have a Personal Union over [GetCountry('HUN').GetNameWithFlag]"  
+
     fnr_dm_owned_by_fra_tt: "[owner|e] is [GetCountry('FRA').GetName]"
     fnr_dm_owned_by_eng_tt: "[owner|e] is [GetCountry('ENG').GetName]"
 
-    GMORV_formable_trigger_1_tt: "#G 5%#! of our pops will convert to [ShowReligionName('hussite')] in a spread of religious fervor due to the nature of our national reformation."
+    GMORV_formable_trigger_1_tt: "#G 5%#! of our pops will convert to [ShowReligionName('hussite')] in a spread of religious fervor due to the nature of our national reformation.\n#G 25%#! of our pops will convert to [ShowReligionName('fnr_great_moravia_orthodox')]"
+    GMORV_formable_trigger_2_tt: "The [GetInternationalOrganizationType('moravian_patriarchate').GetName] will be created under #color_yellow Great Moravian#! leadership."
+    GMORV_formable_trigger_3_tt: "All subjects of the [country|e] will be added to the [GetInternationalOrganizationType('moravian_patriarchate').GetName]."
+    GMORV_formable_trigger_4_tt: "We will unlock various unique reforms available exclusively to Great Moravia such as [ShowEstatePrivilegeName('fnr_great_moravia_druzhina')] as well as reforms exclusive to related cultural groups such as [ShowEstatePrivilegeName('fnr_royal_free_cities')], [ShowEstatePrivilegeName('fnr_shepherds_farmers_culture')], and various others."
+    GMORV_formable_trigger_5_tt: "The [GetInternationalOrganizationType('moravian_patriarchate').GetName] will be expanded upon further establishment of our authority over the Organization."
+    GMORV_formable_trigger_6_tt: "We will be able to earn a path of redemption towards rejoining the [GetInternationalOrganizationType('hre').GetName]"
+    GMORV_formable_trigger_7_tt: "The event $flavor_GMORV.2.title$ [event|e] will become available after cementing our control over Krakow, Gorlitz, Sayda, Balaton, and Northern Hungary which will give us claims on further territories of the historical Great Moravian borders - Potentially allowing us to establish Imperium Slavorum."
 
     GLCEM_formable_trigger_1_tt: "#G 22.5%#! of our pops will convert to [ShowCultureName('fnr_gallo_roman')]."
     GLCEM_formable_trigger_2_tt: "If we own territory in [ShowRegionName('iberia_region')] and [ShowRegionName('great_britain_region')] upon formation of the Gallic Empire then we will be given the option of establishing Tarraconensis and Britannia respectively as well as Baetica and Lusitania in [ShowRegionName('iberia_region')]."
@@ -40,6 +99,8 @@
 
     NED_DR_FLAG: "Prince's Orange"
     NED_UP_FLAG: "United Provinces of the Netherlands"
+
+    GLCEM_GALLIA_NAME: "Gallia"
 
     ###################
     # GUI localiation #

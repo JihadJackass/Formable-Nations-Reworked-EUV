@@ -1,0 +1,65 @@
+﻿### Rhineland / Rhenania / United Duchies / United Counties / United Republics ###
+# Coded by Tawani @Tawani
+
+RHLND_alts = { # Rhineland / Rhenania / United Duchies / United Counties / United Republics
+
+	# Rhineland
+	flag_definition = {
+		coa = RHLND_default
+		priority = 5
+	}
+	# Monarchy
+	flag_definition = {
+		coa = RHLND_monarchy
+		priority = 10
+		trigger = {
+			coa_def_monarchy_trigger = yes
+		}
+	}
+	# Republic
+	flag_definition = {
+		coa = RHLND_republic
+		priority = 10
+		trigger = {
+			coa_def_republic_trigger = yes
+		}
+	}
+	# Late Republican Flag
+	flag_definition = {
+		coa = RHLND_republic_late
+		priority = 10
+		trigger = {
+			coa_def_reformation_age_4_trigger = yes
+			coa_def_republic_trigger = yes
+		}
+	}
+	# Federal Republic
+	flag_definition = {
+		coa = RHLND_republic_federal
+		priority = 11
+		trigger = {
+			coa_def_federal_state_trigger = yes
+			coa_def_republic_trigger = yes
+		}
+	}
+	# Revolutionary Republic
+	flag_definition = {
+		coa = RHLND_revolutionary_republic
+		priority = 15
+		trigger = {
+			coa_def_revolutionary_republic_trigger = yes
+		}
+	}
+	# Late Monarchy
+	flag_definition = {
+		coa = RHLND_monarchy_late
+		priority = 15
+		trigger = {
+			coa_def_monarchy_trigger = yes
+			OR = {
+				coa_def_absolutism_age_5_trigger = yes
+				coa_def_kingdom_or_higher_trigger = yes
+			}
+		}
+	}
+}

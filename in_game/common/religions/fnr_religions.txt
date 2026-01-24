@@ -30,9 +30,9 @@ fnr_god_worshipping_society_taiping = {
 		calvinist = positive
 		anglican = positive
 		catholic = hostile      # Taiping rejected Catholic hierarchy
-		confucian = hostile     # Opposed traditional Chinese religion
-		buddhist = hostile      # Iconoclasm against Buddhist temples
-		taoist = hostile        # Opposed traditional practices
+		#confucian = hostile     # Opposed traditional Chinese religion
+		#buddhist = hostile      # Iconoclasm against Buddhist temples
+		#taoist = hostile        # Opposed traditional practices
 	}
 
 	unique_names = {
@@ -60,6 +60,7 @@ fnr_god_worshipping_society_taiping = {
 	custom_tags = { protestant fnr_gws_church_aspects }
 }
 
+# Gallic Empire
 fnr_gallo_roman_religion = {
 	color = color_fnr_gallo_roman_religion
 	group = folk_european_group
@@ -111,3 +112,35 @@ fnr_gallo_roman_religion = {
 	#custom_tags = { protestant fnr_gws_church_aspects }
 }
 
+# Great Moravia
+fnr_great_moravia_orthodox = { 
+	color = religion_orthodox
+	group = christian
+
+	has_patriarchs = yes	
+	has_canonization = yes
+	has_autocephalous_patriarchates = no
+	has_religious_influence = yes
+	use_icons = yes
+
+	definition_modifier = {
+		stability_cost = -0.1
+		global_max_literacy = 5
+
+		maximum_religious_influence = 400
+	}
+	
+	opinions = {
+		bogomilism = enemy
+		bosnian_church = negative
+		catholic = positive
+		orthodox = kindred
+		paulicianism = negative
+		sunni = enemy
+		shia = enemy
+		judaism = positive
+	}
+
+	tags = { orthodox_gfx eastern_christian_gfx christian_gfx abrahamic_gfx }
+
+}

@@ -1,0 +1,128 @@
+﻿# scope:actor = country
+# scope:recipient = religion
+
+fnr_god_worshipping_society_taiping_expand_cult = {
+	type = religious
+
+	sound = UI_action_religion_generic
+	
+	ai_tick = daily
+	ai_tick_frequency = 80
+
+	automation_tick = monthly
+	automation_tick_frequency = 1
+	player_automated_category = religiousdoctrines
+	
+	message = national_church_action
+	
+	potential = {
+		scope:actor = {
+			government_type = government_type:monarchy
+		}
+	}
+
+	allow = {
+		scope:actor = {
+			has_ruler = yes
+			ruler ?= {
+				num_of_spouses > 0
+			}
+		}
+	}
+	
+	price = price:national_church_power
+
+	select_trigger = {
+		looking_for_a = religion
+		source = actor
+		target_flag = recipient
+		name = "choose_religion"
+		column = {
+			data = name
+		}
+		visible = {
+			has_tag = fnr_gws_church_aspects
+		}
+	}
+
+	select_trigger = {
+		show_if = {
+			scope:actor.ruler ?= {
+				num_of_spouses > 1
+			}
+		}
+		looking_for_a = character
+		source = actor
+		target_flag = target
+		name = "choose_consort_to_divorce_from"
+		column = {
+			data = character_info
+		}
+		interaction_source_list = {
+			scope:actor.ruler ?= {
+				every_spouse = {
+					add_to_list = source
+				}
+			}
+		}
+		visible = {
+			is_alive = yes
+		}
+		enabled = {
+		}
+	}
+
+	effect = {
+		scope:actor = {
+			if = {
+				limit = { exists = scope:target }
+				ruler ?= { divorce_character = scope:target }
+			}
+			else = {
+				ruler ?= { divorce_character = first_spouse }
+			}
+		}
+	}
+	
+	ai_will_do = {
+		add = -50
+		add = {
+			if = {
+				limit = {
+					scope:actor = {
+						modifier:care_about_producing_heirs = yes
+						has_ruler = yes
+						ruler = {
+							location.owner ?= scope:actor #so AI doesn't divorce rulers in player PUs
+						}
+						trigger_if = {
+							limit = { exists = scope:target }
+							scope:target = {
+								is_pregnant = no
+								age_in_years > 35
+							}
+						}
+						trigger_else = {
+							ruler = {
+								first_spouse = {
+									is_pregnant = no
+									age_in_years > 35
+								}
+							}
+							heir ?= {
+								NOT = {
+									father ?= scope:actor.ruler
+								}
+							}
+						}
+					}
+				}
+				add = {
+					value = {
+						value = 100
+					}
+				}
+			}
+		}
+	}
+}

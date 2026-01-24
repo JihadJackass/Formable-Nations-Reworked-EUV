@@ -2,13 +2,20 @@
 
   # RELIGIONS
 
+    # Taiping
     fnr_god_worshipping_society_taiping: "God Worshipping Society"
     fnr_god_worshipping_society_taiping_ADJ: "God Worshipping Society"
     fnr_god_worshipping_society_taiping_desc: "The polytheistic Chinese religious movement formed under the influence of Protestant Christianity, incorporating elements of Chinese folk religion and Buddhist concepts was founded by Hong Xiuquan in 1843, viewing God (Shangdi) as supreme and Hong as God's second son, leading to the massive Taiping Rebellion (1850-1864) against the Qing dynasty, which sought social equality, radical reforms, and established the Heavenly Kingdom before its eventual brutal defeat."
 
+    # Gallic Empire
     fnr_gallo_roman_religion: "Gallo-Roman"
     fnr_gallo_roman_religion_ADJ: "Gallo-Roman"
     fnr_gallo_roman_religion_desc: "Gallo-Roman religion is a fusion of the traditional religious practices of the Gauls, who were originally Gaulish language speakers, and the Roman and Hellenistic religions introduced to the region under Roman Imperial rule. It was the result of selective acculturation."
+
+    # Great Moravia
+    fnr_great_moravia_orthodox: "Orthodoxy"
+    fnr_great_moravia_orthodox_ADJ: "Orthodox"
+    fnr_great_moravia_orthodox_desc: "The $orthodox_ADJ$ Church, rooted in the traditions of the early $christian_ADJ$ councils, emphasizes the continuity of apostolic teachings and sacred tradition. Centered on the $BYZ_ADJ$ Rite, it places great importance on liturgy, icons, and mysticism. The $orthodox_ADJ$ faith is led by patriarchs, with the Ecumenical Patriarch of Constantinople holding a primacy of honor.\n\n#color_yellow This is a unqique version of Orthodox in which Autocephalous Patriarchates mechanic does not apply as this organization shares a similarity to the Holy Roman Empire instead.#!"
 
   # Aspects
 
@@ -17,4 +24,5 @@
 
   # Religious Actions
 
-    fnr_expand_cult: "Expand Cult of Personality"
+    fnr_god_worshipping_society_taiping_expand_cult: "Expand Cult of Personality"
+    fnr_god_worshipping_society_taiping_expand_cult_desc: "TODO"

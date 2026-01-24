@@ -1,0 +1,4 @@
+﻿fnr_great_moravia_rejected_autonomous_movement = {
+	value = 100
+	yearly_decay = 4
+}

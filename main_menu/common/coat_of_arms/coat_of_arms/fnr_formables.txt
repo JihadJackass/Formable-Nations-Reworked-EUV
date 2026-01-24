@@ -1,6 +1,279 @@
 ###########################################
 # Formable Nation Reworked Scripted Flags #
 ###########################################
+
+# PLANNED/TODO: Alternatives for different government types and use less textured flags (only when needed such as sweden-norway with too many colors)
+
+### Rhineland / Rhenania / United Duchies / United Counties / United Republics ###
+# Coded by Tawani
+
+RHLND_default = {
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "green"
+
+	colored_emblem = {
+		texture = "ce_bend.dds"
+		color1 = "white"
+		color2 = "white"
+	}		
+}
+
+RHLND_monarchy = {
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "black"
+	color3 = "red_secondary"
+	color4 = "white"
+	color5 = "red"
+
+    sub = {
+        parent = "sub_lion_flag" # Q1 Jülich
+		instance = { scale = { 0.5 0.5 } offset = { 0.0 0.0 } }
+		color1 = "yellow"
+		color2 = "black"
+		color3 = "red_secondary"
+    }
+	sub = {
+        parent = "sub_lion_cr_qf_flag" # Q2 Guelders
+		color1 = "blue"
+		color2 = "yellow"
+		color3 = "red_light"
+		instance = { scale = { 0.5 0.5 } offset = { 0.5 0.0 } }
+    }
+	sub = {
+        parent = "sub_kleves_flag" # Q3 Kleve
+		instance = { scale = { 0.5 0.5 } offset = { 0.0 0.5 } }
+    }
+	sub = {
+        parent = "sub_lion_cr_qf_flag" # Q4 Berg
+		instance = { scale = { 0.5 0.5 } offset = { 0.5 0.5 } }
+    }
+    sub = {
+        parent = "sub_quartered_bold"
+		instance = { scale = { 1.0 1.0 } offset = { 0.0 0.0 } }
+    }
+}
+
+RHLND_republic = { # Hanseatic Merchant Flag with a Green Hoist
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+	color3 = "green"
+
+	colored_emblem = {
+		texture = "ce_per_fess.dds"
+		color1 = color1
+		color2 = color2
+	}	
+	colored_emblem = {
+		texture = "ce_stripe_hoist.dds"
+		color1 = color3
+		color2 = color3
+	}		
+}
+
+RHLND_republic_late = { # Historical Rhineland Province
+	pattern = "pattern_solid.dds"
+	color1 = "green_light"
+	color2 = "white"
+	
+	colored_emblem = {
+		texture = "ce_per_fess.dds"
+		color1 = color1
+		color2 = color2
+	}		
+}
+
+RHLND_republic_federal = { # Dutch Inspired Variant
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "white"
+	color3 = "blue_light"
+
+	colored_emblem = {
+		texture = "ce_tricolor_horizontal.dds"
+		color1 = color1
+		color2 = color2
+		color3 = color3
+	}		
+}
+
+RHLND_revolutionary_republic = { # Modern Flag of North-Rhine Westphalia
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "white"
+	color3 = "red"
+
+	colored_emblem = {
+		texture = "ce_tricolor_horizontal.dds"
+		color1 = color1
+		color2 = color2
+		color3 = color3
+	}		
+}
+
+RHLND_monarchy_late = { # Rhenish Coat of Arms
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_tricolor_horizontal.dds"
+		color1 = color1
+		color2 = color2
+		color3 = color1
+	}	
+}
+
+# Baden-Wurttemberg
+	BDWTB = {
+		textured_emblem = {
+			texture = "te_baden_wurttemberg.dds"
+		}	
+	}
+# Sassanids
+	SSNID = {
+		textured_emblem = {
+			texture = "te_sassanids.dds"
+		}	
+	}
+# Magna Graecia (Greek Naples)
+	MGGCA = {
+		textured_emblem = {
+			texture = "te_magna_graecia.dds"
+		}	
+	}
+# South German Confederation
+	SGCFD = {
+		textured_emblem = {
+			texture = "te_south_german_confederation.dds"
+		}	
+	}
+# North German Confederation
+	NGCFD = {
+		textured_emblem = {
+			texture = "te_north_german_confederation.dds"
+		}	
+	}
+	NGCFD_flag_alternate = {
+		pattern = "pattern_tricolor_horizontal_01.dds"
+		color1 = "black"
+		color2 = "white"
+		color3 = "red"	
+	}
+# Kingdom of Swabia
+	SWBIA = {
+		textured_emblem = {
+			texture = "te_swabia.dds"
+		}	
+	}
+# Felvidek (North Hungary)
+	FLVDK = {
+		textured_emblem = {
+			texture = "te_felvidek.dds"
+		}	
+	}
+# White Huns
+	HPEMP = {
+		textured_emblem = {
+			texture = "te_white_huns.dds"
+		}	
+	}
+# Hungary-Romania
+	HNRMN = {
+		textured_emblem = {
+			texture = "te_hungary_romania.dds"
+		}	
+	}
+# Zapadoslavia
+	ZPDSL = {
+		textured_emblem = {
+			texture = "te_zapadoslavia.dds"
+		}	
+	}
+# Baden-Alsace
+	BDALS = {
+		textured_emblem = {
+			texture = "te_baden_alsace.dds"
+		}	
+	}
+# Serene Republic of Australia
+	SROAU = {
+		textured_emblem = {
+			texture = "te_serene_australia.dds"
+		}	
+	}
+# Babylon
+	BBLON = {
+		textured_emblem = {
+			texture = "te_babylon.dds"
+		}	
+	}
+# Papal HRE Flags
+	PAP_HRE_EMPIRE_1_FLAG = { # New Style
+		textured_emblem = {
+			texture = "te_papal_hre_flag_1.dds"
+		}			
+	}
+	PAP_HRE_EMPIRE_2_FLAG = { # Quaternion Eagle
+		textured_emblem = {
+			texture = "te_papal_hre_flag_2.dds"
+		}			
+	}	
+	PAP_HRE_EMPIRE_3_FLAG = { # Holy Roman Empire flag
+		textured_emblem = {
+			texture = "te_papal_hre_flag_3.dds"
+		}			
+	}
+# Brandenburg-Prussia
+	BNDPR = {
+		textured_emblem = {
+			texture = "te_brandenburgprussia.dds"
+		}			
+	}
+# Great Scotia
+	GSCTL = {
+		textured_emblem = {
+			texture = "te_great_scotia_2.dds"
+		}			
+	}
+# Austro-Hungarian Empire
+	ASHNG = {
+		textured_emblem = {
+			texture = "te_austrohungarianempire.dds"
+		}			
+	}
+# Galicia-Lodomeria
+	GLCLD = {
+		textured_emblem = {
+			texture = "te_galicia_lodomeria.dds"
+		}			
+	}
+# Gran Columbia
+	GCOLM = {
+		textured_emblem = {
+			texture = "te_gran_columbia.dds"
+		}			
+	}
+# Elbian Federation
+	ELBNF = {
+		textured_emblem = {
+			texture = "te_elbian_federation.dds"
+		}			
+	}
+# Brunei Dara
+	BNDSM = {
+		textured_emblem = {
+			texture = "te_brunei_dara.dds"
+		}			
+	}
+# Phillipines Native Variant
+	FLPNN = {
+		textured_emblem = {
+			texture = "te_philipine_native.dds"
+		}		
+	}
 # Sardinia-Piedmont
 	SDPDM = {
 		textured_emblem = {
@@ -1028,7 +1301,7 @@
 			instance = { position = { 0.45 } scale = { 0.60 0.60 }  }
 		}
 	}	
-# The United Kingdom TODO: fix
+# The United Kingdom
 	UKKDM = {
 		pattern = "pattern_tricolor_horizontal_01.dds"
 		color1 = hsv360{ 350 92 78 } # british red
@@ -1668,7 +1941,13 @@
 		textured_emblem = {
 			texture = "te_roman_brittania.dds"
 		}
-	}		
+	}	
+# Beta Israel
+	BISRA = {
+		textured_emblem = {
+			texture = "te_beta_israel.dds"
+		}
+	}	
 # Iberian Empire
 	IBNEM = {
 		pattern = "pattern_solid.dds"

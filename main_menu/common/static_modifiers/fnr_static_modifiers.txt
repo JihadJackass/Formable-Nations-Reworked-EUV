@@ -1,0 +1,35 @@
+﻿# Formable Nations Static Modifiers
+
+	# Great Moravia Modifiers
+
+	fnr_gmorv_clergy_upset_by_loss_of_power = {
+		game_data = {
+			category = country
+		}
+		global_clergy_estate_power = -0.05
+	}
+
+	fnr_gmorv_gained_power = {
+		game_data = {
+			category = country
+		}
+		global_clergy_estate_power = 0.025
+	}
+
+	fnr_royal_free_cities_modifier = {
+		game_data = {
+			category = location
+		}
+		free_building_levels = 20
+	}
+
+	# Moravian Patriarchate
+	fnr_moravian_patrarchate_modifier = {
+		game_data = {
+			category = character
+		}
+		
+		character_cabinet_efficiency = 0.05
+	}
+
+	

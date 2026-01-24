@@ -2,6 +2,19 @@
 
 # Formable Nations Reworked - Scripted GUIs for Toggle Buttons
 
+# Initialize/Toggle Debug Window
+FormableNationsReworkedDebug_initialize = {
+	scope = country
+	saved_scopes = { }
+	is_shown = { always = yes }
+	is_valid = { always = yes }
+	effect = {
+		# This scripted GUI is called when opening the debug window
+		# Currently the window is controlled by the Toggle variable, so this can be empty
+		# Future: Could initialize default settings or perform setup here
+	}
+}
+
 # Toggle for Historical Formables - fnr_historical_enabled
 	# Existed after EU5 start date and not after January 1, 1837
 	FormableNationReworked_toggle_historical_formables = {

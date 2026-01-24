@@ -1,0 +1,17 @@
+﻿# Assyrian Empire
+
+fnr_semitic_culture = {
+	language = angevin_dialect
+	
+	color = rgb { 99 77 68 }
+	
+	tags = { middle_east_gfx }
+
+	opinions = {
+
+	}
+	
+	culture_groups = {
+		iranian_group
+	}
+}

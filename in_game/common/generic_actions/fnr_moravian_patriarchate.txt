@@ -1,0 +1,214 @@
+﻿
+#######################################
+# Influence Holy Roman Empire Members #
+#######################################
+# Spending Religious Influence, Stability, and negative opinion of MP members can allow you to convince HRE members to join your side, convert to Orthodoxy, and become members of the MP.
+# Each invited member has a chance to attempt to try to gain something from being offered to join, such as reversing the Slavoric law, or something. 
+fnr_moravia_patriarchate_influence_hre_members = {
+	type = internationalorganization
+
+	sound = UI_action_religion_generic
+
+	ai_tick = monthly
+	ai_tick_frequency = 12
+
+	automation_tick = monthly
+	automation_tick_frequency = 3
+	player_automated_category = religiousdoctrines
+	potential = {
+	}
+	allow = {
+		any_country = {
+			is_member_of_international_organization = international_organization:hre
+			NOT = { is_leader_of_international_organization = international_organization:hre }
+			opinion = { 
+				target = c:GMORV 
+				value >= 100
+			}
+		}
+	}
+
+	price = price:fnr_price_influence_holy_roman_empire_member
+
+	select_trigger = {
+		looking_for_a = international_organization
+		target_flag = recipient
+		name = "choose_international_organization"
+		column = {
+			data = name
+		}
+		visible = {
+			international_organization_type = international_organization_type:moravian_patriarchate
+		}
+		enabled = {
+		}
+	}
+
+	effect = {
+	}
+
+	# ai_desire is how much an AI would like this action to pass.
+	# It is evaluated in the scope of the AI. Proposing country is scope:actor
+	ai_will_do = {
+		#base
+		value = -10
+	}
+}
+
+# Anti-Polish Coalition building
+fnr_moravia_patriarchate_polish_coalition = {
+	type = internationalorganization
+
+	sound = UI_action_religion_generic
+
+	ai_tick = monthly
+	ai_tick_frequency = 12
+
+	automation_tick = monthly
+	automation_tick_frequency = 3
+	player_automated_category = religiousdoctrines
+	potential = {
+	}
+	allow = {
+		international_organization:moravian_patriarchate = {
+			total_members = 25
+		}
+		OR = {
+			c:POL = {
+				is_rival_of = c:GMORV
+			}
+			c:GMORV = {
+				is_rival_of = c:POL
+			}
+		}
+	}
+
+	price = price:fnr_price_arrange_polish_coalition
+
+	select_trigger = {
+		looking_for_a = international_organization
+		target_flag = recipient
+		name = "choose_international_organization"
+		column = {
+			data = name
+		}
+		visible = {
+			international_organization_type = international_organization_type:moravian_patriarchate
+		}
+		enabled = {
+		}
+	}
+
+	effect = {
+		C:GMORV = {
+			add_casus_belli = {
+				target = scope:POL
+				type = casus_belli:cb_coalition
+			}
+		}
+	}
+
+	# ai_desire is how much an AI would like this action to pass.
+	# It is evaluated in the scope of the AI. Proposing country is scope:actor
+	ai_will_do = {
+		#base
+		value = -10
+	}
+}
+
+# Expand Authority
+fnr_moravia_patriarchate_expand_authority = {
+	type = internationalorganization
+
+	sound = UI_action_religion_generic
+
+	ai_tick = monthly
+	ai_tick_frequency = 12
+
+	automation_tick = monthly
+	automation_tick_frequency = 3
+	player_automated_category = religiousdoctrines
+	
+	potential = {
+	}
+	allow = {
+		international_organization:moravian_patriarchate = {
+			total_members = 20
+		}
+	}
+
+	price = price:fnr_price_expand_authority
+
+	select_trigger = {
+		looking_for_a = international_organization
+		target_flag = recipient
+		name = "choose_international_organization"
+		column = {
+			data = name
+		}
+		visible = {
+			international_organization_type = international_organization_type:moravian_patriarchate
+		}
+		enabled = {
+		}
+	}
+
+	effect = {
+	}
+
+	# ai_desire is how much an AI would like this action to pass.
+	# It is evaluated in the scope of the AI. Proposing country is scope:actor
+	ai_will_do = {
+		#base
+		value = -10
+	}
+}
+
+# Unificatio Unionis (Establish counter to HRE and crown Moravia emperor)
+fnr_moravia_patriarchate_unificatio_unionis = {
+	type = internationalorganization
+
+	sound = UI_action_religion_generic
+
+	ai_tick = monthly
+	ai_tick_frequency = 12
+
+	automation_tick = monthly
+	automation_tick_frequency = 3
+	player_automated_category = religiousdoctrines
+	potential = {
+	}
+	allow = {
+		international_organization:moravian_patriarchate = {
+			total_members = 50
+		}
+	}
+
+	price = price:fnr_price_unificatio_unionis
+
+	select_trigger = {
+		looking_for_a = international_organization
+		target_flag = recipient
+		name = "choose_international_organization"
+		column = {
+			data = name
+		}
+		visible = {
+			international_organization_type = international_organization_type:moravian_patriarchate
+		}
+		enabled = {
+		}
+	}
+
+	effect = {
+	}
+
+	# ai_desire is how much an AI would like this action to pass.
+	# It is evaluated in the scope of the AI. Proposing country is scope:actor
+	ai_will_do = {
+		#base
+		value = -10
+	}
+}
+
+# Associate with Orthodox Nations

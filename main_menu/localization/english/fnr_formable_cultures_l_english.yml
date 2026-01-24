@@ -1,6 +1,12 @@
 ﻿l_english:
 
   # Cultures
-  fnr_anglois: "Anglois"
-  fnr_gallo_roman: "Gallo-Roman"
 
+    # Dual Monarchy
+    fnr_anglois: "Anglois"
+
+    # Gallo-Roman Empire
+    fnr_gallo_roman_culture: "Gallo-Roman"
+
+    # Assyrian Empire
+    fnr_semitic_culture: "Assyrian-Semitic"

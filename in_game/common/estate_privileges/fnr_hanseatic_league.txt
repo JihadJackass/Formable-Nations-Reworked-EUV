@@ -1,0 +1,158 @@
+﻿# Hanseatic League Estate Privileges
+
+	# Federal Trade Monopolies
+	fnr_HNSLG_federal_trade_monopolies = {
+
+		estate = burghers_estate
+		
+		potential = {
+			government_type = government_type:republic
+			OR = {
+				tag = HNSLG
+				has_or_had_tag = HNSLG
+			}
+		}
+		allow = {
+			OR = {
+				tag = HNSLG
+				has_or_had_tag = HNSLG
+			}
+		}
+		can_revoke = {
+		}
+		
+		country_modifier = {
+			global_burghers_estate_power = 0.025
+			
+			trade_efficiency = 0.10
+			
+			monthly_towards_decentralization = societal_value_monthly_move
+		}
+	}
+
+	# Urban Development Authority
+	fnr_HNSLG_urban_development_authority = {
+
+		estate = burghers_estate
+		
+		potential = {
+			government_type = government_type:republic
+			OR = {
+				tag = HNSLG
+				has_or_had_tag = HNSLG
+			}
+		}
+		allow = {
+			OR = {
+				tag = HNSLG
+				has_or_had_tag = HNSLG
+			}
+		}
+		can_revoke = {
+		}
+		
+		country_modifier = {
+			global_burghers_estate_power = 0.025
+			
+			trade_efficiency = 0.10
+			
+			monthly_towards_decentralization = societal_value_monthly_move
+		}
+	}
+
+	# Integrated Guild Regulations
+	fnr_HNSLG_integrated_guild_regulations = {
+
+		estate = burghers_estate
+		
+		potential = {
+			government_type = government_type:republic
+			OR = {
+				tag = HNSLG
+				has_or_had_tag = HNSLG
+			}
+		}
+		allow = {
+			AND = {
+				OR = {
+					tag = HNSLG
+					has_or_had_tag = HNSLG
+				}
+				custom_tooltip = {
+					text = produce_any_fine_cloth_or_silk_tt
+					OR = {
+						produced_in_country:fine_cloth > 0
+						produced_in_country:silk > 0
+					}
+				}
+			}
+		}
+		can_revoke = {
+		}
+		
+		country_modifier = {
+			global_burghers_estate_power = 0.025
+			burghers_estate_target_satisfaction = 0.05
+			
+			global_production_efficiency = 0.05
+			global_trades_per_burgher = 0.0225
+		}
+	}
+
+	# Territorial Fleet Requisition
+	fnr_HNSLG_territorial_fleet_requisition = {
+
+		estate = burghers_estate
+		
+		potential = {
+			government_type = government_type:republic
+			OR = {
+				tag = HNSLG
+				has_or_had_tag = HNSLG
+			}
+		}
+		allow = {
+			OR = {
+				tag = HNSLG
+				has_or_had_tag = HNSLG
+			}
+		}
+		can_revoke = {
+		}
+		
+		country_modifier = {
+			global_burghers_estate_power = 0.025
+			
+			trade_efficiency = 0.10
+			
+			monthly_towards_decentralization = societal_value_monthly_move
+		}
+	}	
+
+	# Provincial Trading Companies
+	fnr_HNSLG_provincial_trading_companies = {
+
+		estate = burghers_estate
+		
+		potential = {
+			government_type = government_type:republic
+			OR = {
+				tag = HNSLG
+				has_or_had_tag = HNSLG
+			}
+		}
+		allow = {
+			OR = {
+				tag = HNSLG
+				has_or_had_tag = HNSLG
+			}
+		}
+		can_revoke = {
+		}
+		
+		country_modifier = {
+			global_burghers_estate_power = 0.025
+		}
+	}	
+	
+	# TODO: finish these 

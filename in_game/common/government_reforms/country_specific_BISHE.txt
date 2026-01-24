@@ -1,0 +1,122 @@
+﻿# British Empire Specific Government Reforms
+
+	# Imperial Federation
+		fnr_BISHE_imperial_federation = {
+			major = yes
+			unique = yes
+			government = monarchy
+			potential = {
+				tag = BISHE
+				has_reform = government_reform:fnr_BISHE_imperial_federation
+			}
+			allow = {
+				tag = BISHE
+			}
+			country_modifier = {
+				# TODO
+			}
+			locked = {
+				is_locked_mechanic = {
+					mechanic = government_reform
+					type = fnr_BISHE_imperial_federation
+				}
+			}			
+			block_for_rebel = yes
+		}
+
+	# Accelerated Domain Status
+		fnr_BISHE_accelerated_domain_status = {
+			major = yes
+			unique = yes
+			government = monarchy
+			potential = {
+				tag = BISHE
+				has_reform = government_reform:fnr_BISHE_accelerated_domain_status
+			}
+			allow = {
+				tag = BISHE
+			}
+			country_modifier = {
+				# TODO
+			}
+			locked = {
+				is_locked_mechanic = {
+					mechanic = government_reform
+					type = fnr_BISHE_accelerated_domain_status
+				}
+			}			
+			block_for_rebel = yes
+		}
+
+	# Economic Development Charter
+		fnr_BISHE_economic_development_charter = {
+			major = yes
+			unique = yes
+			government = monarchy
+			potential = {
+				tag = BISHE
+				has_reform = government_reform:fnr_BISHE_economic_development_charter
+			}
+			allow = {
+				tag = BISHE
+			}
+			country_modifier = {
+				# TODO
+			}
+			locked = {
+				is_locked_mechanic = {
+					mechanic = government_reform
+					type = fnr_BISHE_economic_development_charter
+				}
+			}			
+			block_for_rebel = yes
+		}		
+
+	# Racial Equality Act
+		fnr_BISHE_racial_equality_act = {
+			major = yes
+			unique = yes
+			government = monarchy
+			potential = {
+				tag = BISHE
+				has_reform = government_reform:fnr_BISHE_racial_equality_act
+			}
+			allow = {
+				tag = BISHE
+			}
+			country_modifier = {
+				# TODO
+			}
+			locked = {
+				is_locked_mechanic = {
+					mechanic = government_reform
+					type = fnr_BISHE_racial_equality_act
+				}
+			}			
+			block_for_rebel = yes
+		}	
+
+	# Constitutional Monarchy of Nations
+		fnr_BISHE_constitutional_monarchy_of_nations = {
+			major = yes
+			unique = yes
+			government = monarchy
+			potential = {
+				tag = BISHE
+				has_reform = government_reform:fnr_BISHE_racial_equality_act
+			}
+			allow = {
+				tag = BISHE
+			}
+			country_modifier = {
+				# TODO
+			}
+			locked = {
+				is_locked_mechanic = {
+					mechanic = government_reform
+					type = fnr_BISHE_racial_equality_act
+				}
+			}			
+			block_for_rebel = yes
+		}	
+		

@@ -1,0 +1,6 @@
+﻿
+#    great_moravia = {
+#        alias = { great_moravian }
+#        texture = "gfx/interface/icons/flat_icons/country.dds"
+#    }
+

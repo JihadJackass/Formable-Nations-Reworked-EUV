@@ -1,0 +1,40 @@
+﻿# Great Moravia Building Types
+
+# todo: fix and test
+fnr_hradiska = {
+	max_levels = 1
+	pop_type = soldiers
+	
+	category = defense_category
+	
+	employment_size = stockade_employment
+	
+	rural_settlement = yes
+	
+	build_time = small_fort_building
+
+	expensive = yes
+	
+	unique_production_methods = {
+	
+		fnr_hradiska_maintenance = {
+			lumber = 0.1
+			weaponry = 0.02
+			tar = 0.02
+			category = building_maintenance
+		}
+	}
+	construction_demand = stockade_construction
+
+	modifier = {
+		local_garrison_size = 0.1
+		local_unrest = -0.025
+		local_nobles_estate_power = 0.5
+	}
+	
+	raw_modifier = {
+		fort_level = 1
+		local_nobles_desired_pop = 0.005
+		propagating_zone_of_control = no
+	}
+}

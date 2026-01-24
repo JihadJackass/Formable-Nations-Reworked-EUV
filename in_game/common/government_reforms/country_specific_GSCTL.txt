@@ -1,0 +1,31 @@
+﻿# Great Scotia Empire Specific Government Reforms
+
+	# The Nova Scotian Charter
+		fnr_GSCTL_nova_scotian_charter = {
+			major = yes
+			unique = yes
+			government = monarchy
+			potential = {
+				tag = GSCTL
+				has_reform = government_reform:fnr_GSCTL_nova_scotian_charter
+			}
+			allow = {
+				tag = GSCTL
+			}
+			country_modifier = {
+				government_reform_slots = 1
+				colonial_range = 80
+				colonial_maintenance_cost = -0.05
+				colonial_migration_size = 0.05
+				tax_income_efficiency = -0.025
+			}
+			locked = {
+				is_locked_mechanic = {
+					mechanic = government_reform
+					type = fnr_GSCTL_nova_scotian_charter
+				}
+			}			
+			block_for_rebel = yes
+		}	
+
+		

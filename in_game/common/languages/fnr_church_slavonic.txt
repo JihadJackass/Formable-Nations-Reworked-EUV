@@ -1,0 +1,39 @@
+﻿# Church Slavonic Language
+# Distinct to Slavic languages with a focus on theocratic values
+# Specifically unlocked upon passing the Church Slavonic Religious law (moravian patriarchate)
+
+fnr_church_slavonic = {
+
+	color = map_FNR_CHURCH_SLAVONIC_LANG
+
+	family = slavic_language_family
+
+	male_names = {
+	}
+
+	female_names = {
+	}
+
+	dynasty_names = {
+	}
+
+	lowborn = {
+	}
+
+	ship_names = {
+	}	
+	
+	dynasty_template_keys = {
+	}
+
+	patronym_prefix_son = "patronym_prefix_french_son"
+	patronym_prefix_daughter = "patronym_prefix_french_daughter"
+
+	location_prefix = "location_prefix_french"
+	location_prefix_vowel = "location_prefix_french_vowel"
+
+	first_name_conjoiner = "-" # to hyphenate compound names like "name_john.name_lucas" as "Jean-Luc" instead of the default "Jean Luc"
+
+	dialects = {
+	}
+}

@@ -1,5 +1,13 @@
 ﻿l_english:
 
   # Cultures
-  fnr_gaulish_language: "Gaulish"
+
+    # Gallic Empire
+    fnr_gaulish_language: "Gaulish"
+
+    # Assyrian Empire / Assyria
+    fnr_akkadian_language: "Akkadian"
+
+    # Church Slavonic
+    fnr_church_slavonic: "Church Slavonic"
 

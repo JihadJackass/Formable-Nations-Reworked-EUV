@@ -1,0 +1,15 @@
+﻿fnr_GMORV_family_in_cabinet_bonus = { # TODO: fix
+    potential = {
+        has_heir_selection = heir_selection:moravian_meritocratic_succession  # Your succession law
+    }
+    
+    trigger = {
+		any_in_cabinet = {
+			dynasty = root.ruler.dynasty
+		}
+    }
+    
+    modifier = {
+        global_crown_estate_power = 0.05
+    }
+}

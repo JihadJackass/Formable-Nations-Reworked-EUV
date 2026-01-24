@@ -1,27 +1,20 @@
 # IMPORTANT INFORMATION REGARDING REQUESTS
 
+TODO TEST:
+test renaming formable name (not the tag) to something other than what the tag is to see if country name with flag localization works on a 5 tag
+
+TODO IN GENERAL: 
+- Adjust and improve country name construction (add a setting to disable or enable simple names vs non-simple names)
+- Taliban flag is fucked?
+- Many flags are too bright
+
 # Formable Requests
 
-- Babylon
-- Assyrian Empire + Historical city names
-- Australia if they conquer New Zealand and are a merchant republic could go: Serene Republic of Australia (flag:) https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2Fgbstcgm9883g1.png
 - All 50 US States
-- Hephthalite Empire / White Huns
-- Federal Republic of Central America
-- Gran Colombia
-- Galicia-Lodomeria
 - Kaiserredux formables
 - Meme formable: Kingdom of Rhodoks - Italian based kingdom in Mount and Blade Warband
-- Baden-Alsace
-- Felvidek (https://en.wikipedia.org/wiki/Upper_Hungary)
 - Baden-Wurttemburg (https://media.discordapp.net/attachments/1435551326753787974/1444360299174952970/2560px-Flag_of_Baden-WC3BCrttemberg_28state2C_lesser_arms29.png?ex=692fb89a&is=692e671a&hm=9fa2b6770c78c5af688d4a3cfa5718120e0f83ab33fee140010906672f237fe8&=&format=webp&quality=lossless&width=1111&height=667)
 - Rhineland formable
-- Swabia
-- North German Confederation
-- South German Confederation 
-- Magna Graecia and Sassanids
-- Zapadoslavia (https://cdn.discordapp.com/attachments/1435551326753787974/1440462859707613224/doionce05gm81.png?ex=692f6294&is=692e1114&hm=2bfe13573ac6dae1a76f254cede09eec6a3f91dbb744a50a485acaaedff0f35b)
-- Hungary-Romania (https://media.discordapp.net/attachments/1435551326753787974/1439764270068924578/rn97p7i5p2c31.png?ex=692f7af7&is=692e2977&hm=88bd6f571b589d92739246dab5dc4119dc32d22e7cc07e8cf7f43e4707c159bd&=&format=webp&quality=lossless&width=861&height=575)
 - The Ostrogothic Kingdom 
 - The Visigothic Kingdom 
 - The kingdom of the vandals 
@@ -48,3 +41,4 @@
 # Mechanics Requests / Plans
 
 - Add Mod Based Formables Category (Divergance of Darkness would have Danubian Federation, Elbia, Dual Monarchy, etc)
+- Color picker for nations 1-3 alternatives each

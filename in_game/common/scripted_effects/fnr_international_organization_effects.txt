@@ -1,0 +1,6 @@
+﻿
+# Moravian Patriarchate
+fnr_enable_slavonic_language = {
+	set_liturgical_language = dialect:fnr_church_slavonic
+	set_court_language = dialect:fnr_church_slavonic
+}

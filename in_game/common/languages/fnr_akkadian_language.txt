@@ -1,0 +1,39 @@
+﻿
+# Gaulish extinct celtic language (create custom family instead of celtic?)
+# https://en.wikipedia.org/wiki/Gaulish
+
+fnr_akkadian_language = {
+
+	color = map_FNR_AKKADIAN_LANG
+
+	family = semitic_language_family
+
+	male_names = {
+	}
+
+	female_names = {
+	}
+
+	dynasty_names = {
+	}
+
+	lowborn = {
+	}
+
+	ship_names = {
+	}	
+	
+	dynasty_template_keys = {
+	}
+
+	patronym_prefix_son = "patronym_prefix_french_son"
+	patronym_prefix_daughter = "patronym_prefix_french_daughter"
+
+	location_prefix = "location_prefix_french"
+	location_prefix_vowel = "location_prefix_french_vowel"
+
+	first_name_conjoiner = "-" # to hyphenate compound names like "name_john.name_lucas" as "Jean-Luc" instead of the default "Jean Luc"
+
+	dialects = {
+	}
+}

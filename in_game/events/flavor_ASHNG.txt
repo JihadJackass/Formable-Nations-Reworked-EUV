@@ -1,0 +1,16 @@
+﻿namespace = flavor_ASHNG
+
+flavor_ASHNG.1 = { # Official Name of Austria-Hungary
+	type = country_event
+	title = flavor_ASHNG.1.title
+	desc = flavor_ASHNG.1.desc
+	fire_only_once = yes
+	option = { # Austria-Hungary
+		name = flavor_ASHNG.1.a
+		change_country_name = ASHNG_NAME_SHORT
+	}
+	option = { # Austro-Hungarian Empire
+		name = flavor_ASHNG.1.b
+		change_country_name = ASHNG_NAME_LONG
+	}
+}

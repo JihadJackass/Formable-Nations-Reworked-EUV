@@ -1,0 +1,31 @@
+﻿# Formable Nations: Reworked  Legal Systems
+#
+# This file is compatible with other mods as it does not replace the existing structure of EU5, but instead INJECTS to the existing data structures.
+# written by a big stepper chad <:)
+#
+
+#  Age of Absolutism - 5
+INJECT:army_doctrine_law = {
+	law_category = military
+
+	gmorv_professional_army_policy = {
+		potential = {
+			tag = GMORV
+		}
+		allow = {
+			current_age = age_5_absolutism
+		}
+		country_modifier = {
+			land_morale = 0.10
+			global_manpower_modifier = 0.10
+			discipline = 0.05
+			monthly_towards_quality = 0.10
+		}
+		estate_preferences = {
+			peasants_estate
+		}
+		years = 2
+	}
+	
+	
+}

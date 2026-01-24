@@ -1,1 +1,65 @@
-#
+﻿
+@semy = 0.27
+@semysh = 0.27
+
+sub_kleves_flag = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "yellow"
+	color4 = "green"
+	
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.5 } scale = { 0.45 0.40 } }			
+	}
+	colored_emblem = {
+		texture = "ce_escarboucle.dds"
+		color1 = color3
+		color2 = color4
+	}
+}
+
+sub_bohemian_shield_hussite = {
+	color1 = "red"
+	color2 = "white"
+	color3 = "yellow"
+	color4 = "yellow_light"
+	
+	colored_emblem = {
+		texture = "ce_shield_accolade_wide.dds"
+		color1 = color1
+		color2 = color4
+		instance = { position = { 0.5 0.5 } scale = { 0.8 0.8 } }
+	}
+	colored_emblem = {
+		texture = "ce_chalice_variant_02.dds"
+		color1 = color3
+		color2 = color2
+		color3 = color2
+		instance = { position = { 0.5 0.495 } scale = { 0.55 0.55 } }			
+	}
+}
+
+sub_bohemian_shield = {
+	color1 = "red"
+	color2 = "white"
+	color3 = "yellow"
+	color4 = "yellow_light"
+	
+	colored_emblem = {
+		texture = "ce_shield_accolade_wide.dds"
+		color1 = color1
+		color2 = color4
+		instance = { position = { 0.5 0.495 } scale = { 0.8 0.8 } }
+	}
+	colored_emblem = {
+		texture = "ce_lion_queue_forchee_crowned_wide.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color3 
+		instance = { position = { 0.5 0.485 } scale = { 0.55 0.55 } }			
+	}
+}

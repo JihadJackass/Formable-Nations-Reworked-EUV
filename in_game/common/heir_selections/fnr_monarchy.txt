@@ -1,0 +1,94 @@
+﻿
+# Great Moravia unique succession law
+moravian_meritocratic_succession = {
+    include_ruler_siblings = yes
+    through_female = yes
+    allow_female = yes
+    allow_children = yes
+    ignore_ruler = yes
+	potential = {
+		tag = GMORV
+		government_type = government_type:monarchy
+		has_reform = government_reform:fnr_GMORV_heirs_of_nitra
+	}
+	locked = { # you cannot swap to another heir selection if this is true
+		has_reform = government_reform:fnr_GMORV_heirs_of_nitra
+	}
+	allowed = {}
+	allowed_estates = { nobles_estate }
+	heir_is_allowed = {
+	}
+	traverse_family_tree = yes
+	depth_first = yes
+	sibling_score = {
+		if = {
+			limit = {
+				exists = root
+			}
+			#bonus for males
+			add = {
+				desc = "HEIR_SELECTION_MALE_DESC"
+				if = {
+					limit = {
+						OR = {
+							not = { exists = root }
+							is_female = no
+						}
+					}
+					value = 100
+				}
+			}
+			add = {
+				desc = "HEIR_SELECTION_LEGALLY_MALE_DESC"
+				if = {
+					limit = {
+						is_a_praefecta = yes
+					}
+					value = 100
+				}
+			}
+			# Bonus for score
+            add = {
+                desc = "HEIR_SELECTION_ADMINISTRATIVE_ABILITY_DESC"
+                value = 2.5
+            }
+            add = {
+                desc = "HEIR_SELECTION_DIPLOMATIC_ABILITY_DESC"
+                value = 2.5
+            }
+            add = {
+                desc = "HEIR_SELECTION_MILITARY_ABILITY_DESC"
+                value = 2.5
+            }
+
+			add = {
+				desc = "HEIR_SELECTION_OLDER_HEIR_DESC"
+				value = character_age
+			}
+			add = {
+				desc = "HEIR_SELECTION_IS_UNSUITED_TO_RULE_DESC"
+				if = { limit = { modifier:blocked_from_being_ruler = yes } value = -1000 }
+			}
+		}
+		else = {
+			#description
+			add = {
+				desc = "HEIR_SELECTION_MALE_DESC"
+				value = 100
+			}
+			add = {
+				desc = "HEIR_SELECTION_LEGALLY_MALE_DESC"
+				value = 100
+			}
+			add = {
+				desc = "HEIR_SELECTION_OLDER_HEIR_DESC"
+				value = 1
+			}
+			add = {
+				desc = "HEIR_SELECTION_IS_UNSUITED_TO_RULE_DESC"
+				value = -1000
+			}
+		}
+	}
+}
+

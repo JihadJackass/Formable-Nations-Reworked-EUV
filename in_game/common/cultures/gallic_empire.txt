@@ -1,6 +1,6 @@
 ﻿
 
-fnr_gallo_roman = {
+fnr_gallo_roman_culture = {
 	language = angevin_dialect
 	
 	color = rgb { 87 140 75 }

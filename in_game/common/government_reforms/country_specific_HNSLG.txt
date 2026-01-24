@@ -1,0 +1,114 @@
+﻿# Hanseatic League Specific Government Reforms
+
+
+	# TODO: finish 
+
+	
+	# Territorial Hanseatic Federation
+		fnr_HNSLG_territorial_hanseatic_federation = {
+			major = yes
+			unique = yes
+			government = republic
+			potential = {
+				tag = HNSLG
+				has_reform = government_reform:fnr_HNSLG_territorial_hanseatic_federation
+			}
+			allow = {
+				tag = HNSLG
+			}
+			country_modifier = {
+				government_reform_slots = 1
+				diplomatic_reputation = 1
+				global_production_efficiency = 0.15
+				trade_efficiency = 0.10
+				global_trade_center_power = 0.15
+				global_build_buildings_cost = -0.05
+				diplomatic_annexation_cost = 0.20
+			}
+			locked = {
+				is_locked_mechanic = {
+					mechanic = government_reform
+					type = fnr_HNSLG_territorial_hanseatic_federation
+				}
+			}			
+			block_for_rebel = yes
+		}	
+
+	# Centralized Merchant Republic
+		fnr_HNSLG_centralized_merchant_republic = {
+			major = yes
+			unique = yes
+			government = republic
+			potential = {
+				tag = HNSLG
+				has_reform = government_reform:fnr_HNSLG_centralized_merchant_republic
+			}
+			allow = {
+				tag = HNSLG
+			}
+			country_modifier = {
+				government_reform_slots = 1
+				merchant_maintenance_cost = -0.10
+				tax_income_efficiency = 0.05
+				global_burghers_estate_power = 0.10
+				global_nobles_estate_power = -0.15
+				nobles_estate_max_tax = -0.05
+			}
+			locked = {
+				is_locked_mechanic = {
+					mechanic = government_reform
+					type = fnr_HNSLG_centralized_merchant_republic
+				}
+			}			
+			block_for_rebel = yes
+		}	
+
+	# Unified Baltic Command (Unlocked by conquering at least 25% of baltic coastal territory)
+		fnr_HNSLG_unified_baltic_command = {
+			major = yes
+			unique = yes
+			government = republic
+			potential = {
+				tag = HNSLG
+				has_reform = government_reform:fnr_HNSLG_unified_baltic_command
+			}
+			allow = {
+				tag = HNSLG
+			}
+			country_modifier = {
+				government_reform_slots = 1
+			}
+			locked = {
+				is_locked_mechanic = {
+					mechanic = government_reform
+					type = fnr_HNSLG_unified_baltic_command
+				}
+			}			
+			block_for_rebel = yes
+		}	
+
+	# Guild Integration Reforms (unlocked by having burghers with at least 50 power and 80 satisfaction)
+		fnr_HNSLG_guild_integration_reforms = {
+			major = yes
+			unique = yes
+			government = republic
+			potential = {
+				tag = HNSLG
+				has_reform = government_reform:fnr_HNSLG_guild_integration_reforms
+			}
+			allow = {
+				tag = HNSLG
+			}
+			country_modifier = {
+				government_reform_slots = 1
+			}
+			locked = {
+				is_locked_mechanic = {
+					mechanic = government_reform
+					type = fnr_HNSLG_guild_integration_reforms
+				}
+			}			
+			block_for_rebel = yes
+		}	
+
+		

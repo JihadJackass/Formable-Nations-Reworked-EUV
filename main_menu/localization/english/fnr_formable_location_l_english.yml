@@ -1,0 +1,248 @@
+﻿l_english:
+
+  # LOCATIONS LOCALIZATION
+
+    # Formable Specific - Assyrian Empire
+
+      # Major Assyrian Cities
+
+        # Nineveh - the great Assyrian capital
+        mosul.fnr_akkadian_language: "Nineveh"
+
+        erbil.fnr_akkadian_language: "Arbela"  # Arbela - ancient Arbail-u
+        kirkuk.fnr_akkadian_language: "Arrapha"  # Arrapha - important Assyrian city
+        duhok.fnr_akkadian_language: "Nohadra"  # Nohadra - Assyrian fortress city
+        akre.fnr_akkadian_language: "Akkad"  # Ancient city in the region
+        
+        # Northern Iraq - Upper Mesopotamia
+        tal_afar.fnr_akkadian_language: "Šibaniba"  # Ancient Assyrian settlement
+        sinjar.fnr_akkadian_language: "Šinjar"  # Ancient name preserved
+        rawanduz.fnr_akkadian_language: "Arbail"  # Related to Arbela region
+        balad.fnr_akkadian_language: "Ešnunna"  # Ancient Mesopotamian city state
+        samarra.fnr_akkadian_language: "Surmarrati"  # Near ancient settlements
+        
+        # Central Iraq - Lower Mesopotamia  
+        baghdad.fnr_akkadian_language: "Bābili"  # Babylon - under Assyrian control
+        tikrit.fnr_akkadian_language: "Aššur"  # Near ancient Ashur
+        karbala.fnr_akkadian_language: "Karbiltu"  # Ancient Mesopotamian name
+        hillah.fnr_akkadian_language: "Bābilu"  # Babylon (alternate)
+        kufa.fnr_akkadian_language: "Kūtha"  # Ancient Sumerian/Akkadian city
+        wasit.fnr_akkadian_language: "Sippar"  # Ancient Mesopotamian city
+        
+        # Southern Iraq
+        basra.fnr_akkadian_language: "Teredon"  # Ancient port city
+        nasiriyah.fnr_akkadian_language: "Ur"  # Ur - ancient Sumerian city
+        samawa.fnr_akkadian_language: "Larsa"  # Ancient Sumerian city
+        
+        # SYRIA - Assyrian Provinces
+        
+        # Northern Syria
+        aleppo.fnr_akkadian_language: "Halman"  # Assyrian name for Aleppo
+        raqqa.fnr_akkadian_language: "Rapiqu"  # Assyrian city on Euphrates
+        deir_ez_zor.fnr_akkadian_language: "Dūr-Katlimmu"  # Assyrian fortress city
+        hasakah.fnr_akkadian_language: "Gūzāna"  # Tell Halaf - Guzana
+        manbij.fnr_akkadian_language: "Nappigu"  # Assyrian period name
+        al_bab.fnr_akkadian_language: "Arpad"  # Ancient Aramean/Assyrian city
+        
+        # Western Syria
+        damascus.fnr_akkadian_language: "Dimašqa"  # Assyrian/Aramaic Damascus
+        homs.fnr_akkadian_language: "Emesa"  # Ancient name
+        hama.fnr_akkadian_language: "Hamath"  # Ancient Hamath kingdom
+        tadmur.fnr_akkadian_language: "Tadmor"  # Palmyra's ancient Semitic name
+        qusayr.fnr_akkadian_language: "Qadesh"  # Ancient Kadesh region
+        
+        # Coastal Syria
+        latakia.fnr_akkadian_language: "Ramitha"  # Ancient port
+        tartus.fnr_akkadian_language: "Antarados"  # Ancient Phoenician city
+        baniyas.fnr_akkadian_language: "Balanea"  # Ancient name
+        
+        # SOUTHEASTERN TURKEY - Upper Mesopotamia/Assyrian Provinces
+        
+        # Major Cities
+        diyarbekir.fnr_akkadian_language: "Amida"  # Ancient Amid/Amida
+        urfa.fnr_akkadian_language: "Urhay"  # Urhai - Assyrian/Aramaic Edessa
+        mardin.fnr_akkadian_language: "Marida"  # Ancient Mesopotamian settlement
+        nusaybin.fnr_akkadian_language: "Nisibis"  # Ancient Nisibis
+        cizre.fnr_akkadian_language: "Cezarta"  # Ancient Jazira region
+        
+        # Upper Tigris Region
+        sirnak.fnr_akkadian_language: "Sirnak"  # Mountain region name preserved
+        midyat.fnr_akkadian_language: "Matiate"  # Ancient settlement
+        savur.fnr_akkadian_language: "Sabur"  # Ancient name
+        viransehir.fnr_akkadian_language: "Tela"  # Ancient settlement
+        dunaysir.fnr_akkadian_language: "Dunaysir"  # Ancient preserved
+        
+        # Euphrates Region
+        suruc.fnr_akkadian_language: "Šurupak"  # Ancient city name
+        kilis.fnr_akkadian_language: "Kilizi"  # Ancient settlement
+        ayntab.fnr_akkadian_language: "Doliche"  # Ancient city (Gaziantep)
+        marash.fnr_akkadian_language: "Marqasi"  # Ancient Kahramanmaraş
+        
+        # Eastern Anatolia - Assyrian Frontier
+        harput.fnr_akkadian_language: "Harpute"  # Ancient fortress
+        mayyafariqin.fnr_akkadian_language: "Martyropolis"  # Ancient name (later period)
+        egil.fnr_akkadian_language: "Tigranakert"  # Ancient Armenian/Assyrian city
+        kulp.fnr_akkadian_language: "Kulipa"  # Ancient settlement
+        
+        # Northern Syria Border
+        antioch.fnr_akkadian_language: "Antakiya"  # Ancient Antioch
+        iskenderun.fnr_akkadian_language: "Alexandretta"  # Ancient port
+        adana.fnr_akkadian_language: "Adanawa"  # Ancient Hittite/Assyrian name
+        
+        # WESTERN IRAN - Assyrian Eastern Provinces
+        
+        # Major Persian Cities under Assyrian Control
+        hamadan.fnr_akkadian_language: "Hagmatāna"  # Ecbatana - Median capital
+        kermanshah.fnr_akkadian_language: "Kirmānšān"  # Ancient Kermanshah
+        sanandaj.fnr_akkadian_language: "Sinna"  # Ancient Kurdish/Persian city
+        
+        # Zagros Region
+        asadabad.fnr_akkadian_language: "Asadābād"  # Mountain region
+        nahavand.fnr_akkadian_language: "Laodicea"  # Ancient city
+        malayer.fnr_akkadian_language: "Malayir"  # Ancient settlement
+        borujerd.fnr_akkadian_language: "Borūjerd"  # Ancient name preserved
+        
+        # Khuzestan - Lower Zagros
+        shush.fnr_akkadian_language: "Šušan"  # Susa - ancient Elamite capital
+        shushtar.fnr_akkadian_language: "Šuštar"  # Related to Susa
+        dezful.fnr_akkadian_language: "Dezfūl"  # Ancient bridge city
+        ahvaz.fnr_akkadian_language: "Hormuzd-Ardašīr"  # Ancient Sasanian name
+        
+        # LEVANT - Assyrian Vassal States
+        
+        # Lebanon
+        beirut.fnr_akkadian_language: "Berytus"  # Ancient Phoenician Berytus
+        tripoli_syria.fnr_akkadian_language: "Tripolis"  # Ancient triple city
+        baalbek.fnr_akkadian_language: "Heliopolis"  # Ancient name (later period)
+        
+        # Israel/Palestine (Assyrian provinces)
+        hebron.fnr_akkadian_language: "Hebron"  # Ancient name preserved
+        safed.fnr_akkadian_language: "Saphet"  # Ancient fortress
+        majdal.fnr_akkadian_language: "Migdal"  # Ancient tower city
+        
+        # ADDITIONAL MESOPOTAMIAN CITIES
+        baqubah.fnr_akkadian_language: "Baqūbā"  # Ancient settlement
+        khanaqin.fnr_akkadian_language: "Khanaqīn"  # Border fortress
+        mandali.fnr_akkadian_language: "Mandali"  # Ancient border post
+        qasr_shirin.fnr_akkadian_language: "Qasr-e Šīrīn"  # Ancient fortress
+        
+        # Euphrates Valley
+        anah.fnr_akkadian_language: "Anātu"  # Ancient city on Euphrates
+        haditha.fnr_akkadian_language: "Hadītha"  # Ancient Euphrates settlement
+        hit.fnr_akkadian_language: "Īs"  # Ancient Hit/Is
+        al_anbar.fnr_akkadian_language: "Pērōz-Šāpūr"  # Ancient city (later Sasanian)
+        abu_kemal.fnr_akkadian_language: "Circesium"  # Ancient fortress city
+        rahba.fnr_akkadian_language: "Rahbat"  # Ancient Rahba fortress
+
+    # Formable Specific - MACEDONIAN EMPIRE - ALEXANDRIAS AND ALEXANDER-NAMED CITIES
+
+      # Cities founded by or renamed after Alexander the Great (356-323 BCE)
+
+        ## EGYPT - The Most Famous Alexandria
+        alexandria_macedonian: "Alexandria"  # Already correct - founded 331 BCE
+        
+        ## LEVANT - Conquered Cities
+        sidon_macedonian: "Alexandreia"  # Sometimes called Alexandria by Sidon
+        acre_macedonian: "Ptolemais"  # Named by Ptolemy, one of Alexander's successors
+        gaza_macedonian: "Gaza"  # Besieged by Alexander, kept ancient name
+        damascus_macedonian: "Dimashq"  # Conquered but kept ancient name
+        
+        ## ANATOLIA - Path to Persia
+        smyrna_macedonian: "Smyrna"  # Ancient Greek city, allied with Alexander
+        ankara_macedonian: "Ankyra"  # Ancient Phrygian/Greek name
+        konya_macedonian: "Ikonion"  # Ancient Greek name
+        tarsus_macedonian: "Tarsos"  # Alexander's recovery city after illness
+        
+        ## MESOPOTAMIA - Heart of Persian Empire
+        baghdad_macedonian: "Babylon"  # Alexander died here in 323 BCE
+        mosul_macedonian: "Nineveh"  # Ancient city, Alexander passed through
+        erbil_macedonian: "Arbela"  # Site of Battle of Gaugamela 331 BCE
+        kirkuk_macedonian: "Arrapha"  # Ancient Mesopotamian city
+        
+        ## PERSIA - The Persian Heartland
+        hamadan_macedonian: "Ekbatana"  # Ecbatana - Median/Persian capital
+        isfahan_macedonian: "Aspadana"  # Ancient Persian name
+        shiraz_macedonian: "Alexandria Persepolitana"  # Near Persepolis
+        susa_macedonian: "Sousa"  # Ancient Elamite capital, Alexander's wedding city
+        yazd_macedonian: "Isatis"  # Ancient name
+        
+        ## BACTRIA-SOGDIANA - Central Asia
+        balkh_macedonian: "Baktra"  # Bactra - Ancient Bactrian capital
+        mazar_i_sharif_macedonian: "Alexandria in Bactria"  # Possible location
+        merv_macedonian: "Alexandria Margiana"  # Alexandria in Margiana
+        bukhara_macedonian: "Alexandria Oxiana"  # Near Oxus River
+        samarkand_macedonian: "Marakanda"  # Ancient Sogdian capital
+        khujand_macedonian: "Alexandria Eschate"  # Alexandria the Furthest (329 BCE)
+        
+        ## AFGHANISTAN - Eastern Satrapies
+        herat_macedonian: "Alexandria Ariana"  # Alexandria in Aria (330 BCE)
+        kandahar_macedonian: "Alexandria Arachosia"  # Alexandria in Arachosia (329 BCE)
+        kabul_macedonian: "Alexandria ad Caucasum"  # Alexandria in the Caucasus (329 BCE)
+        ghazni_macedonian: "Alexandria Opiana"  # Possible location
+        
+        ## PAKISTAN - The Indian Frontier
+        peshawar_macedonian: "Nikaia"  # Victory city after defeating Porus
+        lahore_macedonian: "Bucephala"  # Named after Alexander's horse Bucephalus
+        multan_macedonian: "Alexandria Malli"  # Alexandria among the Malli
+        
+        ## IRAN - Southern Route
+        kermanshah_macedonian: "Alexandria Carmana"  # On return route
+        kerman_macedonian: "Karmania"  # Ancient Carmania region
+        
+        ## SYRIA - Western Conquests  
+        aleppo_macedonian: "Beroea"  # Greek name under Seleucids
+        homs_macedonian: "Emesa"  # Ancient name
+        hama_macedonian: "Epiphaneia"  # Named by Seleucids after Alexander
+        raqqa_macedonian: "Nikophorion"  # "City of Victory"
+        deir_ez_zor_macedonian: "Dura-Europos"  # Founded by Seleucids
+        tadmur_macedonian: "Palmyra"  # Ancient name preserved
+        
+        ## LEBANON - Phoenician Coast
+        beirut_macedonian: "Berytus"  # Ancient Phoenician/Greek name
+        tripoli_syria_macedonian: "Tripolis"  # Three cities united
+        baalbek_macedonian: "Heliopolis"  # Greek name
+        
+        ## ISRAEL/PALESTINE
+        jerusalem_macedonian: "Hierosolyma"  # Greek name for Jerusalem
+        hebron_macedonian: "Hebron"  # Ancient name preserved
+        jaffa_macedonian: "Ioppe"  # Greek name
+        
+        ## SOUTHEASTERN TURKEY - Upper Mesopotamia
+        diyarbekir_macedonian: "Amida"  # Ancient name
+        urfa_macedonian: "Edessa"  # Greek name (founded later by Seleucus)
+        mardin_macedonian: "Marida"  # Ancient settlement
+        
+        ## NORTHERN IRAQ
+        tikrit_macedonian: "Opis"  # Near ancient Opis (Mutiny of Opis 324 BCE)
+        samarra_macedonian: "Soura"  # Ancient name
+        
+        ## SOUTHERN IRAQ - Return Route
+        basra_macedonian: "Characene"  # Region name, Greek influence
+        nasiriyah_macedonian: "Ur"  # Ancient Sumerian city
+        
+        ## ADDITIONAL ALEXANDRIAS (Lesser Known)
+        # These are historically attested but exact EU5 location uncertain
+        
+        # Central Asia
+        
+        # Iran
+        mashhad_macedonian: "Alexandria Ariana"  # Alternate location theory
+        nishapur_macedonian: "Alexandria Parthiana"  # Possible location
+        
+        # Levant
+        hasakah_macedonian: "Alexandria Rhagai"  # Possible location theory
+        
+        ## NOTES FOR IMPLEMENTATION:
+        # Priority cities (must have for Macedonian Empire):
+        # 1. Alexandria (Egypt) - THE Alexandria
+        # 2. Babylon (Baghdad) - Where Alexander died
+        # 3. Ekbatana (Hamadan) - Persian treasury
+        # 4. Persepolis region (Shiraz) - Symbolic conquest
+        # 5. Baktra (Balkh) - Gateway to Central Asia
+        # 6. Alexandria Eschate (Khujand) - "The Furthest" 
+        # 7. Bucephala (Lahore) - Named after his horse
+        # 8. Alexandria Arachosia (Kandahar) - Major eastern foundation
+        
+        # Battle Sites (consider special names):
+        # - Erbil: "Gaugamela" (decisive victory 331 BCE)
+        # - Peshawar region: Site of Battle of Hydaspes

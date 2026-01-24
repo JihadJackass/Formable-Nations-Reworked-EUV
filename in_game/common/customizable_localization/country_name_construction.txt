@@ -8,7 +8,56 @@
 					tag = PAP
 					has_reform = government_reform:papacy_reform
 				}
+				AND = {
+					tag = RHLND
+					OR = {
+						AND = {
+							government_type = government_type:monarchy
+							OR = {
+								has_policy = feudal_administration
+								has_policy = autonomous_councils
+								has_policy = local_courts_administration
+								has_policy = confederal_union
+								has_policy = federal_state
+								has_policy = decentralized_trade_federations
+							}
+							OR = {
+								country_rank = country_rank:rank_duchy
+								country_rank = country_rank:rank_county
+							}
+							NOT = {
+								current_age = age_5_absolutism
+								current_age = age_6_revolutions
+							}
+						}
+						AND = {
+							government_type = government_type:republic
+							OR = {
+								has_policy = feudal_administration
+								has_policy = autonomous_councils
+								has_policy = local_courts_administration
+								has_policy = confederal_union
+								has_policy = federal_state
+								has_policy = decentralized_trade_federations
+							}
+						}
+					}
+				}
 				# TODO: add a setting to disable static prefix
+				tag = BDWTB
+				tag = MGGCA
+				tag = FLVDK
+				tag = SWBIA
+				tag = FROCA
+				tag = HPEMP
+				tag = ZPDSL
+				tag = BBLON
+				tag = SROAU
+				tag = GSCTL
+				tag = ASHNG
+				tag = GLCLD
+				tag = GCOLM
+				tag = ELBNF
 				tag = ABYSA
 				tag = ACHAD
 				tag = ADREM
@@ -148,6 +197,8 @@
 				tag = ASYRE
 				tag = HPBRA
 				tag = TRCNS
+				tag = BRTNA
+				tag = BISRA
 				# US States
 				tag = OKLAH
 				tag = FLRDA

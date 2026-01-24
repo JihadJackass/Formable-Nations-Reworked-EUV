@@ -1,0 +1,7 @@
+﻿l_english:
+
+  # CHARACTER INTERACTION LOCALIZATION
+
+      demand_relative_conversion: "Demand Relative Conversion"  
+      demand_relative_conversion_desc: "We will demand that our relative of TODO: RELATIVENAMEHERE convert to our religion of TODO: OURRELIGIONHERE."  
+

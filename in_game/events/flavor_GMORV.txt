@@ -1,0 +1,164 @@
+﻿namespace = flavor_GMORV
+
+# Church Slavic - Moravian Patriarchate
+
+flavor_GMORV.1 = {
+	type = country_event
+	title = flavor_GMORV.1.title
+	desc = flavor_GMORV.1.desc
+	fire_only_once = yes
+	option = { # Orthodox Path (Moravian Patriarchate)
+		name = flavor_GMORV.1.a
+		change_religion = religion:fnr_great_moravia_orthodox
+		hidden_effect = {
+			every_pop = {
+				limit = {
+					religion != religion:orthodox
+					religion.group = religion_group:christian
+				}
+				split_pop = {
+					fraction = 0.015
+					religion = religion:orthodox
+				}
+			}
+		}
+		custom_tooltip = { text = GMORV_formable_trigger_2_tt }
+		custom_tooltip = { text = GMORV_formable_trigger_3_tt }
+		add_country_modifier = { 
+			modifier = fnr_gmorv_gained_power 
+			years = 25 
+		}  
+		add_estate_satisfaction = { type = estate_type:clergy_estate 
+			value = estate_satisfaction_mild_bonus
+		}
+		hidden_effect = {
+			c:GMORV = { save_scope_as = target_country }
+			create_international_organization = {
+				type = international_organization_type:moravian_patriarchate
+				add_country_to_international_organization = scope:target_country
+			}
+			international_organization:moravian_patriarchate = {
+				set_leader_country = scope:target_country
+			}
+			every_subject = {
+				international_organization:moravian_patriarchate = {
+					add_country_to_international_organization = prev
+				}
+			}
+		}
+		custom_tooltip = { text = GMORV_formable_trigger_7_tt }
+		# TODO: Remove GMORV and subject from Catholic Church IO
+		# TODO: Add GMORV subjects to MP IO
+	}
+	option = { # Catholic Path (Keep our ways - path to rejoining the HRE)
+		name = flavor_GMORV.1.b
+		c:PAP = {
+			add_opinion = {
+				target = root
+				modifier = fnr_great_moravia_rejected_autonomous_movement
+			}
+		}
+		add_country_modifier = { 
+			modifier = fnr_gmorv_clergy_upset_by_loss_of_power 
+			years = 50 
+		}  
+		add_estate_satisfaction = { type = estate_type:clergy_estate 
+			value = estate_satisfaction_weak_penalty
+		}
+		custom_tooltip = { text = GMORV_formable_trigger_6_tt }
+	}
+}
+
+# Restoring borders of Great Moravia
+flavor_GMORV.2 = {
+	type = country_event
+	title = flavor_GMORV.2.title
+	desc = flavor_GMORV.2.desc
+	fire_only_once = yes
+	insight = flavor_GMORV.3  # References another event
+	trigger = {
+		always = no
+		# fnr_gmorv_restored_borders = yes TODO: add a proper trigger for checking that you own certain territory for 2 years
+	}
+	option = { 
+		name = flavor_GMORV.2.a
+		# Krakow
+		location:krakow = {
+			province = {
+				every_location_in_province = {
+					limit = {
+						is_ownable = yes
+						NOT = { is_core_of = root }
+					}
+					add_core = root
+				}
+			}
+		}
+		# Saxony oberlausitz_province
+		location:gorlitz = {
+			province = {
+				every_location_in_province = {
+					limit = {
+						is_ownable = yes
+						NOT = { is_core_of = root }
+					}
+					add_core = root
+				}
+			}
+		}
+		location:sayda = {
+			province = {
+				every_location_in_province = {
+					limit = {
+						is_ownable = yes
+						NOT = { is_core_of = root }
+					}
+					add_core = root
+				}
+			}
+		}
+		# Balaton
+		location:trencin = {
+			province = {
+				every_location_in_province = {
+					limit = {
+						is_ownable = yes
+						NOT = { is_core_of = root }
+					}
+					add_core = root
+				}
+			}
+		}
+		# Northern Hungary
+		location:czchow = {
+			province = {
+				every_location_in_province = {
+					limit = {
+						is_ownable = yes
+						NOT = { is_core_of = root }
+					}
+					add_core = root
+				}
+			}
+		}		
+	}
+}
+
+# Tomb of Svätopluk I
+flavor_GMORV.3 = {
+	type = country_event
+	title = flavor_GMORV.3.title
+	desc = flavor_GMORV.3.desc
+	fire_only_once = yes
+	trigger = {
+	}
+	option = { 
+		name = flavor_GMORV.1.a
+	
+	}
+}
+
+# TODO: Expanding the borders of our Realm
+
+# TODO: Imperium Slavorum 
+

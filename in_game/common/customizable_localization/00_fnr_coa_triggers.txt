@@ -1,0 +1,53 @@
+﻿RHLND = {
+	type = country
+
+	text = { # United Counties
+		localization_key = RHLND_ducal
+		trigger = {
+			country_rank = country_rank:rank_duchy
+			coa_monarchy_trigger = yes
+			OR = {
+				has_policy = feudal_administration
+				has_policy = autonomous_councils
+				has_policy = local_courts_administration
+				has_policy = confederal_union
+				has_policy = federal_state
+				has_policy = decentralized_trade_federations
+			}
+		}
+	}
+	text = { # United Duchies
+		localization_key = RHLND_comital
+		trigger = {
+			country_rank = country_rank:rank_county
+			coa_monarchy_trigger = yes
+			OR = {
+				has_policy = feudal_administration
+				has_policy = autonomous_councils
+				has_policy = local_courts_administration
+				has_policy = confederal_union
+				has_policy = federal_state
+				has_policy = decentralized_trade_federations
+			}
+		}
+	}
+	text = { # United Republics
+		localization_key = RHLND_republic
+		trigger = {
+			coa_republic_trigger = yes
+			OR = {
+				has_policy = feudal_administration
+				has_policy = autonomous_councils
+				has_policy = local_courts_administration
+				has_policy = confederal_union
+				has_policy = federal_state
+				has_policy = decentralized_trade_federations
+			}
+		}
+	}
+	text = { # The Rhineland
+		localization_key = RHLND
+		fallback = yes
+	}
+}
+RHLND_ADJ = { parent = RHLND suffix = "_ADJ" }

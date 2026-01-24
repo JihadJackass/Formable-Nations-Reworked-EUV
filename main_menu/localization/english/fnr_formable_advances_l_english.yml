@@ -3,20 +3,33 @@
   # ADVANCES LOCALIZATION
 
     # Formable Specific
-      # Lusitanian Empire
+      # Austrian Empire
       AUSEM_habsburg_empire: "Habsburg Empire" 
-      AUSEM_habsburg_empire_desc: "" 
+      AUSEM_habsburg_empire_desc: "The Habsburg Empire governs countless cultures through careful balance of autonomy and central authority, accommodating diversity rather than imposing uniformity. Our diplomatic reputation, built on centuries of strategic marriages and alliances, makes negotiation as effective as conquest. Meanwhile, professional administration reduces infantry costs through superior organization and logistics, maintaining military strength without financial ruin." 
+
+      # Great Moravia
+      GMORV_cross_road_europe: "Cross Road of Europe"
+      GMORV_cross_road_europe_desc: "For centuries, our realm has stood at the crossroads of Europe, where German, Frankish, Byzantine, and Latin cultures meet and merge. Trade routes from across the continent converge in our lands, making us an essential junction of commerce and a melting pot of civilizations."
+
+      GMORV_slavic_zeal: "Slavic Zeal"
+      GMORV_slavic_zeal_desc: "Our legends tell of warriors who, though defeated in the end, slaughtered Roman armies many times their size, striking terror into the hearts of history's greatest conquerors. This indomitable spirit lives on in our soldiers. Where others break and flee, our men stand firm. Where others surrender to superior numbers, ours fight to the last. The zeal that once made legionaries fear Slavic blades now inspires our armies to feats that defy reason and statistics alike."
+
+      GMORV_balaton_winemakers: "Balaton Winemakers"
+      GMORV_balaton_winemakers_desc: "The wines of Lake Balaton rank among the finest in Europe. Only the celebrated vintages of Burgundy, the renowned vineyards of Italy, and the ancient winemaking traditions of distant Georgia can rival the quality of our grapes. The volcanic soil and temperate climate of the Balaton region produce wines sought after by discerning palates across the continent."
+
+      GMORV_fnr_hradiska: "Hradiská"
+      GMORV_fnr_hradiska_desc: "Great Moravia's prosperity stemmed from hradiská—fortified rural settlements near lord estates serving as protected markets and workshops. By restoring this system, we decentralize production, bringing economic activity to the countryside. Lords can efficiently organize local resources while providing security for craftsmen and merchants. Ancient wisdom revived for modern profit."
 
     # REPLACERS (COPIES VANILLA ADVANCES FOR FORMABLES)
       # german
       fnr_german_imperial_roads: "Imperial Road Network"
-      fnr_german_imperial_roads_desc: ""
+      fnr_german_imperial_roads_desc: "For centuries, roads have been built, expanded, and improved upon within the heart of Europe. From the Romans up until today, the benefits of the many imperial roads connecting places within Germany with each other makes trading and traveling a lot easier and more accessible for everyone, while also harboring great benefits for any logistical need that might arise, especially when it comes to moving armies around."
       fnr_german_fair_towns: "Reichsmessestädte"
-      fnr_german_fair_towns_desc: ""
+      fnr_german_fair_towns_desc: "A great privilege granted by the Emperor himself only to a select few cities within the Empire, allowing many traders to gather and participate in some of the largest marketplaces in all of Europe, these cities are truly at the heart of commerce within the Empire. The centralized nature of these large markets also makes it a lot easier for merchants to plan and negotiate in a setting that offers great freedom and variety and thus a bigger degree of access to all kinds of wares."
       fnr_german_biedermeier: "Biedermeier"
-      fnr_german_biedermeier_desc: ""
+      fnr_german_biedermeier_desc: "The Biedermeier period marks a conservative view in our society, stemming from the upper classes and their yearning for bygone times. This leads to a lot of the more free thinking and creative pursuits being engaged within the privacy of peoples homes, secluded from the public eye. While this inadvertently strengthens the development of a cultural identity within the Burgher class, it is also the cause for many Freethinkers to emigrate and continue their pursuits abroad."
       # dutch
       fnr_dutch_education: "Dutch Education"
-      fnr_dutch_education_desc: ""
+      fnr_dutch_education_desc: "While our lands have always enjoyed superior literacy rates among all strata, this advantage is becoming more apparent in the world that is taking shape in front of us. Only those with a limited understanding would not take advantage of this edge and increase it."
 
 

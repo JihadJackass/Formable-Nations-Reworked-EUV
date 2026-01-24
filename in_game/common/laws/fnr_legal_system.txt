@@ -1,0 +1,37 @@
+﻿# Formable Nations: Reworked Administrative Legal Systems
+#
+# This file is compatible with other mods as it does not replace the existing structure of EU5, but instead INJECTS to the existing data structures.
+# written by a big stepper chad <:)
+#
+
+INJECT:legal_code_law = {
+	law_category = administrative
+	potential = {
+		OR = {
+			has_tribal_government = no
+			religion ?= {
+				group ?= religion_group:muslim
+			}
+		}
+	}
+
+	locked = {
+		religion.group = religion_group:muslim
+		has_policy = sharia_law_policy
+	}
+
+	sudnyj_ludem_policy = {
+		potential = {
+			tag = GMORV
+		}
+		country_modifier = {
+			legislative_efficiency = 0.10
+			tax_income_efficiency = 0.05
+			monthly_towards_communalism = 0.025
+			monthly_towards_centralization = 0.025
+		}
+		estate_preferences = {
+			peasants_estate
+		}
+	}
+}

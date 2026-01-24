@@ -1,0 +1,57 @@
+﻿# Advances for Great Moravia
+
+	# age_1_traditions
+
+		# Cross-road of Europe
+		GMORV_cross_road_europe = {
+			age = age_1_traditions
+			potential = {
+				has_or_had_tag = GMORV
+			}
+			icon = chacery_slavonic
+
+			global_institution_growth_modifier = 0.10
+			trade_efficiency = 0.025
+
+			requires = cultural_traditions_law_advance
+		}
+
+		# Slavic Zeal
+		GMORV_slavic_zeal = {
+			age = age_1_traditions
+			potential = {
+				has_or_had_tag = GMORV
+			}
+			icon = byz_shield_of_the_west
+
+			land_morale = 0.15
+
+			requires = organized_religion
+		}
+
+	# age_2_renaissance
+
+		GMORV_balaton_winemakers = {
+			age = age_2_renaissance
+			potential = {
+				has_or_had_tag = GMORV
+			}
+			icon = colonial_tradition
+
+			monthly_prestige = 0.02
+			global_wine_output_modifier = 0.10
+
+			requires = banking_advance
+		}
+
+		GMORV_fnr_hradiska = {
+			age = age_2_renaissance
+			potential = {
+				has_or_had_tag = GMORV
+			}
+			icon = defenses_of_novgorod
+
+			unlock_building = fnr_hradiska
+
+			requires = professional_armies_advance
+		}		

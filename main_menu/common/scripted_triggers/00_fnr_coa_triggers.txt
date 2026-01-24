@@ -1,0 +1,12 @@
+﻿coa_def_federal_state_trigger = {
+	scope:actor ?= { 
+		OR = {
+			has_policy = feudal_administration
+			has_policy = autonomous_councils
+			has_policy = local_courts_administration
+			has_policy = confederal_union
+			has_policy = federal_state
+			has_policy = decentralized_trade_federations
+		}
+	}
+}

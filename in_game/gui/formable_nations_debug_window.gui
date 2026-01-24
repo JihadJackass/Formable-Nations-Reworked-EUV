@@ -5,11 +5,9 @@ window = {
 	parentanchor = hcenter|vcenter
 	filter_mouse = all
 	allow_outside = yes
-	#visible = "[GetPlayer.IsValid]" # TODO: fix this making it show upon startup
 	size = { 1000 325 }
 	visible = "[GetVariableSystem.Exists('formable_nations_debug_window_open')]"
 	using = bg_window_default_alt
-	#using = bg_age_event_frame
 	# Entire window
 	widget = {
 		parentanchor = top|right
@@ -27,7 +25,6 @@ window = {
 		window_header_alt = {
 			blockoverride "header_text" {
 				raw_text = "Formable Nations: Reworked Settings GUI"
-				#margin_left = 70
 			}
 			blockoverride "button_close" {
 				button_close_normal = {

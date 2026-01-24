@@ -1,0 +1,15 @@
+﻿fnr_price_influence_holy_roman_empire_member = {
+	religious_influence = 25
+}
+
+fnr_price_arrange_polish_coalition = {
+	religious_influence = 30
+}
+
+fnr_price_expand_authority = {
+	religious_influence = 50
+}
+
+fnr_price_unificatio_unionis = {
+	religious_influence = 85
+}

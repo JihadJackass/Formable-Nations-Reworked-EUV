@@ -1,0 +1,55 @@
+﻿fnr_cc_language_laws = { #priest Marriage
+	type = international_organization
+	law_category = religious
+	requires_vote = yes
+	potential = {
+		international_organization_type = international_organization_type:moravian_patriarchate
+	}
+	locked = {
+		always = no
+	}
+
+	fnr_church_slavoric_policy = {
+		#years = 1
+		days = 1
+		#benefits for the leader
+		country_modifier = {
+			potential_trigger = {
+				is_leader_of_international_organization = international_organization:moravian_patriarchate
+			}
+		}
+		#benefits for all members
+		country_modifier = {
+			global_max_literacy = 0.05
+			monthly_towards_spiritualist = 0.10
+		}
+		on_activate = {
+			fnr_enable_slavonic_language = yes
+			scope:minister = {
+				add_character_modifier = {
+					modifier = fnr_moravian_patrarchate_modifier
+					years = -1
+					mode = add_and_extend
+				}
+			}
+		}
+		on_fully_activated = {
+		}
+		wants_this_policy_bias = {
+			add = {
+				desc = "IO_LEADER_DIP_REP"
+				value = scope:recipient.leader_country.modifier:diplomatic_reputation
+				multiply = 2
+			}
+			add = {
+				desc = "POLICY_BIAS_OPINION_OF_IO_LEADER"
+				value = "opinion(scope:recipient.leader_country)"
+				multiply = 0.5
+			}
+			add = {
+				desc = "VOTE_BASE_VALUE"
+				value = 20
+			}
+		}
+	}
+}

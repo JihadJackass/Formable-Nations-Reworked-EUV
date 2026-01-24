@@ -2,6 +2,56 @@
 
   # events FOR FORMABLE NATIONS
 
+    # North German Confederation Flag Standards
+    flavor_NGCFD.1.title: "Imperial German Flag Standard"
+    flavor_NGCFD.1.desc: "The North German Confederation has been unified - We must declare our official flag for the nation. We could use our historical war ensign as the official flag, or stick to the tricolored Schwarz-Weiß-Rot design."
+    flavor_NGCFD.1.a: "We will use the Reichskriegsflagge!"
+    flavor_NGCFD.1.b: "The Schwarz-Weiß-Rot will do nicely."
+    NGCFD_flag_alternate: "Schwarz-Weiß-Rot"
+
+    # Sorbic Kingdom Name event
+    flavor_KSORB.1.title: "Sorbic Naming Standard"
+    flavor_KSORB.1.desc: "We have united the Sorbian lands, but what shall we call our realm? The Sorbic Kingdom projects royal legitimacy and diplomatic gravitas. Sorbia invokes our ancient heritage and cultural identity. The choice is ours."
+    flavor_KSORB.1.a: "Sorbic Kingdom is fitting enough."
+    flavor_KSORB.1.b: "We are Sorbians!"
+
+    # Decretum Sacri Romani Imperii (Papal State dominates the HRE)
+    flavor_PAPAL.1.title: "Decretum Sacri Romani Imperii"
+    flavor_PAPAL.1.desc: "The [GetInternationalOrganizationType('hre').GetName] lies at our feet. Through conquest and diplomacy, the Papal States have achieved unprecedented dominance over the German princes and their territories. The imperial throne stands empty, and none dare claim it without our blessing.\n\nFor centuries, popes and emperors have struggled for supremacy in Christendom. The Investiture Controversy, the humiliation of Henry IV at Canossa, countless wars between papal and imperial factions all stemmed from this fundamental conflict. Now we have the power to resolve it permanently.\n\nWe face two paths: dissolve this troublesome Empire entirely and proclaim ourselves rightful Emperor of Europe, uniting spiritual and temporal authority under one crown. Or assume the imperial title while maintaining the Empire's framework, albeit thoroughly subordinated to papal will. Either way, the age of defiant emperors challenging the Holy See has ended."
+    flavor_PAPAL.1.a: "Sacrum Romanum Imperium dissolvere!" # Dissolve the HRE, proclaim ourselves emperor!
+    flavor_PAPAL.1.b: "We are our own Empire, our own Holy Realm!" # Proclaim Emperorship of the Papal States and weaken the HRE
+    flavor_PAPAL.1.c: "The title of Emperor belongs to [GetCountry('PAP').GetNameWithFlag]." # become hre emperor
+    flavor_PAPAL.1.d: "We must simply dissolve the meddlesome system." 
+    flavor_PAPAL.1.e: "Humble are those that meet god." 
+
+    flavor_PAPAL.2.title: "Assumption of the Imperial Title"
+    flavor_PAPAL.2.desc: "With the conquest of the lands of the Holy Roman Empire we have a choice of what our new official title shall be upon the world stage."
+    flavor_PAPAL.2.a: "We are the Christian Empire - Imperium Christianum"
+    flavor_PAPAL.2.b: "The Holy Empire, successor to the failed German pretenders"
+    flavor_PAPAL.2.c: "The Sacred Empire, ordained by God himself"
+    flavor_PAPAL.2.d: "A Universal Monarchy under Christ's Vicar"
+    flavor_PAPAL.2.e: "The Empire of Christendom, uniting all the faithful"
+    flavor_PAPAL.2.f: "The Dominion of St. Peter, as was always intended"
+    flavor_PAPAL.2.g: "Remain as the Papacy."
+
+    flavor_PAPAL.3.title: "Official Change of the Flag"
+    flavor_PAPAL.3.desc: "We have conquered the Holy Roman Empire and proclaimed ourselves its rightful ruler. Now we must decide what banner shall represent our authority.\n\nThe papal keys and tiara symbolize our spiritual supremacy but lack imperial grandeur. The Quaternion Eagle, that double-headed bird bearing the arms of the Empire's constituent realms, represents continuity and legitimacy. The simple imperial eagle speaks of raw power and ancient tradition. Or we could design something entirely new, a symbol that transcends both papacy and empire to represent the unique fusion of authorities we have created.\n\nOur choice will define how Europe perceives our rule. Shall we emphasize continuity or revolution? Spiritual authority or temporal power? The old order or a new age?"
+    flavor_PAPAL.3.a: "Adopt a new style."
+    flavor_PAPAL.3.b: "Adopt the Quaternion Eagle."
+    flavor_PAPAL.3.c: "Adopt the Holy Roman Empire flag."
+    flavor_PAPAL.3.d: "Keep our Papal flag."
+
+    flavor_PAPAL.4.title: "Reformation of the [GetInternationalOrganizationType('hre').GetName]"
+    flavor_PAPAL.4.desc: "We have conquered the Holy Roman Empire. Now we must decide its fate.\n\nThe Empire as it stands is a secular institution. Electors, princes, and the Imperial Diet govern German territories through temporal authority. We could preserve this system, ensuring papal control over its mechanisms while maintaining its traditional structure. The Empire would continue serving its historical purpose, merely corrected of its defiance toward Rome.\n\nOr we could dissolve it entirely and create something new: a sacred confederation dedicated to defending Christendom. Prince-Cardinals would replace secular electors. Holy Kingdoms would supplant ordinary principalities. Instead of administering German lands, this organization would organize crusades, combat heresy, and protect the faithful. It would be the Church Militant made real, a holy league under papal authority pursuing spiritual rather than temporal goals.\n\nDo we reform the Empire or replace it with a theocratic order?"
+    flavor_PAPAL.4.a: "Establish a new Papal-Dominated Holy Roman Empire focused on Theocratic values."
+    flavor_PAPAL.4.b: "Retain the Status Quo"
+
+    # Austro-Hungarian Empire
+    flavor_ASHNG.1.title: "Naming Convention of our Nation"
+    flavor_ASHNG.1.desc: "The Ausgleich has been concluded, and our dual monarchy stands as a testament to compromise and pragmatism. Yet even in matters of nomenclature, politics intrudes. What shall we call this new political entity that unites the Austrian lands with the Kingdom of Hungary?\n\nSome favor the straightforward 'Austria-Hungary,' emphasizing the equal partnership between the two crowns. This hyphenated form suggests a union of equals, two distinct realms bound by common sovereign and mutual interest. It is direct, clear, and acknowledges the dualist nature of our arrangement.\n\nOthers prefer the more grandiose 'Austro-Hungarian Empire,' which evokes the majesty and continuity of imperial tradition. This formulation presents our state as a unified whole rather than a mere coupling of separate entities. It speaks to greatness, to permanence, to a singular empire that happens to contain multiple kingdoms.\n\nThe choice may seem trivial to outsiders, but within our councils it carries weight. What we call ourselves shapes how we see ourselves, and how the world sees us. The Hungarian delegation watches closely, sensitive to any slight against their hard-won autonomy. The Austrian bureaucrats consider the prestige of imperial nomenclature. Diplomats abroad await our decision, uncertain which letterhead to address.\n\nHis Imperial and Royal Apostolic Majesty must decide: shall we be Austria-Hungary, or the Austro-Hungarian Empire?"
+    flavor_ASHNG.1.a: "Austria-Hungary reflects our dual nature."
+    flavor_ASHNG.1.b: "The Austro-Hungarian Empire maintains our imperial dignity."
+
     # Sweden-Norway flag choice
     flavor_SDNNW.1.title: "The Crown of Sweden-Norway"
     flavor_SDNNW.1.desc: "The decision of our national flag depends on the priority of our union between the regions of Sweden, and Norway - we are able to decide which we find more fitting for our union."
@@ -17,3 +67,21 @@
     flavor_DUTCH.1.a: "We shall Proclaim the Dutch Republic!"
     flavor_DUTCH.1.b: "The United Provinces remain strong in equality!"
 
+    flavor_GLCEM.1.title: "The Gallic Question"
+    flavor_GLCEM.1.desc: "The wars are won. The tribes are united. From the Rhine to the Pyrenees, our standards fly victorious. Yet in this moment of triumph, we face a choice that transcends mere nomenclature. Shall we be the **Gallic Empire**.. a name that speaks of legions, laurels, and lasting dominion? Or simply **Gallia**—evoking the misty forests, proud chieftains, and unconquered spirit of our forefathers? This decision will echo through the halls of history itself."
+    flavor_GLCEM.1.a: "Remain as the Gallic Empire!"
+    flavor_GLCEM.1.b: "Gallia is our home!"
+
+    # Great Moravia
+    flavor_GMORV.1.title: "Church Slavic"
+    flavor_GMORV.1.desc: "The Thessalonian brothers Cyril and Methodius brought the light of Eastern Christianity to the Moravian lands in the 9th century. To ensure our people could worship in a tongue they understood rather than incomprehensible Latin, they created Old Church Slavonic and the Glagolitic script to translate scripture and liturgy. This sacred language spread beyond the clergy, becoming the administrative tongue of the Moravian realm and a symbol of our distinct identity within Christendom.\n\nThough Latin eventually supplanted Church Slavonic in our lands, the time has come to restore this legacy. By reviving Old Church Slavonic as both liturgical and administrative language, we honor the mission of Saints Cyril and Methodius while asserting our connection to the Orthodox East. Let the language of our ancestors once again echo through churches and chancelleries alike."
+    flavor_GMORV.1.a: "Embrace Orthodoxy and restore Church Slavonic!"
+    flavor_GMORV.1.b: "We shall remain faithful to Rome."
+
+    flavor_GMORV.2.title: "Restoring Borders of Great Moravia"
+    flavor_GMORV.2.desc: "The realm of our ancestors stretched from the Bohemian highlands to the Carpathian valleys, from the banks of the Danube to the Polish plains. Under the rule of Svatopluk I in the 9th century, Great Moravia stood as one of the most powerful Slavic states in Europe. a beacon of Christianity, culture, and learning where Saints Cyril and Methodius spread their sacred mission. Yet this glory faded into memory as the empire crumbled beneath Magyar invasions and internal strife.\n\nNow, after centuries of division and foreign domination, we have reclaimed what was lost. The ancient borders of Great Moravia are restored, and our people are once again united under a single banner. Let all of Europe take notice: the legacy of Svatopluk lives on, and the Moravian realm has returned to claim its rightful place among the great powers of Christendom."
+    flavor_GMORV.2.a: "Great Moravia rises from the ashes."
+
+    flavor_GMORV.3.title: "Tomb of Svätopluk I"
+    flavor_GMORV.3.desc: "Your Majesty, we have discovered what we believe to be the tomb of Svatopluk I, the great ruler who led Great Moravia to its zenith. Our explorers have uncovered a crown and sword within - the very regalia of our ancient kings. These sacred relics shall once again serve as symbols of royal power and legitimacy, connecting your reign to the glory of our forefathers."
+    flavor_GMORV.3.a: "The relic is restored!"

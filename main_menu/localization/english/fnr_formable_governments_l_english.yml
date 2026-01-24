@@ -1,9 +1,74 @@
 ﻿l_english:
 
-  # Great Moravia
+  # Carolingian Empire
+  fnr_CAROL_centers_of_realm: "Centers of Realm"
+  fnr_CAROL_centers_of_realm_desc: "In ancient times, our realm had no single permanent capital. Instead, the crown maintained royal palaces throughout the country, moving between residences as circumstances demanded. We shall revive this tradition by establishing one primary capital alongside several secondary seats. By traveling between these centers throughout the year, we ensure that the monarch's presence is felt across the entire realm. This practice allows us to inspect our territories firsthand, address local concerns directly, and maintain the loyalty of distant provinces through regular royal visits."
 
-  fnr_heirs_of_nitra: "Heirs of Nitra"
-  fnr_heirs_of_nitra_desc: "By ancient tradition, the oldest sons and heirs were sent to Nitra, the former seat of the Nitran Duchy in Slovakia, to learn statecraft through direct rule of the territory. There, away from the influence of the royal court, they would master the arts of administration, justice, and military command while governing a strategically important region. This apprenticeship in rulership ensured that future monarchs understood the needs of their subjects and the challenges of governance before ascending to the throne. We now restore this venerable practice to cultivate wise rulers and ensure the prosperity of our realm."
+  # Hanseatic League
+  fnr_HNSLG_territorial_hanseatic_federation: "Territorial Hanseatic Federation"
+  fnr_HNSLG_territorial_hanseatic_federation_desc: "The age of scattered kontors and loose confederations has ended. We have transformed the Hanseatic League from a network of autonomous merchant enclaves into a unified territorial state. The member cities now pledge loyalty not merely to shared commercial interests but to a sovereign federation capable of defending our lands with armies, not just ledgers. While trade remains our strength, we now possess the political cohesion and military power to enforce our will through conquest rather than contracts alone."
+
+  fnr_HNSLG_centralized_merchant_republic: "Centralized Merchant Republic"
+  fnr_HNSLG_centralized_merchant_republic_desc: "Political authority has been consolidated under a Grand Council elected from the great merchant houses of our core cities. Unlike the old Tagfahrt where each city held veto power, our new government can enact binding legislation, levy unified taxation, and command collective military forces. The merchant princes who once competed for advantage now cooperate as rulers of a single state, their wealth and expertise directed toward national rather than municipal prosperity."
+
+  fnr_HNSLG_unified_baltic_command: "Unified Baltic Command"
+  fnr_HNSLG_unified_baltic_command_desc: "Our merchant fleets no longer sail under individual city flags but as a single national navy. The scattered maritime militias of Lübeck, Hamburg, and Danzig have been integrated into a professional naval force capable of projecting power across the Baltic and North Seas. Where once we relied on armed merchantmen and hired privateers, we now maintain permanent warships that patrol our waters and enforce our commercial dominance through superior firepower."
+
+  fnr_HNSLG_guild_integration_reforms: "Guild Integration Reforms"
+  fnr_HNSLG_guild_integration_reforms_desc: "The powerful merchant guilds that once governed individual cities now serve the federation as economic ministries. Guild masters advise the Grand Council on trade policy, coordinate production across our territories, and maintain quality standards for Hanseatic goods. By channeling guild expertise into national administration rather than parochial competition, we maximize economic efficiency while preventing destructive rivalries between member cities."
+
+  # Great Moravia / Slav Group reforms
+
+  fnr_GMORV_heirs_of_nitra: "Heirs of Nitra"
+  fnr_GMORV_heirs_of_nitra_desc: "By ancient tradition, the oldest sons and heirs were sent to Nitra, the former seat of the Nitran Duchy in Slovakia, to learn statecraft through direct rule of the territory. There, away from the influence of the royal court, they would master the arts of administration, justice, and military command while governing a strategically important region. This apprenticeship in rulership ensured that future monarchs understood the needs of their subjects and the challenges of governance before ascending to the throne. We now restore this venerable practice to cultivate wise rulers and ensure the prosperity of our realm."
+
+  fnr_royal_free_cities: "Royal Free Cities"
+  fnr_royal_free_cities_desc: "To curb the power of the nobility, we shall grant exclusive privileges to key cities and their residents, allowing them free reign over urban economy and administration in exchange for a larger tax base. By establishing these Royal Free Cities, we prevent nobles from controlling important centers of commerce and production while boosting urban prosperity and filling our treasury. They are Free in the hands of their residents to govern themselves, yet Royal as they remain directly under the authority of the Crown."
+
+  fnr_royal_mint_cities: "Royal Mint Cities (Bánské Mestá)"
+  fnr_royal_mint_cities_desc: "We shall grant the exclusive right to mint state coinage to select cities situated near our plentiful gold and silver mines in the northern territories. These mining cities, bearing the prefix Bánske—derived from baňa, meaning mine—shall produce our realm's currency under strict royal supervision. By concentrating minting operations in these specialized centers, we ensure the authenticity and purity of our coinage while greatly reducing the circulation of counterfeit currency. The prosperity of our mining towns shall be matched by the integrity of our monetary system."
+
+  fnr_shepherds_farmers_culture: "Shepherds Farmer Culture"
+  fnr_shepherds_farmers_culture_desc: "Since time immemorial, our lands have been predominantly rural, and this character is deeply reflected in our people. Most live in tightly-knit villages and communities where every soul knows their neighbor. Among the common professions, two stand paramount: the farmer and the shepherd. Farming families till the fertile flatlands, while shepherd communities tend their flocks in the mountains and valleys. These are not mere occupations but ancient ways of life, passed down through generations. To uproot such deep-rooted traditions would be both foolish and disastrous for the fabric of our society."
+
+  fnr_great_moravia_church_slavic: "Church Slavic"
+  fnr_great_moravia_church_slavic_desc: "The brothers Cyril and Methodius created Old Church Slavonic in the 9th century so Moravians could worship in their own language. This tongue of scripture and administration defined Great Moravia's golden age. By restoring Church Slavonic to liturgy and governance, we honor our founders and embrace our Orthodox heritage."
+
+  fnr_GMORV_council_of_free_moravians: "Council of Free Moravians"
+  fnr_GMORV_council_of_free_moravians_desc: "The King had a council with his counts called kniežatá, that made up upper nobility, and lower nobility called družiníci / voji. in this council the King was 'First Count among Counts' and delegated responcibilities upon the upper nobles to govern the land, and lower nobles to govern over cities and 'hradiská'. They were given administrative and judicial power over they territories and payed tribute/tax to the king."
+
+  fnr_GMORV_palantir: "Palantir"
+  fnr_GMORV_palantir_desc: "Palantir was the highest administrative and partially noble title in Great Moravia. The Palantir managed the royal court's economy, administered the realm, and held authority to represent the monarch in his absence. This position carried immense prestige, as it indicated both the ruler's deep trust and the holder's exceptional competence."
+
+  fnr_GMORV_moravian_unitary_federation: "Moravian Unitary Federation"
+  fnr_GMORV_moravian_unitary_federation_desc: "Our realm encompasses many peoples - Bohemians, Moravians, Slovakians, Germans, and others. For the kingdom to prosper, we must respect these cultures. We establish a provincial system based on ethnicity, where each people elects their own governors and sends two representatives to our parliament and cabinet. To ensure competent governance, we mandate schooling for all children and provide university stipends for the most talented. Through representation and education, our diverse realm shall achieve harmony and prosperity."
+
+  # British Empire
+  fnr_BISHE_imperial_federation: "Imperial Federation"
+  fnr_BISHE_imperial_federation_desc: "TODO"
+
+  fnr_BISHE_accelerated_domain_status: "Accelerated Domain Status"
+  fnr_BISHE_accelerated_domain_status_desc: "TODO"
+
+  fnr_BISHE_economic_development_charter: "Economic Development Charter"
+  fnr_BISHE_economic_development_charter_desc: "TODO"
+
+  fnr_BISHE_racial_equality_act: "Racial Equality Act"
+  fnr_BISHE_racial_equality_act_desc: "TODO"
+
+  fnr_BISHE_constitutional_monarchy_of_nations: "Constitutional Monarchy of Nations"
+  fnr_BISHE_constitutional_monarchy_of_nations_desc: "TODO"
+
+  # Great Scotia
+  fnr_GSCTL_nova_scotian_charter: "The Nova Scotian Charter"
+  fnr_GSCTL_nova_scotian_charter_desc: "Scotland's future lies across the Atlantic. Through royal charter and organized settlement, we establish a New Scotland in the wilds of North America. The fisheries of Newfoundland, and the St. Lawrence valley shall become bastions of Scottish enterprise. Where England fumbles with scattered ventures, we bring Presbyterian discipline and Highland hardiness to the task of colonization."
+
+  # Austrian-Hungarian Empire
+  fnr_ASHNG_hungarian_compromise: "The Hungarian Compromise (Ausgleich)"
+  fnr_ASHNG_hungarian_compromise_desc: "The Kingdom of Hungary maintains its ancient constitution and parliamentary traditions, with the Magyar nobility exercising considerable autonomy over internal affairs. While we share a monarch, military, and foreign policy, Hungary governs itself through its own parliament in Budapest. This delicate arrangement preserves Hungarian pride while maintaining imperial unity, though it grants the Magyar elite disproportionate influence over our affairs and limits our ability to govern as a centralized state."
+
+  fnr_ASHNG_imperial_and_royal_administration: "Imperial and Royal Administration (Kaiserlich und Königlich)"
+  fnr_ASHNG_imperial_and_royal_administration_desc: "Our empire is a patchwork of Germans, Hungarians, Czechs, Poles, Croats, Italians, Romanians, Slovaks, Slovenes, Ruthenians, and more—eleven major nationalities speaking eight languages and practicing four religions. Rather than force uniformity, we embrace administrative flexibility. Each crown land maintains its traditional institutions, laws, and languages. This pragmatic tolerance prevents nationalist rebellion but creates a byzantine bureaucracy where every decision requires negotiation between a dozen competing interests."
 
   # Sweden-Norway Unique Reforms
 

@@ -1,0 +1,190 @@
+﻿namespace = flavor_PAPAL
+
+# TODO: this needs to be finished
+
+# The Holy Roman Empire Resolution (Decretum Sacri Romani Imperii)
+flavor_PAPAL.1 = {
+	type = country_event
+	title = flavor_PAPAL.1.title
+	desc = flavor_PAPAL.1.desc
+	fire_only_once = yes
+	trigger = { 
+		# Make a trigger that checks that the papal states owns at least 75% of the HRE territory
+		always = no # This is a WIP mechanic
+	}
+	# unique option that replaces the HRE with a new IO which allows establishing kingdom tier theocratic free cities, and allows crusades
+	option = { # Dissolve the HRE, proclaim ourselves emperor, and become empire rank + rename and flag event
+		name = flavor_PAPAL.1.a
+		custom_tooltip = { text = PAPAL_hre_tt_2 }
+		if = {
+			limit = { 
+				unique_international_organization_type_exists = international_organization_type:hre 
+			}
+			custom_tooltip = { text = PAPAL_hre_tt_1 }
+			destroy_international_organization = { 
+				target = international_organization:hre 
+			}
+		}
+		set_country_rank_effect = { rank = country_rank:rank_empire }
+		trigger_event_non_silently = flavor_PAPAL.2
+		trigger_event_non_silently = flavor_PAPAL.3
+	}
+	option = { # Proclaim Emperorship of the Papal States and weaken the HRE + rename and flag event
+		name = flavor_PAPAL.1.b
+		set_country_rank_effect = { rank = country_rank:rank_empire }
+#		international_organization:hre = {
+#			leader_country = {
+#				add_country_modifier = {
+#					name = weakened_imperial_authority TODO: fix
+#					duration = -1  # Permanent
+#				}
+#			}
+#		}
+		trigger_event_non_silently = flavor_PAPAL.2
+		trigger_event_non_silently = flavor_PAPAL.3
+	} 
+	option = { # Become the Emperor of the Holy Roman Empire
+		name = flavor_PAPAL.1.c
+		set_country_rank_effect = { rank = country_rank:rank_empire }
+		custom_tooltip = { text = PAPAL_hre_tt_3 }
+		# TODO: add an effect to make PAP leader of the HRE
+		trigger_event_non_silently = flavor_PAPAL.4
+		trigger_event_non_silently = flavor_PAPAL.2
+		trigger_event_non_silently = flavor_PAPAL.3
+	} 
+	option = { # No rename, just dissolve the HRE
+		name = flavor_PAPAL.1.d
+		custom_tooltip = { text = PAPAL_hre_tt_1 }
+		destroy_international_organization = { 
+			target = international_organization:hre 
+		}
+		set_country_rank_effect = { rank = country_rank:rank_empire }
+	} 
+	option = { # No rename, just gain Empire Rank
+		name = flavor_PAPAL.1.e
+		set_country_rank_effect = { rank = country_rank:rank_empire }
+	} 
+}
+
+# Event which handles the name of Papal Empire
+flavor_PAPAL.2 = {
+	type = country_event
+	title = flavor_PAPAL.2.title
+	desc = flavor_PAPAL.2.desc
+	fire_only_once = yes
+	option = { # Imperium Christianum
+		name = flavor_PAPAL.2.a
+		change_country_name = PAP_HRE_EMPIRE_1
+ 	}
+	option = { # Holy Empire
+		name = flavor_PAPAL.2.b
+		change_country_name = PAP_HRE_EMPIRE_2
+	}
+	option = { # Sacred Empire
+		name = flavor_PAPAL.2.c
+		change_country_name = PAP_HRE_EMPIRE_3
+	}
+	option = { # Universal Monarchy
+		name = flavor_PAPAL.2.d
+		change_country_name = PAP_HRE_EMPIRE_4
+	}
+	option = { # Empire of Christendom
+		name = flavor_PAPAL.2.e
+		change_country_name = PAP_HRE_EMPIRE_5
+	}
+	option = { # The Dominion of St. Peter
+		name = flavor_PAPAL.2.f
+		change_country_name = PAP_HRE_EMPIRE_6
+	}
+	option = { # Remain as the Papal States
+		name = flavor_PAPAL.2.g
+		add_prestige = 10
+	}
+}
+
+# Event which handles flag selection of Papal Empire
+flavor_PAPAL.3 = {
+	type = country_event
+	title = flavor_PAPAL.3.title
+	desc = flavor_PAPAL.3.desc
+	fire_only_once = yes
+	option = { # New Style
+		name = flavor_PAPAL.3.a
+		change_country_flag = PAP_HRE_EMPIRE_1_FLAG
+ 	}
+	option = { # Quaternion Eagle
+		name = flavor_PAPAL.3.b
+		change_country_flag = PAP_HRE_EMPIRE_2_FLAG
+	}
+	option = { # Holy Roman Empire flag
+		name = flavor_PAPAL.3.c
+		change_country_flag = PAP_HRE_EMPIRE_3_FLAG
+	}
+	option = { # Keep papal flag
+		name = flavor_PAPAL.3.d
+		add_prestige = 10
+	}
+}
+
+# Event which handles a possible new HRE IO entirely dominated by the Papacy
+flavor_PAPAL.4 = {
+    type = country_event
+    title = flavor_PAPAL.4.title
+    desc = flavor_PAPAL.4.desc
+    fire_only_once = yes
+    
+    trigger = {
+        tag = PAP
+        is_leader_of_international_organization = international_organization:hre
+    }
+    
+    immediate = {
+        # Save all current HRE members for transfer
+        every_country = {
+            limit = {
+                is_member_of_international_organization = international_organization:hre
+            }
+            save_scope_as = former_hre_member
+        }
+    }
+    
+    option = { # Establish a Papal-Dominated Holy Roman Empire
+        name = flavor_PAPAL.4.a
+        
+        # TODO: Disband the old HRE
+        
+        # Create the new papal HRE (customize this IO in common/international_organizations/ later)
+        create_international_organization = {
+            type = international_organization_type:papal_hre
+            add_country_to_international_organization = root
+        }
+        
+        # Transfer former members to new organization
+        every_country = {
+            limit = {
+                OR = {
+                    this = scope:former_hre_member # TODO: Limit Members not subject or with positive opinon of PAP to not join
+                   # was_member_of_international_organization = international_organization:hre 
+				   # TODO: not a real trigger, fix
+                }
+            }
+            international_organization:papal_hre = {
+                add_country_to_international_organization = prev
+            }
+        }
+        
+        custom_tooltip = {
+            text = fnr_papal_hre_established_tt
+        }
+    }
+    
+    option = { # Retain the Status Quo
+        name = flavor_PAPAL.4.b
+        
+        add_prestige = 50
+        
+        custom_tooltip = {
+            text = fnr_keep_old_hre_tt
+        }
+    }
+}
