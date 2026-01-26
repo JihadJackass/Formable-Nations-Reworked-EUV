@@ -424,6 +424,101 @@ FormableNationsReworkedDebug_initialize = {
 				}
 			}
 	# Rank 3
+		# TODO alphebatise all before basque country
+
+		# Federal Republic of Central America - historical
+			FormableNationReworked_toggle_federalrepubliccentralamerica = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_federalrepubliccentralamerica_enabled }
+							NOT = { has_variable = fnr_federalrepubliccentralamerica_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_federalrepubliccentralamerica_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_federalrepubliccentralamerica_disabled }
+						every_country = { 
+							remove_variable = fnr_federalrepubliccentralamerica_disabled
+							set_variable = { name = fnr_federalrepubliccentralamerica_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_federalrepubliccentralamerica_enabled }
+						every_country = {
+							remove_variable = fnr_federalrepubliccentralamerica_enabled
+						}
+					}
+				}
+			}	
+
+		# Magna Graecia
+			FormableNationReworked_toggle_magnagraecia = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_magnagraecia_enabled }
+							NOT = { has_variable = fnr_magnagraecia_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_magnagraecia_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_magnagraecia_disabled }
+						every_country = { 
+							remove_variable = fnr_magnagraecia_disabled
+							set_variable = { name = fnr_magnagraecia_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_magnagraecia_enabled }
+						every_country = {
+							remove_variable = fnr_magnagraecia_enabled
+						}
+					}
+				}
+			}	
+
+		# Galicia-Lodomeria
+			FormableNationReworked_toggle_galicialodomeria = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_galicialodomeria_enabled }
+							NOT = { has_variable = fnr_galicialodomeria_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_galicialodomeria_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_galicialodomeria_disabled }
+						every_country = { 
+							remove_variable = fnr_galicialodomeria_disabled
+							set_variable = { name = fnr_galicialodomeria_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_galicialodomeria_enabled }
+						every_country = {
+							remove_variable = fnr_galicialodomeria_enabled
+						}
+					}
+				}
+			}		
+
 		# Basque Country - Nonhistorical
 			FormableNationReworked_toggle_basquecountry = {
 				scope = country
@@ -2564,6 +2659,7 @@ FormableNationsReworkedDebug_initialize = {
 			}
 
 	# Rank 4
+
 		# Japan - Modern
 			FormableNationReworked_toggle_japan = {
 				scope = country
@@ -2975,24 +3071,24 @@ FormableNationsReworkedDebug_initialize = {
 				effect = {
 					if = { # Cycle: Default → Force OFF → Force ON → Default
 						limit = {
-							NOT = { has_variable = fnr_serbianempire_enabled }
-							NOT = { has_variable = fnr_serbianempire_disabled }
+							NOT = { has_variable = fnr_sassanids_enabled }
+							NOT = { has_variable = fnr_sassanids_disabled }
 						}
 						every_country = { # Currently DEFAULT → Force OFF
-							set_variable = { name = fnr_serbianempire_disabled value = yes }
+							set_variable = { name = fnr_sassanids_disabled value = yes }
 						}
 					}
 					else_if = { # Currently FORCE OFF → Force ON
-						limit = { has_variable = fnr_serbianempire_disabled }
+						limit = { has_variable = fnr_sassanids_disabled }
 						every_country = { 
-							remove_variable = fnr_serbianempire_disabled
-							set_variable = { name = fnr_serbianempire_enabled value = yes }
+							remove_variable = fnr_sassanids_disabled
+							set_variable = { name = fnr_sassanids_enabled value = yes }
 						}
 					}
 					else_if = { # Currently FORCE ON → Default
-						limit = { has_variable = fnr_serbianempire_enabled }
+						limit = { has_variable = fnr_sassanids_enabled }
 						every_country = {
-							remove_variable = fnr_serbianempire_enabled
+							remove_variable = fnr_sassanids_enabled
 						}
 					}
 				}

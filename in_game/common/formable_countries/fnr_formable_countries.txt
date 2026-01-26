@@ -4755,7 +4755,7 @@
 					}
 				}
 			}
-		# Federal Republic of Central America
+		# Federal Republic of Central America - historical
 			FROCA = {
 				level = 3
 				required_locations_fraction = 1
@@ -5034,14 +5034,17 @@
 						}
 					}			
 					OR = {
-						culture ?= {
-							is_culture_native_american = no
-							OR = {
-								has_culture_group = culture_group:british_group
-								has_culture_group = culture_group:french_group
+						OR =  { # is not a colonial subject
+							is_colonial_subject = no
+							culture ?= { # is a colonial subject of the appropriate culture group
+								is_culture_native_american = no
+								OR = {
+									has_culture_group = culture_group:british_group
+									has_culture_group = culture_group:iberian_group
+								}
 							}
 						}
-						OR = {
+						OR = { # native with requirements met
 							owns = location:tulsa
 							culture = culture:hohokam_culture
 							culture = culture:taovaya_culture
@@ -6218,9 +6221,9 @@
 					AND = {
 						OR = {
 							has_variable = fnr_althistory_enabled
-							has_variable = fnr_polandhungary_enabled
+							has_variable = fnr_hungaryromania_enabled
 						}
-						NOT = { has_variable = fnr_polandhungary_disabled }
+						NOT = { has_variable = fnr_hungaryromania_disabled }
 					}
 					NOT = {
 						OR = {
@@ -9119,9 +9122,9 @@
 					AND = {
 						OR = {
 							has_variable = fnr_historical_enabled
-							has_variable = fnr_northgermanconfederation_enabled
+							has_variable = fnr_southgermanconfederation_enabled
 						}
-						NOT = { has_variable = fnr_northgermanconfederation_disabled }
+						NOT = { has_variable = fnr_southgermanconfederation_disabled }
 					}
 					NOT = { 
 						OR = {

@@ -1,4 +1,5 @@
-﻿# Formable Nations Settings GUI - wip
+﻿# Formable Nations Settings GUI
+
 window = {
 	name = "formable_nations_debug_window"
 	layer = windows_layer

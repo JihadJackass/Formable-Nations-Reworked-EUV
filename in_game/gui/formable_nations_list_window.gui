@@ -1,4 +1,30 @@
 ﻿# Formable Nations Individual List Window
+#
+# Toggle for Historical Formables - fnr_historical_enabled
+# Existed after EU5 start date and not after January 1, 1837
+#
+# Toggle for Non-Historical Formables - fnr_nonhistorical_enabled
+# Existed before EU5 start date
+#
+# Toggle for Alt-History Formables - fnr_althistory_enabled
+# nation that were proposed or exist in alternate timeline mods
+#
+# Toggle for Controversial Formables - fnr_controversial_enabled
+# nazi germany, israel, rhodesia, etc
+#
+# Toggle Fantasy Formables - fnr_fantasy_enabled
+# Example: camelot, atlantis any unrealstic/made up country/story countries
+#
+# Toggle for Meme Formables - fnr_meme_enabled
+# meme countries (Hyperborea, Agartha)
+#
+# Toggle for Modern Formables - fnr_modern_enabled
+# Any nation existing after January 1, 1837 that isnt controversial
+#
+# Toggle for North America Formables - fnr_us_states_enabled
+# Any nation within the North American Sphere (Canada, Mexico, US)
+#
+
 window = {
 	name = "formable_nations_list_window"
 	layer = windows_layer
@@ -129,7 +155,31 @@ window = {
 							visible = "[GetVariableSystem.Exists('rank3_open')]"
 							spacing = 3
 							margin = { 10 5 }
-							
+
+							# Federal Republic of Central America - historical
+							button_regular = {
+								tooltip = "fnr_placeholder"
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_althistory_enabled'), GetPlayer.HasVariable('fnr_federalrepubliccentralamerica_enabled')), Not(GetPlayer.HasVariable('fnr_federalrepubliccentralamerica_disabled'))), 'Federal Republic of Central America: ON', 'Federal Republic of Central America: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_federalrepubliccentralamerica').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+
+							# Magna Graecia (Greek Naples)
+							button_regular = {
+								tooltip = "fnr_placeholder"
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_althistory_enabled'), GetPlayer.HasVariable('fnr_magnagraecia_enabled')), Not(GetPlayer.HasVariable('fnr_magnagraecia_disabled'))), 'Magna Graecia: ON', 'Magna Graecia: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_magnagraecia').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+
+							# Galicia-Lodomeria
+							button_regular = {
+								tooltip = "fnr_placeholder"
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_historical_enabled'), GetPlayer.HasVariable('fnr_galicialodomeria_enabled')), Not(GetPlayer.HasVariable('fnr_galicialodomeria_disabled'))), 'Galicia-Lodomeria: ON', 'Galicia-Lodomeria: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_galicialodomeria').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+
 							# Alsace-Lorraine - Historical
 							button_regular = {
 								tooltip = "fnr_placeholder"
@@ -634,7 +684,14 @@ window = {
 							visible = "[GetVariableSystem.Exists('rank4_open')]"
 							spacing = 3
 							margin = { 10 5 }
-							
+
+							# Sassanids - Fantasy
+							button_regular = {
+								tooltip = "fnr_placeholder"
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_fantasy_enabled'), GetPlayer.HasVariable('fnr_sassanids_enabled')), Not(GetPlayer.HasVariable('fnr_sassanids_disabled'))), 'Sassanids: ON', 'Sassanids: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_sassanids').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
 							# Japan - Modern
 							button_regular = {
 								tooltip = "fnr_placeholder"
