@@ -583,8 +583,8 @@
     SITAC_ADJ: "South Italian"
     SITAC_desc: "The 'South Italian Confederation' generally refers to hypothetical or historical alternative scenarios rather than a single, long-standing historical state. In actual history, southern Italy was a collection of various independent states, city-states, and territories under foreign control (notably Austrian) before the unification of Italy in 1861."
 
-    # Mexico
-    MEXCO: "Mexico"
+    # First Mexican Empire
+    MEXCO: "First Mexican Empire"
     MEXCO_ADJ: "Mexican"
     MEXCO_desc: "From the deserts of the north to the jungles of the south, from the shores of two great oceans to the highlands of the interior, these lands have witnessed the rise and fall of mighty civilizations. The legacy of the Mexica, the Maya, and countless other peoples runs deep in this earth.\n\nBy uniting the diverse peoples and territories of this vast region, we forge México - a nation rich in silver, abundant in crops, and unmatched in cultural heritage. Here, ancient cities stand beside colonial settlements, and the wealth of the land flows through our hands. Let all powers recognize that México stands as master of its own destiny, a sovereign realm worthy of respect and fear."
 
@@ -663,8 +663,8 @@
     WSHNT_ADJ: "TODO"
     WSHNT_desc: "TODO"
 
-    # Oregan
-    OREGN: "Oregan"
+    # Oregon
+    OREGN: "Oregon"
     OREGN_ADJ: "TODO"
     OREGN_desc: "TODO"
 

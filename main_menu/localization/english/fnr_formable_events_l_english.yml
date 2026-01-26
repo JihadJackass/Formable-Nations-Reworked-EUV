@@ -67,10 +67,21 @@
     flavor_DUTCH.1.a: "We shall Proclaim the Dutch Republic!"
     flavor_DUTCH.1.b: "The United Provinces remain strong in equality!"
 
+    # Gallci Empire
     flavor_GLCEM.1.title: "The Gallic Question"
     flavor_GLCEM.1.desc: "The wars are won. The tribes are united. From the Rhine to the Pyrenees, our standards fly victorious. Yet in this moment of triumph, we face a choice that transcends mere nomenclature. Shall we be the **Gallic Empire**.. a name that speaks of legions, laurels, and lasting dominion? Or simply **Gallia**—evoking the misty forests, proud chieftains, and unconquered spirit of our forefathers? This decision will echo through the halls of history itself."
     flavor_GLCEM.1.a: "Remain as the Gallic Empire!"
     flavor_GLCEM.1.b: "Gallia is our home!"
+
+    flavor_GLCEM.2.title: "Potential for Roman Territory Restorations - 1"
+    flavor_GLCEM.2.desc: ""
+    flavor_GLCEM.2.a: "Establish Terraconensis"
+    flavor_GLCEM.2.b: "We'd rather not."
+
+    flavor_GLCEM.3.title: "Potential for Roman Territory Restorations - 2"
+    flavor_GLCEM.3.desc: ""
+    flavor_GLCEM.3.a: "Establish Britannia"
+    flavor_GLCEM.3.b: "We'd rather not."
 
     # Great Moravia
     flavor_GMORV.1.title: "Church Slavic"

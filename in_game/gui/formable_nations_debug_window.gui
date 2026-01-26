@@ -119,6 +119,20 @@ window = {
 								onclick = "[GetScriptedGui('FormableNationReworked_toggle_modern_formables').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								tooltip = "[SelectLocalization(GetPlayer.HasVariable('fnr_modern_enabled'), 'fnr_modern_tooltip_on', 'fnr_modern_tooltip_off')]"
 							}
+							button_regular = { # North America
+								size = { 220 32 }
+								raw_text = "[SelectLocalization(GetPlayer.HasVariable('fnr_us_states_enabled'), 'North American Formables: ON', 'North American Formables: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_us_states_formables').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								tooltip = "[SelectLocalization(GetPlayer.HasVariable('fnr_us_states_enabled'), 'fnr_north_american_tooltip_on', 'fnr_north_american_tooltip_off')]"
+							}		
+						}
+					}
+					vbox = { # Group 3
+						layoutpolicy_horizontal = expanding
+						visible = "[Not(GetVariableSystem.HasValue('formable_settings_open', 'no'))]"
+						spacing = 20
+						hbox = {
+							spacing = 5
 							button_regular = {
 								size = { 220 32 }
 								raw_text = "Individual Formables List"
@@ -130,7 +144,7 @@ window = {
 								raw_text = "Flag Selection - Nonfunctional/WIP"
 								onclick = "[GetVariableSystem.Set('flag_selection_window_open', 'yes')]"
 								tooltip = "fnr_debug_window_formable_list_loc_flag_selection"
-							}		
+							}
 						}
 					}
 				}

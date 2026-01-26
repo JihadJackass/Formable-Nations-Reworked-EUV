@@ -75,7 +75,7 @@
     GMORV_formable_trigger_6_tt: "We will be able to earn a path of redemption towards rejoining the [GetInternationalOrganizationType('hre').GetName]"
     GMORV_formable_trigger_7_tt: "The event $flavor_GMORV.2.title$ [event|e] will become available after cementing our control over Krakow, Gorlitz, Sayda, Balaton, and Northern Hungary which will give us claims on further territories of the historical Great Moravian borders - Potentially allowing us to establish Imperium Slavorum."
 
-    GLCEM_formable_trigger_1_tt: "#G 22.5%#! of our pops will convert to [ShowCultureName('fnr_gallo_roman')]."
+    GLCEM_formable_trigger_1_tt: "#G 22.5%#! of our pops will convert to [ShowCultureName('fnr_gallo_roman_culture')]."
     GLCEM_formable_trigger_2_tt: "If we own territory in [ShowRegionName('iberia_region')] and [ShowRegionName('great_britain_region')] upon formation of the Gallic Empire then we will be given the option of establishing Tarraconensis and Britannia respectively as well as Baetica and Lusitania in [ShowRegionName('iberia_region')]."
     GLCEM_formable_trigger_3_tt: "#G 12%#! of our pops will convert to [ShowReligionName('fnr_gallo_roman_religion')]."
     GLCEM_formable_trigger_4_tt: "Upon formation of the Gallic Empire we will be given the option to choose our name styling as Gallic Empire or Gallia."
@@ -124,8 +124,11 @@
     fnr_meme_tooltip_on: "Click to #R DISABLE#!\n\nThis will disable Meme Formables such as Camelot, Adriatic Empire, Catholica Russica, etc"
     fnr_meme_tooltip_off: "Click to #G ENABLE#!\n\nThis will enable Meme Formables such as Hyperborea, Agartha, Proto-Finnic Holy Roman Khaganate, etc"
     # Modern
-    fnr_modern_tooltip_on: "Click to #R DISABLE#!\n\nThis will disable Modern Formables such as Russian Federation, Canada, Czechoslovakia, etc"
-    fnr_modern_tooltip_off: "Click to #G ENABLE#!\n\nThis will enable Modern Formables such as Russian Federation, Canada, Czechoslovakia, etc"
+    fnr_modern_tooltip_on: "Click to #R DISABLE#!\n\nThis will disable Modern Formables such as Russian Federation, Soviet Union, Czechoslovakia, etc"
+    fnr_modern_tooltip_off: "Click to #G ENABLE#!\n\nThis will enable Modern Formables such as Russian Federation, Soviet Union, Czechoslovakia, etc"
+    # North America
+    fnr_north_american_tooltip_on: "Click to #R DISABLE#!\n\nThis will disable North American Formables such as Oklahoma, Ontario, California, etc"
+    fnr_north_american_tooltip_off: "Click to #G ENABLE#!\n\nThis will enable North American Formables such as Oklahoma, Ontario, California, etc"
 
     # Formable List loc
     fnr_debug_window_formable_list_loc_toggle: "Formable Nations: Reworked"

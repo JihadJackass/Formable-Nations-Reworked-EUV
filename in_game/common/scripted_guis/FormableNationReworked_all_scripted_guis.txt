@@ -208,7 +208,33 @@ FormableNationsReworkedDebug_initialize = {
 		}
 	}
 
-# TODO: group for colonies in americas for example, such as Ontario, Oklahoma, etc
+# Toggle for North America Formables - fnr_us_states_enabled
+	# Any nation within the North American Sphere (Canada, Mexico, US)
+	FormableNationReworked_toggle_us_states_formables = {
+		scope = country
+		saved_scopes = { }
+		is_shown = { always = yes }
+		is_valid = { always = yes }
+		effect = {
+			if = {
+				limit = { has_variable = fnr_us_states_enabled }
+				# Currently enabled, so disable for ALL countries
+				every_country = {
+					remove_variable = fnr_us_states_enabled
+				}
+			}
+			else = {
+				# Currently disabled, so enable for ALL countries
+				every_country = {
+					set_variable = {
+						name = fnr_us_states_enabled
+						value = yes
+					}
+				}
+			}
+		}
+	}	
+
 
 # Individual Formable Toggle List
 	# Rank 2
@@ -429,6 +455,37 @@ FormableNationsReworkedDebug_initialize = {
 				}
 			}
 
+		# Babylon - Fantasy	
+			FormableNationReworked_toggle_babylon = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_babylon_enabled }
+							NOT = { has_variable = fnr_babylon_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_babylon_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_babylon_disabled }
+						every_country = { 
+							remove_variable = fnr_babylon_disabled
+							set_variable = { name = fnr_babylon_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_babylon_enabled }
+						every_country = {
+							remove_variable = fnr_babylon_enabled
+						}
+					}
+				}
+			}
+
 		# Balochistan - Modern
 			FormableNationReworked_toggle_balochistan = {
 				scope = country
@@ -486,6 +543,37 @@ FormableNationsReworkedDebug_initialize = {
 						limit = { has_variable = fnr_greatsorbia_enabled }
 						every_country = {
 							remove_variable = fnr_greatsorbia_enabled
+						}
+					}
+				}
+			}
+
+		# Sardinia–Piedmont
+			FormableNationReworked_toggle_sardiniapiedmont = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_sardiniapiedmont_enabled }
+							NOT = { has_variable = fnr_sardiniapiedmont_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_sardiniapiedmont_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_sardiniapiedmont_disabled }
+						every_country = { 
+							remove_variable = fnr_sardiniapiedmont_disabled
+							set_variable = { name = fnr_sardiniapiedmont_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_sardiniapiedmont_enabled }
+						every_country = {
+							remove_variable = fnr_sardiniapiedmont_enabled
 						}
 					}
 				}
@@ -2010,37 +2098,6 @@ FormableNationsReworkedDebug_initialize = {
 				}
 			}
 
-		# Alaska - Modern
-			FormableNationReworked_toggle_alaska = {
-				scope = country
-				is_shown = { always = yes }
-				is_valid = { always = yes }
-				effect = {
-					if = { # Cycle: Default → Force OFF → Force ON → Default
-						limit = {
-							NOT = { has_variable = fnr_alaska_enabled }
-							NOT = { has_variable = fnr_alaska_disabled }
-						}
-						every_country = { # Currently DEFAULT → Force OFF
-							set_variable = { name = fnr_alaska_disabled value = yes }
-						}
-					}
-					else_if = { # Currently FORCE OFF → Force ON
-						limit = { has_variable = fnr_alaska_disabled }
-						every_country = { 
-							remove_variable = fnr_alaska_disabled
-							set_variable = { name = fnr_alaska_enabled value = yes }
-						}
-					}
-					else_if = { # Currently FORCE ON → Default
-						limit = { has_variable = fnr_alaska_enabled }
-						every_country = {
-							remove_variable = fnr_alaska_enabled
-						}
-					}
-				}
-			}
-
 		# Alpland - Fantasy
 			FormableNationReworked_toggle_alpland = {
 				scope = country
@@ -2631,6 +2688,37 @@ FormableNationsReworkedDebug_initialize = {
 				}
 			}
 
+		# First Mexican Empire - Historical
+			FormableNationReworked_toggle_firstmexicoempire = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_firstmexicoempire_enabled }
+							NOT = { has_variable = fnr_firstmexicoempire_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_firstmexicoempire_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_firstmexicoempire_disabled }
+						every_country = { 
+							remove_variable = fnr_firstmexicoempire_disabled
+							set_variable = { name = fnr_firstmexicoempire_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_firstmexicoempire_enabled }
+						every_country = {
+							remove_variable = fnr_firstmexicoempire_enabled
+						}
+					}
+				}
+			}
+
 		# German Empire - Historical
 			FormableNationReworked_toggle_germanempire = {
 				scope = country
@@ -2874,6 +2962,37 @@ FormableNationsReworkedDebug_initialize = {
 						limit = { has_variable = fnr_russianfed_enabled }
 						every_country = {
 							remove_variable = fnr_russianfed_enabled
+						}
+					}
+				}
+			}
+
+		# Sassanids - Fantasy
+			FormableNationReworked_toggle_sassanids = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_serbianempire_enabled }
+							NOT = { has_variable = fnr_serbianempire_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_serbianempire_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_serbianempire_disabled }
+						every_country = { 
+							remove_variable = fnr_serbianempire_disabled
+							set_variable = { name = fnr_serbianempire_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_serbianempire_enabled }
+						every_country = {
+							remove_variable = fnr_serbianempire_enabled
 						}
 					}
 				}
@@ -4243,8 +4362,844 @@ FormableNationsReworkedDebug_initialize = {
 					}
 				}
 			}
+	# North American Formables
 
+		# Oklahoma - US States (Rank 3)
+			FormableNationReworked_toggle_oklahoma = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_oklahoma_enabled }
+							NOT = { has_variable = fnr_oklahoma_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_oklahoma_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_oklahoma_disabled }
+						every_country = { 
+							remove_variable = fnr_oklahoma_disabled
+							set_variable = { name = fnr_oklahoma_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_oklahoma_enabled }
+						every_country = {
+							remove_variable = fnr_oklahoma_enabled
+						}
+					}
+				}
+			}
 
+		# Alaska - US States (Rank 3)
+			FormableNationReworked_toggle_alaska = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_alaska_enabled }
+							NOT = { has_variable = fnr_alaska_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_alaska_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_alaska_disabled }
+						every_country = { 
+							remove_variable = fnr_alaska_disabled
+							set_variable = { name = fnr_alaska_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_alaska_enabled }
+						every_country = {
+							remove_variable = fnr_alaska_enabled
+						}
+					}
+				}
+			}
+
+		# Missouri - US States (Rank 3)
+			FormableNationReworked_toggle_missouri = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_missouri_enabled }
+							NOT = { has_variable = fnr_missouri_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_missouri_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_missouri_disabled }
+						every_country = { 
+							remove_variable = fnr_missouri_disabled
+							set_variable = { name = fnr_missouri_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_missouri_enabled }
+						every_country = {
+							remove_variable = fnr_missouri_enabled
+						}
+					}
+				}
+			}
+
+		# Flordia - US States (Rank 3)
+			FormableNationReworked_toggle_florida = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_florida_enabled }
+							NOT = { has_variable = fnr_florida_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_florida_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_florida_disabled }
+						every_country = { 
+							remove_variable = fnr_florida_disabled
+							set_variable = { name = fnr_florida_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_florida_enabled }
+						every_country = {
+							remove_variable = fnr_florida_enabled
+						}
+					}
+				}
+			}
+
+		# Georgia - US States (Rank 3)
+			FormableNationReworked_toggle_georgiaus = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_georgiaus_enabled }
+							NOT = { has_variable = fnr_georgiaus_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_georgiaus_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_georgiaus_disabled }
+						every_country = { 
+							remove_variable = fnr_georgiaus_disabled
+							set_variable = { name = fnr_georgiaus_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_georgiaus_enabled }
+						every_country = {
+							remove_variable = fnr_georgiaus_enabled
+						}
+					}
+				}
+			}
+
+		# Alabama - US States (Rank 3)
+			FormableNationReworked_toggle_alabamaus = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_alabamaus_enabled }
+							NOT = { has_variable = fnr_alabamaus_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_alabamaus_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_alabamaus_disabled }
+						every_country = { 
+							remove_variable = fnr_alabamaus_disabled
+							set_variable = { name = fnr_alabamaus_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_alabamaus_enabled }
+						every_country = {
+							remove_variable = fnr_alabamaus_enabled
+						}
+					}
+				}
+			}
+
+		# South Carolina - US States  (Rank 3)
+			FormableNationReworked_toggle_southcarolina = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_southcarolinaus_enabled }
+							NOT = { has_variable = fnr_southcarolina_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_southcarolina_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_southcarolina_disabled }
+						every_country = { 
+							remove_variable = fnr_southcarolina_disabled
+							set_variable = { name = fnr_southcarolinaus_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_southcarolinaus_enabled }
+						every_country = {
+							remove_variable = fnr_southcarolinaus_enabled
+						}
+					}
+				}
+			}
+
+		# North Carolina - US States  (Rank 3)
+			FormableNationReworked_toggle_northcarolina = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_northcarolinaus_enabled }
+							NOT = { has_variable = fnr_northcarolina_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_northcarolina_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_northcarolina_disabled }
+						every_country = { 
+							remove_variable = fnr_northcarolina_disabled
+							set_variable = { name = fnr_northcarolinaus_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_northcarolinaus_enabled }
+						every_country = {
+							remove_variable = fnr_northcarolinaus_enabled
+						}
+					}
+				}
+			}
+
+		# Tennessee - US States  (Rank 3)
+			FormableNationReworked_toggle_tennessee = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_tennessee_enabled }
+							NOT = { has_variable = fnr_tennessee_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_tennessee_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_tennessee_disabled }
+						every_country = { 
+							remove_variable = fnr_tennessee_disabled
+							set_variable = { name = fnr_tennessee_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_tennessee_enabled }
+						every_country = {
+							remove_variable = fnr_tennessee_enabled
+						}
+					}
+				}
+			}
+
+		# Kentucky - US States  (Rank 3)
+			FormableNationReworked_toggle_kentucky = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_kentucky_enabled }
+							NOT = { has_variable = fnr_kentucky_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_kentucky_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_kentucky_disabled }
+						every_country = { 
+							remove_variable = fnr_kentucky_disabled
+							set_variable = { name = fnr_kentucky_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_kentucky_enabled }
+						every_country = {
+							remove_variable = fnr_kentucky_enabled
+						}
+					}
+				}
+			}
+
+		# Ohio - US States  (Rank 3)
+			FormableNationReworked_toggle_ohio = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_ohio_enabled }
+							NOT = { has_variable = fnr_ohio_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_ohio_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_ohio_disabled }
+						every_country = { 
+							remove_variable = fnr_ohio_disabled
+							set_variable = { name = fnr_ohio_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_ohio_enabled }
+						every_country = {
+							remove_variable = fnr_ohio_enabled
+						}
+					}
+				}
+			}
+
+		# Virginia - US States  (Rank 3)
+			FormableNationReworked_toggle_virginia = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_virginia_enabled }
+							NOT = { has_variable = fnr_virginia_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_virginia_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_virginia_disabled }
+						every_country = { 
+							remove_variable = fnr_virginia_disabled
+							set_variable = { name = fnr_virginia_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_virginia_enabled }
+						every_country = {
+							remove_variable = fnr_virginia_enabled
+						}
+					}
+				}
+			}
+
+		# West Virginia - US States  (Rank 3)
+			FormableNationReworked_toggle_westvirginia = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_westvirginia_enabled }
+							NOT = { has_variable = fnr_westvirginia_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_westvirginia_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_westvirginia_disabled }
+						every_country = { 
+							remove_variable = fnr_westvirginia_disabled
+							set_variable = { name = fnr_westvirginia_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_westvirginia_enabled }
+						every_country = {
+							remove_variable = fnr_westvirginia_enabled
+						}
+					}
+				}
+			}
+			
+		# Maryland - US States  (Rank 3)
+			FormableNationReworked_toggle_maryland = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_maryland_enabled }
+							NOT = { has_variable = fnr_maryland_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_maryland_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_maryland_disabled }
+						every_country = { 
+							remove_variable = fnr_maryland_disabled
+							set_variable = { name = fnr_maryland_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_maryland_enabled }
+						every_country = {
+							remove_variable = fnr_maryland_enabled
+						}
+					}
+				}
+			}	
+
+		# Pennsylvania - US States  (Rank 3)
+			FormableNationReworked_toggle_pennsylvania = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_pennsylvania_enabled }
+							NOT = { has_variable = fnr_pennsylvania_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_pennsylvania_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_pennsylvania_disabled }
+						every_country = { 
+							remove_variable = fnr_pennsylvania_disabled
+							set_variable = { name = fnr_pennsylvania_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_pennsylvania_enabled }
+						every_country = {
+							remove_variable = fnr_pennsylvania_enabled
+						}
+					}
+				}
+			}
+			
+		# New Jersey - US States  (Rank 3)
+			FormableNationReworked_toggle_newjersey = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_newjersey_enabled }
+							NOT = { has_variable = fnr_newjersey_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_newjersey_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_newjersey_disabled }
+						every_country = { 
+							remove_variable = fnr_newjersey_disabled
+							set_variable = { name = fnr_newjersey_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_newjersey_enabled }
+						every_country = {
+							remove_variable = fnr_newjersey_enabled
+						}
+					}
+				}
+			}				
+
+		# Louisiana - US States  (Rank 3)
+			FormableNationReworked_toggle_louisiana = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_louisiana_enabled }
+							NOT = { has_variable = fnr_louisiana_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_louisiana_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_louisiana_disabled }
+						every_country = { 
+							remove_variable = fnr_louisiana_disabled
+							set_variable = { name = fnr_louisiana_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_louisiana_enabled }
+						every_country = {
+							remove_variable = fnr_louisiana_enabled
+						}
+					}
+				}
+			}
+
+		# Arkansas - US States  (Rank 3)
+			FormableNationReworked_toggle_arkansas = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_arkansas_enabled }
+							NOT = { has_variable = fnr_arkansas_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_arkansas_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_arkansas_disabled }
+						every_country = { 
+							remove_variable = fnr_arkansas_disabled
+							set_variable = { name = fnr_arkansas_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_arkansas_enabled }
+						every_country = {
+							remove_variable = fnr_arkansas_enabled
+						}
+					}
+				}
+			}
+
+		# Iowa - US States  (Rank 3)	
+			FormableNationReworked_toggle_iowa = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_iowa_enabled }
+							NOT = { has_variable = fnr_iowa_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_iowa_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_iowa_disabled }
+						every_country = { 
+							remove_variable = fnr_iowa_disabled
+							set_variable = { name = fnr_iowa_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_iowa_enabled }
+						every_country = {
+							remove_variable = fnr_iowa_enabled
+						}
+					}
+				}
+			}	
+			
+		# California - US States  (Rank 3)
+			FormableNationReworked_toggle_california = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_california_enabled }
+							NOT = { has_variable = fnr_california_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_california_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_california_disabled }
+						every_country = { 
+							remove_variable = fnr_california_disabled
+							set_variable = { name = fnr_california_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_california_enabled }
+						every_country = {
+							remove_variable = fnr_california_enabled
+						}
+					}
+				}
+			}
+
+		# Cascadia - US States  (Rank 3)
+			FormableNationReworked_toggle_cascadia = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_cascadia_enabled }
+							NOT = { has_variable = fnr_cascadia_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_cascadia_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_cascadia_disabled }
+						every_country = { 
+							remove_variable = fnr_cascadia_disabled
+							set_variable = { name = fnr_cascadia_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_cascadia_enabled }
+						every_country = {
+							remove_variable = fnr_cascadia_enabled
+						}
+					}
+				}
+			}
+
+		# Wyoming - US States  (Rank 3)
+			FormableNationReworked_toggle_wyoming = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_wyoming_enabled }
+							NOT = { has_variable = fnr_wyoming_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_wyoming_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_wyoming_disabled }
+						every_country = { 
+							remove_variable = fnr_wyoming_disabled
+							set_variable = { name = fnr_wyoming_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_wyoming_enabled }
+						every_country = {
+							remove_variable = fnr_wyoming_enabled
+						}
+					}
+				}
+			}
+
+		# Texas - US States  (Rank 3)
+			FormableNationReworked_toggle_texas = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_texas_enabled }
+							NOT = { has_variable = fnr_texas_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_texas_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_texas_disabled }
+						every_country = { 
+							remove_variable = fnr_texas_disabled
+							set_variable = { name = fnr_texas_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_texas_enabled }
+						every_country = {
+							remove_variable = fnr_texas_enabled
+						}
+					}
+				}
+			}
+
+		# Michigan - US States  (Rank 3)
+			FormableNationReworked_toggle_michigan = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_michigan_enabled }
+							NOT = { has_variable = fnr_michigan_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_michigan_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_michigan_disabled }
+						every_country = { 
+							remove_variable = fnr_michigan_disabled
+							set_variable = { name = fnr_michigan_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_michigan_enabled }
+						every_country = {
+							remove_variable = fnr_michigan_enabled
+						}
+					}
+				}
+			}	
+			
+		# Wisconsin - US States  (Rank 3)
+			FormableNationReworked_toggle_wisconsin = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_wisconsin_enabled }
+							NOT = { has_variable = fnr_wisconsin_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_wisconsin_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_wisconsin_disabled }
+						every_country = { 
+							remove_variable = fnr_wisconsin_disabled
+							set_variable = { name = fnr_wisconsin_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_wisconsin_enabled }
+						every_country = {
+							remove_variable = fnr_wisconsin_enabled
+						}
+					}
+				}
+			}	
+
+		# Washington - US States  (Rank 3)
+			FormableNationReworked_toggle_washington = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_washington_enabled }
+							NOT = { has_variable = fnr_washington_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_washington_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_washington_disabled }
+						every_country = { 
+							remove_variable = fnr_washington_disabled
+							set_variable = { name = fnr_washington_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_washington_enabled }
+						every_country = {
+							remove_variable = fnr_washington_enabled
+						}
+					}
+				}
+			}	
+			
+		# Oregon - US States  (Rank 3)
+			FormableNationReworked_toggle_oregon = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_oregon_enabled }
+							NOT = { has_variable = fnr_oregon_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_oregon_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_oregon_disabled }
+						every_country = { 
+							remove_variable = fnr_oregon_disabled
+							set_variable = { name = fnr_oregon_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_oregon_enabled }
+						every_country = {
+							remove_variable = fnr_oregon_enabled
+						}
+					}
+				}
+			}				
 
 # Flag Selection List
 

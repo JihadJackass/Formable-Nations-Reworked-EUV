@@ -4841,7 +4841,7 @@
 					}					
 				}
 			}
-		# Babylon
+		# Babylon - Fantasy
 			BBLON = {
 				level = 3
 				required_locations_fraction = 0.90
@@ -5001,19 +5001,20 @@
 					}
 				}
 			}
-		####################
-		# Canada Provinces #
-		####################
-		
-		# TODO: Ontario - Canada Provinces
-		# TODO: Quebec - Canada Provinces
-		# TODO: Newfoundland - Canada Provinces
-		
-		#####################
-		# US States Section #	
-		#####################
 
-		# Oklahoma - US States
+		################################
+		# Canada Provinces - US States #
+		################################
+		
+		# TODO: Ontario - US States (Rank 3)
+		# TODO: Quebec - US States (Rank 3)
+		# TODO: Newfoundland - US States (Rank 3)
+		
+		#################################
+		# US States Section - US States #	
+		#################################
+
+		# Oklahoma - US States (Rank 3)
 			OKLAH = {
 				level = 3
 				required_locations_fraction = 1
@@ -5058,7 +5059,42 @@
 				#regions = { great_plains_region }
 				locations = { tulsa wewoka washita kiamichi nanatsoho tawehash wakhakukdhin headdhetanwan pasukhdin chikaskia nixgu oktahutchee gulvau hawaastatkiicu guichita nigitai kicpahat gulvau honih_hiyo_he }
 			}
-		# Missouri - US States
+		# Alaska - Modern (Rank 3)
+			ALSKA = {
+				level = 3
+				required_locations_fraction = 0.70
+				rule = plausible
+				potential = {
+					AND = {
+						OR = {
+							has_variable = fnr_us_states_enabled
+							has_variable = fnr_alaska_enabled
+						}
+						NOT = { has_variable = fnr_alaska_disabled }
+					} 
+					NOT = { 
+						OR = {
+							tag = ALSKA
+							tag_exists = ALSKA
+						}
+					}
+					capital = {
+						region = region:alaska_region
+					}			
+				}
+				allow = {
+					capital = {
+						region = region:alaska_region
+					}
+				}
+				name = ALSKA
+				flag = ALSKA
+				adjective = ALSKA_ADJ
+				tag = ALSKA
+				color = map_ALSKA
+				regions = { alaska_region }
+			}
+		# Missouri - US States (Rank 3)
 			MISSR = {
 				level = 3
 				required_locations_fraction = 1
@@ -5102,7 +5138,7 @@
 				color = map_MISSR
 				areas = { missouri_area }
 			}
-		# Flordia - US States
+		# Flordia - US States (Rank 3)
 			FLRDA = {
 				level = 3
 				required_locations_fraction = 1
@@ -5145,7 +5181,7 @@
 				#regions = { great_plains_region }
 				locations = { tulsa wewoka washita kiamichi nanatsoho tawehash wakhakukdhin headdhetanwan pasukhdin chikaskia nixgu oktahutchee gulvau hawaastatkiicu guichita nigitai kicpahat gulvau honih_hiyo_he }
 			}
-		# Georgia - US States
+		# Georgia - US States (Rank 3)
 			GRGUS = {
 				level = 3
 				required_locations_fraction = 1
@@ -5192,7 +5228,7 @@
 				color = map_GRGUS
 				areas = { georgia_us_area }
 			}
-		# Alabama - US States
+		# Alabama - US States (Rank 3)
 			ALBMA = {
 				level = 3
 				required_locations_fraction = 1
@@ -5229,7 +5265,7 @@
 				color = map_ALBMA
 				areas = { georgia_us_area }
 			}
-		# South Carolina - US States
+		# South Carolina - US States  (Rank 3)
 			SCRLA = {
 				level = 3
 				required_locations_fraction = 1
@@ -5266,7 +5302,7 @@
 				color = map_SCRLA
 				areas = { south_carolina_area }
 			}
-		# North Carolina - US States
+		# North Carolina - US States  (Rank 3)
 			NCRLA = {
 				level = 3
 				required_locations_fraction = 1
@@ -5303,7 +5339,7 @@
 				color = map_NCRLA
 				areas = { north_carolina_area }
 			}
-		# Tennessee - US States
+		# Tennessee - US States  (Rank 3)
 			TNNSS = {
 				level = 3
 				required_locations_fraction = 1
@@ -5340,7 +5376,7 @@
 				color = map_TNNSS
 				areas = { tennessee_area }
 			}
-		# Kentucky - US States
+		# Kentucky - US States  (Rank 3)
 			KNTKY = {
 				level = 3
 				required_locations_fraction = 1
@@ -5349,9 +5385,9 @@
 					AND = {
 						OR = {
 							has_variable = fnr_us_states_enabled
-							has_variable = fnr_northcarolinaus_enabled
+							has_variable = fnr_kentucky_enabled
 						}
-						NOT = { has_variable = fnr_northcarolina_disabled }
+						NOT = { has_variable = fnr_kentucky_disabled }
 					}
 					NOT = { 
 						OR = {
@@ -5377,7 +5413,7 @@
 				color = map_KNTKY
 				areas = { tennessee_area }
 			}
-		# Ohio - US States
+		# Ohio - US States  (Rank 3)
 			OHIOU = {
 				level = 3
 				required_locations_fraction = 1
@@ -5414,7 +5450,7 @@
 				color = map_OHIOU
 				areas = { ohio_area }
 			}
-		# Virginia - US States
+		# Virginia - US States  (Rank 3)
 			VRGNA = {
 				level = 3
 				required_locations_fraction = 1
@@ -5451,7 +5487,7 @@
 				color = map_VRGNA
 				areas = { virginia_area }
 			}
-		# West Virginia - US States
+		# West Virginia - US States  (Rank 3)
 			WVGNA = {
 				level = 3
 				required_locations_fraction = 1
@@ -5488,7 +5524,7 @@
 				color = map_WVGNA
 				areas = { west_virginia_area }
 			}
-		# Maryland - US States
+		# Maryland - US States  (Rank 3)
 			MRYLN = {
 				level = 3
 				required_locations_fraction = 1
@@ -5525,7 +5561,7 @@
 				color = map_MRYLN
 				areas = { maryland_area }
 			}
-		# Pennsylvania - US States
+		# Pennsylvania - US States  (Rank 3)
 			PNSLV = {
 				level = 3
 				required_locations_fraction = 1
@@ -5562,7 +5598,7 @@
 				color = map_PNSLV
 				areas = { pennsylvania_area }
 			}
-		# New Jersey - US States
+		# New Jersey - US States  (Rank 3)
 			NWJSY = {
 				level = 3
 				required_locations_fraction = 1
@@ -5599,7 +5635,7 @@
 				color = map_NWJSY
 				areas = { new_jersey_area }
 			}
-		# Louisiana - US States
+		# Louisiana - US States  (Rank 3)
 			LOSNA = {
 				level = 3
 				required_locations_fraction = 1
@@ -5636,7 +5672,7 @@
 				color = map_LOSNA
 				areas = { louisiana_area }
 			}
-		# Arkansas - US States
+		# Arkansas - US States  (Rank 3)
 			ARKNS = {
 				level = 3
 				required_locations_fraction = 1
@@ -5645,9 +5681,9 @@
 					AND = {
 						OR = {
 							has_variable = fnr_us_states_enabled
-							has_variable = fnr_louisiana_enabled
+							has_variable = fnr_arkansas_enabled
 						}
-						NOT = { has_variable = fnr_louisiana_disabled }
+						NOT = { has_variable = fnr_arkansas_disabled }
 					}
 					NOT = { 
 						OR = {
@@ -5673,7 +5709,7 @@
 				color = map_ARKNS
 				areas = { arkansas_area }
 			}
-		# Iowa - US States
+		# Iowa - US States  (Rank 3)
 			IOWAU = {
 				level = 3
 				required_locations_fraction = 1
@@ -5682,9 +5718,9 @@
 					AND = {
 						OR = {
 							has_variable = fnr_us_states_enabled
-							has_variable = fnr_louisiana_enabled
+							has_variable = fnr_iowa_enabled
 						}
-						NOT = { has_variable = fnr_louisiana_disabled }
+						NOT = { has_variable = fnr_iowa_disabled }
 					}
 					NOT = { 
 						OR = {
@@ -5710,7 +5746,7 @@
 				color = map_IOWAU
 				areas = { iowa_area }
 			}
-		# California - US States
+		# California - US States  (Rank 3)
 			CLFRN = {
 				level = 3
 				required_locations_fraction = 1
@@ -5719,9 +5755,9 @@
 					AND = {
 						OR = {
 							has_variable = fnr_us_states_enabled
-							has_variable = fnr_louisiana_enabled
+							has_variable = fnr_california_enabled
 						}
-						NOT = { has_variable = fnr_louisiana_disabled }
+						NOT = { has_variable = fnr_california_disabled }
 					}
 					NOT = { 
 						OR = {
@@ -5747,7 +5783,7 @@
 				color = map_CLFRN
 				areas = { california_area }
 			}
-		# Cascadia - US States
+		# Cascadia - US States  (Rank 3)
 			CSCDA = {
 				level = 3
 				required_locations_fraction = 1
@@ -5756,9 +5792,9 @@
 					AND = {
 						OR = {
 							has_variable = fnr_us_states_enabled
-							has_variable = fnr_louisiana_enabled
+							has_variable = fnr_cascadia_enabled
 						}
-						NOT = { has_variable = fnr_louisiana_disabled }
+						NOT = { has_variable = fnr_cascadia_disabled }
 					}
 					NOT = { 
 						OR = {
@@ -5784,7 +5820,7 @@
 				color = map_CSCDA
 				areas = { cascadia_area }
 			}
-		# Wyoming - US States
+		# Wyoming - US States  (Rank 3)
 			WYMNG = {
 				level = 3
 				required_locations_fraction = 1
@@ -5793,9 +5829,9 @@
 					AND = {
 						OR = {
 							has_variable = fnr_us_states_enabled
-							has_variable = fnr_louisiana_enabled
+							has_variable = fnr_wyoming_enabled
 						}
-						NOT = { has_variable = fnr_louisiana_disabled }
+						NOT = { has_variable = fnr_wyoming_disabled }
 					}
 					NOT = { 
 						OR = {
@@ -5821,7 +5857,7 @@
 				color = map_WYMNG
 				areas = { badlands_area }
 			}
-		# Texas - US States
+		# Texas - US States  (Rank 3)
 			TEXAS = {
 				level = 3
 				required_locations_fraction = 1
@@ -5830,9 +5866,9 @@
 					AND = {
 						OR = {
 							has_variable = fnr_us_states_enabled
-							has_variable = fnr_louisiana_enabled
+							has_variable = fnr_texas_enabled
 						}
-						NOT = { has_variable = fnr_louisiana_disabled }
+						NOT = { has_variable = fnr_texas_disabled }
 					}
 					NOT = { 
 						OR = {
@@ -5858,7 +5894,7 @@
 				color = map_TEXAS
 				areas = { texas_area }
 			}
-		# Michigan - US States
+		# Michigan - US States  (Rank 3)
 			MCHGN = {
 				level = 3
 				required_locations_fraction = 1
@@ -5867,9 +5903,9 @@
 					AND = {
 						OR = {
 							has_variable = fnr_us_states_enabled
-							has_variable = fnr_louisiana_enabled
+							has_variable = fnr_michigan_enabled
 						}
-						NOT = { has_variable = fnr_louisiana_disabled }
+						NOT = { has_variable = fnr_michigan_disabled }
 					}
 					NOT = { 
 						OR = {
@@ -5895,7 +5931,7 @@
 				color = map_MCHGN
 				areas = { michigan_area }
 			}
-		# Wisconsin - US States
+		# Wisconsin - US States  (Rank 3)
 			WSCNS = {
 				level = 3
 				required_locations_fraction = 1
@@ -5904,9 +5940,9 @@
 					AND = {
 						OR = {
 							has_variable = fnr_us_states_enabled
-							has_variable = fnr_louisiana_enabled
+							has_variable = fnr_wisconsin_enabled
 						}
-						NOT = { has_variable = fnr_louisiana_disabled }
+						NOT = { has_variable = fnr_wisconsin_disabled }
 					}
 					NOT = { 
 						OR = {
@@ -5932,7 +5968,7 @@
 				color = map_WSCNS
 				areas = { wisconsin_area }
 			}
-		# Washington - US States
+		# Washington - US States  (Rank 3)
 			WSHNT = {
 				level = 3
 				required_locations_fraction = 1
@@ -5941,9 +5977,9 @@
 					AND = {
 						OR = {
 							has_variable = fnr_us_states_enabled
-							has_variable = fnr_louisiana_enabled
+							has_variable = fnr_washington_enabled
 						}
-						NOT = { has_variable = fnr_louisiana_disabled }
+						NOT = { has_variable = fnr_washington_disabled }
 					}
 					NOT = { 
 						OR = {
@@ -5969,7 +6005,7 @@
 				color = map_WSHNT
 				provinces = { olympic_province cascadia_province }
 			}
-		# Oregan - US States
+		# Oregon - US States  (Rank 3)
 			OREGN = {
 				level = 3
 				required_locations_fraction = 1
@@ -5978,9 +6014,9 @@
 					AND = {
 						OR = {
 							has_variable = fnr_us_states_enabled
-							has_variable = fnr_louisiana_enabled
+							has_variable = fnr_oregon_enabled
 						}
-						NOT = { has_variable = fnr_louisiana_disabled }
+						NOT = { has_variable = fnr_oregon_disabled }
 					}
 					NOT = { 
 						OR = {
@@ -6024,24 +6060,27 @@
 		# Vermont - US States
 		# New York - US States
 		# Vancouver - US States
+		# West Florida - US States
 		#########################
 		# END US States Section #	
 		#########################
-		# West Florida - Alt-history
-			# TODO
+
+		#######################
+		# START Mexico States #
+		#######################
 
 		# First Mexican Empire - Modern
 			MEXCO = {
-				level = 3
+				level = 4
 				required_locations_fraction = 0.67
 				rule = plausible
 				potential = { 
 					AND = {
 						OR = {
-							has_variable = fnr_modern_enabled
-							has_variable = fnr_mexico_enabled
+							has_variable = fnr_historical_enabled
+							has_variable = fnr_firstmexicoempire_enabled
 						}
-						NOT = { has_variable = fnr_mexico_disabled }
+						NOT = { has_variable = fnr_firstmexicoempire_disabled }
 					}
 					NOT = { 
 						OR = {
@@ -6065,7 +6104,12 @@
 				regions = { mesoamerica_region }
 				areas = { guachichil_area tamaulipeco_area culiacan_area tahejoc_area zacatecas_area }
 				locations = { sobaipuri jocome }
-			}	
+			}
+			
+		#####################
+		# END Mexico States #
+		#####################
+			
 		# Brandenburg-Prussia - Historical
 			BNDPR = {
 				level = 2
@@ -7286,7 +7330,7 @@
 				color = map_LMBDY
 				areas = { lombardy_area }
 			}
-		# Sardinia–Piedmont
+		# Sardinia–Piedmont - Historical
 			SDPDM = {
 				level = 3
 				required_locations_fraction = 0.85
@@ -7294,7 +7338,7 @@
 				potential = {
 					AND = {
 						OR = {
-							has_variable = fnr_althistory_enabled
+							has_variable = fnr_historical_enabled
 							has_variable = fnr_sardiniapiedmont_enabled
 						}
 						NOT = { has_variable = fnr_sardiniapiedmont_disabled }
@@ -8423,41 +8467,6 @@
 				color = map_PLSTN
 				areas = { levant_area }
 			}
-		# Alaska - Modern
-			ALSKA = {
-				level = 3
-				required_locations_fraction = 0.70
-				rule = plausible
-				potential = {
-					AND = {
-						OR = {
-							has_variable = fnr_modern_enabled
-							has_variable = fnr_alaska_enabled
-						}
-						NOT = { has_variable = fnr_alaska_disabled }
-					} 
-					NOT = { 
-						OR = {
-							tag = ALSKA
-							tag_exists = ALSKA
-						}
-					}
-					capital = {
-						region = region:alaska_region
-					}			
-				}
-				allow = {
-					capital = {
-						region = region:alaska_region
-					}
-				}
-				name = ALSKA
-				flag = ALSKA
-				adjective = ALSKA_ADJ
-				tag = ALSKA
-				color = map_ALSKA
-				regions = { alaska_region }
-			}
 		# Alpland - Fantasy
 			ALPLN = {
 				level = 3
@@ -8993,7 +9002,7 @@
 				}
 			}	
 	# Rank 4
-		# Sassanids
+		# Sassanids - Fantasy
 			SSNID = {
 				level = 4
 				required_locations_fraction = 0.1
@@ -9001,7 +9010,7 @@
 				potential = {
 					AND = {
 						OR = {
-							has_variable = fnr_althistory_enabled
+							has_variable = fnr_fantasy_enabled
 							has_variable = fnr_sassanids_enabled
 						}
 						NOT = { has_variable = fnr_sassanids_disabled }
@@ -10465,48 +10474,50 @@
 					}
 				}
 				allow = {
-					OR = {
-						AND = { # England
-							region:france_region = {
-								any_ownable_location_in_region = {
-									custom_tooltip = {
-										text = fnr_dm_owned_by_eng_tt
-										owner = { this = c:ENG }
+					trigger_if = {
+						OR = {
+							AND = { # England
+								region:france_region = {
+									any_ownable_location_in_region = {
+										custom_tooltip = {
+											text = fnr_dm_owned_by_eng_tt
+											owner = { this = c:ENG }
+										}
+										count > 200
 									}
-									count > 200
+								}
+								region:great_britain_region = {
+									any_ownable_location_in_region = {
+										custom_tooltip = {
+											text = fnr_dm_owned_by_eng_tt
+											owner = { this = c:ENG }
+										}
+										count > 200
+									}
 								}
 							}
-							region:great_britain_region = {
-								any_ownable_location_in_region = {
-									custom_tooltip = {
-										text = fnr_dm_owned_by_eng_tt
-										owner = { this = c:ENG }
+							AND = { # France
+								region:france_region = {
+									any_ownable_location_in_region = {
+										custom_tooltip = {
+											text = fnr_dm_owned_by_fra_tt
+											owner = { this = c:FRA }
+										}
+										count > 200
 									}
-									count > 200
+								}
+								region:great_britain_region = {
+									any_ownable_location_in_region = {
+										custom_tooltip = {
+											text = fnr_dm_owned_by_fra_tt
+											owner = { this = c:FRA }
+										}
+										count > 200
+									}
 								}
 							}
-						}
-						AND = { # France
-							region:france_region = {
-								any_ownable_location_in_region = {
-									custom_tooltip = {
-										text = fnr_dm_owned_by_fra_tt
-										owner = { this = c:FRA }
-									}
-									count > 200
-								}
-							}
-							region:great_britain_region = {
-								any_ownable_location_in_region = {
-									custom_tooltip = {
-										text = fnr_dm_owned_by_fra_tt
-										owner = { this = c:FRA }
-									}
-									count > 200
-								}
-							}
-						}
-					}			
+						}	
+					}		
 				}
 				name = DLMON
 				flag = DLMON
@@ -10628,73 +10639,21 @@
 							}
 						}
 					}
-					# Tarraconensis
-					hidden_effect = {
-						every_owned_location = {
-							limit = {
+					trigger_if = { # Check that gallic empire can even form terraconensis
+						limit = {
+							any_owned_location = {
 								region = region:iberia_region
 							}
-							save_scope_as = target_location
 						}
-						scope:target_location = {
-							create_country_from_location = {
-								save_scope_as = fnr_tarraconensis
-								set_country_rank = country_rank:rank_kingdom
-							}
-						}
-						scope:fnr_tarraconensis = {
-							form_country = formable_country:TRCNS
-							change_country_color = map_TRCNS
-							set_new_ruler = root.ruler
-							change_religion = religion:fnr_gallo_roman_religion
-							change_religion_for_ruler_and_family = { country = scope:fnr_tarraconensis religion = religion:fnr_gallo_roman_religion }
-							make_subject_of = {
-								target = root
-								type = subject_type:vassal
-							}
-						}
-						every_owned_location = {
-							limit = {
-								region = region:iberia_region
-							}
-							change_location_owner = scope:fnr_tarraconensis
-							#add_core = scope:fnr_tarraconensis
-							change_integration_level = core
-						}
+						trigger_event_non_silently = flavor_GLCEM.2 # Tarraconensis
 					}
-					# Britannia
-					hidden_effect = {
-						every_owned_location = {
-							limit = {
+					trigger_if = { # Check that gallic empire can even form britannia
+						limit = {
+							any_owned_location = {
 								region = region:great_britain_region
 							}
-							save_scope_as = target_location_2
 						}
-						scope:target_location_2 = {
-							create_country_from_location = {
-								save_scope_as = fnr_britannia
-								set_country_rank = country_rank:rank_kingdom
-							}
-						}
-						scope:fnr_britannia = {
-							form_country = formable_country:BRTNA
-							change_country_color = map_BRTNA
-							set_new_ruler = root.ruler
-							change_religion = religion:fnr_gallo_roman_religion
-							change_religion_for_ruler_and_family = { country = scope:fnr_britannia religion = religion:fnr_gallo_roman_religion }
-							make_subject_of = {
-								target = root
-								type = subject_type:vassal
-							}
-						}
-						every_owned_location = {
-							limit = {
-								region = region:great_britain_region
-							}
-							change_location_owner = scope:fnr_britannia
-							#add_core = scope:fnr_britannia
-							change_integration_level = core
-						}
+						trigger_event_non_silently = flavor_GLCEM.3 # Britannia
 					}
 				}
 			}

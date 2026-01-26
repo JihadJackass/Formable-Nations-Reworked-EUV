@@ -14,3 +14,33 @@ flavor_GLCEM.1 = { # keep gallic empire
 		change_country_name = GLCEM_GALLIA_NAME
 	}
 }
+
+# Establish Terraconensis
+flavor_GLCEM.2 = { 
+	type = country_event
+	title = flavor_GLCEM.2.title
+	desc = flavor_GLCEM.2.desc
+	fire_only_once = yes
+	option = { # 
+		name = flavor_GLCEM.2.a
+		# TODO: was buggy
+	}
+	option = { # gallia
+		name = flavor_GLCEM.2.b
+	}
+}
+
+# Establish Britannia
+flavor_GLCEM.3 = { 
+	type = country_event
+	title = flavor_GLCEM.3.title
+	desc = flavor_GLCEM.3.desc
+	fire_only_once = yes
+	option = { # 
+		name = flavor_GLCEM.3.a
+		# TODO: was buggy	
+	}
+	option = { # gallia
+		name = flavor_GLCEM.2.b
+	}
+}
