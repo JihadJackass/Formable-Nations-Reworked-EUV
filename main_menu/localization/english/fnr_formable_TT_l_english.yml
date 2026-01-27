@@ -18,6 +18,9 @@
     # Formable Requirement Tooltips #
     #################################
 
+    # French Empire
+    FNCEM_formable_trigger_1_tt: "[GetCountry('FRA').GetNameWithFlag] will immediately gain an event upon formation to choose between bypassing the Napoleonic Era and simply becoming the French Empire led by [GetCharacter('fnr_napoleon_bonaparte').GetName] - #color_yellow OR#! we can choose to fire the historical effects causing the Napoleonic Era to begin starting with the storming of the Bastille and will have various historical events that proceeded the Bastille storming."
+
     # Rhineland
     RHLND_formable_trigger_1_tt: "[ShowCultureName('rhine_franconian')], [ShowCultureName('ripuarian_franconian')], [ShowCultureName('rhine_alemannic')], and [ShowCultureName('moselle_franconian')] will all respectively become #color_green Kindred#! of each other."
 
@@ -64,8 +67,10 @@
     # Hungary-Romania (Romania)
     HNRMN_fnr_formable_trigger_2_tt: "As [GetCountry('RMN').GetNameWithFlag] we have a Personal Union over [GetCountry('HUN').GetNameWithFlag]"  
 
-    fnr_dm_owned_by_fra_tt: "[owner|e] is [GetCountry('FRA').GetName]"
-    fnr_dm_owned_by_eng_tt: "[owner|e] is [GetCountry('ENG').GetName]"
+    fnr_dm_owned_by_fra_tt_1: "[GetCountry('FRA').GetName] is [owner|e] of at least 200 [location|e] in [ShowRegionName('france_region')] region."
+    fnr_dm_owned_by_fra_tt_2: "[GetCountry('FRA').GetName] is [owner|e] of at least 200 [location|e] in [ShowRegionName('great_britain_region')] region."
+    fnr_dm_owned_by_eng_tt_1: "[GetCountry('ENG').GetName] is [owner|e] of at least 200 [location|e] in [ShowRegionName('france_region')] region."
+    fnr_dm_owned_by_eng_tt_2: "[GetCountry('ENG').GetName] is [owner|e] of at least 200 [location|e] in [ShowRegionName('france_region')] region."
 
     GMORV_formable_trigger_1_tt: "#G 5%#! of our pops will convert to [ShowReligionName('hussite')] in a spread of religious fervor due to the nature of our national reformation.\n#G 25%#! of our pops will convert to [ShowReligionName('fnr_great_moravia_orthodox')]"
     GMORV_formable_trigger_2_tt: "The [GetInternationalOrganizationType('moravian_patriarchate').GetName] will be created under #color_yellow Great Moravian#! leadership."

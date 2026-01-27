@@ -7,6 +7,9 @@ flavor_GMORV.1 = {
 	title = flavor_GMORV.1.title
 	desc = flavor_GMORV.1.desc
 	fire_only_once = yes
+	trigger = {
+		#always = no # to prevent false error logging
+	}
 	option = { # Orthodox Path (Moravian Patriarchate)
 		name = flavor_GMORV.1.a
 		change_religion = religion:fnr_great_moravia_orthodox
@@ -75,9 +78,8 @@ flavor_GMORV.2 = {
 	title = flavor_GMORV.2.title
 	desc = flavor_GMORV.2.desc
 	fire_only_once = yes
-	insight = flavor_GMORV.3  # References another event
 	trigger = {
-		always = no
+		#always = no
 		# fnr_gmorv_restored_borders = yes TODO: add a proper trigger for checking that you own certain territory for 2 years
 	}
 	option = { 
@@ -151,10 +153,10 @@ flavor_GMORV.3 = {
 	desc = flavor_GMORV.3.desc
 	fire_only_once = yes
 	trigger = {
+		#always = no # to prevent false error logging
 	}
 	option = { 
 		name = flavor_GMORV.1.a
-	
 	}
 }
 

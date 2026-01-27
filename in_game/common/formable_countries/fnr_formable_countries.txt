@@ -339,12 +339,12 @@
 
 		potential = {
 			culture ?= { language = language:english_language }
-		}
-
-		allow = {
 			NOT = {
 				tag = ENG
 			}
+		}
+
+		allow = {
 		}
 		
 		name = NOL
@@ -7538,6 +7538,7 @@
 						OR = {
 							tag = MRCIA
 							tag_exists = MRCIA
+							tag = ENG
 						}
 					}
 					culture = culture:english 
@@ -9312,8 +9313,7 @@
 				color = map_JAPAN 
 				regions = { japan_region }
 			}	
-		# Angevin Empire - Alt history 
-			#(todo: unlocked via winning 100 years war)
+		# Angevin Empire - Alt history
 			AGEVN = {
 				level = 4
 				required_locations_fraction = 0.65
@@ -9339,19 +9339,13 @@
 						AND = {
 							region:france_region = {
 								any_ownable_location_in_region = {
-									custom_tooltip = {
-										text = fnr_dm_owned_by_eng_tt
-										owner = { this = c:ENG }
-									}
+									owner = { this = c:ENG }
 									count > 120
 								}
 							}
 							region:great_britain_region = {
 								any_ownable_location_in_region = {
-									custom_tooltip = {
-										text = fnr_dm_owned_by_eng_tt
-										owner = { this = c:ENG }
-									}
+									owner = { this = c:ENG }
 									count > 140
 								}
 							}
@@ -9534,6 +9528,9 @@
 						limit = { country_rank_level < 4 }
 						set_country_rank_effect = { rank = country_rank:rank_empire }
 					}
+					custom_tooltip = {
+						text = FNCEM_formable_trigger_1_tt
+					}					
 				}
 			}
 		# German Empire - Historical
@@ -10477,50 +10474,40 @@
 					}
 				}
 				allow = {
-					trigger_if = {
-						OR = {
-							AND = { # England
-								region:france_region = {
-									any_ownable_location_in_region = {
-										custom_tooltip = {
-											text = fnr_dm_owned_by_eng_tt
-											owner = { this = c:ENG }
-										}
-										count > 200
-									}
-								}
-								region:great_britain_region = {
-									any_ownable_location_in_region = {
-										custom_tooltip = {
-											text = fnr_dm_owned_by_eng_tt
-											owner = { this = c:ENG }
-										}
-										count > 200
-									}
+					OR = {
+						# England can form if they own enough
+						AND = {
+							tag = ENG
+							region:france_region = {
+								any_ownable_location_in_region = {
+									owner = { this = c:ENG }
+									count > 200
 								}
 							}
-							AND = { # France
-								region:france_region = {
-									any_ownable_location_in_region = {
-										custom_tooltip = {
-											text = fnr_dm_owned_by_fra_tt
-											owner = { this = c:FRA }
-										}
-										count > 200
-									}
-								}
-								region:great_britain_region = {
-									any_ownable_location_in_region = {
-										custom_tooltip = {
-											text = fnr_dm_owned_by_fra_tt
-											owner = { this = c:FRA }
-										}
-										count > 200
-									}
+							region:great_britain_region = {
+								any_ownable_location_in_region = {
+									owner = { this = c:ENG }
+									count > 200
 								}
 							}
-						}	
-					}		
+						}
+						# France can form if they own enough
+						AND = {
+							tag = FRA
+							region:france_region = {
+								any_ownable_location_in_region = {
+									owner = { this = c:FRA }
+									count > 200
+								}
+							}
+							region:great_britain_region = {
+								any_ownable_location_in_region = {
+									owner = { this = c:FRA }
+									count > 200
+								}
+							}
+						}
+					}
 				}
 				name = DLMON
 				flag = DLMON
@@ -10642,22 +10629,9 @@
 							}
 						}
 					}
-					trigger_if = { # Check that gallic empire can even form terraconensis
-						limit = {
-							any_owned_location = {
-								region = region:iberia_region
-							}
-						}
-						trigger_event_non_silently = flavor_GLCEM.2 # Tarraconensis
-					}
-					trigger_if = { # Check that gallic empire can even form britannia
-						limit = {
-							any_owned_location = {
-								region = region:great_britain_region
-							}
-						}
-						trigger_event_non_silently = flavor_GLCEM.3 # Britannia
-					}
+					# TODO: make these only trigger with proper reqs
+					trigger_event_non_silently = flavor_GLCEM.2 # Check that gallic empire can even form terraconensis
+					trigger_event_non_silently = flavor_GLCEM.3 # Check that gallic empire can even form britannia
 				}
 			}
 		# Tarraconensis

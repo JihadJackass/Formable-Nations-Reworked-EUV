@@ -10,7 +10,7 @@ flavor_PAPAL.1 = {
 	fire_only_once = yes
 	trigger = { 
 		# Make a trigger that checks that the papal states owns at least 75% of the HRE territory
-		always = no # This is a WIP mechanic
+		#always = no # This is a WIP mechanic
 	}
 	# unique option that replaces the HRE with a new IO which allows establishing kingdom tier theocratic free cities, and allows crusades
 	option = { # Dissolve the HRE, proclaim ourselves emperor, and become empire rank + rename and flag event
@@ -72,6 +72,9 @@ flavor_PAPAL.2 = {
 	title = flavor_PAPAL.2.title
 	desc = flavor_PAPAL.2.desc
 	fire_only_once = yes
+	trigger = {
+		#always = no # to prevent false error logging
+	}
 	option = { # Imperium Christianum
 		name = flavor_PAPAL.2.a
 		change_country_name = PAP_HRE_EMPIRE_1
@@ -108,6 +111,9 @@ flavor_PAPAL.3 = {
 	title = flavor_PAPAL.3.title
 	desc = flavor_PAPAL.3.desc
 	fire_only_once = yes
+	trigger = {
+		#always = no # to prevent false error logging
+	}
 	option = { # New Style
 		name = flavor_PAPAL.3.a
 		change_country_flag = PAP_HRE_EMPIRE_1_FLAG

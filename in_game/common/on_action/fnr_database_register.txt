@@ -1,0 +1,9 @@
+﻿on_forming_nation = {
+    events = {
+        flavor_GLCEM.2
+        flavor_GLCEM.3
+        flavor_GMORV.2
+        flavor_GMORV.3
+        flavor_PAPAL.1
+    }
+}

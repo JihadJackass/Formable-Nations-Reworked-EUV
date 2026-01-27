@@ -100,12 +100,7 @@ fnr_moravia_patriarchate_polish_coalition = {
 	}
 
 	effect = {
-		C:GMORV = {
-			add_casus_belli = {
-				target = scope:POL
-				type = casus_belli:cb_coalition
-			}
-		}
+		# TODO: Add CB for GMORV against POL
 	}
 
 	# ai_desire is how much an AI would like this action to pass.

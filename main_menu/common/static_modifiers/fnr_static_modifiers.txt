@@ -16,12 +16,12 @@
 		global_clergy_estate_power = 0.025
 	}
 
-	fnr_royal_free_cities_modifier = {
-		game_data = {
-			category = location
-		}
-		free_building_levels = 20
-	}
+#	fnr_royal_free_cities_modifier = {
+#		game_data = {
+#			category = location
+#		}
+#		free_building_levels = 20
+#	}
 
 	# Moravian Patriarchate
 	fnr_moravian_patrarchate_modifier = {

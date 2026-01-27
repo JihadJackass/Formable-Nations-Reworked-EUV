@@ -6,19 +6,6 @@
 
 INJECT:legal_code_law = {
 	law_category = administrative
-	potential = {
-		OR = {
-			has_tribal_government = no
-			religion ?= {
-				group ?= religion_group:muslim
-			}
-		}
-	}
-
-	locked = {
-		religion.group = religion_group:muslim
-		has_policy = sharia_law_policy
-	}
 
 	sudnyj_ludem_policy = {
 		potential = {

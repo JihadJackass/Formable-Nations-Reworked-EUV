@@ -238,7 +238,7 @@
     # French Empire
     FNCEM: "French Empire"
     FNCEM_ADJ: "French"
-    FNCEM_desc: "There are two disctint moments in history which held a dominant French position, these being the First French colonial empire (16th-19th century) and the Napoleonic Empire (1804-1815). The colonial empire was the second-largest in the world at its peak and included vast territories in North America, the Caribbean, and India before most of it was lost. The Napoleonic Empire, by contrast, was a European empire centered on France and established by Napoleon Bonaparte, which conquered much of continental Europe"
+    FNCEM_desc: "The French Empire, proclaimed in 1804 by Napoleon Bonaparte, dominated continental Europe through military conquest and political reorganization. Napoleon's empire at its zenith controlled most of Western Europe, establishing client kingdoms and spreading French revolutionary ideals and legal reforms. Though short-lived, ending with Napoleon's defeat in 1815, the Napoleonic Empire fundamentally transformed European politics and introduced lasting administrative and legal innovations across the continent."
 
     # North German Confederation
     NGCFD: "North German Confederation"
@@ -879,7 +879,7 @@
     # Franco-Iberian Empire
     FNCIB: "Franco-Iberian Empire"
     FNCIB_ADJ: "Franco-Iberian"
-    FNCIB_desc: "in 1579, France and Spain were allied to form the Franco-Iberian Empire as known as The Three Crowns (Spain, France and Portugal) and The colonization Had started into New viceroyalities by Three languages (Portuguese, Spanish and French), and colonies have merged Together into a new empire, the Franco-Iberia, in 1732 The United Kingdom of Great Britain and Ireland have become a dual monarchy with Scottish Queen as The United Kingdom of England, Scotland and Ireland, in 1776 The Mexican Revolutionary War and American Revolutionary War has started and ended in 1778. "
+    FNCIB_desc: "In 1579, France and Spain were allied to form the Franco-Iberian Empire as known as The Three Crowns (Spain, France and Portugal) and The colonization Had started into New viceroyalities by Three languages (Portuguese, Spanish and French), and colonies have merged Together into a new empire, the Franco-Iberia, in 1732 The United Kingdom of Great Britain and Ireland have become a dual monarchy with Scottish Queen as The United Kingdom of England, Scotland and Ireland, in 1776 The Mexican Revolutionary War and American Revolutionary War has started and ended in 1778. "
 
     # Babylon
     BBLON: "Babylon"
@@ -1017,7 +1017,7 @@
     # Occitania
     OCCIT: "Occitania"
     OCCIT_ADJ: "Occitanian"
-    OCCIT_desc: "a historical and cultural region in southwestern Europe, defined by the historical use of the Occitan language. It spans much of southern France, plus parts of Spain (Aran Valley), Monaco, and Italy (Occitan Valleys). Today, a French administrative region is named 'Occitanie' after this historical area, but it does not represent the entirety of the traditional Occitan lands."
+    OCCIT_desc: "A historical and cultural region in southwestern Europe, defined by the historical use of the Occitan language. It spans much of southern France, plus parts of Spain (Aran Valley), Monaco, and Italy (Occitan Valleys). Today, a French administrative region is named 'Occitanie' after this historical area, but it does not represent the entirety of the traditional Occitan lands."
 
     # Pontus
     PONTU: "Pontus"
