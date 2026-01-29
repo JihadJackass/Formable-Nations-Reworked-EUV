@@ -1,0 +1,25 @@
+﻿# Formable Nations: Reworked Administrative Legal Systems
+#
+# This file is compatible with other mods as it does not replace the existing structure of EU5, but instead INJECTS to the existing data structures.
+# written by a big stepper chad <:)
+#
+
+INJECT:trade_unions_law = {
+	law_category = administrative
+
+	fnr_state_unions_policy = {
+		potential = {
+			tag = RHLND
+		}
+		country_modifier = {
+			global_production_efficiency = 0.05
+			global_crown_estate_power = 0.10
+
+			monthly_towards_absolutism = 0.20
+		}
+		estate_preferences = {
+			peasants_estate
+		}
+		years = 1
+	}
+}

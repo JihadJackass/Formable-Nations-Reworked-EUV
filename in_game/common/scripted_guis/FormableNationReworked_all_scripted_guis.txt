@@ -235,6 +235,38 @@ FormableNationsReworkedDebug_initialize = {
 		}
 	}	
 
+# Toggle for Papal States Formables - fnr_us_states_enabled
+	# For Papal States
+	FormableNationReworked_toggle_papal_formables = {
+		scope = country
+		saved_scopes = { }
+		is_shown = { always = yes }
+		is_valid = { always = yes }
+		effect = {
+			if = {
+				limit = { has_variable = fnr_is_papacy }
+				# Currently enabled, so disable for ALL countries
+				every_country = {
+					limit = {
+						has_reform = government_reform:papacy_reform
+						tag = PAP
+					}
+					remove_variable = fnr_is_papacy
+				}
+			}
+			else = {
+				# Currently disabled, so enable for ALL countries
+				every_country = {
+					limit = {
+						has_reform = government_reform:papacy_reform
+						tag = PAP
+					}
+					set_variable = fnr_is_papacy
+				}
+			}
+		}
+	}	
+
 
 # Individual Formable Toggle List
 	# Rank 2

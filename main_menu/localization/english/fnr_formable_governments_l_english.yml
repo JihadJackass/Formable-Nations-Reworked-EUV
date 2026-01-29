@@ -1,5 +1,24 @@
 ﻿l_english:
 
+  # Rhineland
+  fnr_GSCTL_rheinkonfoderation: "Rheinkonföderation"
+  fnr_GSCTL_rheinkonfoderation_desc: "After many centuries of conflict in the Rhineland – both between our brethren and outsiders -- we managed to forge a unified state. With the State in its Infancy it currently is more of a loose Coalition of States. Which means it could easily break if we do not manage to stabilize Our Realm.\n\nWe will be able to #G reduce#! the #R negative#! modifiers of this reform by choosing either #color_yellow Das Rheinische Königreich#! or #color_yellow Der Rheinbund#! when the #color_yellow 'The Path Forward'#! event fires randomly between 20-30 years upon formation of #color_yellow Rhineland#!.\n\nIf we reach #R -75#! [stability|e] at any point before the #color_yellow 'The Path Forward'#! event fires we will be presented with a disaster which could potentially shatter the loose confederation."
+
+  fnr_GSCTL_das_rheinische_konigreich: "Das Rheinische Königreich"
+  fnr_GSCTL_das_rheinische_konigreich_desc: "The Rhenish Kingdom balances burgher parliamentary representation with strong centralized authority. This dual approach enhances administrative efficiency, promotes cultural tolerance, and provides the institutional framework necessary for sustained development and prosperity."
+
+  fnr_GSCTL_der_rheinbund: "Der Rheinbund"
+  fnr_GSCTL_der_rheinbund_desc: "The Rhine Confederation operates through shared governance between estates. Both burghers and peasants hold parliamentary seats, while decentralized administration grants member states substantial autonomy. This confederal model prioritizes efficient governance and cultural tolerance over centralized royal authority."
+
+  fnr_GSCTL_rhenish_commerce_diplomatic_network: "Rhenish Commerce and Diplomatic Network"   
+  fnr_GSCTL_rhenish_commerce_diplomatic_network_desc: "Using the Rhines rising importance in Trade we must build up a Network to handle the Trade and Relations with our Partners and possible Opponents that seek to destabilize us and our Hold over it." 
+
+  fnr_GSCTL_die_wacht_am_rhein: "Die Wacht am Rhein"
+  fnr_GSCTL_die_wacht_am_rhein_desc: "It is clear that War has changed. As such we must rework our military capabilities. As the Foundation is the Industry and Fortifications we will work to enhance and expand those."
+
+  fnr_GSCTL_rhenish_manufacturing: "Rhenish Manufacturing"
+  fnr_GSCTL_rhenish_manufacturing_desc: "We wouldnt be here without our Rhine. We must make use of it and the advantages it grants. It is the Reason behind our very existence. As such we will utilise it to enhance our Production capabilities and connect our Realm."
+
   # Carolingian Empire
   fnr_CAROL_centers_of_realm: "Centers of Realm"
   fnr_CAROL_centers_of_realm_desc: "In ancient times, our realm had no single permanent capital. Instead, the crown maintained royal palaces throughout the country, moving between residences as circumstances demanded. We shall revive this tradition by establishing one primary capital alongside several secondary seats. By traveling between these centers throughout the year, we ensure that the monarch's presence is felt across the entire realm. This practice allows us to inspect our territories firsthand, address local concerns directly, and maintain the loyalty of distant provinces through regular royal visits."

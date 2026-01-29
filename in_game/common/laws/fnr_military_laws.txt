@@ -4,16 +4,16 @@
 # written by a big stepper chad <:)
 #
 
-#  Age of Absolutism - 5
 INJECT:army_doctrine_law = {
 	law_category = military
 
+	# Great Moravia - Age of Absolutism - 5
 	gmorv_professional_army_policy = {
 		potential = {
 			tag = GMORV
 		}
 		allow = {
-			current_age = age_5_absolutism
+			current_age_or_later = { age = age_5_absolutism }
 		}
 		country_modifier = {
 			land_morale = 0.10
@@ -22,10 +22,48 @@ INJECT:army_doctrine_law = {
 			monthly_towards_quality = 0.10
 		}
 		estate_preferences = {
-			peasants_estate
+			nobles_estate
 		}
 		years = 2
 	}
 	
+}
+
+INJECT:recruitment_law = {
+	law_category = military
+	
+	rhlnd_rheinwachtgesetz_policy = {
+		potential = {
+			tag = RHLND
+		}
+		allow = {
+			tag = RHLND
+			current_age_or_later = { age = age_5_absolutism }
+			trigger_if = {
+				custom_tooltip = {
+					text = fnr_has_die_wacht_am_rhein_10years
+					AND = {
+						has_variable = fnr_has_die_wacht_am_rhein_10years_HAS_MET
+						NOT = { has_variable = fnr_has_die_wacht_am_rhein_10years_NOT_MET }
+					}
+				}
+			}
+		}
+		country_modifier = {
+			land_morale = 0.10
+			discipline = 0.10
+			army_artillery_power = 0.10
+			army_initiative = 0.15
+			global_soldiers_food_consumption = 0.25
+			army_maintenance_cost = 0.15
+
+			monthly_towards_defensive = 0.10
+			monthly_towards_quality = 0.05
+		}
+		estate_preferences = {
+			nobles_estate
+		}
+		years = 2
+	}
 	
 }

@@ -1,0 +1,26 @@
+﻿on_game_start = {
+	on_actions = {
+    	fnr_on_game_start_actions
+    }
+}
+
+fnr_on_game_start_actions = {
+    effect = {
+        # FNR - Historical formables enabled by default
+        every_country = {
+            set_variable = {
+                name = fnr_historical_enabled
+                value = yes
+            }
+        }
+        
+        # Papal States - set variable for GUI visibility
+        every_country = {
+            limit = {
+                has_reform = government_reform:papacy_reform
+                tag = PAP
+            }
+            set_variable = fnr_is_papacy
+        }
+    }
+}

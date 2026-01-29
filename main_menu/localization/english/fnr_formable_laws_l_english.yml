@@ -8,15 +8,34 @@
 
       # Legal Code
 
-        # Great Moravia
+        # Great Moravia - Sudnyj Ludem
+        fnr_sudnyj_ludem_policy: "Sudnyj Ludem"
+        fnr_sudnyj_ludem_policy_desc: "Written by Saints Cyril and Methodius, the Zakon Sudnyj Ljudem consisted of 32 chapters providing legal guidance to our ancestors. While archaic by modern standards, this foundational text can be expanded and adapted to create a unified legal code for common folk, replacing the patchwork of local customs that currently govern our realm.\n\nWe shall bestow judicial authority upon our nobles, allowing them to dispense justice in their territories. However, to prevent abuse and ensure consistent application of law, royal legal overseers will serve alongside noble judges as co-judiciary. These crown representatives shall monitor proceedings, hear appeals, and report abuses directly to the throne. Thus justice becomes both decentralized and accountable, combining local knowledge with royal oversight."
 
-        sudnyj_ludem_policy: "Sudnyj Ludem"
-        sudnyj_ludem_policy_desc: "Written by Saints Cyril and Methodius, the Zakon Sudnyj Ljudem consisted of 32 chapters providing legal guidance to our ancestors. While archaic by modern standards, this foundational text can be expanded and adapted to create a unified legal code for common folk, replacing the patchwork of local customs that currently govern our realm.\n\nWe shall bestow judicial authority upon our nobles, allowing them to dispense justice in their territories. However, to prevent abuse and ensure consistent application of law, royal legal overseers will serve alongside noble judges as co-judiciary. These crown representatives shall monitor proceedings, hear appeals, and report abuses directly to the throne. Thus justice becomes both decentralized and accountable, combining local knowledge with royal oversight."
+        # Rhineland - Unified Rhenish Code
+        fnr_unified_rhenish_code_policy: "Unified Rhenish Code"
+        fnr_unified_rhenish_code_policy_desc: "The many scattered local codes does not suit our vision of state. We shall create one unified code that will govern entire land effectively and under reason."
 
     # Military
 
       # Army Doctrine
 
-        # Great Moravia
+        # Great Moravia - Professional Armies
         gmorv_professional_army_policy: "Professional Armies of Moravia"
         gmorv_professional_army_policy_desc: "We field neither the largest armies nor the finest individual soldiers, cavalry, or artillery. Our strength lies elsewhere: rigorous standards applied universally. Every soldier trains thoroughly, every unit maintains strict discipline, every commander follows proven doctrine. While enemies mix elite troops with untrained levies, we ensure consistent competence across all ranks. Our weakest battalion matches their average quality. Superior baseline standards transform adequate forces into reliable instruments of war. Consistency defeats brilliance. Discipline outlasts excellence."
+
+      # Recruitment Law
+
+        # Rhineland - Rheinwachtgesetz
+        rhlnd_rheinwachtgesetz_policy: "Rheinwachtgesetz"
+        rhlnd_rheinwachtgesetz_policy_desc: "Our investments in industry and fortifications have laid the groundwork, but steel and stone alone do not win wars—trained soldiers do. Through comprehensive military reforms and intensive training, we will forge our men into an elite force capable of safeguarding our beloved homeland from any who would threaten it."
+
+  # Reform based laws
+
+    # Trade Unions
+
+        # Rhineland - State Unions 
+        fnr_state_unions_policy: "State Unions"
+        fnr_state_unions_policy_desc: "To enhance our Control over the Workers we will allow Governtment-controlled Unions. We shall make sure to manage them and listen to their interests to not cause any problems for ourselves."
+
+

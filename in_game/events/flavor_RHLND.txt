@@ -1,0 +1,122 @@
+﻿namespace = flavor_RHLND
+
+# The Path Forward
+flavor_RHLND.1 = {
+	type = country_event
+	title = flavor_RHLND.1.title
+	desc = flavor_RHLND.1.desc
+	fire_only_once = yes
+
+	image = "gfx/interface/illustrations/event/backgrounds/exterior/nobles/north_german_nobles_exterior.dds"
+
+	option = { # Das Rheinische Königreich
+		name = flavor_RHLND.1.a
+		if = {
+			limit = { country_rank_level < 3 }
+			set_country_rank_effect = { rank = country_rank:rank_kingdom }
+		}
+		change_government_type = government_type:monarchy
+		#remove_reform = government_reform:fnr_GSCTL_rheinkonfoderation
+		remove_reform = government_reform:fnr_RHLND_squabbles_of_the_nobility
+		add_reform = government_reform:fnr_GSCTL_das_rheinische_konigreich
+	}
+	option = { # Der Rheinbund
+		name = flavor_RHLND.1.b
+		if = {
+			limit = { country_rank_level < 3 }
+			set_country_rank_effect = { rank = country_rank:rank_kingdom }
+		}
+		change_government_type = government_type:republic
+		#remove_reform = government_reform:fnr_GSCTL_rheinkonfoderation
+		remove_reform = government_reform:fnr_RHLND_squabbles_of_the_nobility
+		add_reform = government_reform:fnr_GSCTL_der_rheinbund
+	}
+}
+
+# Die Wacht am Rhein
+flavor_RHLND.2 = {
+	type = country_event
+	title = flavor_RHLND.2.title
+	desc = flavor_RHLND.2.desc
+	fire_only_once = yes
+
+	trigger = { # Triggers after 120 months of war during age of absolutism TODO: check that this works
+		this = c:RHLND
+		current_age_or_later = { age = age_5_absolutism }
+		months_since_war > 120
+	}
+
+	immediate = {
+		# sets the required variables to meet the rheinwachtgesetz recruitment law, once NOT_MET has expired you will be able to pass the law
+		set_variable = { 
+			name = fnr_has_die_wacht_am_rhein_10years_NOT_MET
+			value = yes
+			days = 3650
+		}
+		set_variable = { 
+			name = fnr_has_die_wacht_am_rhein_10years_HAS_MET
+			value = yes
+			days = -1
+		}
+	}
+
+	option = { # Das Rheinische Königreich
+		name = flavor_RHLND.2.a
+		add_reform = government_reform:fnr_GSCTL_die_wacht_am_rhein
+	}
+}
+
+# Sourcing Innovative Investments
+# Event to unlock Burgher reform: Innovative Investments in Weavery and Tannery (Age of Discovery)
+flavor_RHLND.3 = {
+	type = country_event
+	title = flavor_RHLND.3.title
+	desc = flavor_RHLND.3.desc
+	fire_only_once = yes
+
+	trigger = { # Requires at least 1.5 million people
+		this = c:RHLND
+		current_age_or_later = { age = age_3_discovery }
+		total_population > 1500 # 1.5m
+	}
+
+	option = {
+		name = flavor_RHLND.3.a
+		grant_estate_privilege = estate_privilege:fnr_RHLND_innovative_investments_weavery_tannery
+	}
+}
+
+# The Pillar that is the Church
+# Event to replace High Church Influence with The Pillar that is the Church (Must not have manually revoked the reform, if so, the event will fire but instead provide the Clergy with 10,000 gold )
+flavor_RHLND.4 = {
+	type = country_event
+	title = flavor_RHLND.4.title
+	desc = flavor_RHLND.4.desc
+	fire_only_once = yes
+
+	trigger = {
+		this = c:RHLND
+		# Check that either the high church influence privilege is still enacted, or it has been removed and the nation has less than 10 clergy power or 10% clergy pops
+		OR = {
+			AND = {
+				NOT = { has_variable = fnr_high_church_influence_removed }
+				has_estate_privilege = estate_privilege:fnr_RHLND_high_church_influence 
+			}
+			AND = {
+				NOT = { has_estate_privilege = estate_privilege:fnr_RHLND_high_church_influence }
+				any_estate = {
+					estate_type = estate_type:clergy_estate
+					power < 0.10
+				}
+				state_religion_clergy = 0.10
+			}
+		}
+	}
+
+	option = {
+		name = flavor_RHLND.4.a
+		set_variable = fnr_high_church_influence_removed
+		revoke_estate_privilege = estate_privilege:fnr_RHLND_high_church_influence 
+		grant_estate_privilege = estate_privilege:fnr_RHLND_pillar_that_is_the_church
+	}
+}

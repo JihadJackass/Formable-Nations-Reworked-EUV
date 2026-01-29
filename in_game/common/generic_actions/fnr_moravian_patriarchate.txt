@@ -21,14 +21,15 @@ fnr_moravia_patriarchate_influence_hre_members = {
 		any_country = {
 			is_member_of_international_organization = international_organization:hre
 			NOT = { is_leader_of_international_organization = international_organization:hre }
-			opinion = { 
-				target = c:GMORV 
-				value >= 100
-			}
+		#	opinion = { 
+		#		target = c:GMORV 
+		#		value >= 100
+		#	}
 		}
 	}
 
-	price = price:fnr_price_influence_holy_roman_empire_member
+	#price = price:fnr_price_influence_holy_roman_empire_member (TODO: fix)
+	price = price:join_autocephalous_patriarchate
 
 	select_trigger = {
 		looking_for_a = international_organization
@@ -83,7 +84,8 @@ fnr_moravia_patriarchate_polish_coalition = {
 		}
 	}
 
-	price = price:fnr_price_arrange_polish_coalition
+	#price = price:fnr_price_influence_holy_roman_empire_member (TODO: fix)
+	price = price:join_autocephalous_patriarchate
 
 	select_trigger = {
 		looking_for_a = international_organization
@@ -132,7 +134,8 @@ fnr_moravia_patriarchate_expand_authority = {
 		}
 	}
 
-	price = price:fnr_price_expand_authority
+	#price = price:fnr_price_influence_holy_roman_empire_member (TODO: fix)
+	price = price:join_autocephalous_patriarchate
 
 	select_trigger = {
 		looking_for_a = international_organization
@@ -179,7 +182,8 @@ fnr_moravia_patriarchate_unificatio_unionis = {
 		}
 	}
 
-	price = price:fnr_price_unificatio_unionis
+	#price = price:fnr_price_influence_holy_roman_empire_member (TODO: fix)
+	price = price:join_autocephalous_patriarchate
 
 	select_trigger = {
 		looking_for_a = international_organization

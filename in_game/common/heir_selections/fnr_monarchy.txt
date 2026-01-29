@@ -7,9 +7,11 @@ moravian_meritocratic_succession = {
     allow_children = yes
     ignore_ruler = yes
 	potential = {
-		tag = GMORV
-		government_type = government_type:monarchy
-		has_reform = government_reform:fnr_GMORV_heirs_of_nitra
+		AND = {
+			tag = GMORV
+			government_type = government_type:monarchy
+			has_reform = government_reform:fnr_GMORV_heirs_of_nitra
+		}
 	}
 	locked = { # you cannot swap to another heir selection if this is true
 		has_reform = government_reform:fnr_GMORV_heirs_of_nitra

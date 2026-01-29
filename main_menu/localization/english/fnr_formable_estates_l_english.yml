@@ -11,6 +11,28 @@
   
   # ESTATE PRIVILEGES
 
+    # Rhineland
+    fnr_RHLND_agricultural_concessions_and_investments: "Agricultural Concessions and investments"
+    fnr_RHLND_agricultural_concessions_and_investments_desc: "To support the huge Population we shall grant the Peasants concessions and support their hard labour in the fields. Granting them these Rights over the Food production will hand them significant Power but we can remedy that with raising taxes."
+
+    fnr_RHLND_innovative_investments_weavery_tannery: "Innovative Investments in Weavery and Tannery"
+    fnr_RHLND_innovative_investments_weavery_tannery_desc: "We have seen what happens when we stubbornly stick with older methods. We must introduce these new ways to ensure stability and wealth for our People."
+
+    fnr_RHLND_squabbles_of_the_nobility: "Squabbles of the Nobility"
+    fnr_RHLND_squabbles_of_the_nobility_desc: "While on Paper we are a whole state the truth is quite different. With the rich History of conflict in our beloved Rhineland the Nobles only have increased their squabbles and interferences amongst eachother. We must quickly find an answer to this.\n\n[ShowEstatePrivilegeName('fnr_RHLND_squabbles_of_the_nobility')] will be removed during #color_yellow 'The Path Forward'#! event and be replaced by [ShowEstatePrivilegeName('fnr_RHLND_cooperative_nobles')]."
+
+    fnr_RHLND_cooperative_nobles: "Cooperative Nobles"
+    fnr_RHLND_cooperative_nobles_desc: "After considerable effort, the fractious disputes that long plagued our nobility have been resolved. The noble estate, once divided by competing ambitions and ancient grievances, now presents a unified front in support of crown and country."
+
+    fnr_RHLND_high_church_influence: "High Church Influence"
+    fnr_RHLND_high_church_influence_desc: "The Rhine's many prince-bishoprics and abbeys have made the Church a formidable political force. Though ecclesiastical power serves some purposes, we can no longer allow it to constrain our sovereignty. We must systematically reduce their influence over state affairs.\n\nWe can remove this privilege manually by meeting the conditions to do so, but in doing this will #R greatly anger#! the [ShowEstateTypeName('clergy_estate')] which could lead to #color_yellow conflict#! or #R rebellion#! whereas if we simply await the #color_yellow 'Pillar of Society and Religion'#! event will result in a peaceful outcome."
+
+    fnr_RHLND_pillar_that_is_the_church: "The Pillar that is the Church"
+    fnr_RHLND_pillar_that_is_the_church_desc: "The Power and Influence the Church once had is gone. While we can never truly get rid of them if we wished to we dont need to. We will make use of their identity that is that of a cultural and theological backbone for our state."
+
+    fnr_RHLND_bier_das_blut_des_volkes: "Bier, das Blut des Volkes"
+    fnr_RHLND_bier_das_blut_des_volkes_desc: "We Germans have been known as one of best beer makers in the world for ages. Due to it being such an integral Part of our Identity we will make considerable investments into it and improve the breweries to ensure only the finest Beer gets served in our Nation."
+
     # Great Moravia
     fnr_great_moravia_winemakers_of_balaton: "The Wine of Balaton"
     fnr_great_moravia_winemakers_of_balaton_desc: "The wines of Lake Balaton stand among Europe's finest. Only Burgundy, Italy, and distant Georgia produce vintages of comparable quality. Our volcanic soils and favorable climate yield grapes coveted by connoisseurs throughout the continent."

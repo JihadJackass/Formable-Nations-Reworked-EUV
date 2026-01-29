@@ -1,0 +1,205 @@
+﻿# Rhineland Specific Government Reforms
+
+	# Rheinkonföderation
+		fnr_GSCTL_rheinkonfoderation = {
+			major = yes
+			unique = yes
+			potential = {
+				tag = RHLND
+				has_reform = government_reform:fnr_GSCTL_rheinkonfoderation
+			}
+			allow = {
+				tag = RHLND
+			}
+			country_modifier = {
+				burghers_estate_can_participate_in_parliament = yes
+				cultures_capacity = 1
+				government_reform_slots = 2
+				global_monthly_development = 0.0010
+				antagonism_received_modifier = 1
+				stability_decay = 0.0005
+				global_estate_target_satisfaction = -0.05
+				global_crown_estate_power = -0.10
+				monthly_towards_inward = 0.20
+				monthly_towards_decentralization = 0.20
+			}
+			locked = {
+				is_locked_mechanic = {
+					mechanic = government_reform
+					type = fnr_GSCTL_rheinkonfoderation
+				}
+			}			
+			block_for_rebel = yes
+		}	
+
+	# Das Rheinische Königreich	
+		fnr_GSCTL_das_rheinische_konigreich = {
+			major = yes
+			unique = yes
+			government = monarchy
+			potential = {
+				tag = RHLND
+				has_reform = government_reform:fnr_GSCTL_das_rheinische_konigreich
+			}
+			allow = {
+				tag = RHLND
+			}
+			country_modifier = {
+				burghers_estate_can_participate_in_parliament = yes
+				government_size = 1
+				global_crown_estate_power = 0.30
+				tax_income_efficiency = 0.05
+				cultural_influence = 0.10
+				global_monthly_development = 0.0010
+				government_reform_slots = 2
+				cultures_capacity = 1
+
+				monthly_towards_humanist = 0.10
+				monthly_towards_centralization = 0.20
+			}
+			locked = {
+				is_locked_mechanic = {
+					mechanic = government_reform
+					type = fnr_GSCTL_das_rheinische_konigreich
+				}
+			}			
+			block_for_rebel = yes
+		}			
+
+	# Der Rheinbund
+		fnr_GSCTL_der_rheinbund = {
+			major = yes
+			unique = yes
+			government = republic
+			potential = {
+				tag = RHLND
+				has_reform = government_reform:fnr_GSCTL_der_rheinbund
+			}
+			allow = {
+				tag = RHLND
+			}
+			country_modifier = {
+				burghers_estate_can_participate_in_parliament = yes
+				peasants_estate_can_participate_in_parliament = yes
+				global_crown_estate_power = 0.10
+				country_cabinet_efficiency = 0.15
+				cultural_influence = 0.10
+				government_size = 1
+				global_monthly_development = 0.0020
+				government_reform_slots = 2
+				cultures_capacity = 1
+
+				monthly_towards_plutocracy = 0.25
+				monthly_towards_decentralization = 0.10
+			}
+			locked = {
+				is_locked_mechanic = {
+					mechanic = government_reform
+					type = fnr_GSCTL_der_rheinbund
+				}
+			}			
+			block_for_rebel = yes
+		}			
+
+	# Rhenish Commerce and Diplomatic Network (Age of  Discovery)
+		fnr_GSCTL_rhenish_commerce_diplomatic_network = {
+			unique = yes
+			potential = {
+				tag = RHLND
+				current_age_or_later = { age = age_3_discovery }
+			}
+			allow = {
+				tag = RHLND
+				current_age_or_later = { age = age_3_discovery }
+			}
+			country_modifier = {
+				diplomatic_capacity_modifier = 0.25
+				max_diplomats = 1
+				monthly_diplomats = 0.20
+				trade_range_modifier = 0.10
+				global_merchant_capacity_modifier = 0.10
+				court_spending_cost = 0.01
+
+				monthly_towards_outward = 0.10
+				monthly_towards_conciliatory = 0.20
+			}
+			locked = {
+				is_locked_mechanic = {
+					mechanic = government_reform
+					type = fnr_GSCTL_rhenish_commerce_diplomatic_network
+				}
+			}			
+			block_for_rebel = yes
+		}		
+		
+	# Die Wacht am Rhein (Age of Absolutism)
+		fnr_GSCTL_die_wacht_am_rhein = {
+			unique = yes
+			potential = {
+				tag = RHLND
+				# Unlocked via flavor_RHLND.2 event
+			}
+			allow = {
+				tag = RHLND
+			}
+			country_modifier = {
+				global_firearms_output_modifier = 0.20
+				global_cannons_output_modifier = 0.10
+				global_steel_output_modifier = 0.20
+				fort_limit_modifier = 0.10
+				global_soldiers_food_consumption = 0.10
+
+				monthly_towards_quality = 0.10
+			}
+			location_modifier = {
+				potential_trigger = {
+					custom_tooltip = {
+						text = fnr_any_fort_in_country_plus_4
+						any_fort_in_country = {
+							count = all
+						}
+					}
+				}
+				fort_level = 4
+			}
+			locked = {
+				is_locked_mechanic = {
+					mechanic = government_reform
+					type = fnr_GSCTL_rhenish_commerce_diplomatic_network
+				}
+			}			
+			block_for_rebel = yes
+		}	
+
+	# Rhenish Manufacturing (Age of Reformation)
+		fnr_GSCTL_rhenish_manufacturing = {
+			unique = yes
+			potential = {
+				tag = RHLND
+				current_age_or_later = { age = age_4_reformation }
+			}
+			allow = {
+				tag = RHLND
+				current_age_or_later = { age = age_4_reformation }
+			}
+			country_modifier = {
+				land_cost_going_downstream = -0.10
+				land_cost_going_upstream = -0.10
+
+				monthly_towards_mercantilism = 0.10
+				monthly_towards_capital_economy = 0.10
+			}
+			location_modifier = {
+				potential_trigger = {
+					has_river = yes
+				}
+				local_production_efficiency = 0.25
+			}
+			locked = {
+				is_locked_mechanic = {
+					mechanic = government_reform
+					type = fnr_GSCTL_rhenish_commerce_diplomatic_network
+				}
+			}			
+			block_for_rebel = yes
+		}	

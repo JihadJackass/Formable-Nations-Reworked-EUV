@@ -2,6 +2,24 @@
 
   # events FOR FORMABLE NATIONS
 
+    # Rhineland
+    flavor_RHLND.1.title: "The Path Forward"
+    flavor_RHLND.1.desc: "The Rheinkonföderation has endured for decades, but the question of our future can no longer be postponed. Since our founding, we have governed through temporary arrangements and compromise—a necessary evil during our formation, but hardly sustainable indefinitely.\n\nTwo visions have emerged for the path forward. Some advocate for the establishment of Das Rheinische Königreich, a centralized monarchy with strong royal authority capable of binding our territories together through decisive leadership. Others champion Der Rheinbund, a republican confederation that preserves local autonomy while fostering cooperation between our diverse estates.\n\nThe choice we make today will define not merely our government, but the very character of our nation for generations to come."
+    flavor_RHLND.1.a: "The King should be empowered."
+    flavor_RHLND.1.b: "People deserve to hold an opinion on state matters."
+
+    flavor_RHLND.2.title: "Learning from our experience"
+    flavor_RHLND.2.desc: "The nature of warfare has changed, and we must adapt our military accordingly. Modern conflict demands a strong foundation—robust industry and formidable fortifications. We will focus our efforts on enhancing and expanding both."
+    flavor_RHLND.2.a: "We have learned much from these conflicts."
+
+    flavor_RHLND.3.title: "Sourcing Innovative Investments"
+    flavor_RHLND.3.desc: "Tradition without adaptation leads to ruin—we have witnessed this truth firsthand. Our survival and prosperity demand that we adopt contemporary methods of governance, regardless of how comfortable the old ways may feel."
+    flavor_RHLND.3.a: "Investment is key!"
+
+    flavor_RHLND.4.title: "Pillar of Society and Religion"
+    flavor_RHLND.4.desc: "We have successfully curtailed the Church's political power, but complete suppression would be both impractical and unnecessary. Instead, we will redirect their influence toward what they do best: serving as the cultural and theological backbone that binds our diverse people together."
+    flavor_RHLND.4.a: "The Clergy keep the people under control."
+
     # North German Confederation Flag Standards
     flavor_NGCFD.1.title: "Imperial German Flag Standard"
     flavor_NGCFD.1.desc: "The North German Confederation has been unified - We must declare our official flag for the nation. We could use our historical war ensign as the official flag, or stick to the tricolored Schwarz-Weiß-Rot design."

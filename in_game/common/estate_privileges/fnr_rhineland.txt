@@ -1,0 +1,257 @@
+﻿# Rhineland Estate Privileges
+
+	# Peasants
+
+		# Agricultural Concessions and investments (Age of Discovery)
+		fnr_RHLND_agricultural_concessions_and_investments = {
+
+			estate = peasants_estate
+			
+			potential = {
+				OR = {
+					tag = RHLND
+					has_or_had_tag = RHLND
+				}
+			}
+			allow = {
+				OR = {
+					tag = RHLND
+					has_or_had_tag = RHLND
+				}
+				current_age_or_later = { age = age_3_discovery }
+			}
+			
+			country_modifier = {
+				global_monthly_food_modifier = 0.20
+				global_population_growth = 0.0004
+				peasants_estate_max_tax = 0.05
+
+				peasants_estate_target_satisfaction = 0.10
+				global_peasants_estate_power = 0.30
+				
+				monthly_towards_free_subjects = 0.20
+			}
+		}
+
+	# Burghers
+
+		# Innovative Investments in Weavery and Tannery (Age of Discovery)
+		fnr_RHLND_innovative_investments_weavery_tannery = {
+
+			estate = burghers_estate
+			
+			potential = {
+				OR = {
+					tag = RHLND
+					has_or_had_tag = RHLND
+				}
+			}
+			allow = {
+				OR = {
+					tag = RHLND
+					has_or_had_tag = RHLND
+				}
+				current_age_or_later = { age = age_3_discovery }
+			}
+			
+			country_modifier = {
+				global_cloth_output_modifier = 0.15
+				global_fine_cloth_output_modifier = 0.05
+				global_leather_output_modifier = 0.15
+
+				burghers_estate_target_satisfaction = 0.05
+				global_burghers_estate_power = 0.30
+				
+				monthly_towards_mercantilism = 0.05
+				monthly_towards_capital_economy = 0.05
+			}
+
+			location_modifier = {
+				local_migration_attraction = 0.05
+			}
+		}
+
+		# Bier, das Blut des Volkes (Age of Reformation)
+		fnr_RHLND_bier_das_blut_des_volkes = {
+
+			estate = burghers_estate
+			
+			potential = {
+				OR = {
+					tag = RHLND
+					has_or_had_tag = RHLND
+				}
+			}
+			allow = {
+				OR = {
+					tag = RHLND
+					has_or_had_tag = RHLND
+				}
+				current_age_or_later = { age = age_4_reformation }
+			}
+			
+			country_modifier = {
+				global_beer_output_modifier = 0.15
+				cultural_influence_modifier = 0.05
+				cultural_tradition_modifier = 0.05
+
+				burghers_estate_target_satisfaction = 0.10
+				global_burghers_estate_power = 0.20
+				
+				monthly_towards_plutocracy = 0.15
+				monthly_towards_capital_economy = 0.15
+			}
+		}		
+
+	# Nobility
+
+		# Squabbles of the Nobility
+		fnr_RHLND_squabbles_of_the_nobility = {
+			estate = nobles_estate
+			
+			potential = {
+				OR = {
+					tag = RHLND
+					has_or_had_tag = RHLND
+				}
+			}
+			allow = {
+				OR = {
+					tag = RHLND
+					has_or_had_tag = RHLND
+				}
+			}
+			
+			country_modifier = {
+				stability_decay = 0.0010
+				nobles_estate_max_tax = -0.05
+				nobles_estate_levy_size = -0.10
+				global_distance_from_capital_cost_modifier = 0.05
+
+				global_nobles_estate_power = 0.25
+				nobles_estate_target_satisfaction = -0.05
+
+				monthly_towards_aristocracy = 0.10
+			}
+			
+			can_revoke = {
+				always = no
+			}
+		}
+
+		# Cooperative Nobles
+		fnr_RHLND_cooperative_nobles = {
+			estate = nobles_estate
+			
+			potential = {
+				OR = {
+					tag = RHLND
+					has_or_had_tag = RHLND
+				}
+			}
+			allow = {
+				OR = {
+					tag = RHLND
+					has_or_had_tag = RHLND
+				}
+			}
+			
+			country_modifier = {
+				stability_decay = -0.0010
+				nobles_estate_max_tax = 0.05
+				nobles_estate_levy_size = 0.05
+				global_distance_from_capital_cost_modifier = -0.05
+				diplomatic_reputation = 2
+
+				global_nobles_estate_power = 0.10
+				nobles_estate_target_satisfaction = 0.05
+
+				monthly_towards_centralization = 0.10
+				monthly_towards_conciliatory = 0.10
+			}
+		}
+
+	# Clergy
+
+		# High Church Influence
+		fnr_RHLND_high_church_influence = {
+			estate = clergy_estate
+			
+			potential = {
+				OR = {
+					tag = RHLND
+					has_or_had_tag = RHLND
+				}
+			}
+			allow = {
+				OR = {
+					tag = RHLND
+					has_or_had_tag = RHLND
+				}
+			}
+			
+			country_modifier = {
+				clergy_estate_can_participate_in_parliament = yes
+				cultural_tradition_modifier = 0.05
+				nobles_estate_max_tax = 0.05
+				blocked_from_conversion = yes
+
+				global_clergy_estate_power = 0.50
+				clergy_estate_target_satisfaction = -0.05
+
+				monthly_towards_spiritualist = 0.25
+			}
+
+			on_deactivate = {
+				# Check that the Church Solutions event has not fired
+				set_variable = fnr_high_church_influence_removed
+				grant_estate_privilege = estate_privilege:fnr_RHLND_high_church_influence
+			}
+			
+			can_revoke = {
+				# Must have at least less than 10 clergy estate power, or the Church Solutions event must have fired (50-100 year timer)
+				OR = {
+					any_estate = {
+						estate_type = estate_type:clergy_estate
+						power < 0.10
+					}
+					state_religion_clergy = 0.10
+				}
+			}
+		}	
+		
+		# The Pillar that is the Church
+		fnr_RHLND_pillar_that_is_the_church = {
+			estate = clergy_estate
+			
+			potential = {
+				OR = {
+					tag = RHLND
+					has_or_had_tag = RHLND
+				}
+			}
+			allow = {
+				OR = {
+					tag = RHLND
+					has_or_had_tag = RHLND
+				}
+			}
+			
+			country_modifier = {
+				clergy_estate_can_participate_in_parliament = yes
+				global_pop_conversion_speed = 0.10
+				cultural_tradition_modifier = 0.15
+				global_clergy_max_literacy = 0.05
+
+				global_clergy_estate_power = 0.10
+				clergy_estate_target_satisfaction = 0.05
+
+				monthly_towards_spiritualist = 0.05
+			}
+
+			can_revoke = {
+				always = no
+			}
+		}
+		
+		

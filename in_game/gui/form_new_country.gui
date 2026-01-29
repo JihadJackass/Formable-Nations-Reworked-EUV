@@ -656,8 +656,6 @@ lateralview = {
 							}
 							using = bg_cabinet_card_frame
 							using = bg_corner_flavor_wood
-							margin = { 5 7 }
-							margin_bottom = 5
 							
 							vbox = {
 								layoutpolicy_horizontal = expanding

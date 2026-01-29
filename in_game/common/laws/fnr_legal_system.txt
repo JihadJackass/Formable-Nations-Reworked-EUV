@@ -7,7 +7,7 @@
 INJECT:legal_code_law = {
 	law_category = administrative
 
-	sudnyj_ludem_policy = {
+	fnr_sudnyj_ludem_policy = {
 		potential = {
 			tag = GMORV
 		}
@@ -20,5 +20,24 @@ INJECT:legal_code_law = {
 		estate_preferences = {
 			peasants_estate
 		}
+		years = 1
 	}
+
+	fnr_unified_rhenish_code_policy = {
+		allow = {
+			tag = RHLND
+		}
+		potential = {
+			tag = RHLND
+		}
+		country_modifier = {
+			global_max_control = 0.05
+			legislative_efficiency = 0.10
+			monthly_towards_centralization = 0.10
+		}
+		estate_preferences = {
+			peasants_estate
+		}
+		years = 1
+	}	
 }

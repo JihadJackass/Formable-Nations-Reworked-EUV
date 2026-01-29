@@ -8,7 +8,11 @@
 
     PAPAL_KINGDOM_OF_GOD_INFO: "#Y As #color_yellow Papal States#!, the Holy See holds a unique position in the world. Unlike other nations, we are bound by sacred duty to shepherd #color_yellow Christendom#! rather than pursue worldly dominion - we cannot form new countries or abandon our divinely ordained role. Yet through divine providence and righteous conquest, we may transform our spiritual authority into temporal sovereignty by establishing the #color_yellow Kingdom of God on Earth#! - a realm where the authority of Christ's Vicar extends beyond spiritual matters to temporal dominion over all #color_yellow Catholic#! lands. An event will present itself when the faithful have rallied sufficiently to our banner and support our claim.#!\n\n#Y Upon conquest of at least #G 50%#! of #color_yellow Italian Territory#! as the #color_yellow Papal States#! we will be presented with the #color_pure_white 'God's Kingdom on Earth'#! event in which we will be offered the title of #color_yellow King of God#! under the newly proclaimed #color_yellow Kingdom of God#!.#!"
 
+  # Variable TT localization
+    fnr_has_die_wacht_am_rhein_10years: "Has had the [ShowGovernmentReformName('fnr_GSCTL_die_wacht_am_rhein')] reform for at least 10 years."
+
   # Government Reforms
+    fnr_any_fort_in_country_plus_4: "Has at least one fort"
 
   # Estate Privilege
 
@@ -19,10 +23,12 @@
     #################################
 
     # French Empire
-    FNCEM_formable_trigger_1_tt: "[GetCountry('FRA').GetNameWithFlag] will immediately gain an event upon formation to choose between bypassing the Napoleonic Era and simply becoming the French Empire led by [GetCharacter('fnr_napoleon_bonaparte').GetName] - #color_yellow OR#! we can choose to fire the historical effects causing the Napoleonic Era to begin starting with the storming of the Bastille and will have various historical events that proceeded the Bastille storming."
+    FNCEM_formable_trigger_1_tt: "Upon formation, [GetCountry('FRA').GetNameWithFlag] receives an event with two paths:\n\n- #color_yellow Historical Path:#! Experience the Napoleonic Era from the #color_yellow Storming of the Bastille#! through a series of historical events\n\n#color_yellow Historical Naming Structure:#!\nKingdom of France (Until September 21, 1792)\nFrench First Republic (September 22, 1792 - November 9, 1799)\nFrench Consulate (November 10, 1799 - May 18, 1804)\nFirst French Empire (May 18, 1804 - April 6, 1814)\n\n- #color_yellow Alternate Path:#! Bypass the historical events and immediately form the French Empire under #color_yellow Napoleon Bonaparte#!."
 
     # Rhineland
     RHLND_formable_trigger_1_tt: "[ShowCultureName('rhine_franconian')], [ShowCultureName('ripuarian_franconian')], [ShowCultureName('rhine_alemannic')], and [ShowCultureName('moselle_franconian')] will all respectively become #color_green Kindred#! of each other."
+    RHLND_formable_trigger_2_tt: "After 20-30 years we will be provided the event #color_yellow 'The Path Forward'#! allowing us to choose between Das Rheinische Königreich or Der Rheinbund which will offer us to establish a [ShowCountryRankNameWithNoTooltip('rank_kingdom')]-Tier [ShowGovernmentTypeName('monarchy')] or a [ShowCountryRankNameWithNoTooltip('rank_kingdom')]-Tier [ShowGovernmentTypeName('republic')] respectively."
+    RHLND_formable_trigger_3_tt: "After 50-100 years we will be provided the event #color_yellow 'Pillar of Society and Religion'#! which will replace the [ShowEstatePrivilegeName('fnr_RHLND_high_church_influence')] privilege with [ShowEstatePrivilegeName('fnr_RHLND_pillar_that_is_the_church')] privilege - otherwise we can remove it manually by having either less than #G 10%#! [ShowEstateTypeName('clergy_estate')] [estate_power|e] or at least #G 10%#! of the population are apart of the [ShowEstateTypeName('clergy_estate')]."
 
     # Papal States conquers the HRE
     PAPAL_hre_tt_1: "The [GetInternationalOrganizationType('hre').GetName] will be destroyed!"
@@ -134,6 +140,9 @@
     # North America
     fnr_north_american_tooltip_on: "Click to #R DISABLE#!\n\nThis will disable North American Formables such as Oklahoma, Ontario, California, etc"
     fnr_north_american_tooltip_off: "Click to #G ENABLE#!\n\nThis will enable North American Formables such as Oklahoma, Ontario, California, etc"
+    # Papal States
+    fnr_papal_states_tooltip_on: "Click to #R DISABLE#!\n\nThe Papal States in vanilla is blocked from forming any formable nations, and through this setting the Papal States will have a unique information box added to the Formable Nations screen which explains how to form the Kingdom of God."
+    fnr_papal_states_tooltip_off: "Click to #G ENABLE#!\n\nThe Papal States in vanilla is blocked from forming any formable nations, and through this setting the Papal States will have a unique information box added to the Formable Nations screen which explains how to form the Kingdom of God."    
 
     # Formable List loc
     fnr_debug_window_formable_list_loc_toggle: "Formable Nations: Reworked"

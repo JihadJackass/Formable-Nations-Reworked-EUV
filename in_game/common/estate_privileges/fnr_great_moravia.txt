@@ -45,7 +45,7 @@
 			}
 		}
 		allow = {
-			current_age = age_5_absolutism
+			current_age_or_later = { age = age_5_absolutism }
 			OR = {
 				tag = GMORV
 				has_or_had_tag = GMORV
