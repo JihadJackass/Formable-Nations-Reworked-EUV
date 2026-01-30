@@ -1,4 +1,6 @@
-﻿papal_hre = {
+﻿# Disabled until after 2.5.0 TOKAY
+
+papal_hre = {
 
 	has_target = no
 	unique = yes

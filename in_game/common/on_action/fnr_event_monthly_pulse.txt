@@ -10,5 +10,16 @@ fnr_event_actions = {
         flavor_RHLND.4 # TODO: CHANGE THIS ONE TO 6 MONTH CHECK
         flavor_RHLND.3
         flavor_RHLND.2
+        # Papal States
+        flavor_PAPAL.1
+        flavor_PAPAL.2
+        flavor_PAPAL.3
+        flavor_PAPAL.4
+        # Netherlands
+        flavor_DUTCH.1
+        # Great Moravia
+        flavor_GMORV.1
+        flavor_GMORV.2
+        flavor_GMORV.3
     }
 }

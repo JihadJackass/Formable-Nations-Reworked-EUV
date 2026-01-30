@@ -3,6 +3,52 @@
   # ADVANCES LOCALIZATION
 
     # Formable Specific
+
+      # Swedish Empire
+
+      SWDEM_swedish_tradition: "Swedish Tradition"
+      SWDEM_swedish_tradition_desc: "Swedish military excellence is built on disciplined infantry, innovative tactics, and a professional officer corps that learns from each campaign. Our armies retreat in good order rather than rout, adapting their strategies as circumstances change. This tradition of military professionalism extends to civil administration, where systematic recordkeeping and efficient bureaucracy have made Sweden a model of enlightened governance. Rivals come and go, but Swedish institutions endure."
+
+      SWDEM_great_northern_crusaders: "Great Northern Crusaders"
+      SWDEM_great_northern_crusaders_desc: "For centuries, Swedish kings have styled themselves defenders of the Protestant faith in Northern Europe. This crusading legacy justifies our wars as righteous rather than aggressive, reducing the diplomatic cost of military action. Other Protestant powers view Swedish expansion not as naked imperialism but as the bulwark against Catholic resurgence in the Baltic—a reputation that moderates international antagonism toward our ambitions."
+
+      SWDEM_rulers_of_bremen_verden: "Rulers of Bremen-Verden"
+      SWDEM_rulers_of_bremen_verden_desc: "Sweden's acquisition of Bremen-Verden secures control over the mouths of the Weser and Elbe rivers, projecting Swedish power into the heart of the Holy Roman Empire. This strategic foothold allows us to monitor rival powers more effectively, provides our armies with secure lines of retreat across Northern Germany, and positions Sweden as a major player in Imperial politics. Our presence in the Empire attracts scholars and administrators who enhance our institutional capacity."
+
+      # German Empire
+
+      GMNEM_the_reich_of_germans: "The Reich of Germans"
+      GMNEM_the_reich_of_germans_desc: "A united German Reich demands respect through strength, not diplomacy. Our policies prioritize German cultural dominance and territorial assertion over international approval. Minority cultures within our borders will be assimilated, while our foreign policy pursues German interests without apology. Other powers may resent our rise, but they cannot deny our primacy."
+
+      # Nazi Germany
+      NAZIG_nationalsozialistische_deutsche_arbeiterpartei: "Nationalsozialistische Deutsche Arbeiterpartei"
+      NAZIG_nationalsozialistische_deutsche_arbeiterpartei_desc: "The National Socialist state operates through total mobilization of society toward ideological goals. By subordinating all aspects of national life—economic, cultural, military—to party control, the regime pursues aggressive expansion with complete disregard for international norms or diplomatic consequences. This totalitarian approach allows for rapid cultural assimilation and economic reorganization in conquered territories, though at the cost of universal international condemnation."
+
+      # Hanseatic League
+      HNSLG_hansa_traders: "Hansa Traders"
+      HNSLG_hansa_traders_desc: "From the Baltic to the North Sea, Hansa merchants operate as one. Our network of kontors and shared shipping routes allows us to trade where others cannot reach, transforming the League from a loose alliance into the dominant commercial power of Northern Europe."
+
+      # North German Confederation
+      NGCFD_united_german_confederation: "United German Confederation"
+      NGCFD_united_german_confederation_desc: "Though still a confederation in name, the union of northern German states represents a decisive step toward true centralization. By coordinating military command, standardizing administration, and pooling our collective manpower, we have created an entity far greater than the sum of its parts—a unified German power capable of projecting strength across Europe."
+
+      # Carolingian Empire
+      CAROL_restoring_the_empire: "Restoring the Empire"
+      CAROL_restoring_the_empire_desc: "The imperial title bestowed upon Charlemagne by Pope Leo III in 800 AD represented more than mere conquest—it symbolized the restoration of Roman authority in the West. By centralizing administration, codifying laws, and establishing a network of loyal counts and margraves, we can reclaim the institutional legacy of the Caesars while balancing the republican ideals that made Rome great."
+
+      CAROL_carolingian_legacy: "Carolingian Legacy"
+      CAROL_carolingian_legacy_desc: "The blood of Charlemagne carries with it not merely noble lineage, but divine mandate. To preserve the purity and prestige of our dynasty, we must ensure that our heirs marry only those of comparable imperial stature. The Carolingian name shall remain synonymous with legitimate rule, and our crown lands shall be managed with the efficiency that befits an empire destined to endure through the ages."
+
+      # Rhineland
+      RHLND_lingering_crusader_spirit: "Lingering Crusader Spirit"
+      RHLND_lingering_crusader_spirit_desc: "TODO"
+
+      RHLND_rhenish_connectivity: "Rhenish Connectivity"
+      RHLND_rhenish_connectivity_desc: "TODO"
+
+      RHLND_commercial_ambitions: "Commercial Ambitions"
+      RHLND_commercial_ambitions_desc: "TODO"
+
       # Austrian Empire
       AUSEM_habsburg_empire: "Habsburg Empire" 
       AUSEM_habsburg_empire_desc: "The Habsburg Empire governs countless cultures through careful balance of autonomy and central authority, accommodating diversity rather than imposing uniformity. Our diplomatic reputation, built on centuries of strategic marriages and alliances, makes negotiation as effective as conquest. Meanwhile, professional administration reduces infantry costs through superior organization and logistics, maintaining military strength without financial ruin." 

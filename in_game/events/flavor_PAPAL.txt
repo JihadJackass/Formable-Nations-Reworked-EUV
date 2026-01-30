@@ -10,7 +10,7 @@ flavor_PAPAL.1 = {
 	fire_only_once = yes
 	trigger = { 
 		# Make a trigger that checks that the papal states owns at least 75% of the HRE territory
-		#always = no # This is a WIP mechanic
+		always = no # This is a WIP mechanic
 	}
 	# unique option that replaces the HRE with a new IO which allows establishing kingdom tier theocratic free cities, and allows crusades
 	option = { # Dissolve the HRE, proclaim ourselves emperor, and become empire rank + rename and flag event
@@ -73,7 +73,7 @@ flavor_PAPAL.2 = {
 	desc = flavor_PAPAL.2.desc
 	fire_only_once = yes
 	trigger = {
-		#always = no # to prevent false error logging
+		always = no # to prevent false error logging
 	}
 	option = { # Imperium Christianum
 		name = flavor_PAPAL.2.a
@@ -112,7 +112,7 @@ flavor_PAPAL.3 = {
 	desc = flavor_PAPAL.3.desc
 	fire_only_once = yes
 	trigger = {
-		#always = no # to prevent false error logging
+		always = no # to prevent false error logging
 	}
 	option = { # New Style
 		name = flavor_PAPAL.3.a
@@ -140,8 +140,9 @@ flavor_PAPAL.4 = {
     fire_only_once = yes
     
     trigger = {
-        tag = PAP
-        is_leader_of_international_organization = international_organization:hre
+		always = no
+        #tag = PAP
+        #is_leader_of_international_organization = international_organization:hre
     }
     
     immediate = {
@@ -158,12 +159,13 @@ flavor_PAPAL.4 = {
         name = flavor_PAPAL.4.a
         
         # TODO: Disband the old HRE
+		# DISABLED UNTIL 2.5.0
         
         # Create the new papal HRE (customize this IO in common/international_organizations/ later)
-        create_international_organization = {
-            type = international_organization_type:papal_hre
-            add_country_to_international_organization = root
-        }
+#        create_international_organization = {
+#            type = international_organization_type:papal_hre
+#            add_country_to_international_organization = root
+#        }
         
         # Transfer former members to new organization
         every_country = {
@@ -174,9 +176,11 @@ flavor_PAPAL.4 = {
 				   # TODO: not a real trigger, fix
                 }
             }
-            international_organization:papal_hre = {
-                add_country_to_international_organization = prev
-            }
+
+			# TODO: disabled until 2.5.0
+#            international_organization:papal_hre = {
+#                add_country_to_international_organization = prev
+#            }
         }
         
         custom_tooltip = {

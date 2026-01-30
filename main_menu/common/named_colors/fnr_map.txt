@@ -5,6 +5,8 @@ colors = {
 	# RELIGIOUS COLORS
 		color_fnr_gws_religion = rgb { 223 214 113 }
 		color_fnr_gallo_roman_religion = rgb { 124 169 114 } # greenish
+		color_fnr_gallo_roman_religion = rgb { 124 169 114 } # greenish
+		color_fnr_religion_orthodox = hsv360 { 286 62 55 }
 	# END RELIGIOUS COLORS
 
 	# LANGUAGE COLORS

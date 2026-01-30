@@ -9,6 +9,7 @@
       moravian_patriarchate_SEAT_NAME: "Autocephalous Patriarchate of Moravia"
       moravian_patriarchate_desc: "The Moravian Patriarchate represents the autocephalous Orthodox Church centered in Great Moravia, embracing the legacy of Saints Cyril and Methodius and Church Slavonic liturgy."
       moravian_patriarch_name: "Moravian Patriarchate"
+      moravian_patriarchate_list_who_tt: "$WHO$ is a member of the Moravian Patriarchate with $LIST$"
 
       game_concept_moravian_patriarchate: "Moravian Patriarchate"
       game_concept_moravian_patriarchates: "Autocephalous Moravian Patriarchates"

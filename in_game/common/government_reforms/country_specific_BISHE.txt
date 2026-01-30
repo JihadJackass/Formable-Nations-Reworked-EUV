@@ -12,9 +12,9 @@
 			allow = {
 				tag = BISHE
 			}
-			country_modifier = {
+			#country_modifier = {
 				# TODO
-			}
+			#}
 			locked = {
 				is_locked_mechanic = {
 					mechanic = government_reform
@@ -36,9 +36,9 @@
 			allow = {
 				tag = BISHE
 			}
-			country_modifier = {
+			#country_modifier = {
 				# TODO
-			}
+			#}
 			locked = {
 				is_locked_mechanic = {
 					mechanic = government_reform
@@ -60,9 +60,9 @@
 			allow = {
 				tag = BISHE
 			}
-			country_modifier = {
+			#country_modifier = {
 				# TODO
-			}
+			#}
 			locked = {
 				is_locked_mechanic = {
 					mechanic = government_reform
@@ -84,9 +84,9 @@
 			allow = {
 				tag = BISHE
 			}
-			country_modifier = {
+			#country_modifier = {
 				# TODO
-			}
+			#}
 			locked = {
 				is_locked_mechanic = {
 					mechanic = government_reform
@@ -108,9 +108,9 @@
 			allow = {
 				tag = BISHE
 			}
-			country_modifier = {
+			#country_modifier = {
 				# TODO
-			}
+			#}
 			locked = {
 				is_locked_mechanic = {
 					mechanic = government_reform

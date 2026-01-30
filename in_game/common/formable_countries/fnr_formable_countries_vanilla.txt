@@ -20,10 +20,6 @@
 			}
 			culture = { has_culture_group = culture_group:scandinavian_group }
 		}
-		
-		allow = {
-		}
-
 		name = SCA
 		flag = SCA
 		adjective = SCA_ADJ
@@ -61,15 +57,11 @@
 			culture = culture:swedish
 		}
 		
-		allow = {
-		}
-		
 		name = SWE
 		flag = SWE
 		adjective = SWE_ADJ
 		tag = SWE
 		color = map_swedish
-		
 		
 		areas = {
 			svealand_area
@@ -83,16 +75,12 @@
 
 	# Denmark
 	denmark_f = {
-
 		level = 2	
 		required_locations_fraction = 0.75
 		rule = plausible
 
 		potential = {
 			culture = culture:danish
-		}
-		
-		allow = {
 		}
 		
 		name = DAN
@@ -134,9 +122,6 @@
 		adjective = DRD_ADJ
 		tag = DRD
 		color = map_DRD
-
-		regions = {
-		}
 		
 		areas = {
 			ulster_area
@@ -246,9 +231,6 @@
 			}
 		}
 
-		allow = {
-		}
-		
 		name = ENG
 		flag = ENG
 		adjective = ENG_ADJ
@@ -280,11 +262,6 @@
 				culture.language = language:brythonic_language
 			}
 		}
-
-		allow = {
-
-		}
-		
 		name = WLS
 		flag = WLS
 		adjective = WLS_ADJ
@@ -307,11 +284,6 @@
 		potential = {
 			culture = { has_culture_group = culture_group:scottish_group }
 		}
-
-		allow = {
-
-		}
-		
 		name = SCO
 		flag = SCO
 		adjective = SCO_ADJ
@@ -338,9 +310,6 @@
 			NOT = {
 				tag = ENG
 			}
-		}
-
-		allow = {
 		}
 		
 		name = NOL
@@ -540,18 +509,12 @@
 
 	# Arabia 
 	AIA_f = {
-
 		level = 3
 		required_locations_fraction = 0.75
 		rule = plausible
-		
 		potential = {
 			culture = { has_culture_group = culture_group:arabian_group }
 		}
-
-		allow = {
-		}
-		
 		name = AIA
 		flag = AIA
 		adjective = AIA_ADJ
@@ -567,18 +530,12 @@
 
 	# Egypt
 	EGY_f = { 
-
 		level = 3
 		required_locations_fraction = 0.75
 		rule = plausible
 
-
-		
 		potential = {
 			NOT = { tag = MAM }
-		}
-
-		allow = {
 		}
 		
 		name = EGY
@@ -594,6 +551,7 @@
 		}
 	}
 
+	# Kingdom of Jerusalem
 	KOA_f = { 
 
 		level = 2
@@ -620,6 +578,19 @@
 			tripolitania_area
 		}
 		form_effect = {
+			if = {
+				limit = {
+					has_variable = form_koj_variable
+				}
+				add_stability = stability_extreme_bonus
+				add_government_power = government_power_extreme_bonus
+				add_country_modifier = {
+					modifier = jerusalem_resurgent_modifier
+					years = 20
+					mode = add_and_extend
+				}
+				remove_variable = form_koj_variable
+			}
 		}
 	}
 
@@ -634,9 +605,6 @@
 
 		potential = {
 			culture = { has_culture_group = culture_group:italian_group }
-		}
-
-		allow = {
 		}
 		
 		name = SAR
@@ -663,9 +631,6 @@
 		potential = {
 			culture = culture:mossi
 		}
-
-		allow = {
-		}
 		
 		name = MSI
 		flag = MSI
@@ -690,9 +655,6 @@
 
 		potential = {
 			culture = culture:beja_culture
-		}
-
-		allow = {
 		}
 		
 		name = BEJ
@@ -1001,7 +963,6 @@
 		tag = PRU
 		color = map_PRU
 		
-		
 		areas = {
 			prussia_area
 		}
@@ -1166,9 +1127,7 @@
 				culture = culture:german_silesian
 			}
 		}
-		allow = {
-		}
-		
+
 		name = SIL
 		flag = SIL
 		adjective = SIL_ADJ
@@ -1450,12 +1409,6 @@
 		adjective = MLC_ADJ
 		tag = MLC
 		color = map_MLC
-		
-		locations = {
-		}
-
-		form_effect = {
-		}
 	}
 
 	# European Union - Disabled in favor of FNR
@@ -1470,9 +1423,6 @@
 				culture = { has_culture_group = culture_group:celtic_group }
 				culture = { has_culture_group = culture_group:hibernian_group }
 			}
-		}
-
-		allow = {
 		}
 		
 		name = ULS
@@ -1498,9 +1448,6 @@
 				culture = { has_culture_group = culture_group:celtic_group }
 				culture = { has_culture_group = culture_group:hibernian_group }
 			}
-		}
-
-		allow = {
 		}
 		
 		name = CNN
@@ -1592,9 +1539,6 @@
 				}
 			}
 		}
-
-		allow = {
-		}
 		
 		name = LOT
 		flag = LOT
@@ -1634,9 +1578,6 @@
 					tag = SAV
 				}			
 			}
-		}
-
-		allow = {
 		}
 		
 		name = BGP
@@ -1825,9 +1766,6 @@
 		potential = {
 			culture.language = language:brythonic_language
 		}
-
-		allow = {
-		}
 		
 		name = HEN
 		flag = HEN
@@ -1854,9 +1792,6 @@
 				is_culture_native_american = no
 				has_culture_group = culture_group:british_group
 			}
-		}
-
-		allow = {
 		}
 		
 		name = USA
@@ -1886,9 +1821,6 @@
 					has_culture_group = culture_group:french_group
 				}
 			}
-		}
-
-		allow = {
 		}
 		
 		name = CAN
@@ -1923,9 +1855,6 @@
 				
 			}
 		}
-
-		allow = {
-		}
 		
 		name = MEX
 		flag = MEX
@@ -1949,7 +1878,6 @@
 		potential = {
 			culture = culture:bengali
 		}
-
 
 		name = BNG
 		flag = BNG
@@ -2074,9 +2002,6 @@
 			}
 			religion = religion:sunni
 		}
-
-		allow = {
-		}
 		
 		name = DEC
 		flag = DEC
@@ -2101,9 +2026,6 @@
 			culture.language = language:marathi_language
 			NOT = { religion = religion:sunni }
 		}
-
-		allow = {
-		}
 		
 		name = MHR
 		flag = MHR
@@ -2123,10 +2045,6 @@
 		level = 4
 		required_locations_fraction = 0.7
 		rule = plausible
-		potential = {
-		}
-		allow = {
-		}
 		name = HIN
 		flag = HIN
 		adjective = HIN_ADJ
@@ -2147,9 +2065,6 @@
 
 		potential = {
 			culture = culture:punjabi
-		}
-
-		allow = {
 		}
 		
 		name = PUN
@@ -2173,9 +2088,6 @@
 
 		potential = {
 			culture.language = language:rajasthani_language
-		}
-
-		allow = {
 		}
 		
 		name = RJP
@@ -2228,9 +2140,6 @@
 		potential = {
 			culture = { has_culture_group = culture_group:shan_group }
 		}
-
-		allow = {
-		}
 		
 		name = SHA
 		flag = SHA
@@ -2255,9 +2164,6 @@
 			culture = culture:malay_culture
 			religion.group = religion_group:muslim
 		}
-
-		allow = {
-		}
 		
 		name = MSA
 		flag = MSA
@@ -2280,9 +2186,6 @@
 
 		potential = {
 			culture = culture:thai_culture
-		}
-
-		allow = {
 		}
 		
 		name = SIA
@@ -2336,8 +2239,6 @@
 		rule = plausible
 		potential = {
 			culture = { has_culture_group = culture_group:iranian_group }
-		}
-		allow = {
 		}
 		name = IRA
 		flag = IRA
@@ -2413,9 +2314,6 @@
 		potential = {
 			culture = culture:hausa
 		}
-
-		allow = {
-		}
 		
 		name = HAU
 		flag = HAU
@@ -2439,9 +2337,6 @@
 
 		potential = {
 			religion = religion:bantu_religion
-		}
-
-		allow = {
 		}
 		
 		name = KON
@@ -2494,10 +2389,6 @@
 			culture = culture:tuareg
 		}
 
-		allow = {
-
-		}
-
 		name = AIR
 		flag = AIR
 		adjective = AIR_ADJ
@@ -2527,10 +2418,6 @@
 			culture = culture:basque
 		}
 
-		allow = {
-
-		}
-		
 		name = NAV
 		flag = NAV
 		adjective = NAV_ADJ
@@ -2608,7 +2495,6 @@
 			culture = culture:uzbek_culture
 		}
 
-
 		name = TIM
 		flag = TIM
 		adjective = TIM_ADJ
@@ -2654,7 +2540,6 @@
 		potential = {
 			culture = culture:jurchen_culture
 		}
-
 
 		name = MCH
 		flag = MCH
@@ -2731,7 +2616,6 @@
 			religion.group = religion_group:muslim
 		}
 		allow = {
-
 			custom_tooltip = {
 				text = concluded_roto_as_not_ottos_tt
 				has_variable = rise_of_the_ottomans_winner_variable
@@ -2936,10 +2820,7 @@
 			}
 			culture = culture:armenian_culture
 		}
-		
-		allow = {
-		}
-		
+
 		name = ARM
 		flag = ARM
 		adjective = ARM_ADJ
@@ -2965,21 +2846,11 @@
 			always = no #Formed by event
 		}
 		
-		allow = {
-		}
-		
 		name = AYU
 		flag = AYU
 		adjective = AYU_ADJ
 		tag = AYU
 		color = map_AYU
-		
-		areas = {
-		}
-		provinces = {
-		}
-		form_effect = {
-		}
 
 	}
 
@@ -2992,9 +2863,6 @@
 
 		potential = {
 			culture = culture:albanian
-		}
-		
-		allow = {
 		}
 		
 		name = ALB
@@ -3021,21 +2889,11 @@
 			always = no #Formed by event
 		}
 		
-		allow = {
-		}
-		
 		name = BAH
 		flag = BAH
 		adjective = BAH_ADJ
 		tag = BAH
 		color = map_bahmanis
-		
-		areas = {
-		}
-		provinces = {
-		}
-		form_effect = {
-		}
 
 	}
 
@@ -3050,21 +2908,11 @@
 			always = no #Formed by event
 		}
 		
-		allow = {
-		}
-		
 		name = DAH
 		flag = DAH
 		adjective = DAH_ADJ
 		tag = DAH
 		color = map_dahomey
-		
-		areas = {
-		}
-		provinces = {
-		}
-		form_effect = {
-		}
 	}
 
 	# Maya
@@ -3078,9 +2926,6 @@
 				culture.language = language:maya_language
 				religion = religion:mayan
 			}
-		}
-
-		allow = {
 		}
 		
 		name = MAY
@@ -3110,9 +2955,6 @@
 		potential = {
 			culture = culture:gilak_culture
 		}
-
-		allow = {
-		}
 		
 		name = KRY
 		flag = KRY
@@ -3138,9 +2980,6 @@
 
 		potential = {
 			culture = culture:ryukyu_culture
-		}
-
-		allow = {
 		}
 
 		name = RYU
@@ -3169,9 +3008,6 @@
 				has_culture_group = culture_group:chinese_group
 			}
 			NOT = { exists = international_organization:middle_kingdom }
-		}
-
-		allow = {
 		}
 
 		name = CHI
@@ -3314,9 +3150,6 @@
 		potential = {
 			culture = culture:swabian
 		}
-		allow = {
-			
-		}
 
 		name = SWA
 		flag = SWA	
@@ -3379,9 +3212,6 @@
 
 		potential = {
 			culture = culture:east_franconian
-		}
-		allow = {
-			
 		}
 
 		name = FKN
@@ -3463,8 +3293,6 @@
 
 		potential = {
 			culture = culture:bulgarian
-		}
-		allow = {
 		}
 
 		name = BUL
@@ -3558,9 +3386,6 @@
 		potential = {
 			culture = culture:kurdish_culture
 		}
-		allow = {
-			
-		}
 
 		name = KRS
 		flag = KRS	
@@ -3600,9 +3425,6 @@
 
 		potential = {
 			culture = culture:somali_culture
-		}
-		allow = {
-			
 		}
 
 		name = SOI
@@ -3661,9 +3483,6 @@
 				culture = culture:szekely_culture
 			}
 		}
-		allow = {
-			
-		}
 
 		name = TRA
 		flag = TRA	
@@ -3717,9 +3536,6 @@
 		potential = {
 			culture = culture:nubian
 		}
-		allow = {
-			
-		}
 
 		name = NUB
 		flag = NUB	
@@ -3745,9 +3561,6 @@
 		potential = {
 			culture = culture:finnish
 		}
-		allow = {
-			
-		}
 
 		name = FIN
 		flag = FIN	
@@ -3772,9 +3585,6 @@
 		potential = {
 			culture = culture:icelandic
 		}
-		allow = {
-			
-		}
 
 		name = ICE
 		flag = ICE	
@@ -3798,9 +3608,6 @@
 
 		potential = {
 			culture.language = language:kipchak_language
-		}
-		allow = {
-			
 		}
 
 		name = KAZ
@@ -3827,9 +3634,6 @@
 		potential = {
 			culture = { has_culture_group = culture_group:malagasy_group }
 		}
-		allow = {
-			
-		}
 
 		name = MIR
 		flag = MIR
@@ -3853,9 +3657,6 @@
 
 		potential = {
 			culture = culture:moroccan
-		}
-		allow = {
-			
 		}
 
 		name = MOR
@@ -3914,9 +3715,6 @@
 		potential = {
 			culture = culture:slovak
 		}
-		allow = {
-			
-		}
 
 		name = SLO
 		flag = SLO	
@@ -3938,12 +3736,6 @@
 		required_locations_fraction = 0.90
 		rule = plausible
 
-		potential = {
-		}
-		allow = {
-			
-		}
-
 		name = BNO
 		flag = BNO	
 		adjective = BNO_ADJ
@@ -3964,12 +3756,6 @@
 		level = 1
 		required_locations_fraction = 0.60
 		rule = plausible
-
-		potential = {
-		}
-		allow = {
-			
-		}
 
 		name = CIR
 		flag = CIR	

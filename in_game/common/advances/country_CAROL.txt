@@ -1,0 +1,39 @@
+﻿# Advances for Carolingian Empire
+
+	# age_1_traditions
+
+	# age_2_renaissance
+
+		CAROL_restoring_the_empire = {
+			age = age_2_renaissance
+			potential = {
+				has_or_had_tag = CAROL
+			}
+			icon = bohemian_imperial_standing
+
+			stability_cost = -0.10
+			monthly_towards_centralization = 0.005
+			monthly_republican_tradition = 0.05
+			monthly_legitimacy = 0.05
+
+			requires = recruitment_improvements_renaissance
+		}	
+
+		CAROL_carolingian_legacy = {
+			age = age_2_renaissance
+			potential = {
+				OR = {
+					has_or_had_tag = CAROL
+					has_or_had_tag = LOT
+				}
+			}
+			icon = conquerors_legacy
+
+			global_crown_estate_power = 0.05
+			can_marry_only_overlord_dynasty_characters = yes
+
+			requires = recruitment_improvements_renaissance
+		}
+
+	# age_3_discovery
+			

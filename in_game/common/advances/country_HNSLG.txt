@@ -1,0 +1,20 @@
+﻿# Advances for Hanseatic League
+
+	# age_1_traditions
+
+		HNSLG_hansa_traders = {
+			age = age_1_traditions
+			potential = {
+				has_or_had_tag = HNSLG
+			}
+			icon = first_fleet_of_the_med
+
+			trade_range_modifier = 0.05
+
+			requires = ship_building_advance
+		}
+
+	# age_2_renaissance
+
+	# age_3_discovery
+			

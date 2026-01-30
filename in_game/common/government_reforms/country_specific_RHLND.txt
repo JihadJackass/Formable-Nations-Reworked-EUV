@@ -153,12 +153,7 @@
 			}
 			location_modifier = {
 				potential_trigger = {
-					custom_tooltip = {
-						text = fnr_any_fort_in_country_plus_4
-						any_fort_in_country = {
-							count = all
-						}
-					}
+					has_fort = yes
 				}
 				fort_level = 4
 			}

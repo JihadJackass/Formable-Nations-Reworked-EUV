@@ -17,7 +17,8 @@ flavor_RHLND.1 = {
 		}
 		change_government_type = government_type:monarchy
 		#remove_reform = government_reform:fnr_GSCTL_rheinkonfoderation
-		remove_reform = government_reform:fnr_RHLND_squabbles_of_the_nobility
+		revoke_estate_privilege = estate_privilege:fnr_RHLND_squabbles_of_the_nobility
+		grant_estate_privilege = estate_privilege:fnr_RHLND_cooperative_nobles
 		add_reform = government_reform:fnr_GSCTL_das_rheinische_konigreich
 	}
 	option = { # Der Rheinbund
@@ -28,7 +29,8 @@ flavor_RHLND.1 = {
 		}
 		change_government_type = government_type:republic
 		#remove_reform = government_reform:fnr_GSCTL_rheinkonfoderation
-		remove_reform = government_reform:fnr_RHLND_squabbles_of_the_nobility
+		revoke_estate_privilege = estate_privilege:fnr_RHLND_squabbles_of_the_nobility
+		grant_estate_privilege = estate_privilege:fnr_RHLND_cooperative_nobles
 		add_reform = government_reform:fnr_GSCTL_der_rheinbund
 	}
 }

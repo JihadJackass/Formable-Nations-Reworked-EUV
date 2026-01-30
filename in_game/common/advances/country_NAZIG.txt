@@ -1,0 +1,33 @@
+﻿# Advances for Nazi Germany
+
+	# age_1_traditions
+
+	# age_2_renaissance
+
+	# age_3_discovery
+
+	# age_4_reformation
+
+	# age_5_absolutism
+
+	# age_6_revolutions
+
+		NAZIG_nationalsozialistische_deutsche_arbeiterpartei = {
+			age = age_6_revolutions
+			potential = {
+				OR = {
+					has_or_had_tag = NAZIG
+					has_or_had_tag = GTRGM
+				}
+			}
+			icon = geheimrat
+
+			antagonism_breaking_truce_giving_modifier = 0.20
+			antagonism_received_modifier = 0.10
+			cultural_influence = 0.05
+			destroy_market_cost_modifier = -0.05
+			# growth_is_primary_culture = yes TODO: make this work
+
+			requires = power_projection_advance_6
+		}	
+			

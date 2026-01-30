@@ -1,0 +1,56 @@
+﻿# Advances for Swedish Empire
+
+	# age_1_traditions
+
+	# age_2_renaissance
+
+	# age_3_discovery
+
+	# age_4_reformation
+
+		SWDEM_rulers_of_bremen_verden = {
+			age = age_4_reformation
+			potential = {
+				has_or_had_tag = SWDEM
+			}
+			icon = guards_of_the_shannon_advance
+
+			replace_rival_cost_modifier = -0.05
+			retreat_delay = -6
+			research_speed = 0.055
+
+			requires = maritime_advance_age_4
+		}	
+
+	# age_5_absolutism
+
+		SWDEM_swedish_tradition = {
+			age = age_5_absolutism
+			potential = {
+				has_or_had_tag = SWDEM
+			}
+			icon = swedish_absolutism
+
+			replace_rival_cost_modifier = -0.05
+			retreat_delay = -6
+			research_speed = 0.055
+
+			requires = military_revolution_advance
+		}	
+		
+		SWDEM_great_northern_crusaders = {
+			age = age_5_absolutism
+			potential = {
+				has_or_had_tag = SWDEM
+			}
+			icon = swedish_steel
+
+			declaring_war_cost_modifier = -0.025
+			antagonism_received_modifier = -0.005
+
+			requires = military_revolution_advance
+		}		
+
+	# age_6_revolutions
+
+			

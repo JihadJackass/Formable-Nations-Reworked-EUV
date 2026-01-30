@@ -1,0 +1,44 @@
+﻿# Advances for Rhineland
+
+	# age_1_traditions
+
+	# age_2_renaissance
+
+		RHLND_lingering_crusader_spirit = {
+			age = age_2_renaissance
+			potential = {
+				has_or_had_tag = RHLND
+			}
+			icon = colonial_tradition
+
+			army_infantry_power = 0.10
+
+			requires = recruitment_improvements_renaissance
+		}
+
+		RHLND_commercial_ambitions = {
+			age = age_2_renaissance
+			potential = {
+				has_or_had_tag = RHLND
+			}
+			icon = colonial_tradition
+
+			global_distance_from_capital_cost_modifier = -0.10
+
+			requires = merchants_and_trade
+		}	
+
+	# age_3_discovery
+
+		RHLND_rhenish_connectivity = {
+			age = age_3_discovery
+			potential = {
+				has_or_had_tag = RHLND
+			}
+			icon = colonial_tradition
+
+			trade_range_modifier = 0.10
+			trade_efficiency = 0.05
+
+			requires = printing_press_advance
+		}				

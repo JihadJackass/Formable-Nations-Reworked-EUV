@@ -1,0 +1,34 @@
+﻿# Advances for German Empire
+
+	# age_1_traditions
+
+	# age_2_renaissance
+
+	# age_3_discovery
+
+	# age_4_reformation
+
+	# age_5_absolutism
+
+		GMNEM_the_reich_of_germans = {
+			age = age_5_absolutism
+			potential = {
+				OR = {
+					has_or_had_tag = GMNEM
+					has_or_had_tag = GMNRE
+				}
+			}
+			icon = hofkriegsrat
+
+			declaring_war_cost_modifier = -0.05
+			diplomatic_capacity_modifier = 0.05
+			diplomatic_reputation = -0.025
+			remove_tolerated_culture_cost_modifier = -0.050
+			# growth_is_primary_culture = yes TODO: make this work
+
+			requires = military_revolution_advance
+		}		
+
+	# age_6_revolutions
+
+			

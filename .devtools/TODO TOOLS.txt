@@ -1,0 +1,1 @@
+- Make a list txt of all formables in the mod and sorted by rank, then make a tool that compares all existing formables in formable_countries folder to this text file so that I can easily update new formables to the  list
