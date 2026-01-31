@@ -1,0 +1,28 @@
+﻿# Advances for Cisalpina
+
+	# age_1_traditions
+
+	# age_2_renaissance
+
+	# age_3_discovery
+
+	# age_4_reformation
+
+		CSPNA_cisalpine_legitimacy = {
+			age = age_5_absolutism
+			potential = {
+				has_or_had_tag = CSPNA
+			}
+			icon = ita_attractive_migration
+
+			monthly_legitimacy = 0.05
+			monthly_republican_tradition = 0.05
+
+			requires = military_revolution_advance
+		}		
+
+	# age_5_absolutism
+
+	# age_6_revolutions
+
+			

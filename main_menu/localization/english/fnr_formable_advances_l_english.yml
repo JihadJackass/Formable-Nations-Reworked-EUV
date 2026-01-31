@@ -4,8 +4,39 @@
 
     # Formable Specific
 
-      # Swedish Empire
+      # Arabian Empire
+      ARABE_united_tribes_of_arabia: "United Tribes of Arabia"
+      ARABE_united_tribes_of_arabia_desc: ""
 
+      # Israel
+      ISREL_jewish_historical_populace: "Jewish Historical Populace"
+      ISREL_jewish_historical_populace_desc: ""
+
+      # United Arab Republic
+      UNARR_egyptian_syrian_alliance: "Egyptian-Syrian Alliance"
+      UNARR_egyptian_syrian_alliance_desc: ""
+
+      # Ummayad Caliphate
+      UMAYA_caliphal_hegemony: "Caliphal Hegemony"
+      UMAYA_caliphal_hegemony_desc: ""
+
+      # Cisalpina
+      CSPNA_cisalpine_legitimacy: "Cisalpine Legitimacy"
+      CSPNA_cisalpine_legitimacy_desc: ""
+
+      # Lombardy-Venetia
+      LMBYV_austrian_influence: "Austrian Influence"
+      LMBYV_austrian_influence_desc: ""
+
+      # Sardinia–Piedmont
+      SDPDM_house_of_savoy: "House of Savoy"
+      SDPDM_house_of_savoy_desc: "The House of Savoy has ruled these Alpine borderlands for centuries, transforming a collection of mountain passes into a respected European power. Through careful dynastic marriages, strategic neutrality, and an unmatched understanding of Alpine warfare, the Savoyards defend their realm with a tenacity that belies their modest size. Their court balances monarchical authority with consultative governance, maintaining legitimacy through both royal bloodline and pragmatic concessions to local assemblies. In the fortress valleys of Piedmont, Savoy endures."
+
+      # Occitania
+      OCCIT_english_french_traditions: "English-Francien Traditions"
+      OCCIT_english_french_traditions_desc: "Occitania sits between two great spheres of influence—English administrative efficiency and Francien courtly refinement. Rather than reject these northern traditions, we adapt them to Occitan governance. English common law principles blend with French bureaucratic organization, creating hybrid institutions that serve our needs without erasing our distinct identity. This cultural synthesis attracts skilled administrators and merchants from both realms, strengthening Occitania's position as a bridge between north and south."
+
+      # Swedish Empire
       SWDEM_swedish_tradition: "Swedish Tradition"
       SWDEM_swedish_tradition_desc: "Swedish military excellence is built on disciplined infantry, innovative tactics, and a professional officer corps that learns from each campaign. Our armies retreat in good order rather than rout, adapting their strategies as circumstances change. This tradition of military professionalism extends to civil administration, where systematic recordkeeping and efficient bureaucracy have made Sweden a model of enlightened governance. Rivals come and go, but Swedish institutions endure."
 
@@ -16,7 +47,6 @@
       SWDEM_rulers_of_bremen_verden_desc: "Sweden's acquisition of Bremen-Verden secures control over the mouths of the Weser and Elbe rivers, projecting Swedish power into the heart of the Holy Roman Empire. This strategic foothold allows us to monitor rival powers more effectively, provides our armies with secure lines of retreat across Northern Germany, and positions Sweden as a major player in Imperial politics. Our presence in the Empire attracts scholars and administrators who enhance our institutional capacity."
 
       # German Empire
-
       GMNEM_the_reich_of_germans: "The Reich of Germans"
       GMNEM_the_reich_of_germans_desc: "A united German Reich demands respect through strength, not diplomacy. Our policies prioritize German cultural dominance and territorial assertion over international approval. Minority cultures within our borders will be assimilated, while our foreign policy pursues German interests without apology. Other powers may resent our rise, but they cannot deny our primacy."
 

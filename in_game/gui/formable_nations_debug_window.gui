@@ -127,7 +127,7 @@ window = {
 								tooltip = "[SelectLocalization(GetPlayer.HasVariable('fnr_us_states_enabled'), 'fnr_north_american_tooltip_on', 'fnr_north_american_tooltip_off')]"
 							}
 							button_regular = { # Papal States
-								size = { 220 32 }
+								size = { 200 32 }
 								raw_text = "[SelectLocalization(GetPlayer.HasVariable('fnr_is_papacy'), 'Papal States Formable: ON', 'Papal States Formable: OFF')]"
 								onclick = "[GetScriptedGui('FormableNationReworked_toggle_papal_formables').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								tooltip = "[SelectLocalization(GetPlayer.HasVariable('fnr_is_papacy'), 'fnr_papal_states_tooltip_on', 'fnr_papal_states_tooltip_off')]"
@@ -141,22 +141,22 @@ window = {
 						hbox = {
 							spacing = 5
 							button_regular = {
-								size = { 220 32 }
+								size = { 180 32 }
 								raw_text = "Individual Formables List"
 								onclick = "[GetVariableSystem.Set('formable_list_window_open', 'yes')]"
 								tooltip = "fnr_debug_window_formable_list_loc"
 							}		
 							button_regular = {
-								size = { 220 32 }
-								raw_text = "Flag Selection - Nonfunctional/WIP"
+								size = { 230 32 }
+								raw_text = "Flag Selection | Nonfunctional/WIP"
 								onclick = "[GetVariableSystem.Set('flag_selection_window_open', 'yes')]"
 								tooltip = "fnr_debug_window_formable_list_loc_flag_selection"
 							}
 							button_regular = {
-								size = { 220 32 }
-								raw_text = "Color Selection - Nonfunctional/WIP"
+								size = { 230 32 }
+								raw_text = "Color Selection | Nonfunctional/WIP"
 								onclick = "[GetVariableSystem.Set('color_selection_window_open', 'yes')]"
-								tooltip = "fnr_debug_window_formable_list_loc_flag_selection"
+								tooltip = "fnr_debug_window_formable_list_loc_color_selection"
 							}
 						}
 					}

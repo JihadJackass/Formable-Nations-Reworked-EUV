@@ -1,0 +1,28 @@
+﻿# Advances for Israel
+
+	# age_1_traditions
+
+	# age_2_renaissance
+
+	# age_3_discovery
+
+	# age_4_reformation
+
+	# age_5_absolutism
+
+		ISREL_jewish_historical_populace = {
+			age = age_5_absolutism
+			potential = {
+				has_or_had_tag = ISREL
+			}
+			icon = government_size_renaissance
+
+			cultural_tradition_modifier = 0.01
+			global_population_growth = 0.0005
+
+			requires = scientific_revolution
+		}	
+
+	# age_6_revolutions
+
+			

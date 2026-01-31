@@ -1,9 +1,9 @@
 window = {
-    name = "formable_nations_flag_selection_window"
+    name = "formable_nations_color_selection_window"
     layer = windows_layer
     parentanchor = center
-    size = { 800 600 }
-    visible = "[GetVariableSystem.Exists('flag_selection_window_open')]"
+    size = { 900 650 }
+    visible = "[GetVariableSystem.Exists('color_selection_window_open')]"
     using = bg_window_default_alt
     
     button_close_alt = {
@@ -11,7 +11,7 @@ window = {
         position = { -15 15 }
         size = { 40 40 }
         blockoverride "close_onclick" {
-            onclick = "[GetVariableSystem.Clear('flag_selection_window_open')]"
+            onclick = "[GetVariableSystem.Clear('color_selection_window_open')]"
         }
     }
     
@@ -21,9 +21,15 @@ window = {
         layoutpolicy_vertical = expanding
         
         text_single = {
-            text = "fnr_debug_window_formable_list_loc_flag_selection"
+            raw_text = "National Color Selection"
             using = header_font
-            margin_bottom = 10
+            margin_bottom = 5
+        }
+        
+        text_single = {
+            raw_text = "Choose an alternate map color for your nation"
+            default_format = "#italic"
+            margin_bottom = 20
         }
         
         scrollbox = {
@@ -32,57 +38,269 @@ window = {
             size = { 0 0 }
             
             blockoverride "scrollbox_content" {
-            vbox = {
-                layoutpolicy_horizontal = expanding
-                spacing = 15
-                margin = { 10 10 }
-                
-                # German Empire Flags
                 vbox = {
                     layoutpolicy_horizontal = expanding
-                    spacing = 5
+                    spacing = 20
+                    margin = { 20 20 }
                     
-                        text_single = {
-                            text = "fnr_debug_window_formable_list_loc_germanempire"
-                            default_format = "#bold"
-                        }
-                    
-                        hbox = {
-                        spacing = 20
+                    ### FRENCH EMPIRE COLOR OPTIONS ###
+                    vbox = {
+                        layoutpolicy_horizontal = expanding
+                        visible = "[GetPlayer.GetTag.IsTagEqualTo('FNCEM')]"
+                        spacing = 15
                         
-                            # Imperial Flag Option
+                        # Header
+                        vbox = {
+                            layoutpolicy_horizontal = expanding
+                            spacing = 5
+                            
+                            text_single = {
+                                raw_text = "French Empire"
+                                default_format = "#bold"
+                                using = header_font_s
+                            }
+                            
+                            divider_decorative = {
+                                layoutpolicy_horizontal = expanding
+                            }
+                        }
+                        
+                        # Description
+                        text_multi = {
+                            layoutpolicy_horizontal = expanding
+                            size = { 0 40 }
+                            raw_text = "The French Empire can display its majesty through different heraldic colors, each representing a different aspect of French history and identity."
+                            margin_bottom = 10
+                        }
+                        
+                        # Color Options
+                        hbox = {
+                            layoutpolicy_horizontal = expanding
+                            spacing = 25
+                            margin = { 30 10 }
+                            
+                            # Royal Blue (Default)
                             vbox = {
-                                spacing = 5
+                                spacing = 8
                                 
-                                icon = {
-                                    size = { 128 96 }  # Flag proportions
-                                    texture = "gfx/interface/icons/flags/flag_gmnem_imperial.dds"
+                                # Color Preview
+                                widget = {
+                                    size = { 160 100 }
+                                    
+                                    background = {
+                                        texture = "gfx/interface/tiles/tile_bg_transparent.dds"
+                                        spriteType = Corneredtiled
+                                        spriteborder = { 10 10 }
+                                        margin = { 2 2 }
+                                    }
+                                    
+                                    container = {
+                                        parentanchor = center
+                                        
+                                        widget = {
+                                            size = { 150 90 }
+                                            
+                                            background = {
+                                                using = Background_Area
+                                                tintcolor = { 0.26 0.35 0.75 1.0 }
+                                                margin = { 5 5 }
+                                            }
+                                            
+                                            # Border effect
+                                            background = {
+                                                texture = "gfx/interface/tiles/tile_bg_transparent.dds"
+                                                spriteType = Corneredtiled
+                                                spriteborder = { 10 10 }
+                                                tintcolor = { 0.8 0.8 0.8 0.3 }
+                                            }
+                                        }
+                                    }
                                 }
                                 
-                                button_regular = {
-                                    size = { 150 32 }
-                                    raw_text = "Imperial Flag"
-                                    onclick = "[GetScriptedGui('FNR_select_gmnem_imperial').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-                                    tooltip = "fnr_debug_window_formable_list_loc_geremp_flag_1"
+                                # Label
+                                text_single = {
+                                    raw_text = "Royal Blue"
+                                    default_format = "#bold"
+                                    parentanchor = hcenter
+                                }
+                                
+                                # Description
+                                text_multi = {
+                                    size = { 160 30 }
+                                    raw_text = "The traditional color of French royalty"
+                                    default_format = "#S"
+                                    parentanchor = hcenter
+                                }
+                                
+                                # Select Button
+                                button_primary = {
+                                    size = { 160 35 }
+                                    raw_text = "Select Blue"
+                                    onclick = "[GetScriptedGui('FNR_select_fncem_color_blue').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                    tooltip = "Royal blue - the classic color of the Bourbon monarchy and French heraldic tradition"
+                                    parentanchor = hcenter
                                 }
                             }
-
-                            # Flagge Deutschlands
+                            
+                            # Imperial Purple
                             vbox = {
-                                spacing = 5
+                                spacing = 8
                                 
-                                icon = {
-                                    size = { 128 96 }  # Flag proportions
-                                    texture = "gfx/interface/icons/flags/flag_flaggedeutschlands.dds"
+                                # Color Preview
+                                widget = {
+                                    size = { 160 100 }
+                                    
+                                    background = {
+                                        texture = "gfx/interface/tiles/tile_bg_transparent.dds"
+                                        spriteType = Corneredtiled
+                                        spriteborder = { 10 10 }
+                                        margin = { 2 2 }
+                                    }
+                                    
+                                    container = {
+                                        parentanchor = center
+                                        
+                                        widget = {
+                                            size = { 150 90 }
+                                            
+                                            background = {
+                                                using = Background_Area
+                                                tintcolor = { 0.50 0.24 0.70 1.0 }
+                                                margin = { 5 5 }
+                                            }
+                                            
+                                            background = {
+                                                texture = "gfx/interface/tiles/tile_bg_transparent.dds"
+                                                spriteType = Corneredtiled
+                                                spriteborder = { 10 10 }
+                                                tintcolor = { 0.8 0.8 0.8 0.3 }
+                                            }
+                                        }
+                                    }
                                 }
                                 
-                                button_regular = {
-                                    size = { 150 32 }
-                                    raw_text = "Flagge Deutschlands"
-                                    onclick = "[GetScriptedGui('FNR_select_gmnem_imperial').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-                                    tooltip = "fnr_debug_window_formable_list_loc_geremp_flag_1"
+                                text_single = {
+                                    raw_text = "Imperial Purple"
+                                    default_format = "#bold"
+                                    parentanchor = hcenter
+                                }
+                                
+                                text_multi = {
+                                    size = { 160 30 }
+                                    raw_text = "Napoleonic imperial grandeur"
+                                    default_format = "#S"
+                                    parentanchor = hcenter
+                                }
+                                
+                                button_primary = {
+                                    size = { 160 35 }
+                                    raw_text = "Select Purple"
+                                    onclick = "[GetScriptedGui('FNR_select_fncem_color_purple').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                    tooltip = "Imperial purple - symbolizing Napoleonic grandeur and Roman imperial heritage"
+                                    parentanchor = hcenter
                                 }
                             }
+                            
+                            # Revolutionary Red
+                            vbox = {
+                                spacing = 8
+                                
+                                # Color Preview
+                                widget = {
+                                    size = { 160 100 }
+                                    
+                                    background = {
+                                        texture = "gfx/interface/tiles/tile_bg_transparent.dds"
+                                        spriteType = Corneredtiled
+                                        spriteborder = { 10 10 }
+                                        margin = { 2 2 }
+                                    }
+                                    
+                                    container = {
+                                        parentanchor = center
+                                        
+                                        widget = {
+                                            size = { 150 90 }
+                                            
+                                            background = {
+                                                using = Background_Area
+                                                tintcolor = { 0.85 0.17 0.24 1.0 }
+                                                margin = { 5 5 }
+                                            }
+                                            
+                                            background = {
+                                                texture = "gfx/interface/tiles/tile_bg_transparent.dds"
+                                                spriteType = Corneredtiled
+                                                spriteborder = { 10 10 }
+                                                tintcolor = { 0.8 0.8 0.8 0.3 }
+                                            }
+                                        }
+                                    }
+                                }
+                                
+                                text_single = {
+                                    raw_text = "Revolutionary Red"
+                                    default_format = "#bold"
+                                    parentanchor = hcenter
+                                }
+                                
+                                text_multi = {
+                                    size = { 160 30 }
+                                    raw_text = "The spirit of revolution"
+                                    default_format = "#S"
+                                    parentanchor = hcenter
+                                }
+                                
+                                button_primary = {
+                                    size = { 160 35 }
+                                    raw_text = "Select Red"
+                                    onclick = "[GetScriptedGui('FNR_select_fncem_color_red').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                    tooltip = "Revolutionary red - from the tricolor flag of the French Revolution"
+                                    parentanchor = hcenter
+                                }
+                            }
+                        }
+                    }
+                    
+                    ### ADD MORE FORMABLES HERE ###
+                    # Copy the vbox above, change:
+                    # - visible = "[GetPlayer.GetTag.IsTagEqualTo('YOURTAG')]"
+                    # - Text to your formable name
+                    # - Color values and button onclicks
+                    
+                    ### NO COLOR OPTIONS MESSAGE ###
+                    vbox = {
+                        layoutpolicy_horizontal = expanding
+                        # Show this if player is NOT playing any formable with color options
+                        visible = "[Not(GetPlayer.GetTag.IsTagEqualTo('FNCEM'))]"
+                        spacing = 20
+                        margin_top = 50
+                        
+                        icon = {
+                            size = { 64 64 }
+                            texture = "gfx/interface/icons/generic_icons/icon_info.dds"
+                            parentanchor = hcenter
+                        }
+                        
+                        text_single = {
+                            raw_text = "No Color Options Available"
+                            default_format = "#bold"
+                            using = header_font_s
+                            parentanchor = hcenter
+                        }
+                        
+                        text_multi = {
+                            size = { 500 80 }
+                            raw_text = "Your current nation does not have alternate color options configured. Color customization is only available for certain formable nations."
+                            parentanchor = hcenter
+                            margin_top = 10
+                        }
+                        
+                        text_single = {
+                            raw_text = "Currently supported: French Empire"
+                            default_format = "#italic"
+                            parentanchor = hcenter
+                            margin_top = 10
                         }
                     }
                 }

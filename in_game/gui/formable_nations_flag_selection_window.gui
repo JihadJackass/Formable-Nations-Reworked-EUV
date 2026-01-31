@@ -21,7 +21,7 @@ window = {
         layoutpolicy_vertical = expanding
         
         text_single = {
-            text = "fnr_debug_window_formable_list_loc_flag_selection"
+            text = "fnr_debug_window_formable_list_loc_flag_selection_small"
             using = header_font
             margin_bottom = 10
         }

@@ -1,0 +1,30 @@
+﻿# Advances for Lombardy-Venetia
+
+	# age_1_traditions
+
+	# age_2_renaissance
+
+	# age_3_discovery
+
+	# age_4_reformation
+
+	# age_5_absolutism
+
+		LMBYV_austrian_influence = {
+			age = age_5_absolutism
+			potential = {
+				has_or_had_tag = LMBYV
+			}
+			icon = austrian_tradition
+
+			global_defensive = 0.02
+			morale_recovery_in_friendly = 0.015
+			monthly_towards_absolutism = 0.025
+			cultural_tradition = 1
+
+			requires = newspapers_advance
+		}	
+
+	# age_6_revolutions
+
+			

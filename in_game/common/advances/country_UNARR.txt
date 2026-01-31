@@ -1,0 +1,29 @@
+﻿# Advances for United Arab Republic
+
+	# age_1_traditions
+
+	# age_2_renaissance
+
+	# age_3_discovery	
+
+	# age_4_reformation	
+
+	# age_5_absolutism
+
+		UNARR_egyptian_syrian_alliance = {
+			age = age_3_discovery
+			potential = {
+				has_or_had_tag = UNARR
+			}
+			icon = islamic_calligraphy
+
+			global_manpower_modifier = 0.010
+			monthly_towards_defensive = 0.015
+			monthly_towards_free_subjects = 0.010
+
+			requires = diplomatic_training
+		}
+
+	# age_6_revolutions
+
+			

@@ -1,0 +1,63 @@
+# French Empire Color Selection Scripted GUIs
+
+FNR_select_fncem_color_blue = {
+    scope = country
+    is_shown = { always = yes }
+    is_valid = { 
+        tag = FNCEM
+    }
+    effect = {
+        # Remove other color variables
+        remove_variable = fncem_color_purple
+        remove_variable = fncem_color_red
+        
+        # Set blue color (default - can just remove variables)
+        # This allows the default map color to be used
+    }
+}
+
+FNR_select_fncem_color_purple = {
+    scope = country
+    is_shown = { always = yes }
+    is_valid = { 
+        tag = FNCEM
+    }
+    effect = {
+        # Remove other color variables
+        remove_variable = fncem_color_red
+        
+        # Set purple color
+        set_variable = {
+            name = fncem_color_purple
+            value = yes
+        }
+        
+        # Change country color
+        set_country_color = {
+            color = hsv360 { 280 65 70 }  # Imperial purple
+        }
+    }
+}
+
+FNR_select_fncem_color_red = {
+    scope = country
+    is_shown = { always = yes }
+    is_valid = { 
+        tag = FNCEM
+    }
+    effect = {
+        # Remove other color variables
+        remove_variable = fncem_color_purple
+        
+        # Set red color
+        set_variable = {
+            name = fncem_color_red
+            value = yes
+        }
+        
+        # Change country color
+        set_country_color = {
+            color = hsv360 { 5 80 85 }  # Revolutionary red
+        }
+    }
+}

@@ -1,0 +1,28 @@
+﻿# Advances for Arabian Empire
+
+	# age_1_traditions
+
+	# age_2_renaissance
+
+	# age_3_discovery
+
+		ARABE_united_tribes_of_arabia = {
+			age = age_3_discovery
+			potential = {
+				has_or_had_tag = ARABE
+			}
+			icon = jihad_against_the_pagans
+
+			global_pop_promotion_speed = 0.01
+			global_pop_food_consumption = -0.0005
+
+			requires = study_institutions_advance
+		}	
+
+	# age_4_reformation
+
+	# age_5_absolutism
+
+	# age_6_revolutions
+
+			

@@ -1,0 +1,23 @@
+﻿# Advances for Occitania
+
+	# age_1_traditions
+
+		OCCIT_english_french_traditions = {
+			age = age_1_traditions
+			potential = {
+				has_or_had_tag = OCCIT
+			}
+			icon = english_tradition
+
+			cultural_tradition = 0.10
+			cultures_capacity = 1
+
+			requires = written_alphabet
+		}
+
+	# age_2_renaissance
+
+	# age_3_discovery
+
+	# age_5_absolutism
+			

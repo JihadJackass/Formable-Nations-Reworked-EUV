@@ -1,0 +1,33 @@
+﻿# Advances for Islamic Caliphates (UMAYA, RSHDN, ABSID, FTMID)
+
+	# age_1_traditions
+
+	# age_2_renaissance
+
+	# age_3_discovery
+
+		UMAYA_caliphal_hegemony = {
+			age = age_3_discovery
+			potential = {
+				OR = {
+					has_or_had_tag = UMAYA
+					has_or_had_tag = RSHDN
+					has_or_had_tag = ABSID
+					has_or_had_tag = FTMID
+				}
+			}
+			icon = muslim_lineage
+
+			monthly_religious_rebel_growth = -0.015
+			monthly_towards_decentralization = 0.025
+
+			requires = pike_and_shot_advance
+		}	
+
+	# age_4_reformation	
+
+	# age_5_absolutism
+
+	# age_6_revolutions
+
+			

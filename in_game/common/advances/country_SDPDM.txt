@@ -1,0 +1,30 @@
+﻿# Advances for Sardinia–Piedmont
+
+	# age_1_traditions
+
+	# age_2_renaissance
+
+	# age_3_discovery
+
+	# age_4_reformation
+
+	# age_5_absolutism
+
+		SDPDM_house_of_savoy = {
+			age = age_5_absolutism
+			potential = {
+				has_or_had_tag = SDPDM
+			}
+			icon = ita_attractive_migration
+
+			global_defensive = 0.10
+			global_manpower_modifier = 0.025
+			monthly_legitimacy = 0.05
+			monthly_republican_tradition = 0.05
+
+			requires = military_revolution_advance
+		}	
+
+	# age_6_revolutions
+
+			
