@@ -51,7 +51,7 @@
     ELBNF_fnr_formable_trigger_1_tt: "Elbian Federation will gain access to the unique [ShowUnitDefinitionName('fnr_stahlwagen')] unit during the Age of Discovery."    
 
     # British Empire unlocks
-    BISHE_fnr_formable_trigger_1_tt: "#color_yellow The British Empire#! will gain access to five new possible reforms: [ShowGovernmentReformName('fnr_BISHE_imperial_federation')], [ShowGovernmentReformName('fnr_BISHE_accelerated_domain_status')], [ShowGovernmentReformName('fnr_BISHE_economic_development_charter')], [ShowGovernmentReformName('fnr_BISHE_racial_equality_act')], and [ShowGovernmentReformName('fnr_BISHE_racial_equality_act')]."
+    BISHE_fnr_formable_trigger_1_tt: "#color_yellow The British Empire#! will gain access to five new possible reforms: [ShowGovernmentReformName('fnr_BISHE_imperial_federation')], [ShowGovernmentReformName('fnr_BISHE_accelerated_domain_status')], [ShowGovernmentReformName('fnr_BISHE_economic_development_charter')], [ShowGovernmentReformName('fnr_BISHE_racial_equality_act')], and [ShowGovernmentReformName('fnr_BISHE_constitutional_monarchy_of_nations')]."
 
     # Poland PU path
     JGLNN_U_fnr_formable_trigger_1_tt: "As [GetCountry('POL').GetNameWithFlag] we have a Personal Union over [GetCountry('HUN').GetNameWithFlag], [GetCountry('LIT').GetNameWithFlag], and [GetCountry('BOH').GetNameWithFlag]"

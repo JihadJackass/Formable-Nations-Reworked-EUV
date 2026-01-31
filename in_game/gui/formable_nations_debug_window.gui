@@ -164,6 +164,5 @@ window = {
 			}
 		}
 		# Formable Flag Selection
-			# TODO: custom section for this, make sure it all scrolls properly
 	}
 }

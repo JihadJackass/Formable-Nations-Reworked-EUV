@@ -64,19 +64,19 @@
 
   # British Empire
   fnr_BISHE_imperial_federation: "Imperial Federation"
-  fnr_BISHE_imperial_federation_desc: "TODO"
+  fnr_BISHE_imperial_federation_desc: "The Imperial Federation movement proposes transforming our far-flung empire into a unified federal state. Colonial legislatures would send representatives to an Imperial Parliament in London, binding the dominions to Britain through shared governance rather than mere allegiance to the Crown.\n\nThis ambitious reorganization promises to harness the full strength of our territories—their manpower, resources, and loyalty—under coordinated imperial authority."
 
   fnr_BISHE_accelerated_domain_status: "Accelerated Domain Status"
-  fnr_BISHE_accelerated_domain_status_desc: "TODO"
+  fnr_BISHE_accelerated_domain_status_desc: "Rather than maintaining tight colonial control, we grant our mature settlements the status of self-governing dominions. These territories gain internal autonomy while remaining loyal members of the Empire, managing their own affairs under the Crown.\n\nThis policy recognizes that colonial populations govern themselves more effectively than distant administrators, strengthening rather than weakening imperial bonds."
 
   fnr_BISHE_economic_development_charter: "Economic Development Charter"
-  fnr_BISHE_economic_development_charter_desc: "TODO"
+  fnr_BISHE_economic_development_charter_desc: "The Empire's prosperity depends on developed, productive colonies. Through systematic investment in colonial infrastructure—railways, ports, manufactories—we transform extractive territories into thriving economic partners. As colonial production and trade expand, so too does the tax revenue flowing to the imperial treasury. Development serves both colony and metropole."
 
   fnr_BISHE_racial_equality_act: "Racial Equality Act"
-  fnr_BISHE_racial_equality_act_desc: "TODO"
+  fnr_BISHE_racial_equality_act_desc: "Centuries of imperial expansion have brought diverse peoples under British rule. This progressive legislation extends equal legal standing to all subjects regardless of origin, dismantling discriminatory laws that bred resentment and rebellion. A unified empire cannot rest on inequality. When all subjects receive fair treatment under British law, loyalty follows naturally, and the empire's cultural diversity becomes a source of strength rather than division."
 
   fnr_BISHE_constitutional_monarchy_of_nations: "Constitutional Monarchy of Nations"
-  fnr_BISHE_constitutional_monarchy_of_nations_desc: "TODO"
+  fnr_BISHE_constitutional_monarchy_of_nations_desc: "The British Empire evolves into a voluntary association of self-governing nations united by the Crown and common interests. Each dominion retains sovereignty over internal matters while cooperating on defense, trade, and foreign policy.\n\nThis Commonwealth model abandons imperial domination for partnership among equals, preserving British influence through cooperation rather than coercion. The Crown endures not as absolute monarch but as symbol of our shared heritage."
 
   # Great Scotia
   fnr_GSCTL_nova_scotian_charter: "The Nova Scotian Charter"

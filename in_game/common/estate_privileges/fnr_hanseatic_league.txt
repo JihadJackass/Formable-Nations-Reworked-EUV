@@ -52,11 +52,7 @@
 		}
 		
 		country_modifier = {
-			global_burghers_estate_power = 0.025
-			
-			trade_efficiency = 0.10
-			
-			monthly_towards_decentralization = societal_value_monthly_move
+			global_max_urban_control = 0.035
 		}
 	}
 
@@ -121,9 +117,9 @@
 		}
 		
 		country_modifier = {
-			global_burghers_estate_power = 0.025
+			global_navy_levy_size_modifier = 0.005
 			
-			trade_efficiency = 0.10
+			monthly_navy_tradition = -0.025
 			
 			monthly_towards_decentralization = societal_value_monthly_move
 		}
@@ -152,7 +148,8 @@
 		
 		country_modifier = {
 			global_burghers_estate_power = 0.025
+
+			trade_range_modifier = 0.05
 		}
 	}	
 	
-	# TODO: finish these 

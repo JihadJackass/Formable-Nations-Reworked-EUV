@@ -1,0 +1,9 @@
+##############################################
+# IMPORTANT INFORMATION REGARDING MOD ISSUES #
+##############################################
+
+[05:24:31][pdx_data_callstack.cpp:52]: Promote 'FORMABLE_COUNTRY' returned nullptr, in 'FORMABLE_COUNTRY.GetName'
+[05:24:31][pdx_data_localize_helper.cpp:286]: FetchData failed for 'FORMABLE_COUNTRY.GetName'
+[05:24:31][pdx_data_localize.cpp:151]: Data error in loc string 'FORMABLE_COUNTRY_NO'
+
+This is a pardox error, I tested it extensively, and it is not caused by Formable Nations: Reworked, and cannot be fixed from a mod as far as I am aware.

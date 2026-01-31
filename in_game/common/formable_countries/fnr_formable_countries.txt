@@ -13,7 +13,7 @@
 		# TODO: Dzungaria
 		# TODO: Kingdom of Gobi
 		# Baden-Alsace
-			BDALS = {
+			BDALS_f = {
 				level = 2
 				required_locations_fraction = 0.60
 				rule = plausible
@@ -40,7 +40,7 @@
 				areas = { alsace_area upper_rhine_area }
 			}	
 		# Arpitania - Fantasy
-			ARPIT = {
+			ARPIT_f = {
 				level = 2
 				required_locations_fraction = 0.07
 				rule = plausible
@@ -69,7 +69,7 @@
 				areas = { savoy_area piemonte_area }
 			}	
 		# Polabia - Non-historical
-			POLBA = {
+			POLBA_f = {
 				level = 2
 				required_locations_fraction = 0.35
 				rule = plausible
@@ -97,7 +97,7 @@
 				areas = { silesia_area }
 			}
 		# Bremen-Verden - Historical
-			BMNVD = {
+			BMNVD_f = {
 				level = 2
 				required_locations_fraction = 0.44
 				rule = plausible
@@ -125,7 +125,7 @@
 				areas = { lower_saxony_area }
 			}
 		# Ducal Prussia - Historical
-			DCLPR = {
+			DCLPR_f = {
 				level = 1
 				required_locations_fraction = 1
 				rule = plausible
@@ -173,7 +173,7 @@
 				areas = { prussia_area }
 			}
 		# Dacia - Non-historical
-			DACIA = {
+			DACIA_f = {
 				level = 2
 				required_locations_fraction = 0.70
 				rule = plausible
@@ -183,7 +183,7 @@
 							has_variable = fnr_nonhistorical_enabled
 							has_variable = fnr_dacia_enabled
 						}
-						NOT = { has_variable = fnr_carolingian_disabled }
+						NOT = { has_variable = fnr_dacia_disabled }
 					}
 					NOT = { 
 						OR = {
@@ -265,7 +265,7 @@
 			}
 	# Rank 3
 		# Rhineland
-			RHLND = {
+			RHLND_f = {
 				level = 3
 				required_locations_fraction = 0.60
 				rule = plausible
@@ -289,9 +289,6 @@
 						culture = culture:ripuarian_franconian
 						culture = culture:moselle_franconian
 					}
-				}
-				allow = {
-					
 				}
 				name = RHLND
 				flag = RHLND_alts
@@ -411,7 +408,7 @@
 				}
 			}
 		# Baden-Wurttemberg
-			BDWTB = {
+			BDWTB_f = {
 				level = 3
 				required_locations_fraction = 0.90
 				rule = plausible
@@ -434,8 +431,6 @@
 						culture = culture:swabian
 					}
 				}
-				allow = {
-				}
 				name = BDWTB
 				flag = BDWTB
 				adjective = BDWTB_ADJ
@@ -455,7 +450,7 @@
 				}
 			}
 		# Magna Graecia (Greek Naples)
-			MGGCA = {
+			MGGCA_f = {
 				level = 3
 				required_locations_fraction = 0.80
 				rule = plausible
@@ -503,7 +498,7 @@
 				}
 			}
 		# Swabia (Kingdom - exists in base game as tier 2)
-			SWBIA = {
+			SWBIA_f = {
 				level = 3
 				required_locations_fraction = 1
 				rule = plausible
@@ -523,8 +518,6 @@
 					}
 					culture = culture:swabian
 				}
-				allow = {
-				}
 				name = SWBIA
 				flag = SWBIA
 				adjective = SWBIA_ADJ
@@ -541,7 +534,7 @@
 				}
 			}
 		# Felvidek (North Hungary)
-			FLVDK = {
+			FLVDK_f = {
 				level = 3
 				required_locations_fraction = 0.85
 				rule = plausible
@@ -561,8 +554,6 @@
 					}
 					culture = culture:hungarian
 				}
-				allow = {
-				}
 				name = FLVDK
 				flag = FLVDK
 				adjective = FLVDK_ADJ
@@ -579,7 +570,7 @@
 				}
 			}
 		# Hephthalite Empire / White Huns
-			HPEMP = {
+			HPEMP_f = {
 				level = 3
 				required_locations_fraction = 0.85
 				rule = plausible
@@ -619,7 +610,7 @@
 				}
 			}
 		# Zapadoslavia
-			ZPDSL = {
+			ZPDSL_f = {
 				level = 3
 				required_locations_fraction = 0.95
 				rule = plausible
@@ -638,8 +629,6 @@
 						}
 					}
 				}
-				allow = {
-				}
 				name = ZPDSL
 				flag = ZPDSL
 				adjective = ZPDSL_ADJ
@@ -656,7 +645,7 @@
 				}
 			}
 		# Great Scotia
-			GSCTL = {
+			GSCTL_f = {
 				level = 3
 				required_locations_fraction = 0.95
 				rule = plausible
@@ -754,7 +743,7 @@
 				}
 			}
 		# Federal Republic of Central America - historical
-			FROCA = {
+			FROCA_f = {
 				level = 3
 				required_locations_fraction = 1
 				rule = plausible
@@ -797,7 +786,7 @@
 				}
 			}
 		# Gran Columbia
-			GCOLM = {
+			GCOLM_f = {
 				level = 3
 				required_locations_fraction = 1
 				rule = plausible
@@ -840,7 +829,7 @@
 				}
 			}
 		# Babylon - Fantasy
-			BBLON = {
+			BBLON_f = {
 				level = 3
 				required_locations_fraction = 0.90
 				rule = plausible
@@ -879,7 +868,7 @@
 				}
 			}	
 		# Serene Republic of Australia
-			SROAU = {
+			SROAU_f = {
 				level = 3
 				required_locations_fraction = 0.85
 				rule = plausible
@@ -917,7 +906,7 @@
 				}
 			}
 		# Assyria - Fantasy
-			ASYRI = {
+			ASYRI_f = {
 				level = 3
 				required_locations_fraction = 0.90
 				rule = plausible
@@ -955,7 +944,7 @@
 				}
 			}	
 		# Latin Empire - Non-historical
-			LTNEM = {
+			LTNEM_f = {
 				level = 3
 				required_locations_fraction = 0.90
 				rule = plausible
@@ -1013,7 +1002,7 @@
 		#################################
 
 		# Oklahoma - US States (Rank 3)
-			OKLAH = {
+			OKLAH_f = {
 				level = 3
 				required_locations_fraction = 1
 				rule = plausible
@@ -1061,7 +1050,7 @@
 				locations = { tulsa wewoka washita kiamichi nanatsoho tawehash wakhakukdhin headdhetanwan pasukhdin chikaskia nixgu oktahutchee gulvau hawaastatkiicu guichita nigitai kicpahat gulvau honih_hiyo_he }
 			}
 		# Alaska - Modern (Rank 3)
-			ALSKA = {
+			ALSKA_f = {
 				level = 3
 				required_locations_fraction = 0.70
 				rule = plausible
@@ -1096,7 +1085,7 @@
 				regions = { alaska_region }
 			}
 		# Missouri - US States (Rank 3)
-			MISSR = {
+			MISSR_f = {
 				level = 3
 				required_locations_fraction = 1
 				rule = plausible
@@ -1140,7 +1129,7 @@
 				areas = { missouri_area }
 			}
 		# Flordia - US States (Rank 3)
-			FLRDA = {
+			FLRDA_f = {
 				level = 3
 				required_locations_fraction = 1
 				rule = plausible
@@ -1183,7 +1172,7 @@
 				locations = { tulsa wewoka washita kiamichi nanatsoho tawehash wakhakukdhin headdhetanwan pasukhdin chikaskia nixgu oktahutchee gulvau hawaastatkiicu guichita nigitai kicpahat gulvau honih_hiyo_he }
 			}
 		# Georgia - US States (Rank 3)
-			GRGUS = {
+			GRGUS_f = {
 				level = 3
 				required_locations_fraction = 1
 				rule = plausible
@@ -1230,7 +1219,7 @@
 				areas = { georgia_us_area }
 			}
 		# Alabama - US States (Rank 3)
-			ALBMA = {
+			ALBMA_f = {
 				level = 3
 				required_locations_fraction = 1
 				rule = plausible
@@ -1267,7 +1256,7 @@
 				areas = { georgia_us_area }
 			}
 		# South Carolina - US States  (Rank 3)
-			SCRLA = {
+			SCRLA_f = {
 				level = 3
 				required_locations_fraction = 1
 				rule = plausible
@@ -1304,7 +1293,7 @@
 				areas = { south_carolina_area }
 			}
 		# North Carolina - US States  (Rank 3)
-			NCRLA = {
+			NCRLA_f = {
 				level = 3
 				required_locations_fraction = 1
 				rule = plausible
@@ -1341,7 +1330,7 @@
 				areas = { north_carolina_area }
 			}
 		# Tennessee - US States  (Rank 3)
-			TNNSS = {
+			TNNSS_f = {
 				level = 3
 				required_locations_fraction = 1
 				rule = plausible
@@ -1378,7 +1367,7 @@
 				areas = { tennessee_area }
 			}
 		# Kentucky - US States  (Rank 3)
-			KNTKY = {
+			KNTKY_f = {
 				level = 3
 				required_locations_fraction = 1
 				rule = plausible
@@ -1415,7 +1404,7 @@
 				areas = { tennessee_area }
 			}
 		# Ohio - US States  (Rank 3)
-			OHIOU = {
+			OHIOU_f = {
 				level = 3
 				required_locations_fraction = 1
 				rule = plausible
@@ -1452,7 +1441,7 @@
 				areas = { ohio_area }
 			}
 		# Virginia - US States  (Rank 3)
-			VRGNA = {
+			VRGNA_f = {
 				level = 3
 				required_locations_fraction = 1
 				rule = plausible
@@ -1489,7 +1478,7 @@
 				areas = { virginia_area }
 			}
 		# West Virginia - US States  (Rank 3)
-			WVGNA = {
+			WVGNA_f = {
 				level = 3
 				required_locations_fraction = 1
 				rule = plausible
@@ -1526,7 +1515,7 @@
 				areas = { west_virginia_area }
 			}
 		# Maryland - US States  (Rank 3)
-			MRYLN = {
+			MRYLN_f = {
 				level = 3
 				required_locations_fraction = 1
 				rule = plausible
@@ -1563,7 +1552,7 @@
 				areas = { maryland_area }
 			}
 		# Pennsylvania - US States  (Rank 3)
-			PNSLV = {
+			PNSLV_f = {
 				level = 3
 				required_locations_fraction = 1
 				rule = plausible
@@ -1600,7 +1589,7 @@
 				areas = { pennsylvania_area }
 			}
 		# New Jersey - US States  (Rank 3)
-			NWJSY = {
+			NWJSY_f = {
 				level = 3
 				required_locations_fraction = 1
 				rule = plausible
@@ -1637,7 +1626,7 @@
 				areas = { new_jersey_area }
 			}
 		# Louisiana - US States  (Rank 3)
-			LOSNA = {
+			LOSNA_f = {
 				level = 3
 				required_locations_fraction = 1
 				rule = plausible
@@ -1674,7 +1663,7 @@
 				areas = { louisiana_area }
 			}
 		# Arkansas - US States  (Rank 3)
-			ARKNS = {
+			ARKNS_f = {
 				level = 3
 				required_locations_fraction = 1
 				rule = plausible
@@ -1711,7 +1700,7 @@
 				areas = { arkansas_area }
 			}
 		# Iowa - US States  (Rank 3)
-			IOWAU = {
+			IOWAU_f = {
 				level = 3
 				required_locations_fraction = 1
 				rule = plausible
@@ -1748,7 +1737,7 @@
 				areas = { iowa_area }
 			}
 		# California - US States  (Rank 3)
-			CLFRN = {
+			CLFRN_f = {
 				level = 3
 				required_locations_fraction = 1
 				rule = plausible
@@ -1785,7 +1774,7 @@
 				areas = { california_area }
 			}
 		# Cascadia - US States  (Rank 3)
-			CSCDA = {
+			CSCDA_f = {
 				level = 3
 				required_locations_fraction = 1
 				rule = plausible
@@ -1822,7 +1811,7 @@
 				areas = { cascadia_area }
 			}
 		# Wyoming - US States  (Rank 3)
-			WYMNG = {
+			WYMNG_f = {
 				level = 3
 				required_locations_fraction = 1
 				rule = plausible
@@ -1859,7 +1848,7 @@
 				areas = { badlands_area }
 			}
 		# Texas - US States  (Rank 3)
-			TEXAS = {
+			TEXAS_f = {
 				level = 3
 				required_locations_fraction = 1
 				rule = plausible
@@ -1896,7 +1885,7 @@
 				areas = { texas_area }
 			}
 		# Michigan - US States  (Rank 3)
-			MCHGN = {
+			MCHGN_f = {
 				level = 3
 				required_locations_fraction = 1
 				rule = plausible
@@ -1933,7 +1922,7 @@
 				areas = { michigan_area }
 			}
 		# Wisconsin - US States  (Rank 3)
-			WSCNS = {
+			WSCNS_f = {
 				level = 3
 				required_locations_fraction = 1
 				rule = plausible
@@ -1970,7 +1959,7 @@
 				areas = { wisconsin_area }
 			}
 		# Washington - US States  (Rank 3)
-			WSHNT = {
+			WSHNT_f = {
 				level = 3
 				required_locations_fraction = 1
 				rule = plausible
@@ -2007,7 +1996,7 @@
 				provinces = { olympic_province cascadia_province }
 			}
 		# Oregon - US States  (Rank 3)
-			OREGN = {
+			OREGN_f = {
 				level = 3
 				required_locations_fraction = 1
 				rule = plausible
@@ -2071,7 +2060,7 @@
 		#######################
 
 		# First Mexican Empire - Modern
-			MEXCO = {
+			MEXCO_f = {
 				level = 4
 				required_locations_fraction = 0.67
 				rule = plausible
@@ -2112,7 +2101,7 @@
 		#####################
 			
 		# Brandenburg-Prussia - Historical
-			BNDPR = {
+			BNDPR_f = {
 				level = 2
 				required_locations_fraction = 1
 				rule = plausible
@@ -2140,8 +2129,16 @@
 					at_war = no
 					OR = { # Is a subject of Poland/is overlord of both, or is apart of the HRE
 						OR = {
-							c:TEU = { is_subject_of = c:BRA }
-							c:BRA = { is_subject_of = c:TEU }
+							if = {
+								limit = {
+									AND = {
+										tag_exists = TEU	
+										tag_exists = BRA	
+									}
+								}
+								c:TEU = { is_subject_of = c:BRA }
+								c:BRA = { is_subject_of = c:TEU }								
+							}
 						}
 						is_member_of_international_organization = international_organization:hre	
 					}
@@ -2159,7 +2156,7 @@
 				areas = { prussia_area brandenburg_area }
 			}
 		# Poland-Hungary - althistory
-			PLHUN = {
+			PLHUN_f = {
 				level = 3
 				required_locations_fraction = 0.50
 				rule = plausible
@@ -2211,7 +2208,7 @@
 				provinces = { bresta_province }
 			}
 		# Hungary-Romania - althistory
-			HNRMN = {
+			HNRMN_f = {
 				level = 3
 				required_locations_fraction = 0.50
 				rule = plausible
@@ -2263,7 +2260,7 @@
 				provinces = { bresta_province }
 			}	
 		# Camelot - Fantasy
-			CMLOT = {
+			CMLOT_f = {
 				level = 3
 				required_locations_fraction = 0.65
 				rule = plausible
@@ -2294,7 +2291,7 @@
 				areas = { west_country_area }
 			}	
 		# Great Moravia - historical
-			GMORV = {
+			GMORV_f = {
 				level = 3
 				required_locations_fraction = 0.85
 				rule = plausible
@@ -2366,7 +2363,7 @@
 				}
 			}	
 		# Gothia - non-historical
-			GOTIA = {
+			GOTIA_f = {
 				level = 3
 				required_locations_fraction = 0.65
 				rule = plausible
@@ -2397,7 +2394,7 @@
 				areas = { crimea_area yedisan_area }
 			}		
 		# Basque Country - Non-historical
-			BASQU = {
+			BASQU_f = {
 				level = 3
 				required_locations_fraction = 0.65
 				rule = plausible
@@ -2430,7 +2427,7 @@
 				locations = { orthez dax tosse }
 			}	
 		# Balochistan - Modern
-			BALCH = {
+			BALCH_f = {
 				level = 3
 				required_locations_fraction = 0.60
 				rule = plausible
@@ -2458,7 +2455,7 @@
 				areas = { baluchistan_area }
 			}
 		# Great Sorbia - Non-Historical
-			GSORB = {
+			GSORB_f = {
 				level = 3
 				required_locations_fraction = 0.60
 				rule = plausible
@@ -2490,7 +2487,7 @@
 				areas = { franconia_area upper_saxony_area }
 			}
 		# Sorbic Kingdom - Non-Historical
-			KSORB = {
+			KSORB_f = {
 				level = 3
 				required_locations_fraction = 0.60
 				rule = plausible
@@ -2521,7 +2518,7 @@
 				}
 			}
 		# Kingdom of Hanover - Historical
-			KOFHN = {
+			KOFHN_f = {
 				level = 3
 				required_locations_fraction = 0.76 # 0.46
 				rule = plausible	
@@ -2549,7 +2546,7 @@
 				areas = { lower_saxony_area }
 			}
 		# Polynesia - Non-Historical
-			POLNE = {
+			POLNE_f = {
 				level = 3
 				required_locations_fraction = 0.26
 				rule = plausible
@@ -2600,7 +2597,7 @@
 				}
 			}
 		# Hawaii - Non-Historical
-			HAWAI = {
+			HAWAI_f = {
 				level = 3
 				required_locations_fraction = 0.90
 				rule = plausible
@@ -2631,7 +2628,7 @@
 				areas = { hawaii_area }
 			}
 		# Yugoslavia - Modern
-			YGOSL = {
+			YGOSL_f = {
 				level = 3
 				required_locations_fraction = 0.80
 				rule = plausible
@@ -2673,7 +2670,7 @@
 				}
 			}	
 		# Baltic States - Alt-Historical
-			BLTST = {
+			BLTST_f = {
 				level = 3
 				required_locations_fraction = 0.80
 				rule = plausible
@@ -2702,7 +2699,7 @@
 				areas = { baltic_area }
 			}
 		# Alsace-Lorraine - Historical
-			ALSLO = {
+			ALSLO_f = {
 				level = 3
 				required_locations_fraction = 0.60
 				rule = plausible
@@ -2733,7 +2730,7 @@
 				areas = { lorraine_area alsace_area }
 			}	
 		# Belarus - Modern
-			BLRUS = {
+			BLRUS_f = {
 				level = 3
 				required_locations_fraction = 0.85 # 0.85
 				rule = plausible
@@ -2765,7 +2762,7 @@
 				provinces = { breslauja_province svir_province }
 			}
 		# Belgium - Historical
-			BLGUM = {
+			BLGUM_f = {
 				level = 3
 				required_locations_fraction = 0.44
 				rule = plausible	
@@ -2797,7 +2794,7 @@
 				areas = { brabant_area flanders_area }
 			}
 		# Benelux - Non-Historical
-			BNLUX = {
+			BNLUX_f = {
 				level = 3
 				required_locations_fraction = 0.44
 				rule = plausible
@@ -2828,7 +2825,7 @@
 				areas = { brabant_area flanders_area holland_area friesland_area }
 			}
 		# Austria-Bavaria - Non-Historical
-			ASTBV = {
+			ASTBV_f = {
 				level = 3
 				required_locations_fraction = 0.60
 				rule = plausible
@@ -2902,7 +2899,7 @@
 				}
 			}	
 		# Cisalpina - Historical
-			CSPNA = {
+			CSPNA_f = {
 				level = 3
 				required_locations_fraction = 0.80
 				rule = plausible
@@ -2933,7 +2930,7 @@
 				areas = { lombardy_area emilia_area }
 			}
 		# Commonwealth of England - Historical
-			ENGCM = {
+			ENGCM_f = {
 				level = 3
 				required_locations_fraction = 0.99
 				rule = plausible
@@ -2970,7 +2967,7 @@
 				}
 			}
 		# Czechoslovakia - Modern
-			CZSLO = {
+			CZSLO_f = {
 				level = 3
 				required_locations_fraction = 1
 				rule = plausible
@@ -3002,7 +2999,7 @@
 				areas = { bohemia_area moravia_area slovakia_area }
 			}
 		# Ukraine - Modern
-			UKRNE = {
+			UKRNE_f = {
 				level = 3
 				required_locations_fraction = 0.75
 				rule = plausible
@@ -3043,7 +3040,7 @@
 				regions = { ruthenia_region }
 			}
 		# Donetsk Peoples Republic - Modern
-			DNTPR = {
+			DNTPR_f = {
 				level = 3
 				required_locations_fraction = 0.90
 				rule = plausible
@@ -3075,7 +3072,7 @@
 				regions = { steppes_region ruthenia_region }
 			}
 		# Luhansk Peoples Republic - Modern
-			LUHPR = {
+			LUHPR_f = {
 				level = 3
 				required_locations_fraction = 0.90
 				rule = plausible
@@ -3107,7 +3104,7 @@
 				regions = { steppes_region ruthenia_region }
 			}	
 		# Emilia-Romagna - Alt-history
-			EMLRO = {
+			EMLRO_f = {
 				level = 3
 				required_locations_fraction = 0.80
 				rule = plausible
@@ -3135,7 +3132,7 @@
 				areas = { emilia_area }
 			}
 		# Hesse-Nassau - Alt-history
-			HESNA = {
+			HESNA_f = {
 				level = 3
 				required_locations_fraction = 0.80
 				rule = plausible
@@ -3164,7 +3161,7 @@
 				provinces = { sauerland_province }
 			}
 		# Hanseatic League - Alt-history
-			HNSLG = {
+			HNSLG_f = {
 				level = 3
 				required_locations_fraction = 0.04
 				rule = plausible
@@ -3271,7 +3268,7 @@
 				}
 			}
 		# Kalmar Union - Historical
-			KLMUN = {
+			KLMUN_f = {
 				level = 3
 				required_locations_fraction = 0.75
 				rule = plausible
@@ -3293,18 +3290,39 @@
 					}
 					culture = { has_culture_group = culture_group:scandinavian_group }
 				}
-				allow = {
-				}
 				name = KLMUN
 				flag = KLMUN
 				adjective = KLMUN_ADJ
 				tag = KLMUN
 				color = map_KLMUN
-				regions = { scandinavian_region }
-				areas = { iceland_area }
+				areas = {
+					skaneland_area
+					gotaland_area 
+					svealand_area 
+					finland_area
+					nord_norge_area
+					syd_norge_area
+					iceland_area					
+					denmark_area					
+					holstein_area					
+				}
+				provinces = {
+					halsingland_province
+					angermanland_province
+					vasterbotten_province
+				}
+				locations = {
+					simo
+					ranua
+					kuivaniemi
+					utajarvi
+					uleaborg
+					brahestad
+					siikalatva
+				}
 			}
 		# Lombardy - Alt-history
-			LMBDY = {
+			LMBDY_f = {
 				level = 3
 				required_locations_fraction = 0.90
 				rule = plausible
@@ -3332,7 +3350,7 @@
 				areas = { lombardy_area }
 			}
 		# Sardinia–Piedmont - Historical
-			SDPDM = {
+			SDPDM_f = {
 				level = 3
 				required_locations_fraction = 0.85
 				rule = plausible
@@ -3362,7 +3380,7 @@
 				areas = { lombardy_area piemonte_area sardinia_area  }
 			}
 		# North Italian Confederation = alt-history
-			NITAC = {
+			NITAC_f = {
 				level = 3
 				required_locations_fraction = 0.90
 				rule = plausible
@@ -3390,7 +3408,7 @@
 				areas = { lombardy_area emilia_area piemonte_area veneto_area tuscany_area liguria_area }
 			}
 		# South Italian Confederation
-			SITAC = {
+			SITAC_f = {
 				level = 3
 				required_locations_fraction = 0.90
 				rule = plausible
@@ -3418,7 +3436,7 @@
 				areas = { marche_area lazio_area abruzzo_area campania_area apulia_area basilicata_area sicily_area sardinia_area }
 			}
 		# Lombardy-Venetia - Historical
-			LMBYV = {
+			LMBYV_f = {
 				level = 3
 				required_locations_fraction = 0.90
 				rule = plausible
@@ -3446,7 +3464,7 @@
 				areas = { lombardy_area veneto_area }
 			}
 		# Lower Saxony - Alt-history
-			LWSXY = {
+			LWSXY_f = {
 				level = 3
 				required_locations_fraction = 0.80 # 0.80
 				rule = plausible
@@ -3474,8 +3492,8 @@
 				areas = { lower_saxony_area }
 			}
 		# Malta - Modern
-			# PLANNEDTODO: add knights of malta
-			MALTA = {
+			# TODO: add knights of malta
+			MALTA_f = {
 				level = 3
 				required_locations_fraction = 1
 				rule = plausible	
@@ -3520,7 +3538,7 @@
 				locations = { malta }
 			}
 		# Mercia - Alt-history
-			MRCIA = {
+			MRCIA_f = {
 				level = 3
 				required_locations_fraction = 0.95
 				rule = plausible
@@ -3553,7 +3571,7 @@
 				areas = { midlands_area }
 			}
 		# Sweden-Norway - History
-			SDNNW = {
+			SDNNW_f = {
 				level = 3
 				required_locations_fraction = 0.80 # 0.80
 				rule = plausible
@@ -3588,7 +3606,7 @@
 				}
 			}
 		# Turkey - Modern
-			TURKY = {
+			TURKY_f = {
 				level = 5
 				required_locations_fraction = 0.85 # 0.85
 				rule = plausible
@@ -3628,7 +3646,7 @@
 				}
 			}
 		# Caucasia - Alt-history
-			CCASA = {
+			CCASA_f = {
 				level = 3
 				required_locations_fraction = 0.68 # 0.68
 				rule = plausible
@@ -3659,7 +3677,7 @@
 				regions = { caucasus_region }
 			}
 		# Korea - Modern
-			KOREA = {
+			KOREA_f = {
 				level = 3
 				required_locations_fraction = 1
 				rule = plausible
@@ -3691,7 +3709,7 @@
 				regions = { korea_region }
 			}
 		# Afghanistan - Modern
-			AFGAN = {
+			AFGAN_f = {
 				level = 3
 				required_locations_fraction = 0.80
 				rule = plausible
@@ -3722,7 +3740,7 @@
 				areas = { sistan_area baluchistan_area }
 			}
 		# Mingrelia - Historical
-			MNGRL = {
+			MNGRL_f = {
 				level = 3
 				required_locations_fraction = 0.68
 				rule = plausible
@@ -3750,7 +3768,7 @@
 				regions = { caucasus_region }
 			}
 		# North Korea - Modern
-			NKORA = {
+			NKORA_f = {
 				level = 3
 				required_locations_fraction = 1
 				rule = plausible
@@ -3778,7 +3796,7 @@
 				areas = { gwanseo_area haeseo_area gwanbuk_area }
 			}
 		# South Korea - Modern
-			SKORA = {
+			SKORA_f = {
 				level = 3
 				required_locations_fraction = 1
 				rule = plausible
@@ -3809,7 +3827,7 @@
 				areas = { honam_area hoseo_area yeongnam_area gyeonggi_area gwandong_area }
 			}
 		# Brunei Darussalam
-			BNDSM = {
+			BNDSM_f = {
 				level = 3
 				required_locations_fraction = 0.90
 				rule = plausible
@@ -3841,7 +3859,7 @@
 				}
 			}
 		# Philippines - Modern
-			FILPN = {
+			FILPN_f = {
 				level = 3
 				required_locations_fraction = 0.67
 				rule = plausible
@@ -3893,7 +3911,7 @@
 				areas = { luzon_area visayas_area mindanao_area }
 			}
 		# Philippines (Native variant) - Historical 
-			FLPNN = {
+			FLPNN_f = {
 				level = 3
 				required_locations_fraction = 0.67
 				rule = plausible
@@ -3940,7 +3958,7 @@
 				areas = { luzon_area visayas_area mindanao_area }
 			}
 		# Saudi Arabia - Modern
-			SAUDI = {
+			SAUDI_f = {
 				level = 3
 				required_locations_fraction = 0.70
 				rule = plausible
@@ -3968,7 +3986,7 @@
 				regions = { arabia_region }
 			}
 		# Sulawesi - Alt-history
-			SULAW = {
+			SULAW_f = {
 				level = 3
 				required_locations_fraction = 0.75
 				rule = plausible
@@ -3999,7 +4017,7 @@
 				areas = { celebes_area }
 			}
 		# Taiping - Non-historical
-			TPING = {
+			TPING_f = {
 				level = 3
 				required_locations_fraction = 0.51
 				rule = plausible
@@ -4068,7 +4086,7 @@
 				}
 			}
 		# Taliban - Modern
-			TLBAN = {
+			TLBAN_f = {
 				level = 3
 				required_locations_fraction = 0.85
 				rule = plausible
@@ -4100,7 +4118,7 @@
 
 			}
 		# Tengoku - Fantasy
-			TNGKU = {
+			TNGKU_f = {
 				level = 3
 				required_locations_fraction = 0.90
 				rule = plausible
@@ -4129,7 +4147,7 @@
 				regions = { japan_region }
 			}
 		# United Arab Republic - Modern
-			UNARR = {
+			UNARR_f = {
 				level = 3
 				required_locations_fraction = 0.90
 				rule = plausible
@@ -4163,7 +4181,7 @@
 				provinces = { hims_province halab_province antakya_province }
 			}
 		# Vietnam - Modern
-			VTNAM = {
+			VTNAM_f = {
 				level = 3
 				required_locations_fraction = 0.80
 				rule = plausible
@@ -4194,7 +4212,7 @@
 				areas = { red_river_area champa_area red_river_delta_area }
 			}
 		# Burma - Modern
-			BURMA = {
+			BURMA_f = {
 				level = 3
 				required_locations_fraction = 0.60
 				rule = plausible
@@ -4222,8 +4240,8 @@
 				areas = { irrawady_area hill_area kachin_area arakhan_area irrawady_delta_area shan_highland_area }
 			}
 		# Ceylon - Modern
-			# PLANNEDTODO: add sri lanka
-			CYLON = {
+			# TODO: Sri Lanka
+			CYLON_f = {
 				level = 3
 				required_locations_fraction = 0.95
 				rule = plausible
@@ -4254,7 +4272,7 @@
 				areas = { sailan_area }
 			}
 		# Chad - Modern
-			ACHAD = {
+			ACHAD_f = {
 				level = 3
 				required_locations_fraction = 0.95
 				rule = plausible
@@ -4282,7 +4300,7 @@
 				areas = { kanem_area }
 			}
 		# Madagascar - modern
-			MDGSC = {
+			MDGSC_f = {
 				level = 3
 				required_locations_fraction = 0.90
 				rule = plausible
@@ -4310,7 +4328,7 @@
 				regions = { madagascar_region }
 			}
 		# Rhodesia - Controversial
-			RHDSA = {
+			RHDSA_f = {
 				level = 3
 				required_locations_fraction = 0.40
 				rule = plausible
@@ -4340,7 +4358,7 @@
 		# Zimbabwe - Modern (TODO)
 			# TODO
 		# Manchuria - Non-historical
-			MNCRA = {
+			MNCRA_f = {
 				level = 3
 				required_locations_fraction = 0.40
 				rule = plausible
@@ -4373,7 +4391,7 @@
 		# Kingdom of Jerusalem
 
 		# Beta Israel
-			BISRA = {
+			BISRA_f = {
 				level = 3
 				required_locations_fraction = 0.85
 				rule = plausible
@@ -4402,7 +4420,7 @@
 				form_effect = { }
 			}
 		# Israel - Controversial
-			ISREL = {
+			ISREL_f = {
 				level = 3
 				required_locations_fraction = 0.40
 				rule = plausible
@@ -4439,7 +4457,7 @@
 				form_effect = { }
 			}
 		# Palestine - Controversial
-			PLSTN = {
+			PLSTN_f = {
 				level = 3
 				required_locations_fraction = 0.40
 				rule = plausible
@@ -4470,7 +4488,7 @@
 				areas = { levant_area }
 			}
 		# Alpland - Fantasy
-			ALPLN = {
+			ALPLN_f = {
 				level = 3
 				required_locations_fraction = 0.65
 				rule = plausible
@@ -4515,7 +4533,7 @@
 				}
 			}
 		# The Rhine Confederation - Historical
-			RCONF = {
+			RCONF_f = {
 				level = 3
 				required_locations_fraction = 1
 				rule = plausible
@@ -4616,7 +4634,7 @@
 				}
 			}
 		# Kingdom of Aquitaine - Fantasy
-			AQUIT = {
+			AQUIT_f = {
 				level = 3
 				required_locations_fraction = 0.65
 				rule = plausible
@@ -4644,14 +4662,15 @@
 				areas = { gascony_area guyenne_area limousin_province poitou_area }
 			}
 		# Occitania - Fantasy
-			OCCIT = {
+			OCCIT_f = {
 				level = 3
 				required_locations_fraction = 0.35
 				rule = plausible
 				potential = {
 					AND = {
 						OR = {
-							has_variable = fnr_fantasy_enabled
+							#has_variable = fnr_fantasy_enabled TODO: FOR TESTING
+							has_variable = fnr_historical_enabled
 							has_variable = fnr_occitania_enabled
 						}
 						NOT = { has_variable = fnr_occitania_disabled }
@@ -4661,8 +4680,12 @@
 							tag = OCCIT
 							tag_exists = OCCIT
 						}
+						tag = FRA
+						tag = ENG
 					}
-					culture = { has_culture_group = culture_group:french_group }
+					OR = {
+						culture = { has_culture_group = culture_group:french_group }
+					}
 				}
 				name = OCCIT
 				flag = OCCIT
@@ -4672,7 +4695,7 @@
 				areas = { gascony_area guyenne_area languedoc_area }
 			}
 		# Balkan League - Alt-history
-			BLKLG = {
+			BLKLG_f = {
 				level = 3
 				required_locations_fraction = 0.50
 				rule = plausible
@@ -4703,9 +4726,9 @@
 				areas = { bosnia_area slavonia_area croatia_area serbia_area albania_area macedonia_area bulgaria_area thrace_area northern_greece_area }
 			}
 		# Illyria - Fantasy
-			# PLANNEDTODO: Illyria (non-napoleonic kingdom) 
-			# PLANNEDTODO: illyrian kingdom (nonhistorical)
-			ILYRA = {
+			# TODO: Illyria (non-napoleonic kingdom) 
+			# TODO: illyrian kingdom (nonhistorical)
+			ILYRA_f = {
 				level = 3
 				required_locations_fraction = 0.50 # 0.50
 				rule = plausible
@@ -4736,8 +4759,8 @@
 				locations = { kruje debar skopje tirana durres }
 			}
 		# Bosnia-Serbia - Controversial 
-			# PLANNEDTODO: add republica srbska
-			BSSER = {
+			# TODO: add republica srbska
+			BSSER_f = {
 				level = 3
 				required_locations_fraction = 0.75
 				rule = plausible
@@ -4766,7 +4789,7 @@
 				areas = { bosnia_area serbia_area }
 			}	
 		# Cordoba - Non-historical
-			CDOBA = { 
+			CDOBA_f = {
 				level = 3
 				required_locations_fraction = 0.44
 				rule = plausible
@@ -4776,7 +4799,7 @@
 							has_variable = fnr_nonhistorical_enabled
 							has_variable = fnr_cordoba_enabled
 						}
-						NOT = { has_variable = fnr_carolingian_disabled }
+						NOT = { has_variable = fnr_cordoba_disabled }
 					} 
 					NOT = { 
 						OR = {
@@ -4798,7 +4821,7 @@
 				areas = { andalusia_area granada_area extremadura_area murcia_area }
 			}
 		# East Slavia - Alt-history
-			ESLAV = {
+			ESLAV_f = {
 				level = 3
 				required_locations_fraction = 0.10
 				rule = plausible
@@ -4808,7 +4831,7 @@
 							has_variable = fnr_althistory_enabled
 							has_variable = fnr_eastslavia_enabled
 						}
-						NOT = { has_variable = fnr_carolingian_disabled }
+						NOT = { has_variable = fnr_eastslavia_disabled }
 					}
 					NOT = { 
 						OR = {
@@ -4842,7 +4865,7 @@
 				}
 			}
 		# Frieslande - Alt-history (Germanized Dutch basically)
-			FIESL = {
+			FIESL_f = {
 				level = 3
 				required_locations_fraction = 1
 				rule = plausible
@@ -4870,7 +4893,7 @@
 				areas = { friesland_area }
 			}
 		# Kingdom of God - Fantasy #
-			KOGOD = {
+			KOGOD_f = {
 				level = 3
 				required_locations_fraction = 0.35
 				rule = plausible
@@ -4903,7 +4926,7 @@
 				regions = { italy_region }
 			}
 		# Langobards - Non-historical
-			LNGBD = {
+			LNGBD_f = {
 				level = 3
 				required_locations_fraction = 0.45
 				rule = plausible
@@ -4931,7 +4954,7 @@
 				regions = { italy_region }
 			}	
 		# Macedonia - Non-historical
-			MACED = {
+			MACED_f = {
 				level = 3
 				required_locations_fraction = 0.75
 				rule = plausible
@@ -4957,7 +4980,6 @@
 				allow = {
 					not = { tag = BYZ }
 				}
-
 				name = MACED
 				flag = MACED
 				adjective = MACED_ADJ
@@ -4967,7 +4989,7 @@
 				areas = { macedonia_area northern_greece_area }
 			}
 		# Pontus - Non-historical
-			PONTU = {
+			PONTU_f = {
 				level = 3
 				required_locations_fraction = 0.75
 				rule = plausible
@@ -4987,16 +5009,11 @@
 					}
 					culture = culture:pontic_greek_culture
 				}
-
-				allow = {
-				}
-
 				name = PONTU
 				flag = PONTU
 				adjective = PONTU_ADJ
 				tag = PONTU
 				color = map_PONTU
-				
 				areas = {
 					pontus_area
 					crimea_area
@@ -5005,7 +5022,7 @@
 			}	
 	# Rank 4
 		# Sassanids - Fantasy
-			SSNID = {
+			SSNID_f = {
 				level = 4
 				required_locations_fraction = 0.1
 				rule = plausible
@@ -5054,7 +5071,7 @@
 				}
 			}	
 		# North German Confederation - Historical
-			NGCFD = {
+			NGCFD_f = {
 				level = 4
 				required_locations_fraction = 0.85 # 0.85
 				rule = plausible
@@ -5113,7 +5130,7 @@
 				}
 			}
 		# South German Confederation - Historical
-			SGCFD = {
+			SGCFD_f = {
 				level = 4
 				required_locations_fraction = 0.80 # 0.80
 				rule = plausible
@@ -5169,7 +5186,7 @@
 				}
 			}
 		# Elbian Federation
-			ELBNF = {
+			ELBNF_f = {
 				level = 4
 				required_locations_fraction = 0.1
 				rule = plausible
@@ -5208,7 +5225,7 @@
 				}
 			}		
 		# Hyperborea
-			HPBRA = {
+			HPBRA_f = {
 				level = 4
 				required_locations_fraction = 0.65
 				rule = plausible
@@ -5241,7 +5258,7 @@
 				}
 			}
 		# Assyrian Empire - Fantasy
-			ASYRE = {
+			ASYRE_f = {
 				level = 4
 				required_locations_fraction = 0.90
 				rule = plausible
@@ -5284,7 +5301,7 @@
 				}
 			}
 		# Japan - Modern
-			JAPAN = {
+			JAPAN_f = {
 				level = 4
 				required_locations_fraction = 0.90
 				rule = plausible
@@ -5312,7 +5329,7 @@
 				regions = { japan_region }
 			}	
 		# Angevin Empire - Alt history
-			AGEVN = {
+			AGEVN_f = {
 				level = 4
 				required_locations_fraction = 0.65
 				rule = plausible
@@ -5386,7 +5403,7 @@
 				}
 			}
 		# Austrian Empire - Historical
-			AUSEM = {
+			AUSEM_f = {
 				level = 4
 				required_locations_fraction = 0.75
 				rule = plausible
@@ -5453,7 +5470,7 @@
 				}
 			}
 		# Bulgaria - Modern
-			BLGEM = {
+			BLGEM_f = {
 				level = 4
 				required_locations_fraction = 0.60
 				rule = plausible
@@ -5493,7 +5510,7 @@
 		# Third Bulgarian Empire (TODO)
 			# TODO
 		# French Empire - Historical
-			FNCEM = {
+			FNCEM_f = {
 				level = 4
 				required_locations_fraction = 0.75
 				rule = plausible
@@ -5532,7 +5549,7 @@
 				}
 			}
 		# German Empire - Historical
-			GMNEM = {
+			GMNEM_f = {
 				level = 5
 				required_locations_fraction = 0.85 # 0.85
 				rule = plausible
@@ -5585,18 +5602,63 @@
 					custom_tooltip = {
 						text = GMNEM_f_tt2
 					}
-					# Add cores to Alsace-Lorraine (TODO)
+					# Add cores to Alsace-Lorraine
+						if = {
+							limit = { location:bitche = { NOT = { is_core_of = ROOT } }
+							}
+							location:bitche = { add_core = ROOT }
+						}
+						if = {
+							limit = { location:sarreguemines = { NOT = { is_core_of = ROOT } }
+							}
+							location:sarreguemines = { add_core = ROOT }
+						}
+						if = {
+							limit = { location:saarwerden = { NOT = { is_core_of = ROOT } }
+							}
+							location:saarwerden = { add_core = ROOT }
+						}
+						if = {
+							limit = { location:sarrebourg = { NOT = { is_core_of = ROOT } }
+							}
+							location:sarrebourg = { add_core = ROOT }
+						}
+						if = {
+							limit = { location:sarrebourg = { NOT = { is_core_of = ROOT } }
+							}
+							location:sarrebourg = { add_core = ROOT }
+						}
+						if = {
+							limit = { location:vic_sur_seille = { NOT = { is_core_of = ROOT } }
+							}
+							location:vic_sur_seille = { add_core = ROOT }
+						}
+						if = {
+							limit = { location:morhange = { NOT = { is_core_of = ROOT } }
+							}
+							location:morhange = { add_core = ROOT }
+						}
+						if = {
+							limit = { location:wallerfangen = { NOT = { is_core_of = ROOT } }
+							}
+							location:wallerfangen = { add_core = ROOT }
+						}
+						if = {
+							limit = { location:metz = { NOT = { is_core_of = ROOT } }
+							}
+							location:metz = { add_core = ROOT }
+						}
 					# Add cores to Poland
-					hidden_effect = {
-						every_area = {
-							limit = { this = area:greater_poland_area }
-							every_location_in_area = { add_core = root }
+						hidden_effect = {
+							every_area = {
+								limit = { this = area:greater_poland_area }
+								every_location_in_area = { add_core = root }
+							}
+							every_area = {
+								limit = { this = area:central_poland_area }
+								every_location_in_area = { add_core = root }
+							}
 						}
-						every_area = {
-							limit = { this = area:central_poland_area }
-							every_location_in_area = { add_core = root }
-						}
-					}
 					custom_tooltip = {
 						text = GMNEM_f_tt
 					}
@@ -5618,7 +5680,7 @@
 				}
 			}
 		# German Reich - Controversial
-			GMNRE = {
+			GMNRE_f = {
 				level = 4
 				required_locations_fraction = 0.60
 				rule = plausible
@@ -5652,7 +5714,7 @@
 				}
 			}
 		# Nazi Germany - Controversial
-			NAZIG = {
+			NAZIG_f = {
 				level = 5
 				required_locations_fraction = 0.70
 				rule = plausible
@@ -5686,7 +5748,7 @@
 				}
 			}
 		# Italian Empire - Modern
-			ITNEM = {
+			ITNEM_f = {
 				level = 4
 				required_locations_fraction = 0.90
 				rule = plausible
@@ -5722,7 +5784,7 @@
 				}
 			}	
 		# Kyivan Rus - Non-historical
-			KYVRU = {
+			KYVRU_f = {
 				level = 4
 				required_locations_fraction = 0.65
 				rule = plausible
@@ -5764,7 +5826,7 @@
 				areas = { lithuania_area }
 			}
 		# Russian Empire - Historical
-			RUSEM = {
+			RUSEM_f = {
 				level = 4
 				required_locations_fraction = 0.88
 				rule = plausible
@@ -5807,7 +5869,7 @@
 				}
 			}
 		# Russian Federation - Modern
-			RUFED = {
+			RUFED_f = {
 				level = 4
 				required_locations_fraction = 0.85
 				rule = plausible
@@ -5850,7 +5912,7 @@
 				}
 			}
 		# Serbian Empire - Historical
-			SRBEM = {
+			SRBEM_f = {
 				level = 4
 				required_locations_fraction = 0.60
 				rule = plausible
@@ -5884,9 +5946,9 @@
 				}
 			}
 		# Swedish Empire - Historical	
-			SWDEM = {
+			SWDEM_f = {
 				level = 4
-				required_locations_fraction = 0.85
+				required_locations_fraction = 0.95
 				rule = plausible
 				potential = {
 					AND = {
@@ -5912,7 +5974,30 @@
 				adjective = SWDEM_ADJ
 				tag = SWDEM
 				color = map_SWDEM
-				regions = { scandinavian_region }
+				areas = { 
+					skaneland_area
+					gotaland_area 
+					svealand_area 
+					norrland_area 
+					finland_area
+				}
+				provinces = {
+					lopskaya_province
+					vodskaya_province
+					estonia_province
+					rotalia_province
+					north_livonia_province
+					tartu_province
+					inner_livonia_province
+					south_livonia_province
+					vorpommern_province
+					elbmarch_province
+					jamtland_province
+					korela_province
+				}
+				locations = {
+					wismar
+				}
 				form_effect = {
 					if = {
 						limit = { country_rank_level < 4 }
@@ -5921,7 +6006,7 @@
 				}
 			}
 		# The United Kingdom - Modern
-			UKKDM = {
+			UKKDM_f = {
 				level = 4
 				required_locations_fraction = 0.75
 				rule = plausible
@@ -5949,7 +6034,7 @@
 				regions = { great_britain_region }
 			}
 		# Wendish Empire - Alt-history
-			WNDEM = {
+			WNDEM_f = {
 				level = 4
 				required_locations_fraction = 0.70
 				rule = plausible
@@ -5985,7 +6070,7 @@
 				}
 			}
 		# Armenian Empire - Non-historical
-			AMNAE = {
+			AMNAE_f = {
 				level = 4
 				required_locations_fraction = 0.75
 				rule = plausible
@@ -6019,7 +6104,7 @@
 				}
 			}
 		# Arabian Empire - Fantasy
-			ARABE = {
+			ARABE_f = {
 				level = 4
 				required_locations_fraction = 0.75
 				rule = plausible
@@ -6056,7 +6141,7 @@
 				}
 			}
 		# Goguryeo - Non-history
-			GGURY = {
+			GGURY_f = {
 				level = 4
 				required_locations_fraction = 0.95
 				rule = plausible
@@ -6087,7 +6172,7 @@
 				regions = { korea_region }
 			}
 		# Himalayan Empire - Fantasy
-			HMLAY = {
+			HMLAY_f = {
 				level = 4
 				required_locations_fraction = 0.35
 				rule = plausible
@@ -6127,7 +6212,7 @@
 				}
 			}
 		# Omani Empire - Historial
-			OMANE = {
+			OMANE_f = {
 				level = 4
 				required_locations_fraction = 1
 				rule = plausible
@@ -6169,7 +6254,7 @@
 				}
 			}
 		# Tibetan Empire - Non-historical
-			TBETE = {
+			TBETE_f = {
 				level = 4
 				required_locations_fraction = 0.80
 				rule = plausible
@@ -6203,7 +6288,7 @@
 				}
 			}
 		# Chola Empire - Non-historical
-			CHOLA = {
+			CHOLA_f = {
 				level = 4
 				required_locations_fraction = 0.30
 				rule = plausible
@@ -6237,7 +6322,7 @@
 				}
 			}
 		# Abyssinia - Alt-history
-			ABYSA = {
+			ABYSA_f = {
 				level = 4
 				required_locations_fraction = 0.95
 				rule = plausible
@@ -6268,7 +6353,7 @@
 				regions = { ethiopia_region }
 			}
 		# Adriatic Empire - Fantasy
-			ADREM = {
+			ADREM_f = {
 				level = 4
 				required_locations_fraction = 0.65
 				rule = plausible
@@ -6314,7 +6399,7 @@
 				}
 			}	
 		# Anglo-Dutch Union - Fantasy
-			ANDUH = {
+			ANDUH_f = {
 				level = 4
 				required_locations_fraction = 0.75
 				rule = plausible
@@ -6336,9 +6421,6 @@
 						culture = culture:english
 						culture = culture:low_franconian
 					}
-				}
-				allow = {
-					#dynasty = "orange_nassau" 
 				}
 				name = ANDUH
 				flag = ANDUH
@@ -6362,7 +6444,7 @@
 				}
 			}
 		# Catholica Russica - Fantasy
-			CATRU = {
+			CATRU_f = {
 				level = 4
 				required_locations_fraction = 0.5
 				rule = plausible
@@ -6406,7 +6488,7 @@
 				}
 			}
 		# Celtic Union - Alt-history
-			CTUNN = {
+			CTUNN_f = {
 				level = 4
 				required_locations_fraction = 0.65
 				rule = plausible
@@ -6447,7 +6529,7 @@
 				provinces = { cornwall_province devon_province }
 			}	
 		# Dual Monarchy - Alt-history
-			DLMON = {
+			DLMON_f = {
 				level = 4
 				required_locations_fraction = 0.90
 				rule = plausible
@@ -6524,7 +6606,7 @@
 				}
 			}
 		# Franco-Iberian Empire - Fantasy
-			FNCIB = {
+			FNCIB_f = {
 				level = 4
 				required_locations_fraction = 0.67
 				rule = plausible
@@ -6561,7 +6643,7 @@
 				}
 			}
 		# Gallic Empire - Non-historical
-			GLCEM = {
+			GLCEM_f = {
 				level = 4
 				required_locations_fraction = 0.60 # 0.60
 				rule = plausible
@@ -6628,12 +6710,12 @@
 						}
 					}
 					# TODO: make these only trigger with proper reqs
-					trigger_event_non_silently = flavor_GLCEM.2 # Check that gallic empire can even form terraconensis
-					trigger_event_non_silently = flavor_GLCEM.3 # Check that gallic empire can even form britannia
+					#trigger_event_non_silently = flavor_GLCEM.2 # Check that gallic empire can even form terraconensis
+					#trigger_event_non_silently = flavor_GLCEM.3 # Check that gallic empire can even form britannia
 				}
 			}
 		# Tarraconensis
-			TRCNS = {
+			TRCNS_f = {
 				level = 3
 				required_locations_fraction = 0.85
 				rule = plausible	
@@ -6668,7 +6750,7 @@
 				}
 			}			
 		# Britannia
-			BRTNA = {
+			BRTNA_f = {
 				level = 3
 				required_locations_fraction = 0.85
 				rule = plausible	
@@ -6711,7 +6793,7 @@
 		# TODO: Outremer
 
 		# Hungarian Empire - Alt-history
-			HNGEM = {
+			HNGEM_f = {
 				level = 4
 				required_locations_fraction = 0.85
 				rule = plausible
@@ -6731,8 +6813,6 @@
 					}
 					culture = { has_culture_group = culture_group:hungarian_group }
 				}
-				allow = {
-				}
 				name = HNGEM
 				flag = HNGEM
 				adjective = HNGEM_ADJ
@@ -6747,7 +6827,7 @@
 				}
 			}
 		# Iberian Empire/Union - Fantasy
-			IBNEM = {
+			IBNEM_f = {
 				level = 4
 				required_locations_fraction = 0.85
 				rule = plausible	
@@ -6781,7 +6861,7 @@
 				}
 			}
 		# Italian Merchant Alliance - Alt-history
-			ITMCH = {
+			ITMCH_f = {
 				level = 3
 				required_locations_fraction = 0.35
 				rule = plausible
@@ -6813,7 +6893,7 @@
 				regions = { italy_region }
 			}
 		# Jagiellonian Empire - Non-historical
-			JGLNN = {
+			JGLNN_f = {
 				level = 4
 				required_locations_fraction = 0.75
 				rule = plausible
@@ -6900,7 +6980,7 @@
 				}
 			}
 		# Ummayad Caliphate - Non-historical
-			UMAYA = {
+			UMAYA_f = {
 				level = 5
 				required_locations_fraction = 0.35
 				rule = plausible
@@ -6952,7 +7032,7 @@
 				}
 			}
 		# Rashidun Caliphate - Non-historical
-			RSHDN = {
+			RSHDN_f = {
 				level = 4
 				required_locations_fraction = 0.35
 				rule = plausible
@@ -6996,7 +7076,7 @@
 				}
 			}
 		# Abbasid Caliphate - Non-historical
-			ABSID = {
+			ABSID_f = {
 				level = 4
 				required_locations_fraction = 0.35
 				rule = plausible
@@ -7040,7 +7120,7 @@
 				}
 			}	
 		# Fatimid Caliphate - Non-historical
-			FTMID = {
+			FTMID_f = {
 				level = 4
 				required_locations_fraction = 0.35
 				rule = plausible
@@ -7084,7 +7164,7 @@
 				}
 			}	
 		# East Francia - Non-historical (post carolingian germany)
-			KOGER = {
+			KOGER_f = {
 				level = 4
 				required_locations_fraction = 0.70
 				rule = plausible
@@ -7113,7 +7193,7 @@
 				provinces = { altmark_province thuringer_wald_province lower_carinthia_province upper_styria_province pongau_province salzburger_land_province odenwald_province }
 			}
 		# Lusitanian Empire - Non-historical
-			LUSIT = {
+			LUSIT_f = {
 				level = 4
 				required_locations_fraction = 0.95
 				rule = plausible
@@ -7147,7 +7227,7 @@
 				}
 			}
 		# North Sea Empire - Non-historical
-			NOSEM = {
+			NOSEM_f = {
 				level = 4
 				required_locations_fraction = 0.75
 				rule = plausible
@@ -7197,7 +7277,7 @@
 			}				
 	# Rank 5
 		# Austro-Hungarian Empire
-			ASHNG = {
+			ASHNG_f = {
 				level = 5
 				required_locations_fraction = 0.90
 				rule = plausible
@@ -7270,7 +7350,7 @@
 				}
 			}
 		# British Empire - Historical (TODO: finish, lots of territory)
-			BISHE = {
+			BISHE_f = {
 				level = 6
 				required_locations_fraction = 0.80
 				rule = plausible	
@@ -7332,7 +7412,7 @@
 				}
 			}
 		# Eastern Roman Empire - Non-historical
-			EASRE = {
+			EASRE_f = {
 				level = 5
 				required_locations_fraction = 0.60
 				rule = plausible
@@ -7385,7 +7465,7 @@
 				}
 			}
 		# Western Roman Empire - Non-historical
-			WESRE = {
+			WESRE_f = {
 				level = 5
 				required_locations_fraction = 0.60
 				rule = plausible
@@ -7427,7 +7507,7 @@
 				}
 			}
 		# European Union - Modern
-			EUROP = {
+			EUROP_f = {
 				level = 5
 				required_locations_fraction = 0.34
 				rule = plausible
@@ -7518,7 +7598,7 @@
 				}
 			}
 		# Greater German Reich - Controversial
-			GTRGM = {
+			GTRGM_f = {
 				level = 6
 				required_locations_fraction = 0.60 # 0.60
 				rule = plausible
@@ -7558,7 +7638,7 @@
 				}
 			}
 		# Soviet Union - Modern
-			SOVET = {
+			SOVET_f = {
 				level = 5
 				required_locations_fraction = 0.92
 				rule = plausible
@@ -7598,7 +7678,7 @@
 				}
 			}
 		# Empire of China - Modern
-			CNAEM = {
+			CNAEM_f = {
 				level = 5
 				required_locations_fraction = 0.78
 				rule = plausible
@@ -7633,7 +7713,7 @@
 			}
 		# Islamic State - Modern 
 			# PLANNEDTODO: PREVENT EARLY FORM
-			ISISS = {
+			ISISS_f = {
 				level = 5
 				required_locations_fraction = 0.80
 				rule = plausible
@@ -7664,7 +7744,7 @@
 				areas = { jazira_area }
 			}
 		# Peoples Republic of China - Modern
-			PRCCN = {
+			PRCCN_f = {
 				level = 5
 				required_locations_fraction = 0.85
 				rule = plausible
@@ -7692,7 +7772,7 @@
 				regions = { north_china_region east_china_region south_china_region west_china_region tibet_region }
 			}
 		# Republic of China - Modern
-			ROCCN = {
+			ROCCN_f = {
 				level = 5
 				required_locations_fraction = 0.76
 				rule = plausible
@@ -7720,7 +7800,7 @@
 				regions = { north_china_region east_china_region south_china_region west_china_region tibet_region }
 			}
 		# The Horde - Fantasy (KILL ALL OTHER HORDES AND BECOME THE ONLY HORDE)
-			HORDE = {
+			HORDE_f = {
 				level = 5
 				required_locations_fraction = 0.80
 				rule = plausible
@@ -7752,7 +7832,7 @@
 				sub_continents = { central_asia }
 			}
 		# Carolingian Empire - Non-historical (TODO: finish, lots of territory)
-			CAROL = {
+			CAROL_f = {
 				level = 5
 				required_locations_fraction = 0.60	
 				rule = plausible
@@ -7770,7 +7850,11 @@
 							tag_exists = CAROL
 						}
 					}
-					culture = { has_culture_group = culture_group:french_group }
+					OR = {
+						tag = AAC
+						ruler ?= { is_dynastic_descendant_of = dynasty:carolingian_dynasty }	
+						culture = { has_culture_group = culture_group:french_group }					
+					}
 				}
 				name = CAROL
 				flag = CAROL
@@ -7787,7 +7871,7 @@
 				}
 			}
 		# Macedonian Empire - Non-historical
-			MCDEM = {
+			MCDEM_f = {
 				level = 5
 				required_locations_fraction = 0.69
 				rule = plausible

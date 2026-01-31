@@ -1,8 +1,5 @@
 # IMPORTANT INFORMATION REGARDING REQUESTS
 
-TODO TEST:
-test renaming formable name (not the tag) to something other than what the tag is to see if country name with flag localization works on a 5 tag
-
 TODO IN GENERAL: 
 - Adjust and improve country name construction (add a setting to disable or enable simple names vs non-simple names)
 - Taliban flag is fucked?

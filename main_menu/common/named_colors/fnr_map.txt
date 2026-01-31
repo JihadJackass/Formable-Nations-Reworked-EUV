@@ -57,66 +57,64 @@ colors = {
 		map_GCOLM = hsv360 { 48 100 100 }
 		# Elbian Federation
 		map_ELBNF = rgb { 354 58 60 }
-		# Federal Republic of Central America
-		map_FROCA = hsv360 { 50 53 200 } # TODO
 		# Missouri
 		map_MISSR = hsv360 { 50 53 200 }
-		# Florida
-		map_FLRDA = hsv360 { 50 53 200 } # TODO
-		# Georgia US
-		map_GRGUS = hsv360 { 50 53 200 } # TODO
-		# South Carolina
-		map_SCRLA = hsv360 { 50 53 200 } # TODO
-		# North Carolina
-		map_NCRLA = hsv360 { 50 53 200 } # TODO
-		# Tennessee
-		map_NCRLA = hsv360 { 50 53 200 } # TODO
-		# Kentucky
-		map_KNTKY = hsv360 { 50 53 200 } # TODO
-		# Alabama
-		map_ALBMA = hsv360 { 50 53 200 } # TODO
-		# Tennessee
-		map_TNNSS = hsv360 { 50 53 200 } # TODO
-		# Ohio
-		map_OHIOU = hsv360 { 50 53 200 } # TODO
-		# Virginia
-		map_VRGNA = hsv360 { 50 53 200 } # TODO	
-		# West Virginia
-		map_WVGNA = hsv360 { 50 53 200 } # TODO	
-		# Maryland
-		map_MRYLN = hsv360 { 50 53 200 } # TODO	
-		# Pennsylvania
-		map_PNSLV = hsv360 { 50 53 200 } # TODO	
-		# New Jersey
-		map_NWJSY = hsv360 { 50 53 200 } # TODO	
-		# Louisiana
-		map_LOSNA = hsv360 { 50 53 200 } # TODO	
-		# Arkansas
-		map_ARKNS = hsv360 { 50 53 200 } # TODO	
-		# Iowa
-		map_IOWAU = hsv360 { 50 53 200 } # TODO	
-		# California
-		map_CLFRN = hsv360 { 50 53 200 } # TODO	
-		# Cascadia
-		map_CSCDA = hsv360 { 50 53 200 } # TODO	
-		# Wyoming
-		map_WYMNG = hsv360 { 50 53 200 } # TODO	
-		# Texas
-		map_TEXAS = hsv360 { 50 53 200 } # TODO	
-		# Michigan
-		map_MCHGN = hsv360 { 50 53 200 } # TODO
-		# Wisconsin
-		map_WSCNS = hsv360 { 50 53 200 } # TODO
-		# Washington
-		map_WSHNT = hsv360 { 50 53 200 } # TODO
-		# Oregan
-		map_OREGN = hsv360 { 50 53 200 } # TODO	
-		# Brandenburg-Prussia
-		map_BNDPR = hsv360 { 50 53 200 } # TODO
-		# Brunei Darussalam
-		map_BNDSM = hsv360 { 50 53 200 } # TODO
-		# Saribayan
-		map_FLPNN = hsv360 { 50 53 200 } # TODO
+		# Federal Republic of Central America (blue from flag)
+		map_FROCA = rgb { 75 140 200 }
+		# Florida (orange - sunshine/Spanish colonial)
+		map_FLRDA = rgb { 230 140 50 }
+		# Georgia US (peach/red)
+		map_GRGUS = rgb { 200 80 70 }
+		# South Carolina (Palmetto blue)
+		map_SCRLA = rgb { 85 145 190 }
+		# North Carolina (Carolina blue)
+		map_NCRLA = rgb { 120 175 210 }
+		# Tennessee (orange-red)
+		map_TNNSS = rgb { 200 90 75 }
+		# Kentucky (bluegrass blue)
+		map_KNTKY = rgb { 70 120 180 }
+		# Alabama (crimson red)
+		map_ALBMA = rgb { 175 50 60 }
+		# Ohio (scarlet red)
+		map_OHIOU = rgb { 190 60 60 }
+		# Virginia (colonial blue)
+		map_VRGNA = rgb { 60 90 140 }
+		# West Virginia (blue and gold)
+		map_WVGNA = rgb { 85 120 160 }
+		# Maryland (red from distinctive flag)
+		map_MRYLN = rgb { 200 70 60 }
+		# Pennsylvania (Quaker blue)
+		map_PNSLV = rgb { 65 105 150 }
+		# New Jersey (buff/tan)
+		map_NWJSY = rgb { 180 140 100 }
+		# Louisiana (royal blue)
+		map_LOSNA = rgb { 80 100 160 }
+		# Arkansas (red diamond)
+		map_ARKNS = rgb { 185 65 70 }
+		# Iowa (blue)
+		map_IOWAU = rgb { 90 120 175 }
+		# California (golden yellow)
+		map_CLFRN = rgb { 220 180 50 }
+		# Cascadia (Douglas fir green)
+		map_CSCDA = rgb { 60 140 90 }
+		# Wyoming (blue)
+		map_WYMNG = rgb { 75 110 160 }
+		# Texas (lone star blue)
+		map_TEXAS = rgb { 70 100 150 }
+		# Michigan (maize and blue)
+		map_MCHGN = rgb { 85 130 180 }
+		# Wisconsin (cardinal red)
+		map_WSCNS = rgb { 180 60 65 }
+		# Washington (evergreen)
+		map_WSHNT = rgb { 50 120 80 }
+		# Oregon (green and gold)
+		map_OREGN = rgb { 70 130 100 }
+		# Brandenburg-Prussia (Prussian blue/black)
+		map_BNDPR = rgb { 50 60 80 }
+		# Brunei Darussalam (royal yellow)
+		map_BNDSM = rgb { 240 200 50 }
+		# Saribayan/Philippines (blue from flag)
+		map_FLPNN = rgb { 80 110 180 }
 		# North Italian Confederation
 		map_NITAC = hsv360 { 150 44 46 }
 		# Sardinia-Piedmont

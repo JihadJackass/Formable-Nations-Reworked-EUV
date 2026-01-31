@@ -1,0 +1,92 @@
+window = {
+    name = "formable_nations_flag_selection_window"
+    layer = windows_layer
+    parentanchor = center
+    size = { 800 600 }
+    visible = "[GetVariableSystem.Exists('flag_selection_window_open')]"
+    using = bg_window_default_alt
+    
+    button_close_alt = {
+        parentanchor = top|right
+        position = { -15 15 }
+        size = { 40 40 }
+        blockoverride "close_onclick" {
+            onclick = "[GetVariableSystem.Clear('flag_selection_window_open')]"
+        }
+    }
+    
+    vbox = {
+        margin = { 20 60 }
+        layoutpolicy_horizontal = expanding
+        layoutpolicy_vertical = expanding
+        
+        text_single = {
+            text = "fnr_debug_window_formable_list_loc_flag_selection"
+            using = header_font
+            margin_bottom = 10
+        }
+        
+        scrollbox = {
+            layoutpolicy_horizontal = expanding
+            layoutpolicy_vertical = expanding
+            size = { 0 0 }
+            
+            blockoverride "scrollbox_content" {
+            vbox = {
+                layoutpolicy_horizontal = expanding
+                spacing = 15
+                margin = { 10 10 }
+                
+                # German Empire Flags
+                vbox = {
+                    layoutpolicy_horizontal = expanding
+                    spacing = 5
+                    
+                        text_single = {
+                            text = "fnr_debug_window_formable_list_loc_germanempire"
+                            default_format = "#bold"
+                        }
+                    
+                        hbox = {
+                        spacing = 20
+                        
+                            # Imperial Flag Option
+                            vbox = {
+                                spacing = 5
+                                
+                                icon = {
+                                    size = { 128 96 }  # Flag proportions
+                                    texture = "gfx/interface/icons/flags/flag_gmnem_imperial.dds"
+                                }
+                                
+                                button_regular = {
+                                    size = { 150 32 }
+                                    raw_text = "Imperial Flag"
+                                    onclick = "[GetScriptedGui('FNR_select_gmnem_imperial').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                    tooltip = "fnr_debug_window_formable_list_loc_geremp_flag_1"
+                                }
+                            }
+
+                            # Flagge Deutschlands
+                            vbox = {
+                                spacing = 5
+                                
+                                icon = {
+                                    size = { 128 96 }  # Flag proportions
+                                    texture = "gfx/interface/icons/flags/flag_flaggedeutschlands.dds"
+                                }
+                                
+                                button_regular = {
+                                    size = { 150 32 }
+                                    raw_text = "Flagge Deutschlands"
+                                    onclick = "[GetScriptedGui('FNR_select_gmnem_imperial').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                    tooltip = "fnr_debug_window_formable_list_loc_geremp_flag_1"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
