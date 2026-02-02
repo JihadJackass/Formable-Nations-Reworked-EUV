@@ -703,151 +703,151 @@
     FLRDA: "Florida"
     FLRDA_f: "Florida"
     FLRDA_ADJ: "Floridian"
-    FLRDA_f_desc: "TODO"
+    FLRDA_f_desc: "Florida, named by Spanish explorers for its lush vegetation, has been contested between European powers for centuries. Its strategic peninsular position commands access to the Caribbean and Gulf of Mexico, making it vital for naval dominance and trade. The subtropical climate enables unique agricultural production unavailable in northern territories, while its coastline provides countless harbors. Though sparsely populated and prone to hurricanes, Florida's geographic importance and economic potential make it a prize worth securing."
 
     # Maryland
     MRYLN: "Maryland"
     MRYLN_f: "Maryland"
-    MRYLN_ADJ: "TODO"
-    MRYLN_f_desc: "TODO"
+    MRYLN_ADJ: "Marylander"
+    MRYLN_f_desc: "Maryland, named for Queen Henrietta Maria, was founded as a haven for Catholics in Protestant America yet developed into a diverse colony of tobacco planters, merchants, and watermen. The Chesapeake Bay defines Maryland's geography and economy, providing rich fisheries and sheltered ports. Baltimore's deep harbor makes it a natural center of commerce, while the tobacco-rich countryside produces wealth for plantation owners. Maryland straddles North and South, never quite belonging to either, maintaining its own distinct identity between the extremes."
 
     # Pennsylvania
     PNSLV: "Pennsylvania"
     PNSLV_f: "Pennsylvania"
-    PNSLV_ADJ: "TODO"
-    PNSLV_f_desc: "TODO"
+    PNSLV_ADJ: "Pennsylvanian"
+    PNSLV_f_desc: "Pennsylvania, William Penn's \"Holy Experiment\" in religious tolerance, attracted Quakers, Germans, and diverse settlers to its fertile valleys. Philadelphia became the intellectual and political heart of the American colonies, hosting the Continental Congress and serving as temporary capital. Pennsylvania's rich farmland, coal deposits, and iron ore made it an economic powerhouse, while its policy of religious freedom created a uniquely diverse society. The state balances Quaker pacifist traditions with frontier toughness, cosmopolitan Philadelphia with rural heartland."
 
     # New Jersey
     NWJSY: "New Jersey"
     NWJSY_f: "New Jersey"
-    NWJSY_ADJ: "TODO"
-    NWJSY_f_desc: "TODO"
+    NWJSY_ADJ: "New Jerseyan"
+    NWJSY_f_desc: "New Jersey, small but strategically vital, sits between the great cities of New York and Philadelphia, serving as a crossroads of American commerce and conflict. During the Revolutionary War, more battles were fought here than any other colony, earning it the title \"Crossroads of the Revolution.\" Its position between two major ports and its own access to the Atlantic make New Jersey a manufacturing and transportation hub despite its modest size. The state's dense population and developed economy belie its compact geography."
 
     # Louisiana
     LOSNA: "Louisiana"
     LOSNA_f: "Louisiana"
-    LOSNA_ADJ: "TODO"
-    LOSNA_f_desc: "TODO"
+    LOSNA_ADJ: "Louisianan"
+    LOSNA_f_desc: "Louisiana, vast and swampy, changed hands between France and Spain before Napoleon sold it to the United States, doubling the young nation's size overnight. The Mississippi River's mouth made New Orleans a vital port controlling interior trade, while the bayous and plantations produced sugar, cotton, and rice. Louisiana's unique Creole culture blends French, Spanish, African, and Caribbean influences into something entirely distinct from Anglo-American society. The Purchase secured American control of the continent's greatest river system."
 
     # Arkansas
     ARKNS: "Arkansas"
     ARKNS_f: "Arkansas"
-    ARKNS_ADJ: "TODO"
-    ARKNS_f_desc: "TODO"
+    ARKNS_ADJ: "Arkansan"
+    ARKNS_f_desc: "Arkansas, carved from the Louisiana Purchase, encompasses the transition zone between Southern lowlands and Western highlands. The Arkansas River valley provides fertile farmland for cotton and rice, while the Ozark and Ouachita mountains hold timber, minerals, and isolated hill communities. Hot Springs attracted settlers seeking its therapeutic waters long before statehood. Arkansas represents the cultural boundary between the Deep South and the frontier West, sharing characteristics of both regions while belonging fully to neither."
 
     # Iowa
     IOWAU: "Iowa"
     IOWAU_f: "Iowa"
-    IOWAU_ADJ: "TODO"
-    IOWAU_f_desc: "TODO"
+    IOWAU_ADJ: "Iowan"
+    IOWAU_f_desc: "Iowa, purchased from France and wrested from native tribes, became the archetypal American heartland—endless prairies transformed into the world's most productive farmland. The deep, rich soil produces corn and soybeans in staggering quantities, feeding livestock and exporting grain worldwide. No mountains interrupt Iowa's rolling landscape, no great cities dominate its interior. This is agricultural America at its purest: small towns, family farms, and conservative values rooted in the land. Iowa's caucuses and harvests both shape national futures."
 
     # California
     CLFRN: "California"
     CLFRN_f: "California"
-    CLFRN_ADJ: "TODO"
-    CLFRN_f_desc: "TODO"
+    CLFRN_ADJ: "Californian"
+    CLFRN_f_desc: "California, seized from Mexico after brief war, transformed from remote territory to economic colossus through gold discovery, railroad connection, and sheer entrepreneurial ambition. The Gold Rush brought fortune seekers from around the world, establishing California's diverse, opportunity-driven culture. Its Mediterranean climate enables year-round agriculture producing fruits and vegetables unavailable elsewhere, while Pacific ports connect America to Asian trade. From San Francisco's cosmopolitan bustle to southern deserts, California's vast geography and natural wealth make it a nation within a nation."
 
     # Cascadia
     CSCDA: "Cascadia"
     CSCDA_f: "Cascadia"
-    CSCDA_ADJ: "TODO"
-    CSCDA_f_desc: "TODO"
+    CSCDA_ADJ: "Cascadian"
+    CSCDA_f_desc: "Cascadia represents a bioregional identity spanning the Pacific Northwest, bound together by the Cascade Range, Pacific coastline, and shared environmental values rather than political borders. This region's temperate rainforests, salmon-rich rivers, and volcanic peaks create a landscape distinct from the rest of North America. The concept of Cascadian independence emerged from cultural differences with interior regions—environmentalism over extraction, urbanism over ruralism, Pacific Rim orientation over Atlantic ties. Cascadia exists more as cultural identity than political reality, yet the idea persists."
 
     # Wyoming
     WYMNG: "Wyoming"
     WYMNG_f: "Wyoming"
-    WYMNG_ADJ: "TODO"
-    WYMNG_f_desc: "TODO"
+    WYMNG_ADJ: "Wyomingite"
+    WYMNG_f_desc: "Wyoming, the least populated state despite its considerable size, encompasses the Rocky Mountain spine and the high plains east of the continental divide. Yellowstone's geothermal wonders and the Grand Tetons draw tourists, while vast ranches and energy extraction sustain the economy. Wyoming's political culture embraces frontier independence—minimal government, maximum personal freedom, and fierce protection of gun rights and property. The state remains stubbornly rural, resisting urbanization and federal interference, embodying the mythology of the American West."
 
     # Texas
     TEXAS: "Texas"
     TEXAS_f: "Texas"
-    TEXAS_ADJ: "TODO"
-    TEXAS_f_desc: "TODO"
+    TEXAS_ADJ: "Texan"
+    TEXAS_f_desc: "Texas, wrested from Mexico after a revolutionary struggle, spent a decade as an independent republic before joining the United States—a history Texans never forget. The state's immense size encompasses deserts, forests, prairies, and coastline, while oil discoveries transformed it from cattle country into an energy superpower. Texas maintains a distinct identity, blending Southern, Western, and Mexican influences into a culture that views itself as exceptional. The state's independent streak, military tradition, and economic might make it unlike anywhere else in America."
 
     # Michigan
     MCHGN: "Michigan"
     MCHGN_f: "Michigan"
-    MCHGN_ADJ: "TODO"
-    MCHGN_f_desc: "TODO"
+    MCHGN_ADJ: "Michigander"
+    MCHGN_f_desc: "Michigan, surrounded by four of the five Great Lakes, possesses more freshwater coastline than any other state, shaping its identity as a maritime power in America's interior. The Upper and Lower Peninsulas offer contrasting landscapes—industrial cities and farmland below, wilderness and mining country above. Detroit's rise as automotive capital made Michigan synonymous with American manufacturing, though that industrial dominance has waned. The Great Lakes moderate the climate, provide transportation, and offer endless recreational opportunities, making Michigan's geography its greatest asset."
 
     # Wisconsin
     WSCNS: "Wisconsin"
     WSCNS_f: "Wisconsin"
-    WSCNS_ADJ: "TODO"
-    WSCNS_f_desc: "TODO"
+    WSCNS_ADJ: "Wisconsinite"
+    WSCNS_f_desc: "Wisconsin, initially valued for its fur trade and lead deposits, developed into a dairy powerhouse where German and Scandinavian immigrants established family farms producing cheese and beer in quantities that defined the state's identity. The Great Lakes provide ports and moderate the climate, while the interior offers fertile farmland and forests. Wisconsin's progressive political tradition, born from immigrant radicalism and agrarian reform movements, gave America labor rights and direct democracy. The state balances rural conservatism with urban progressivism, never quite settling into one camp."
 
     # Washington
     WSHNT: "Washington"
     WSHNT_f: "Washington"
-    WSHNT_ADJ: "TODO"
-    WSHNT_f_desc: "TODO"
+    WSHNT_ADJ: "Washingtonian"
+    WSHNT_f_desc: "Washington, named for the first president yet geographically distant from the original states, encompasses dramatically varied terrain from Pacific rainforests to arid interior plateaus. The Cascade Range divides the state climatically and culturally—wet, liberal west versus dry, conservative east. Puget Sound's sheltered waters created a natural harbor for Seattle, which grew from lumber town to tech hub. The Columbia River system provides irrigation and hydroelectric power, transforming the interior into productive farmland. Washington looks west to the Pacific Rim, connecting America to Asian trade and immigration."
 
     # Oregon
     OREGN: "Oregon"
     OREGN_f: "Oregon"
-    OREGN_ADJ: "TODO"
-    OREGN_f_desc: "TODO"
+    OREGN_ADJ: "Oregonian"
+    OREGN_f_desc: "Oregon, the destination of pioneers who traversed the Oregon Trail seeking free land and opportunity, remains defined by its natural beauty and independent spirit. The Willamette Valley attracted farmers with its fertile soil and mild climate, while forests provided endless timber. Oregon's political culture embraces environmentalism, direct democracy through ballot measures, and suspicion of outside interference. The state lacks sales tax, allows physician-assisted suicide, and legalized marijuana early. From Portland's urbanism to the high desert east of the Cascades, Oregon defies simple characterization while maintaining fierce local pride."
 
     # Missouri
     MISSR: "Missouri"
     MISSR_f: "Missouri"
-    MISSR_ADJ: "TODO"
-    MISSR_f_desc: "TODO"
+    MISSR_ADJ: "Missourian"
+    MISSR_f_desc: "Missouri, gateway to the West, sits at the confluence of the continent's greatest rivers—the Mississippi and Missouri—making it the natural starting point for westward expansion. St. Louis outfitted trappers, traders, and settlers heading into the frontier, while Kansas City became a major railroad hub. Missouri's position between North and South made it a border state during the Civil War, torn between opposing loyalties and plagued by guerrilla violence. The state remains politically divided, culturally mixed, and geographically transitional—Southern in the Bootheel, Midwestern in the north, Western in spirit."
 
     # Georgia
     GRGUS: "Georgia"
     GRGUS_f: "Georgia"
     GRGUS_ADJ: "Georgian"
-    GRGUS_f_desc: "TODO"
+    GRGUS_f_desc: "Georgia, named for King George II, began as a haven for debtors and a buffer against Spanish Florida before developing into a cotton kingdom built on slave labor. The coastal lowlands produced rice and indigo on plantations, while the interior Piedmont became the heart of King Cotton's domain. Atlanta's destruction and rebirth during and after the Civil War made it the symbol of the New South—rebuilt, industrialized, yet haunted by its Confederate past. Georgia balances rural conservatism with Atlanta's cosmopolitan influence, tradition with progress, remembrance with reinvention."
 
     # Alabama
     ALBMA: "Alabama"
     ALBMA_f: "Alabama"
     ALBMA_ADJ: "Alabaman"
-    ALBMA_f_desc: "TODO"
+    ALBMA_f_desc: "Alabama, carved from lands ceded by the Creek Nation, rapidly filled with cotton planters seeking virgin soil after exhausting eastern fields. The Black Belt—named for its dark, fertile earth—became the heart of the Cotton Kingdom, worked by enslaved labor producing wealth for white planters. Alabama's rivers provided transportation to the Gulf port of Mobile, connecting interior plantations to global markets. The state's history is inseparable from slavery, Civil War, and Civil Rights struggles—a past that shapes Alabama's identity as the quintessential Deep South state, for better and worse."
 
     # South Carolina
     SCRLA: "South Carolina"
     SCRLA_f: "South Carolina"
     SCRLA_ADJ: "South Carolinian"
-    SCRLA_f_desc: "TODO"
+    SCRLA_f_desc: "South Carolina, first to secede from the Union, exemplifies the Old South aristocracy and its cotton-based plantation economy. The Low Country coastal plantations produced rice and indigo on a scale requiring massive slave labor, creating a society where enslaved Africans outnumbered whites. Charleston became the wealthiest, most refined city in the South, its planter elite considering themselves a natural aristocracy. South Carolina's fierce devotion to states' rights and slavery made it the most radical Southern state, unwilling to compromise on its peculiar institution."
 
     # North Carolina
     NCRLA: "North Carolina"
     NCRLA_f: "North Carolina"
     NCRLA_ADJ: "North Carolinian"
-    NCRLA_f_desc: "TODO"
+    NCRLA_f_desc: "North Carolina, more diverse and less aristocratic than its southern neighbor, encompassed coastal plantations, Piedmont farms, and Appalachian mountain communities with distinct identities and interests. The state was last to join the Confederacy, reluctant yet ultimately loyal to the South. Tobacco cultivation in the Piedmont created wealth without requiring the massive slave labor of cotton states, producing a more moderate society. The Outer Banks' treacherous coastline earned the nickname \"Graveyard of the Atlantic,\" while the mountains isolated a culture of self-sufficient farmers and moonshiners from coastal elites."
 
     # Tennessee
     TNNSS: "Tennessee"
     TNNSS_f: "Tennessee"
     TNNSS_ADJ: "Tennesseean"
-    TNNSS_f_desc: "TODO"
+    TNNSS_f_desc: "Tennessee, carved from North Carolina's western lands, stretches from the Appalachian peaks to the Mississippi River, encompassing three distinct regions with little in common beyond statehood. East Tennessee remained Unionist during the Civil War, its mountain people having no interest in slaveholders' politics. Middle Tennessee's bluegrass country and plantation economy aligned with the South, while West Tennessee's cotton fields were indistinguishable from Mississippi. Nashville's rise as a cultural capital blends country music tradition with New South ambition, making Tennessee a bridge between mountain South and Deep South."
 
     # Kentucky
     KNTKY: "Kentucky"
     KNTKY_f: "Kentucky"
     KNTKY_ADJ: "Kentuckan"
-    KNTKY_f_desc: "TODO"
+    KNTKY_f_desc: "Kentucky, the first state west of the Appalachians, was Daniel Boone's promised land of fertile bluegrass and abundant game. The state's agriculture focused on tobacco, hemp, and breeding thoroughbred horses rather than cotton, creating a more moderate slave society than the Deep South. Kentucky's border state status during the Civil War reflected its divided loyalties—Confederate and Union supporters splitting families and communities. Bourbon whiskey, horse racing, and coalfields define Kentucky's economy and identity, while its position between North and South, East and West, makes it uniquely transitional."
 
     # Ohio
     OHIOU: "Ohio"
     OHIOU_f: "Ohio"
     OHIOU_ADJ: "Ohian"
-    OHIOU_f_desc: "TODO"
+    OHIOU_f_desc: "Ohio, first state carved from the Northwest Territory, became the gateway to the Midwest and a microcosm of American diversity. The Ohio River provided transportation and marked the boundary between free and slave territory, making Ohio a haven for escaped slaves and a battleground over their fate. Cincinnati's pork packing, Cleveland's steel mills, and Toledo's manufacturing made Ohio an industrial powerhouse. The state's mixture of Southern-descended farmers, Yankee settlers, and European immigrants created a politically competitive swing state that often decides presidential elections."
 
     # Virginia
     VRGNA: "Virginia"
     VRGNA_f: "Virginia"
     VRGNA_ADJ: "Virginian"
-    VRGNA_f_desc: "TODO"
+    VRGNA_f_desc: "Virginia, the oldest and most influential of the thirteen colonies, produced more presidents and shaped more of American history than any other state. The Tidewater plantations built wealth on tobacco and slavery, creating a planter aristocracy that led the Revolution yet defended human bondage. Virginia's role as capital of the Confederacy and site of countless Civil War battles left it devastated, yet its historical legacy—Washington, Jefferson, Madison, Lee—remains central to American identity. The state balances reverence for its past with the modern reality of Northern Virginia's federal workforce and diverse suburbs."
 
     # West Virginia
     WVGNA: "West Virginia"
     WVGNA_f: "West Virginia"
     WVGNA_ADJ: "West Virginian"
-    WVGNA_f_desc: "TODO"
+    WVGNA_f_desc: "West Virginia, born from Virginia's division during the Civil War, represents Appalachian mountain culture that had little in common with Tidewater aristocracy. The mountaineers, subsistence farmers with few slaves, refused to join the Confederacy and formed their own Unionist state. Coal mining became West Virginia's economic foundation and curse—providing jobs and energy while devastating the environment and health of miners. The state struggles with poverty, opioid addiction, and population loss, yet maintains fierce pride in its independent origins and mountain heritage."
 
     # Poland-Hungary
     PLHUN: "Poland-Hungary"
@@ -1084,25 +1084,25 @@
     TRCNS: "Tarraconensis"
     TRCNS_f: "Tarraconensis"
     TRCNS_ADJ: "Tarraconensis"
-    TRCNS_f_desc: "TODO"
+    TRCNS_f_desc: "Tarraconensis was one of the three Roman provinces of Hispania, encompassing the northeastern and eastern coasts of the Iberian Peninsula. Named for its capital Tarraco (modern Tarragona), this province became one of Rome's wealthiest territories, exporting olive oil, wine, and precious metals to feed the empire. The region's strategic Mediterranean position and productive agriculture made it vital to Roman power in Iberia. Tarraconensis remained prosperous throughout the imperial period, its cities adorned with aqueducts, amphitheaters, and forums marking Roman civilization's reach."
 
     # Britannia
     BRTNA: "Britannia"
     BRTNA_f: "Britannia"
     BRTNA_ADJ: "Britannian"
-    BRTNA_f_desc: "TODO"
+    BRTNA_f_desc: "Britannia, Rome's northernmost province, represented the empire's ambition to conquer the known world—even the remote, fog-shrouded island beyond the ocean. Though never fully subdued, with Caledonia remaining free beyond Hadrian's Wall, Roman Britannia developed towns, roads, and villas that brought Mediterranean civilization to the Celtic north. The province provided grain, metals, and soldiers to the empire while serving as a frontier where legions held back barbarian tribes. When Rome withdrew, Britannia's Romano-British culture survived briefly before succumbing to Saxon invasion, yet the memory of Roman order lingered."
 
     # Kingdom of Jerusalem
     JRSLM: "Kingdom of Jerusalem"
     JRSLM_f: "Kingdom of Jerusalem"
     JRSLM_ADJ: "Jerusalemite"
-    JRSLM_f_desc: "TODO"
+    JRSLM_f_desc: "The Kingdom of Jerusalem, established by Crusaders in 1099, represented Christendom's greatest triumph and ultimate failure in the Holy Land. For nearly two centuries, Frankish knights ruled a patchwork realm of coastal cities, castles, and contested territory, constantly threatened by Muslim powers yet sustained by Italian maritime republics and European reinforcements. The kingdom developed a unique society blending European feudalism with Eastern influences, where Latin Catholics governed Orthodox Christians, Muslims, and Jews. Saladin's reconquest of Jerusalem in 1187 began the kingdom's long decline, though it survived in diminished form until the last crusader strongholds fell."
 
     # Beta Israel
     BISRA: "Beta Israel"
     BISRA_f: "Beta Israel"
     BISRA_ADJ: "Beta Israeli"
-    BISRA_f_desc: "TODO"
+    BISRA_f_desc: "Beta Israel, the Ethiopian Jewish community, maintained their faith in isolation for centuries, practicing a unique form of Judaism that preserved ancient traditions while developing distinctive customs unknown to other Jewish communities. Their origin remains debated—descendants of King Solomon and the Queen of Sheba according to tradition, or converts from ancient times. For generations, Beta Israel remained unknown to the wider Jewish world, practicing their religion in the highlands of Ethiopia until contact was reestablished in modern times. Their distinct rituals, including animal sacrifice and strict purity laws, reflect Judaism as it existed before rabbinic reforms."
 
     # Hungarian Empire
     HNGEM: "Hungarian Empire"
@@ -1126,7 +1126,7 @@
     FROCA: "Federal Republic of Central America"
     FROCA_f: "Federal Republic of Central America"
     FROCA_ADJ: "Central American"
-    FROCA_f_desc: "TODO"
+    FROCA_f_desc: "The Federal Republic of Central America, born from independence and Spanish America's dissolution, united Guatemala, El Salvador, Honduras, Nicaragua, and Costa Rica into a single federal state from 1823 to 1841. This liberal experiment sought to create a unified Central American nation capable of economic development and political stability, yet regional rivalries, conservative opposition, and geographic obstacles doomed it. Each province maintained distinct interests—Guatemala City's conservatives versus liberal reformers elsewhere—while poor infrastructure prevented true integration. The republic's collapse left five weak nations where one might have thrived, forever fragmenting the isthmus."
 
     # Jagiellonian Empire
     JGLNN: "Jagiellonian Empire"
@@ -1191,7 +1191,7 @@
     MACED: "Macedon"
     MACED_f: "Macedon"
     MACED_ADJ: "Macedonian"
-    MACED_f_desc: "TODO: content, description, color & flag + anything else it needs"
+    MACED_f_desc: "Macedon, the kingdom that gave rise to Philip II and his son Alexander the Great, transformed from a semi-barbarous realm on the fringes of the Greek world into history's most successful conquest state. Philip's military reforms created the Macedonian phalanx and professional army that conquered Greece, while Alexander used this war machine to subjugate the Persian Empire and reach India. Though Alexander's empire fragmented upon his death, Macedon's legacy—Hellenistic culture, Greek language spreading east, and the idea that one man could conquer the known world—shaped antiquity. Macedon proved that military genius and ruthless ambition could overcome any obstacle."
 
     # Macedonian Empire
     MCDEM: "Macedonian Empire"

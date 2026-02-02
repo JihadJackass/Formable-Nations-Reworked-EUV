@@ -47,7 +47,7 @@ flavor_PAPAL.1 = {
 		name = flavor_PAPAL.1.c
 		set_country_rank_effect = { rank = country_rank:rank_empire }
 		custom_tooltip = { text = PAPAL_hre_tt_3 }
-		# TODO: add an effect to make PAP leader of the HRE
+		# TODO POST 2.5.0: add an effect to make PAP leader of the HRE
 		trigger_event_non_silently = flavor_PAPAL.4
 		trigger_event_non_silently = flavor_PAPAL.2
 		trigger_event_non_silently = flavor_PAPAL.3
@@ -158,7 +158,7 @@ flavor_PAPAL.4 = {
     option = { # Establish a Papal-Dominated Holy Roman Empire
         name = flavor_PAPAL.4.a
         
-        # TODO: Disband the old HRE
+        # TODO POST 2.5.0: Disband the old HRE
 		# DISABLED UNTIL 2.5.0
         
         # Create the new papal HRE (customize this IO in common/international_organizations/ later)
