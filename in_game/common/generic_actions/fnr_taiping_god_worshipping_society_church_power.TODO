@@ -1,7 +1,7 @@
 ﻿# scope:actor = country
 # scope:recipient = religion
 
-# TODO: DISABLED UNTIL 2.5.0 TOKAY
+# TODO POST 2.5.0
 
 fnr_god_worshipping_society_taiping_expand_cult = {
 	type = religious

@@ -1,0 +1,28 @@
+﻿# Advances for Russian Federation
+
+	# age_1_traditions
+
+	# age_2_renaissance
+
+	# age_3_discovery
+
+	# age_4_reformation
+
+	# age_5_absolutism
+
+		RUFED_federalized_pseudo_democratic_values = {
+			age = age_5_absolutism
+			potential = {
+				has_or_had_tag = RUFED
+			}
+			icon = imperatorskiy_moskovskiy_universitet
+
+			research_speed_modifier = 0.0005
+			government_reform_slots = 1
+
+			requires = modern_road_advance
+		}	
+
+	# age_6_revolutions
+
+			

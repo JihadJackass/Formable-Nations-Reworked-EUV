@@ -1,6 +1,6 @@
 ﻿# Sweden-Norway Specific Government Reforms
 
-	# Major if player chooses swedish domination - TODO: BALANCE ALL 4
+	# Major if player chooses swedish domination
 		swedish_administration_major = {
 			major = yes
 			unique = yes
@@ -30,7 +30,7 @@
 			block_for_rebel = yes
 		}
 
-	# non-major norwegian - TODO: BALANCE ALL 4
+	# non-major norwegian
 		norwegian_administration_minor = {
 			unique = yes
 			government = monarchy
@@ -56,7 +56,7 @@
 			block_for_rebel = yes
 		}
 
-	# Major if player chooses norwegian domination - TODO: BALANCE ALL 4
+	# Major if player chooses norwegian domination
 		norwegian_administration_major = {
 			major = yes
 			unique = yes
@@ -87,7 +87,7 @@
 			block_for_rebel = yes
 		}
 
-	# non-major swedish - TODO: BALANCE ALL 4
+	# non-major swedish
 		swedish_administration_minor = {
 			unique = yes
 			government = monarchy

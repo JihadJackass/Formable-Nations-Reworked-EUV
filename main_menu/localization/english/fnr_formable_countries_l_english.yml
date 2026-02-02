@@ -859,25 +859,25 @@
     SWBIA: "Kingdom of Swabia"
     SWBIA_f: "Kingdom of Swabia"
     SWBIA_ADJ: "Swabian"
-    SWBIA_f_desc: "TODO"
+    SWBIA_f_desc: "Swabia, one of the great stem duchies of medieval Germany, encompasses the fertile lands between the Black Forest and the Alps. Though the Hohenstaufen dynasty once made Swabia the heart of imperial power, the region later fragmented into a patchwork of free cities, principalities, and ecclesiastical territories. By restoring the Kingdom of Swabia, we reunite these scattered domains and revive the glory of southwestern Germany under a single crown."
 
     # Felvidek (North Hunary)
     FLVDK: "Felvidek"
     FLVDK_f: "Felvidek"
     FLVDK_ADJ: "Hungarian"
-    FLVDK_f_desc: "TODO"
+    FLVDK_f_desc: "Felvidék—the 'Uplands'—is the Hungarian name for the mountainous northern territories that have been part of the Kingdom of Hungary for centuries. These Slovak-populated highlands provided the kingdom with mineral wealth, defensive fortifications, and trade routes to Poland. Though ethnically distinct from the Magyar heartland, Felvidék remains integral to Hungarian identity and economy. This formable represents Hungarian authority over these historic northern territories."
 
     # Hephthalite Empire / White Huns
     HPEMP: "Hephthalites"
     HPEMP_f: "Hephthalites"
     HPEMP_ADJ: "Hephthalites"
-    HPEMP_f_desc: "TODO"
+    HPEMP_f_desc: "The Hephthalites, called 'White Huns' by their enemies, forged a powerful nomadic empire across Central Asia in the 5th and 6th centuries. From their base in Bactria, these fierce warriors dominated the Silk Road, humbled the Sassanids, and threatened both Persia and India. Though they left few written records, their military prowess and control of vital trade routes made them masters of the region until overwhelmed by Turkic invaders. The Hephthalite legacy endures in the bloodlines of Central Asian peoples and the memory of an empire that once ruled from the steppes to the Hindu Kush."
 
     # Hungary-Romania
     HNRMN: "Hungary-Romania"
     HNRMN_f: "Hungary-Romania"
     HNRMN_ADJ: "Hungary-Romanian"
-    HNRMN_f_desc: ""
+    HNRMN_f_desc: "Hungary and Romania, though often rivals for Transylvanian territory, share deep historical and cultural connections across the Carpathian basin. A union of these two nations would create a formidable Danubian power, combining Hungarian administrative tradition with Romanian population and resources. This dual monarchy would dominate the region between the Alps and the Black Sea, much as Austria-Hungary once did, binding Magyar and Romanian interests into a single state capable of resisting both Russian and Ottoman expansion."
 
     # Camelot
     CMLOT: "Camelot"

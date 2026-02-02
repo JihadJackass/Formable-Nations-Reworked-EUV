@@ -1,0 +1,41 @@
+﻿# Advances for Ukraine
+
+	# age_1_traditions
+
+	# age_2_renaissance
+
+	# age_3_discovery
+
+		UKRNE_breadbasket_of_europe = {
+			age = age_3_discovery
+			potential = {
+				has_or_had_tag = UKRNE
+			}
+			icon = eastern_christianity
+
+			food_consumption_modifier = -0.0025
+			global_food_capacity_modifier = 0.0010
+
+			requires = study_institutions_advance
+		}	
+
+	# age_4_reformation
+
+		UKRNE_a_home_for_ukrainians = {
+			age = age_4_reformation
+			potential = {
+				has_or_had_tag = UKRNE
+			}
+			icon = eastern_ecumenism
+
+			add_accepted_culture_cost_modifier = 0.002
+			army_cavalry_power = 0.0025
+
+			requires = global_trade_advance
+		}	
+
+	# age_5_absolutism
+
+	# age_6_revolutions
+
+			

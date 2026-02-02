@@ -2,7 +2,7 @@
 # Formable Nation Reworked Scripted Flags #
 ###########################################
 
-# PLANNED/TODO: Alternatives for different government types and use less textured flags (only when needed such as sweden-norway with too many colors)
+# TODO POST 2.5.0: Alternatives for different government types and use less textured flags (only when needed such as sweden-norway with too many colors)
 
 ### Rhineland / Rhenania / United Duchies / United Counties / United Republics ###
 # Coded by Tawani
@@ -1209,7 +1209,7 @@ RHLND_monarchy_late = { # Rhenish Coat of Arms
 		}
 	}
 # Mercia
-	MRCIA = { # TODO
+	MRCIA = {
 		pattern = "pattern_solid.dds"
 		color1 = "blue"
 		color3 = "yellow"
@@ -1581,6 +1581,7 @@ RHLND_monarchy_late = { # Rhenish Coat of Arms
 			texture = "ce_taliban.dds"
 			color1 = color2
 			color2 = color1
+			color3 = color2
 		}
 	}	
 # Tengoku

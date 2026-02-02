@@ -42,10 +42,13 @@ flavor_RHLND.2 = {
 	desc = flavor_RHLND.2.desc
 	fire_only_once = yes
 
-	trigger = { # Triggers after 120 months of war during age of absolutism TODO: check that this works
-		this = c:RHLND
-		current_age_or_later = { age = age_5_absolutism }
-		months_since_war > 120
+	# TODO: check that this works
+	trigger = { # Triggers after 120 months of war during age of absolutism
+		AND = {
+			this = c:RHLND
+			current_age_or_later = { age = age_5_absolutism }
+			months_since_war > 120
+		}
 	}
 
 	immediate = {
@@ -77,9 +80,11 @@ flavor_RHLND.3 = {
 	fire_only_once = yes
 
 	trigger = { # Requires at least 1.5 million people
-		this = c:RHLND
-		current_age_or_later = { age = age_3_discovery }
-		total_population > 1500 # 1.5m
+		AND = {
+			this = c:RHLND
+			current_age_or_later = { age = age_3_discovery }
+			total_population > 1500 # 1.5m
+		}
 	}
 
 	option = {
@@ -89,7 +94,8 @@ flavor_RHLND.3 = {
 }
 
 # The Pillar that is the Church
-# Event to replace High Church Influence with The Pillar that is the Church (Must not have manually revoked the reform, if so, the event will fire but instead provide the Clergy with 10,000 gold )
+# Event to replace High Church Influence with The Pillar that is the Church 
+# (Must not have manually revoked the reform, if so, the event will fire but instead provide the Clergy with 10,000 gold )
 flavor_RHLND.4 = {
 	type = country_event
 	title = flavor_RHLND.4.title
@@ -98,19 +104,29 @@ flavor_RHLND.4 = {
 
 	trigger = {
 		this = c:RHLND
-		# Check that either the high church influence privilege is still enacted, or it has been removed and the nation has less than 10 clergy power or 10% clergy pops
+		NOT = { has_estate_privilege = estate_privilege:fnr_RHLND_pillar_that_is_the_church }
 		OR = {
-			AND = {
-				NOT = { has_variable = fnr_high_church_influence_removed }
+			AND = { # Manually removed check 
+					# Check that either the high church influence privilege is still enacted
+				has_variable = fnr_high_church_influence_HAS_removed
 				has_estate_privilege = estate_privilege:fnr_RHLND_high_church_influence 
-			}
-			AND = {
-				NOT = { has_estate_privilege = estate_privilege:fnr_RHLND_high_church_influence }
 				any_estate = {
 					estate_type = estate_type:clergy_estate
 					power < 0.10
 				}
-				state_religion_clergy = 0.10
+				state_religion_clergy < 0.10
+			}
+			AND = { # Event fired check
+					# fnr_RHLND_high_church_influence has been removed and the nation has less than 10 clergy power or 10% clergy pops
+					# TODO POST 2.5.0: fix this event, it should have different triggers, for now NOT = { has_estate_privilege = estate_privilege:fnr_RHLND_pillar_that_is_the_church } is checked regardless.
+				NOT = { has_variable = fnr_high_church_influence_HAS_removed }
+				NOT = { has_estate_privilege = estate_privilege:fnr_RHLND_pillar_that_is_the_church }
+				NOT = { has_fired_unique_event = flavor_RHLND.4 }
+				any_estate = {
+					estate_type = estate_type:clergy_estate
+					power < 0.10
+				}
+				state_religion_clergy < 0.10
 			}
 		}
 	}
@@ -120,5 +136,44 @@ flavor_RHLND.4 = {
 		set_variable = fnr_high_church_influence_removed
 		revoke_estate_privilege = estate_privilege:fnr_RHLND_high_church_influence 
 		grant_estate_privilege = estate_privilege:fnr_RHLND_pillar_that_is_the_church
+		# Make a check to see if manually removed, or event removed, if manual removed instead of replacing the privilege it should give stability, but also clergy power
+	}
+}
+
+# State of the Confederation - Government Rank Handler - Works in comparison with New Path
+# Allows you to stay as a rank 1, but at a cost
+flavor_RHLND.5 = {
+	type = country_event
+	title = flavor_RHLND.5.title
+	desc = flavor_RHLND.5.desc
+	fire_only_once = yes
+
+	option = {
+		name = flavor_RHLND.5.a
+		if = {
+			limit = { country_rank_level < 1 }
+			set_country_rank_effect = { rank = country_rank:rank_county }
+		}
+		set_variable = { 
+			name = fnr_RHLND_limited_by_remaining_county_tier
+			value = yes
+			days = 1825
+		}
+		scope:recipient = {	
+			add_country_modifier = {
+				modifier = fnr_RHLND_limitations_of_united_counties
+				years = 5
+				mode = add_and_extend
+			}
+		}
+		add_stability = -5
+	}
+
+	option = {
+		name = flavor_RHLND.5.b
+		if = {
+			limit = { country_rank_level < 2 }
+			set_country_rank_effect = { rank = country_rank:rank_duchy }
+		}
 	}
 }

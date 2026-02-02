@@ -1,6 +1,6 @@
 ﻿# Great Moravia Building Types
 
-# todo: fix and test
+# TODO POST 2.5.0: fix and test
 fnr_hradiska = {
 	max_levels = 1
 	pop_type = soldiers

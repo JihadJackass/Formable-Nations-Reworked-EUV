@@ -1,0 +1,42 @@
+﻿# Advances for Hephthalites
+
+	# age_1_traditions
+
+		HPEMP_cavalric_values = {
+			age = age_1_traditions
+			potential = {
+				has_or_had_tag = HPEMP
+			}
+			icon = skilled_cavalry_raids
+
+			army_cavalry_power = 0.05
+			army_cavalry_maintenance_cost_modifier = -0.10
+
+			requires = horse_riding_advance
+		}
+		
+		HPEMP_hunnic_traditions = {
+			age = age_1_traditions
+			potential = {
+				has_or_had_tag = HPEMP
+			}
+			icon = ayu_prestigious_cavalry
+
+			army_cavalry_build_cost_modifier = -0.30
+			army_food_gathering = 0.05
+			global_soldiers_food_consumption = 0.10
+
+			requires = horse_riding_advance
+		}	
+
+	# age_2_renaissance
+
+	# age_3_discovery
+
+	# age_4_reformation
+
+	# age_5_absolutism
+
+	# age_6_revolutions
+
+			

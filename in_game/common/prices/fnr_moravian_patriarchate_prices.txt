@@ -15,5 +15,5 @@
 #		religious_influence = 85
 #	}
 
-	# TODO: fix
+	# TODO POST 2.5.0: fix
 	

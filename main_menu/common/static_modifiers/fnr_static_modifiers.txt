@@ -1,35 +1,50 @@
-﻿# Formable Nations Static Modifiers
+﻿#####################################
+# Formable Nations Static Modifiers #
+#####################################
 
 	# Great Moravia Modifiers
 
-	fnr_gmorv_clergy_upset_by_loss_of_power = {
-		game_data = {
-			category = country
+		fnr_gmorv_clergy_upset_by_loss_of_power = {
+			game_data = {
+				category = country
+			}
+			global_clergy_estate_power = -0.05
 		}
-		global_clergy_estate_power = -0.05
-	}
 
-	fnr_gmorv_gained_power = {
-		game_data = {
-			category = country
+		fnr_gmorv_gained_power = {
+			game_data = {
+				category = country
+			}
+			global_clergy_estate_power = 0.025
 		}
-		global_clergy_estate_power = 0.025
-	}
 
-#	fnr_royal_free_cities_modifier = {
-#		game_data = {
-#			category = location
-#		}
-#		free_building_levels = 20
-#	}
+	#	fnr_royal_free_cities_modifier = {
+	#		game_data = {
+	#			category = location
+	#		}
+	#		free_building_levels = 20
+	#	}
 
-	# Moravian Patriarchate
-	fnr_moravian_patrarchate_modifier = {
-		game_data = {
-			category = character
+		# Moravian Patriarchate
+		fnr_moravian_patrarchate_modifier = {
+			game_data = {
+				category = character
+			}
+			
+			character_cabinet_efficiency = 0.05
 		}
-		
-		character_cabinet_efficiency = 0.05
-	}
 
+
+	# Rhineland
+
+		fnr_RHLND_limitations_of_united_counties = {
+			game_data = {
+				category = country
+			}
+			stability_cost = 0.025
+			stability_investment = 0.05
+			global_pop_promotion_speed_modifier = 0.02
+			
+			monthly_towards_decentralization = 0.05
+		}
 	

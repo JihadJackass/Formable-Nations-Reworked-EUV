@@ -47,8 +47,8 @@ flavor_GMORV.1 = {
 			}
 		}
 		custom_tooltip = { text = GMORV_formable_trigger_7_tt }
-		# TODO: Remove GMORV and subject from Catholic Church IO
-		# TODO: Add GMORV subjects to MP IO
+		# TODO POST 2.5.0: Remove GMORV and subject from Catholic Church IO
+		# TODO POST 2.5.0: Add GMORV subjects to MP IO
 	}
 	option = { # Catholic Path (Keep our ways - path to rejoining the HRE)
 		name = flavor_GMORV.1.b
@@ -157,7 +157,7 @@ flavor_GMORV.3 = {
 	}
 }
 
-# TODO: Expanding the borders of our Realm
+# TODO POST 2.5.0: Expanding the borders of our Realm
 
-# TODO: Imperium Slavorum 
+# TODO POST 2.5.0: Imperium Slavorum 
 

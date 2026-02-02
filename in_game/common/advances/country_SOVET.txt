@@ -1,0 +1,30 @@
+﻿# Advances for Soviet Union
+
+	# age_1_traditions
+
+	# age_2_renaissance
+
+	# age_3_discovery
+
+	# age_4_reformation
+
+	# age_5_absolutism
+
+	# age_6_revolutions
+
+		SOVET_rise_of_the_proletariat = {
+			age = age_6_revolutions
+			potential = {
+				has_or_had_tag = SOVET
+			}
+			icon = mother_of_russian_cities
+
+			global_nobles_assimilation_blocked = yes
+			global_burghers_assimilation_blocked = yes
+			global_clergy_assimilation_blocked = yes
+			global_manpower_modifier = 0.0550
+
+			requires = industrialization_advance
+		}	
+
+			

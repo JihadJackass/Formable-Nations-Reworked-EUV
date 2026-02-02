@@ -24,7 +24,7 @@
 			diplomatic_capacity_modifier = 0.05
 			diplomatic_reputation = -0.025
 			remove_tolerated_culture_cost_modifier = -0.050
-			# growth_is_primary_culture = yes TODO: make this work
+			# growth_is_primary_culture = yes TODO POST 2.5.0: make this work
 
 			requires = military_revolution_advance
 		}		

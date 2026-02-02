@@ -113,7 +113,7 @@ fnr_gallo_roman_religion = {
 }
 
 # Great Moravia
-# TODO:  PLACEHOLDER UNTIL I CAN RESOLVE PATRIARCH UI POPPING UP DUE TO has_autocephalous_patriarchates ISSUE
+# TODO POST 2.5.0:  PLACEHOLDER UNTIL I CAN RESOLVE PATRIARCH UI POPPING UP DUE TO has_autocephalous_patriarchates ISSUE
 fnr_great_moravia_orthodox = { 
 	color = color_fnr_religion_orthodox
 	group = christian

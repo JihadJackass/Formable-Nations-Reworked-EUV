@@ -204,18 +204,20 @@
 
 			on_deactivate = {
 				# Check that the Church Solutions event has not fired
-				set_variable = fnr_high_church_influence_removed
-				grant_estate_privilege = estate_privilege:fnr_RHLND_high_church_influence
+				set_variable = fnr_high_church_influence_HAS_removed
+				remove_variable = fnr_high_church_influence_NOT_removed
+				revoke_estate_privilege = estate_privilege:fnr_RHLND_high_church_influence
+				grant_estate_privilege = estate_privilege:fnr_RHLND_pillar_that_is_the_church
 			}
 			
 			can_revoke = {
-				# Must have at least less than 10 clergy estate power, or the Church Solutions event must have fired (50-100 year timer)
-				OR = {
+				# Must have at least less than 10 clergy estate power AND less than 10% clergy pop, or the Church Solutions event must have fired (50-100 year timer)
+				AND = {
 					any_estate = {
 						estate_type = estate_type:clergy_estate
-						power < 0.10
+						power < 0.15
 					}
-					state_religion_clergy = 0.10
+					state_religion_clergy < 0.10
 				}
 			}
 		}	
@@ -235,6 +237,7 @@
 					tag = RHLND
 					has_or_had_tag = RHLND
 				}
+				NOT = { has_estate_privilege = estate_privilege:fnr_RHLND_high_church_influence }
 			}
 			
 			country_modifier = {

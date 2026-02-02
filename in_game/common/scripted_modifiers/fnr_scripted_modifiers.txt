@@ -1,4 +1,9 @@
-﻿fnr_GMORV_family_in_cabinet_bonus = { # TODO: fix
+﻿#################################################
+# Formable Nations: Reworked Scripted Modifiers #
+#################################################
+
+# Great Moravia
+fnr_GMORV_family_in_cabinet_bonus = {
     potential = {
         has_heir_selection = heir_selection:moravian_meritocratic_succession  # Your succession law
     }

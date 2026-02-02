@@ -7,7 +7,7 @@
 fnr_event_actions = {
     events = {
         # Rhineland
-        flavor_RHLND.4 # TODO: CHANGE THIS ONE TO 6 MONTH CHECK
+        flavor_RHLND.4 # TODO POST 2.5.0: CHANGE THIS ONE TO 6 MONTH CHECK
         flavor_RHLND.3
         flavor_RHLND.2
         # Papal States

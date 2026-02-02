@@ -1,5 +1,5 @@
 ﻿
-# TODO: disabled for now until 2.5.0
+# TODO POST 2.5.0: disabled for now until 2.5.0
 # Requires generic actions AI list
 
 #######################################
@@ -105,7 +105,7 @@ fnr_moravia_patriarchate_polish_coalition = {
 	}
 
 	effect = {
-		# TODO: Add CB for GMORV against POL
+		# TODO POST 2.5.0: Add CB for GMORV against POL
 	}
 
 	# ai_desire is how much an AI would like this action to pass.

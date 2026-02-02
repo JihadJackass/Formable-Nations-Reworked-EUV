@@ -1,0 +1,29 @@
+﻿# Advances for East Slavia
+
+	# age_1_traditions
+
+	# age_2_renaissance
+
+		ESLAV_eastern_slavic_unifier = {
+			age = age_2_renaissance
+			potential = {
+				has_or_had_tag = ESLAV
+			}
+			icon = reuniting_rus
+
+			expected_army_size_modifier = 0.01
+			monthly_towards_serfdom = 0.05
+			accept_subjugation_reasons = 0.1
+
+			requires = renaissance_advance
+		}	
+
+	# age_3_discovery
+
+	# age_4_reformation
+
+	# age_5_absolutism
+
+	# age_6_revolutions
+
+			

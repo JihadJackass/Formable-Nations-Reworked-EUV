@@ -51,7 +51,8 @@
 			}
 			icon = defenses_of_novgorod
 
-			unlock_building = fnr_hradiska
+			global_rural_build_buildings_cost = -0.05
+			# unlock_building = fnr_hradiska TODO POST 2.5.0
 
 			requires = professional_armies_advance
 		}		

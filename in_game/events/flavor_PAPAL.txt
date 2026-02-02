@@ -1,6 +1,6 @@
 ﻿namespace = flavor_PAPAL
 
-# TODO: this needs to be finished
+# TODO POST 2.5.0: this needs to be finished
 
 # The Holy Roman Empire Resolution (Decretum Sacri Romani Imperii)
 flavor_PAPAL.1 = {
@@ -173,11 +173,11 @@ flavor_PAPAL.4 = {
                 OR = {
                     this = scope:former_hre_member # TODO: Limit Members not subject or with positive opinon of PAP to not join
                    # was_member_of_international_organization = international_organization:hre 
-				   # TODO: not a real trigger, fix
+				   # TODO POST 2.5.0: not a real trigger, fix
                 }
             }
 
-			# TODO: disabled until 2.5.0
+			# TODO POST 2.5.0: disabled until 2.5.0
 #            international_organization:papal_hre = {
 #                add_country_to_international_organization = prev
 #            }

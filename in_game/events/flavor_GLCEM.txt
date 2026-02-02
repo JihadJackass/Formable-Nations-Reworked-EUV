@@ -23,7 +23,7 @@ flavor_GLCEM.2 = {
 	fire_only_once = yes
 	option = { # 
 		name = flavor_GLCEM.2.a
-		# TODO: was buggy
+		# TODO POST 2.5.0: was buggy
 	}
 	option = { # gallia
 		name = flavor_GLCEM.2.b
@@ -38,7 +38,7 @@ flavor_GLCEM.3 = {
 	fire_only_once = yes
 	option = { # 
 		name = flavor_GLCEM.3.a
-		# TODO: was buggy	
+		# TODO POST 2.5.0: was buggy	
 	}
 	option = { # gallia
 		name = flavor_GLCEM.2.b

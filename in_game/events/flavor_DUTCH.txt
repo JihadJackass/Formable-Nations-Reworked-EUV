@@ -10,12 +10,12 @@ flavor_DUTCH.1 = { # United Provinces opportunity to centralize into the Dutch R
 	option = { # We shall Proclaim the Dutch Republic!
 		name = flavor_DUTCH.1.a
 		change_country_name = NED_DR
-		# TODO: add centralization + bonuses
+		# TODO POST 2.5.0: add centralization + bonuses
 		change_country_flag = NED_DR_FLAG
 	}
 	option = { # The United Provinces remain strong in equality!
 		name = flavor_DUTCH.1.b
 		change_country_flag = NED_UP_FLAG
-		# TODO: add decentralization + bonuses
+		# TODO POST 2.5.0: add decentralization + bonuses
 	}
 }

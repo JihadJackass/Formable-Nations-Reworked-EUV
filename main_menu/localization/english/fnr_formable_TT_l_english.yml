@@ -21,13 +21,16 @@
     # Formable Requirement Tooltips #
     #################################
 
+    # The Horde
+    fnr_the_horde_no_other_hordes_tt: "No other country must have the [ShowGovernmentTypeName('steppe_horde')] government type.\n\nWe must be the dominant, and only [ShowGovernmentTypeName('steppe_horde')]!"
+
     # French Empire
     FNCEM_formable_trigger_1_tt: "Upon formation, [GetCountry('FRA').GetNameWithFlag] receives an event with two paths:\n\n- #color_yellow Historical Path:#! Experience the Napoleonic Era from the #color_yellow Storming of the Bastille#! through a series of historical events\n\n#color_yellow Historical Naming Structure:#!\nKingdom of France (Until September 21, 1792)\nFrench First Republic (September 22, 1792 - November 9, 1799)\nFrench Consulate (November 10, 1799 - May 18, 1804)\nFirst French Empire (May 18, 1804 - April 6, 1814)\n\n- #color_yellow Alternate Path:#! Bypass the historical events and immediately form the French Empire under #color_yellow Napoleon Bonaparte#!."
 
     # Rhineland
     RHLND_formable_trigger_1_tt: "[ShowCultureName('rhine_franconian')], [ShowCultureName('ripuarian_franconian')], [ShowCultureName('rhine_alemannic')], and [ShowCultureName('moselle_franconian')] will all respectively become #color_green Kindred#! of each other."
-    RHLND_formable_trigger_2_tt: "After 20-30 years we will be provided the event #color_yellow 'The Path Forward'#! allowing us to choose between Das Rheinische Königreich or Der Rheinbund which will offer us to establish a [ShowCountryRankNameWithNoTooltip('rank_kingdom')]-Tier [ShowGovernmentTypeName('monarchy')] or a [ShowCountryRankNameWithNoTooltip('rank_kingdom')]-Tier [ShowGovernmentTypeName('republic')] respectively."
-    RHLND_formable_trigger_3_tt: "After 50-100 years we will be provided the event #color_yellow 'Pillar of Society and Religion'#! which will replace the [ShowEstatePrivilegeName('fnr_RHLND_high_church_influence')] privilege with [ShowEstatePrivilegeName('fnr_RHLND_pillar_that_is_the_church')] privilege - otherwise we can remove it manually by having either less than #G 10%#! [ShowEstateTypeName('clergy_estate')] [estate_power|e] or at least #G 10%#! of the population are apart of the [ShowEstateTypeName('clergy_estate')]."
+    RHLND_formable_trigger_2_tt: "After 20-30 years we will be provided the event #color_yellow 'The Path Forward'#! allowing us to choose between [ShowGovernmentReformName('fnr_GSCTL_das_rheinische_konigreich')] or [ShowGovernmentReformName('fnr_GSCTL_der_rheinbund')] which will have us establish a [ShowCountryRankNameWithNoTooltip('rank_kingdom')]-Tier [ShowGovernmentTypeName('monarchy')] or a [ShowCountryRankNameWithNoTooltip('rank_kingdom')]-Tier [ShowGovernmentTypeName('republic')] respectively."
+    RHLND_formable_trigger_3_tt: "After 50-100 years we will be provided the event #color_yellow 'Pillar of Society and Religion'#! which will replace the [ShowEstatePrivilegeName('fnr_RHLND_high_church_influence')] privilege with [ShowEstatePrivilegeName('fnr_RHLND_pillar_that_is_the_church')].\nWe can remove [ShowEstatePrivilegeName('fnr_RHLND_high_church_influence')] manually by having either less than #G 10%#! [ShowEstateTypeName('clergy_estate')] [estate_power|e] or at least #G 10%#! of the population are apart of the [ShowEstateTypeName('clergy_estate')]."
 
     # Papal States conquers the HRE
     PAPAL_hre_tt_1: "The [GetInternationalOrganizationType('hre').GetName] will be destroyed!"

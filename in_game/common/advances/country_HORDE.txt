@@ -1,0 +1,37 @@
+﻿# Advances for The Horde
+
+	# age_1_traditions
+
+		HORDE_domination_of_the_steppes = {
+			age = age_1_traditions
+			government = steppe_horde
+			potential = {
+				has_or_had_tag = HORDE
+			}
+			icon = teu_teutonic_heavy_cavalry
+
+			# Buffs
+			army_cavalry_power = 0.10
+			army_cavalry_build_cost_modifier = -0.10
+			army_cavalry_maintenance_cost_modifier = -0.10
+			army_cavalry_reinforce_cost_modifier = -0.05
+			global_peasants_food_consumption = -0.05
+			# Debuffs
+			army_artillery_power = -0.10
+			army_artillery_build_cost_modifier = 0.05			
+			global_monthly_development = -0.0001  
+
+			requires = horse_riding_advance
+		}
+
+	# age_2_renaissance
+
+	# age_3_discovery
+
+	# age_4_reformation
+
+	# age_5_absolutism
+
+	# age_6_revolutions
+
+			

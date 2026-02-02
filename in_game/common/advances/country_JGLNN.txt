@@ -1,0 +1,28 @@
+﻿# Advances for Jagiellonian Empire
+
+	# age_1_traditions
+
+	# age_2_renaissance
+
+	# age_3_discovery
+		JGLNN_monarchy_of_nations = {
+			age = age_3_discovery
+			potential = {
+				has_or_had_tag = JGLNN
+			}
+			icon = expansive_policies
+
+			union_integration_level = 1
+			diplomatic_capacity = 1
+			diplomatic_reputation = 0.05
+
+			requires = formalized_relations
+		}
+
+	# age_4_reformation
+
+	# age_5_absolutism
+
+	# age_6_revolutions
+
+			

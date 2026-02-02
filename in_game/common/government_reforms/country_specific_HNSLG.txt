@@ -1,9 +1,5 @@
 ﻿# Hanseatic League Specific Government Reforms
 
-
-	# TODO: finish 
-
-	
 	# Territorial Hanseatic Federation
 		fnr_HNSLG_territorial_hanseatic_federation = {
 			major = yes
@@ -100,7 +96,9 @@
 				tag = HNSLG
 			}
 			country_modifier = {
-				government_reform_slots = 1
+				government_reform_slots = 2
+				global_trades_per_burgher = 0.05
+				burghers_estate_min_tax = -0.05
 			}
 			locked = {
 				is_locked_mechanic = {

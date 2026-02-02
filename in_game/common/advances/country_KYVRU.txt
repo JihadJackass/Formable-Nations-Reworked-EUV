@@ -1,0 +1,31 @@
+﻿# Advances for Kyivan Rus
+
+	# age_1_traditions
+
+	# age_2_renaissance
+
+		KYVRU_restoration_of_the_original_rus = {
+			age = age_2_renaissance
+			potential = {
+				OR = {
+					has_or_had_tag = KYVRU
+					has_or_had_tag = UKRNE
+				}
+			}
+			icon = russian_artillery_yard
+
+			global_pop_assimilation_speed = 0.002
+			land_morale_attrition_cost = -0.0005
+
+			requires = professional_armies_advance
+		}	
+
+	# age_3_discovery
+
+	# age_4_reformation
+
+	# age_5_absolutism
+
+	# age_6_revolutions
+
+			

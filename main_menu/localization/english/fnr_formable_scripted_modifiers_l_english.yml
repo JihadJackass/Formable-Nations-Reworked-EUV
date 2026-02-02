@@ -1,5 +1,9 @@
 ﻿l_english:
 
+  #################################################
+  # Formable Nations: Reworked Scripted Modifiers #
+  #################################################
 
+  # Great Moravia
   fnr_GMORV_family_in_cabinet_bonus: "Great Moravian Nobility Power Bonus"   # TODO: make work
 

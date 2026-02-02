@@ -1,8 +1,15 @@
 ﻿l_english:
 
-  # Static Modifier Localization
+  ################################
+  # Static Modifier Localization #
+  ################################
 
-  STATIC_MODIFIER_NAME_fnr_gmorv_gained_power: "Moravian Clergy Gains Power"
-  STATIC_MODIFIER_NAME_fnr_gmorv_clergy_upset_by_loss_of_power: "Clergy Upset over loss of Power"
-  STATIC_MODIFIER_NAME_fnr_moravian_patrarchate_modifier: "Church Slavoric Efficiency"
+    # Great Moravia
 
+      STATIC_MODIFIER_NAME_fnr_gmorv_gained_power: "Moravian Clergy Gains Power"
+      STATIC_MODIFIER_NAME_fnr_gmorv_clergy_upset_by_loss_of_power: "Clergy Upset over loss of Power"
+      STATIC_MODIFIER_NAME_fnr_moravian_patrarchate_modifier: "Church Slavoric Efficiency"
+
+    # Rhineland
+
+      STATIC_MODIFIER_NAME_fnr_RHLND_limitations_of_united_counties: "Limitations of the United Counties"

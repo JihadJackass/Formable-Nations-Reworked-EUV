@@ -1,0 +1,30 @@
+﻿# Advances for Russian Empire
+
+	# age_1_traditions
+
+	# age_2_renaissance
+
+	# age_3_discovery
+
+	# age_4_reformation
+
+	# age_5_absolutism
+
+		RUSEM_tsarist_absolutism = {
+			age = age_5_absolutism
+			potential = {
+				has_or_had_tag = RUSEM
+			}
+			icon = russian_legitimization
+
+			monthly_religious_influence = 0.01
+			monthly_towards_absolutism = 0.05
+			monthly_reform_desire = -0.025
+			monthly_prestige = 0.01
+
+			requires = newspapers_advance
+		}	
+
+	# age_6_revolutions
+
+			

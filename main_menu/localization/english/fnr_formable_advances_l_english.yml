@@ -4,29 +4,71 @@
 
     # Formable Specific
 
+      # The Horde
+      HORDE_domination_of_the_steppes: "Domination of the Steppes"
+      HORDE_domination_of_the_steppes_desc: "We are the last true heirs of the steppe empires—the final horde to unite the grasslands under one banner. Where others have settled in cities and abandoned the ways of their ancestors, we remain masters of mounted warfare. Our warriors live in the saddle, our armies move with the speed of wind, and our horses are bred for endurance and battle. Artillery and fortifications mean nothing on the open steppe, and infantry cannot catch what they cannot reach. Yet our nomadic traditions make permanent settlement difficult—we build no great cities, develop no sprawling farms. The steppe provides, the horde conquers, and sedentary life weakens the warrior spirit."
+
+      # White Huns
+      HPEMP_cavalric_values: "Equestrian Values"
+      HPEMP_cavalric_values_desc: "The Hephthalites are a people of the saddle, born to ride and fight from horseback. From childhood, every warrior learns to shoot arrows at full gallop, wheel and charge in perfect formation, and live for weeks on campaign with nothing but his mount and weapons. Our cavalry strikes with devastating speed, vanishes before enemy counterattacks can form, and dominates the vast distances of Central Asia through superior mobility. Infantry cowers in fortresses while we control the open steppes. The horse is not merely a tool of war—it is the foundation of our power and the measure of a warrior's worth."
+
+      HPEMP_hunnic_traditions: "Hunnic Traditions"
+      HPEMP_hunnic_traditions_desc: "Though we are called 'White Huns' by sedentary peoples who see only our mounted fury, we are heirs to the great nomadic empires that have swept across the steppes for centuries. From the Xiongnu to the Huns of Attila, our ancestors mastered the art of steppe warfare: composite bows, feigned retreats, rapid maneuver, and the discipline to strike as one despite our tribal divisions. These Hunnic traditions—forged by generations of warfare against Persian armies and Indian kingdoms—make us the most formidable cavalry force in the world. Empires rise and fall, but the way of the steppe warrior endures."
+
+      # Russian Federation
+      RUFED_federalized_pseudo_democratic_values: "Federalized Pseudo-Democratic Values"
+      RUFED_federalized_pseudo_democratic_values_desc: "The Russian Federation maintains the institutional architecture of democracy—elections, parliament, regional governments, constitutional rights—while ensuring outcomes remain predictable and controlled. Federal subjects enjoy nominal autonomy, citizens cast ballots in regular elections, opposition parties sit in the Duma, and the press operates freely within understood boundaries. Yet behind this democratic façade, power flows through informal networks, key decisions occur outside official channels, and challenges to central authority meet swift response. This system provides the international legitimacy and domestic stability of democracy without the unpredictability. The people participate, the regions govern themselves, and dissent is tolerated—so long as none of it threatens the established order. Democracy exists, but it is managed, guided, sovereign."
+
+      # Jagiellonian Empire
+      JGLNN_monarchy_of_nations: "Monarchy of Nations"
+      JGLNN_monarchy_of_nations_desc: "The Jagiellonian realm unites Poles, Lithuanians, Ruthenians, Czechs, and Hungarians under a single dynastic crown. Unlike empires built on conquest and forced assimilation, our union preserves the distinct identities, laws, and privileges of each constituent nation. The Polish sejm, the Lithuanian grand duchy, the Bohemian estates, the Hungarian diet—all retain their traditional rights and representation. This commonwealth of nations, bound by shared monarchy rather than centralized tyranny, creates a unique polity in Europe: an empire that governs through consultation rather than domination, maintaining unity through respect for diversity."
+
+      # Russian Empire
+      RUSEM_tsarist_absolutism: "Tsarist Absolutism"
+      RUSEM_tsarist_absolutism_desc: "The Tsar is not merely a king but an autocrat—sole sovereign answerable to God alone. No parliament constrains his will, no estates limit his power, no charter restricts his authority. What the Tsar decrees becomes law, what he commands must be obeyed, and those who resist face the knout or Siberia. This concentration of power in the imperial person eliminates the factional paralysis that weakens other states. There are no nobles to oppose reform, no assemblies to delay mobilization, no competing jurisdictions to create confusion. Russia moves with singular purpose because one will directs it—the will of the Tsar, absolute and unchallengeable"
+
+      # Soviet Union
+      SOVET_rise_of_the_proletariat: "Rise of the Proletariat"
+      SOVET_rise_of_the_proletariat_desc: "The October Revolution has overthrown the parasitic classes that exploited Russian workers and peasants for centuries. The nobility who lived off peasant labor, the bourgeois capitalists who extracted surplus value from factory workers, the clergy who preached submission to earthly masters—all are swept away by the dictatorship of the proletariat. In the workers' state, there are no aristocrats, no capitalists, no priests—only comrades laboring together to build socialism. This liberation of the masses unleashes unprecedented mobilization. No longer will workers die for a tsar's ambitions or a landlord's greed. Now they fight for their own state, their own future, and they do so willingly in numbers no feudal regime could ever muster."
+
+      # Ukraine
+      UKRNE_a_home_for_ukrainians: "Home for Ukrainians"
+      UKRNE_a_home_for_ukrainians_desc: "Ukraine has long been a borderland fought over by empires—Polish, Russian, Ottoman, Austrian—each claiming our fertile plains. Yet through centuries of foreign rule, the Ukrainian people endured, preserving language and identity in village and steppe. Now we establish a true homeland where Ukrainians govern themselves and welcome all who would join our nation. The Cossack tradition of accepting refugees and outcasts into the sich lives on in our policies, while our legendary mounted warriors defend Ukrainian soil with unmatched skill."
+
+      UKRNE_breadbasket_of_europe: "Breadbasket of Europe"
+      UKRNE_breadbasket_of_europe_desc: "The black earth of Ukraine is among the most fertile in the world, producing grain in such abundance that we feed not only ourselves but half of Europe. Our endless fields of wheat stretch across the steppe, our granaries overflow with each harvest, and our merchants ship food to distant markets. This agricultural wealth is Ukraine's greatest asset and our guarantee of prosperity. When famine strikes elsewhere, Ukraine eats well—and profits from those who do not."
+
+      # East Slavia
+      ESLAV_eastern_slavic_unifier: "East Slavic Unifier"
+      ESLAV_eastern_slavic_unifier_desc: "The eastern Slavic peoples—Ruthenians, Muscovites, Belarusians—have long been divided by political borders, yet united by language, faith, and shared ancestry. Through conquest and diplomacy, we have reunited these scattered tribes under a single state. What the Mongol invasions fragmented, we now restore. Our authority extends from the Baltic to the Urals, from the northern forests to the Black Sea steppe, binding all eastern Slavs into one nation."
+
+      # Kyivan Rus
+      KYVRU_restoration_of_the_original_rus: "Restoration of the Original Rus"
+      KYVRU_restoration_of_the_original_rus_desc: "Kyiv was the mother of all Rus cities, the cradle of eastern Slavic civilization and Orthodox Christianity. From these lands, princes once ruled a vast realm stretching across the forests and rivers of the east. Though Mongol invasions shattered this golden age, scattering the Rus into competing principalities, we have reclaimed our patrimony. The restoration of Kyivan Rus revives not merely a state but a legacy—the original unity of the Rus people under the city where it all began."
+
       # Arabian Empire
       ARABE_united_tribes_of_arabia: "United Tribes of Arabia"
-      ARABE_united_tribes_of_arabia_desc: ""
+      ARABE_united_tribes_of_arabia_desc: "For centuries, the tribes of Arabia feuded over wells, grazing lands, and honor. Through conquest and diplomacy, we have bound these fractious clans into a single Arab nation. Tribal levies answer to central authority, caravan routes cross safely between regions, and shared Arab identity supersedes local loyalties. The desert tribes, once divided, now march as one."
 
       # Israel
       ISREL_jewish_historical_populace: "Jewish Historical Populace"
-      ISREL_jewish_historical_populace_desc: ""
+      ISREL_jewish_historical_populace_desc: "After millennia of diaspora, the Jewish people return to their ancestral homeland. Communities scattered across Europe, North Africa, and the Middle East resettle in the land their forefathers knew. This ingathering brings diverse skills, languages, and traditions—Sephardic merchants, Ashkenazi scholars, Mizrahi farmers—united by shared heritage and the determination to rebuild what was lost."
 
       # United Arab Republic
       UNARR_egyptian_syrian_alliance: "Egyptian-Syrian Alliance"
-      UNARR_egyptian_syrian_alliance_desc: ""
+      UNARR_egyptian_syrian_alliance_desc: "Egypt and Syria, natural leaders of the Arab world, unite under a single banner. Egyptian administrative capacity combines with Syrian commercial networks and strategic position, creating a pan-Arab state strong enough to resist foreign domination. Though separated by desert, the Nile and the Levant now answer to one government, one vision of Arab unity and independence."
 
       # Ummayad Caliphate
       UMAYA_caliphal_hegemony: "Caliphal Hegemony"
-      UMAYA_caliphal_hegemony_desc: ""
+      UMAYA_caliphal_hegemony_desc: "The Caliph is not merely a political ruler but Commander of the Faithful, successor to the Prophet's authority. Under Umayyad rule, religious legitimacy and temporal power merge completely. Non-Muslim subjects pay the jizya and accept dhimmi status, while the faithful enjoy privileged position. Through this fusion of faith and statecraft, the Caliphate extends its hegemony across the Islamic world."
 
       # Cisalpina
       CSPNA_cisalpine_legitimacy: "Cisalpine Legitimacy"
-      CSPNA_cisalpine_legitimacy_desc: ""
+      CSPNA_cisalpine_legitimacy_desc: "The Cisalpine Republic was born from French revolutionary fervor, a sister republic imposed by Napoleon's armies. Yet what began as foreign imposition has evolved into genuine national identity. Northern Italian patriots govern themselves through republican institutions, balancing French revolutionary ideals with Italian traditions. Though our origins lie in conquest, our legitimacy now rests on popular support and effective governance."
 
       # Lombardy-Venetia
       LMBYV_austrian_influence: "Austrian Influence"
-      LMBYV_austrian_influence_desc: ""
+      LMBYV_austrian_influence_desc: "Lombardy-Venetia existed as an Austrian imperial possession, its sovereignty subsumed into Habsburg administration. Vienna's bureaucratic efficiency brings order and development, yet at the cost of Italian autonomy. Austrian methods modernize infrastructure and rationalize governance, while Austrian garrisons ensure compliance. We benefit from Habsburg resources and protection, even as we chafe under foreign rule."
 
       # Sardinia–Piedmont
       SDPDM_house_of_savoy: "House of Savoy"

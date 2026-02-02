@@ -20,6 +20,11 @@
     flavor_RHLND.4.desc: "We have successfully curtailed the Church's political power, but complete suppression would be both impractical and unnecessary. Instead, we will redirect their influence toward what they do best: serving as the cultural and theological backbone that binds our diverse people together."
     flavor_RHLND.4.a: "The Clergy keep the people under control."
 
+    flavor_RHLND.5.title: "State of the Confederation"
+    flavor_RHLND.5.desc: "The Rhineland has long been a patchwork of bishoprics, free cities, and petty lordships—proud of their autonomy yet bound by geography and commerce. Our unification under the banner of the United Countries preserves this tradition of local sovereignty, each constituent maintaining its ancient privileges. Yet this very fragmentation weakens us. Foreign powers view us not as a unified duchy but as quarreling neighbors held together by treaty. Our ambassadors lack the authority of a true prince, our armies struggle with divided command, and territorial expansion is complicated by the need for consensus among the member states. Some now argue we must choose: embrace centralization under a ducal crown and claim our place among Europe's principalities, or accept our limitations and preserve the freedoms that make the Rhineland unique. Either path demands sacrifice."
+    flavor_RHLND.5.a: "Remain as the United Counties of Rhineland."
+    flavor_RHLND.5.b: "Give me the title of Duke!"
+
     # North German Confederation Flag Standards
     flavor_NGCFD.1.title: "Imperial German Flag Standard"
     flavor_NGCFD.1.desc: "The North German Confederation has been unified - We must declare our official flag for the nation. We could use our historical war ensign as the official flag, or stick to the tricolored Schwarz-Weiß-Rot design."

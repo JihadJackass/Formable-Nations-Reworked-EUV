@@ -26,7 +26,7 @@
 			antagonism_received_modifier = 0.10
 			cultural_influence = 0.05
 			destroy_market_cost_modifier = -0.05
-			# growth_is_primary_culture = yes TODO: make this work
+			# growth_is_primary_culture = yes TODO POST 2.5.0: make this work
 
 			requires = power_projection_advance_6
 		}	

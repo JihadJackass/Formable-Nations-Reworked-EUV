@@ -518,7 +518,7 @@ FormableNationsReworkedDebug_initialize = {
 				}
 			}
 	# Rank 3
-		# TODO alphebatise all before basque country
+		# TODO POST 2.5.0 alphebatise all before basque country
 
 		# Federal Republic of Central America - historical
 			FormableNationReworked_toggle_federalrepubliccentralamerica = {
