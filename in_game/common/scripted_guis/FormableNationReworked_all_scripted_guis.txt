@@ -235,7 +235,7 @@ FormableNationsReworkedDebug_initialize = {
 		}
 	}	
 
-# Toggle for Papal States Formables - fnr_us_states_enabled
+# Toggle for Papal States Formables - fnr_is_papacy
 	# For Papal States
 	FormableNationReworked_toggle_papal_formables = {
 		scope = country

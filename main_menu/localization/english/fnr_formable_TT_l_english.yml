@@ -21,11 +21,15 @@
     # Formable Requirement Tooltips #
     #################################
 
+    # Anglo-Dutch Union
+    ANDUH_formable_trigger_1_tt: "The [GetCountry('ENG').GetAdjective] Throne will become ruled by a member of the [GetDynasty('orange_dynasty').GetName]-Nassau dynasty which will also establish the #color_yellow Dutch Republic#! as a union member under a relative of the [GetDynasty('orange_dynasty').GetName]-Nassau dynasty under a #color_yellow Stadtholder#!."
+
     # The Horde
     fnr_the_horde_no_other_hordes_tt: "No other country must have the [ShowGovernmentTypeName('steppe_horde')] government type.\n\nWe must be the dominant, and only [ShowGovernmentTypeName('steppe_horde')]!"
 
     # French Empire
     FNCEM_formable_trigger_1_tt: "Upon formation, [GetCountry('FRA').GetNameWithFlag] receives an event with two paths:\n\n- #color_yellow Historical Path:#! Experience the Napoleonic Era from the #color_yellow Storming of the Bastille#! through a series of historical events\n\n#color_yellow Historical Naming Structure:#!\nKingdom of France (Until September 21, 1792)\nFrench First Republic (September 22, 1792 - November 9, 1799)\nFrench Consulate (November 10, 1799 - May 18, 1804)\nFirst French Empire (May 18, 1804 - April 6, 1814)\n\n- #color_yellow Alternate Path:#! Bypass the historical events and immediately form the French Empire under #color_yellow Napoleon Bonaparte#!."
+    FNCEM_formable_trigger_2_tt: "We own [ShowLocationName('paris')]"    
 
     # Rhineland
     RHLND_formable_trigger_1_tt: "[ShowCultureName('rhine_franconian')], [ShowCultureName('ripuarian_franconian')], [ShowCultureName('rhine_alemannic')], and [ShowCultureName('moselle_franconian')] will all respectively become #color_green Kindred#! of each other."
@@ -143,8 +147,8 @@
     fnr_north_american_tooltip_on: "Click to #R DISABLE#!\n\nThis will disable North American Formables such as Oklahoma, Ontario, California, etc"
     fnr_north_american_tooltip_off: "Click to #G ENABLE#!\n\nThis will enable North American Formables such as Oklahoma, Ontario, California, etc"
     # Papal States
-    fnr_papal_states_tooltip_on: "Click to #R DISABLE#!\n\nThe Papal States in vanilla is blocked from forming any formable nations, and through this setting the Papal States will have a unique information box added to the Formable Nations screen which explains how to form the Kingdom of God."
-    fnr_papal_states_tooltip_off: "Click to #G ENABLE#!\n\nThe Papal States in vanilla is blocked from forming any formable nations, and through this setting the Papal States will have a unique information box added to the Formable Nations screen which explains how to form the Kingdom of God."    
+    fnr_papal_states_tooltip_on: "Click to #R DISABLE#!\n\nThe Papal States in vanilla is blocked from forming any formable nations, and through this setting the Papal States will have a unique information box added to the Formable Nations screen which explains how to form the Kingdom of God.\n\nCan only be activated as the Papacy due to game restrictions - Will be addressed in a future update."
+    fnr_papal_states_tooltip_off: "Click to #G ENABLE#!\n\nThe Papal States in vanilla is blocked from forming any formable nations, and through this setting the Papal States will have a unique information box added to the Formable Nations screen which explains how to form the Kingdom of God.\n\nCan only be activated as the Papacy due to game restrictions. - Will be addressed in a future update."    
 
     # Formable List loc
     fnr_debug_window_formable_list_loc_toggle: "Formable Nations: Reworked"

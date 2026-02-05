@@ -24,3 +24,157 @@ fnr_on_game_start_actions = {
         }
     }
 }
+
+on_new_country_formed = {
+	on_actions = {
+    	fnr_on_new_country_formed
+    }
+}
+
+fnr_on_new_country_formed = {
+    effect = {
+        # Root scope = newly formed country
+        
+        # Find any country with toggle variables and save it
+        random_country = {
+            limit = {
+                OR = {
+                    has_variable = fnr_historical_enabled
+                    has_variable = fnr_nonhistorical_enabled
+                    has_variable = fnr_althistory_enabled
+                    has_variable = fnr_controversial_enabled
+                    has_variable = fnr_fantasy_enabled
+                    has_variable = fnr_meme_enabled
+                    has_variable = fnr_modern_enabled
+                    has_variable = fnr_us_states_enabled
+                }
+            }
+            save_scope_as = reference_country
+        }
+        
+        # Copy variables from reference to root (new country)
+        if = {
+            limit = { exists = scope:reference_country }
+            
+            if = {
+                limit = { scope:reference_country = { has_variable = fnr_historical_enabled } }
+                set_variable = { name = fnr_historical_enabled value = yes }
+            }
+            if = {
+                limit = { scope:reference_country = { has_variable = fnr_nonhistorical_enabled } }
+                set_variable = { name = fnr_nonhistorical_enabled value = yes }
+            }
+            if = {
+                limit = { scope:reference_country = { has_variable = fnr_althistory_enabled } }
+                set_variable = { name = fnr_althistory_enabled value = yes }
+            }
+            if = {
+                limit = { scope:reference_country = { has_variable = fnr_controversial_enabled } }
+                set_variable = { name = fnr_controversial_enabled value = yes }
+            }
+            if = {
+                limit = { scope:reference_country = { has_variable = fnr_fantasy_enabled } }
+                set_variable = { name = fnr_fantasy_enabled value = yes }
+            }
+            if = {
+                limit = { scope:reference_country = { has_variable = fnr_meme_enabled } }
+                set_variable = { name = fnr_meme_enabled value = yes }
+            }
+            if = {
+                limit = { scope:reference_country = { has_variable = fnr_modern_enabled } }
+                set_variable = { name = fnr_modern_enabled value = yes }
+            }
+            if = {
+                limit = { scope:reference_country = { has_variable = fnr_us_states_enabled } }
+                set_variable = { name = fnr_us_states_enabled value = yes }
+            }
+            
+            # Special: Papacy toggle
+            if = {
+                limit = {
+                    has_reform = government_reform:papacy_reform
+                    tag = PAP
+                    scope:reference_country = { has_variable = fnr_is_papacy }
+                }
+                set_variable = { name = fnr_is_papacy value = yes }
+            }
+        }
+    }
+}
+
+on_released_country = {
+	on_actions = {
+    	fnr_on_released_country
+    }
+}
+
+fnr_on_released_country = {
+    effect = {
+        # Root scope = newly formed country
+        
+        # Find any country with toggle variables and save it
+        random_country = {
+            limit = {
+                OR = {
+                    has_variable = fnr_historical_enabled
+                    has_variable = fnr_nonhistorical_enabled
+                    has_variable = fnr_althistory_enabled
+                    has_variable = fnr_controversial_enabled
+                    has_variable = fnr_fantasy_enabled
+                    has_variable = fnr_meme_enabled
+                    has_variable = fnr_modern_enabled
+                    has_variable = fnr_us_states_enabled
+                }
+            }
+            save_scope_as = reference_country
+        }
+        
+        # Copy variables from reference to root (new country)
+        if = {
+            limit = { exists = scope:reference_country }
+            
+            if = {
+                limit = { scope:reference_country = { has_variable = fnr_historical_enabled } }
+                set_variable = { name = fnr_historical_enabled value = yes }
+            }
+            if = {
+                limit = { scope:reference_country = { has_variable = fnr_nonhistorical_enabled } }
+                set_variable = { name = fnr_nonhistorical_enabled value = yes }
+            }
+            if = {
+                limit = { scope:reference_country = { has_variable = fnr_althistory_enabled } }
+                set_variable = { name = fnr_althistory_enabled value = yes }
+            }
+            if = {
+                limit = { scope:reference_country = { has_variable = fnr_controversial_enabled } }
+                set_variable = { name = fnr_controversial_enabled value = yes }
+            }
+            if = {
+                limit = { scope:reference_country = { has_variable = fnr_fantasy_enabled } }
+                set_variable = { name = fnr_fantasy_enabled value = yes }
+            }
+            if = {
+                limit = { scope:reference_country = { has_variable = fnr_meme_enabled } }
+                set_variable = { name = fnr_meme_enabled value = yes }
+            }
+            if = {
+                limit = { scope:reference_country = { has_variable = fnr_modern_enabled } }
+                set_variable = { name = fnr_modern_enabled value = yes }
+            }
+            if = {
+                limit = { scope:reference_country = { has_variable = fnr_us_states_enabled } }
+                set_variable = { name = fnr_us_states_enabled value = yes }
+            }
+            
+            # Special: Papacy toggle
+            if = {
+                limit = {
+                    has_reform = government_reform:papacy_reform
+                    tag = PAP
+                    scope:reference_country = { has_variable = fnr_is_papacy }
+                }
+                set_variable = { name = fnr_is_papacy value = yes }
+            }
+        }
+    }
+}

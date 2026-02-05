@@ -975,6 +975,7 @@
 				}
 				allow = {
 					owns = location:constantinople
+					religion = religion:catholic
 				}
 				name = LTNEM
 				flag = LTNEM
@@ -2133,16 +2134,12 @@
 					at_war = no
 					OR = { # Is a subject of Poland/is overlord of both, or is apart of the HRE
 						OR = {
-							if = {
-								limit = {
-									AND = {
-										tag_exists = TEU	
-										tag_exists = BRA	
-									}
-								}
-								c:TEU = { is_subject_of = c:BRA }
-								c:BRA = { is_subject_of = c:TEU }								
+							AND = { # TODO BEFORE 2.5.0 TOKAY. FIX THIS?
+								tag_exists = TEU	
+								tag_exists = BRA	
 							}
+							c:TEU = { is_subject_of = c:BRA }
+							c:BRA = { is_subject_of = c:TEU }
 						}
 						is_member_of_international_organization = international_organization:hre	
 					}
@@ -2800,7 +2797,7 @@
 		# Benelux - Non-Historical
 			BNLUX_f = {
 				level = 3
-				required_locations_fraction = 0.44
+				required_locations_fraction = 0.75
 				rule = plausible
 				potential = {
 					AND = {
@@ -2820,6 +2817,9 @@
 						culture = culture:low_franconian
 						culture = culture:frisian
 					}
+				}
+				allow = {
+					current_age_or_later = { age = age_4_reformation } 
 				}
 				name = BNLUX
 				flag = BNLUX
@@ -2926,6 +2926,11 @@
 						culture = { has_culture_group = culture_group:italian_group }
 					}
 				}
+				allow = {
+					owns = location:milano
+					republican_tradition > 80
+					government_type = government_type:republic 
+				}
 				name = CSPNA
 				flag = CSPNA
 				adjective = CSPNA_ADJ
@@ -2955,7 +2960,7 @@
 					culture = { has_culture_group = culture_group:british_group }
 				}
 				allow = {
-					current_age_or_later = { age = age_5_absolutism }
+					current_age_or_later = { age = age_4_reformation }
 					government_type = government_type:republic 
 				}
 				name = ENGCM
@@ -3374,6 +3379,9 @@
 					}
 					culture = { has_culture_group = culture_group:italian_group }
 				}
+				allow = {
+					current_date > 1720.1.1
+				}
 				name = SDPDM
 				flag = SDPDM
 				adjective = SDPDM_ADJ
@@ -3459,6 +3467,12 @@
 						}
 					}
 					culture = { has_culture_group = culture_group:italian_group }
+				}
+				allow = {
+					OR = {
+						is_subject_of = c:HAB
+						current_date > 1815.1.1
+					}
 				}
 				name = LMBYV
 				flag = LMBYV
@@ -4932,7 +4946,7 @@
 		# Langobards - Non-historical
 			LNGBD_f = {
 				level = 3
-				required_locations_fraction = 0.45
+				required_locations_fraction = 0.85
 				rule = plausible
 				potential = {
 					AND = {
@@ -4949,6 +4963,9 @@
 						}
 					}
 					culture = { has_culture_group = culture_group:italian_group }
+				}
+				allow = {
+
 				}
 				name = LNGBD
 				flag = LNGBD
@@ -5192,7 +5209,7 @@
 		# Elbian Federation
 			ELBNF_f = {
 				level = 4
-				required_locations_fraction = 0.40
+				required_locations_fraction = 0.80
 				rule = plausible
 				potential = {
 					AND = {
@@ -5512,7 +5529,7 @@
 		# French Empire - Historical
 			FNCEM_f = {
 				level = 4
-				required_locations_fraction = 0.75
+				required_locations_fraction = 0.98
 				rule = plausible
 				potential = {
 					AND = {
@@ -5530,22 +5547,27 @@
 					}
 					culture = { has_culture_group = culture_group:french_group }
 				}
+				allow = { 
+					owns = location:paris 
+					owns = location:vannes
+					owns = location:bordeaux
+				}
 				name = FNCEM
 				flag = FNCEM
 				adjective = FNCEM_ADJ
 				tag = FNCEM
 				color = map_FNCEM
 				regions = { france_region }
-				areas = { tunis_area algiers_area atlas_high_plateau tunis_area }
-				provinces = { pumonte_province cismonte_province antakya_province hims_province halab_province latakia_province }
+				#areas = { tunis_area algiers_area atlas_high_plateau tunis_area }
+				#provinces = { pumonte_province cismonte_province antakya_province hims_province halab_province latakia_province }
 				form_effect = {
 					if = {
 						limit = { country_rank_level < 4 }
 						set_country_rank_effect = { rank = country_rank:rank_empire }
 					}
-					custom_tooltip = {
-						text = FNCEM_formable_trigger_1_tt
-					}					
+				#	custom_tooltip = {
+				#		text = FNCEM_formable_trigger_1_tt # TODO: 2.5.0 update
+				#	}					
 				}
 			}
 		# German Empire - Historical
@@ -6046,12 +6068,19 @@
 					}
 					culture = { has_culture_group = culture_group:british_group }
 				}
+				allow = {
+					current_age_or_later = { age = age_5_absolutism }
+					current_date > 1801.1.1
+				}
 				name = UKKDM
 				flag = UKKDM
 				adjective = UKKDM_ADJ
 				tag = UKKDM
 				color = map_UKKDM
-				regions = { great_britain_region }
+				regions = { 
+					great_britain_region 
+					ireland_region
+				}
 			}
 		# Wendish Empire - Alt-history
 			WNDEM_f = {
@@ -6442,12 +6471,20 @@
 						culture = culture:low_franconian
 					}
 				}
+				allow = {
+					tag = ENG
+					government_type = government_type:republic
+					has_accepted_culture = culture:english
+					OR = {
+						culture = culture:low_franconian
+						culture = culture:frisian
+					}
+				}
 				name = ANDUH
 				flag = ANDUH
 				adjective = ANDUH_ADJ
 				tag = ANDUH
 				color = map_ANDUH
-
 				areas = {
 					home_counties_area
 					east_anglia_area
@@ -6461,6 +6498,7 @@
 					wallonia_area
 				}
 				form_effect = {
+					custom_tooltip = { text = ANDUH_formable_trigger_1_tt }
 				}
 			}
 		# Catholica Russica - Fantasy
@@ -6683,6 +6721,9 @@
 						}
 					}
 				}
+				allow = {
+					culture = { has_culture_group = culture_group:celtic_group }
+				}
 				name = GLCEM
 				flag = GLCEM
 				adjective = GLCEM_ADJ
@@ -6715,7 +6756,7 @@
 					change_religion = religion:fnr_gallo_roman_religion
 					change_religion_for_ruler_and_family = { country = ROOT religion = religion:fnr_gallo_roman_religion }
 					custom_tooltip = { text = GLCEM_formable_trigger_3_tt }
-					custom_tooltip = { text = GLCEM_formable_trigger_2_tt }
+					# custom_tooltip = { text = GLCEM_formable_trigger_2_tt } - TODO: disabled until 2.5.0 TOKAY
 					hidden_effect = {
 						every_pop = {
 							limit = {
@@ -6789,6 +6830,11 @@
 						}
 					}
 					culture = { has_culture_group = culture_group:british_group }
+				}
+				allow = {
+					NOT = {
+						tag = ENG
+					}
 				}
 				name = BRTNA
 				flag = BRTNA
@@ -6882,7 +6928,7 @@
 		# Italian Merchant Alliance - Alt-history
 			ITMCH_f = {
 				level = 3
-				required_locations_fraction = 0.35
+				required_locations_fraction = 0.25
 				rule = plausible
 				potential = {
 					AND = {
@@ -6903,7 +6949,24 @@
 						culture = { has_culture_group = culture_group:italian_group }
 					}
 				}
-				allow = { government_type = government_type:republic }
+				allow = { 
+					owns = location:genoa
+					owns = location:venice
+					OR = {
+						OR = {
+							tag = VEN
+							tag = GEN
+							tag = MLO
+						}
+						government_type = government_type:republic
+					}
+					NOT = {
+						OR = {
+							tag = PRO
+							tag = NAP
+						}
+					}
+				}
 				name = ITMCH
 				flag = ITMCH
 				adjective = ITMCH_ADJ
@@ -7106,6 +7169,9 @@
 				provinces = {
 					cyprus_province
 				}
+				areas = {
+					tripolitania_area
+				}
 				regions = { crescent_region caucasus_region persia_region egypt_region }
 				form_effect = {
 					if = {
@@ -7161,7 +7227,7 @@
 		# Fatimid Caliphate - Non-historical
 			FTMID_f = {
 				level = 4
-				required_locations_fraction = 0.35
+				required_locations_fraction = 0.45
 				rule = plausible
 				potential = {
 					AND = {
@@ -7191,10 +7257,17 @@
 				adjective = FTMID_ADJ
 				tag = FTMID
 				color = map_FTMID
-				provinces = {
-					cyprus_province crete_province
+				areas = {
+					levant_area
+					hedjaz_area
+					tripolitania_area
+					tunis_area
+					sicily_area
+					cyrenaica_area
+					lower_egypt_area
+					sinai_area
+					upper_egypt_area
 				}
-				regions = { crescent_region caucasus_region persia_region egypt_region }
 				form_effect = {
 					if = {
 						limit = { country_rank_level < 4 }

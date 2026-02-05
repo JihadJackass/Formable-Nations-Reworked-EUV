@@ -188,6 +188,7 @@
 					tag = RHLND
 					has_or_had_tag = RHLND
 				}
+				NOT = { has_variable = fnr_high_church_influence_removed }
 			}
 			
 			country_modifier = {

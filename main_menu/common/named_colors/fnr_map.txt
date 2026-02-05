@@ -378,7 +378,7 @@ colors = {
 		# The Rhine Confederation
 		map_RCONF = rgb { 9 62 3 }
 		# The United Kingdom
-		map_UKKDM = rgb { 116 93 94 }
+		map_UKKDM = rgb { 163 90 93 }
 		# Tibetan Empire
 		map_TBETE = rgb { 20 9 0 }
 		# Turkey

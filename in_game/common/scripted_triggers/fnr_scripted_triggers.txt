@@ -2,9 +2,9 @@
 # Formable Nations: Reworked - Scripted Triggers #
 ##################################################
 
-fnr_is_papacy = {
-	tag = PAP
-	has_reform = government_reform:papacy_reform
-}
+	fnr_is_papacy = {
+		tag = PAP
+		has_reform = government_reform:papacy_reform
+	}
 
 
