@@ -803,9 +803,27 @@
 				culture = culture:czech
 				culture = culture:moravian
 			}
+			NOT = {
+				OR = {
+					tag = GMORV
+					tag_exists = GMORV
+					#tag = MVA # TODO: Possibly add a way to make Moravia form Bohemia?
+				}
+			}			
 		}
 		allow = {
 			owns = location:prague
+			OR = {
+				international_organization:hre = {
+					country_has_special_status = {
+						type = special_status:elector
+						country = root
+					}
+				}
+				NOT = {
+					tag = MVA
+				}
+			}
 		}
 		
 		name = BOH
@@ -1659,6 +1677,18 @@
 
 		potential = {
 			culture = { has_culture_group = culture_group:russian_group }
+			NOT = { 
+				OR = {
+					tag = RUS
+					tag_exists = RUS
+					# Prevent formable spam
+					tag = BLRUS
+					# Ukraine doesn't want to be Russian
+					tag = KYVRU
+					tag = UKR
+					tag = KIE
+				}
+			}
 		}
 
 		allow = {

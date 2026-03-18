@@ -17,7 +17,7 @@
 			}
 			country_modifier = {
 				country_child_education = 0.30
-				global_distance_from_capital_cost_modifier = -0.05
+				land_cost_on_distance_from_capital = -0.05
 				monthly_towards_decentralization = 0.05
 			}
 			locked = {
@@ -42,7 +42,7 @@
 			}
 			country_modifier = {
 				global_max_control = 0.05
-				global_distance_from_capital_cost_modifier = -0.025
+				land_cost_on_distance_from_capital = -0.025
 				global_crown_estate_power = 0.05
 				nobles_estate_target_satisfaction = 0.10
 				government_reform_slots = 1

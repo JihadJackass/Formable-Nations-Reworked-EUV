@@ -23,7 +23,7 @@
 			}
 			icon = colonial_tradition
 
-			global_distance_from_capital_cost_modifier = -0.10
+			land_cost_on_distance_from_capital = -0.10
 
 			requires = merchants_and_trade
 		}	

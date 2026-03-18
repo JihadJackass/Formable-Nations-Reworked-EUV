@@ -4,6 +4,13 @@
 
 # TODO POST 2.5.0: Alternatives for different government types and use less textured flags (only when needed such as sweden-norway with too many colors)
 
+# Ptolemaic Kingdom  
+	PTLMY = {
+		textured_emblem = {
+			texture = "te_ptolemaic_kingdom.dds"
+		}	
+	}
+
 ### Rhineland / Rhenania / United Duchies / United Counties / United Republics ###
 # Coded by Tawani
 

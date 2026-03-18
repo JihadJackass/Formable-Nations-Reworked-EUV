@@ -11,6 +11,11 @@
   # HISTORICAL FORMABLES #
   ########################
 
+    PTLMY: "Ptolemaic Kingdom"
+    PTLMY_f: "Ptolemaic Kingdom"
+    PTLMY_f_desc: "The Ptolemaic Kingdom was a Hellenistic Greek state in Egypt founded by Ptolemy I Soter, a general of Alexander the Great. Centered in the capital of Alexandria, this Greek-speaking dynasty lasted for three centuries, blending Greek and Egyptian traditions while dominating the Eastern Mediterranean. It was the final dynasty of ancient Egypt, ending with the death of Cleopatra VII and annexation by Rome."
+    PTLMY_ADJ: "Ptolemaic"
+
     # Rhineland - Alternate flags coded by Tawani
     RHLND: "Rhineland"
     RHLND_f: "Rhineland"

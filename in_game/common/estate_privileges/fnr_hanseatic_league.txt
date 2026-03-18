@@ -48,6 +48,8 @@
 		}
 		
 		country_modifier = {
+			global_burghers_estate_power = 0.025
+
 			global_max_urban_control = 0.035
 		}
 	}
@@ -109,8 +111,9 @@
 		}
 		
 		country_modifier = {
+			global_burghers_estate_power = 0.025
+
 			global_navy_levy_size_modifier = 0.005
-			
 			monthly_navy_tradition = -0.025
 			
 			monthly_towards_decentralization = societal_value_monthly_move

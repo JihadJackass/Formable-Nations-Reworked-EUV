@@ -8,10 +8,6 @@
 	# Rank 1
 		#
 	# Rank 2
-		# TODO POST 2.5.0: Kham
-		# TODO POST 2.5.0: Amdo	
-		# TODO POST 2.5.0: Dzungaria
-		# TODO POST 2.5.0: Kingdom of Gobi
 		# Baden-Alsace
 			BDALS_f = {
 				level = 2
@@ -264,6 +260,54 @@
 				}
 			}
 	# Rank 3
+		# Ptolemaic Kingdom 
+			PTLMY_f = {
+				level = 3
+				required_locations_fraction = 0.80
+				rule = plausible
+				potential = {
+					AND = {
+						OR = {
+							has_variable = fnr_althistory_enabled
+							has_variable = fnr_ptolemaicegypt_enabled
+						}
+						NOT = { has_variable = fnr_ptolemaicegypt_disabled }
+					}  
+					NOT = { 
+						OR = {
+							tag = PTLMY
+							tag_exists = PTLMY
+						}
+					}
+					tag = MAM
+				}
+				allow = {
+					OR = {
+						culture = { has_culture_group = culture_group:greek_group }
+						culture = culture:greek_culture
+						culture = culture:griko_culture
+					}
+				}
+				name = PTLMY
+				flag = PTLMY
+				adjective = PTLMY_ADJ
+				tag = PTLMY
+				color = map_PTLMY
+				areas = {
+					lower_egypt_area
+					upper_egypt_area
+					cyrenaica_area
+				}
+				provinces = {
+					al_jifar_province
+				}
+				form_effect = {
+					if = {
+						limit = { country_rank_level < 3 }
+						set_country_rank_effect = { rank = country_rank:rank_kingdom }
+					}
+				}
+			}
 		# Rhineland
 			RHLND_f = {
 				level = 3
@@ -2360,7 +2404,7 @@
 					# TODO POST 2.5.0: add subjects to MP IO
 					# TODO POST 2.5.0: remove GMORV and subjects from HRE IO
 					trigger_event_non_silently = flavor_GMORV.1
-					custom_tooltip = { text = GMORV_formable_trigger_5_tt }
+					# TODO: custom_tooltip = { text = GMORV_formable_trigger_5_tt }
 				}
 			}	
 		# Gothia - non-historical
@@ -4368,7 +4412,7 @@
 				}
 				name = RHDSA
 				flag = RHDSA
-				adjective = MRHDSA_ADJ
+				adjective = RHDSA_ADJ
 				tag = RHDSA
 				color = map_RHDSA
 				regions = { zimbabwe_region }
@@ -5543,6 +5587,7 @@
 						OR = {
 							tag = FNCEM
 							tag_exists = FNCEM
+							culture = { has_culture_group = culture_group:celtic_group }
 						}
 					}
 					culture = { has_culture_group = culture_group:french_group }
@@ -5886,6 +5931,10 @@
 							tag_exists = RUSEM
 							# Prevent formable spam
 							tag = BLRUS
+							# Ukraine doesn't want to be Russian
+							tag = KYVRU
+							tag = UKR
+							tag = KIE
 						}
 					}
 					culture = { has_culture_group = culture_group:russian_group  }
@@ -6518,6 +6567,12 @@
 						OR = {
 							tag = CATRU
 							tag_exists = CATRU
+							# Prevent formable spam
+							tag = BLRUS
+							# Ukraine doesn't want to be Russian
+							tag = KYVRU
+							tag = UKR
+							tag = KIE
 						}
 					}
 					culture = { 
