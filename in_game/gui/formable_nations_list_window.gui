@@ -73,8 +73,38 @@ window = {
 					layoutpolicy_horizontal = expanding
 					spacing = 5
 					margin = { 10 10 }
-					
-					vbox = { # Rank 2 Formables
+
+					# Rank 1 Formables
+					vbox = {
+						layoutpolicy_horizontal = expanding
+						spacing = 5
+						
+						button_main_tab_alt = {
+							tooltip = "fnr_placeholder"
+							using = layoutpolicy_expanding
+							raw_text = "Rank I Formables"
+							onclick = "[GetVariableSystem.Toggle('rank1_open')]"
+							down = "[GetVariableSystem.Exists('rank1_open')]"
+						}
+						
+						vbox = {
+							layoutpolicy_horizontal = expanding
+							visible = "[GetVariableSystem.Exists('rank1_open')]"
+							spacing = 3
+							margin = { 10 5 }
+							
+							# Pamiristan - Modern
+							button_regular = {
+								tooltip = "fnr_placeholder"
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_pamiristan_enabled'), GetPlayer.HasVariable('fnr_pamiristan_enabled')), Not(GetPlayer.HasVariable('fnr_pamiristan_disabled'))), 'Pamiristan: ON', 'Pamiristan: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_pamiristan').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+						}
+					}
+
+					# Rank 2 Formables
+					vbox = {
 						layoutpolicy_horizontal = expanding
 						spacing = 5
 						
@@ -92,6 +122,14 @@ window = {
 							spacing = 3
 							margin = { 10 5 }
 							
+							# Badakhshān - Modern
+							button_regular = {
+								tooltip = "fnr_placeholder"
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_modern_enabled'), GetPlayer.HasVariable('fnr_badakhshan_enabled')), Not(GetPlayer.HasVariable('fnr_badakhshan_disabled'))), 'Badakhshān: ON', 'Badakhshān: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_badakhshan').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+
 							# Arpitania - Fantasy
 							button_regular = {
 								tooltip = "fnr_placeholder"
@@ -171,6 +209,22 @@ window = {
 							visible = "[GetVariableSystem.Exists('rank3_open')]"
 							spacing = 3
 							margin = { 10 5 }
+
+							# Ptolemaic Kingdom - althistory
+							button_regular = {
+								tooltip = "fnr_placeholder"
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_althistory_enabled'), GetPlayer.HasVariable('fnr_ptolemaicegypt_enabled')), Not(GetPlayer.HasVariable('fnr_ptolemaicegypt_disabled'))), 'Ptolemaic Kingdom: ON', 'Ptolemaic Kingdom: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_ptolemaicegypt').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+
+							# Bactria - nonhistorical
+							button_regular = {
+								tooltip = "fnr_placeholder"
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), GetPlayer.HasVariable('fnr_bactria_enabled')), Not(GetPlayer.HasVariable('fnr_bactria_disabled'))), 'Bactria: ON', 'Bactria: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_bactria').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
 
 							# Federal Republic of Central America - historical
 							button_regular = {
@@ -868,6 +922,14 @@ window = {
 							visible = "[GetVariableSystem.Exists('rank4_open')]"
 							spacing = 3
 							margin = { 10 5 }
+
+							# Austria-Hungary - historical
+							button_regular = {
+								tooltip = "fnr_placeholder"
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_historical_enabled'), GetPlayer.HasVariable('fnr_austriahungary_enabled')), Not(GetPlayer.HasVariable('fnr_austriahungary_disabled'))), 'Austria-Hungary: ON', 'Austria-Hungary: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_austriahungary').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
 
 							# Sassanids - Fantasy
 							button_regular = {
@@ -1604,14 +1666,6 @@ window = {
 								size = { 400 32 }
 								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_us_states_enabled'), GetPlayer.HasVariable('fnr_oregon_enabled')), Not(GetPlayer.HasVariable('fnr_oregon_disabled'))), 'Oregon: ON - Rank 3', 'Oregon: OFF - Rank 3')]"
 								onclick = "[GetScriptedGui('FormableNationReworked_toggle_oregon').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-							}
-
-							# Austria-Hungary - historical
-							button_regular = {
-								tooltip = "fnr_placeholder"
-								size = { 400 32 }
-								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_historical_enabled'), GetPlayer.HasVariable('fnr_austriahungary_enabled')), Not(GetPlayer.HasVariable('fnr_austriahungary_disabled'))), 'Austria-Hungary: ON', 'Austria-Hungary: OFF')]"
-								onclick = "[GetScriptedGui('FormableNationReworked_toggle_austriahungary').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 							}
 						}
 					}

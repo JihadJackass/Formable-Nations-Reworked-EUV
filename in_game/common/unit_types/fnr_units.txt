@@ -1,32 +1,42 @@
-﻿# Elbian Federation
+﻿###########################################
+# Formable Nations: Reworked - Unit Types #
+###########################################
 
-	# Stahlwagen
+	# Bactria
 
-		fnr_stahlwagen = {
-		category = army_auxiliary
+		# Companion Cavalry
 
-		limit = 20
+		# Pike Phalanxes
 
-		# Land modifiers
-		max_strength = 0.4
-		combat_power = 1.5
-		frontage = 1.0
-		combat_speed = 3.0
-		initiative = 1.0
-		flanking_ability = 0.50
-		# General modifiers
-		strength_damage_taken = -0.10
-		morale_damage_taken = -0.10
-		secure_flanks_defense = 2.50
+	# Elbian Federation
 
-		country_potential = {
-			has_or_had_tag = GMORV
-		}
+		# Stahlwagen
 
-		gfx_tags = { medium_tag }
-		}
+			fnr_stahlwagen = {
+			category = army_auxiliary
 
-# Great Moravia
+			limit = 20
+
+			# Land modifiers
+			max_strength = 0.4
+			combat_power = 1.5
+			frontage = 1.0
+			combat_speed = 3.0
+			initiative = 1.0
+			flanking_ability = 0.50
+			# General modifiers
+			strength_damage_taken = -0.10
+			morale_damage_taken = -0.10
+			secure_flanks_defense = 2.50
+
+			country_potential = {
+				has_or_had_tag = GMORV
+			}
+
+			gfx_tags = { medium_tag }
+			}
+
+	# Great Moravia
 
 	# Druzhina
 

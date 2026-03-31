@@ -1,28 +1,52 @@
 ﻿l_english:
 
-  # RELIGIONS
+  #############
+  # RELIGIONS #
+  #############
+
+    # Bactria
+
+      fnr_greco_buddhism_religion: "Greco-Buddhism"
+      fnr_greco_buddhism_religion_ADJ: "Greco-Buddhist"
+      fnr_greco_buddhism_religion_desc: "Born in the aftermath of Alexander's conquests, Greco-Buddhism emerged where Greek settlers and Buddhist communities met in the valleys of Gandhara and Bactria. It was not a conquest of one faith over another, but a conversation. Greek artists gave the Buddha a human face for the first time, sculpting him in the likeness of Apollo. Buddhist monks offered Greek philosophers a path beyond the world of forms that Plato could only gesture toward. Temples rose with Corinthian columns and lotus motifs side by side. Kings like Menander debated sages and found wisdom worth more than territory. Along the Silk Road, merchants carried this hybrid faith eastward, seeding traditions that would shape Buddhist art for centuries to come. Greco-Buddhism asks what happens when two great civilizations choose to learn from one another rather than simply rule."
 
     # Taiping
-    fnr_god_worshipping_society_taiping: "God Worshipping Society"
-    fnr_god_worshipping_society_taiping_ADJ: "God Worshipping Society"
-    fnr_god_worshipping_society_taiping_desc: "The polytheistic Chinese religious movement formed under the influence of Protestant Christianity, incorporating elements of Chinese folk religion and Buddhist concepts was founded by Hong Xiuquan in 1843, viewing God (Shangdi) as supreme and Hong as God's second son, leading to the massive Taiping Rebellion (1850-1864) against the Qing dynasty, which sought social equality, radical reforms, and established the Heavenly Kingdom before its eventual brutal defeat."
+
+      fnr_god_worshipping_society_taiping: "God Worshipping Society"
+      fnr_god_worshipping_society_taiping_ADJ: "God Worshipping Society"
+      fnr_god_worshipping_society_taiping_desc: "The polytheistic Chinese religious movement formed under the influence of Protestant Christianity, incorporating elements of Chinese folk religion and Buddhist concepts was founded by Hong Xiuquan in 1843, viewing God (Shangdi) as supreme and Hong as God's second son, leading to the massive Taiping Rebellion (1850-1864) against the Qing dynasty, which sought social equality, radical reforms, and established the Heavenly Kingdom before its eventual brutal defeat."
 
     # Gallic Empire
-    fnr_gallo_roman_religion: "Gallo-Roman"
-    fnr_gallo_roman_religion_ADJ: "Gallo-Roman"
-    fnr_gallo_roman_religion_desc: "Gallo-Roman religion is a fusion of the traditional religious practices of the Gauls, who were originally Gaulish language speakers, and the Roman and Hellenistic religions introduced to the region under Roman Imperial rule. It was the result of selective acculturation."
+
+      fnr_gallo_roman_religion: "Gallo-Roman"
+      fnr_gallo_roman_religion_ADJ: "Gallo-Roman"
+      fnr_gallo_roman_religion_desc: "Gallo-Roman religion is a fusion of the traditional religious practices of the Gauls, who were originally Gaulish language speakers, and the Roman and Hellenistic religions introduced to the region under Roman Imperial rule. It was the result of selective acculturation."
 
     # Great Moravia
-    fnr_great_moravia_orthodox: "Moravian Orthodoxy"
-    fnr_great_moravia_orthodox_ADJ: "Orthodox"
-    fnr_great_moravia_orthodox_desc: "The $orthodox_ADJ$ Church, rooted in the traditions of the early $christian_ADJ$ councils, emphasizes the continuity of apostolic teachings and sacred tradition. Centered on the $BYZ_ADJ$ Rite, it places great importance on liturgy, icons, and mysticism. The $orthodox_ADJ$ faith is led by patriarchs, with the Ecumenical Patriarch of Constantinople holding a primacy of honor.\n\n#color_yellow This is a unqique version of Orthodox in which Autocephalous Patriarchates mechanic does not apply as this organization shares a similarity to the Holy Roman Empire instead.#!"
 
-  # Aspects
+      fnr_great_moravia_orthodox: "Moravian Orthodoxy"
+      fnr_great_moravia_orthodox_ADJ: "Orthodox"
+      fnr_great_moravia_orthodox_desc: "The $orthodox_ADJ$ Church, rooted in the traditions of the early $christian_ADJ$ councils, emphasizes the continuity of apostolic teachings and sacred tradition. Centered on the $BYZ_ADJ$ Rite, it places great importance on liturgy, icons, and mysticism. The $orthodox_ADJ$ faith is led by patriarchs, with the Ecumenical Patriarch of Constantinople holding a primacy of honor.\n\n#color_yellow This is a unqique version of Orthodox in which Autocephalous Patriarchates mechanic does not apply as this organization shares a similarity to the Holy Roman Empire instead.#!"
+
+  #####################
+  # Religious Aspects #
+  #####################
+
+    fnr_aspect_likeness_of_the_buddha: "Likeness of the Buddha"
+    fnr_aspect_likeness_of_the_buddha_desc: "It was Greek hands that first carved the face of the Enlightened One, transforming an abstract symbol into a figure the faithful could look upon and know. This sacred act of creation elevated our people among all who follow the Dharma. By embracing this legacy, we turn away from the worldly influence of organized religion and instead pursue the accumulation of Karma through devotion and artistic merit alone."
+
+    fnr_aspect_bactrian_succession: "Bactrian Succession"
+    fnr_aspect_bactrian_succession_desc: "The kingdoms that followed Alexander were plagued by disputed claims, coups, and murdered heirs. The Bactrian answer was to anchor succession in religious legitimacy, tying the right to rule to the approval of both Greek priesthoods and Buddhist sanghas. A king blessed by two traditions is harder to challenge, and his claim carries weight beyond mere bloodline. Stability, however, comes at a cost. A ruler who owes his crown to temples and monasteries must share his glory with them."
+
+    fnr_aspect_legacy_of_alexander: "Legacy of Alexander"
+    fnr_aspect_legacy_of_alexander_desc: "The Greco-Bactrian kings never forgot that their right to rule began with the march of the Macedonian phalanx. By invoking the memory of Alexander, a ruler binds his cavalry traditions to the prestige of an unbroken lineage stretching back to the conqueror himself. The people are slower to rebel against a king who carries the weight of such a legacy, and horsemen fight harder beneath a banner that recalls the Companions. Yet this is a legacy of the sword, not of the throne room."
 
     fnr_cult_of_personality: "Cult of Personality"
     fnr_cult_of_personality_desc: "Hong Xiuquan's God Worshipping Society (Bai Shangdi Hui) is widely described by historians as a cult that leveraged a strong cult of personality centered on his claim to be the younger brother of Jesus Christ. This messianic identity was central to the group's theology and his authority as leader of the Taiping Rebellion"
 
-  # Religious Actions
+  #####################
+  # Religious Actions #
+  #####################
 
     fnr_god_worshipping_society_taiping_expand_cult: "Expand Cult of Personality"
     fnr_god_worshipping_society_taiping_expand_cult_desc: "TODO"

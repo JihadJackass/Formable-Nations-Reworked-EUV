@@ -4,164 +4,200 @@
 
     fnr_placeholder: ""
 
-    # Formable Tooltips
+    #####################################
+    # Formable Estate Variable Tooltips #
+    #####################################
 
-    PAPAL_KINGDOM_OF_GOD_INFO: "#Y As #color_yellow Papal States#!, the Holy See holds a unique position in the world. Unlike other nations, we are bound by sacred duty to shepherd #color_yellow Christendom#! rather than pursue worldly dominion - we cannot form new countries or abandon our divinely ordained role. Yet through divine providence and righteous conquest, we may transform our spiritual authority into temporal sovereignty by establishing the #color_yellow Kingdom of God on Earth#! - a realm where the authority of Christ's Vicar extends beyond spiritual matters to temporal dominion over all #color_yellow Catholic#! lands. An event will present itself when the faithful have rallied sufficiently to our banner and support our claim.#!\n\n#Y Upon conquest of at least #G 50%#! of #color_yellow Italian Territory#! as the #color_yellow Papal States#! we will be presented with the #color_pure_white 'God's Kingdom on Earth'#! event in which we will be offered the title of #color_yellow King of God#! under the newly proclaimed #color_yellow Kingdom of God#!.#!"
+      fnr_has_die_wacht_am_rhein_10years: "Has had the [ShowGovernmentReformName('fnr_GSCTL_die_wacht_am_rhein')] reform for at least 10 years."
 
-  # Variable TT localization
-    fnr_has_die_wacht_am_rhein_10years: "Has had the [ShowGovernmentReformName('fnr_GSCTL_die_wacht_am_rhein')] reform for at least 10 years."
+    ######################################
+    # Formable Estate Privilege Tooltips #
+    ######################################
 
-  # Government Reforms
-
-  # Estate Privilege
-
-    fnr_great_moravia_druzhina_tt: "We will unlock the [ShowUnitDefinitionName('fnr_druzhina')] unit type."
+      fnr_great_moravia_druzhina_tt: "We will unlock the [ShowUnitDefinitionName('fnr_druzhina')] unit type."
 
     #################################
     # Formable Requirement Tooltips #
     #################################
+
+    # Papal States
+
+      PAPAL_KINGDOM_OF_GOD_INFO: "#Y As #color_yellow Papal States#!, the Holy See holds a unique position in the world. Unlike other nations, we are bound by sacred duty to shepherd #color_yellow Christendom#! rather than pursue worldly dominion - we cannot form new countries or abandon our divinely ordained role. Yet through divine providence and righteous conquest, we may transform our spiritual authority into temporal sovereignty by establishing the #color_yellow Kingdom of God on Earth#! - a realm where the authority of Christ's Vicar extends beyond spiritual matters to temporal dominion over all #color_yellow Catholic#! lands. An event will present itself when the faithful have rallied sufficiently to our banner and support our claim.#!\n\n#Y Upon conquest of at least #G 50%#! of #color_yellow Italian Territory#! as the #color_yellow Papal States#! we will be presented with the #color_pure_white 'God's Kingdom on Earth'#! event in which we will be offered the title of #color_yellow King of God#! under the newly proclaimed #color_yellow Kingdom of God#!.#!"
+
+      PAPAL_hre_tt_1: "The [GetInternationalOrganizationType('hre').GetName] will be destroyed!"
+      PAPAL_hre_tt_2: "This option will dissolve the Holy Roman Empire, We will become Empire Rank, and two following events will fire which allow us to change our official name and establish a new flag for the realm."
+      PAPAL_hre_tt_3: "We will assume the role of Emperor of the [GetInternationalOrganizationType('hre').GetName]."
+
+      PAP_HRE_EMPIRE_1_FLAG: "New Style"
+      PAP_HRE_EMPIRE_2_FLAG: "Quaternion Eagle"
+      PAP_HRE_EMPIRE_3_FLAG: "[GetInternationalOrganizationType('hre').GetName] Flag"
+
+      fnr_papal_hre_established_tt: "The Holy Roman Empire is dissolved. A new sacred confederation under papal authority is established."
+      fnr_keep_old_hre_tt: "The Holy Roman Empire continues under our leadership."
+
+    # Bactria
+
+      BACTR_formable_trigger_1_tt: "#G 20%#! of our pops will convert to [ShowReligionName('zoroastrian')] in a spread of religious fervor due to the nature of our national reformation."
+      BACTR_formable_trigger_2_tt: "#G 20%#! of our pops will convert to [ShowReligionName('fnr_greco_buddhism_religion')] in a spread of religious fervor due to the nature of our national reformation."
 
     # Anglo-Dutch Union
-    ANDUH_formable_trigger_1_tt: "The [GetCountry('ENG').GetAdjective] Throne will become ruled by a member of the [GetDynasty('orange_dynasty').GetName]-Nassau dynasty which will also establish the #color_yellow Dutch Republic#! as a union member under a relative of the [GetDynasty('orange_dynasty').GetName]-Nassau dynasty under a #color_yellow Stadtholder#!."
+
+      ANDUH_formable_trigger_1_tt: "The [GetCountry('ENG').GetAdjective] Throne will become ruled by a member of the [GetDynasty('orange_dynasty').GetName]-Nassau dynasty which will also establish the #color_yellow Dutch Republic#! as a union member under a relative of the [GetDynasty('orange_dynasty').GetName]-Nassau dynasty under a #color_yellow Stadtholder#!."
 
     # The Horde
-    fnr_the_horde_no_other_hordes_tt: "No other country must have the [ShowGovernmentTypeName('steppe_horde')] government type.\n\nWe must be the dominant, and only [ShowGovernmentTypeName('steppe_horde')]!"
+
+      fnr_the_horde_no_other_hordes_tt: "No other country must have the [ShowGovernmentTypeName('steppe_horde')] government type.\n\nWe must be the dominant, and only [ShowGovernmentTypeName('steppe_horde')]!"
 
     # French Empire
-    FNCEM_formable_trigger_1_tt: "Upon formation, [GetCountry('FRA').GetNameWithFlag] receives an event with two paths:\n\n- #color_yellow Historical Path:#! Experience the Napoleonic Era from the #color_yellow Storming of the Bastille#! through a series of historical events\n\n#color_yellow Historical Naming Structure:#!\nKingdom of France (Until September 21, 1792)\nFrench First Republic (September 22, 1792 - November 9, 1799)\nFrench Consulate (November 10, 1799 - May 18, 1804)\nFirst French Empire (May 18, 1804 - April 6, 1814)\n\n- #color_yellow Alternate Path:#! Bypass the historical events and immediately form the French Empire under #color_yellow Napoleon Bonaparte#!."
-    FNCEM_formable_trigger_2_tt: "We own [ShowLocationName('paris')]"    
+
+      FNCEM_formable_trigger_1_tt: "Upon formation, [GetCountry('FRA').GetNameWithFlag] receives an event with two paths:\n\n- #color_yellow Historical Path:#! Experience the Napoleonic Era from the #color_yellow Storming of the Bastille#! through a series of historical events\n\n#color_yellow Historical Naming Structure:#!\nKingdom of France (Until September 21, 1792)\nFrench First Republic (September 22, 1792 - November 9, 1799)\nFrench Consulate (November 10, 1799 - May 18, 1804)\nFirst French Empire (May 18, 1804 - April 6, 1814)\n\n- #color_yellow Alternate Path:#! Bypass the historical events and immediately form the French Empire under #color_yellow Napoleon Bonaparte#!."
+      FNCEM_formable_trigger_2_tt: "We own [ShowLocationName('paris')]"    
 
     # Rhineland
-    RHLND_formable_trigger_1_tt: "[ShowCultureName('rhine_franconian')], [ShowCultureName('ripuarian_franconian')], [ShowCultureName('rhine_alemannic')], and [ShowCultureName('moselle_franconian')] will all respectively become #color_green Kindred#! of each other."
-    RHLND_formable_trigger_2_tt: "After 20-30 years we will be provided the event #color_yellow 'The Path Forward'#! allowing us to choose between [ShowGovernmentReformName('fnr_GSCTL_das_rheinische_konigreich')] or [ShowGovernmentReformName('fnr_GSCTL_der_rheinbund')] which will have us establish a [ShowCountryRankNameWithNoTooltip('rank_kingdom')]-Tier [ShowGovernmentTypeName('monarchy')] or a [ShowCountryRankNameWithNoTooltip('rank_kingdom')]-Tier [ShowGovernmentTypeName('republic')] respectively."
-    RHLND_formable_trigger_3_tt: "After 50-100 years we will be provided the event #color_yellow 'Pillar of Society and Religion'#! which will replace the [ShowEstatePrivilegeName('fnr_RHLND_high_church_influence')] privilege with [ShowEstatePrivilegeName('fnr_RHLND_pillar_that_is_the_church')].\nWe can remove [ShowEstatePrivilegeName('fnr_RHLND_high_church_influence')] manually by having either less than #G 10%#! [ShowEstateTypeName('clergy_estate')] [estate_power|e] or at least #G 10%#! of the population are apart of the [ShowEstateTypeName('clergy_estate')]."
 
-    # Papal States conquers the HRE
-    PAPAL_hre_tt_1: "The [GetInternationalOrganizationType('hre').GetName] will be destroyed!"
-    PAPAL_hre_tt_2: "This option will dissolve the Holy Roman Empire, We will become Empire Rank, and two following events will fire which allow us to change our official name and establish a new flag for the realm."
-    PAPAL_hre_tt_3: "We will assume the role of Emperor of the [GetInternationalOrganizationType('hre').GetName]."
+      RHLND_formable_trigger_1_tt: "[ShowCultureName('rhine_franconian')], [ShowCultureName('ripuarian_franconian')], [ShowCultureName('rhine_alemannic')], and [ShowCultureName('moselle_franconian')] will all respectively become #color_green Kindred#! of each other."
+      RHLND_formable_trigger_2_tt: "After 20-30 years we will be provided the event #color_yellow 'The Path Forward'#! allowing us to choose between [ShowGovernmentReformName('fnr_GSCTL_das_rheinische_konigreich')] or [ShowGovernmentReformName('fnr_GSCTL_der_rheinbund')] which will have us establish a [ShowCountryRankNameWithNoTooltip('rank_kingdom')]-Tier [ShowGovernmentTypeName('monarchy')] or a [ShowCountryRankNameWithNoTooltip('rank_kingdom')]-Tier [ShowGovernmentTypeName('republic')] respectively."
+      RHLND_formable_trigger_3_tt: "After 50-100 years we will be provided the event #color_yellow 'Pillar of Society and Religion'#! which will replace the [ShowEstatePrivilegeName('fnr_RHLND_high_church_influence')] privilege with [ShowEstatePrivilegeName('fnr_RHLND_pillar_that_is_the_church')].\nWe can remove [ShowEstatePrivilegeName('fnr_RHLND_high_church_influence')] manually by having either less than #G 10%#! [ShowEstateTypeName('clergy_estate')] [estate_power|e] or at least #G 10%#! of the population are apart of the [ShowEstateTypeName('clergy_estate')]."
 
-    PAP_HRE_EMPIRE_1_FLAG: "New Style"
-    PAP_HRE_EMPIRE_2_FLAG: "Quaternion Eagle"
-    PAP_HRE_EMPIRE_3_FLAG: "[GetInternationalOrganizationType('hre').GetName] Flag"
+    # Hanseatic League
 
-    fnr_papal_hre_established_tt: "The Holy Roman Empire is dissolved. A new sacred confederation under papal authority is established."
-    fnr_keep_old_hre_tt: "The Holy Roman Empire continues under our leadership."
-
-    HNSLG_formable_trigger_2_tt: "Every [ShowBuildingTypeName('hanseatic_kontor')], [ShowBuildingTypeName('hanseatic_shipwright_guild')], and [ShowBuildingTypeName('hanseatic_town_hall')] will be destroyed and [GetCountry('HSA').GetNameWithFlag] will become defunct by our newly established #color_yellow Hanseatic League Federation#!."
-    HNSLG_formable_trigger_1_tt: "All provinces which contain [ShowBuildingTypeName('hanseatic_kontor')], [ShowBuildingTypeName('hanseatic_shipwright_guild')], and [ShowBuildingTypeName('hanseatic_town_hall')] and therefore have influence from [GetCountry('HSA').GetNameWithFlag] buildings must be controlled"
-    HNSLG_formable_trigger_3_tt: "#color_yellow Hanseatic League#! will gain access to the unique [ShowGovernmentReformName('fnr_BISHE_accelerated_domain_status')] Government Reform upon conquering at least #G 25%#! of [ShowRegionName('baltic_region')] coastal territory."
-    HNSLG_formable_trigger_4_tt: "#color_yellow Hanseatic League#! will gain access to the unique [ShowGovernmentReformName('fnr_HNSLG_guild_integration_reforms')] Government Reform when [ShowEstateTypeName('burghers_estate')] [estate_power|e] is at least #G 50%#! and [ShowEstateTypeName('burghers_estate')] [estate_satisfaction|e] is at least #G 80%#!."
-    HNSLG_formable_trigger_5_tt: "#color_yellow Hanseatic League#! will be able to unlock [ShowEstateTypeName('burghers_estate')] specific privileges [ShowEstatePrivilegeName('fnr_HNSLG_integrated_guild_regulations')], [ShowEstatePrivilegeName('fnr_HNSLG_territorial_fleet_requisition')], and [ShowEstatePrivilegeName('fnr_HNSLG_provincial_trading_companies')] ."
+      HNSLG_formable_trigger_2_tt: "Every [ShowBuildingTypeName('hanseatic_kontor')], [ShowBuildingTypeName('hanseatic_shipwright_guild')], and [ShowBuildingTypeName('hanseatic_town_hall')] will be destroyed and [GetCountry('HSA').GetNameWithFlag] will become defunct by our newly established #color_yellow Hanseatic League Federation#!."
+      HNSLG_formable_trigger_1_tt: "All provinces which contain [ShowBuildingTypeName('hanseatic_kontor')], [ShowBuildingTypeName('hanseatic_shipwright_guild')], and [ShowBuildingTypeName('hanseatic_town_hall')] and therefore have influence from [GetCountry('HSA').GetNameWithFlag] buildings must be controlled"
+      HNSLG_formable_trigger_3_tt: "#color_yellow Hanseatic League#! will gain access to the unique [ShowGovernmentReformName('fnr_BISHE_accelerated_domain_status')] Government Reform upon conquering at least #G 25%#! of [ShowRegionName('baltic_region')] coastal territory."
+      HNSLG_formable_trigger_4_tt: "#color_yellow Hanseatic League#! will gain access to the unique [ShowGovernmentReformName('fnr_HNSLG_guild_integration_reforms')] Government Reform when [ShowEstateTypeName('burghers_estate')] [estate_power|e] is at least #G 50%#! and [ShowEstateTypeName('burghers_estate')] [estate_satisfaction|e] is at least #G 80%#!."
+      HNSLG_formable_trigger_5_tt: "#color_yellow Hanseatic League#! will be able to unlock [ShowEstateTypeName('burghers_estate')] specific privileges [ShowEstatePrivilegeName('fnr_HNSLG_integrated_guild_regulations')], [ShowEstatePrivilegeName('fnr_HNSLG_territorial_fleet_requisition')], and [ShowEstatePrivilegeName('fnr_HNSLG_provincial_trading_companies')]."
 
     # Elbian Federation unlocks
-    ELBNF_fnr_formable_trigger_1_tt: "Elbian Federation will gain access to the unique [ShowUnitDefinitionName('fnr_stahlwagen')] unit during the Age of Discovery."    
+
+      ELBNF_fnr_formable_trigger_1_tt: "Elbian Federation will gain access to the unique [ShowUnitDefinitionName('fnr_stahlwagen')] unit during the Age of Discovery."    
 
     # British Empire unlocks
-    BISHE_fnr_formable_trigger_1_tt: "#color_yellow The British Empire#! will gain access to five new possible reforms: [ShowGovernmentReformName('fnr_BISHE_imperial_federation')], [ShowGovernmentReformName('fnr_BISHE_accelerated_domain_status')], [ShowGovernmentReformName('fnr_BISHE_economic_development_charter')], [ShowGovernmentReformName('fnr_BISHE_racial_equality_act')], and [ShowGovernmentReformName('fnr_BISHE_constitutional_monarchy_of_nations')]."
+
+      BISHE_fnr_formable_trigger_1_tt: "#color_yellow The British Empire#! will gain access to five new possible reforms: [ShowGovernmentReformName('fnr_BISHE_imperial_federation')], [ShowGovernmentReformName('fnr_BISHE_accelerated_domain_status')], [ShowGovernmentReformName('fnr_BISHE_economic_development_charter')], [ShowGovernmentReformName('fnr_BISHE_racial_equality_act')], and [ShowGovernmentReformName('fnr_BISHE_constitutional_monarchy_of_nations')]."
 
     # Poland PU path
-    JGLNN_U_fnr_formable_trigger_1_tt: "As [GetCountry('POL').GetNameWithFlag] we have a Personal Union over [GetCountry('HUN').GetNameWithFlag], [GetCountry('LIT').GetNameWithFlag], and [GetCountry('BOH').GetNameWithFlag]"
+
+      JGLNN_U_fnr_formable_trigger_1_tt: "As [GetCountry('POL').GetNameWithFlag] we have a Personal Union over [GetCountry('HUN').GetNameWithFlag], [GetCountry('LIT').GetNameWithFlag], and [GetCountry('BOH').GetNameWithFlag]"
+
     # Hungary PU path
-    JGLNN_U_fnr_formable_trigger_2_tt: "As [GetCountry('HUN').GetNameWithFlag] we have a Personal Union over [GetCountry('POL').GetNameWithFlag], [GetCountry('LIT').GetNameWithFlag], and [GetCountry('BOH').GetNameWithFlag]"
+
+      JGLNN_U_fnr_formable_trigger_2_tt: "As [GetCountry('HUN').GetNameWithFlag] we have a Personal Union over [GetCountry('POL').GetNameWithFlag], [GetCountry('LIT').GetNameWithFlag], and [GetCountry('BOH').GetNameWithFlag]"
+
     # Lithuania Path
-    JGLNN_U_fnr_formable_trigger_3_tt: "As [GetCountry('LIT').GetNameWithFlag] we have a Personal Union over [GetCountry('POL').GetNameWithFlag], [GetCountry('HUN').GetNameWithFlag], and [GetCountry('BOH').GetNameWithFlag]"
+
+      JGLNN_U_fnr_formable_trigger_3_tt: "As [GetCountry('LIT').GetNameWithFlag] we have a Personal Union over [GetCountry('POL').GetNameWithFlag], [GetCountry('HUN').GetNameWithFlag], and [GetCountry('BOH').GetNameWithFlag]"
+
     # Bohemia Path
-    JGLNN_U_fnr_formable_trigger_4_tt: "As [GetCountry('BOH').GetNameWithFlag] we have a Personal Union over [GetCountry('POL').GetNameWithFlag], [GetCountry('LIT').GetNameWithFlag], and [GetCountry('HUN').GetNameWithFlag]"
+
+      JGLNN_U_fnr_formable_trigger_4_tt: "As [GetCountry('BOH').GetNameWithFlag] we have a Personal Union over [GetCountry('POL').GetNameWithFlag], [GetCountry('LIT').GetNameWithFlag], and [GetCountry('HUN').GetNameWithFlag]"
 
     # Poland path
-    PLHUN_U_fnr_formable_trigger_1_tt: "As [GetCountry('POL').GetNameWithFlag] we have a Personal Union over [GetCountry('HUN').GetNameWithFlag]"  
+
+      PLHUN_U_fnr_formable_trigger_1_tt: "As [GetCountry('POL').GetNameWithFlag] we have a Personal Union over [GetCountry('HUN').GetNameWithFlag]" 
+
     # Hungary path
-    PLHUN_U_fnr_formable_trigger_2_tt: "As [GetCountry('HUN').GetNameWithFlag] we have a Personal Union over [GetCountry('POL').GetNameWithFlag]"  
+
+      PLHUN_U_fnr_formable_trigger_2_tt: "As [GetCountry('HUN').GetNameWithFlag] we have a Personal Union over [GetCountry('POL').GetNameWithFlag]"  
 
     # Hungary-Romania (Hungary)
-    HNRMN_fnr_formable_trigger_1_tt: "As [GetCountry('HUN').GetNameWithFlag] we have a Personal Union over [GetCountry('RMN').GetNameWithFlag]"  
+
+      HNRMN_fnr_formable_trigger_1_tt: "As [GetCountry('HUN').GetNameWithFlag] we have a Personal Union over [GetCountry('RMN').GetNameWithFlag]"  
+
     # Hungary-Romania (Romania)
-    HNRMN_fnr_formable_trigger_2_tt: "As [GetCountry('RMN').GetNameWithFlag] we have a Personal Union over [GetCountry('HUN').GetNameWithFlag]"  
 
-    fnr_dm_owned_by_fra_tt_1: "[GetCountry('FRA').GetName] is [owner|e] of at least 200 [location|e] in [ShowRegionName('france_region')] region."
-    fnr_dm_owned_by_fra_tt_2: "[GetCountry('FRA').GetName] is [owner|e] of at least 200 [location|e] in [ShowRegionName('great_britain_region')] region."
-    fnr_dm_owned_by_eng_tt_1: "[GetCountry('ENG').GetName] is [owner|e] of at least 200 [location|e] in [ShowRegionName('france_region')] region."
-    fnr_dm_owned_by_eng_tt_2: "[GetCountry('ENG').GetName] is [owner|e] of at least 200 [location|e] in [ShowRegionName('france_region')] region."
+      HNRMN_fnr_formable_trigger_2_tt: "As [GetCountry('RMN').GetNameWithFlag] we have a Personal Union over [GetCountry('HUN').GetNameWithFlag]"  
 
-    GMORV_formable_trigger_1_tt: "#G 5%#! of our pops will convert to [ShowReligionName('hussite')] in a spread of religious fervor due to the nature of our national reformation.\n#G 25%#! of our pops will convert to [ShowReligionName('fnr_great_moravia_orthodox')]"
-    GMORV_formable_trigger_2_tt: "The [GetInternationalOrganizationType('moravian_patriarchate').GetName] will be created under #color_yellow Great Moravian#! leadership."
-    GMORV_formable_trigger_3_tt: "All subjects of the [country|e] will be added to the [GetInternationalOrganizationType('moravian_patriarchate').GetName]."
-    GMORV_formable_trigger_4_tt: "We will unlock various unique reforms available exclusively to Great Moravia such as [ShowEstatePrivilegeName('fnr_great_moravia_druzhina')] as well as reforms exclusive to related cultural groups such as [ShowEstatePrivilegeName('fnr_royal_free_cities')], [ShowEstatePrivilegeName('fnr_shepherds_farmers_culture')], and various others."
-    GMORV_formable_trigger_5_tt: "The [GetInternationalOrganizationType('moravian_patriarchate').GetName] will be expanded upon further establishment of our authority over the Organization."
-    GMORV_formable_trigger_6_tt: "We will be able to earn a path of redemption towards rejoining the [GetInternationalOrganizationType('hre').GetName]"
-    GMORV_formable_trigger_7_tt: "The event $flavor_GMORV.2.title$ [event|e] will become available after cementing our control over Krakow, Gorlitz, Sayda, Balaton, and Northern Hungary which will give us claims on further territories of the historical Great Moravian borders - Potentially allowing us to establish Imperium Slavorum."
+    # Dual Monarchy
 
-    GLCEM_formable_trigger_1_tt: "#G 22.5%#! of our pops will convert to [ShowCultureName('fnr_gallo_roman_culture')]."
-    GLCEM_formable_trigger_2_tt: "If we own territory in [ShowRegionName('iberia_region')] and [ShowRegionName('great_britain_region')] upon formation of the Gallic Empire then we will be given the option of establishing Tarraconensis and Britannia respectively as well as Baetica and Lusitania in [ShowRegionName('iberia_region')]."
-    GLCEM_formable_trigger_3_tt: "#G 12%#! of our pops will convert to [ShowReligionName('fnr_gallo_roman_religion')]."
-    GLCEM_formable_trigger_4_tt: "Upon formation of the Gallic Empire we will be given the option to choose our name styling as Gallic Empire or Gallia."
+      fnr_dm_owned_by_fra_tt_1: "[GetCountry('FRA').GetName] is [owner|e] of at least 200 [location|e] in [ShowRegionName('france_region')] region."
+      fnr_dm_owned_by_fra_tt_2: "[GetCountry('FRA').GetName] is [owner|e] of at least 200 [location|e] in [ShowRegionName('great_britain_region')] region."
+      fnr_dm_owned_by_eng_tt_1: "[GetCountry('ENG').GetName] is [owner|e] of at least 200 [location|e] in [ShowRegionName('france_region')] region."
+      fnr_dm_owned_by_eng_tt_2: "[GetCountry('ENG').GetName] is [owner|e] of at least 200 [location|e] in [ShowRegionName('france_region')] region."
 
-    TPING_formable_trigger_1_tt: "#G 25%#! of our pops will convert to [ShowReligionName('fnr_god_worshipping_society_taiping')] in full support of the #color_yellow Taiping Rebellion#!."
-    TPING_formable_trigger_2_tt: "#G 0.25%#! of our pops will convert to [ShowReligionName('catholic')]."
+    # Great Moravia
 
-    ASTBV_formable_trigger_1_tt: "If #Y Austria-Bavaria#! is formed by [GetCountry('HAB').GetNameWithFlag] various Bavarian locations will be renamed in an #Y Austrian-linguistic#! style."
-    ASTBV_formable_trigger_2_tt: "If #Y Austria-Bavaria#! is formed by #Y Bavaria#!, [GetCountry('LBV').GetNameWithFlag] or [GetCountry('UBV').GetNameWithFlag] various Austrian locations will be renamed in an #Y Bavarian-linguistic#! style."
+      GMORV_formable_trigger_1_tt: "#G 5%#! of our pops will convert to [ShowReligionName('hussite')] in a spread of religious fervor due to the nature of our national reformation.\n#G 25%#! of our pops will convert to [ShowReligionName('fnr_great_moravia_orthodox')]"
+      GMORV_formable_trigger_2_tt: "The [GetInternationalOrganizationType('moravian_patriarchate').GetName] will be created under #color_yellow Great Moravian#! leadership."
+      GMORV_formable_trigger_3_tt: "All subjects of the [country|e] will be added to the [GetInternationalOrganizationType('moravian_patriarchate').GetName]."
+      GMORV_formable_trigger_4_tt: "We will unlock various unique reforms available exclusively to Great Moravia such as [ShowEstatePrivilegeName('fnr_great_moravia_druzhina')] as well as reforms exclusive to related cultural groups such as [ShowEstatePrivilegeName('fnr_royal_free_cities')], [ShowEstatePrivilegeName('fnr_shepherds_farmers_culture')], and various others."
+      GMORV_formable_trigger_5_tt: "The [GetInternationalOrganizationType('moravian_patriarchate').GetName] will be expanded upon further establishment of our authority over the Organization."
+      GMORV_formable_trigger_6_tt: "We will be able to earn a path of redemption towards rejoining the [GetInternationalOrganizationType('hre').GetName]"
+      GMORV_formable_trigger_7_tt: "The event $flavor_GMORV.2.title$ [event|e] will become available after cementing our control over Krakow, Gorlitz, Sayda, Balaton, and Northern Hungary which will give us claims on further territories of the historical Great Moravian borders - Potentially allowing us to establish Imperium Slavorum."
 
-    ASYRE_f_tt1: "Various provinces across the #color_yellow Assyrian Empire#! from #color_yellow Upper Mesopotamia#! to #color_yellow Ecbatana#! and as far away from the capital as the Ancient tower city of #color_yellow Migdal#! will be legally changed to the naming structure of the #color_yellow Assyrian language#!."
+    # Gallic Empire
 
-    #################################
-    # Formable Requirement Tooltips #
-    #################################
+      GLCEM_formable_trigger_1_tt: "#G 22.5%#! of our pops will convert to [ShowCultureName('fnr_gallo_roman_culture')]."
+      GLCEM_formable_trigger_2_tt: "If we own territory in [ShowRegionName('iberia_region')] and [ShowRegionName('great_britain_region')] upon formation of the Gallic Empire then we will be given the option of establishing Tarraconensis and Britannia respectively as well as Baetica and Lusitania in [ShowRegionName('iberia_region')]."
+      GLCEM_formable_trigger_3_tt: "#G 12%#! of our pops will convert to [ShowReligionName('fnr_gallo_roman_religion')]."
+      GLCEM_formable_trigger_4_tt: "Upon formation of the Gallic Empire we will be given the option to choose our name styling as Gallic Empire or Gallia."
 
-    GMNEM_f_tt: "The #Y $GMNEM$ #!will annex all #Y German Subjects #! including #Y Personal Unions #!into the newly proclaimed #Y $GMNEM$ #!."
-    GMNEM_f_tt2: "The #Y $GMNEM$ #!will gain cores an all #Y Historical German Empire#! claims in #Y Alsace-Lorraine #!and #Y Poland#!, as well as all currently controlled territory within the #Y German-speaking regions#!."
+    # Taiping
 
-    NED_f_tt2: "If #Y $NED$ #!is formed with #Y Decentralization #!as the dominant value, then we will be known as the #Y United Provinces #!and will only be given one opportunity afterwards to establish the #Y Dutch Republic #!as our offical name otherwise we will remain as the #Y United Provinces#!\nThe opposite applies if we form the Netherlands with #Y Centralization #!as the dominant value in that we will be known as the #Y Dutch Republic#! and will #R NOT#! be given an opportunity to establish the #Y United Provinces#!.\nIf we have a balanced centralization societal value of between #R -5#! and #G +5#! then we will remain as the #Y Netherlands#!."
+      TPING_formable_trigger_1_tt: "#G 25%#! of our pops will convert to [ShowReligionName('fnr_god_worshipping_society_taiping')] in full support of the #color_yellow Taiping Rebellion#!."
+      TPING_formable_trigger_2_tt: "#G 0.25%#! of our pops will convert to [ShowReligionName('catholic')]."
 
-    NED_DR_FLAG: "Prince's Orange"
-    NED_UP_FLAG: "United Provinces of the Netherlands"
+    # Austria-Bavaria
 
-    GLCEM_GALLIA_NAME: "Gallia"
+      ASTBV_formable_trigger_1_tt: "If #Y Austria-Bavaria#! is formed by [GetCountry('HAB').GetNameWithFlag] various Bavarian locations will be renamed in an #Y Austrian-linguistic#! style."
+      ASTBV_formable_trigger_2_tt: "If #Y Austria-Bavaria#! is formed by #Y Bavaria#!, [GetCountry('LBV').GetNameWithFlag] or [GetCountry('UBV').GetNameWithFlag] various Austrian locations will be renamed in an #Y Bavarian-linguistic#! style."
+
+    # Assyrian Empire
+
+      ASYRE_f_tt1: "Various provinces across the #color_yellow Assyrian Empire#! from #color_yellow Upper Mesopotamia#! to #color_yellow Ecbatana#! and as far away from the capital as the Ancient tower city of #color_yellow Migdal#! will be legally changed to the naming structure of the #color_yellow Assyrian language#!."
+
+    # German Empire
+
+      GMNEM_f_tt: "The #Y $GMNEM$ #!will annex all #Y German Subjects #! including #Y Personal Unions #!into the newly proclaimed #Y $GMNEM$ #!."
+      GMNEM_f_tt2: "The #Y $GMNEM$ #!will gain cores an all #Y Historical German Empire#! claims in #Y Alsace-Lorraine #!and #Y Poland#!, as well as all currently controlled territory within the #Y German-speaking regions#!."
+
+    # Netherlands
+
+      NED_f_tt2: "If #Y $NED$ #!is formed with #Y Decentralization #!as the dominant value, then we will be known as the #Y United Provinces #!and will only be given one opportunity afterwards to establish the #Y Dutch Republic #!as our offical name otherwise we will remain as the #Y United Provinces#!\nThe opposite applies if we form the Netherlands with #Y Centralization #!as the dominant value in that we will be known as the #Y Dutch Republic#! and will #R NOT#! be given an opportunity to establish the #Y United Provinces#!.\nIf we have a balanced centralization societal value of between #R -5#! and #G +5#! then we will remain as the #Y Netherlands#!."
 
     ###################
     # GUI localiation #
     ###################
-    # Historical formables
-    fnr_historical_tooltip_on: "Click to #R DISABLE#!\n\nThis will disable Historical Formables such as French Empire, German Empire, Serbian Empire, etc"
-    fnr_historical_tooltip_off: "Click to #G ENABLE#!\n\nThis will enable Historical Formables such as French Empire, German Empire, Serbian Empire, etc"
-    # Non-historical formables
-    fnr_nonhistorical_tooltip_on: "Click to #R DISABLE#!\n\nThis will disable Non-historical Formables such as Kyivan Rus, Manchuria, Latin Empire, etc"
-    fnr_nonhistorical_tooltip_off: "Click to #G ENABLE#!\n\nThis will enable Non-historical Formables such as Kyivan Rus, Manchuria, Latin Empire, etc"
-    # Alt-history
-    fnr_althistorical_tooltip_on: "Click to #R DISABLE#!\n\nThis will disable Alt-history Formables such as Angevin Empire, Danubian Federation, Dual Monarchy, etc"
-    fnr_althistorical_tooltip_off: "Click to #G ENABLE#!\n\nThis will enable Alt-history Formables such as Angevin Empire, Danubian Federation, Dual Monarchy, etc"
-    # Controversial 
-    fnr_controversial_tooltip_on: "Click to #R DISABLE#!\n\nThis will disable Controversial Formables such as Nazi Germany, Israel, Palestine, etc"
-    fnr_controversial_tooltip_off: "Click to #G ENABLE#!\n\nThis will enable Controversial Formables such as Nazi Germany, Israel, Palestine, etc"
-    # Fantasy
-    fnr_fantasy_tooltip_on: "Click to #R DISABLE#!\n\nThis will disable Fantasy Formables such as Camelot, Adriatic Empire, Catholica Russica, etc"
-    fnr_fantasy_tooltip_off: "Click to #G ENABLE#!\n\nThis will enable Fantasy Formables such as Camelot, Adriatic Empire, Catholica Russica, etc"
-    # Meme
-    fnr_meme_tooltip_on: "Click to #R DISABLE#!\n\nThis will disable Meme Formables such as Camelot, Adriatic Empire, Catholica Russica, etc"
-    fnr_meme_tooltip_off: "Click to #G ENABLE#!\n\nThis will enable Meme Formables such as Hyperborea, Agartha, Proto-Finnic Holy Roman Khaganate, etc"
-    # Modern
-    fnr_modern_tooltip_on: "Click to #R DISABLE#!\n\nThis will disable Modern Formables such as Russian Federation, Soviet Union, Czechoslovakia, etc"
-    fnr_modern_tooltip_off: "Click to #G ENABLE#!\n\nThis will enable Modern Formables such as Russian Federation, Soviet Union, Czechoslovakia, etc"
-    # North America
-    fnr_north_american_tooltip_on: "Click to #R DISABLE#!\n\nThis will disable North American Formables such as Oklahoma, Ontario, California, etc"
-    fnr_north_american_tooltip_off: "Click to #G ENABLE#!\n\nThis will enable North American Formables such as Oklahoma, Ontario, California, etc"
-    # Papal States
-    fnr_papal_states_tooltip_on: "Click to #R DISABLE#!\n\nThe Papal States in vanilla is blocked from forming any formable nations, and through this setting the Papal States will have a unique information box added to the Formable Nations screen which explains how to form the Kingdom of God.\n\nCan only be activated as the Papacy due to game restrictions - Will be addressed in a future update."
-    fnr_papal_states_tooltip_off: "Click to #G ENABLE#!\n\nThe Papal States in vanilla is blocked from forming any formable nations, and through this setting the Papal States will have a unique information box added to the Formable Nations screen which explains how to form the Kingdom of God.\n\nCan only be activated as the Papacy due to game restrictions. - Will be addressed in a future update."    
 
-    # Formable List loc
-    fnr_debug_window_formable_list_loc_toggle: "Formable Nations: Reworked"
-    fnr_debug_window_formable_list_loc: "Open a list to enable/disable specific formables for the Player and the AI"
-    fnr_debug_window_formable_list_loc_topbar: "Click to open Formable Settings GUI"
-    fnr_debug_window_formable_list_loc_flag_selection: "Flag Selection - The Flag Selection feature is currently not functional and is a work-in-progress. It will be functional in a future major update."
-    fnr_debug_window_formable_list_loc_flag_selection_small: "The Flag Selection feature is currently not functional and is a work-in-progress.\n\nIt will be functional in a future major update.\n\nEXAMPLE:"
-    fnr_debug_window_formable_list_loc_color_selection: "Color Selection - The Color Selection feature is currently not functional and is a work-in-progress. It will be functional post 2.5.x TOKAY."
-    fnr_debug_window_formable_list_loc_rank_2: "Rank II Formables"
-    fnr_debug_window_formable_list_loc_rank_2_arpitania: "Arpitania"
-    fnr_debug_window_formable_list_loc_rank_3: "Rank III Formables"
-    fnr_debug_window_formable_list_loc_germanempire: "German Empire"
-    fnr_debug_window_formable_list_loc_geremp_flag_1: "Black-white-red imperial flag"
-    fnr_debug_window_formable_list_loc_geremp_flag_2: "Black-red-yellow modern flag"
+      # Historical formables
+      fnr_historical_tooltip_on: "Click to #R DISABLE#!\n\nThis will disable Historical Formables such as French Empire, German Empire, Serbian Empire, etc"
+      fnr_historical_tooltip_off: "Click to #G ENABLE#!\n\nThis will enable Historical Formables such as French Empire, German Empire, Serbian Empire, etc"
+      # Non-historical formables
+      fnr_nonhistorical_tooltip_on: "Click to #R DISABLE#!\n\nThis will disable Non-historical Formables such as Kyivan Rus, Manchuria, Latin Empire, etc"
+      fnr_nonhistorical_tooltip_off: "Click to #G ENABLE#!\n\nThis will enable Non-historical Formables such as Kyivan Rus, Manchuria, Latin Empire, etc"
+      # Alt-history
+      fnr_althistorical_tooltip_on: "Click to #R DISABLE#!\n\nThis will disable Alt-history Formables such as Angevin Empire, Danubian Federation, Dual Monarchy, etc"
+      fnr_althistorical_tooltip_off: "Click to #G ENABLE#!\n\nThis will enable Alt-history Formables such as Angevin Empire, Danubian Federation, Dual Monarchy, etc"
+      # Controversial 
+      fnr_controversial_tooltip_on: "Click to #R DISABLE#!\n\nThis will disable Controversial Formables such as Nazi Germany, Israel, Palestine, etc"
+      fnr_controversial_tooltip_off: "Click to #G ENABLE#!\n\nThis will enable Controversial Formables such as Nazi Germany, Israel, Palestine, etc"
+      # Fantasy
+      fnr_fantasy_tooltip_on: "Click to #R DISABLE#!\n\nThis will disable Fantasy Formables such as Camelot, Adriatic Empire, Catholica Russica, etc"
+      fnr_fantasy_tooltip_off: "Click to #G ENABLE#!\n\nThis will enable Fantasy Formables such as Camelot, Adriatic Empire, Catholica Russica, etc"
+      # Meme
+      fnr_meme_tooltip_on: "Click to #R DISABLE#!\n\nThis will disable Meme Formables such as Hyperborea, Agartha, Proto-Finnic Holy Roman Khaganate, etc"
+      fnr_meme_tooltip_off: "Click to #G ENABLE#!\n\nThis will enable Meme Formables such as Hyperborea, Agartha, Proto-Finnic Holy Roman Khaganate, etc"
+      # Modern
+      fnr_modern_tooltip_on: "Click to #R DISABLE#!\n\nThis will disable Modern Formables such as Russian Federation, Soviet Union, Czechoslovakia, etc"
+      fnr_modern_tooltip_off: "Click to #G ENABLE#!\n\nThis will enable Modern Formables such as Russian Federation, Soviet Union, Czechoslovakia, etc"
+      # North America
+      fnr_north_american_tooltip_on: "Click to #R DISABLE#!\n\nThis will disable North American Formables such as Oklahoma, Ontario, California, etc"
+      fnr_north_american_tooltip_off: "Click to #G ENABLE#!\n\nThis will enable North American Formables such as Oklahoma, Ontario, California, etc"
+      # Papal States
+      fnr_papal_states_tooltip_on: "Click to #R DISABLE#!\n\nThe Papal States in vanilla is blocked from forming any formable nations, and through this setting the Papal States will have a unique information box added to the Formable Nations screen which explains how to form the Kingdom of God.\n\nCan only be activated as the Papacy due to game restrictions - Will be addressed in a future update."
+      fnr_papal_states_tooltip_off: "Click to #G ENABLE#!\n\nThe Papal States in vanilla is blocked from forming any formable nations, and through this setting the Papal States will have a unique information box added to the Formable Nations screen which explains how to form the Kingdom of God.\n\nCan only be activated as the Papacy due to game restrictions. - Will be addressed in a future update."    
+
+      # Formable List loc
+      fnr_debug_window_formable_list_loc_toggle: "Formable Nations: Reworked"
+      fnr_debug_window_formable_list_loc: "Open a list to enable/disable specific formables for the Player and the AI"
+      fnr_debug_window_formable_list_loc_topbar: "Click to open Formable Settings GUI"
+      fnr_debug_window_formable_list_loc_flag_selection: "Flag Selection - The Flag Selection feature is currently not functional and is a work-in-progress. It will be functional in a future major update."
+      fnr_debug_window_formable_list_loc_flag_selection_small: "The Flag Selection feature is currently not functional and is a work-in-progress.\n\nIt will be functional in a future major update.\n\nEXAMPLE:"
+      fnr_debug_window_formable_list_loc_color_selection: "Color Selection - The Color Selection feature is currently not functional and is a work-in-progress. It will be functional post 2.5.x TOKAY."
+      fnr_debug_window_formable_list_loc_rank_2: "Rank II Formables"
+      fnr_debug_window_formable_list_loc_rank_2_arpitania: "Arpitania"
+      fnr_debug_window_formable_list_loc_rank_3: "Rank III Formables"
+      fnr_debug_window_formable_list_loc_germanempire: "German Empire"
+      fnr_debug_window_formable_list_loc_geremp_flag_1: "Black-white-red imperial flag"
+      fnr_debug_window_formable_list_loc_geremp_flag_2: "Black-red-yellow modern flag"
 
 

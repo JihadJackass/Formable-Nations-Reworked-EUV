@@ -26,13 +26,13 @@
 	#	}
 
 		# Moravian Patriarchate
-		fnr_moravian_patrarchate_modifier = {
-			game_data = {
-				category = character
-			}
-			
-			character_cabinet_efficiency = 0.05
-		}
+#		fnr_moravian_patrarchate_modifier = {
+#			game_data = {
+#				category = character
+#			}
+#			
+#			character_cabinet_efficiency = 0.05
+#		}
 
 
 	# Rhineland

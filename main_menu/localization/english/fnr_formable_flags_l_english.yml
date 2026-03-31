@@ -1,0 +1,15 @@
+﻿l_english:
+
+  ####################
+  # Flag localiation #
+  ####################
+
+    # Netherlands
+
+      NED_DR_FLAG: "Prince's Orange"
+      NED_UP_FLAG: "United Provinces of the Netherlands"
+
+    # Sweden-Norway
+
+      SDNNW_S: "Flag of Sweden (1844–1905)"
+      SDNNW_N: "Flag of Norway (1844–1899)"

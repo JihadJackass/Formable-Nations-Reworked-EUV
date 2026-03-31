@@ -1,0 +1,79 @@
+﻿# Formable Nations - Greco-Buddhism Aspects
+
+fnr_aspect_legacy_of_alexander = {
+	religion = fnr_greco_buddhism_religion
+	icon = fnr_religious_aspect_legacy_of_alexander
+
+	enabled = {
+		NOT = {
+			OR = {
+				has_religious_aspect = religious_aspect:fnr_aspect_bactrian_succession
+				has_religious_aspect = religious_aspect:fnr_aspect_likeness_of_the_buddha
+			}
+		}
+	}
+
+	modifier = {
+		rebel_monthly_progress = -0.10
+		army_cavalry_power = 0.075
+		pop_leave_rebels_threshold = -0.05
+		monthly_religious_influence = 0.025
+		monthly_karma = -0.010
+	}
+
+	opinions = {
+	}
+}
+
+fnr_aspect_bactrian_succession = {
+	religion = fnr_greco_buddhism_religion
+	icon = fnr_religious_aspect_bactrian_succession
+
+	enabled = {
+		NOT = {
+			OR = {
+				has_religious_aspect = religious_aspect:fnr_aspect_legacy_of_alexander
+				has_religious_aspect = religious_aspect:fnr_aspect_likeness_of_the_buddha
+			}
+		}
+	}
+
+	modifier = {
+		succession_crisis_price_cost_modifier = -0.25
+		mountains_proximity_impact = -0.10
+		hills_proximity_impact = -0.10
+		monthly_legitimacy = 0.025
+		monthly_prestige = -0.01
+	}
+
+	opinions = {
+	}
+}
+
+fnr_aspect_likeness_of_the_buddha = {
+	religion = fnr_greco_buddhism_religion
+	icon = fnr_aspect_likeness_of_the_buddha
+
+	enabled = {
+		NOT = {
+			OR = {
+				has_religious_aspect = religious_aspect:fnr_aspect_legacy_of_alexander
+				has_religious_aspect = religious_aspect:fnr_aspect_bactrian_succession
+			}
+		}
+	}
+
+	modifier = {
+		monthly_diplomats = 0.50
+		tolerance_heathen = 1
+		tolerance_heretic = 1
+		monthly_religious_influence = -0.010
+		monthly_karma = 0.025
+		hire_artist_cost_modifier = -0.25
+		any_pop_can_be_slave = no
+		maximum_religious_influence = 100
+	}
+
+	opinions = {
+	}
+}

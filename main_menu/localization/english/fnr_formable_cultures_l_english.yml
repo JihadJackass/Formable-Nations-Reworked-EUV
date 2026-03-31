@@ -3,10 +3,17 @@
   # Cultures
 
     # Dual Monarchy
-    fnr_anglois: "Anglois"
+
+      fnr_anglois: "Anglois"
 
     # Gallo-Roman Empire
-    fnr_gallo_roman_culture: "Gallo-Roman"
+
+      fnr_gallo_roman_culture: "Gallo-Roman"
 
     # Assyrian Empire
-    fnr_semitic_culture: "Assyrian-Semitic"
+
+      fnr_semitic_culture: "Assyrian-Semitic"
+
+    # Bactria
+
+      fnr_greco_bactrian_culture: "Bactrian"

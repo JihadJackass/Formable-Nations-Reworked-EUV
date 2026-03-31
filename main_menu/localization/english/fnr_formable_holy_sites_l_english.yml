@@ -1,0 +1,30 @@
+﻿l_english:
+
+  ###############################
+  # Holy Site Type localisation #
+  ###############################
+
+    fnr_historical_greco_holy_site: "Historical Greco Holy Site"
+    fnr_historical_greco_holy_site_desc: "The temples and oracles of the Hellenic world were once centers of wisdom, prophecy, and civic devotion. As inheritors of the Greek philosophical tradition, we hold a sacred obligation to preserve these sites and ensure that pilgrims of our faith may walk freely among the ruins and sanctuaries where Western thought first took root."
+
+    fnr_historical_buddhist_holy_site: "Historical Buddhist Holy Site"
+    fnr_historical_buddhist_holy_site_desc: "From the monasteries of Gandhara to the stupas of the Indus, the places where the Dharma was first taught and practiced remain sacred to all who follow the path of the Buddha. As a people who gave the Enlightened One his first human likeness, we bear a duty to safeguard these sites and guarantee the passage of the faithful who seek them."
+
+  #########################
+  # Holy Site localiation #
+  #########################
+
+    fnr_graco_buddhism_holy_site_constantinople: "Constantinople"
+    fnr_graco_buddhism_holy_site_antioch: "Antioch"
+    fnr_graco_buddhism_holy_site_jerusalem: "Jerusalem"
+    fnr_graco_buddhism_holy_site_alexandria: "Alexandria"
+    fnr_graco_buddhism_holy_site_mount_athos: "Mount Athos"
+    fnr_graco_buddhism_holy_site_saint_katrine_monastery: "Saint Katrine Monastery"
+
+    fnr_graco_buddhism_holy_site_varanasi: "Varanasi"
+    fnr_graco_buddhism_holy_site_prayag_kumbh_mela: "Prayag Kumbh Mela"
+    fnr_graco_buddhism_holy_site_haridwar_kumbh_mela: "Haridwar Kumbh Mela"
+    fnr_graco_buddhism_holy_site_nashik_trimbakeshwar_simhastha: "Nashik Trimbakeshwar Simhastha"
+    fnr_graco_buddhism_holy_site_kanchipuram: "Kanchipuram"
+
+

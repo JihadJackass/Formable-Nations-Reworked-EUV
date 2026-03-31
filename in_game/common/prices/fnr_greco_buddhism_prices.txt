@@ -1,0 +1,10 @@
+﻿
+	fnr_spread_litergical_copies_of_alexander = {
+		religious_influence = 40
+	}
+
+	fnr_greco_buddhism_action_hybridize_local_cultures = {
+		religious_influence = 200
+	}
+
+	

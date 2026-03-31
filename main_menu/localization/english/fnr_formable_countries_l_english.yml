@@ -674,6 +674,24 @@
   # NON-HISTORICAL FORMABLES #
   ############################
 
+    # Bactria
+    BACTR: "Bactria"
+    BACTR_f: "Bactria"
+    BACTR_ADJ: "Bactrian"
+    BACTR_f_desc: "When Alexander's empire shattered, his generals carved kingdoms from the wreckage. Most clung to the familiar shores of the Mediterranean. But in the furthest east, beyond Persia, beyond Parthia, a dynasty of Greek kings held fast to Bactria and built something extraordinary. Founded around 250 BC when the satrap Diodotus broke from his Seleucid overlords, the Greco-Bactrian Kingdom became the richest state in Central Asia, known to the ancients as a great empire of a thousand cities. From the colonnaded streets of Ai-Khanoum, the easternmost Greek city ever built, its kings minted coins of unmatched artistry and traded with empires as distant as Han China. Under Demetrius, Bactrian armies crossed the Hindu Kush and planted Greek banners in India itself. Greek philosophy met Buddhist wisdom. Hellenic sculpture fused with the art of the subcontinent. For over a century, this improbable kingdom thrived at the edge of the known world, until the Yuezhi swept down from the steppe and buried it beneath the hooves of history. To restore Bactria is to raise again the furthest torch of the Hellenistic world, burning bright where East and West first learned to speak to one another."
+
+    # Badakhshān
+    BDKSN: "Badakhshān"
+    BDKSN_f: "Badakhshān"
+    BDKSN_ADJ: "Badakhshāni"
+    BDKSN_f_desc: "Long before the empires of the steppe laid claim to these valleys, the lapis lazuli of Badakhshān adorned the tombs of pharaohs and the palaces of Mesopotamian kings, carried westward along routes that would one day be called the Silk Road. From its ancient capital at Kishim to the fortified seat of Fayzabad, Badakhshān endured as an autonomous kingdom ruled by its own hereditary Mirs, a realm that emerged from the ashes of the Mongol conquests enlarged and defiant. Empires rose and fell around it. Samanid, Timurid, Durrani. Yet the mountain throne persisted, its rulers playing the great powers of Central Asia against one another for centuries. Only in the twilight of the nineteenth century, when the Great Game's final borders were drawn and the Panj River became a line on a foreign map, did the kingdom at last lose its sovereignty, split between Afghanistan and the Russian Empire. Its unity was broken, but never forgotten. To restore Badakhshān is to reclaim a legacy older than the Silk Road itself."
+
+    # Pamiristan
+    PMSTN: "Pamiristan"
+    PMSTN_f: "Pamiristan"
+    PMSTN_ADJ: "Pamiristani"
+    PMSTN_f_desc: "Atop the Roof of the World, where ancient Silk Road caravans once braved passes that scrape the heavens, the Pamiri peoples have endured for millennia — isolated by towering peaks, united by shared tongue and faith. Descended from the Eastern Iranian tribes who settled these high valleys centuries before the common era, the Pamiris preserved their own languages, their own Ismaili traditions, and their own fierce independence long after the empires around them rose and fell. The principalities of Wakhan, Shughnan, and Rushan governed themselves for centuries from mountain fortresses no outside power could easily reach. Now, as the modern age reshapes the map, a sovereign Pamiristan would at last give political form to what geography and culture have long defined — a homeland for the people of the Pamirs, standing where four nations converge and five great mountain ranges meet."
+
     # Sardinia-Piedmont
     SDPDM: "Sardinia-Piedmont"
     SDPDM_f: "Sardinia-Piedmont"
@@ -960,14 +978,6 @@
     ASHNG_f: "Austro-Hungarian Empire"
     ASHNG_ADJ: "Austro-Hungarian"
     ASHNG_f_desc: "The Austro-Hungarian Empire (1867-1918) was a dual monarchy in Central Europe, uniting the Austrian Empire and the Kingdom of Hungary under a single Habsburg monarch, Emperor Franz Joseph. Formed by the 1867 Compromise (Ausgleich), it featured separate governments for Austria and Hungary but shared foreign policy, military, and finance, managing a diverse collection of ethnicities. A major power, its internal ethnic tensions and nationalism, exacerbated by World War I, ultimately led to its collapse and dissolution into new nations by 1918."
-
-    ASHNG_NAME_SHORT: "Austria-Hungary"
-    ASHNG_NAME_SHORT_f: "Austria-Hungary"
-    ASHNG_NAME_SHORT_ADJ: "Austro-Hungarian"
-
-    ASHNG_NAME_LONG: "Austro-Hungarian Empire"
-    ASHNG_NAME_LONG_f: "Austro-Hungarian Empire"
-    ASHNG_NAME_LONG_ADJ: "Austro-Hungarian"
 
     # Austrian Empire
     AUSEM: "Austrian Empire"

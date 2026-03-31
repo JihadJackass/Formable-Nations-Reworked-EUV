@@ -1326,14 +1326,9 @@
 			owns = location:rome
 			owns = location:constantinople
 			country_rank = country_rank:rank_empire
-			is_hegemon = yes
 
 			trigger_if = {
-				OR = {
-					tag = BYZ
-					tag = EASRE
-					tag = WESRE
-				}
+				tag = BYZ
 			}
 			OR = {
 				religion.group = religion_group:christian

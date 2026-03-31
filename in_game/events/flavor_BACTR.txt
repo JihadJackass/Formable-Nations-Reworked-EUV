@@ -1,0 +1,54 @@
+﻿namespace = flavor_BACTR
+
+flavor_BACTR.1 = {
+	type = country_event
+	title = flavor_BACTR.1.title
+	desc = flavor_BACTR.1.desc
+	fire_only_once = yes
+	option = {
+		name = flavor_BACTR.1.a
+		change_religion = religion:fnr_greco_buddhism_religion
+		custom_tooltip = { text = BACTR_formable_trigger_1_tt }
+		hidden_effect = { # Conversion to Zoroastrain
+			every_pop = {
+				limit = {
+					religion = religion:sunni
+					#religion.group = religion_group:muslim
+				}
+				split_pop = {
+					fraction = 0.20
+					religion = religion:zoroastrian
+				}
+			}
+		}
+		custom_tooltip = { text = BACTR_formable_trigger_2_tt }
+		hidden_effect = { # Conversion to Greco-Buddhism
+			every_pop = {
+				limit = {
+					religion = religion:sunni
+					#religion.group = religion_group:muslim
+				}
+				split_pop = {
+					fraction = 0.20
+					religion = religion:fnr_greco_buddhism_religion
+				}
+			}
+		}
+	}
+}
+
+flavor_BACTR.2 = {
+	type = country_event
+	title = flavor_BACTR.2.title
+	desc = flavor_BACTR.2.desc
+	fire_only_once = yes
+	option = { # Bactria
+		name = flavor_BACTR.2.a
+		change_country_name = BACTR_NAME_SHORT
+	}
+	option = { # Greco-Bactrian Kingdom
+		name = flavor_BACTR.2.b
+		change_country_name = BACTR_NAME_LONG
+	}
+}
+

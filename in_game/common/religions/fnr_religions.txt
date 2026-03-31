@@ -1,147 +1,186 @@
-﻿# Taiping
-fnr_god_worshipping_society_taiping = { 
-	color = color_fnr_gws_religion
-	group = christian
+﻿#######################################
+# Formable Nation: Reworked Religions #
+#######################################
 
-	language = classical_chinese_language
-	
-	enable = 9999.1.1 # enabled via taiping
-	
-	religious_aspects = 3
-	has_religious_influence = yes
-	
-	definition_modifier = {
-		monthly_war_exhaustion = -0.10
-		global_peasants_estate_power = 0.05 
-		monthly_peasants_estate_rebel_growth = -0.05
-		nobles_estate_can_participate_in_parliament = no
-		peasants_estate_can_participate_in_parliament = yes
-		clergy_estate_can_participate_in_parliament = yes
-		global_pop_promotion_speed_modifier = 0.15
-		global_pop_conversion_speed_modifier = 0.05
-		
-		monthly_religious_influence = 0.1
+	# Bactria
 
-		maximum_religious_influence = 200
-	}
-	
-	opinions = {
-		lutheran = kindred
-		calvinist = positive
-		anglican = positive
-		catholic = hostile      # Taiping rejected Catholic hierarchy
-		#confucian = hostile     # Opposed traditional Chinese religion
-		#buddhist = hostile      # Iconoclasm against Buddhist temples
-		#taoist = hostile        # Opposed traditional practices
-	}
+		fnr_greco_buddhism_religion = { # https://en.wikipedia.org/wiki/Greco-Buddhism
+			color = fnr_map_greco_buddhism_religion
+			group = folk_european_group
 
-	unique_names = {
-		name_aaron name_abraham name_isaac name_jacob name_joseph name_joshua
-		name_benjamin name_daniel name_david name_elias name_ezra name_gabriel
-		name_james name_jeremiah name_jonas name_jonathan name_jordan 
-		name_matthew name_moses name_nathan name_nathaniel name_samuel 
-		name_salomon name_timothy name_zechariah
-		
-		# Chinese Taiping leader names
-		Hong Xiuquan Yang Feng Wei Shi Qin Lai
-		
-		# Chinese transliterations of biblical names
-		Yuehan    # John
-		Bide      # Peter  
-		Baoluo    # Paul
-		Maliya    # Mary
-		Yuesefu   # Joseph
-		Yeheshua  # Jesus/Joshua (Chinese)
-		Moxi      # Moses (Chinese)
-		Dalü      # David (Chinese)
-	}
+			religious_aspects = 1
+			has_patriarchs = yes
+			use_icons = yes
+			has_karma = yes
+			has_religious_influence = yes
 
-	tags = { protestant_gfx western_christian_gfx christian_gfx abrahamic_gfx }
-	custom_tags = { protestant fnr_gws_church_aspects }
-}
+			enable = 9999.1.1
 
-# Gallic Empire
-fnr_gallo_roman_religion = {
-	color = color_fnr_gallo_roman_religion
-	group = folk_european_group
+			definition_modifier = {
+				tolerance_heathen = 3
+				tolerance_heretic = 2
+				trade_efficiency = 0.025
+			}
+			
+			opinions = {
+				hellenism_religion = kindred
+				orthodox = positive
+				catholic = negative
+				ibadi = enemy
+				shia = enemy
+				sunni = enemy
+			}
 
-	language = fnr_gaulish_language
-	
-	enable = 9999.1.1 #historically 1412.10.18 Jan Hus renounces all authority but Jesus Christ
-	
-	religious_aspects = 1
-    enable = 9999.1.1 #Activated by formation of Gallic Empire
-	
-	definition_modifier = {
-		monthly_war_exhaustion = -0.10
-		global_peasants_estate_power = 0.05 
-		monthly_peasants_estate_rebel_growth = -0.05
-		nobles_estate_can_participate_in_parliament = no
-		peasants_estate_can_participate_in_parliament = yes
-		clergy_estate_can_participate_in_parliament = yes
-		global_pop_promotion_speed_modifier = 0.15
-		global_pop_conversion_speed_modifier = 0.05
-		
-		monthly_religious_influence = 0.1
+			tags = {
+				folk_european_gfx pagan_gfx eastern_christian_gfx
+			}
+		}		
 
-		maximum_religious_influence = 200
-	}
-	
-	opinions = {
-	}
+	# Taiping
+		fnr_god_worshipping_society_taiping = { 
+			color = color_fnr_gws_religion
+			group = christian
 
-	unique_names = {
-        # Gallic/Celtic names
-        name_vercingetorix name_ambiorix name_commius name_diviciacus 
-        name_dumnorix name_orgetorix name_catuvolcus name_indutiomarus
-        name_cingetorix name_tasgetius name_cavarinus name_litaviccus
-        name_eporedorix name_viridomarus name_cotuatus name_lucterius
-        name_critognatus name_brennus name_bituitus name_bellovesus
-        name_segovesus name_teutomatus name_correus name_viridovix
-        
-        # Roman names common in Gaul
-        name_marcus name_gaius name_lucius name_publius name_quintus
-        name_titus name_sextus name_decimus name_gnaeus name_aulus
-        name_servius name_appius name_spurius name_tiberius name_manius
-        
-        # Romanized Gallic names
-        name_julius name_claudius name_antonius name_valerius name_cornelius
-	}
+			language = classical_chinese_language
+			
+			enable = 9999.1.1 # enabled via taiping
+			
+			religious_aspects = 3
+			has_religious_influence = yes
+			
+			definition_modifier = {
+				monthly_war_exhaustion = -0.10
+				global_peasants_estate_power = 0.05 
+				monthly_peasants_estate_rebel_growth = -0.05
+				nobles_estate_can_participate_in_parliament = no
+				peasants_estate_can_participate_in_parliament = yes
+				clergy_estate_can_participate_in_parliament = yes
+				global_pop_promotion_speed_modifier = 0.15
+				global_pop_conversion_speed_modifier = 0.05
+				
+				monthly_religious_influence = 0.1
 
-	tags = { folk_european_gfx pagan_gfx }
-	#custom_tags = { protestant fnr_gws_church_aspects }
-}
+				maximum_religious_influence = 200
+			}
+			
+			opinions = {
+				lutheran = kindred
+				calvinist = positive
+				anglican = positive
+				catholic = hostile      # Taiping rejected Catholic hierarchy
+				#confucian = hostile     # Opposed traditional Chinese religion
+				#buddhist = hostile      # Iconoclasm against Buddhist temples
+				#taoist = hostile        # Opposed traditional practices
+			}
 
-# Great Moravia
-# TODO POST 2.5.0:  PLACEHOLDER UNTIL I CAN RESOLVE PATRIARCH UI POPPING UP DUE TO has_autocephalous_patriarchates ISSUE
-fnr_great_moravia_orthodox = { 
-	color = color_fnr_religion_orthodox
-	group = christian
+			unique_names = {
+				name_aaron name_abraham name_isaac name_jacob name_joseph name_joshua
+				name_benjamin name_daniel name_david name_elias name_ezra name_gabriel
+				name_james name_jeremiah name_jonas name_jonathan name_jordan 
+				name_matthew name_moses name_nathan name_nathaniel name_samuel 
+				name_salomon name_timothy name_zechariah
+				
+				# Chinese Taiping leader names
+				Hong Xiuquan Yang Feng Wei Shi Qin Lai
+				
+				# Chinese transliterations of biblical names
+				Yuehan    # John
+				Bide      # Peter  
+				Baoluo    # Paul
+				Maliya    # Mary
+				Yuesefu   # Joseph
+				Yeheshua  # Jesus/Joshua (Chinese)
+				Moxi      # Moses (Chinese)
+				Dalü      # David (Chinese)
+			}
 
-	has_patriarchs = yes	
-	has_canonization = yes
-	has_autocephalous_patriarchates = no
-	has_religious_influence = yes
-	use_icons = yes
+			tags = { protestant_gfx western_christian_gfx christian_gfx abrahamic_gfx }
+			custom_tags = { protestant fnr_gws_church_aspects }
+		}
 
-	definition_modifier = {
-		stability_cost = -0.1
-		global_max_literacy = 5
+	# Gallic Empire
+		fnr_gallo_roman_religion = {
+			color = color_fnr_gallo_roman_religion
+			group = folk_european_group
 
-		maximum_religious_influence = 400
-	}
-	
-	opinions = {
-		bogomilism = enemy
-		bosnian_church = negative
-		catholic = positive
-		orthodox = kindred
-		paulicianism = negative
-		sunni = enemy
-		shia = enemy
-		judaism = positive
-	}
+			language = fnr_gaulish_language
+			
+			religious_aspects = 1
 
-	tags = { orthodox_gfx eastern_christian_gfx christian_gfx abrahamic_gfx }
+			enable = 9999.1.1 #Activated by formation of Gallic Empire
+			
+			definition_modifier = {
+				monthly_war_exhaustion = -0.10
+				global_peasants_estate_power = 0.05 
+				monthly_peasants_estate_rebel_growth = -0.05
+				nobles_estate_can_participate_in_parliament = no
+				peasants_estate_can_participate_in_parliament = yes
+				clergy_estate_can_participate_in_parliament = yes
+				global_pop_promotion_speed_modifier = 0.15
+				global_pop_conversion_speed_modifier = 0.05
+				
+				monthly_religious_influence = 0.1
 
-}
+				maximum_religious_influence = 200
+			}
+			
+			opinions = {
+			}
+
+			unique_names = {
+				# Gallic/Celtic names
+				name_vercingetorix name_ambiorix name_commius name_diviciacus 
+				name_dumnorix name_orgetorix name_catuvolcus name_indutiomarus
+				name_cingetorix name_tasgetius name_cavarinus name_litaviccus
+				name_eporedorix name_viridomarus name_cotuatus name_lucterius
+				name_critognatus name_brennus name_bituitus name_bellovesus
+				name_segovesus name_teutomatus name_correus name_viridovix
+				
+				# Roman names common in Gaul
+				name_marcus name_gaius name_lucius name_publius name_quintus
+				name_titus name_sextus name_decimus name_gnaeus name_aulus
+				name_servius name_appius name_spurius name_tiberius name_manius
+				
+				# Romanized Gallic names
+				name_julius name_claudius name_antonius name_valerius name_cornelius
+			}
+
+			tags = { folk_european_gfx pagan_gfx }
+			#custom_tags = { protestant fnr_gws_church_aspects }
+		}
+
+	# Great Moravia
+		# TODO POST 2.5.0:  PLACEHOLDER UNTIL I CAN RESOLVE PATRIARCH UI POPPING UP DUE TO has_autocephalous_patriarchates ISSUE
+		fnr_great_moravia_orthodox = { 
+			color = color_fnr_religion_orthodox
+			group = christian
+
+			has_patriarchs = yes	
+			has_canonization = yes
+			has_autocephalous_patriarchates = no
+			has_religious_influence = yes
+			use_icons = yes
+
+			enable = 9999.1.1
+
+			definition_modifier = {
+				stability_cost = -0.1
+				global_max_literacy = 5
+
+				maximum_religious_influence = 400
+			}
+			
+			opinions = {
+				bogomilism = enemy
+				bosnian_church = negative
+				catholic = positive
+				orthodox = kindred
+				paulicianism = negative
+				sunni = enemy
+				shia = enemy
+				judaism = positive
+			}
+
+			tags = { orthodox_gfx eastern_christian_gfx christian_gfx abrahamic_gfx }
+
+		}

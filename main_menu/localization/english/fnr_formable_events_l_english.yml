@@ -2,93 +2,114 @@
 
   # events FOR FORMABLE NATIONS
 
+    # Bactria
+
+      flavor_BACTR.1.title: "Rise of Bactria"
+      flavor_BACTR.1.desc: "With the rise of the nation of Bactria and a restoration of long lost traditions comes waves of both support and dissent which must be swiftly promoted and dealt with respectively or our new status in the region could be threatened."
+      flavor_BACTR.1.a: "We must do this for Alexander!"
+
+      flavor_BACTR.2.title: "Bactrian Identity"
+      flavor_BACTR.2.desc: "We must declare our official name to the neighboring friends and foes to establish our place in the world."
+      flavor_BACTR.2.a: "Simplicity is better, let us be Bactria."  
+      flavor_BACTR.2.b: "In memory of Alexander 'Greco-Bactrian Kingdom' is quite fitting."  
+
     # Rhineland
-    flavor_RHLND.1.title: "The Path Forward"
-    flavor_RHLND.1.desc: "The Rheinkonföderation has endured for decades, but the question of our future can no longer be postponed. Since our founding, we have governed through temporary arrangements and compromise—a necessary evil during our formation, but hardly sustainable indefinitely.\n\nTwo visions have emerged for the path forward. Some advocate for the establishment of Das Rheinische Königreich, a centralized monarchy with strong royal authority capable of binding our territories together through decisive leadership. Others champion Der Rheinbund, a republican confederation that preserves local autonomy while fostering cooperation between our diverse estates.\n\nThe choice we make today will define not merely our government, but the very character of our nation for generations to come."
-    flavor_RHLND.1.a: "The King should be empowered."
-    flavor_RHLND.1.b: "People deserve to hold an opinion on state matters."
 
-    flavor_RHLND.2.title: "Learning from our experience"
-    flavor_RHLND.2.desc: "The nature of warfare has changed, and we must adapt our military accordingly. Modern conflict demands a strong foundation—robust industry and formidable fortifications. We will focus our efforts on enhancing and expanding both."
-    flavor_RHLND.2.a: "We have learned much from these conflicts."
+      flavor_RHLND.1.title: "The Path Forward"
+      flavor_RHLND.1.desc: "The Rheinkonföderation has endured for decades, but the question of our future can no longer be postponed. Since our founding, we have governed through temporary arrangements and compromise—a necessary evil during our formation, but hardly sustainable indefinitely.\n\nTwo visions have emerged for the path forward. Some advocate for the establishment of Das Rheinische Königreich, a centralized monarchy with strong royal authority capable of binding our territories together through decisive leadership. Others champion Der Rheinbund, a republican confederation that preserves local autonomy while fostering cooperation between our diverse estates.\n\nThe choice we make today will define not merely our government, but the very character of our nation for generations to come."
+      flavor_RHLND.1.a: "The King should be empowered."
+      flavor_RHLND.1.b: "People deserve to hold an opinion on state matters."
 
-    flavor_RHLND.3.title: "Sourcing Innovative Investments"
-    flavor_RHLND.3.desc: "Tradition without adaptation leads to ruin—we have witnessed this truth firsthand. Our survival and prosperity demand that we adopt contemporary methods of governance, regardless of how comfortable the old ways may feel."
-    flavor_RHLND.3.a: "Investment is key!"
+      flavor_RHLND.2.title: "Learning from our experience"
+      flavor_RHLND.2.desc: "The nature of warfare has changed, and we must adapt our military accordingly. Modern conflict demands a strong foundation—robust industry and formidable fortifications. We will focus our efforts on enhancing and expanding both."
+      flavor_RHLND.2.a: "We have learned much from these conflicts."
 
-    flavor_RHLND.4.title: "Pillar of Society and Religion"
-    flavor_RHLND.4.desc: "We have successfully curtailed the Church's political power, but complete suppression would be both impractical and unnecessary. Instead, we will redirect their influence toward what they do best: serving as the cultural and theological backbone that binds our diverse people together."
-    flavor_RHLND.4.a: "The Clergy keep the people under control."
+      flavor_RHLND.3.title: "Sourcing Innovative Investments"
+      flavor_RHLND.3.desc: "Tradition without adaptation leads to ruin—we have witnessed this truth firsthand. Our survival and prosperity demand that we adopt contemporary methods of governance, regardless of how comfortable the old ways may feel."
+      flavor_RHLND.3.a: "Investment is key!"
 
-    flavor_RHLND.5.title: "State of the Confederation"
-    flavor_RHLND.5.desc: "The Rhineland has long been a patchwork of bishoprics, free cities, and petty lordships—proud of their autonomy yet bound by geography and commerce. Our unification under the banner of the United Countries preserves this tradition of local sovereignty, each constituent maintaining its ancient privileges. Yet this very fragmentation weakens us. Foreign powers view us not as a unified duchy but as quarreling neighbors held together by treaty. Our ambassadors lack the authority of a true prince, our armies struggle with divided command, and territorial expansion is complicated by the need for consensus among the member states. Some now argue we must choose: embrace centralization under a ducal crown and claim our place among Europe's principalities, or accept our limitations and preserve the freedoms that make the Rhineland unique. Either path demands sacrifice."
-    flavor_RHLND.5.a: "Remain as the United Counties of Rhineland."
-    flavor_RHLND.5.b: "Give me the title of Duke!"
+      flavor_RHLND.4.title: "Pillar of Society and Religion"
+      flavor_RHLND.4.desc: "We have successfully curtailed the Church's political power, but complete suppression would be both impractical and unnecessary. Instead, we will redirect their influence toward what they do best: serving as the cultural and theological backbone that binds our diverse people together."
+      flavor_RHLND.4.a: "The Clergy keep the people under control."
+
+      flavor_RHLND.5.title: "State of the Confederation"
+      flavor_RHLND.5.desc: "The Rhineland has long been a patchwork of bishoprics, free cities, and petty lordships—proud of their autonomy yet bound by geography and commerce. Our unification under the banner of the United Countries preserves this tradition of local sovereignty, each constituent maintaining its ancient privileges. Yet this very fragmentation weakens us. Foreign powers view us not as a unified duchy but as quarreling neighbors held together by treaty. Our ambassadors lack the authority of a true prince, our armies struggle with divided command, and territorial expansion is complicated by the need for consensus among the member states. Some now argue we must choose: embrace centralization under a ducal crown and claim our place among Europe's principalities, or accept our limitations and preserve the freedoms that make the Rhineland unique. Either path demands sacrifice."
+      flavor_RHLND.5.a: "Remain as the United Counties of Rhineland."
+      flavor_RHLND.5.b: "Give me the title of Duke!"
 
     # North German Confederation Flag Standards
-    flavor_NGCFD.1.title: "Imperial German Flag Standard"
-    flavor_NGCFD.1.desc: "The North German Confederation has been unified - We must declare our official flag for the nation. We could use our historical war ensign as the official flag, or stick to the tricolored Schwarz-Weiß-Rot design."
-    flavor_NGCFD.1.a: "We will use the Reichskriegsflagge!"
-    flavor_NGCFD.1.b: "The Schwarz-Weiß-Rot will do nicely."
-    NGCFD_flag_alternate: "Schwarz-Weiß-Rot"
+
+      flavor_NGCFD.1.title: "Imperial German Flag Standard"
+      flavor_NGCFD.1.desc: "The North German Confederation has been unified - We must declare our official flag for the nation. We could use our historical war ensign as the official flag, or stick to the tricolored Schwarz-Weiß-Rot design."
+      flavor_NGCFD.1.a: "We will use the Reichskriegsflagge!"
+      flavor_NGCFD.1.b: "The Schwarz-Weiß-Rot will do nicely."
+      NGCFD_flag_alternate: "Schwarz-Weiß-Rot"
 
     # Sorbic Kingdom Name event
-    flavor_KSORB.1.title: "Sorbic Naming Standard"
-    flavor_KSORB.1.desc: "We have united the Sorbian lands, but what shall we call our realm? The Sorbic Kingdom projects royal legitimacy and diplomatic gravitas. Sorbia invokes our ancient heritage and cultural identity. The choice is ours."
-    flavor_KSORB.1.a: "Sorbic Kingdom is fitting enough."
-    flavor_KSORB.1.b: "We are Sorbians!"
+
+      flavor_KSORB.1.title: "Sorbic Naming Standard"
+      flavor_KSORB.1.desc: "We have united the Sorbian lands, but what shall we call our realm? The Sorbic Kingdom projects royal legitimacy and diplomatic gravitas. Sorbia invokes our ancient heritage and cultural identity. The choice is ours."
+      flavor_KSORB.1.a: "Sorbic Kingdom is fitting enough."
+      flavor_KSORB.1.b: "We are Sorbians!"
 
     # Decretum Sacri Romani Imperii (Papal State dominates the HRE)
-    flavor_PAPAL.1.title: "Decretum Sacri Romani Imperii"
-    flavor_PAPAL.1.desc: "The [GetInternationalOrganizationType('hre').GetName] lies at our feet. Through conquest and diplomacy, the Papal States have achieved unprecedented dominance over the German princes and their territories. The imperial throne stands empty, and none dare claim it without our blessing.\n\nFor centuries, popes and emperors have struggled for supremacy in Christendom. The Investiture Controversy, the humiliation of Henry IV at Canossa, countless wars between papal and imperial factions all stemmed from this fundamental conflict. Now we have the power to resolve it permanently.\n\nWe face two paths: dissolve this troublesome Empire entirely and proclaim ourselves rightful Emperor of Europe, uniting spiritual and temporal authority under one crown. Or assume the imperial title while maintaining the Empire's framework, albeit thoroughly subordinated to papal will. Either way, the age of defiant emperors challenging the Holy See has ended."
-    flavor_PAPAL.1.a: "Sacrum Romanum Imperium dissolvere!" # Dissolve the HRE, proclaim ourselves emperor!
-    flavor_PAPAL.1.b: "We are our own Empire, our own Holy Realm!" # Proclaim Emperorship of the Papal States and weaken the HRE
-    flavor_PAPAL.1.c: "The title of Emperor belongs to [GetCountry('PAP').GetNameWithFlag]." # become hre emperor
-    flavor_PAPAL.1.d: "We must simply dissolve the meddlesome system." 
-    flavor_PAPAL.1.e: "Humble are those that meet god." 
 
-    flavor_PAPAL.2.title: "Assumption of the Imperial Title"
-    flavor_PAPAL.2.desc: "With the conquest of the lands of the Holy Roman Empire we have a choice of what our new official title shall be upon the world stage."
-    flavor_PAPAL.2.a: "We are the Christian Empire - Imperium Christianum"
-    flavor_PAPAL.2.b: "The Holy Empire, successor to the failed German pretenders"
-    flavor_PAPAL.2.c: "The Sacred Empire, ordained by God himself"
-    flavor_PAPAL.2.d: "A Universal Monarchy under Christ's Vicar"
-    flavor_PAPAL.2.e: "The Empire of Christendom, uniting all the faithful"
-    flavor_PAPAL.2.f: "The Dominion of St. Peter, as was always intended"
-    flavor_PAPAL.2.g: "Remain as the Papacy."
+      flavor_PAPAL.1.title: "Decretum Sacri Romani Imperii"
+      flavor_PAPAL.1.desc: "The [GetInternationalOrganizationType('hre').GetName] lies at our feet. Through conquest and diplomacy, the Papal States have achieved unprecedented dominance over the German princes and their territories. The imperial throne stands empty, and none dare claim it without our blessing.\n\nFor centuries, popes and emperors have struggled for supremacy in Christendom. The Investiture Controversy, the humiliation of Henry IV at Canossa, countless wars between papal and imperial factions all stemmed from this fundamental conflict. Now we have the power to resolve it permanently.\n\nWe face two paths: dissolve this troublesome Empire entirely and proclaim ourselves rightful Emperor of Europe, uniting spiritual and temporal authority under one crown. Or assume the imperial title while maintaining the Empire's framework, albeit thoroughly subordinated to papal will. Either way, the age of defiant emperors challenging the Holy See has ended."
+      flavor_PAPAL.1.a: "Sacrum Romanum Imperium dissolvere!" # Dissolve the HRE, proclaim ourselves emperor!
+      flavor_PAPAL.1.b: "We are our own Empire, our own Holy Realm!" # Proclaim Emperorship of the Papal States and weaken the HRE
+      flavor_PAPAL.1.c: "The title of Emperor belongs to [GetCountry('PAP').GetNameWithFlag]." # become hre emperor
+      flavor_PAPAL.1.d: "We must simply dissolve the meddlesome system." 
+      flavor_PAPAL.1.e: "Humble are those that meet god." 
 
-    flavor_PAPAL.3.title: "Official Change of the Flag"
-    flavor_PAPAL.3.desc: "We have conquered the Holy Roman Empire and proclaimed ourselves its rightful ruler. Now we must decide what banner shall represent our authority.\n\nThe papal keys and tiara symbolize our spiritual supremacy but lack imperial grandeur. The Quaternion Eagle, that double-headed bird bearing the arms of the Empire's constituent realms, represents continuity and legitimacy. The simple imperial eagle speaks of raw power and ancient tradition. Or we could design something entirely new, a symbol that transcends both papacy and empire to represent the unique fusion of authorities we have created.\n\nOur choice will define how Europe perceives our rule. Shall we emphasize continuity or revolution? Spiritual authority or temporal power? The old order or a new age?"
-    flavor_PAPAL.3.a: "Adopt a new style."
-    flavor_PAPAL.3.b: "Adopt the Quaternion Eagle."
-    flavor_PAPAL.3.c: "Adopt the Holy Roman Empire flag."
-    flavor_PAPAL.3.d: "Keep our Papal flag."
+      flavor_PAPAL.2.title: "Assumption of the Imperial Title"
+      flavor_PAPAL.2.desc: "With the conquest of the lands of the Holy Roman Empire we have a choice of what our new official title shall be upon the world stage."
+      flavor_PAPAL.2.a: "We are the Christian Empire - Imperium Christianum"
+      flavor_PAPAL.2.b: "The Holy Empire, successor to the failed German pretenders"
+      flavor_PAPAL.2.c: "The Sacred Empire, ordained by God himself"
+      flavor_PAPAL.2.d: "A Universal Monarchy under Christ's Vicar"
+      flavor_PAPAL.2.e: "The Empire of Christendom, uniting all the faithful"
+      flavor_PAPAL.2.f: "The Dominion of St. Peter, as was always intended"
+      flavor_PAPAL.2.g: "Remain as the Papacy."
 
-    flavor_PAPAL.4.title: "Reformation of the [GetInternationalOrganizationType('hre').GetName]"
-    flavor_PAPAL.4.desc: "We have conquered the Holy Roman Empire. Now we must decide its fate.\n\nThe Empire as it stands is a secular institution. Electors, princes, and the Imperial Diet govern German territories through temporal authority. We could preserve this system, ensuring papal control over its mechanisms while maintaining its traditional structure. The Empire would continue serving its historical purpose, merely corrected of its defiance toward Rome.\n\nOr we could dissolve it entirely and create something new: a sacred confederation dedicated to defending Christendom. Prince-Cardinals would replace secular electors. Holy Kingdoms would supplant ordinary principalities. Instead of administering German lands, this organization would organize crusades, combat heresy, and protect the faithful. It would be the Church Militant made real, a holy league under papal authority pursuing spiritual rather than temporal goals.\n\nDo we reform the Empire or replace it with a theocratic order?"
-    flavor_PAPAL.4.a: "Establish a new Papal-Dominated Holy Roman Empire focused on Theocratic values."
-    flavor_PAPAL.4.b: "Retain the Status Quo"
+      flavor_PAPAL.3.title: "Official Change of the Flag"
+      flavor_PAPAL.3.desc: "We have conquered the Holy Roman Empire and proclaimed ourselves its rightful ruler. Now we must decide what banner shall represent our authority.\n\nThe papal keys and tiara symbolize our spiritual supremacy but lack imperial grandeur. The Quaternion Eagle, that double-headed bird bearing the arms of the Empire's constituent realms, represents continuity and legitimacy. The simple imperial eagle speaks of raw power and ancient tradition. Or we could design something entirely new, a symbol that transcends both papacy and empire to represent the unique fusion of authorities we have created.\n\nOur choice will define how Europe perceives our rule. Shall we emphasize continuity or revolution? Spiritual authority or temporal power? The old order or a new age?"
+      flavor_PAPAL.3.a: "Adopt a new style."
+      flavor_PAPAL.3.b: "Adopt the Quaternion Eagle."
+      flavor_PAPAL.3.c: "Adopt the Holy Roman Empire flag."
+      flavor_PAPAL.3.d: "Keep our Papal flag."
+
+      flavor_PAPAL.4.title: "Reformation of the [GetInternationalOrganizationType('hre').GetName]"
+      flavor_PAPAL.4.desc: "We have conquered the Holy Roman Empire. Now we must decide its fate.\n\nThe Empire as it stands is a secular institution. Electors, princes, and the Imperial Diet govern German territories through temporal authority. We could preserve this system, ensuring papal control over its mechanisms while maintaining its traditional structure. The Empire would continue serving its historical purpose, merely corrected of its defiance toward Rome.\n\nOr we could dissolve it entirely and create something new: a sacred confederation dedicated to defending Christendom. Prince-Cardinals would replace secular electors. Holy Kingdoms would supplant ordinary principalities. Instead of administering German lands, this organization would organize crusades, combat heresy, and protect the faithful. It would be the Church Militant made real, a holy league under papal authority pursuing spiritual rather than temporal goals.\n\nDo we reform the Empire or replace it with a theocratic order?"
+      flavor_PAPAL.4.a: "Establish a new Papal-Dominated Holy Roman Empire focused on Theocratic values."
+      flavor_PAPAL.4.b: "Retain the Status Quo"
 
     # Austro-Hungarian Empire
-    flavor_ASHNG.1.title: "Naming Convention of our Nation"
-    flavor_ASHNG.1.desc: "The Ausgleich has been concluded, and our dual monarchy stands as a testament to compromise and pragmatism. Yet even in matters of nomenclature, politics intrudes. What shall we call this new political entity that unites the Austrian lands with the Kingdom of Hungary?\n\nSome favor the straightforward 'Austria-Hungary,' emphasizing the equal partnership between the two crowns. This hyphenated form suggests a union of equals, two distinct realms bound by common sovereign and mutual interest. It is direct, clear, and acknowledges the dualist nature of our arrangement.\n\nOthers prefer the more grandiose 'Austro-Hungarian Empire,' which evokes the majesty and continuity of imperial tradition. This formulation presents our state as a unified whole rather than a mere coupling of separate entities. It speaks to greatness, to permanence, to a singular empire that happens to contain multiple kingdoms.\n\nThe choice may seem trivial to outsiders, but within our councils it carries weight. What we call ourselves shapes how we see ourselves, and how the world sees us. The Hungarian delegation watches closely, sensitive to any slight against their hard-won autonomy. The Austrian bureaucrats consider the prestige of imperial nomenclature. Diplomats abroad await our decision, uncertain which letterhead to address.\n\nHis Imperial and Royal Apostolic Majesty must decide: shall we be Austria-Hungary, or the Austro-Hungarian Empire?"
-    flavor_ASHNG.1.a: "Austria-Hungary reflects our dual nature."
-    flavor_ASHNG.1.b: "The Austro-Hungarian Empire maintains our imperial dignity."
 
-    # Sweden-Norway flag choice
-    flavor_SDNNW.1.title: "The Crown of Sweden-Norway"
-    flavor_SDNNW.1.desc: "The decision of our national flag depends on the priority of our union between the regions of Sweden, and Norway - we are able to decide which we find more fitting for our union."
-    flavor_SDNNW.1.a: "Sweden-Oriented Flag"
-    flavor_SDNNW.1.b: "Norway Domination Supreme!"
+      # Naming Choice
 
-    SDNNW_S: "Flag of Sweden (1844–1905)"
-    SDNNW_N: "Flag of Norway (1844–1899)"
+        flavor_ASHNG.1.title: "Naming Convention of our Nation"
+        flavor_ASHNG.1.desc: "The Ausgleich has been concluded, and our dual monarchy stands as a testament to compromise and pragmatism. Yet even in matters of nomenclature, politics intrudes. What shall we call this new political entity that unites the Austrian lands with the Kingdom of Hungary?\n\nSome favor the straightforward 'Austria-Hungary,' emphasizing the equal partnership between the two crowns. This hyphenated form suggests a union of equals, two distinct realms bound by common sovereign and mutual interest. It is direct, clear, and acknowledges the dualist nature of our arrangement.\n\nOthers prefer the more grandiose 'Austro-Hungarian Empire,' which evokes the majesty and continuity of imperial tradition. This formulation presents our state as a unified whole rather than a mere coupling of separate entities. It speaks to greatness, to permanence, to a singular empire that happens to contain multiple kingdoms.\n\nThe choice may seem trivial to outsiders, but within our councils it carries weight. What we call ourselves shapes how we see ourselves, and how the world sees us. The Hungarian delegation watches closely, sensitive to any slight against their hard-won autonomy. The Austrian bureaucrats consider the prestige of imperial nomenclature. Diplomats abroad await our decision, uncertain which letterhead to address.\n\nHis Imperial and Royal Apostolic Majesty must decide: shall we be Austria-Hungary, or the Austro-Hungarian Empire?"
+        flavor_ASHNG.1.a: "Austria-Hungary reflects our dual nature."
+        flavor_ASHNG.1.b: "The Austro-Hungarian Empire maintains our imperial dignity."
 
-    # Dutch Republic Opportunity to Centralize
-    flavor_DUTCH.1.title: "Resolution regarding the United Provinces"
-    flavor_DUTCH.1.desc: "The United Provinces stand as a testament to decentralized governance, each province jealously guarding its autonomy and traditional rights. Yet as our nation grows in stature and faces mounting challenges both at home and abroad, voices have begun calling for a stronger, more unified state.\n\nSome argue that only through centralization can we effectively coordinate our defenses, streamline our commerce, and speak with one voice in international affairs. They point to the inefficiencies of our current system, where each province may veto decisions vital to the nation's interests.\n\nOthers warn that abandoning our cherished provincial liberties would betray the very principles upon which our union was founded. The strength of the United Provinces, they insist, lies precisely in the balance of power between sovereign provinces - a safeguard against tyranny and a wellspring of innovation.\n\nThe question now falls to us: shall we forge a centralized Dutch Republic, or preserve the equality that has defined our confederation?"
-    flavor_DUTCH.1.a: "We shall Proclaim the Dutch Republic!"
-    flavor_DUTCH.1.b: "The United Provinces remain strong in equality!"
+    # Sweden-Norway
+
+      # Formation flag choice
+
+        flavor_SDNNW.1.title: "The Crown of Sweden-Norway"
+        flavor_SDNNW.1.desc: "The decision of our national flag depends on the priority of our union between the regions of Sweden, and Norway - we are able to decide which we find more fitting for our union."
+        flavor_SDNNW.1.a: "Sweden-Oriented Flag"
+        flavor_SDNNW.1.b: "Norway Domination Supreme!"
+
+    # Netherlands
+
+      # Dutch Republic Opportunity to Centralize 
+
+        flavor_DUTCH.1.title: "Resolution regarding the United Provinces"
+        flavor_DUTCH.1.desc: "The United Provinces stand as a testament to decentralized governance, each province jealously guarding its autonomy and traditional rights. Yet as our nation grows in stature and faces mounting challenges both at home and abroad, voices have begun calling for a stronger, more unified state.\n\nSome argue that only through centralization can we effectively coordinate our defenses, streamline our commerce, and speak with one voice in international affairs. They point to the inefficiencies of our current system, where each province may veto decisions vital to the nation's interests.\n\nOthers warn that abandoning our cherished provincial liberties would betray the very principles upon which our union was founded. The strength of the United Provinces, they insist, lies precisely in the balance of power between sovereign provinces - a safeguard against tyranny and a wellspring of innovation.\n\nThe question now falls to us: shall we forge a centralized Dutch Republic, or preserve the equality that has defined our confederation?"
+        flavor_DUTCH.1.a: "We shall Proclaim the Dutch Republic!"
+        flavor_DUTCH.1.b: "The United Provinces remain strong in equality!"
 
     # Gallci Empire
     flavor_GLCEM.1.title: "The Gallic Question"

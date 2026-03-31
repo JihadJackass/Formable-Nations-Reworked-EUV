@@ -1,0 +1,80 @@
+﻿# Greek Holy Sites
+
+    fnr_graco_buddhism_holy_site_constantinople = {
+        location = constantinople
+        type = fnr_historical_greco_holy_site
+        importance = 5
+        religions = { fnr_greco_buddhism_religion }
+    }
+
+    fnr_graco_buddhism_holy_site_antioch = {
+        location = antioch
+        type = fnr_historical_greco_holy_site
+        importance = 3
+        religions = { fnr_greco_buddhism_religion }
+    }
+
+    fnr_graco_buddhism_holy_site_jerusalem = {
+        location = jerusalem
+        type = fnr_historical_greco_holy_site
+        importance = 5
+        religions = { fnr_greco_buddhism_religion }
+    }
+
+    fnr_graco_buddhism_holy_site_alexandria = {
+        location = alexandria
+        type = fnr_historical_greco_holy_site
+        importance = 3
+        religions = { fnr_greco_buddhism_religion }
+    }
+
+    fnr_graco_buddhism_holy_site_mount_athos = {
+        location = mount_athos
+        type = fnr_historical_greco_holy_site
+        importance = 3
+        religions = { fnr_greco_buddhism_religion }
+    }
+
+    fnr_graco_buddhism_holy_site_saint_katrine_monastery = { #https://orthodoxwiki.org/St._Catherine%27s_Monastery_(Sinai)
+        location = saint_katrine
+        type = fnr_historical_greco_holy_site
+        importance = 2
+        religions = { fnr_greco_buddhism_religion }
+    }
+
+# Buddhist Holy Sites
+
+    fnr_graco_buddhism_holy_site_varanasi = {
+        location = varanasi
+        type = fnr_historical_buddhist_holy_site
+        importance = 5
+        religions = { fnr_greco_buddhism_religion }
+    }
+
+    fnr_graco_buddhism_holy_site_prayag_kumbh_mela = {
+        location = prayag
+        type = fnr_historical_buddhist_holy_site
+        importance = 4
+        religions = { fnr_greco_buddhism_religion }
+    }
+
+    fnr_graco_buddhism_holy_site_haridwar_kumbh_mela = {
+        location = gangadvara
+        type = fnr_historical_buddhist_holy_site
+        importance = 4
+        religions = { fnr_greco_buddhism_religion }
+    }
+
+    fnr_graco_buddhism_holy_site_nashik_trimbakeshwar_simhastha = {
+        location = nasik
+        type = fnr_historical_buddhist_holy_site
+        importance = 4
+        religions = { fnr_greco_buddhism_religion }
+    }
+
+    fnr_graco_buddhism_holy_site_kanchipuram = {
+        location = kanchipuram
+        type = fnr_historical_buddhist_holy_site
+        importance = 4
+        religions = { fnr_greco_buddhism_religion }
+    }

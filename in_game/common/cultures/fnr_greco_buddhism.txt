@@ -1,0 +1,17 @@
+﻿# Greco-Bactrian
+
+fnr_greco_bactrian_culture = {
+	language = greek_language
+	
+	color = rgb { 134 135 209 }
+	
+	tags = { middle_east_gfx }
+
+	opinions = {
+
+	}
+	
+	culture_groups = {
+		greek_group iranian_group indian_group
+	}
+}

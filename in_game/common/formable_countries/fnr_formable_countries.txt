@@ -6,8 +6,81 @@
 # FORMABLE NATIONS REWORKED FORMABLES #
 #######################################
 	# Rank 1
-		#
+		# Pamiristan - Modern
+			PMSTN_f = {
+				level = 1
+				required_locations_fraction = 0.90
+				rule = plausible
+				potential = { 
+					AND = {
+						OR = {
+							has_variable = fnr_modern_enabled
+							has_variable = fnr_pamiristan_enabled
+						}
+						NOT = { has_variable = fnr_pamiristan_disabled }
+					}
+					NOT = { 
+						OR = {
+							tag = PMSTN
+							tag_exists = PMSTN
+						}
+					}
+					OR = {
+						culture = culture:tajik_culture 
+						culture = culture:pamiri_culture 
+					}
+				}
+				allow = {
+					AND = {
+						culture = culture:pamiri_culture
+						capital = location:qalai_khumb 
+					}
+				}
+				name = PMSTN
+				flag = PMSTN
+				adjective = PMSTN_ADJ
+				tag = PMSTN
+				color = map_PMSTN
+				provinces = { darvaz_province sighnan_province badakhshan_province qarategin_province sarikol_province }
+			}	
 	# Rank 2
+		# Badakhshān - Modern
+			BDKSN_f = {
+				level = 2
+				required_locations_fraction = 0.87
+				rule = plausible
+				potential = { 
+					AND = {
+						OR = {
+							has_variable = fnr_modern_enabled
+							has_variable = fnr_badakhshan_enabled
+						}
+						NOT = { has_variable = fnr_badakhshan_disabled }
+					}
+					NOT = { 
+						OR = {
+							tag = BDKSN
+							tag_exists = BDKSN
+						}
+					}
+					OR = {
+						culture = culture:tajik_culture 
+						culture = culture:pamiri_culture 
+					}
+				}
+				allow = {
+					AND = {
+						culture = culture:pamiri_culture
+						capital = location:fayzabad 
+					}
+				}
+				name = BDKSN
+				flag = BDKSN
+				adjective = BDKSN_ADJ
+				tag = BDKSN
+				color = map_BDKSN
+				areas = { badakhshan_area }
+			}	
 		# Baden-Alsace
 			BDALS_f = {
 				level = 2
@@ -260,7 +333,77 @@
 				}
 			}
 	# Rank 3
-		# Ptolemaic Kingdom 
+		# Bactria
+			BACTR_f = {
+				level = 3
+				required_locations_fraction = 0.85
+				rule = plausible
+				potential = { 
+					AND = {
+						OR = {
+							has_variable = fnr_nonhistorical_enabled
+							has_variable = fnr_bactria_enabled
+						}
+						NOT = { has_variable = fnr_bactria_disabled }
+					}
+					NOT = { 
+						OR = {
+							tag = BACTR
+							tag_exists = BACTR
+						}
+					}
+					OR = {
+						culture = culture:tajik_culture 
+						culture = culture:pamiri_culture 
+						culture = culture:burusho 
+						culture = culture:shina_culture 
+						culture = culture:balti_culture 
+						culture = culture:nuristani_culture 
+						culture = culture:pashayi_culture 
+						culture = culture:chitrali 
+						culture = culture:ormur_culture 
+						culture = culture:hazara_culture 
+					}
+				}
+				allow = {
+					stability > 25
+					trigger_if = {
+						AND = {
+							OR = {
+								culture = culture:tajik_culture 
+								culture = culture:pamiri_culture 
+								culture = culture:burusho 
+								culture = culture:shina_culture 
+								culture = culture:balti_culture 
+								culture = culture:nuristani_culture 
+								culture = culture:pashayi_culture 
+								culture = culture:chitrali 
+								culture = culture:ormur_culture 
+								culture = culture:hazara_culture 
+							}
+							capital = location:fayzabad 
+						}
+					}
+				}
+				name = BACTR
+				flag = BACTR
+				adjective = BACTR_ADJ
+				tag = BACTR
+				color = map_BACTR
+				areas = { badakhshan_area upper_indus_area }
+				provinces = { kunduz_province }
+				form_effect = {
+					if = {
+						limit = { country_rank_level < 3 }
+						set_country_rank_effect = { rank = country_rank:rank_kingdom }
+					}
+					trigger_event_non_silently = { id = flavor_BACTR.1 }
+					trigger_event_non_silently = { id = flavor_BACTR.2 }
+					set_court_language = dialect:greek_language
+					set_liturgical_language = dialect:greek_language
+				}
+			}	
+		# Ptolemaic Kingdom - althistory
 			PTLMY_f = {
 				level = 3
 				required_locations_fraction = 0.80
@@ -7602,7 +7745,21 @@
 						culture = { has_culture_group = culture_group:greek_group }
 					}
 				}
-				allow = { owns = location:constantinople }
+				allow = { 
+					owns = location:rome
+					owns = location:constantinople
+					country_rank = country_rank:rank_empire
+					is_hegemon = yes
+					capital = location:constantinople
+
+					trigger_if = {
+						tag = BYZ
+					}
+					OR = {
+						religion.group = religion_group:christian
+						religion = religion:hellenism_religion
+					}
+				}
 				name = EASRE
 				flag = EASRE
 				adjective = EASRE_ADJ

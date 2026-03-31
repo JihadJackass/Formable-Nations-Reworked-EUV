@@ -3,6 +3,7 @@
 ####################################
 colors = {
 	# RELIGIOUS COLORS
+		fnr_map_greco_buddhism_religion = rgb { 210 205 170 }
 		color_fnr_gws_religion = rgb { 223 214 113 }
 		color_fnr_gallo_roman_religion = rgb { 124 169 114 } # greenish
 		color_fnr_gallo_roman_religion = rgb { 124 169 114 } # greenish
@@ -19,6 +20,14 @@ colors = {
 		map_china = rgb { 150 150 45 }
 
 	# FORMABLE NATION COLORS
+		# Bactria
+		map_BACTR = rgb { 210 81 35 }
+		# Ptolemaic Kingdom
+		map_PTLMY = rgb { 89 90 153 }
+		# Badakhshān
+		map_BDKSN = rgb { 216 98 48 }
+		# Pamiristan
+		map_PMSTN = rgb { 216 98 69 }
 		# Rhineland
 		map_RHLND = rgb { 107 161 104 }
 		# Baden-Wurttemberg

@@ -1,0 +1,30 @@
+﻿l_english:
+
+  #####################################
+  # Country Name localiation Tooltips #
+  #####################################
+
+    # Gallic Empire
+
+      GLCEM_GALLIA_NAME: "Gallia"
+      GLCEM_GALLIA_NAME_ADJ: "Gallian"
+
+    # Austro-Hungarian Empire
+
+      ASHNG_NAME_SHORT: "Austria-Hungary"
+      ASHNG_NAME_SHORT_f: "Austria-Hungary"
+      ASHNG_NAME_SHORT_ADJ: "Austro-Hungarian"
+
+      ASHNG_NAME_LONG: "Austro-Hungarian Empire"
+      ASHNG_NAME_LONG_f: "Austro-Hungarian Empire"
+      ASHNG_NAME_LONG_ADJ: "Austro-Hungarian"
+
+    # Bactria
+
+      BACTR_NAME_SHORT: "Bactria"
+      BACTR_NAME_SHORT_ADJ: "Bactrian"
+
+      BACTR_NAME_LONG: "Greco-Bactrian Kingdom"
+      BACTR_NAME_LONG_ADJ: "Greco-Bactrian"   
+
+

@@ -4,6 +4,27 @@
 
 # TODO POST 2.5.0: Alternatives for different government types and use less textured flags (only when needed such as sweden-norway with too many colors)
 
+# Bactria
+	BACTR = {
+		textured_emblem = {
+			texture = "te_bactria.dds"
+		}	
+	}
+
+# Badakhshān
+	BDKSN = {
+		textured_emblem = {
+			texture = "te_badakhshan.dds"
+		}	
+	}
+
+# Pamiristan
+	PMSTN = {
+		textured_emblem = {
+			texture = "te_pamiristan.dds"
+		}	
+	}
+
 # Ptolemaic Kingdom  
 	PTLMY = {
 		textured_emblem = {

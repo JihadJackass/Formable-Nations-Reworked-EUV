@@ -44,6 +44,9 @@
 					}
 				}
 				# TODO: add a setting to disable static prefix
+				tag = BACTR
+				tag = BDKSN 
+				tag = PMSTN 
 				tag = BDWTB
 				tag = MGGCA
 				tag = FLVDK

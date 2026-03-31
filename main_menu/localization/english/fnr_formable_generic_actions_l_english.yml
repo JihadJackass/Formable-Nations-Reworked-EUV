@@ -1,0 +1,16 @@
+﻿l_english:
+
+  ###############################
+  # Generic Action localisation #
+  ###############################
+
+    fnr_spread_litergical_copies_of_alexander: "Spread the Alexander Romance"
+    fnr_spread_litergical_copies_of_alexander_desc: "The Alexander Romance, rendered in both Greek script and Kharosthi, is copied by our monastery-scriptoriums and distributed to communities throughout our realm. As the faithful read of Alexander's journey to the ends of the earth and his encounters with the sages of the East, many come to see in Greco-Buddhism the natural union of the two traditions he bridged. In time, these texts bring the unconverted into the fold."
+    fnr_spread_litergical_copies_of_alexander_tt: "#G 5%#! of non-Greco-Buddhist pops in every owned location will convert to [ShowReligionName('fnr_greco_buddhism_religion')]."
+
+    fnr_greco_buddhism_action_hybridize_local_cultures: "Unification of Greek & Buddhist Cultures"
+    fnr_greco_buddhism_action_hybridize_local_cultures_desc: "The mingling of Greek colonists with the peoples of Bactria, Gandhara, and the Indus has produced something no empire before us achieved: a shared identity forged not by conquest alone, but by the blending of language, custom, and faith. By formalizing this process through our monasteries and gymnasia, we declare that the old distinctions between Hellene and native have given way to a single Greco-Bactrian people, united under the Dharma and the legacy of Alexander."
+    fnr_greco_buddhism_action_hybridize_local_cultures_tt: "Our #bold primary culture#! will change to [ShowCultureName('fnr_greco_bactrian_culture')]."
+    fnr_greco_buddhism_action_hybridize_local_cultures_pops_tt: "#color_green 35%#! of [ShowReligionName('fnr_greco_buddhism_religion')] pops in locations with Greco-Buddhist communities will begin adopting the new [ShowCultureName('fnr_greco_bactrian_culture')] culture."
+
+

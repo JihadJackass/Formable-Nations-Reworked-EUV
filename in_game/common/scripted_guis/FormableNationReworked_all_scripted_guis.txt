@@ -269,7 +269,69 @@ FormableNationsReworkedDebug_initialize = {
 
 
 # Individual Formable Toggle List
+	# Rank 1 
+		# Pamiristan
+			FormableNationReworked_toggle_pamiristan = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_pamiristan_enabled }
+							NOT = { has_variable = fnr_pamiristan_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_pamiristan_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_pamiristan_disabled }
+						every_country = { 
+							remove_variable = fnr_pamiristan_disabled
+							set_variable = { name = fnr_pamiristan_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_pamiristan_enabled }
+						every_country = {
+							remove_variable = fnr_pamiristan_enabled
+						}
+					}
+				}
+			}		
 	# Rank 2
+		# Badakhshān - Modern
+			FormableNationReworked_toggle_badakhshan = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_badakhshan_enabled }
+							NOT = { has_variable = fnr_badakhshan_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_badakhshan_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_badakhshan_disabled }
+						every_country = { 
+							remove_variable = fnr_badakhshan_disabled
+							set_variable = { name = fnr_badakhshan_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_badakhshan_enabled }
+						every_country = {
+							remove_variable = fnr_badakhshan_enabled
+						}
+					}
+				}
+			}
+
 		# Arpitania - Fantasy
 			FormableNationReworked_toggle_arpitania = {
 				scope = country
@@ -519,7 +581,67 @@ FormableNationsReworkedDebug_initialize = {
 			}
 	# Rank 3
 		# TODO POST 2.5.0 alphebatise all before basque country
-
+		# Ptolemaic Kingdom - althistory
+			FormableNationReworked_toggle_ptolemaicegypt = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_ptolemaicegypt_enabled }
+							NOT = { has_variable = fnr_ptolemaicegypt_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_ptolemaicegypt_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_ptolemaicegypt_disabled }
+						every_country = { 
+							remove_variable = fnr_ptolemaicegypt_disabled
+							set_variable = { name = fnr_ptolemaicegypt_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_ptolemaicegypt_enabled }
+						every_country = {
+							remove_variable = fnr_ptolemaicegypt_enabled
+						}
+					}
+				}
+			}			
+		# Bactria - nonhistorical
+			FormableNationReworked_toggle_bactria = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_bactria_enabled }
+							NOT = { has_variable = fnr_bactria_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_bactria_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_bactria_disabled }
+						every_country = { 
+							remove_variable = fnr_bactria_disabled
+							set_variable = { name = fnr_bactria_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_bactria_enabled }
+						every_country = {
+							remove_variable = fnr_bactria_enabled
+						}
+					}
+				}
+			}	
+		
 		# Federal Republic of Central America - historical
 			FormableNationReworked_toggle_federalrepubliccentralamerica = {
 				scope = country

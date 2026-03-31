@@ -1,0 +1,23 @@
+﻿##############################################
+# Formable Nations: Reworked Holy Site Types #
+##############################################
+
+# Bactria Holy Sites
+
+	# Hellenic Holy Sites
+
+	fnr_historical_greco_holy_site = {
+		location_modifier = {
+			local_clergy_desired_pop = 0.02
+			local_unrest = -0.05
+		}
+	}
+
+	# Bhuddist Holy Sites
+
+	fnr_historical_buddhist_holy_site = {
+		location_modifier = {
+			local_clergy_desired_pop = 0.02
+			local_unrest = -0.05
+		}
+	}
