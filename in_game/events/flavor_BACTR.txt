@@ -1,5 +1,6 @@
 ﻿namespace = flavor_BACTR
 
+# Event for formation of Greco-Buddhism
 flavor_BACTR.1 = {
 	type = country_event
 	title = flavor_BACTR.1.title
@@ -37,6 +38,7 @@ flavor_BACTR.1 = {
 	}
 }
 
+# Bactrian Naming Event
 flavor_BACTR.2 = {
 	type = country_event
 	title = flavor_BACTR.2.title
@@ -49,6 +51,86 @@ flavor_BACTR.2 = {
 	option = { # Greco-Bactrian Kingdom
 		name = flavor_BACTR.2.b
 		change_country_name = BACTR_NAME_LONG
+	}
+}
+
+# Bactria Synod IO event from generic action
+flavor_BACTR.3 = {
+	type = country_event
+	title = flavor_BACTR.3.title
+	desc = flavor_BACTR.3.desc
+	fire_only_once = yes
+	option = { 
+		name = flavor_BACTR.3.a
+		custom_tooltip = { text = BACTR_formable_trigger_3_tt }
+		hidden_effect = {
+			create_international_organization = {
+				type = international_organization_type:fnr_bactria_synod_io
+				add_country_to_international_organization = root
+			}
+			international_organization:fnr_bactria_synod_io = {
+				set_leader_country = root
+			}
+		}
+	}
+}
+
+# Bactrian Synod event for restoring Armenia
+flavor_BACTR.4 = {
+	type = country_event
+	title = flavor_BACTR.4.title
+	desc = flavor_BACTR.4.desc
+	fire_only_once = yes
+	option = { 
+		name = flavor_BACTR.4.a
+		custom_tooltip = { text = BACTR_event_trigger_4_tt }
+		hidden_effect = {
+			random_owned_location = {
+				limit = {
+					OR = {
+						area = area:armenian_highlands_area
+						area = area:armenia_area
+					}
+				}
+				create_country_from_location = {
+					save_scope_as = armenia_nation
+					set_country_rank = country_rank:rank_kingdom
+				}
+			}
+			if = {
+				limit = { exists = scope:armenia_nation }
+				scope:armenia_nation = {
+					form_country = formable_country:ARMNA_f
+					change_country_color = map_ARMNA
+					create_character = {
+						save_scope_as = armenia_ruler
+						culture = culture:armenian_culture
+						religion = religion:fnr_greco_buddhism_religion
+					}
+					set_new_ruler = scope:armenia_ruler
+					change_religion = religion:fnr_greco_buddhism_religion
+					#change_religion_for_ruler_and_family = { 
+					#	country = scope:macedonia_nation 
+					#	religion = religion:fnr_greco_buddhism_religion 
+					#}
+					make_subject_of = {
+						target = root
+						type = subject_type:vassal
+					}
+				}
+				every_owned_location = {
+					limit = {
+						OR = {
+							area = area:armenian_highlands_area
+							area = area:armenia_area
+						}
+					}
+					change_location_owner = scope:armenia_nation
+					#add_core = scope:armenia_nation
+					change_integration_level = core
+				}
+			}
+		}
 	}
 }
 

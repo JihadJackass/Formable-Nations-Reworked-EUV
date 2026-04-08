@@ -32,14 +32,61 @@
   # Religious Aspects #
   #####################
 
-    fnr_aspect_likeness_of_the_buddha: "Likeness of the Buddha"
-    fnr_aspect_likeness_of_the_buddha_desc: "It was Greek hands that first carved the face of the Enlightened One, transforming an abstract symbol into a figure the faithful could look upon and know. This sacred act of creation elevated our people among all who follow the Dharma. By embracing this legacy, we turn away from the worldly influence of organized religion and instead pursue the accumulation of Karma through devotion and artistic merit alone."
+    # Bactria
 
-    fnr_aspect_bactrian_succession: "Bactrian Succession"
-    fnr_aspect_bactrian_succession_desc: "The kingdoms that followed Alexander were plagued by disputed claims, coups, and murdered heirs. The Bactrian answer was to anchor succession in religious legitimacy, tying the right to rule to the approval of both Greek priesthoods and Buddhist sanghas. A king blessed by two traditions is harder to challenge, and his claim carries weight beyond mere bloodline. Stability, however, comes at a cost. A ruler who owes his crown to temples and monasteries must share his glory with them."
+      # Main Aspects
 
-    fnr_aspect_legacy_of_alexander: "Legacy of Alexander"
-    fnr_aspect_legacy_of_alexander_desc: "The Greco-Bactrian kings never forgot that their right to rule began with the march of the Macedonian phalanx. By invoking the memory of Alexander, a ruler binds his cavalry traditions to the prestige of an unbroken lineage stretching back to the conqueror himself. The people are slower to rebel against a king who carries the weight of such a legacy, and horsemen fight harder beneath a banner that recalls the Companions. Yet this is a legacy of the sword, not of the throne room."
+        fnr_aspect_likeness_of_the_buddha: "Likeness of the Buddha"
+        fnr_aspect_likeness_of_the_buddha_desc: "It was Greek hands that first carved the face of the Enlightened One, transforming an abstract symbol into a figure the faithful could look upon and know. This sacred act of creation elevated our people among all who follow the Dharma. By embracing this legacy, we turn away from the worldly influence of organized religion and instead pursue the accumulation of Karma through devotion and artistic merit alone."
+
+        fnr_aspect_bactrian_succession: "Bactrian Succession"
+        fnr_aspect_bactrian_succession_desc: "The kingdoms that followed Alexander were plagued by disputed claims, coups, and murdered heirs. The Bactrian answer was to anchor succession in religious legitimacy, tying the right to rule to the approval of both Greek priesthoods and Buddhist sanghas. A king blessed by two traditions is harder to challenge, and his claim carries weight beyond mere bloodline. Stability, however, comes at a cost. A ruler who owes his crown to temples and monasteries must share his glory with them."
+
+        fnr_aspect_legacy_of_alexander: "Legacy of Alexander"
+        fnr_aspect_legacy_of_alexander_desc: "The Greco-Bactrian kings never forgot that their right to rule began with the march of the Macedonian phalanx. By invoking the memory of Alexander, a ruler binds his cavalry traditions to the prestige of an unbroken lineage stretching back to the conqueror himself. The people are slower to rebel against a king who carries the weight of such a legacy, and horsemen fight harder beneath a banner that recalls the Companions. Yet this is a legacy of the sword, not of the throne room."
+
+      # Greek Gods
+
+        fnr_aspect_alexander_the_great: "Alexander Theos - God-King of the World"
+        fnr_aspect_alexander_the_great_desc: "The Bactrian faithful hold that Alexander did not merely conquer the world — he was divinely ordained to rule it. Having transcended mortal death, Alexander Theos now reigns as the supreme patron of all who carry Hellenic civilization to the ends of the earth. To worship him is to declare that his empire was never meant to fall, and that those who bear his torch are destined to see it restored."
+
+        fnr_aspect_zeus_olympios: "Zeus Olympios - King of the Gods"
+        fnr_aspect_zeus_olympios_desc: "Father of gods and men, Zeus reigns from the heights of Olympus as the arbiter of justice, order, and divine law. To invoke his patronage is to claim sovereign authority over all who dwell beneath the sky."
+
+        fnr_aspect_athena_polias: "Athena Polias - Goddess of Wisdom and the City"
+        fnr_aspect_athena_polias_desc: "Born fully armed from the brow of Zeus, Athena is the guardian of civilized life — patroness of craftsmen, counselors, and those who wage war with cunning rather than fury. Where her gaze falls, cities flourish and learning endures."
+
+        fnr_aspect_ares_stratios: "Ares Stratios - God of War"
+        fnr_aspect_ares_stratios_desc: "Ares embodies the brutal, unrelenting nature of battle. He does not favor the clever or the righteous — only the strong. To march under his banner is to embrace the savage truth that empires are forged in blood."
+
+        fnr_aspect_apollo_pythios: "Apollo Pythios - God of Light and Prophecy"
+        fnr_aspect_apollo_pythios_desc: "Lord of the sun, patron of music and poetry, and speaker of divine truth through the Oracle at Delphi. Apollo illuminates the path ahead for those with the wisdom to listen, and his lyre stirs the hearts of the cultured world."
+
+        fnr_aspect_poseidon_pelagios: "Poseidon Pelagios - God of the Sea"
+        fnr_aspect_poseidon_pelagios_desc: "Earth-shaker and lord of the deep, Poseidon commands the tides and the fury of the ocean. No fleet sails without his blessing, and no harbor stands safe from his wrath. To honor him is to master the waters of the world."
+
+        fnr_aspect_hermes_logios: "Hermes Logios - God of Trade and Eloquence"
+        fnr_aspect_hermes_logios_desc: "Swift-footed messenger of the gods, Hermes is the patron of merchants, travelers, and silver-tongued diplomats. He opens roads where none existed, brokers bargains between rivals, and ensures that wealth flows to those who honor him."
+
+      # Buddhist Gods
+
+        fnr_aspect_avalokiteshvara: "Avalokiteshvara - Bodhisattva of Compassion"
+        fnr_aspect_avalokiteshvara_desc: "He who hears the cries of the world, Avalokiteshvara postpones his own enlightenment so that all sentient beings might be delivered from suffering. His thousand arms reach into every corner of existence, offering mercy to the wretched and hope to the despairing."
+
+        fnr_aspect_vajrapani: "Vajrapani - Wielder of the Thunderbolt"
+        fnr_aspect_vajrapani_desc: "Fierce protector of the Buddha and guardian of the Dharma, Vajrapani wields the adamantine thunderbolt against the enemies of the faith. He is wrath made righteous — the clenched fist of the enlightened, striking down ignorance and evil wherever they take root."
+
+        fnr_aspect_manjushri: "Manjushri - Bodhisattva of Wisdom"
+        fnr_aspect_manjushri_desc: "Enthroned upon a lion and bearing the flaming sword that cuts through delusion, Manjushri is the embodiment of transcendent wisdom. To invoke his name is to seek clarity beyond the veil of ignorance, and to know the true nature of all things."
+
+        fnr_aspect_tara: "Tara - Mother of Liberation"
+        fnr_aspect_tara_desc: "Born from the compassionate tears of Avalokiteshvara, Tara is the swift savior who answers the prayers of the faithful without hesitation. She guides souls through the perils of existence and shelters the devoted as a mother shelters her children."
+
+        fnr_aspect_maitreya: "Maitreya - The Future Buddha"
+        fnr_aspect_maitreya_desc: "Maitreya waits in the Tushita heaven, biding the appointed hour when he shall descend to renew the Dharma and usher in an age of universal peace. To honor him is to prepare the world for his coming — to build a realm worthy of his golden age."
+
+        fnr_aspect_vaisravana: "Vaisravana - Guardian King of Wealth"
+        fnr_aspect_vaisravana_desc: "Lord of the north and king among the Four Heavenly Guardians, Vaisravana watches over the treasures of the earth and rewards the pious with prosperity. His golden armor gleams at the gates of the faithful, warding off poverty and ruin alike."
 
     fnr_cult_of_personality: "Cult of Personality"
     fnr_cult_of_personality_desc: "Hong Xiuquan's God Worshipping Society (Bai Shangdi Hui) is widely described by historians as a cult that leveraged a strong cult of personality centered on his claim to be the younger brother of Jesus Christ. This messianic identity was central to the group's theology and his authority as leader of the Taiping Rebellion"

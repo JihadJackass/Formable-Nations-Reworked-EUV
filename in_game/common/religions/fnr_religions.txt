@@ -8,7 +8,7 @@
 			color = fnr_map_greco_buddhism_religion
 			group = folk_european_group
 
-			religious_aspects = 1
+			religious_aspects = 2
 			has_patriarchs = yes
 			use_icons = yes
 			has_karma = yes

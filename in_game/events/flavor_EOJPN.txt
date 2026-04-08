@@ -1,0 +1,54 @@
+﻿namespace = flavor_EOJPN
+
+flavor_EOJPN.1 = { 
+	type = country_event
+	title = flavor_EOJPN.1.title
+	desc = flavor_EOJPN.1.desc
+	fire_only_once = yes
+
+	immediate = {
+		random_owned_location = {
+			limit = {
+				region = region:korea_region
+			}
+			save_scope_as = target_location
+		}
+		scope:target_location = {
+			create_country_from_location = {
+				save_scope_as = choseon_nation
+				set_country_rank = country_rank:rank_kingdom
+			}
+		}
+		scope:choseon_nation = {
+			form_country = formable_country:CHSEN_f
+			change_country_color = map_CHSEN
+			create_character = {
+				save_scope_as = chosen_ruler
+				culture = culture:korean
+				religion = religion:shinto
+			}
+			set_new_ruler = scope:chosen_ruler
+			change_religion = religion:shinto
+			change_religion_for_ruler_and_family = { 
+				country = scope:choseon_nation 
+				religion = religion:shinto 
+			}
+			make_subject_of = {
+				target = root
+				type = subject_type:vassal
+			}
+		}
+		every_owned_location = {
+			limit = {
+				region = region:korea_region
+			}
+			change_location_owner = scope:choseon_nation
+			add_core = scope:choseon_nation
+			change_integration_level = core
+		}
+	}
+
+	option = {
+		name = flavor_EOJPN.1.a
+	}
+}

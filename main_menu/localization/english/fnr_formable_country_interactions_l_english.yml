@@ -1,0 +1,39 @@
+﻿l_english:
+
+  ############################################
+  # Country Interaction localiation Tooltips #
+  ############################################
+
+    # Empire of Japan IO
+
+      invite_to_east_asian_sphere: "Invite to the Greater East Asia Co-Prosperity Sphere"
+      invite_to_east_asian_sphere_desc: "TODO desc"
+      invite_to_east_asian_sphere_reject_effect_text: "TODO reject text"
+      invite_to_east_asian_sphere_reject_effect_text_past: "TODO reject text past"
+      invite_to_east_asian_sphere_act: "TODO act text"
+      invite_to_east_asian_sphere_effect_text_past: "TODO effect text past"
+
+      dip_invite_to_east_asian_sphere_CATEGORY: "TODO: dip invite category"
+      PROPOSE_invite_to_east_asian_sphere: "TODO: PROPOSE"
+      INCOMING_OFFER_invite_to_east_asian_sphere: "TODO: INCOMING OFFER"
+      invite_to_east_asian_sphere_effect_text: "TODO: EFFECT TEXT"
+      WE_PERFORM_invite_to_east_asian_sphere_ACTION: "TODO: WE PERFORM ACTION"
+      ACTION_invite_to_east_asian_sphere_PERFORMED_ON_US: "TODO: PERFORMED ON US"
+
+    # Bactria IO
+
+      fnr_invite_to_bactrian_synod: "Invite to the Bactrian Synod"
+      fnr_invite_to_bactrian_synod_desc: "Extend an invitation to join the [GetInternationalOrganizationType('fnr_bactria_synod_io').GetName], binding this nation to the shared purpose of restoring Hellenic civilization under Bactrian leadership. Members of the Synod are expected to uphold the legacy of Alexander and submit to the guidance of the Synod's leader in matters of common interest."
+
+      fnr_invite_to_bactrian_synod_reject_effect_text: "TODO reject text"
+      fnr_invite_to_bactrian_synod_reject_effect_text_past: "TODO reject text past"
+      fnr_invite_to_bactrian_synod_act: "TODO act text"
+      fnr_invite_to_bactrian_synod_effect_text_past: "TODO effect text past"
+      dip_fnr_invite_to_bactrian_synod_CATEGORY: "TODO: invite category"
+      PROPOSE_fnr_invite_to_bactrian_synod: "TODO: Propose"
+      INCOMING_OFFER_fnr_invite_to_bactrian_synod: "TODO: Incoming Offer"
+      fnr_invite_to_bactrian_synod_effect_text: "TODO: effect text"
+      WE_PERFORM_fnr_invite_to_bactrian_synod_ACTION: "TODO: WE PERFORM action"
+      ACTION_fnr_invite_to_bactrian_synod_PERFORMED_ON_US: "TODO: PERFORMED ON US"
+
+

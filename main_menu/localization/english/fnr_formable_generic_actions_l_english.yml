@@ -4,13 +4,43 @@
   # Generic Action localisation #
   ###############################
 
-    fnr_spread_litergical_copies_of_alexander: "Spread the Alexander Romance"
-    fnr_spread_litergical_copies_of_alexander_desc: "The Alexander Romance, rendered in both Greek script and Kharosthi, is copied by our monastery-scriptoriums and distributed to communities throughout our realm. As the faithful read of Alexander's journey to the ends of the earth and his encounters with the sages of the East, many come to see in Greco-Buddhism the natural union of the two traditions he bridged. In time, these texts bring the unconverted into the fold."
-    fnr_spread_litergical_copies_of_alexander_tt: "#G 5%#! of non-Greco-Buddhist pops in every owned location will convert to [ShowReligionName('fnr_greco_buddhism_religion')]."
+    # Religious Actions
 
-    fnr_greco_buddhism_action_hybridize_local_cultures: "Unification of Greek & Buddhist Cultures"
-    fnr_greco_buddhism_action_hybridize_local_cultures_desc: "The mingling of Greek colonists with the peoples of Bactria, Gandhara, and the Indus has produced something no empire before us achieved: a shared identity forged not by conquest alone, but by the blending of language, custom, and faith. By formalizing this process through our monasteries and gymnasia, we declare that the old distinctions between Hellene and native have given way to a single Greco-Bactrian people, united under the Dharma and the legacy of Alexander."
-    fnr_greco_buddhism_action_hybridize_local_cultures_tt: "Our #bold primary culture#! will change to [ShowCultureName('fnr_greco_bactrian_culture')]."
-    fnr_greco_buddhism_action_hybridize_local_cultures_pops_tt: "#color_green 35%#! of [ShowReligionName('fnr_greco_buddhism_religion')] pops in locations with Greco-Buddhist communities will begin adopting the new [ShowCultureName('fnr_greco_bactrian_culture')] culture."
+      fnr_spread_litergical_copies_of_alexander: "Spread the Alexander Romance"
+      fnr_spread_litergical_copies_of_alexander_desc: "The Alexander Romance, rendered in both Greek script and Kharosthi, is copied by our monastery-scriptoriums and distributed to communities throughout our realm. As the faithful read of Alexander's journey to the ends of the earth and his encounters with the sages of the East, many come to see in Greco-Buddhism the natural union of the two traditions he bridged. In time, these texts bring the unconverted into the fold."
+      fnr_spread_litergical_copies_of_alexander_tt: "#G 5%#! of non-Greco-Buddhist pops in every owned location will convert to [ShowReligionName('fnr_greco_buddhism_religion')]."
 
+      PERFORM_fnr_spread_litergical_copies_of_alexander_ACTION: "TODO"
+      PERFORM_fnr_greco_buddhism_action_hybridize_local_cultures_ACTION: "TODO"
+      PERFORM_fnr_proclaim_bactrian_synod_ACTION: "TODO"
 
+      fnr_greco_buddhism_action_hybridize_local_cultures: "Unification of Greek & Buddhist Cultures"
+      fnr_greco_buddhism_action_hybridize_local_cultures_desc: "The mingling of Greek colonists with the peoples of Bactria, Gandhara, and the Indus has produced something no empire before us achieved: a shared identity forged not by conquest alone, but by the blending of language, custom, and faith. By formalizing this process through our monasteries and gymnasia, we declare that the old distinctions between Hellene and native have given way to a single Greco-Bactrian people, united under the Dharma and the legacy of Alexander."
+      fnr_greco_buddhism_action_hybridize_local_cultures_tt: "Our #bold primary culture#! will change to [ShowCultureName('fnr_greco_bactrian_culture')]."
+      fnr_greco_buddhism_action_hybridize_local_cultures_pops_tt: "#color_green 35%#! of [ShowReligionName('fnr_greco_buddhism_religion')] pops in locations with Greco-Buddhist communities will begin adopting the new [ShowCultureName('fnr_greco_bactrian_culture')] culture."
+
+      fnr_proclaim_bactrian_synod: "Proclaim the Bactrian Synod"
+      fnr_proclaim_bactrian_synod_desc: "The heirs of Alexander once carved an empire from the Aegean to the Indus, yet that great union of peoples has long since fractured into squabbling successors. By proclaiming the Bactrian Synod, we shall gather the scattered remnants of the Hellenic world under one banner once more. From Macedonia to Armenia, from Assyria to the banks of the Oxus, those who still honour the legacy of Alexander shall be called to our cause — not merely as allies, but as pillars of a restored empire worthy of the Conqueror himself."
+
+    # Bactrian IO Actions
+
+      fnr_bactria_restore_armenia: "Restore the Armenian Kingdom"
+      fnr_bactria_restore_armenia_desc: "Armenia has long served as a buffer between the great powers of the east and west. By restoring a friendly king to the Armenian throne, we secure a loyal ally on our western flank and extend the reach of Hellenic civilization into the highlands of the Caucasus."
+
+      fnr_bactria_restore_macedonia: "Restore the Glorious State of Macedonia"
+      fnr_bactria_restore_macedonia_desc: "Macedonia is the cradle of our heritage — the homeland of Alexander and the wellspring from which all successor kingdoms draw their legitimacy. To see it restored under worthy stewardship would rekindle the spirit of the Diadochi and affirm our place as the true inheritors of his legacy."
+
+      fnr_bactria_restore_assyria: "Position a local on the Assyrian Throne"
+      fnr_bactria_restore_assyria_desc: "The ancient lands of Assyria remain restive under foreign rule. By elevating a local figure amenable to our interests, we can establish a compliant satrap in the heart of Mesopotamia — one who owes his throne, and thus his loyalty, entirely to us."
+
+      fnr_bactria_restore_persia: "Establish a Pro-Greek Persian King"
+      fnr_bactria_restore_persia_desc: "Persia is the jewel of the east, and whoever holds sway over its throne commands the respect of a hundred peoples. A Persian king raised in the Greek tradition and indebted to Bactrian patronage would transform a historic rival into our most valuable partner."
+
+      fnr_bactria_egyptian_claim: "Claim on the Egyptian Throne"
+      fnr_bactria_egyptian_claim_desc: "The wealth of the Nile has sustained dynasties for millennia. By pressing a legitimate claim to the Egyptian throne, we assert that the riches of Alexandria and the granaries of the Delta need not remain beyond our reach forever."
+
+      fnr_bactria_egyptian_establish: "Restore the Ptolemaic Dynasty to Egypt"
+      fnr_bactria_egyptian_establish_desc: "The Ptolemaic dynasty once presided over the greatest center of learning and commerce in the known world. Restoring them to power in Egypt — under our guidance — would see a grateful ally enthroned on the banks of the Nile, and Hellenic culture flourishing once more from Memphis to the sea."
+
+      fnr_bactria_restore_the_macedonian_empire: "Restore the Macedonian Empire"
+      fnr_bactria_restore_the_macedonian_empire_desc: "The dream of Alexander was never merely conquest — it was the unity of all peoples under one crown, from the pillars of Herakles to the waters of the Ganges. The Synod has gathered the faithful, the old domains have bent the knee, and the hour has come to cast aside the title of successor. We shall reclaim what was lost and proclaim anew what the world has not seen since the death of the Conqueror — a single Macedonian Empire, stretching from West to East, with Bactria as its beating heart."

@@ -1,0 +1,10 @@
+﻿l_english:
+
+  # DIPLO CHANCES 
+
+    SUBJECT_OF_LEADER: "Is a Subject"
+    BASE_DESIRE: "Base Willingness"
+    AT_WAR_WITH_IO_MEMBER: "Is at war with a fellow member"
+    AT_WAR_WITH_LEADER: "Is at war with the Leader"
+    IS_AN_EMPIRE: "Is an Empire"
+

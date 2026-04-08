@@ -1,79 +1,648 @@
 ﻿# Formable Nations - Greco-Buddhism Aspects
 
-fnr_aspect_legacy_of_alexander = {
-	religion = fnr_greco_buddhism_religion
-	icon = fnr_religious_aspect_legacy_of_alexander
+# Main Actions
+# TODO: explain mechanic
 
-	enabled = {
-		NOT = {
-			OR = {
-				has_religious_aspect = religious_aspect:fnr_aspect_bactrian_succession
-				has_religious_aspect = religious_aspect:fnr_aspect_likeness_of_the_buddha
+	fnr_aspect_legacy_of_alexander = {
+		religion = fnr_greco_buddhism_religion
+		icon = fnr_religious_aspect_legacy_of_alexander
+
+		enabled = {
+			NOT = {
+				OR = {
+					has_religious_aspect = religious_aspect:fnr_aspect_bactrian_succession
+					has_religious_aspect = religious_aspect:fnr_aspect_likeness_of_the_buddha
+				}
 			}
+		}
+
+		modifier = {
+			rebel_monthly_progress = -0.10
+			army_cavalry_power = 0.075
+			pop_leave_rebels_threshold = -0.05
+			monthly_religious_influence = 0.025
+			monthly_karma = -0.010
+		}
+
+		opinions = {
 		}
 	}
 
-	modifier = {
-		rebel_monthly_progress = -0.10
-		army_cavalry_power = 0.075
-		pop_leave_rebels_threshold = -0.05
-		monthly_religious_influence = 0.025
-		monthly_karma = -0.010
-	}
+	fnr_aspect_bactrian_succession = {
+		religion = fnr_greco_buddhism_religion
+		icon = fnr_religious_aspect_bactrian_succession
 
-	opinions = {
-	}
-}
-
-fnr_aspect_bactrian_succession = {
-	religion = fnr_greco_buddhism_religion
-	icon = fnr_religious_aspect_bactrian_succession
-
-	enabled = {
-		NOT = {
-			OR = {
-				has_religious_aspect = religious_aspect:fnr_aspect_legacy_of_alexander
-				has_religious_aspect = religious_aspect:fnr_aspect_likeness_of_the_buddha
+		enabled = {
+			NOT = {
+				OR = {
+					has_religious_aspect = religious_aspect:fnr_aspect_legacy_of_alexander
+					has_religious_aspect = religious_aspect:fnr_aspect_likeness_of_the_buddha
+				}
 			}
+		}
+
+		modifier = {
+			succession_crisis_price_cost_modifier = -0.25
+			mountains_proximity_impact = -0.10
+			hills_proximity_impact = -0.10
+			monthly_legitimacy = 0.025
+			monthly_prestige = -0.01
+		}
+
+		opinions = {
 		}
 	}
 
-	modifier = {
-		succession_crisis_price_cost_modifier = -0.25
-		mountains_proximity_impact = -0.10
-		hills_proximity_impact = -0.10
-		monthly_legitimacy = 0.025
-		monthly_prestige = -0.01
-	}
+	fnr_aspect_likeness_of_the_buddha = {
+		religion = fnr_greco_buddhism_religion
+		icon = fnr_aspect_likeness_of_the_buddha
 
-	opinions = {
-	}
-}
-
-fnr_aspect_likeness_of_the_buddha = {
-	religion = fnr_greco_buddhism_religion
-	icon = fnr_aspect_likeness_of_the_buddha
-
-	enabled = {
-		NOT = {
-			OR = {
-				has_religious_aspect = religious_aspect:fnr_aspect_legacy_of_alexander
-				has_religious_aspect = religious_aspect:fnr_aspect_bactrian_succession
+		enabled = {
+			NOT = {
+				OR = {
+					has_religious_aspect = religious_aspect:fnr_aspect_legacy_of_alexander
+					has_religious_aspect = religious_aspect:fnr_aspect_bactrian_succession
+				}
 			}
+		}
+
+		modifier = {
+			monthly_diplomats = 0.50
+			tolerance_heathen = 1
+			tolerance_heretic = 1
+			monthly_religious_influence = -0.010
+			monthly_karma = 0.025
+			hire_artist_cost_modifier = -0.25
+			any_pop_can_be_slave = no
+			maximum_religious_influence = 100
+		}
+
+		opinions = {
 		}
 	}
 
-	modifier = {
-		monthly_diplomats = 0.50
-		tolerance_heathen = 1
-		tolerance_heretic = 1
-		monthly_religious_influence = -0.010
-		monthly_karma = 0.025
-		hire_artist_cost_modifier = -0.25
-		any_pop_can_be_slave = no
-		maximum_religious_influence = 100
+# Greek Gods (Must have Legacy of Alexander)
+
+	fnr_aspect_alexander_the_great = {
+		religion = fnr_greco_buddhism_religion
+		icon = fnr_aspect_alexander_the_great
+
+		visible = {
+			has_religious_aspect = religious_aspect:fnr_aspect_legacy_of_alexander
+			NOT = {
+				OR = {
+					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great # TODO: balance
+					has_religious_aspect = religious_aspect:fnr_aspect_zeus_olympios
+					has_religious_aspect = religious_aspect:fnr_aspect_athena_polias
+					has_religious_aspect = religious_aspect:fnr_aspect_ares_stratios
+					has_religious_aspect = religious_aspect:fnr_aspect_apollo_pythios
+					has_religious_aspect = religious_aspect:fnr_aspect_poseidon_pelagios
+					has_religious_aspect = religious_aspect:fnr_aspect_hermes_logios
+				}
+			}
+		}
+
+		enabled = {
+			has_religious_aspect = religious_aspect:fnr_aspect_legacy_of_alexander
+			NOT = {
+				OR = {
+					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great # TODO: balance
+					has_religious_aspect = religious_aspect:fnr_aspect_zeus_olympios
+					has_religious_aspect = religious_aspect:fnr_aspect_athena_polias
+					has_religious_aspect = religious_aspect:fnr_aspect_ares_stratios
+					has_religious_aspect = religious_aspect:fnr_aspect_apollo_pythios
+					has_religious_aspect = religious_aspect:fnr_aspect_poseidon_pelagios
+					has_religious_aspect = religious_aspect:fnr_aspect_hermes_logios
+				}
+			}
+		}
+
+		modifier = {
+    		# Buffs
+			antagonism_received_modifier = -0.15        # World fears you but accepts your conquests
+			global_max_control = 0.1                     # Iron grip on conquered lands
+			army_cavalry_power = 0.1                     # Companion cavalry legacy
+			army_movement_speed = 0.1                    # Legendary speed of Alexander's campaigns
+			annexation_speed_modifier = 0.15             # Rapid integration of conquered peoples
+			# Debuffs
+			army_cavalry_maintenance_cost_modifier = 0.15  # Elite cavalry is expensive to maintain
+			diplomatic_reputation = -2                      # Feared conqueror, not a trusted partner
+		}
+
+		opinions = {
+		}
 	}
 
-	opinions = {
+	fnr_aspect_zeus_olympios = {
+		religion = fnr_greco_buddhism_religion
+		icon = fnr_aspect_zeus_olympios
+
+		visible = {
+			has_religious_aspect = religious_aspect:fnr_aspect_legacy_of_alexander
+			NOT = {
+				OR = {
+					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great # TODO: balance
+					has_religious_aspect = religious_aspect:fnr_aspect_zeus_olympios
+					has_religious_aspect = religious_aspect:fnr_aspect_athena_polias
+					has_religious_aspect = religious_aspect:fnr_aspect_ares_stratios
+					has_religious_aspect = religious_aspect:fnr_aspect_apollo_pythios
+					has_religious_aspect = religious_aspect:fnr_aspect_poseidon_pelagios
+					has_religious_aspect = religious_aspect:fnr_aspect_hermes_logios
+				}
+			}
+		}
+
+		enabled = {
+			has_religious_aspect = religious_aspect:fnr_aspect_legacy_of_alexander
+			NOT = {
+				OR = {
+					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great # TODO: balance
+					has_religious_aspect = religious_aspect:fnr_aspect_zeus_olympios
+					has_religious_aspect = religious_aspect:fnr_aspect_athena_polias
+					has_religious_aspect = religious_aspect:fnr_aspect_ares_stratios
+					has_religious_aspect = religious_aspect:fnr_aspect_apollo_pythios
+					has_religious_aspect = religious_aspect:fnr_aspect_poseidon_pelagios
+					has_religious_aspect = religious_aspect:fnr_aspect_hermes_logios
+				}
+			}
+		}
+
+		modifier = {
+			monthly_legitimacy = 0.02
+			monthly_prestige = 0.05
+		}
+
+		opinions = {
+		}
 	}
-}
+
+	fnr_aspect_athena_polias = {
+		religion = fnr_greco_buddhism_religion
+		icon = fnr_aspect_athena_polias
+
+		visible = {
+			has_religious_aspect = religious_aspect:fnr_aspect_legacy_of_alexander
+			NOT = {
+				OR = {
+					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great # TODO: balance
+					has_religious_aspect = religious_aspect:fnr_aspect_zeus_olympios
+					has_religious_aspect = religious_aspect:fnr_aspect_athena_polias
+					has_religious_aspect = religious_aspect:fnr_aspect_ares_stratios
+					has_religious_aspect = religious_aspect:fnr_aspect_apollo_pythios
+					has_religious_aspect = religious_aspect:fnr_aspect_poseidon_pelagios
+					has_religious_aspect = religious_aspect:fnr_aspect_hermes_logios
+				}
+			}
+		}
+
+
+		enabled = {
+			has_religious_aspect = religious_aspect:fnr_aspect_legacy_of_alexander
+			NOT = {
+				OR = {
+					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great # TODO: balance
+					has_religious_aspect = religious_aspect:fnr_aspect_zeus_olympios
+					has_religious_aspect = religious_aspect:fnr_aspect_athena_polias
+					has_religious_aspect = religious_aspect:fnr_aspect_ares_stratios
+					has_religious_aspect = religious_aspect:fnr_aspect_apollo_pythios
+					has_religious_aspect = religious_aspect:fnr_aspect_poseidon_pelagios
+					has_religious_aspect = religious_aspect:fnr_aspect_hermes_logios
+				}
+			}
+		}
+
+		modifier = {
+			country_cabinet_efficiency = 0.1
+			stability_cost = -0.1
+		}
+
+		opinions = {
+		}
+	}
+
+	fnr_aspect_ares_stratios = {
+		religion = fnr_greco_buddhism_religion
+		icon = fnr_aspect_ares_stratios
+
+		visible = {
+			has_religious_aspect = religious_aspect:fnr_aspect_legacy_of_alexander
+			NOT = {
+				OR = {
+					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great # TODO: balance
+					has_religious_aspect = religious_aspect:fnr_aspect_zeus_olympios
+					has_religious_aspect = religious_aspect:fnr_aspect_athena_polias
+					has_religious_aspect = religious_aspect:fnr_aspect_ares_stratios
+					has_religious_aspect = religious_aspect:fnr_aspect_apollo_pythios
+					has_religious_aspect = religious_aspect:fnr_aspect_poseidon_pelagios
+					has_religious_aspect = religious_aspect:fnr_aspect_hermes_logios
+				}
+			}
+		}
+		
+		enabled = {
+			has_religious_aspect = religious_aspect:fnr_aspect_legacy_of_alexander
+			NOT = {
+				OR = {
+					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great # TODO: balance
+					has_religious_aspect = religious_aspect:fnr_aspect_zeus_olympios
+					has_religious_aspect = religious_aspect:fnr_aspect_athena_polias
+					has_religious_aspect = religious_aspect:fnr_aspect_ares_stratios
+					has_religious_aspect = religious_aspect:fnr_aspect_apollo_pythios
+					has_religious_aspect = religious_aspect:fnr_aspect_poseidon_pelagios
+					has_religious_aspect = religious_aspect:fnr_aspect_hermes_logios
+				}
+			}
+		}
+
+		modifier = {
+			discipline = 0.05
+			army_tradition_from_battle = 0.15
+		}
+
+		opinions = {
+		}
+	}
+
+	fnr_aspect_apollo_pythios = {
+		religion = fnr_greco_buddhism_religion
+		icon = fnr_aspect_apollo_pythios
+
+		visible = {
+			has_religious_aspect = religious_aspect:fnr_aspect_legacy_of_alexander
+			NOT = {
+				OR = {
+					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great # TODO: balance
+					has_religious_aspect = religious_aspect:fnr_aspect_zeus_olympios
+					has_religious_aspect = religious_aspect:fnr_aspect_athena_polias
+					has_religious_aspect = religious_aspect:fnr_aspect_ares_stratios
+					has_religious_aspect = religious_aspect:fnr_aspect_apollo_pythios
+					has_religious_aspect = religious_aspect:fnr_aspect_poseidon_pelagios
+					has_religious_aspect = religious_aspect:fnr_aspect_hermes_logios
+				}
+			}
+		}
+
+		enabled = {
+			has_religious_aspect = religious_aspect:fnr_aspect_legacy_of_alexander
+			NOT = {
+				OR = {
+					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great # TODO: balance
+					has_religious_aspect = religious_aspect:fnr_aspect_zeus_olympios
+					has_religious_aspect = religious_aspect:fnr_aspect_athena_polias
+					has_religious_aspect = religious_aspect:fnr_aspect_ares_stratios
+					has_religious_aspect = religious_aspect:fnr_aspect_apollo_pythios
+					has_religious_aspect = religious_aspect:fnr_aspect_poseidon_pelagios
+					has_religious_aspect = religious_aspect:fnr_aspect_hermes_logios
+				}
+			}
+		}
+
+		modifier = {
+			research_speed_modifier = 0.1
+			global_monthly_literacy = 0.05
+		}
+
+		opinions = {
+		}
+	}
+
+	fnr_aspect_poseidon_pelagios = {
+		religion = fnr_greco_buddhism_religion
+		icon = fnr_aspect_poseidon_pelagios
+
+		visible = {
+			has_religious_aspect = religious_aspect:fnr_aspect_legacy_of_alexander
+			NOT = {
+				OR = {
+					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great # TODO: balance
+					has_religious_aspect = religious_aspect:fnr_aspect_zeus_olympios
+					has_religious_aspect = religious_aspect:fnr_aspect_athena_polias
+					has_religious_aspect = religious_aspect:fnr_aspect_ares_stratios
+					has_religious_aspect = religious_aspect:fnr_aspect_apollo_pythios
+					has_religious_aspect = religious_aspect:fnr_aspect_poseidon_pelagios
+					has_religious_aspect = religious_aspect:fnr_aspect_hermes_logios
+				}
+			}
+		}
+
+		enabled = {
+			has_religious_aspect = religious_aspect:fnr_aspect_legacy_of_alexander
+			NOT = {
+				OR = {
+					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great # TODO: balance
+					has_religious_aspect = religious_aspect:fnr_aspect_zeus_olympios
+					has_religious_aspect = religious_aspect:fnr_aspect_athena_polias
+					has_religious_aspect = religious_aspect:fnr_aspect_ares_stratios
+					has_religious_aspect = religious_aspect:fnr_aspect_apollo_pythios
+					has_religious_aspect = religious_aspect:fnr_aspect_poseidon_pelagios
+					has_religious_aspect = religious_aspect:fnr_aspect_hermes_logios
+				}
+			}
+		}
+
+		modifier = {
+			naval_morale_modifier = 0.1
+			global_maritime_presence_modifier = 0.15
+			global_sailors_modifier = 0.2
+		}
+
+		opinions = {
+		}
+	}
+
+	fnr_aspect_hermes_logios = {
+		religion = fnr_greco_buddhism_religion
+		icon = fnr_aspect_hermes_logios
+
+		visible = {
+			has_religious_aspect = religious_aspect:fnr_aspect_legacy_of_alexander
+			NOT = {
+				OR = {
+					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great # TODO: balance
+					has_religious_aspect = religious_aspect:fnr_aspect_zeus_olympios
+					has_religious_aspect = religious_aspect:fnr_aspect_athena_polias
+					has_religious_aspect = religious_aspect:fnr_aspect_ares_stratios
+					has_religious_aspect = religious_aspect:fnr_aspect_apollo_pythios
+					has_religious_aspect = religious_aspect:fnr_aspect_poseidon_pelagios
+					has_religious_aspect = religious_aspect:fnr_aspect_hermes_logios
+				}
+			}
+		}
+
+		enabled = {
+			has_religious_aspect = religious_aspect:fnr_aspect_legacy_of_alexander
+			NOT = {
+				OR = {
+					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great # TODO: balance
+					has_religious_aspect = religious_aspect:fnr_aspect_zeus_olympios
+					has_religious_aspect = religious_aspect:fnr_aspect_athena_polias
+					has_religious_aspect = religious_aspect:fnr_aspect_ares_stratios
+					has_religious_aspect = religious_aspect:fnr_aspect_apollo_pythios
+					has_religious_aspect = religious_aspect:fnr_aspect_poseidon_pelagios
+					has_religious_aspect = religious_aspect:fnr_aspect_hermes_logios
+				}
+			}
+		}
+
+		modifier = {
+			diplomatic_reputation = 2
+			improve_relation_impact = 0.2
+		}
+
+		opinions = {
+		}
+	}
+
+# Buddhist Gods (Must have Likeness of the Buddha)
+
+	fnr_aspect_avalokiteshvara = {
+		religion = fnr_greco_buddhism_religion
+		icon = fnr_aspect_avalokiteshvara
+
+		visible = {
+			has_religious_aspect = religious_aspect:fnr_aspect_likeness_of_the_buddha
+			NOT = {
+				OR = {
+					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great # TODO: balance
+					has_religious_aspect = religious_aspect:fnr_aspect_zeus_olympios
+					has_religious_aspect = religious_aspect:fnr_aspect_athena_polias
+					has_religious_aspect = religious_aspect:fnr_aspect_ares_stratios
+					has_religious_aspect = religious_aspect:fnr_aspect_apollo_pythios
+					has_religious_aspect = religious_aspect:fnr_aspect_poseidon_pelagios
+					has_religious_aspect = religious_aspect:fnr_aspect_hermes_logios
+				}
+			}
+		}
+
+		enabled = {
+			has_religious_aspect = religious_aspect:fnr_aspect_likeness_of_the_buddha
+			NOT = {
+				OR = {
+					has_religious_aspect = religious_aspect:fnr_aspect_avalokiteshvara
+					has_religious_aspect = religious_aspect:fnr_aspect_vajrapani
+					has_religious_aspect = religious_aspect:fnr_aspect_manjushri
+					has_religious_aspect = religious_aspect:fnr_aspect_tara
+					has_religious_aspect = religious_aspect:fnr_aspect_maitreya
+					has_religious_aspect = religious_aspect:fnr_aspect_vaisravana
+				}
+			}
+		}
+
+		modifier = {
+			building_missionary_effort_modifier = 0.15
+			global_unrest_modifier = -1
+		}
+
+		opinions = {
+		}
+	}
+
+	fnr_aspect_vajrapani = {
+		religion = fnr_greco_buddhism_religion
+		icon = fnr_aspect_vajrapani
+
+		visible = {
+			has_religious_aspect = religious_aspect:fnr_aspect_likeness_of_the_buddha
+			NOT = {
+				OR = {
+					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great # TODO: balance
+					has_religious_aspect = religious_aspect:fnr_aspect_zeus_olympios
+					has_religious_aspect = religious_aspect:fnr_aspect_athena_polias
+					has_religious_aspect = religious_aspect:fnr_aspect_ares_stratios
+					has_religious_aspect = religious_aspect:fnr_aspect_apollo_pythios
+					has_religious_aspect = religious_aspect:fnr_aspect_poseidon_pelagios
+					has_religious_aspect = religious_aspect:fnr_aspect_hermes_logios
+				}
+			}
+		}
+
+		enabled = {
+			has_religious_aspect = religious_aspect:fnr_aspect_likeness_of_the_buddha
+			NOT = {
+				OR = {
+					has_religious_aspect = religious_aspect:fnr_aspect_avalokiteshvara
+					has_religious_aspect = religious_aspect:fnr_aspect_vajrapani
+					has_religious_aspect = religious_aspect:fnr_aspect_manjushri
+					has_religious_aspect = religious_aspect:fnr_aspect_tara
+					has_religious_aspect = religious_aspect:fnr_aspect_maitreya
+					has_religious_aspect = religious_aspect:fnr_aspect_vaisravana
+				}
+			}
+		}
+
+		modifier = {
+			land_morale_modifier = 0.1
+			army_infantry_power = 0.05
+		}
+
+		opinions = {
+		}
+	}
+
+	fnr_aspect_manjushri = {
+		religion = fnr_greco_buddhism_religion
+		icon = fnr_aspect_manjushri
+
+		visible = {
+			has_religious_aspect = religious_aspect:fnr_aspect_likeness_of_the_buddha
+			NOT = {
+				OR = {
+					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great # TODO: balance
+					has_religious_aspect = religious_aspect:fnr_aspect_zeus_olympios
+					has_religious_aspect = religious_aspect:fnr_aspect_athena_polias
+					has_religious_aspect = religious_aspect:fnr_aspect_ares_stratios
+					has_religious_aspect = religious_aspect:fnr_aspect_apollo_pythios
+					has_religious_aspect = religious_aspect:fnr_aspect_poseidon_pelagios
+					has_religious_aspect = religious_aspect:fnr_aspect_hermes_logios
+				}
+			}
+		}
+
+		enabled = {
+			has_religious_aspect = religious_aspect:fnr_aspect_likeness_of_the_buddha
+			NOT = {
+				OR = {
+					has_religious_aspect = religious_aspect:fnr_aspect_avalokiteshvara
+					has_religious_aspect = religious_aspect:fnr_aspect_vajrapani
+					has_religious_aspect = religious_aspect:fnr_aspect_manjushri
+					has_religious_aspect = religious_aspect:fnr_aspect_tara
+					has_religious_aspect = religious_aspect:fnr_aspect_maitreya
+					has_religious_aspect = religious_aspect:fnr_aspect_vaisravana
+				}
+			}
+		}
+
+	    modifier = {
+			global_monthly_literacy = 0.1
+			global_pop_conversion_speed_modifier = 0.1
+		}
+
+		opinions = {
+		}
+	}
+
+	fnr_aspect_tara = {
+		religion = fnr_greco_buddhism_religion
+		icon = fnr_aspect_tara
+
+		visible = {
+			has_religious_aspect = religious_aspect:fnr_aspect_likeness_of_the_buddha
+			NOT = {
+				OR = {
+					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great # TODO: balance
+					has_religious_aspect = religious_aspect:fnr_aspect_zeus_olympios
+					has_religious_aspect = religious_aspect:fnr_aspect_athena_polias
+					has_religious_aspect = religious_aspect:fnr_aspect_ares_stratios
+					has_religious_aspect = religious_aspect:fnr_aspect_apollo_pythios
+					has_religious_aspect = religious_aspect:fnr_aspect_poseidon_pelagios
+					has_religious_aspect = religious_aspect:fnr_aspect_hermes_logios
+				}
+			}
+		}
+
+		enabled = {
+			has_religious_aspect = religious_aspect:fnr_aspect_likeness_of_the_buddha
+			NOT = {
+				OR = {
+					has_religious_aspect = religious_aspect:fnr_aspect_avalokiteshvara
+					has_religious_aspect = religious_aspect:fnr_aspect_vajrapani
+					has_religious_aspect = religious_aspect:fnr_aspect_manjushri
+					has_religious_aspect = religious_aspect:fnr_aspect_tara
+					has_religious_aspect = religious_aspect:fnr_aspect_maitreya
+					has_religious_aspect = religious_aspect:fnr_aspect_vaisravana
+				}
+			}
+		}
+
+		modifier = {
+			stability_cost = -0.15
+			global_population_growth = 0.05
+		}
+
+		opinions = {
+		}
+	}
+
+	fnr_aspect_maitreya = {
+		religion = fnr_greco_buddhism_religion
+		icon = fnr_aspect_maitreya
+
+		visible = {
+			has_religious_aspect = religious_aspect:fnr_aspect_likeness_of_the_buddha
+			NOT = {
+				OR = {
+					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great # TODO: balance
+					has_religious_aspect = religious_aspect:fnr_aspect_zeus_olympios
+					has_religious_aspect = religious_aspect:fnr_aspect_athena_polias
+					has_religious_aspect = religious_aspect:fnr_aspect_ares_stratios
+					has_religious_aspect = religious_aspect:fnr_aspect_apollo_pythios
+					has_religious_aspect = religious_aspect:fnr_aspect_poseidon_pelagios
+					has_religious_aspect = religious_aspect:fnr_aspect_hermes_logios
+				}
+			}
+		}
+
+		enabled = {
+			has_religious_aspect = religious_aspect:fnr_aspect_likeness_of_the_buddha
+			NOT = {
+				OR = {
+					has_religious_aspect = religious_aspect:fnr_aspect_avalokiteshvara
+					has_religious_aspect = religious_aspect:fnr_aspect_vajrapani
+					has_religious_aspect = religious_aspect:fnr_aspect_manjushri
+					has_religious_aspect = religious_aspect:fnr_aspect_tara
+					has_religious_aspect = religious_aspect:fnr_aspect_maitreya
+					has_religious_aspect = religious_aspect:fnr_aspect_vaisravana
+				}
+			}
+		}
+
+		modifier = {
+			monthly_government_power_modifier = 0.1
+			monthly_prestige = 0.03
+		}
+
+		opinions = {
+		}
+	}
+
+	fnr_aspect_vaisravana = {
+		religion = fnr_greco_buddhism_religion
+		icon = fnr_aspect_vaisravana
+
+		visible = {
+			has_religious_aspect = religious_aspect:fnr_aspect_likeness_of_the_buddha
+			NOT = {
+				OR = {
+					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great # TODO: balance
+					has_religious_aspect = religious_aspect:fnr_aspect_zeus_olympios
+					has_religious_aspect = religious_aspect:fnr_aspect_athena_polias
+					has_religious_aspect = religious_aspect:fnr_aspect_ares_stratios
+					has_religious_aspect = religious_aspect:fnr_aspect_apollo_pythios
+					has_religious_aspect = religious_aspect:fnr_aspect_poseidon_pelagios
+					has_religious_aspect = religious_aspect:fnr_aspect_hermes_logios
+				}
+			}
+		}
+
+		enabled = {
+			has_religious_aspect = religious_aspect:fnr_aspect_likeness_of_the_buddha
+			NOT = {
+				OR = {
+					has_religious_aspect = religious_aspect:fnr_aspect_avalokiteshvara
+					has_religious_aspect = religious_aspect:fnr_aspect_vajrapani
+					has_religious_aspect = religious_aspect:fnr_aspect_manjushri
+					has_religious_aspect = religious_aspect:fnr_aspect_tara
+					has_religious_aspect = religious_aspect:fnr_aspect_maitreya
+					has_religious_aspect = religious_aspect:fnr_aspect_vaisravana
+				}
+			}
+		}
+
+		modifier = {
+			global_tax_income = 0.1
+			global_production_efficiency = 0.05
+		}
+
+		opinions = {
+		}
+	}

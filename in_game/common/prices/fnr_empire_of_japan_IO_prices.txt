@@ -1,0 +1,7 @@
+﻿
+	fnr_empire_of_japan_integration_of_old_imperial_systems = {
+		gold = expensive_build_price_age_of_renaissance
+		stability = 10
+	}
+
+	

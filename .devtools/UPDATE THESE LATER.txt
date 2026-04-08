@@ -1,0 +1,170 @@
+UPDATE THESE LATER
+
+# Bactrian Synod event for restoring Macedonia
+flavor_BACTR.5 = {
+	type = country_event
+	title = flavor_BACTR.5.title
+	desc = flavor_BACTR.5.desc
+	fire_only_once = yes
+	option = { 
+		name = flavor_BACTR.5.a
+		custom_tooltip = { text = BACTR_event_trigger_1_tt }
+		hidden_effect = {
+			random_owned_location = {
+				limit = {
+					OR = {
+						area = area:macedonia_area
+						area = area:albania_area
+						area = area:northern_greece_area
+						area = area:thrace_area
+					}
+				}
+				save_scope_as = target_location
+			}
+			scope:target_location = {
+				create_country_from_location = {
+					save_scope_as = macedonia_nation
+					set_country_rank = country_rank:rank_kingdom
+				}
+			}
+			scope:macedonia_nation = {
+				form_country = formable_country:BMCDN_f
+				change_country_color = map_BMCDN
+				create_character = {
+					save_scope_as = macedonia_ruler
+					culture = culture:greek_culture
+					religion = religion:fnr_greco_buddhism_religion
+				}
+				set_new_ruler = scope:macedonia_ruler
+				change_religion = religion:fnr_greco_buddhism_religion
+				change_religion_for_ruler_and_family = { 
+					country = scope:macedonia_nation 
+					religion = religion:fnr_greco_buddhism_religion 
+				}
+				make_subject_of = {
+					target = root
+					type = subject_type:vassal
+				}
+			}
+			every_owned_location = {
+				limit = {
+					OR = {
+						area = area:macedonia_area
+						area = area:albania_area
+						area = area:northern_greece_area
+						area = area:thrace_area
+					}
+				}
+				change_location_owner = scope:macedonia_nation
+				add_core = scope:macedonia_nation
+				change_integration_level = core
+			}
+		}
+	}
+}
+
+# Bactrian Synod event for restoring Assyria
+flavor_BACTR.6 = {
+	type = country_event
+	title = flavor_BACTR.6.title
+	desc = flavor_BACTR.6.desc
+	fire_only_once = yes
+	option = { 
+		name = flavor_BACTR.6.a
+		custom_tooltip = { text = BACTR_event_trigger_2_tt }
+		hidden_effect = {
+			random_owned_location = {
+				limit = {
+					area = area:jazira_area
+				}
+				save_scope_as = target_location
+			}
+			scope:target_location = {
+				create_country_from_location = {
+					save_scope_as = assyria_nation
+					set_country_rank = country_rank:rank_kingdom
+				}
+			}
+			scope:assyria_nation = {
+				form_country = formable_country:ASYRI_f
+				change_country_color = map_ASYRI
+				create_character = {
+					save_scope_as = assyria_ruler
+					culture = culture:syriac_culture
+					religion = religion:fnr_greco_buddhism_religion
+				}
+				set_new_ruler = scope:assyria_ruler
+				change_religion = religion:fnr_greco_buddhism_religion
+				change_religion_for_ruler_and_family = { 
+					country = scope:assyria_nation 
+					religion = religion:fnr_greco_buddhism_religion 
+				}
+				make_subject_of = {
+					target = root
+					type = subject_type:vassal
+				}
+			}
+			every_owned_location = {
+				limit = {
+					area = area:jazira_area
+				}
+				change_location_owner = scope:assyria_nation
+				add_core = scope:assyria_nation
+				change_integration_level = core
+			}
+		}
+	}
+}
+
+# Bactrian Synod event for restoring Persia
+flavor_BACTR.7 = {
+	type = country_event
+	title = flavor_BACTR.7.title
+	desc = flavor_BACTR.7.desc
+	fire_only_once = yes
+	option = { 
+		name = flavor_BACTR.7.a
+		custom_tooltip = { text = BACTR_event_trigger_3_tt }
+		hidden_effect = {
+			random_owned_location = {
+				limit = {
+					region = region:persia_region
+				}
+				save_scope_as = target_location
+			}
+			scope:target_location = {
+				create_country_from_location = {
+					save_scope_as = persia_nation
+					set_country_rank = country_rank:rank_kingdom
+				}
+			}
+			scope:persia_nation = {
+				form_country = formable_country:BPSNE_f
+				change_country_color = map_BPSNE
+				create_character = {
+					save_scope_as = persia_ruler
+					culture = culture:farsi_culture
+					religion = religion:fnr_greco_buddhism_religion
+				}
+				set_new_ruler = scope:persia_ruler
+				change_religion = religion:fnr_greco_buddhism_religion
+				change_religion_for_ruler_and_family = { 
+					country = scope:persia_nation 
+					religion = religion:fnr_greco_buddhism_religion 
+				}
+				make_subject_of = {
+					target = root
+					type = subject_type:vassal
+				}
+			}
+			every_owned_location = {
+				limit = {
+					region = region:persia_region
+				}
+				change_location_owner = scope:persia_nation
+				add_core = scope:persia_nation
+				change_integration_level = core
+			}
+		}
+	}
+}

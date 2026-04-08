@@ -1,0 +1,196 @@
+﻿fnr_bactria_synod_io = {
+	has_target = no
+	unique = yes
+	expel_members_who_are_targets_of_other_members = no
+	has_leader_country = yes
+	leader_type = country #
+
+	leader_modifier = {
+		organization_parliament_duration_modifier = 0.10
+		parliament_base_support = 0.05
+		army_cavalry_maintenance_cost_modifier = -0.10
+		army_cavalry_power = 0.15
+	}
+
+	modifier = {
+		loyalty_to_overlord = 25
+	}
+
+	create_visible_trigger = {
+		always = no
+	}
+
+	invite_visible_trigger = {
+		always = yes
+	}
+
+	invite_enabled_trigger = {
+		#is_leader_of_international_organization = international_organization:fnr_bactria_synod_io
+	}
+
+
+
+	can_declare_war = {
+		always = yes
+	}
+	
+	#variables = {
+	#}
+
+	can_lead_trigger = {
+		#always = no
+	}
+
+	can_join_trigger = {
+		OR = {
+			is_subject_of = international_organization:fnr_bactria_synod_io.leader_country
+			is_neighbor_of = international_organization:fnr_bactria_synod_io.leader_country
+			is_neighbor_of_international_organization = international_organization:fnr_bactria_synod_io
+			religion = international_organization:fnr_bactria_synod_io.leader_country.religion
+		}
+		NOT = {
+			country_rank = country_rank:rank_empire
+			is_member_of_international_organization = international_organization:fnr_bactria_synod_io
+		}
+	}
+	
+	can_leave_trigger = {
+		always = no
+	}
+	
+	auto_leave_trigger = {
+		always = no
+	}
+
+	auto_disband_trigger = {
+		always = no
+	}
+
+	#on_joined = {
+	#}
+
+	#on_left = {
+	#}
+	
+	ai_desire_to_join = {
+		# Base willingness
+		add = {
+			desc = "BASE_DESIRE"
+			value = -150
+		}
+
+		# Empires won't join
+		if = {
+			limit = { country_rank = country_rank:rank_empire }
+			subtract = {
+				desc = "IS_AN_EMPIRE"
+				value = 1000
+			}
+		}
+
+		# At war - won't join
+		if = {
+			limit = { at_war = yes }
+			subtract = {
+				desc = "IS_AT_WAR"
+				value = 1000
+			}
+		}
+
+		# At war with IO leader
+		if = {
+			limit = {
+				is_at_war_with = international_organization:fnr_bactria_synod_io.leader_country
+			}
+			subtract = {
+				desc = "AT_WAR_WITH_LEADER"
+				value = 1000
+			}
+		}
+
+		# At war with any IO member
+		if = {
+			limit = {
+				international_organization:fnr_bactria_synod_io = {
+					any_international_organization_member = {
+						is_at_war_with = root
+					}
+				}
+			}
+			subtract = {
+				desc = "AT_WAR_WITH_IO_MEMBER"
+				value = 1000
+			}
+		}
+
+		# Subjects are more willing
+		if = {
+			limit = {
+				is_subject_of = international_organization:fnr_bactria_synod_io.leader_country
+			}
+			add = {
+				desc = "SUBJECT_OF_LEADER"
+				value = 125
+			}
+		}
+
+		# High opinion of leader
+		if = {
+			limit = {
+				exists = scope:actor
+			}
+			add = {
+				desc = "DIPLOREASON_OPINION"
+				value = {
+					value = "opinion(scope:actor)"
+					multiply = 1.0
+				}
+			}
+		}
+
+		# Diplomatic reputation of leader
+		if = {
+			limit = {
+				exists = scope:actor
+			}
+			add = {
+				desc = "DIPLOREASON_DIPLOMATIC_REPUTATION"
+				value = {
+					value = "scope:actor.modifier:diplomatic_reputation"
+					multiply = 0.5
+				}
+			}
+		}
+
+		# Same religion as leader
+		if = {
+			limit = {
+				exists = scope:actor
+				religion = scope:actor.religion
+			}
+			add = {
+				desc = "DIPLOREASON_SAME_RELIGION"
+				value = 20
+			}
+		}
+
+		# Same culture as leader
+		if = {
+			limit = {
+				exists = scope:actor
+				culture ?= scope:actor.culture
+			}
+			add = {
+				desc = "DIPLOREASON_SAME_CULTURE"
+				value = 15
+			}
+		}
+	}
+
+	ai_desire_to_allow_new_member = {
+		add = {
+			desc = "WE_WANT_THE_ORGANIZATION_TO_GROW"
+			value = 20
+		}
+	}
+}

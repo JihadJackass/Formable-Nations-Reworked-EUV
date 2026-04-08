@@ -1,0 +1,378 @@
+﻿# scope:actor = country
+# scope:recipient = religion
+
+# Integration of Old Systems 
+
+	fnr_japan_integration_of_old_imperial_systems = {
+		type = internationalorganization
+
+		sound = UI_action_religion_generic
+		
+		ai_tick = daily
+		ai_tick_frequency = 80
+
+		automation_tick = monthly
+		automation_tick_frequency = 1
+		player_automated_category = religiousdoctrines
+		
+		message = national_church_action
+		
+		potential = {
+			exists = international_organization:fnr_japan_greater_east_asia_io
+			scope:actor = { is_member_of_international_organization = international_organization:fnr_japan_greater_east_asia_io }
+		}
+
+		allow = {
+			international_organization:fnr_japan_greater_east_asia_io = {
+				any_international_organization_member = {
+					NOT = { this = scope:actor }
+					has_reform = government_reform:japanese_clan
+					any_owned_foreign_building = {
+						OR = {
+							building_type = building_type:kokufu
+							building_type = building_type:yamashiro
+							building_type = building_type:yakata
+						}
+					}
+				}
+			}
+		}
+		
+		price = price:fnr_empire_of_japan_integration_of_old_imperial_systems
+
+		select_trigger = {
+			looking_for_a = international_organization
+			target_flag = recipient
+			name = "choose_international_organization"
+			column = {
+				data = name
+			}
+			visible = {
+				international_organization_type = international_organization_type:fnr_japan_greater_east_asia_io
+			}
+			enabled = {
+				any_international_organization_member = {
+					NOT = { this = scope:actor }
+					any_owned_foreign_building = {
+						building_type = building_type:kokufu
+						owner ?= {
+							NOT = { is_at_war_with = scope:actor }
+							NOT = { is_allied_with = { target = scope:actor } }
+						}
+					}
+				}
+			}
+		}
+
+		effect = {
+			custom_tooltip = {
+				text = fnr_japan_integration_of_old_imperial_systems_tt
+			}
+			hidden_effect = {
+				international_organization:fnr_japan_greater_east_asia_io = {
+					random_international_organization_member = {
+						limit = {
+							NOT = { this = scope:actor }
+							has_reform = government_reform:japanese_clan
+							any_owned_foreign_building = {
+								OR = {
+									building_type = building_type:kokufu
+									building_type = building_type:yamashiro
+									building_type = building_type:yakata
+									building_type = building_type:shoen
+								}
+							}
+						}
+						save_scope_as = fnr_target_clan
+						every_owned_foreign_building = {
+							limit = {
+								OR = {
+									building_type = building_type:kokufu
+									building_type = building_type:yamashiro
+									building_type = building_type:yakata
+									building_type = building_type:shoen
+								}
+							}
+							location = {
+								destroy_building = prev
+							}
+						}
+						scope:actor = {
+							annex_country = { target = scope:fnr_target_clan }
+						}
+					}
+				}
+			}
+		}
+		
+		ai_will_do = {
+			add = -50
+		}
+	}
+
+# Establish the Kingdom of Chōsen 
+
+	fnr_japan_establish_chosen = {
+		type = internationalorganization
+
+		sound = UI_action_religion_generic
+		
+		ai_tick = daily
+		ai_tick_frequency = 80
+
+		automation_tick = monthly
+		automation_tick_frequency = 1
+		player_automated_category = religiousdoctrines
+		
+		message = national_church_action
+		
+		potential = {
+			NOT = { country_exists = c:CHSEN }
+			exists = international_organization:fnr_japan_greater_east_asia_io
+			scope:actor = { is_member_of_international_organization = international_organization:fnr_japan_greater_east_asia_io }
+		}
+
+		allow = {
+			NOT = { country_exists = c:CHSEN }
+			scope:actor = {
+				is_leader_of_international_organization = international_organization:fnr_japan_greater_east_asia_io
+			}
+		}
+		
+		price = price:join_branch
+
+		select_trigger = {
+			looking_for_a = international_organization
+			target_flag = recipient
+			name = "choose_international_organization"
+			column = {
+				data = name
+			}
+			visible = {
+				NOT = { country_exists = c:CHSEN }
+				international_organization_type = international_organization_type:fnr_japan_greater_east_asia_io
+			}
+			enabled = {
+				NOT = { country_exists = c:CHSEN }
+			}
+		}
+
+		effect = {
+			custom_tooltip = fnr_japan_establish_chosen
+			scope:actor = {
+				trigger_event_non_silently = flavor_EOJPN.1
+			}
+		}
+		
+		ai_will_do = {
+			add = -50
+		}
+	}
+
+# Establish the Kingdom of Manchuria
+
+	fnr_japan_establish_manchuria = {
+		type = internationalorganization
+
+		sound = UI_action_religion_generic
+		
+		ai_tick = daily
+		ai_tick_frequency = 80
+
+		automation_tick = monthly
+		automation_tick_frequency = 1
+		player_automated_category = religiousdoctrines
+		
+		message = national_church_action
+		
+		potential = {
+			exists = international_organization:fnr_japan_greater_east_asia_io
+			scope:actor = { is_member_of_international_organization = international_organization:fnr_japan_greater_east_asia_io }
+		}
+
+		allow = {
+			scope:actor = {
+				is_leader_of_international_organization = international_organization:fnr_japan_greater_east_asia_io
+			}
+		}
+		
+		price = price:join_branch
+
+		select_trigger = {
+			looking_for_a = international_organization
+			target_flag = recipient
+			name = "choose_international_organization"
+			column = {
+				data = name
+			}
+			visible = {
+				international_organization_type = international_organization_type:fnr_japan_greater_east_asia_io
+			}
+			enabled = {
+				#always = no
+			}
+		}
+
+		effect = {
+		}
+		
+		ai_will_do = {
+			add = -50
+		}
+	}
+
+# Proclaim the Second Philippine Republic
+
+	fnr_japan_establish_philippine = {
+		type = internationalorganization
+
+		sound = UI_action_religion_generic
+		
+		ai_tick = daily
+		ai_tick_frequency = 80
+
+		automation_tick = monthly
+		automation_tick_frequency = 1
+		player_automated_category = religiousdoctrines
+		
+		message = national_church_action
+		
+		potential = {
+			exists = international_organization:fnr_japan_greater_east_asia_io
+			scope:actor = { is_member_of_international_organization = international_organization:fnr_japan_greater_east_asia_io }
+		}
+
+		allow = {
+			scope:actor = {
+				is_leader_of_international_organization = international_organization:fnr_japan_greater_east_asia_io
+			}
+		}
+		
+		price = price:join_branch
+
+		select_trigger = {
+			looking_for_a = international_organization
+			target_flag = recipient
+			name = "choose_international_organization"
+			column = {
+				data = name
+			}
+			visible = {
+				international_organization_type = international_organization_type:fnr_japan_greater_east_asia_io
+			}
+			enabled = {
+				#always = no
+			}
+		}
+
+		effect = {
+		}
+		
+		ai_will_do = {
+			add = -50
+		}
+	}
+
+# Reorganize the National Chinese State
+
+	fnr_japan_establish_china = {
+		type = internationalorganization
+
+		sound = UI_action_religion_generic
+		
+		ai_tick = daily
+		ai_tick_frequency = 80
+
+		automation_tick = monthly
+		automation_tick_frequency = 1
+		player_automated_category = religiousdoctrines
+		
+		message = national_church_action
+		
+		potential = {
+			exists = international_organization:fnr_japan_greater_east_asia_io
+			scope:actor = { is_member_of_international_organization = international_organization:fnr_japan_greater_east_asia_io }
+		}
+
+		allow = {
+			scope:actor = {
+				is_leader_of_international_organization = international_organization:fnr_japan_greater_east_asia_io
+			}
+		}
+		
+		price = price:join_branch
+
+		select_trigger = {
+			looking_for_a = international_organization
+			target_flag = recipient
+			name = "choose_international_organization"
+			column = {
+				data = name
+			}
+			visible = {
+				international_organization_type = international_organization_type:fnr_japan_greater_east_asia_io
+			}
+			enabled = {
+				#always = no
+			}
+		}
+
+		effect = {
+		}
+		
+		ai_will_do = {
+			add = -50
+		}
+	}	
+
+# Reorganize the Inner Mongolian Region 
+
+	fnr_japan_establish_inner_mongolia = {
+		type = internationalorganization
+
+		sound = UI_action_religion_generic
+		
+		ai_tick = daily
+		ai_tick_frequency = 80
+
+		automation_tick = monthly
+		automation_tick_frequency = 1
+		player_automated_category = religiousdoctrines
+		
+		message = national_church_action
+		
+		potential = {
+			exists = international_organization:fnr_japan_greater_east_asia_io
+			scope:actor = { is_member_of_international_organization = international_organization:fnr_japan_greater_east_asia_io }
+		}
+
+		allow = {
+			scope:actor = {
+				is_leader_of_international_organization = international_organization:fnr_japan_greater_east_asia_io
+			}
+		}
+		
+		price = price:join_branch
+
+		select_trigger = {
+			looking_for_a = international_organization
+			target_flag = recipient
+			name = "choose_international_organization"
+			column = {
+				data = name
+			}
+			visible = {
+				international_organization_type = international_organization_type:fnr_japan_greater_east_asia_io
+			}
+			enabled = {
+				#always = no
+			}
+		}
+
+		effect = {
+		}
+		
+		ai_will_do = {
+			add = -50
+		}
+	}	

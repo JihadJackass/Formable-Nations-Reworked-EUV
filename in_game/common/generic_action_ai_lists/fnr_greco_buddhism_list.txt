@@ -1,8 +1,10 @@
 ﻿fnr_greco_buddhism_list = {
 	potential = {
-		religion = {
-			has_religious_influence = yes
-		}
+		always = no
+		#religion = religion:fnr_greco_buddhism_religion
+		#religion = {
+		#	has_religious_influence = yes
+		#}
 	}
 	actions = {
 		fnr_spread_litergical_copies_of_alexander

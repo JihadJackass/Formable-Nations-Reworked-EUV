@@ -6,12 +6,5 @@
 # ultimate: legendarily rare, should only be used for impressive feats or massive failures only
 # radical: rarest value you could get
 
-# Stahlwagen limit
-
- #   fnr_stahlwagen_unit_limit = {
- #       add = { 
- #           value = 20
- #           desc = BASE_VALUE
- #       }
- #   }
-
+# Empire of Japan IO
+empire_of_japan_integration_of_old_imperial_systems_price = -50

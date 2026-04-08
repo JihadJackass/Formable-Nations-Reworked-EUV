@@ -1,0 +1,30 @@
+﻿fnr_bactria_list = {
+    potential = {
+        # AI only evaluates these actions if this is true
+		always = no
+    }
+    actions = {
+        fnr_proclaim_bactrian_synod
+        fnr_bactria_restore_armenia
+        fnr_bactria_restore_macedonia
+        fnr_bactria_restore_assyria
+        fnr_bactria_restore_persia
+        fnr_bactria_egyptian_claim
+        fnr_bactria_egyptian_establish
+        fnr_bactria_restore_the_macedonian_empire
+    }
+}
+
+fnr_japan_list = {
+    potential = {
+		always = no
+    }
+    actions = {
+        fnr_japan_integration_of_old_imperial_systems
+        fnr_japan_establish_chosen
+        fnr_japan_establish_manchuria
+        fnr_japan_establish_philippine
+        fnr_japan_establish_china
+        fnr_japan_establish_inner_mongolia
+    }
+}

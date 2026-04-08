@@ -2,6 +2,12 @@
 
   # events FOR FORMABLE NATIONS
 
+    # Empire of Japan
+
+      flavor_EOJPN.1.title: "Rise of the Sun"
+      flavor_EOJPN.1.desc: "The morning sun rises over the mountains of Korea, casting its light upon a land reborn. Where once rival kingdoms vied for dominance, a new order now takes shape — the Kingdom of Chōsen, forged under the watchful eye of Nippon. A governor shall be appointed to oversee its affairs, and its people shall find their place within the Greater East Asian realm. The old ways fade as the rising sun ushers in a new era."
+      flavor_EOJPN.1.a: "For Nippon!"
+
     # Bactria
 
       flavor_BACTR.1.title: "Rise of Bactria"
@@ -12,6 +18,42 @@
       flavor_BACTR.2.desc: "We must declare our official name to the neighboring friends and foes to establish our place in the world."
       flavor_BACTR.2.a: "Simplicity is better, let us be Bactria."  
       flavor_BACTR.2.b: "In memory of Alexander 'Greco-Bactrian Kingdom' is quite fitting."  
+
+      flavor_BACTR.3.title: "Establishment of the Bactrian Synod"
+      flavor_BACTR.3.desc: "TODO: description that explains the purpose of the bactrian synod"
+      flavor_BACTR.3.a: "Alexander would be proud!"
+  
+      flavor_BACTR.4.title: "Restoring the Armenian Kingdom"
+      flavor_BACTR.4.desc: "TODO: description"
+      flavor_BACTR.4.a: "The Armenian Kingdom restored!"
+
+      BACTR_event_trigger_4_tt: "The Nation of Armenia will be restored in the [ShowAreaName('armenia_area')] and [ShowAreaName('armenian_highlands_area')] areas with a loyal Pro-Bactrian Armenian King."
+
+      flavor_BACTR.5.title: "Restoration of the State of Macedonia"
+      flavor_BACTR.5.desc: "TODO: description"
+      flavor_BACTR.5.a: "For the Macedonian descendents!"
+
+      BACTR_event_trigger_1_tt: "The Nation of Macedonia will be restored in the [ShowAreaName('macedonia_area')], [ShowAreaName('albania_area')], [ShowAreaName('northern_greece_area')], and [ShowAreaName('thrace_area')] areas with a loyal Pro-Bactrian Macedonian King."
+
+      flavor_BACTR.6.title: "Placing a local on the Assyrian Throne"
+      flavor_BACTR.6.desc: "TODO: description"
+      flavor_BACTR.6.a: "Assyria rises once again."
+
+      BACTR_event_trigger_2_tt: "The Nation of Assyria will be restored in the [ShowAreaName('jazira_area')] area with a loyal Pro-Bactrian Assyrian King."
+
+      flavor_BACTR.7.title: "Establishing a Pro-Greek Persian King"
+      flavor_BACTR.7.desc: "TODO: description"
+      flavor_BACTR.7.a: "TODO: option"
+
+      BACTR_event_trigger_3_tt: "The Nation of Persia will be established in the [ShowRegionName('persia_region')] area with a loyal Pro-Bactrian Persian King."
+
+      flavor_BACTR.8.title: "Restoring the Ptolemaic Dynasty to the Kingdom of Egypt"
+      flavor_BACTR.8.desc: "TODO: description"
+      flavor_BACTR.8.a: "TODO: option"
+
+      flavor_BACTR.9.title: "Honoring Alexander"
+      flavor_BACTR.9.desc: "TODO: description"
+      flavor_BACTR.9.a: "TODO: option"
 
     # Rhineland
 

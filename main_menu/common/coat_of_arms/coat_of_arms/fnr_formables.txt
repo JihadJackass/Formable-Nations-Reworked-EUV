@@ -4,6 +4,41 @@
 
 # TODO POST 2.5.0: Alternatives for different government types and use less textured flags (only when needed such as sweden-norway with too many colors)
 
+# Kingdom of Persia
+	BPSNE = {
+		textured_emblem = {
+			texture = "te_bactria_persia.dds"
+		}	
+	}
+
+# Kingdom of Macedonia
+	BMCDN = {
+		textured_emblem = {
+			texture = "te_bactria_macedonia.dds"
+		}	
+	}
+
+# Kingdom of Choseon
+	CHSEN = {
+		textured_emblem = {
+			texture = "te_japan_korea.dds"
+		}	
+	}
+
+# Kingdom of Armenia (Bactria)
+	CHSEN = {
+		textured_emblem = {
+			texture = "te_bactria_armenia.dds"
+		}	
+	}
+
+# Empire of Japan
+	EOJPN = {
+		textured_emblem = {
+			texture = "te_empire_of_japan.dds"
+		}	
+	}
+
 # Bactria
 	BACTR = {
 		textured_emblem = {

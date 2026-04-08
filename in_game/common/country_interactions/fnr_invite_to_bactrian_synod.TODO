@@ -1,0 +1,92 @@
+﻿# Bactrian Synod Interactions
+
+	# Invite to Synod (Non-subject)
+
+		fnr_invite_to_bactrian_synod = {
+			type = diplomacy
+
+			category = CATEGORY_FRIENDLY_ACTIONS
+
+			ai_tick = daily
+			ai_tick_frequency = 360
+
+			potential = {
+				scope:actor = {
+					tag = BACTR
+				}
+				scope:recipient = {
+					NOT = { is_member_of_international_organization = international_organization:fnr_bactria_synod_io }
+				}
+			}
+
+			select_trigger = {
+				looking_for_a = country
+				target_flag = recipient
+				ai_interaction_source_list = {
+					scope:actor = {
+						every_neighbor_country = {
+							add_to_list = source
+						}
+					}
+				}
+				name = "choose_country"
+				column = {
+					data = name
+				}
+				visible = {
+					scope:actor = {
+						is_leader_of_international_organization = international_organization:fnr_bactria_synod_io
+					}
+					scope:recipient = {
+						NOT = {
+							country_rank = country_rank:rank_empire
+							is_member_of_international_organization = international_organization:fnr_bactria_synod_io
+						}
+					}
+				}
+				enabled = {
+					scope:actor = {
+						is_leader_of_international_organization = international_organization:fnr_bactria_synod_io
+					}
+					scope:recipient = {
+						NOT = {
+							country_rank = country_rank:rank_empire
+							is_member_of_international_organization = international_organization:fnr_bactria_synod_io
+						}
+					}
+				}
+			}
+
+			ai_will_do = {
+				add = {
+					value = 10
+				}
+			}
+
+			effect = {
+				international_organization:fnr_bactria_synod_io = {
+					add_country_to_international_organization = scope:recipient
+				}
+			}
+
+			diplo_chance = {
+				base = -15
+				opinion = 0.7
+				at_war = -100
+				recipient_at_war = -100
+				recipient_occupied_beseiged_locations = -20
+				recipient_is_rival = 10
+				in_debt = -2
+				price = -1
+				price_percentage_of_treasury_funds = -100
+				competing_power = 10
+				few_relations = 10
+				# max_relations = -5
+				tax_base = 0.5
+				rank_difference = -10
+				#NOT = { disloyal_subject = 1 }
+			}
+		}
+
+	# Grant Subject Synod Membership (For vassals)
+	

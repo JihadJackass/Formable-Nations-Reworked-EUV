@@ -3,8 +3,14 @@
 		religious_influence = 40
 	}
 
-	fnr_greco_buddhism_action_hybridize_local_cultures = {
-		religious_influence = 200
+	fnr_proclaim_bactrian_synod = {
+		religious_influence = 100
 	}
+
+	fnr_greco_buddhism_action_hybridize_local_cultures = {
+		religious_influence = 180
+	}
+
+
 
 	

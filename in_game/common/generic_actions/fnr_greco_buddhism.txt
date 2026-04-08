@@ -1,198 +1,692 @@
 ﻿# scope:actor = country, scope:recipient = religion
 
-# Spread Religion
-fnr_spread_litergical_copies_of_alexander = {
-	type = religious
+# Greco-Bactrian Religion actions
 
-	sound = UI_action_religion_generic
+	# Spread Religion
+	fnr_spread_litergical_copies_of_alexander = {
+		type = religious
 
-	ai_tick = monthly
-	ai_tick_frequency = 24
-	automation_tick = monthly
-	automation_tick_frequency = 6
+		sound = UI_action_religion_generic
 
-	automation_tick = monthly
-	automation_tick_frequency = 12
-	player_automated_category = religiousdoctrines
+		ai_tick = monthly
+		ai_tick_frequency = 24
+		automation_tick = monthly
+		automation_tick_frequency = 6
 
-	potential = {
-		scope:recipient = {
-			this = religion:fnr_greco_buddhism_religion
+		automation_tick = monthly
+		automation_tick_frequency = 12
+		player_automated_category = religiousdoctrines
+
+		potential = {
+			scope:recipient = {
+				this = religion:fnr_greco_buddhism_religion
+			}
 		}
-	}
 
-	allow = {
-		scope:actor = {
-			religion = religion:fnr_greco_buddhism_religion
-			any_owned_location = {
-				any_pop = {
-					NOT = { religion = religion:fnr_greco_buddhism_religion }
+		allow = {
+			scope:actor = {
+				religion = religion:fnr_greco_buddhism_religion
+				any_owned_location = {
+					any_pop = {
+						NOT = { religion = religion:fnr_greco_buddhism_religion }
+					}
+				}
+			}
+		}
+
+		price = price:fnr_spread_litergical_copies_of_alexander
+
+		select_trigger = {
+			looking_for_a = religion
+			source = actor
+			target_flag = recipient
+			name = "choose_religion"
+			column = {
+				data = name
+			}
+		}
+
+		effect = {
+			custom_tooltip = {
+				text = fnr_spread_litergical_copies_of_alexander_tt
+				scope:actor = {
+					every_owned_location = {
+						every_pop = {
+							limit = {
+								NOT = { religion = religion:fnr_greco_buddhism_religion }
+							}
+							split_pop = {
+								fraction = 0.05
+								religion = religion:fnr_greco_buddhism_religion
+							}
+						}
+					}
+				}
+			}
+			scope:actor = {
+				change_societal_value = { type = spiritualist_vs_humanist value = societal_value_minor_move_to_left }
+			}
+		}
+
+		ai_will_do = {
+			add = -100
+
+			add = {
+				if = {
+					limit = {
+						scope:actor = {
+							religious_unity < 0.20
+						}
+					}
+					value = 200
+				}
+			}
+
+			add = {
+				if = {
+					limit = {
+						scope:actor = {
+							religious_unity < 0.40
+						}
+					}
+					value = 100
 				}
 			}
 		}
 	}
 
-	price = price:fnr_spread_litergical_copies_of_alexander
+	# Hybridization of local cultures - changes primary culture to Greco-Bactrian and converts Greco-Buddhist pops to the new culture
+	fnr_greco_buddhism_action_hybridize_local_cultures = {
+		type = religious
 
-	select_trigger = {
-		looking_for_a = religion
-		source = actor
-		target_flag = recipient
-		name = "choose_religion"
-		column = {
-			data = name
-		}
-	}
+		sound = UI_action_religion_generic
 
-	effect = {
-		custom_tooltip = {
-			text = fnr_spread_litergical_copies_of_alexander_tt
+		ai_tick = monthly
+		ai_tick_frequency = 24
+		automation_tick = monthly
+		automation_tick_frequency = 6
+
+		automation_tick = monthly
+		automation_tick_frequency = 12
+		player_automated_category = religiousdoctrines
+
+		potential = {
 			scope:actor = {
-				every_owned_location = {
-					every_pop = {
+				AND = {
+					religion = religion:fnr_greco_buddhism_religion
+					NOT = { has_variable = fnr_unified_greco_buddhist_culture }				
+				}
+			}
+		}
+
+		allow = {
+			scope:actor = {
+				AND = {
+					religion = religion:fnr_greco_buddhism_religion
+					NOT = { has_variable = fnr_unified_greco_buddhist_culture }				
+				}
+			}
+		}
+
+		price = price:fnr_greco_buddhism_action_hybridize_local_cultures
+
+		select_trigger = {
+			looking_for_a = religion
+			source = actor
+			target_flag = recipient
+			name = "choose_religion"
+			column = {
+				data = name
+			}
+		}
+
+		effect = {
+			scope:actor = {
+				set_variable = fnr_unified_greco_buddhist_culture
+			}		
+			custom_tooltip = {
+				text = fnr_greco_buddhism_action_hybridize_local_cultures_tt
+				scope:actor = {
+					change_culture = culture:fnr_greco_bactrian_culture
+				}
+			}
+			custom_tooltip = {
+				text = fnr_greco_buddhism_action_hybridize_local_cultures_pops_tt
+				scope:actor = {
+					every_owned_location = {
 						limit = {
-							NOT = { religion = religion:fnr_greco_buddhism_religion }
+							any_pop = {
+								religion = religion:fnr_greco_buddhism_religion
+							}
 						}
-						split_pop = {
-							fraction = 0.05
-							religion = religion:fnr_greco_buddhism_religion
+						every_pop = {
+							limit = {
+								religion = religion:fnr_greco_buddhism_religion
+								NOT = { culture = culture:fnr_greco_bactrian_culture }
+							}
+							split_pop = {
+								fraction = 0.35
+								culture = culture:fnr_greco_bactrian_culture
+							}
 						}
 					}
 				}
 			}
-		}
-		scope:actor = {
-			change_societal_value = { type = spiritualist_vs_humanist value = societal_value_minor_move_to_left }
-		}
-	}
-
-	ai_will_do = {
-		add = -100
-
-		add = {
-			if = {
-				limit = {
-					scope:actor = {
-						religious_unity < 0.20
-					}
-				}
-				value = 200
-			}
-		}
-
-		add = {
-			if = {
-				limit = {
-					scope:actor = {
-						religious_unity < 0.40
-					}
-				}
-				value = 100
-			}
-		}
-	}
-}
-
-# Hybridization of local cultures - changes primary culture to Greco-Bactrian and converts Greco-Buddhist pops to the new culture
-fnr_greco_buddhism_action_hybridize_local_cultures = {
-	type = religious
-
-	sound = UI_action_religion_generic
-
-	ai_tick = monthly
-	ai_tick_frequency = 24
-	automation_tick = monthly
-	automation_tick_frequency = 6
-
-	automation_tick = monthly
-	automation_tick_frequency = 12
-	player_automated_category = religiousdoctrines
-
-	potential = {
-		scope:actor = {
-			NOT = { has_variable = fnr_unified_greco_buddhist_culture }
-		}
-	}
-
-	allow = {
-		scope:actor = {
-			NOT = { has_variable = fnr_unified_greco_buddhist_culture }
-		}
-	}
-
-	price = price:fnr_greco_buddhism_action_hybridize_local_cultures
-
-	select_trigger = {
-		looking_for_a = religion
-		source = actor
-		target_flag = recipient
-		name = "choose_religion"
-		column = {
-			data = name
-		}
-	}
-
-	effect = {
-		scope:actor = {
-			set_variable = fnr_unified_greco_buddhist_culture
-		}		
-		custom_tooltip = {
-			text = fnr_greco_buddhism_action_hybridize_local_cultures_tt
 			scope:actor = {
-				change_culture = culture:fnr_greco_bactrian_culture
+				change_societal_value = { type = spiritualist_vs_humanist value = societal_value_minor_move_to_left }
 			}
 		}
-		custom_tooltip = {
-			text = fnr_greco_buddhism_action_hybridize_local_cultures_pops_tt
+
+		ai_will_do = {
+			add = -100
+
+			add = {
+				if = {
+					limit = {
+						scope:actor = {
+							religious_unity < 0.20
+						}
+					}
+					value = 200
+				}
+			}
+
+			add = {
+				if = {
+					limit = {
+						scope:actor = {
+							religious_unity < 0.40
+						}
+					}
+					value = 100
+				}
+			}		
+		}
+		
+	}
+
+	# Proclaim the Bactrian Synod
+	fnr_proclaim_bactrian_synod = {
+		type = religious
+
+		sound = UI_action_religion_generic
+
+		ai_tick = monthly
+		ai_tick_frequency = 24
+		automation_tick = monthly
+		automation_tick_frequency = 6
+
+		automation_tick = monthly
+		automation_tick_frequency = 12
+		player_automated_category = religiousdoctrines
+
+		potential = {
+			scope:recipient = {
+				this = religion:fnr_greco_buddhism_religion
+			}
+		}
+
+		allow = {
+			scope:actor = {
+				religion = religion:fnr_greco_buddhism_religion
+				any_owned_location = {
+					any_pop = {
+						NOT = { religion = religion:fnr_greco_buddhism_religion }
+					}
+				}
+			}
+		}
+
+		price = price:fnr_proclaim_bactrian_synod
+
+		select_trigger = {
+			looking_for_a = religion
+			source = actor
+			target_flag = recipient
+			name = "choose_religion"
+			column = {
+				data = name
+			}
+		}
+
+		effect = {
+			scope:actor = {
+				trigger_event_non_silently = flavor_BACTR.3
+				change_societal_value = { type = spiritualist_vs_humanist value = societal_value_minor_move_to_left }
+			}
+		}
+
+		ai_will_do = {
+			add = -100
+
+			add = {
+				if = {
+					limit = {
+						scope:actor = {
+							religious_unity < 0.20
+						}
+					}
+					value = 200
+				}
+			}
+
+			add = {
+				if = {
+					limit = {
+						scope:actor = {
+							religious_unity < 0.40
+						}
+					}
+					value = 100
+				}
+			}
+		}
+	}
+
+# Bactrian Syndo IO actions
+
+	# Restore Armenia
+	fnr_bactria_restore_armenia = {
+		type = internationalorganization
+
+		sound = UI_action_religion_generic
+		
+		ai_tick = daily
+		ai_tick_frequency = 80
+
+		automation_tick = monthly
+		automation_tick_frequency = 1
+		player_automated_category = religiousdoctrines
+		
+		message = national_church_action
+		
+		potential = {
+			exists = international_organization:fnr_bactria_synod_io
+			scope:actor = { is_member_of_international_organization = international_organization:fnr_bactria_synod_io }
+		}
+
+		allow = {
+			scope:actor = {
+				is_leader_of_international_organization = international_organization:fnr_bactria_synod_io
+			}
+		}
+		
+		price = price:join_branch
+
+		select_trigger = {
+			looking_for_a = international_organization
+			target_flag = recipient
+			name = "choose_international_organization"
+			column = {
+				data = name
+			}
+			visible = {
+				international_organization_type = international_organization_type:fnr_bactria_synod_io
+			}
+			enabled = {
+				scope:actor = { 
+					area:armenia_area = {
+						any_ownable_location_in_area = {
+							owner = { this = c:BACTR }
+							percent > 0.5
+						}
+					}
+					area:armenian_highlands_area = {
+						any_ownable_location_in_area = {
+							owner = { this = c:BACTR }
+							percent > 0.5
+						}
+					}
+				}
+			}
+		}
+
+		effect = {
+			scope:actor = {
+				trigger_event_non_silently = flavor_BACTR.4
+			}
+		}
+		
+		ai_will_do = {
+			add = -50
+		}
+	}
+
+	# Restore Macedonia
+	fnr_bactria_restore_macedonia = {
+		type = internationalorganization
+
+		sound = UI_action_religion_generic
+		
+		ai_tick = daily
+		ai_tick_frequency = 80
+
+		automation_tick = monthly
+		automation_tick_frequency = 1
+		player_automated_category = religiousdoctrines
+		
+		message = national_church_action
+		
+		potential = {
+			exists = international_organization:fnr_bactria_synod_io
+			scope:actor = { is_member_of_international_organization = international_organization:fnr_bactria_synod_io }
+		}
+
+		allow = {
+			scope:actor = {
+				is_leader_of_international_organization = international_organization:fnr_bactria_synod_io
+			}
+		}
+		
+		price = price:join_branch
+
+		select_trigger = {
+			looking_for_a = international_organization
+			target_flag = recipient
+			name = "choose_international_organization"
+			column = {
+				data = name
+			}
+			visible = {
+				international_organization_type = international_organization_type:fnr_bactria_synod_io
+			}
+			scope:actor = { 
+				area:armenia_area = {
+					any_ownable_location_in_area = {
+						owner = { this = c:BACTR }
+						percent > 0.5
+					}
+				}
+				area:armenian_highlands_area = {
+					any_ownable_location_in_area = {
+						owner = { this = c:BACTR }
+						percent > 0.5
+					}
+				}
+			}
+		}
+
+		effect = {
+			#scope:actor = {
+			#	trigger_event_non_silently = flavor_BACTR.5
+			#}
+		}
+		
+		ai_will_do = {
+			add = -50
+		}
+	}
+
+	# Position a local on the Assyrian Throne
+	fnr_bactria_restore_assyria = {
+		type = internationalorganization
+
+		sound = UI_action_religion_generic
+		
+		ai_tick = daily
+		ai_tick_frequency = 80
+
+		automation_tick = monthly
+		automation_tick_frequency = 1
+		player_automated_category = religiousdoctrines
+		
+		message = national_church_action
+		
+		potential = {
+			exists = international_organization:fnr_bactria_synod_io
+			scope:actor = { is_member_of_international_organization = international_organization:fnr_bactria_synod_io }
+		}
+
+		allow = {
+			scope:actor = {
+				is_leader_of_international_organization = international_organization:fnr_bactria_synod_io
+			}
+		}
+		
+		price = price:join_branch
+
+		select_trigger = {
+			looking_for_a = international_organization
+			target_flag = recipient
+			name = "choose_international_organization"
+			column = {
+				data = name
+			}
+			visible = {
+				international_organization_type = international_organization_type:fnr_bactria_synod_io
+			}
+			enabled = {
+				#always = no
+			}
+		}
+
+		effect = {
+		}
+		
+		ai_will_do = {
+			add = -50
+		}
+	}
+
+	# Establish a Pro-Greek Persian King
+	fnr_bactria_restore_persia = {
+		type = internationalorganization
+
+		sound = UI_action_religion_generic
+		
+		ai_tick = daily
+		ai_tick_frequency = 80
+
+		automation_tick = monthly
+		automation_tick_frequency = 1
+		player_automated_category = religiousdoctrines
+		
+		message = national_church_action
+		
+		potential = {
+			exists = international_organization:fnr_bactria_synod_io
+			scope:actor = { is_member_of_international_organization = international_organization:fnr_bactria_synod_io }
+		}
+
+		allow = {
+			scope:actor = {
+				is_leader_of_international_organization = international_organization:fnr_bactria_synod_io
+			}
+		}
+		
+		price = price:join_branch
+
+		select_trigger = {
+			looking_for_a = international_organization
+			target_flag = recipient
+			name = "choose_international_organization"
+			column = {
+				data = name
+			}
+			visible = {
+				international_organization_type = international_organization_type:fnr_bactria_synod_io
+			}
+			enabled = {
+				#always = no
+			}
+		}
+
+		effect = {
+		}
+		
+		ai_will_do = {
+			add = -50
+		}
+	}
+
+	# Claim on the Egyptian Throne
+	fnr_bactria_egyptian_claim = {
+		type = internationalorganization
+
+		sound = UI_action_religion_generic
+		
+		ai_tick = daily
+		ai_tick_frequency = 80
+
+		automation_tick = monthly
+		automation_tick_frequency = 1
+		player_automated_category = religiousdoctrines
+		
+		message = national_church_action
+		
+		potential = {
+			exists = international_organization:fnr_bactria_synod_io
+			scope:actor = { is_member_of_international_organization = international_organization:fnr_bactria_synod_io }
+		}
+
+		allow = {
+			scope:actor = {
+				is_leader_of_international_organization = international_organization:fnr_bactria_synod_io
+			}
+		}
+		
+		price = price:join_branch
+
+		select_trigger = {
+			looking_for_a = international_organization
+			target_flag = recipient
+			name = "choose_international_organization"
+			column = {
+				data = name
+			}
+			visible = {
+				international_organization_type = international_organization_type:fnr_bactria_synod_io
+			}
+			enabled = {
+				#always = no
+			}
+		}
+
+		effect = {
 			scope:actor = {
 				every_owned_location = {
 					limit = {
-						any_pop = {
-							religion = religion:fnr_greco_buddhism_religion
-						}
+						region = region:persia_region
 					}
-					every_pop = {
+					add_core = root
+					if = {
 						limit = {
-							religion = religion:fnr_greco_buddhism_religion
-							NOT = { culture = culture:fnr_greco_bactrian_culture }
+							is_core_of = root
 						}
-						split_pop = {
-							fraction = 0.35
-							culture = culture:fnr_greco_bactrian_culture
-						}
+						remove_core = root
 					}
 				}
 			}
 		}
-		scope:actor = {
-			change_societal_value = { type = spiritualist_vs_humanist value = societal_value_minor_move_to_left }
+		
+		ai_will_do = {
+			add = -50
 		}
-	}
+	}	
 
-	ai_will_do = {
-		add = -100
+	# Restore the Ptolemaic Dynasty to Egypt
+	fnr_bactria_egyptian_establish = {
+		type = internationalorganization
 
-		add = {
-			if = {
-				limit = {
-					scope:actor = {
-						religious_unity < 0.20
-					}
-				}
-				value = 200
+		sound = UI_action_religion_generic
+		
+		ai_tick = daily
+		ai_tick_frequency = 80
+
+		automation_tick = monthly
+		automation_tick_frequency = 1
+		player_automated_category = religiousdoctrines
+		
+		message = national_church_action
+		
+		potential = {
+			exists = international_organization:fnr_bactria_synod_io
+			scope:actor = { is_member_of_international_organization = international_organization:fnr_bactria_synod_io }
+		}
+
+		allow = {
+			scope:actor = {
+				is_leader_of_international_organization = international_organization:fnr_bactria_synod_io
+			}
+		}
+		
+		price = price:join_branch
+
+		select_trigger = {
+			looking_for_a = international_organization
+			target_flag = recipient
+			name = "choose_international_organization"
+			column = {
+				data = name
+			}
+			visible = {
+				international_organization_type = international_organization_type:fnr_bactria_synod_io
+			}
+			enabled = {
+				#always = no
 			}
 		}
 
-		add = {
-			if = {
-				limit = {
-					scope:actor = {
-						religious_unity < 0.40
-					}
-				}
-				value = 100
+		effect = {
+		}
+		
+		ai_will_do = {
+			add = -50
+		}
+	}	
+
+	# Restore Macedonian Empire
+	fnr_bactria_restore_the_macedonian_empire = {
+		type = internationalorganization
+
+		sound = UI_action_religion_generic
+		
+		ai_tick = daily
+		ai_tick_frequency = 80
+
+		automation_tick = monthly
+		automation_tick_frequency = 1
+		player_automated_category = religiousdoctrines
+		
+		message = national_church_action
+		
+		potential = {
+			exists = international_organization:fnr_bactria_synod_io
+			scope:actor = { is_member_of_international_organization = international_organization:fnr_bactria_synod_io }
+		}
+
+		allow = {
+			scope:actor = {
+				is_leader_of_international_organization = international_organization:fnr_bactria_synod_io
 			}
-		}		
-	}
-	
-}
+		}
+		
+		price = price:join_branch
+
+		select_trigger = {
+			looking_for_a = international_organization
+			target_flag = recipient
+			name = "choose_international_organization"
+			column = {
+				data = name
+			}
+			visible = {
+				international_organization_type = international_organization_type:fnr_bactria_synod_io
+			}
+			enabled = {
+				scope:actor = { 
+					stability > 60
+					gold > 2000
+				}
+
+			}
+		}
+
+		effect = {
+			change_country_name = MCDEM
+		}
+		
+		ai_will_do = {
+			add = -50
+		}
+	}	

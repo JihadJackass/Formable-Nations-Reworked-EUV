@@ -96,6 +96,36 @@
     JAPAN_ADJ: "Japanese"
     JAPAN_f_desc: "Japan is an East Asian island nation with a unique blend of ancient tradition and advanced technology. It is an archipelago of four main islands—Hokkaido, Honshu, Shikoku, and Kyushu—and thousands of smaller ones, with a government that is a parliamentary constitutional monarchy led by an emperor and prime minister. Characterized by mountainous terrain, Japan's population is concentrated along coastal plains, with Tokyo as its capital and largest city."
 
+    # Empire of Japan
+    EOJPN: "Empire of Japan"
+    EOJPN_f: "Empire of Japan"
+    EOJPN_ADJ: "Japanese"
+    EOJPN_f_desc: "What began as an island kingdom sealed against the outside world transformed, in barely two generations, into the most powerful empire Asia had ever seen. Driven by the doctrine of fukoku kyōhei, "enrich the country, strengthen the military," Japan devoured the old certainties of the Eastern world. Korea fell. Manchuria followed. The Western colonial powers, who had once forced open Japan's harbors at gunpoint, watched in disbelief as their own colonies were swept away by the rising sun. At its zenith the Empire stretched from the frozen margins of Siberia to the jungles of Southeast Asia, from the coast of China to the scattered atolls of the Pacific. It was an empire built on industrial ambition, military fanaticism, and an unshakable belief that the Yamato race was destined to lead all of Asia out of Western bondage. That belief would bring the world to war. To proclaim the Empire of Japan is to declare that Asia will have one master, and that the age of Western dominion over the East is finished."
+
+    # Kingdom of Persia (Bactria)
+    BMCDN: "Macedonia"
+    BMCDN_f: "Macedonia"
+    BMCDN_ADJ: "Macedonian"
+    BMCDN_f_desc: "TODO"
+
+    # Kingdom of Persia (Bactria)
+    BPSNE: "Kingdom of Persia"
+    BPSNE_f: "Kingdom of Persia"
+    BPSNE_ADJ: "Persian"
+    BPSNE_f_desc: "TODO"
+
+    # Kingdom of Armenia (Bactria)
+    ARMNA: "Kingdom of Armenia"
+    ARMNA_f: "Kingdom of Armenia"
+    ARMNA_ADJ: "Armenian"
+    ARMNA_f_desc: "TODO"
+
+    # Chosen
+    CHSEN: "Kingdom of Chōsen"
+    CHSEN_f: "Kingdom of Chōsen"
+    CHSEN_ADJ: "Korean"
+    CHSEN_f_desc: "TODO"
+
     # Angevin Empire
     AGEVN: "Angevin Empire"
     AGEVN_f: "Angevin Empire"

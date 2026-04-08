@@ -333,10 +333,148 @@
 				}
 			}
 	# Rank 3
+		# Macedonia (For Bactria)
+			BMCDN_f = {
+				level = 3
+				required_locations_fraction = 1
+				rule = plausible
+				potential = {
+					#AND = {
+						always = no # Used for event, not needed to form
+						#OR = {
+						#	has_variable = fnr_nonhistorical_enabled
+						#	has_variable = fnr_TODO_disabled
+						#}
+						#NOT = { has_variable = fnr_TODO_disabled }
+					#} 
+					NOT = { 
+						OR = {
+							tag = BMCDN
+							tag_exists = BMCDN
+						}
+					}
+				}
+				name = BMCDN
+				flag = BMCDN
+				adjective = BMCDN_ADJ
+				tag = BMCDN
+				color = map_BMCDN
+				areas = { macedonia_area albania_area northern_greece_area }
+				form_effect = {
+					if = {
+						limit = { country_rank_level < 3 }
+						set_country_rank_effect = { rank = country_rank:rank_kingdom }
+					}
+				}
+			}
+		# Persian Kingdom (For Bactria)
+			BPSNE_f = {
+				level = 3
+				required_locations_fraction = 1
+				rule = plausible
+				potential = {
+					#AND = {
+						always = no # Used for event, not needed to form
+						#OR = {
+						#	has_variable = fnr_nonhistorical_enabled
+						#	has_variable = fnr_TODO_disabled
+						#}
+						#NOT = { has_variable = fnr_TODO_disabled }
+					#} 
+					NOT = { 
+						OR = {
+							tag = BPSNE
+							tag_exists = BPSNE
+						}
+					}
+				}
+				name = BPSNE
+				flag = BPSNE
+				adjective = BPSNE_ADJ
+				tag = BPSNE
+				color = map_BPSNE
+				regions = { persia_region }
+				form_effect = {
+					if = {
+						limit = { country_rank_level < 3 }
+						set_country_rank_effect = { rank = country_rank:rank_kingdom }
+					}
+				}
+			}
+		# Kingdom of Armenia (For Bactria)
+			ARMNA_f = {
+				level = 3
+				required_locations_fraction = 1
+				rule = plausible
+				potential = {
+					#AND = {
+						always = no # Used for event, not needed to form
+						#OR = {
+						#	has_variable = fnr_nonhistorical_enabled
+						#	has_variable = fnr_TODO_disabled
+						#}
+						#NOT = { has_variable = fnr_TODO_disabled }
+					#} 
+					NOT = { 
+						OR = {
+							tag = ARMNA
+							tag_exists = ARMNA
+						}
+					}
+				}
+				name = ARMNA
+				flag = ARMNA
+				adjective = ARMNA_ADJ
+				tag = ARMNA
+				color = map_ARMNA
+				areas = { armenian_highlands_area armenia_area }
+				provinces = { khoy_province }
+				form_effect = {
+					if = {
+						limit = { country_rank_level < 3 }
+						set_country_rank_effect = { rank = country_rank:rank_kingdom }
+					}
+				}
+			}
+		# Kingdom of Chosen (For Japan)
+			CHSEN_f = {
+				level = 5
+				required_locations_fraction = 1
+				rule = plausible
+				potential = {
+					#AND = {
+						always = no # Used for event, not needed to form
+						#OR = {
+						#	has_variable = fnr_nonhistorical_enabled
+						#	has_variable = fnr_TODO_disabled
+						#}
+						#NOT = { has_variable = fnr_TODO_disabled }
+					#} 
+					NOT = { 
+						OR = {
+							tag = CHSEN
+							tag_exists = CHSEN
+						}
+					}
+					language = language:japanese_language
+				}
+				name = CHSEN
+				flag = CHSEN
+				adjective = CHSEN_ADJ
+				tag = CHSEN
+				color = map_CHSEN
+				regions = { korea_region }
+				form_effect = {
+					if = {
+						limit = { country_rank_level < 3 }
+						set_country_rank_effect = { rank = country_rank:rank_kingdom }
+					}
+				}
+			}
 		# Bactria
 			BACTR_f = {
 				level = 3
-				required_locations_fraction = 0.85
+				required_locations_fraction = 0.01 # 0.85
 				rule = plausible
 				potential = { 
 					AND = {
@@ -5151,9 +5289,6 @@
 					}
 					culture = { has_culture_group = culture_group:italian_group }
 				}
-				allow = {
-
-				}
 				name = LNGBD
 				flag = LNGBD
 				adjective = LNGBD_ADJ
@@ -5511,7 +5646,7 @@
 		# Japan - Modern
 			JAPAN_f = {
 				level = 4
-				required_locations_fraction = 0.90
+				required_locations_fraction = 1
 				rule = plausible
 				potential = {
 					AND = {
@@ -5535,7 +5670,70 @@
 				tag = JAPAN
 				color = map_JAPAN 
 				regions = { japan_region }
-			}	
+				provinces = { southern_sakhalin_province }
+			}
+		# Empire of Japan - Modern
+			EOJPN_f = {
+				level = 5
+				required_locations_fraction = 1
+				rule = plausible
+				potential = {
+					AND = {
+						OR = {
+							has_variable = fnr_modern_enabled
+							has_variable = fnr_japan_enabled
+						}
+						NOT = { has_variable = fnr_japan_disabled }
+					} 
+					NOT = { 
+						OR = {
+							tag = EOJPN
+							tag_exists = EOJPN
+						}
+					}
+					language = language:japanese_language
+				}
+				name = EOJPN
+				flag = EOJPN
+				adjective = EOJPN_ADJ
+				tag = EOJPN
+				color = map_EOJPN
+				regions = { japan_region korea_region }
+				provinces = { southern_sakhalin_province }
+				form_effect = {
+					if = {
+						limit = { country_rank_level < 4 }
+						set_country_rank_effect = { rank = country_rank:rank_empire }
+					}
+					custom_tooltip = {
+						text = fnr_create_japan_greater_east_asia_io_tt
+						create_international_organization = {
+							type = international_organization_type:fnr_japan_greater_east_asia_io
+							add_country_to_international_organization = ROOT
+							set_leader_country = ROOT
+							save_scope_as = fnr_geacps
+						}
+					}
+					custom_tooltip = {
+						text = fnr_add_japanese_clans_to_io_tt
+						scope:fnr_geacps = {
+							every_country = {
+								limit = {
+									NOT = { this = ROOT }
+									OR = {
+										has_reform = government_reform:japanese_clan
+										has_reform = government_reform:japanese_imperial_family
+									}
+								}
+								prev = {
+									add_country_to_international_organization = prev
+								}
+							}
+						}
+					}
+					set_capital = location:toshima_kanto
+				}
+			}
 		# Angevin Empire - Alt history
 			AGEVN_f = {
 				level = 4

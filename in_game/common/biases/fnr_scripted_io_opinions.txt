@@ -1,0 +1,16 @@
+﻿# IO Biases for FNR
+
+# Bactrian Synod
+io_opinion_fnr_bactria_synod_io = {
+	value = 0
+}
+
+# East Asia Sphere
+io_opinion_fnr_japan_greater_east_asia_io = {
+	value = 0
+}
+
+# Papal Hre
+
+# Moravian Patriarchate
+

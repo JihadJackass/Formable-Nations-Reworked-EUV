@@ -44,6 +44,11 @@
 					}
 				}
 				# TODO: add a setting to disable static prefix
+				tag = BMCDN
+				tag = BPSNE
+				tag = ARMNA
+				tag = EOJPN
+				tag = CHSEN
 				tag = BACTR
 				tag = BDKSN 
 				tag = PMSTN 

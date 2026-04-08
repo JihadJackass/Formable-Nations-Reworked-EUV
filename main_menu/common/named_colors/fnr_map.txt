@@ -20,14 +20,24 @@ colors = {
 		map_china = rgb { 150 150 45 }
 
 	# FORMABLE NATION COLORS
+		# Macedonia
+		map_BMCDN = rgb { 122 122 234 } 
+		# Persian Kingdom
+		map_BPSNE = rgb { 197 173 60 } 
+		# Kingdom of Armenia 
+		map_ARMNA = rgb { 155 32 32 } 
+		# Kingdom of Chōsen 
+		map_CHSEN = rgb { 212 154 165 }
+		# Empire of Japan
+		map_EOJPN = rgb { 237 69 102 }
 		# Bactria
-		map_BACTR = rgb { 210 81 35 }
+		map_BACTR = hsv360 { 228 91 72 }
 		# Ptolemaic Kingdom
 		map_PTLMY = rgb { 89 90 153 }
 		# Badakhshān
-		map_BDKSN = rgb { 216 98 48 }
+		map_BDKSN = hsv360 { 216 98 48 }
 		# Pamiristan
-		map_PMSTN = rgb { 216 98 69 }
+		map_PMSTN = hsv360 { 216 98 69 }
 		# Rhineland
 		map_RHLND = rgb { 107 161 104 }
 		# Baden-Wurttemberg
@@ -287,7 +297,7 @@ colors = {
 		# Jagiellonian Empire
 		map_JGLNN = rgb { 50 63 110 }
 		# Japan
-		map_JAPAN = rgb { 154 144 171 }
+		map_JAPAN = rgb { 189 124 137 }
 		# Kalmar Union
 		map_KLMUN = rgb { 112 112 3 }
 		# Kingdom of Aquitaine
