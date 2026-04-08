@@ -536,7 +536,7 @@
     ISISS: "Islamic State"
     ISISS_f: "Islamic State"
     ISISS_ADJ: "ISIS"
-    ISISS_f_desc: "ISIS or ISIL, is a radical Sunni Muslim militant and terrorist organization that unilaterally declared itself a worldwide caliphate (an Islamic state) in June 2014. This self-proclaimed state, which is not recognized by any other nation or the international community, aimed to establish a transnational, totalitarian Islamic state governed by its extreme interpretation of Sharia law."
+    ISISS_f_desc: "A radical Sunni Muslim militant and terrorist organization that unilaterally declared itself a worldwide caliphate (an Islamic state). This self-proclaimed state, which is not recognized by any other nation or the international community, aimed to establish a transnational, totalitarian Islamic state governed by its extreme interpretation of Sharia law."
 
     # Mingrelia
     MNGRL: "Mingrelia"

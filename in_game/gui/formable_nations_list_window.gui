@@ -9,9 +9,6 @@
 # Toggle for Alt-History Formables - fnr_althistory_enabled
 # nation that were proposed or exist in alternate timeline mods
 #
-# Toggle for Controversial Formables - fnr_controversial_enabled
-# nazi germany, israel, rhodesia, etc
-#
 # Toggle Fantasy Formables - fnr_fantasy_enabled
 # Example: camelot, atlantis any unrealstic/made up country/story countries
 #
@@ -397,13 +394,6 @@ window = {
 								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), GetPlayer.HasVariable('fnr_cordoba_enabled')), Not(GetPlayer.HasVariable('fnr_cordoba_disabled'))), 'Cordoba: ON', 'Cordoba: OFF')]"
 								onclick = "[GetScriptedGui('FormableNationReworked_toggle_cordoba').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 							}
-							# Donetsk Peoples Republic - Modern
-							button_regular = {
-								tooltip = "fnr_placeholder"
-								size = { 400 32 }
-								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_modern_enabled'), GetPlayer.HasVariable('fnr_dpr_enabled')), Not(GetPlayer.HasVariable('fnr_dpr_disabled'))), 'Donetsk Peoples Republic: ON', 'Donetsk Peoples Republic: OFF')]"
-								onclick = "[GetScriptedGui('FormableNationReworked_toggle_donetskpeoplesrepublic').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-							}
 							# East Slavia - Althistory
 							button_regular = {
 								tooltip = "fnr_placeholder"
@@ -516,13 +506,6 @@ window = {
 								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_modern_enabled'), GetPlayer.HasVariable('fnr_ukraine_enabled')), Not(GetPlayer.HasVariable('fnr_ukraine_disabled'))), 'Ukraine: ON', 'Ukraine: OFF')]"
 								onclick = "[GetScriptedGui('FormableNationReworked_toggle_ukraine').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 							}
-							# Luhansk Peoples Republic - Modern
-							button_regular = {
-								tooltip = "fnr_placeholder"
-								size = { 400 32 }
-								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_modern_enabled'), GetPlayer.HasVariable('fnr_lpr_enabled')), Not(GetPlayer.HasVariable('fnr_lpr_disabled'))), 'Luhansk Peoples Republic: ON', 'Luhansk Peoples Republic: OFF')]"
-								onclick = "[GetScriptedGui('FormableNationReworked_toggle_luhanskpeoplesrepublic').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-							}
 							# Kalmar Union - Historical
 							button_regular = {
 								tooltip = "fnr_placeholder"
@@ -628,13 +611,6 @@ window = {
 								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), GetPlayer.HasVariable('fnr_taiping_enabled')), Not(GetPlayer.HasVariable('fnr_taiping_disabled'))), 'Taiping: ON', 'Taiping: OFF')]"
 								onclick = "[GetScriptedGui('FormableNationReworked_toggle_taiping').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 							}
-							# Taliban - Modern
-							button_regular = {
-								tooltip = "fnr_placeholder"
-								size = { 400 32 }
-								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_modern_enabled'), GetPlayer.HasVariable('fnr_taliban_enabled')), Not(GetPlayer.HasVariable('fnr_taliban_disabled'))), 'Taliban: ON', 'Taliban: OFF')]"
-								onclick = "[GetScriptedGui('FormableNationReworked_toggle_taliban').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-							}
 							# Tengoku - Fantasy
 							button_regular = {
 								tooltip = "fnr_placeholder"
@@ -662,13 +638,6 @@ window = {
 								size = { 400 32 }
 								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_modern_enabled'), GetPlayer.HasVariable('fnr_madagascar_enabled')), Not(GetPlayer.HasVariable('fnr_madagascar_disabled'))), 'Madagascar: ON', 'Madagascar: OFF')]"
 								onclick = "[GetScriptedGui('FormableNationReworked_toggle_madagascar').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-							}
-							# Rhodesia - Controversial
-							button_regular = {
-								tooltip = "fnr_placeholder"
-								size = { 400 32 }
-								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_controversial_enabled'), GetPlayer.HasVariable('fnr_rhodesia_enabled')), Not(GetPlayer.HasVariable('fnr_rhodesia_disabled'))), 'Rhodesia: ON', 'Rhodesia: OFF')]"
-								onclick = "[GetScriptedGui('FormableNationReworked_toggle_rhodesia').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 							}
 							# Manchuria - Nonhistorical
 							button_regular = {
@@ -979,20 +948,6 @@ window = {
 								size = { 400 32 }
 								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_historical_enabled'), GetPlayer.HasVariable('fnr_germanempire_enabled')), Not(GetPlayer.HasVariable('fnr_germanempire_disabled'))), 'German Empire: ON', 'German Empire: OFF')]"
 								onclick = "[GetScriptedGui('FormableNationReworked_toggle_germanempire').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-							}
-							# German Reich - Controversial
-							button_regular = {
-								tooltip = "fnr_placeholder"
-								size = { 400 32 }
-								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_controversial_enabled'), GetPlayer.HasVariable('fnr_germanreich_enabled')), Not(GetPlayer.HasVariable('fnr_germanreich_disabled'))), 'German Reich: ON', 'German Reich: OFF')]"
-								onclick = "[GetScriptedGui('FormableNationReworked_toggle_germanreich').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-							}
-							# Nazi Germany - Controversial
-							button_regular = {
-								tooltip = "fnr_placeholder"
-								size = { 400 32 }
-								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_controversial_enabled'), GetPlayer.HasVariable('fnr_nazigermany_enabled')), Not(GetPlayer.HasVariable('fnr_nazigermany_disabled'))), 'Nazi Germany: ON', 'Nazi Germany: OFF')]"
-								onclick = "[GetScriptedGui('FormableNationReworked_toggle_nazigermany').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 							}
 							# Italian Empire - Modern
 							button_regular = {
@@ -1351,13 +1306,6 @@ window = {
 								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_modern_enabled'), GetPlayer.HasVariable('fnr_eu_enabled')), Not(GetPlayer.HasVariable('fnr_eu_disabled'))), 'European Union: ON', 'European Union: OFF')]"
 								onclick = "[GetScriptedGui('FormableNationReworked_toggle_europeanunion').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 							}
-							# Greater German Reich - Controversial
-							button_regular = {
-								tooltip = "fnr_placeholder"
-								size = { 400 32 }
-								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_controversial_enabled'), GetPlayer.HasVariable('fnr_greatergermanreich_enabled')), Not(GetPlayer.HasVariable('fnr_greatergermanreich_disabled'))), 'Greater German Reich: ON', 'Greater German Reich: OFF')]"
-								onclick = "[GetScriptedGui('FormableNationReworked_toggle_greatergermanreich').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-							}
 							# Soviet Union - Modern
 							button_regular = {
 								tooltip = "fnr_placeholder"
@@ -1371,13 +1319,6 @@ window = {
 								size = { 400 32 }
 								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_modern_enabled'), GetPlayer.HasVariable('fnr_empireofchina_enabled')), Not(GetPlayer.HasVariable('fnr_empireofchina_disabled'))), 'Empire of China: ON', 'Empire of China: OFF')]"
 								onclick = "[GetScriptedGui('FormableNationReworked_toggle_empireofchina').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-							}
-							# Islamic State - Modern
-							button_regular = {
-								tooltip = "fnr_placeholder"
-								size = { 400 32 }
-								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_modern_enabled'), GetPlayer.HasVariable('fnr_islamicstate_enabled')), Not(GetPlayer.HasVariable('fnr_islamicstate_disabled'))), 'Islamic State: ON', 'Islamic State: OFF')]"
-								onclick = "[GetScriptedGui('FormableNationReworked_toggle_islamicstate').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 							}
 							# Peoples Republic of China - Modern
 							button_regular = {

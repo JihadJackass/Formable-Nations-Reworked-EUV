@@ -3405,38 +3405,6 @@
 				color = map_DNTPR
 				regions = { steppes_region ruthenia_region }
 			}
-		# Luhansk Peoples Republic - Modern
-			LUHPR_f = {
-				level = 3
-				required_locations_fraction = 0.90
-				rule = plausible
-				potential = {
-					AND = {
-						OR = {
-							has_variable = fnr_modern_enabled
-							has_variable = fnr_lpr_enabled
-						}
-						NOT = { has_variable = fnr_lpr_disabled }
-					}
-					NOT = { 
-						OR = {
-							tag = LUHPR
-							tag_exists = LUHPR
-						}
-					}
-					government_type = government_type:republic
-					OR = {
-						culture = culture:mishar
-						culture = { has_culture_group = culture_group:polish_group }
-					}
-				}
-				name = LUHPR
-				flag = LUHPR
-				adjective = LUHPR_ADJ
-				tag = LUHPR
-				color = map_LUHPR
-				regions = { steppes_region ruthenia_region }
-			}	
 		# Emilia-Romagna - Alt-history
 			EMLRO_f = {
 				level = 3
@@ -4428,38 +4396,6 @@
 					}
 				}
 			}
-		# Taliban - Modern
-			TLBAN_f = {
-				level = 3
-				required_locations_fraction = 0.85
-				rule = plausible
-				potential = {
-					AND = {
-						OR = {
-							has_variable = fnr_modern_enabled
-							has_variable = fnr_taliban_enabled
-						}
-						NOT = { has_variable = fnr_taliban_disabled }
-					}
-					NOT = { 
-						OR = {
-							tag = TLBAN
-							tag_exists = TLBAN
-						}
-					}
-					OR = {
-						culture = culture:afghan_culture
-						culture = { has_culture_group = culture_group:iranian_group }
-					}
-				}
-				name = TLBAN
-				flag = TLBAN
-				adjective = TLBAN_ADJ
-				tag = TLBAN
-				color = map_TLBAN
-				areas = { sistan_area baluchistan_area }
-
-			}
 		# Tengoku - Fantasy
 			TNGKU_f = {
 				level = 3
@@ -4669,34 +4605,6 @@
 				tag = MDGSC
 				color = map_MDGSC
 				regions = { madagascar_region }
-			}
-		# Rhodesia - Controversial
-			RHDSA_f = {
-				level = 3
-				required_locations_fraction = 0.40
-				rule = plausible
-				potential = {
-					AND = {
-						OR = {
-							has_variable = fnr_controversial_enabled
-							has_variable = fnr_rhodesia_enabled
-						}
-						NOT = { has_variable = fnr_rhodesia_disabled }
-					}
-					NOT = { 
-						OR = {
-							tag = MDGSC
-							tag_exists = MDGSC
-						}
-					}					
-					culture = culture:shona_culture 
-				}
-				name = RHDSA
-				flag = RHDSA
-				adjective = RHDSA_ADJ
-				tag = RHDSA
-				color = map_RHDSA
-				regions = { zimbabwe_region }
 			}
 		# TODO POST 2.5.0: Zimbabwe - Modern
 			
@@ -6081,74 +5989,6 @@
 							}
 						}
 					}					
-					if = {
-						limit = { country_rank_level < 4 }
-						set_country_rank_effect = { rank = country_rank:rank_empire }
-					}
-				}
-			}
-		# German Reich - Controversial
-			GMNRE_f = {
-				level = 4
-				required_locations_fraction = 0.60
-				rule = plausible
-				potential = {
-					AND = {
-						OR = {
-							has_variable = fnr_controversial_enabled
-							has_variable = fnr_germanreich_enabled
-						}
-						NOT = { has_variable = fnr_germanreich_disabled }
-					}
-					NOT = { 
-						OR = {
-							tag = GMNRE
-							tag_exists = GMNRE
-						}
-					}
-					culture = { has_culture_group = culture_group:german_group }
-				}
-				name = GMNRE
-				flag = GMNRE
-				adjective = GMNRE_ADJ
-				tag = GMNRE
-				color = map_GMNRE
-				regions = { north_german_region south_german_region }
-				form_effect = {
-					if = {
-						limit = { country_rank_level < 4 }
-						set_country_rank_effect = { rank = country_rank:rank_empire }
-					}
-				}
-			}
-		# Nazi Germany - Controversial
-			NAZIG_f = {
-				level = 5
-				required_locations_fraction = 0.70
-				rule = plausible
-				potential = {
-					AND = {
-						OR = {
-							has_variable = fnr_controversial_enabled
-							has_variable = fnr_nazigermany_enabled
-						}
-						NOT = { has_variable = fnr_nazigermany_disabled }
-					} 
-					NOT = { 
-						OR = {
-							tag = NAZIG
-							tag_exists = NAZIG
-						}
-					}
-					culture = { has_culture_group = culture_group:german_group }
-				}
-				name = NAZIG
-				flag = NAZIG
-				adjective = NAZIG_ADJ
-				tag = NAZIG
-				color = map_NAZIG
-				regions = { north_german_region south_german_region }
-				form_effect = {
 					if = {
 						limit = { country_rank_level < 4 }
 						set_country_rank_effect = { rank = country_rank:rank_empire }
@@ -8119,46 +7959,6 @@
 					}
 				}
 			}
-		# Greater German Reich - Controversial
-			GTRGM_f = {
-				level = 6
-				required_locations_fraction = 0.60 # 0.60
-				rule = plausible
-				potential = {
-					AND = {
-						OR = {
-							has_variable = fnr_controversial_enabled
-							has_variable = fnr_greatergermanreich_enabled
-						}
-						NOT = { has_variable = fnr_greatergermanreich_disabled }
-					} 
-					NOT = { 
-						OR = {
-							tag = GTRGM
-							tag_exists = GTRGM
-						}
-					}
-					culture = { has_culture_group = culture_group:german_group }
-				}
-				allow = {
-					OR = {
-						tag = GMNRE
-						tag = NAZIG
-					}
-				}
-				name = GTRGM
-				flag = GTRGM
-				adjective = GTRGM_ADJ
-				tag = GTRGM
-				color = map_GTRGM
-				regions = { north_german_region south_german_region }
-				form_effect = {
-					if = {
-						limit = { country_rank_level < 4 }
-						set_country_rank_effect = { rank = country_rank:rank_empire }
-					}
-				}
-			}
 		# Soviet Union - Modern
 			SOVET_f = {
 				level = 5
@@ -8232,37 +8032,6 @@
 						set_country_rank_effect = { rank = country_rank:rank_empire }
 					}
 				}
-			}
-		# Islamic State - Modern 
-			ISISS_f = {
-				level = 4
-				required_locations_fraction = 1
-				rule = plausible
-				potential = {
-					AND = {
-						OR = {
-							has_variable = fnr_modern_enabled
-							has_variable = fnr_islamicstate_enabled
-						}
-						NOT = { has_variable = fnr_islamicstate_disabled }
-					} 
-					NOT = { 
-						OR = {
-							tag = ISISS
-							tag_exists = ISISS
-						}
-					}
-					OR = {
-						culture = culture:syriac_culture
-						culture = culture:armenian_culture
-					}
-				}
-				name = ISISS
-				flag = ISISS
-				adjective = ISISS_ADJ
-				tag = ISISS
-				color = map_ISISS
-				areas = { jazira_area }
 			}
 		# Peoples Republic of China - Modern
 			PRCCN_f = {

@@ -169,8 +169,8 @@
       fnr_althistorical_tooltip_on: "Click to #R DISABLE#!\n\nThis will disable Alt-history Formables such as Angevin Empire, Danubian Federation, Dual Monarchy, etc"
       fnr_althistorical_tooltip_off: "Click to #G ENABLE#!\n\nThis will enable Alt-history Formables such as Angevin Empire, Danubian Federation, Dual Monarchy, etc"
       # Controversial 
-      fnr_controversial_tooltip_on: "Click to #R DISABLE#!\n\nThis will disable Controversial Formables such as Nazi Germany, Israel, Palestine, etc"
-      fnr_controversial_tooltip_off: "Click to #G ENABLE#!\n\nThis will enable Controversial Formables such as Nazi Germany, Israel, Palestine, etc"
+      fnr_controversial_tooltip_on: "Click to #R DISABLE#!\n\nThis will disable Controversial Formables such as Israel, Palestine, etc"
+      fnr_controversial_tooltip_off: "Click to #G ENABLE#!\n\nThis will enable Controversial Formables such as Israel, Palestine, etc"
       # Fantasy
       fnr_fantasy_tooltip_on: "Click to #R DISABLE#!\n\nThis will disable Fantasy Formables such as Camelot, Adriatic Empire, Catholica Russica, etc"
       fnr_fantasy_tooltip_off: "Click to #G ENABLE#!\n\nThis will enable Fantasy Formables such as Camelot, Adriatic Empire, Catholica Russica, etc"
