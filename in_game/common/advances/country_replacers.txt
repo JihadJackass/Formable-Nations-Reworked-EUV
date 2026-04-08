@@ -1,51 +1,5 @@
 ﻿# FNR COUNTRY ADVANCES REPLACERS (COPIES VANILLA ADVANCES FOR FORMABLES)
 
-# Germans
-	fnr_german_imperial_roads = {
-		age = age_3_discovery
-		icon = road_building
-
-		potential = {
-			OR = {
-				has_or_had_tag = GMNEM
-				has_or_had_tag = GMNRE
-			}
-		}
-		land_cost_on_distance_from_capital = -0.05
-		global_supply_limit_modifier = 0.1
-
-		requires = paved_road_advance
-	}
-
-	fnr_german_fair_towns = {
-		age = age_4_reformation
-		icon = genoese_banking_traditions
-
-		potential = {
-			OR = {
-				has_or_had_tag = GMNEM
-				has_or_had_tag = GMNRE
-			}
-		}
-		trade_range_modifier = 0.1
-		merchant_maintenance_cost = -0.1
-	}
-
-	fnr_german_biedermeier = {
-		age = age_6_revolutions
-		icon = renaissance_advance
-
-		potential = {
-			OR = {
-				has_or_had_tag = GMNEM
-				has_or_had_tag = GMNRE
-			}
-		}
-		stability_cost = -0.2
-		num_possible_artists = 1
-
-		requires = crown_power_advance_revolutions
-	}
 # Dutch
 	fnr_dutch_education = { #1537
 		age = age_4_reformation

@@ -262,14 +262,10 @@ colors = {
 		
 		# German Empire
 		map_GMNEM = rgb { 37 37 56 }
-		# German Reich
-		map_GMNRE = rgb { 13 13 20 }
 		# Goguryeo
 		map_GGURY = rgb { 39 15 37 }
 		# Great Sorbia
 		map_GSORB = rgb { 19 13 115 }
-		# Greater German Reich
-		map_GTRGM = rgb { 15 8 8 }
 		# Hanseatic League
 		map_HNSLG = rgb { 49 54 9 }
 		# Hyperborea
@@ -286,8 +282,6 @@ colors = {
 		map_IBNEM = rgb { 118 116 2 }
 		# Illyria
 		map_ILYRA =  rgb { 80 40 2 }
-		# Islamic State
-		map_ISISS = rgb { 2 2 2 }
 		# Israel
 		map_ISREL = rgb { 18 103 163 }
 		# Italian Empire
@@ -322,8 +316,6 @@ colors = {
 		map_LMBYV = rgb { 75 109 51 }
 		# Lower Saxony
 		map_LWSXY = rgb { 82 7 13 }
-		# Luhansk People's Republic
-		map_LUHPR = rgb { 28 2 1 }
 		# Lusitanian Empire
 		map_LUSIT = rgb { 80 97 211 }
 		# Macedonia 
@@ -340,8 +332,6 @@ colors = {
 		map_MRCIA = rgb { 18 50 102 }
 		# Mingrelia
 		map_MNGRL = rgb { 82 29 1 }
-		# Nazi Germany
-		map_NAZIG = rgb { 15 4 4 }
 		# North Korea
 		map_NKORA = hsv360 { 358 88 93 } 
 		# North Sea Empire
@@ -364,8 +354,6 @@ colors = {
 		map_PONTU = rgb { 3 1 3 }
 		# Republic of China
 		map_ROCCN = rgb { 3 0 180 }
-		# Rhodesia
-		map_RHDSA = rgb { 32 66 23 }
 		# Russian Empire
 		map_RUSEM = rgb { 0 85 2 }
 		# Russian Federation
@@ -388,8 +376,6 @@ colors = {
 		map_SWDEM = rgb { 5 9 120 }
 		# Taiping
 		map_TPING = rgb { 129 129 4 }
-		# Taliban
-		map_TLBAN = rgb { 193 193 177 }
 		# Tengoku
 		map_TNGKU = rgb { 165 165 11 }
 		# The Horde

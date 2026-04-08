@@ -92,10 +92,6 @@
       GMNEM_the_reich_of_germans: "The Reich of Germans"
       GMNEM_the_reich_of_germans_desc: "A united German Reich demands respect through strength, not diplomacy. Our policies prioritize German cultural dominance and territorial assertion over international approval. Minority cultures within our borders will be assimilated, while our foreign policy pursues German interests without apology. Other powers may resent our rise, but they cannot deny our primacy."
 
-      # Nazi Germany
-      NAZIG_nationalsozialistische_deutsche_arbeiterpartei: "Nationalsozialistische Deutsche Arbeiterpartei"
-      NAZIG_nationalsozialistische_deutsche_arbeiterpartei_desc: "The National Socialist state operates through total mobilization of society toward ideological goals. By subordinating all aspects of national life—economic, cultural, military—to party control, the regime pursues aggressive expansion with complete disregard for international norms or diplomatic consequences. This totalitarian approach allows for rapid cultural assimilation and economic reorganization in conquered territories, though at the cost of universal international condemnation."
-
       # Hanseatic League
       HNSLG_hansa_traders: "Hansa Traders"
       HNSLG_hansa_traders_desc: "From the Baltic to the North Sea, Hansa merchants operate as one. Our network of kontors and shared shipping routes allows us to trade where others cannot reach, transforming the League from a loose alliance into the dominant commercial power of Northern Europe."

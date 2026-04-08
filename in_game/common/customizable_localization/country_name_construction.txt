@@ -119,9 +119,7 @@
 				tag = GGURY
 				tag = GLCEM
 				tag = GMNEM
-				tag = GMNRE
 				tag = GSORB
-				tag = GTRGM
 				tag = HAWAI
 				tag = HESNA
 				tag = HMLAY
@@ -130,7 +128,6 @@
 				tag = HORDE
 				tag = IBNEM
 				tag = ILYRA
-				tag = ISISS
 				tag = ISREL
 				tag = ITMCH
 				tag = ITNEM
@@ -147,7 +144,6 @@
 				tag = LMBYV
 				tag = LNGBD
 				tag = LTNEM
-				tag = LUHPR
 				tag = LUSIT
 				tag = LWSXY
 				tag = MACED
@@ -157,7 +153,6 @@
 				tag = MNCRA
 				tag = MNGRL
 				tag = MRCIA
-				tag = NAZIG
 				tag = NKORA
 				tag = NOSEM
 				tag = OCCIT
@@ -168,7 +163,6 @@
 				tag = PONTU
 				tag = PRCCN
 				tag = RCONF
-				tag = RHDSA
 				tag = ROCCN
 				tag = RUFED
 				tag = RUSEM
@@ -180,7 +174,6 @@
 				tag = SULAW
 				tag = SWDEM
 				tag = TBETE
-				tag = TLBAN
 				tag = TNGKU
 				tag = TPING
 				tag = TURKY

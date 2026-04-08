@@ -269,12 +269,6 @@
     DNTPR_ADJ: "Donetsk"
     DNTPR_f_desc: "The Donetsk People's Republic (DPR) is a self-proclaimed, now Russian-annexed state in eastern Ukraine's Donbass region, established in 2014 amid political turmoil. It is a republic of Russia with its capital in Donetsk, established on a territory that was illegally annexed in September 2022. Prior to annexation, it existed as a separatist entity with limited international recognition. Its ideology has been shaped by a mixture of Russian ultranationalism, Orthodox fundamentalism, and Soviet-era ideals."
 
-    # Luhansk PR
-    LUHPR: "Luhansk People's Republic"
-    LUHPR_f: "Luhansk People's Republic"
-    LUHPR_ADJ: "Luhansk"
-    LUHPR_f_desc: "The Luhansk People's Republic (LPR) is a breakaway state in eastern Ukraine, located in the Donbas region, that was proclaimed in 2014 and effectively annexed by Russia in 2022. It is a disputed territory, with nearly all UN member states considering it a part of Ukraine. The LPR was formed by Russian-backed separatists following the Euromaidan revolution and is heavily supported by Russia, but it has received limited international recognition"
-
     # Illyria
     ILYRA: "Illyria"
     ILYRA_f: "Illyria"
@@ -347,18 +341,6 @@
     GMNEM_ADJ: "German"
     GMNEM_f_desc: "The German Empire was a German state that existed from 1871 to 1918, formed from the unification of German states led by Prussia. It was a federal monarchy, dominated by Prussia, which provided the hereditary emperor and a significant portion of the population and territory. The empire had a bicameral parliament (the Reichstag and the Bundesrat) but real power was concentrated in the emperor and his chancellor, Otto von Bismarck, especially under his leadership.\n\nThe new constitution came into force on 16 April, changing the name of the federal state to the German Empire and introducing the title of German Emperor for Wilhelm I, King of Prussia from the House of Hohenzollern. Berlin remained its capital, and Otto von Bismarck, Minister President of Prussia, became chancellor, the head of government. After 1850, the states of Germany had rapidly become industrialized."
 
-    # German Reich
-    GMNRE: "German Reich"
-    GMNRE_f: "German Reich"
-    GMNRE_ADJ: "German"
-    GMNRE_f_desc: "The German Reich was the official name for the German nation-state from 1871 to 1945, encompassing three distinct political systems: the German Empire (1871-1918), the Weimar Republic (1919-1933), and Nazi Germany (1933-1945). The term 'German Reich' is most frequently associated with the Third Reich, or Nazi Germany, which was a totalitarian dictatorship under Adolf Hitler and the Nazi Party"
-
-    # Greater German Reich
-    GTRGM: "Greater German Reich"
-    GTRGM_f: "Greater German Reich"
-    GTRGM_ADJ: "German"
-    GTRGM_f_desc: "The Greater German Reich was the official name for Nazi Germany from 1938 onwards, styled as the Greater Germanic Reich of the German Nation. This totalitarian state, led by Adolf Hitler, sought to expand its territorial control across Europe, annexing territories like Austria and the Sudetenland. The state's ideology was built on Nazi principles of racial superiority, aiming to establish dominance in Eastern Europe."
-
     # Hanseatic League
     #HANSA: "Hanseatic League"
     HNSLG: "Hanseatic League"
@@ -419,12 +401,6 @@
     MRCIA_f: "Mercia"
     MRCIA_ADJ: "Mercian"
     MRCIA_f_desc: "Mercia was a powerful Anglo-Saxon kingdom in the Midlands of England, dominant from the 7th to 9th centuries. Its name comes from the Old English for 'people of the marches' or 'boundaries,' reflecting its position bordering the Celtic tribes to the west. The kingdom was known for its power during the Heptarchy, featuring influential rulers like Penda and Offa, who built Offa's Dyke to mark the border with Wales"
-
-    # Nazi Germany
-    NAZIG: "Nazi Germany"
-    NAZIG_f: "Nazi Germany"
-    NAZIG_ADJ: "German"
-    NAZIG_f_desc: "Nazi Germany was the German state from 1933 to 1945, ruled by Adolf Hitler and the Nazi Party, transforming it into a totalitarian dictatorship. It is also known as the Third Reich, a term that implied succession from the Holy Roman Empire and German Empire. Key features included extreme nationalism, virulent antisemitism, expansionist foreign policy, and the persecution of Jews and other minority groups, which ultimately led to World War II"
 
     # Russian Empire
     RUSEM: "Russian Empire"
@@ -532,12 +508,6 @@
     AFGAN_ADJ: "Afghani"
     AFGAN_f_desc: "Afghanistan is a landlocked, mountainous country located at the crossroads of Central and South Asia, with a diverse, multi-ethnic population and official languages of Pashto and Dari. Its geography is dominated by the Hindu Kush mountains and deserts, with fertile valleys and plains situated between them. The country's long history is marked by its strategic location on trade routes, attracting numerous invaders, and its culture is deeply influenced by Islamic values and a strong sense of personal honor, hospitality, and loyalty."
 
-    # Islamic State (ISIS)
-    ISISS: "Islamic State"
-    ISISS_f: "Islamic State"
-    ISISS_ADJ: "ISIS"
-    ISISS_f_desc: "A radical Sunni Muslim militant and terrorist organization that unilaterally declared itself a worldwide caliphate (an Islamic state). This self-proclaimed state, which is not recognized by any other nation or the international community, aimed to establish a transnational, totalitarian Islamic state governed by its extreme interpretation of Sharia law."
-
     # Mingrelia
     MNGRL: "Mingrelia"
     MNGRL_f: "Mingrelia"
@@ -610,12 +580,6 @@
     TPING_ADJ: "Taiping"
     TPING_f_desc: "The Taiping Heavenly Kingdom was a theocratic monarchy that existed from 1851–1864 in southern and central China, with its capital at Nanjing. It was led by Hong Xiuquan and aimed to overthrow the Qing dynasty through a rebellion based on a form of Christianity, common ownership of land, and radical social reforms such as abolishing foot-binding and granting women equal rights. Despite initial success in seizing major cities, the kingdom ultimately failed due to internal strife and Qing forces, ultimately collapsing in 1864"
 
-    # Taliban
-    TLBAN: "Taliban"
-    TLBAN_f: "Taliban"
-    TLBAN_ADJ: "Taliban"
-    TLBAN_f_desc: "Under the Taliban, Afghanistan is a theocratic de facto state known as the Islamic Emirate of Afghanistan. The regime is characterized by a strict, hardline interpretation and enforcement of Sharia law, severe human rights violations (particularly against women and girls), and a lack of international recognition."
-
     # Tengoku
     TNGKU: "Tengoku"
     TNGKU_f: "Tengoku"
@@ -681,12 +645,6 @@
     MDGSC_f: "Madagascar"
     MDGSC_ADJ: "Madagascaran"
     MDGSC_f_desc: "Madagascar is a large island nation in the Indian Ocean off the coast of Africa, known for its unique biodiversity, which evolved in isolation and includes a high percentage of species found nowhere else on Earth. The country's economy is primarily based on agriculture, with a population facing high poverty and structural challenges. Its diverse geography includes tropical coasts, temperate plateaus, and arid regions, with a semi-presidential republic as its political system."
-
-    # Rhodesia
-    RHDSA: "Rhodesia"
-    RHDSA_f: "Rhodesia"
-    RHDSA_ADJ: "Rhodesian"
-    RHDSA_f_desc: "Rhodesia was an unrecognised country in Southern Africa from 1965 to 1979, which was the de facto successor to the British colony of Southern Rhodesia. It was characterized by a white-minority government that issued a unilateral declaration of independence (UDI) and faced internal conflict, and the territory eventually became modern-day Zimbabwe."
 
     # Palestine
     PLSTN: "Palestine"
