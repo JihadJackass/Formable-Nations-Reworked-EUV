@@ -919,12 +919,6 @@ RHLND_monarchy_late = { # Rhenish Coat of Arms
 			texture = "te_langobards.dds"
 		}
 	}
-# Islamic State (ISIS)
-	ISISS = {
-		textured_emblem = {
-			texture = "te_islamic_state.dds"
-		}	
-	}	
 # Baltic States	
 	BLTST = {
 		pattern = "pattern_cross.dds"

@@ -5109,37 +5109,6 @@ FormableNationsReworkedDebug_initialize = {
 				}
 			}
 
-		# Islamic State - Modern
-			FormableNationReworked_toggle_islamicstate = {
-				scope = country
-				is_shown = { always = yes }
-				is_valid = { always = yes }
-				effect = {
-					if = { # Cycle: Default → Force OFF → Force ON → Default
-						limit = {
-							NOT = { has_variable = fnr_islamicstate_enabled }
-							NOT = { has_variable = fnr_islamicstate_disabled }
-						}
-						every_country = { # Currently DEFAULT → Force OFF
-							set_variable = { name = fnr_islamicstate_disabled value = yes }
-						}
-					}
-					else_if = { # Currently FORCE OFF → Force ON
-						limit = { has_variable = fnr_islamicstate_disabled }
-						every_country = { 
-							remove_variable = fnr_islamicstate_disabled
-							set_variable = { name = fnr_islamicstate_enabled value = yes }
-						}
-					}
-					else_if = { # Currently FORCE ON → Default
-						limit = { has_variable = fnr_islamicstate_enabled }
-						every_country = {
-							remove_variable = fnr_islamicstate_enabled
-						}
-					}
-				}
-			}
-
 		# Peoples Republic of China - Modern
 			FormableNationReworked_toggle_peoplesrepublicofchina = {
 				scope = country
