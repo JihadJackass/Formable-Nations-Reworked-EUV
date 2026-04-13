@@ -1,0 +1,28 @@
+﻿# Modifier Icons
+
+	# Moravian Patriarchate
+
+		fnr_price_influence_holy_roman_empire_member_cost_modifier = {
+			positive = "gfx/interface/icons/modifier_types/change_heir_selection_cost_modifier.dds"
+		}
+
+	# Greco-Bactria
+
+		fnr_greco_buddhism_action_hybridize_local_cultures_price_cost_modifier = {
+			positive = "gfx/interface/icons/modifier_types/change_heir_selection_cost_modifier.dds"
+		}
+
+		fnr_proclaim_bactrian_synod_price_cost_modifier = {
+			positive = "gfx/interface/icons/modifier_types/change_heir_selection_cost_modifier.dds"
+		}
+
+		fnr_spread_litergical_copies_of_alexander_price_cost_modifier = {
+			positive = "gfx/interface/icons/modifier_types/change_heir_selection_cost_modifier.dds"
+		}
+
+	# Japan IO
+
+		fnr_empire_of_japan_integration_of_old_imperial_systems_cost_modifier = {
+			positive = "gfx/interface/icons/modifier_types/change_heir_selection_cost_modifier.dds"
+		}
+

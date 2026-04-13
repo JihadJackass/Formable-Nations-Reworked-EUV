@@ -1,14 +1,20 @@
 ﻿
-	fnr_spread_litergical_copies_of_alexander = {
+	fnr_spread_litergical_copies_of_alexander_price = {
 		religious_influence = 40
+		min_scale = 1       
+		max_scale = 3
 	}
 
-	fnr_proclaim_bactrian_synod = {
+	fnr_proclaim_bactrian_synod_price = {
 		religious_influence = 100
+		min_scale = 1       
+		max_scale = 3
 	}
 
-	fnr_greco_buddhism_action_hybridize_local_cultures = {
+	fnr_greco_buddhism_action_hybridize_local_cultures_price = {
 		religious_influence = 180
+		min_scale = 1      
+		max_scale = 3
 	}
 
 

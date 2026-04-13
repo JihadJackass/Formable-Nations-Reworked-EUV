@@ -1,6 +1,29 @@
 ﻿l_english:
 
-  # Prices
+  #######################
+  # Prices Localization #
+  #######################
 
-  fnr_empire_of_japan_integration_of_old_imperial_systems: "Price of Imperial Systems Integration"
+    # Religion Generic Action Prices
+
+      # Bactrian Religion Generic Acitons
+
+        fnr_spread_litergical_copies_of_alexander_price: "Price of Spreading Litergical Copies of Alexander"
+        fnr_proclaim_bactrian_synod_price: "Price of Proclaiming Bactrian Synod"
+
+    # IO Generic Action Prices
+
+      # Japan East Asia Sphere IO Prices
+
+        fnr_empire_of_japan_integration_of_old_imperial_systems_price: "Price of Imperial Systems Integration"
+
+      # Bactrian IO Prices
+
+        fnr_greco_buddhism_action_hybridize_local_cultures_price: "Price of Hybridizing Local Cultures"
+
+      # Moravian Patriarchate IO Prices
+
+        fnr_influence_holy_roman_empire_member_price: "Price of Influencing a Holy Roman Empire Member"
+
+
 

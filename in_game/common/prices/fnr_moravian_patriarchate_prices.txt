@@ -1,7 +1,9 @@
 ﻿
-#	fnr_price_influence_holy_roman_empire_member = {
-#		religious_influence = 25
-#	}
+	fnr_influence_holy_roman_empire_member_price = {
+		religious_influence = 20
+		min_scale = 1       
+		max_scale = 3
+	}
 
 #	fnr_price_arrange_polish_coalition = {
 #		religious_influence = 30
@@ -15,5 +17,4 @@
 #		religious_influence = 85
 #	}
 
-	# TODO POST 2.5.0: fix
 	

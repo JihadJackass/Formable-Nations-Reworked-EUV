@@ -44,6 +44,14 @@
 					}
 				}
 				# TODO: add a setting to disable static prefix
+				tag = ONTRO
+				tag = KDOME
+				tag = KKHAM
+				tag = OTRMR
+				tag = COTRP
+				tag = COEDS
+				tag = POFAN
+				tag = ASSSN
 				tag = BMCDN
 				tag = BPSNE
 				tag = ARMNA

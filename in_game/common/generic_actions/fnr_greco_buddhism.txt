@@ -34,7 +34,7 @@
 			}
 		}
 
-		price = price:fnr_spread_litergical_copies_of_alexander
+		price = price:fnr_spread_litergical_copies_of_alexander_price
 
 		select_trigger = {
 			looking_for_a = religion
@@ -128,7 +128,7 @@
 			}
 		}
 
-		price = price:fnr_greco_buddhism_action_hybridize_local_cultures
+		price = price:fnr_greco_buddhism_action_hybridize_local_cultures_price
 
 		select_trigger = {
 			looking_for_a = religion
@@ -237,7 +237,7 @@
 			}
 		}
 
-		price = price:fnr_proclaim_bactrian_synod
+		price = price:fnr_proclaim_bactrian_synod_price
 
 		select_trigger = {
 			looking_for_a = religion
@@ -282,6 +282,91 @@
 			}
 		}
 	}
+
+	# Embrace religion to our ruler and family
+	fnr_grecobuddhism_embrace_religion = {
+		type = religious
+
+		sound = UI_action_religion_generic
+
+		ai_tick = monthly
+		ai_tick_frequency = 24
+		automation_tick = monthly
+		automation_tick_frequency = 6
+
+		automation_tick = monthly
+		automation_tick_frequency = 12
+		player_automated_category = religiousdoctrines
+
+		potential = {
+			scope:actor = {
+				religion = religion:fnr_greco_buddhism_religion
+				ruler ?= {
+					NOT = { religion = religion:fnr_greco_buddhism_religion }
+				}
+			}
+		}
+
+		allow = {
+			scope:actor = {
+				religion = religion:fnr_greco_buddhism_religion
+				ruler ?= {
+					NOT = { religion = religion:fnr_greco_buddhism_religion }
+				}
+			}
+		}
+
+		price = price:fnr_spread_litergical_copies_of_alexander_price
+
+		select_trigger = {
+			looking_for_a = religion
+			source = actor
+			target_flag = recipient
+			name = "choose_religion"
+			column = {
+				data = name
+			}
+		}
+
+		effect = {
+			custom_tooltip = {
+				text = fnr_grecobuddhism_embrace_religion_tt
+				scope:actor = {
+					change_religion_for_ruler_and_family = { 
+						country = scope:actor 
+						religion = religion:fnr_greco_buddhism_religion 
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			add = -100
+
+			add = {
+				if = {
+					limit = {
+						scope:actor = {
+							religious_unity < 0.20
+						}
+					}
+					value = 200
+				}
+			}
+
+			add = {
+				if = {
+					limit = {
+						scope:actor = {
+							religious_unity < 0.40
+						}
+					}
+					value = 100
+				}
+			}
+		}
+	}
+
 
 # Bactrian Syndo IO actions
 
@@ -390,20 +475,18 @@
 			visible = {
 				international_organization_type = international_organization_type:fnr_bactria_synod_io
 			}
-			scope:actor = { 
-				area:armenia_area = {
-					any_ownable_location_in_area = {
-						owner = { this = c:BACTR }
-						percent > 0.5
-					}
-				}
-				area:armenian_highlands_area = {
-					any_ownable_location_in_area = {
-						owner = { this = c:BACTR }
-						percent > 0.5
-					}
-				}
-			}
+		#		area:armenia_area = {
+		#			any_ownable_location_in_area = {
+		#				owner = { this = c:BACTR }
+		#				percent > 0.5
+		#			}
+		#		}
+		#		area:armenian_highlands_area = {
+		#			any_ownable_location_in_area = {
+		#				owner = { this = c:BACTR }
+		#				percent > 0.5
+		#			}
+		#		}
 		}
 
 		effect = {
@@ -674,16 +757,13 @@
 				international_organization_type = international_organization_type:fnr_bactria_synod_io
 			}
 			enabled = {
-				scope:actor = { 
-					stability > 60
-					gold > 2000
-				}
-
+				stability > 60
+				gold > 2000
 			}
 		}
 
 		effect = {
-			change_country_name = MCDEM
+			scope:actor = { change_country_name = MCDEM }
 		}
 		
 		ai_will_do = {

@@ -2,6 +2,16 @@
 # Formable Nations: Reworked Holy Site Types #
 ##############################################
 
+# Great Moravia Holy Sites
+
+	fnr_great_moravia_orthodox_holy_site = {
+		location_modifier = {
+			local_clergy_desired_pop = 0.0100
+			local_unrest = -0.001
+			local_max_literacy = -0.00050
+		}
+	}
+
 # Bactria Holy Sites
 
 	# Hellenic Holy Sites

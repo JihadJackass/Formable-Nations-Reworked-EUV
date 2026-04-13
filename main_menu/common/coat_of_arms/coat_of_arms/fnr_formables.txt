@@ -4,6 +4,69 @@
 
 # TODO POST 2.5.0: Alternatives for different government types and use less textured flags (only when needed such as sweden-norway with too many colors)
 
+# Ontario
+	ONTRO = {
+		textured_emblem = {
+			texture = "te_ontario.dds"
+		}	
+	}
+
+# Gobi
+	KGOBI = {
+		textured_emblem = {
+			texture = "te_gobi.dds"
+		}	
+	}
+
+# Domé
+	KDOME = {
+		textured_emblem = {
+			texture = "te_dome.dds"
+		}	
+	}
+
+# Kham
+	KKHAM = {
+		textured_emblem = {
+			texture = "te_kham.dds"
+		}	
+	}
+
+# Outremer
+	OTRMR = {
+		textured_emblem = {
+			texture = "te_outremer.dds"
+		}	
+	}
+
+# County of Edessa
+	COEDS = {
+		textured_emblem = {
+			texture = "te_county_of_edessa.dds"
+		}	
+	}
+
+# County of Tripoli
+	COTRP = {
+		textured_emblem = {
+			texture = "te_county_of_tripoli.dds"
+		}	
+	}
+
+# Prinicpality of Antioch
+	POFAN = {
+		textured_emblem = {
+			texture = "te_principality_of_antioch.dds"
+		}	
+	}
+
+# Ḥaššāšīyīn
+	ASSSN = {
+		textured_emblem = {
+			texture = "te_hashshashin.dds"
+		}	
+	}
+
 # Kingdom of Persia
 	BPSNE = {
 		textured_emblem = {

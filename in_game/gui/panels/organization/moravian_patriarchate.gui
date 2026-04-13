@@ -1,0 +1,214 @@
+organization_religious_theme = {
+	# blockoverride "organization_panel_left_header" {
+	# }
+
+	# blockoverride "organization_panel_right_header" {
+	# 	hbox = {
+	# 		subheader_unified_icon = {
+	# 			datacontext = "[Player]"
+	# 			blockoverride "mirror_layout" { righttoleft = yes }
+
+	# 			blockoverride "subheader_unified_icon_texture" {
+	# 				texture = "gfx/interface/icons/religious_doctrines/religious_influence.dds"
+	# 			}
+	# 			blockoverride "subheader_unified_top_text" {
+	# 				text = "[religious_influence|e]"
+	# 				align = nobaseline
+	# 			}
+	# 			blockoverride "subheader_unified_bottom_text" {
+	# 				text = "[GetPlayer.GetCurrencyValue('religious_influence')|2%]"
+	# 				align = nobaseline
+	# 			}
+				
+	# 			tooltipwidget = { 
+	# 				using = religious_influence_tooltip 
+	# 				blockoverride "religion_context" {
+	# 					datacontext = "[GetReligionByKey('catholic')]"
+	# 				}
+	# 				blockoverride "country_context" {
+	# 					datacontext = "[GetPlayer]"
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+	# }
+
+	blockoverride "ios_information_header_order" {
+		hbox = {
+			margin_left = 8
+			using = organization_piechart_template
+			blockoverride "organization_piechart_size" { size = { 25 25 } }
+			blockoverride "organization_piechart_value" 
+			{
+				value = "[Subtract_float(FixedPointToFloat(InternationalOrganizationsView.GetInternationalOrganization.GetVariable(InternationalOrganizationTypeVariable.GetTag)),FixedPointToFloat(InternationalOrganizationTypeVariable.GetMin))]"
+			}
+			blockoverride "organization_piechart_max_value" 
+			{
+				value = "[Subtract_float(FixedPointToFloat(InternationalOrganizationTypeVariable.GetMax), FixedPointToFloat(InternationalOrganizationsView.GetInternationalOrganization.GetVariable(InternationalOrganizationTypeVariable.GetTag)))]"
+			}
+			blockoverride "organization_piechart_icon" 
+			{
+				texture = "[InternationalOrganizationsView.GetInternationalOrganization.GetVariableIcon(InternationalOrganizationTypeVariable.GetTag)]"
+			}
+		}
+		text_single = {
+			autoresize = yes
+			align = left
+			margin_left = 8
+			text = "[InternationalOrganizationsView.GetInternationalOrganization.GetVariableText(InternationalOrganizationTypeVariable.GetTag)]"
+		}
+	}
+
+	blockoverride "ios_information_header_content_extra_2" {
+		using = ios_header_content_extra_template
+		blockoverride "ios_header_content_extra" {
+			text_single = {
+				autoresize = yes
+				align = right
+				raw_text = "[GetPlayer.GetCurrencyValue('religious_influence')|2%]"
+			}
+	
+			widget = {
+				size = { 24 24 }
+				icon = {
+					size = { 100% 100% }
+					using = icon_church_power
+				}
+			}
+		
+			tooltipwidget = { 
+				using = religious_influence_tooltip 
+				blockoverride "religion_context" {
+					datacontext = "[GetReligionByKey('fnr_great_moravia_orthodox')]"
+				}
+				blockoverride "country_context" {
+					datacontext = "[GetPlayer]"
+				}
+			}
+		}
+	}
+
+	blockoverride "organization_laws_subheader" {}
+
+	blockoverride "organization_overview_list_bg" {}
+
+	blockoverride "organization_overview_list_item" {
+		hbox = {
+			layoutpolicy_horizontal = expanding
+			margin = {10 5}
+			
+			card_expandable = {
+				layoutpolicy_horizontal = expanding
+				blockoverride "header_pattern_texture_density" {texture_density = 1.75}
+				blockoverride "header_content" {
+					tagtooltip_enabled = yes
+					tooltipwidget = {
+						using = SubTabIOMembersTooltip
+					}
+					size = { 100% 100% }
+					icon = {
+						size = { 25 25 }
+						texture = "[MemberTypeItem.GetIcon]"
+						texture_density = 2
+						alpha = 1
+						tooltipwidget = {
+							using = SubTabIOMembersTooltip
+						}
+					}
+				}
+				
+				blockoverride "header_button_onclick" {
+					visible = "[EqualTo_string(Localize('MEMBERS'), MemberTypeItem.GetName)]"
+					onclick = "[InternationalOrganizationsView.Vars.Toggle('showing_all_members')]"
+				}
+				blockoverride "icon_replace_visible_yes" {
+					visible = "[InternationalOrganizationsView.Vars.Exists('showing_all_members')]"
+				}
+				blockoverride "icon_replace_visible_not" {
+					visible = "[Not(InternationalOrganizationsView.Vars.Exists('showing_all_members'))]"
+				}
+
+				blockoverride "bottom_content_onclick" {
+					visible = "[Not( And(Not(InternationalOrganizationsView.Vars.Exists('showing_all_members')), EqualTo_string(Localize('MEMBERS'), MemberTypeItem.GetName)) )]"
+				}
+
+				blockoverride "bottom_content" {
+					hbox = {
+						layoutpolicy_horizontal = expanding
+						visible = "[Not( And(Not(InternationalOrganizationsView.Vars.Exists('showing_all_members')), EqualTo_string(Localize('MEMBERS'), MemberTypeItem.GetName)) )]"
+						
+						scrollarea = {
+							layoutpolicy_horizontal = expanding
+							block "members_entry_scroll_area_max_size" {
+								maximumsize = { -1 240 }
+								minimumsize = { 490 -1 }
+							}
+							scrollbarpolicy_horizontal = always_off
+							autoresizescrollarea = yes
+							scrollbar_vertical = {
+								using = Scrollbar_Vertical
+							}
+							scrollwidget = {
+								fixedgridbox = {
+									addrow = 26
+									addcolumn = 38
+									layoutpolicy_horizontal = expanding
+									flipdirection = yes
+									datamodel_wrap = 13
+									datamodel = "[MemberTypeItem.GetCountries]"
+									datamodel_reuse_widgets = yes
+								}
+							}
+						}
+					}
+				}
+				
+			}
+		}
+	}
+	blockoverride "organization_overview_list_custom_bottom" {}
+
+
+	blockoverride "common_ios_subheader_properties" {
+		layoutpolicy_horizontal = expanding
+		size = { -1 40 }
+		margin = { 30 0}
+	}
+
+	blockoverride "portrait_io_widget" {
+		size = { 250 190 }
+		scissor = yes
+	}
+
+	blockoverride "organization_panel_middle_botton" {}
+
+	blockoverride "country_header_orientation" {
+		margin = {12 0}
+	}
+
+	blockoverride "common_ios_subheader_decor" {
+		background = {
+			texture = "gfx/interface/component_decoration/ios/catholic_church/catholic_church_subheader_bg.dds"
+			texture_density = 2
+		}
+	}
+
+	
+	blockoverride "ios_situations_disasters_abilities_expand" {}
+
+	blockoverride "io_decoration" {
+		allow_outside = yes
+		alwaystransparent = yes
+		widget = {
+			size = {222 125}
+			parentanchor = hcenter|top
+			position = {0 -45}
+			allow_outside = yes
+
+			country_flag_mid = {
+				parentanchor = center
+				datacontext = "[InternationalOrganizationsView.GetInternationalOrganization.GetLeaderCountry]"
+			}
+		}
+	}
+}

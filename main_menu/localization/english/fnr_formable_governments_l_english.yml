@@ -1,5 +1,9 @@
 ﻿l_english:
 
+  # Bactria
+  fnr_BACTR_rise_of_the_basileus_of_the_east: "Rise of the Basileus of the East"
+  fnr_BACTR_rise_of_the_basileus_of_the_east_desc: "TODO"
+
   # Rhineland
   fnr_GSCTL_rheinkonfoderation: "Rheinkonföderation"
   fnr_GSCTL_rheinkonfoderation_desc: "After many centuries of conflict in the Rhineland – both between our brethren and outsiders -- we managed to forge a unified state. With the State in its Infancy it currently is more of a loose Coalition of States. Which means it could easily break if we do not manage to stabilize Our Realm.\n\nWe will be able to #G reduce#! the #R negative#! modifiers of this reform by choosing either [ShowGovernmentReformName('fnr_GSCTL_das_rheinische_konigreich')] or [ShowGovernmentReformName('fnr_GSCTL_der_rheinbund')] when the #color_yellow 'The Path Forward'#! event fires randomly between 20-30 years upon formation of #color_yellow Rhineland#!.\n\nIf we reach #R -75#! [stability|e] at any point before the #color_yellow 'The Path Forward'#! event fires we will be presented with a disaster which could potentially shatter the loose confederation."

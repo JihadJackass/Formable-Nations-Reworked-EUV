@@ -239,9 +239,9 @@
 			}
 			
 			country_modifier = {
-				global_wheat_output_modifier = 0.05
-				global_livestock_output_modifier = 0.05
-				global_wool_output_modifier = 0.05
+				global_wheat_output_modifier = 0.10
+				global_livestock_output_modifier = 0.10
+				global_wool_output_modifier = 0.10
 				
 				non_rural_migration_attraction = -0.10
 

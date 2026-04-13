@@ -1,4 +1,4 @@
-﻿fnr_bactria_list = {
+﻿fnr_bactria_religion_and_IO_list = {
     potential = {
         # AI only evaluates these actions if this is true
 		always = no
@@ -12,10 +12,13 @@
         fnr_bactria_egyptian_claim
         fnr_bactria_egyptian_establish
         fnr_bactria_restore_the_macedonian_empire
+		fnr_spread_litergical_copies_of_alexander
+		fnr_greco_buddhism_action_hybridize_local_cultures
+        fnr_grecobuddhism_embrace_religion
     }
 }
 
-fnr_japan_list = {
+fnr_japan_IO_list = {
     potential = {
 		always = no
     }
@@ -26,5 +29,17 @@ fnr_japan_list = {
         fnr_japan_establish_philippine
         fnr_japan_establish_china
         fnr_japan_establish_inner_mongolia
+    }
+}
+
+fnr_moravia_patriarchate_list = {
+    potential = {
+		always = no
+    }
+    actions = {
+        fnr_moravia_patriarchate_influence_hre_members
+        fnr_moravia_patriarchate_polish_coalition
+        fnr_moravia_patriarchate_expand_authority
+        fnr_moravia_patriarchate_unificatio_unionis
     }
 }

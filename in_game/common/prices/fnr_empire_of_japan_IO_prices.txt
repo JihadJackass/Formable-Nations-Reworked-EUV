@@ -1,7 +1,9 @@
 ﻿
-	fnr_empire_of_japan_integration_of_old_imperial_systems = {
+	fnr_empire_of_japan_integration_of_old_imperial_systems_price = {
 		gold = expensive_build_price_age_of_renaissance
 		stability = 10
+		min_scale = 1       #The minimum amount you have to pay (before modifiers)
+		max_scale = 3
 	}
 
 	

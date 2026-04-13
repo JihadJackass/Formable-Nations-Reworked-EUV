@@ -1,0 +1,20 @@
+﻿l_english:
+
+  ########################
+  # Messages localiation #
+  ########################
+
+      PERFORM_fnr_spread_litergical_copies_of_alexander_ACTION: "TODO"
+      PERFORM_fnr_greco_buddhism_action_hybridize_local_cultures_ACTION: "TODO"
+
+      # Proclaim Bactrian Synod
+      PERFORM_fnr_proclaim_bactrian_synod_ACTION: "TODO"
+      PERFORM_fnr_proclaim_bactrian_synod_ACTION_SETUP: "$unrestrict_peranakan_trading_rights$."
+      PERFORM_fnr_proclaim_bactrian_synod_ACTION_HEADER: "$MESSENGER$"
+      PERFORM_fnr_proclaim_bactrian_synod_ACTION_TITLE: "[SCOPE.sCountry('actor').GetName] is restoring Peranakan Trading Rights"
+      PERFORM_fnr_proclaim_bactrian_synod_ACTION_EFFECTS: "$EFFECT$"
+      PERFORM_fnr_proclaim_bactrian_synod_ACTION_LOG: "[SCOPE.sCountry('actor').GetName] restored Peranakan Trading Rights"
+      PERFORM_fnr_proclaim_bactrian_synod_ACTION_BTN1: "OK"
+      PERFORM_fnr_proclaim_bactrian_synod_ACTION_BTN2: "OK"
+      PERFORM_fnr_proclaim_bactrian_synod_ACTION_BTN3: "$common_string_go_to$"
+      PERFORM_fnr_proclaim_bactrian_synod_ACTION_MAP: ""

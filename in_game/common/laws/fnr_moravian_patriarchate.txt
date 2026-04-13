@@ -6,7 +6,7 @@
 		international_organization_type = international_organization_type:moravian_patriarchate
 	}
 	locked = {
-		always = no
+		#always = no
 	}
 
 	fnr_church_slavoric_policy = {
@@ -24,14 +24,15 @@
 			monthly_towards_spiritualist = 0.10
 		}
 		on_activate = {
+			# TODO: make this target all members of the IO, not the IO itself
 			fnr_enable_slavonic_language = yes
-			scope:minister = {
-				add_character_modifier = {
-					modifier = fnr_moravian_patrarchate_modifier
-					years = -1
-					mode = add_and_extend
-				}
-			}
+		#	scope:minister = {
+		#		add_character_modifier = {
+		#			modifier = fnr_moravian_patrarchate_modifier
+		#			years = -1
+		#			mode = add_and_extend
+		#		}
+		#	}
 		}
 		on_fully_activated = {
 		}

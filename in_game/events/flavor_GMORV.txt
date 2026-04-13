@@ -31,21 +31,21 @@ flavor_GMORV.1 = {
 		add_estate_satisfaction = { type = estate_type:clergy_estate 
 			value = estate_satisfaction_mild_bonus
 		}
-		#	hidden_effect = {
-		#		c:GMORV = { save_scope_as = target_country }
-		#		create_international_organization = {
-		#			type = international_organization_type:moravian_patriarchate
-		#			add_country_to_international_organization = scope:target_country
-		#		}
-		#		international_organization:moravian_patriarchate = {
-		#			set_leader_country = scope:target_country
-		#		}
-		#		every_subject = {
-		#			international_organization:moravian_patriarchate = {
-		#				add_country_to_international_organization = prev
-		#			}
-		#		}
-		#	}
+		hidden_effect = {
+			c:GMORV = { save_scope_as = target_country }
+			create_international_organization = {
+				type = international_organization_type:moravian_patriarchate
+				add_country_to_international_organization = scope:target_country
+			}
+			international_organization:moravian_patriarchate = {
+				set_leader_country = scope:target_country
+			}
+			every_subject = {
+				international_organization:moravian_patriarchate = {
+					add_country_to_international_organization = prev
+				}
+			}
+		}
 		custom_tooltip = { text = GMORV_formable_trigger_7_tt }
 		# TODO POST 2.5.0: Remove GMORV and subject from Catholic Church IO
 		# TODO POST 2.5.0: Add GMORV subjects to MP IO

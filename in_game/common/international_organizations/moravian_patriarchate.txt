@@ -269,20 +269,6 @@ moravian_patriarchate = { # TODO: fix the fuck out of this and add content
 	}
 
 	ai_desire_to_join = {
-		if = {
-			limit = { country_rank_level > 1 }
-			subtract = {
-				desc = "game_concept_country_rank"
-				value = {
-					value = country_rank_level
-					multiply = 20
-				}
-			}
-		}
-		subtract = {
-			desc = "game_concept_tax_base"
-			value = country_tax_base
-		}
 		add = {
 			desc = "game_concept_opinion"
 			value = {
@@ -295,33 +281,6 @@ moravian_patriarchate = { # TODO: fix the fuck out of this and add content
 			value = {
 				value = "scope:actor.modifier:diplomatic_reputation"
 				multiply = 0.5  # +0.5 reasons per 1 diprep
-			}
-		}
-		if = {
-			limit = {
-				exists = scope:actor
-				OR = {
-					culture ?= scope:actor.culture
-					ruler ?= {
-						culture ?= scope:actor.culture
-					}
-				}
-			}
-			add = {
-				desc = "PRIMARY_OR_RULER_CULTURE_EQUAL_TO_LEADER_CULTURE"
-				value = 25
-			}
-		}
-		if = {
-			limit = {
-				any_international_organizations_member_of = { 
-					international_organization_type = international_organization_type:moravian_patriarchate
-					leader_country ?= root
-				}
-			}
-			subtract = {
-				desc = "IS_LEADER_OF_AN_AP"
-				value = 1000
 			}
 		}
 	}

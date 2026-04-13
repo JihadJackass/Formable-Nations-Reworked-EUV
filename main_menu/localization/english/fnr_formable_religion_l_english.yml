@@ -25,7 +25,7 @@
     # Great Moravia
 
       fnr_great_moravia_orthodox: "Moravian Orthodoxy"
-      fnr_great_moravia_orthodox_ADJ: "Orthodox"
+      fnr_great_moravia_orthodox_ADJ: "Moravian Orthodox"
       fnr_great_moravia_orthodox_desc: "The $orthodox_ADJ$ Church, rooted in the traditions of the early $christian_ADJ$ councils, emphasizes the continuity of apostolic teachings and sacred tradition. Centered on the $BYZ_ADJ$ Rite, it places great importance on liturgy, icons, and mysticism. The $orthodox_ADJ$ faith is led by patriarchs, with the Ecumenical Patriarch of Constantinople holding a primacy of honor.\n\n#color_yellow This is a unqique version of Orthodox in which Autocephalous Patriarchates mechanic does not apply as this organization shares a similarity to the Holy Roman Empire instead.#!"
 
   #####################

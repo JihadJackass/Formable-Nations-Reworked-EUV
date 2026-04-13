@@ -1,0 +1,9 @@
+﻿# Formable Nations Reworked - Moravian Patriarchate Holy Sites
+
+    # Nitra
+    fnr_great_moravia_orthodox_holy_site_nitra = {
+        location = nitra
+        type = fnr_great_moravia_orthodox_holy_site
+        importance = 20
+        religions = { fnr_great_moravia_orthodox }
+    }

@@ -38,7 +38,7 @@
 			}
 		}
 		
-		price = price:fnr_empire_of_japan_integration_of_old_imperial_systems
+		price = price:fnr_empire_of_japan_integration_of_old_imperial_systems_price
 
 		select_trigger = {
 			looking_for_a = international_organization
@@ -94,12 +94,10 @@
 								}
 							}
 							location = {
-								destroy_building = prev
+								destroy_building = PREV
 							}
 						}
-						scope:actor = {
-							annex_country = { target = scope:fnr_target_clan }
-						}
+						# TODO: add effect that annexes these remaining clans
 					}
 				}
 			}

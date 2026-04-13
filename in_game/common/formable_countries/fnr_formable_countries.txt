@@ -43,7 +43,218 @@
 				color = map_PMSTN
 				provinces = { darvaz_province sighnan_province badakhshan_province qarategin_province sarikol_province }
 			}	
+		# Ḥaššāšīyīn - non-historical
+			ASSSN_f = {
+				level = 1
+				required_locations_fraction = 0.90
+				rule = plausible
+				potential = { 
+					#AND = {
+					#	OR = {
+					#		has_variable = fnr_modern_enabled
+					#		has_variable = fnr_pamiristan_enabled
+					#	}
+					#	NOT = { has_variable = fnr_pamiristan_disabled }
+					#}
+					NOT = { 
+						OR = {
+							tag = ASSSN
+							tag_exists = ASSSN
+						}
+					}
+					culture = culture:syriac_culture 
+				}
+				allow = {
+					AND = {
+						culture = culture:syriac_culture 
+						OR = {
+							capital = location:kafartab 
+							capital = location:homs 
+						}
+						OR = {
+							religion = religion:sunni
+							religion = religion:shia
+						}
+					}
+				}
+				name = ASSSN
+				flag = ASSSN
+				adjective = ASSSN_ADJ
+				tag = ASSSN
+				color = map_ASSSN
+				locations = {
+					kafartab
+					masyaf
+					homs
+					hama
+				}
+			}
+		# County of Tripoli
+			COTRP_f = {
+				level = 1
+				required_locations_fraction = 0.90
+				rule = plausible
+				potential = { 
+					#AND = {
+					#	OR = {
+					#		has_variable = fnr_modern_enabled
+					#		has_variable = fnr_pamiristan_enabled
+					#	}
+					#	NOT = { has_variable = fnr_pamiristan_disabled }
+					#}
+					NOT = { 
+						OR = {
+							tag = COTRP
+							tag_exists = COTRP
+						}
+					}
+					#culture = culture:syriac_culture 
+				}
+				allow = {
+					AND = {
+						culture = culture:french 
+						capital = location:antioch 
+						religion = religion:catholic
+					}
+				}
+				name = COTRP
+				flag = COTRP
+				adjective = COTRP_ADJ
+				tag = COTRP
+				color = map_COTRP
+				locations = {
+					tripoli_syria
+					beirut
+					deir_qamar
+				}
+			}
+		# County of Edessa
+			COEDS_f = {
+				level = 1
+				required_locations_fraction = 0.90
+				rule = plausible
+				potential = { 
+					#AND = {
+					#	OR = {
+					#		has_variable = fnr_modern_enabled
+					#		has_variable = fnr_pamiristan_enabled
+					#	}
+					#	NOT = { has_variable = fnr_pamiristan_disabled }
+					#}
+					NOT = { 
+						OR = {
+							tag = COEDS
+							tag_exists = COEDS
+						}
+					}
+					#culture = culture:syriac_culture 
+				}
+				allow = {
+					AND = {
+						culture = culture:french 
+						capital = location:antioch 
+						religion = religion:catholic
+					}
+				}
+				name = COEDS
+				flag = COEDS
+				adjective = COEDS_ADJ
+				tag = COEDS
+				color = map_COEDS
+				provinces = {
+					ar_ruha_province
+				}
+				locations = {
+					dluk
+					ayntab
+					kaysun
+					samsat
+					kahta
+					gerger
+				}
+			}
 	# Rank 2
+		# Ontario
+			ONTRO_f = {
+				level = 2
+				required_locations_fraction = 0.87
+				rule = plausible
+				potential = { 
+					AND = {
+						OR = {
+							has_variable = fnr_modern_enabled
+							has_variable = fnr_badakhshan_enabled
+						}
+						NOT = { has_variable = fnr_badakhshan_disabled }
+					}
+					NOT = { 
+						OR = {
+							tag = ONTRO
+							tag_exists = ONTRO
+						}
+					}
+					OR = {
+						culture = culture:english 
+						culture = culture:french 
+					}
+				}
+				allow = {
+					OR = {
+						culture = culture:english 
+						culture = culture:french 
+					}
+				}
+				name = ONTRO
+				flag = ONTRO
+				adjective = ONTRO_ADJ
+				tag = ONTRO
+				color = map_ONTRO
+				areas = { 
+					western_ontario_area 
+					eastern_ontario_area 
+					northern_ontario_area 
+				}
+			}	
+		# Prinicpality of Antioch
+			POFAN_f = {
+				level = 2
+				required_locations_fraction = 0.90
+				rule = plausible
+				potential = { 
+					#AND = {
+					#	OR = {
+					#		has_variable = fnr_modern_enabled
+					#		has_variable = fnr_pamiristan_enabled
+					#	}
+					#	NOT = { has_variable = fnr_pamiristan_disabled }
+					#}
+					NOT = { 
+						OR = {
+							tag = POFAN
+							tag_exists = POFAN
+						}
+					}
+					#culture = culture:syriac_culture 
+				}
+				allow = {
+					AND = {
+						culture = culture:french 
+						capital = location:antioch 
+						religion = religion:catholic
+					}
+				}
+				name = POFAN
+				flag = POFAN
+				adjective = POFAN_ADJ
+				tag = POFAN
+				color = map_POFAN
+				provinces = {
+					antakya_province
+					halab_province
+					latakia_province
+					hims_province
+				}
+			}
 		# Badakhshān - Modern
 			BDKSN_f = {
 				level = 2
@@ -333,6 +544,166 @@
 				}
 			}
 	# Rank 3
+		# Gobi
+			KGOBI_f = {
+				level = 3
+				required_locations_fraction = 0.90
+				rule = plausible
+				potential = { 
+					#AND = {
+					#	OR = {
+					#		has_variable = fnr_modern_enabled
+					#		has_variable = fnr_pamiristan_enabled
+					#	}
+					#	NOT = { has_variable = fnr_pamiristan_disabled }
+					#}
+					NOT = { 
+						OR = {
+							tag = KGOBI
+							tag_exists = KGOBI
+						}
+					}
+					#culture = culture:syriac_culture 
+				}
+				allow = {
+					OR = {
+						culture = culture:oirat_culture 
+						culture = culture:tumed_culture
+					}
+				}
+				name = KGOBI
+				flag = KGOBI
+				adjective = KGOBI_ADJ
+				tag = KGOBI
+				color = map_KGOBI
+				areas = {
+					western_gobi_area
+					southern_gobi_area
+					eastern_gobi_area
+				}
+			}
+		# Kham
+			KKHAM_f = {
+				level = 3
+				required_locations_fraction = 0.90
+				rule = plausible
+				potential = { 
+					#AND = {
+					#	OR = {
+					#		has_variable = fnr_modern_enabled
+					#		has_variable = fnr_pamiristan_enabled
+					#	}
+					#	NOT = { has_variable = fnr_pamiristan_disabled }
+					#}
+					NOT = { 
+						OR = {
+							tag = KKHAM
+							tag_exists = KKHAM
+						}
+					}
+					#culture = culture:syriac_culture 
+				}
+				allow = {
+					culture = culture:khampa_culture 
+				}
+				name = KKHAM
+				flag = KKHAM
+				adjective = KKHAM_ADJ
+				tag = KKHAM
+				color = map_KKHAM
+				areas = {
+					kham_area
+				}
+			}
+		# Domé 
+			KDOME_f = {
+				level = 3
+				required_locations_fraction = 0.90
+				rule = plausible
+				potential = { 
+					#AND = {
+					#	OR = {
+					#		has_variable = fnr_modern_enabled
+					#		has_variable = fnr_pamiristan_enabled
+					#	}
+					#	NOT = { has_variable = fnr_pamiristan_disabled }
+					#}
+					NOT = { 
+						OR = {
+							tag = KDOME
+							tag_exists = KDOME
+						}
+					}
+					#culture = culture:syriac_culture 
+				}
+				allow = {
+					culture = culture:amdowa_culture 
+				}
+				name = KDOME
+				flag = KDOME
+				adjective = KDOME_ADJ
+				tag = KDOME
+				color = map_KDOME
+				areas = {
+					amdo_area
+				}
+			}
+		# Outremer
+			OTRMR_f = {
+				level = 3
+				required_locations_fraction = 0.90
+				rule = plausible
+				potential = { 
+					#AND = {
+					#	OR = {
+					#		has_variable = fnr_modern_enabled
+					#		has_variable = fnr_pamiristan_enabled
+					#	}
+					#	NOT = { has_variable = fnr_pamiristan_disabled }
+					#}
+					NOT = { 
+						OR = {
+							tag = OTRMR
+							tag_exists = OTRMR
+						}
+					}
+					#culture = culture:syriac_culture 
+				}
+				allow = {
+					AND = {
+						culture = culture:french 
+						capital = location:antioch 
+						religion = religion:catholic
+					}
+				}
+				name = OTRMR
+				flag = OTRMR
+				adjective = OTRMR_ADJ
+				tag = OTRMR
+				color = map_OTRMR
+				areas = {
+					levant_area
+				}
+				provinces = {
+					ar_ruha_province
+					cyprus_province
+					antakya_province
+					halab_province
+					latakia_province
+					hims_province
+				}
+				locations = {
+					tripoli_syria
+					beirut
+					deir_qamar
+					dluk
+					ayntab
+					kaysun
+					samsat
+					kahta
+					gerger
+				}
+			}
 		# Macedonia (For Bactria)
 			BMCDN_f = {
 				level = 3
@@ -474,7 +845,7 @@
 		# Bactria
 			BACTR_f = {
 				level = 3
-				required_locations_fraction = 0.01 # 0.85
+				required_locations_fraction = 0.85 # 0.85
 				rule = plausible
 				potential = { 
 					AND = {
@@ -1379,7 +1750,7 @@
 				#regions = { great_plains_region }
 				locations = { tulsa wewoka washita kiamichi nanatsoho tawehash wakhakukdhin headdhetanwan pasukhdin chikaskia nixgu oktahutchee gulvau hawaastatkiicu guichita nigitai kicpahat gulvau honih_hiyo_he }
 			}
-		# Alaska - Modern (Rank 3)
+		# Alaska -  US States (Rank 3)
 			ALSKA_f = {
 				level = 3
 				required_locations_fraction = 0.70
@@ -2685,7 +3056,7 @@
 					# TODO POST 2.5.0: add subjects to MP IO
 					# TODO POST 2.5.0: remove GMORV and subjects from HRE IO
 					trigger_event_non_silently = flavor_GMORV.1
-					# TODO: custom_tooltip = { text = GMORV_formable_trigger_5_tt }
+					custom_tooltip = { text = GMORV_formable_trigger_5_tt }
 				}
 			}	
 		# Gothia - non-historical
@@ -3372,38 +3743,6 @@
 				tag = UKRNE
 				color = map_UKRNE
 				regions = { ruthenia_region }
-			}
-		# Donetsk Peoples Republic - Modern
-			DNTPR_f = {
-				level = 3
-				required_locations_fraction = 0.90
-				rule = plausible
-				potential = {
-					AND = {
-						OR = {
-							has_variable = fnr_modern_enabled
-							has_variable = fnr_dpr_enabled
-						}
-						NOT = { has_variable = fnr_dpr_disabled }
-					}
-					NOT = { 
-						OR = {
-							tag = DNTPR
-							tag_exists = DNTPR
-						}
-					}
-					government_type = government_type:republic
-					OR = {
-						culture = culture:mishar
-						culture = { has_culture_group = culture_group:polish_group }
-					}
-				}
-				name = DNTPR
-				flag = DNTPR
-				adjective = DNTPR_ADJ
-				tag = DNTPR
-				color = map_DNTPR
-				regions = { steppes_region ruthenia_region }
 			}
 		# Emilia-Romagna - Alt-history
 			EMLRO_f = {
@@ -7091,8 +7430,6 @@
 					}
 				}
 			}
-
-		# TODO POST 2.5.0: Outremer
 		# Hungarian Empire - Alt-history
 			HNGEM_f = {
 				level = 4

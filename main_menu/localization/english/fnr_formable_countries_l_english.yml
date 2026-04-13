@@ -1220,4 +1220,47 @@
     PONTU_ADJ: "Pontic"
     PONTU_f_desc: "Pontus was a Hellenistic kingdom centered in the historical region of Pontus in modern-day Turkey, and ruled by the Mithridatic dynasty of Persian origin, which may have been directly related to Darius the Great of the Achaemenid dynasty. The kingdom was proclaimed by Mithridates I in 281 BC and lasted until its conquest by the Roman Republic in 63 BC. The Kingdom of Pontus reached its greatest extent under Mithridates VI the Great, who conquered Colchis, Cappadocia, Bithynia, the Greek colonies of the Tauric Chersonesos, and for a brief time the Roman province of Asia. After a long struggle with Rome in the Mithridatic Wars, Pontus was defeated."
 
+    ASSSN: "Ḥaššāšīyīn"
+    ASSSN_f: "Ḥaššāšīyīn"
+    ASSSN_ADJ: "Ḥaššāšīyīn"
+    ASSSN_f_desc: "Restore the legendary Order of Assassins, the Nizari Ismaili state that once commanded an invisible empire from its mountain fortresses. From Alamut to Masyaf, the Ḥaššāšīyīn answered to no sultan or caliph — wielding the dagger and the threat of the dagger as instruments of statecraft. To refound their order is to reclaim a tradition where a single devoted fidā'ī could topple kingdoms, and where the mightiest rulers in the world paid tribute not out of love, but out of fear."
 
+    POFAN: "Principality of Antioch"
+    POFAN_f: "Principality of Antioch"
+    POFAN_ADJ: "Antichian"
+    POFAN_f_desc: "Revive the Crusader principality that once stood as a bastion of Latin Christendom on the banks of the Orontes. Founded by Bohemond during the First Crusade, the Principality of Antioch endured for nearly two centuries as a crossroads of Greek, Armenian, and Frankish culture — a realm where Norman ambition met the riches of the Levant. To restore it is to plant the cross once more upon the ancient walls of one of Christendom's five great patriarchal sees."
+
+    COTRP: "County of Tripoli"
+    COTRP_f: "County of Tripoli"
+    COTRP_ADJ: "Tripoli"
+    COTRP_f_desc: "Reestablish the Crusader state that clung to the Lebanese coast for nearly two hundred years. Founded by Raymond of Toulouse after years of dogged siege, the County of Tripoli commanded the vital ports and fertile plains between Antioch and Jerusalem. Its counts grew wealthy on the silk and sugar trade while guarding the pilgrim roads to the Holy Land. To restore it is to reclaim a Frankish stronghold where East met West beneath the shadow of Mount Lebanon."
+
+    COEDS: "County of Edessa"
+    COEDS_f: "County of Edessa"
+    COEDS_ADJ: "Edessan"
+    COEDS_f_desc: "Restore the first Crusader state, carved from the lands beyond the Euphrates by Baldwin of Boulogne before Jerusalem itself had fallen. The County of Edessa stood as the easternmost outpost of Latin Christendom — a frontier realm surrounded on all sides by Muslim powers, sustained by its Armenian Christian subjects and the sheer audacity of its Frankish lords. Its fall in 1144 shocked Christendom and sparked the Second Crusade. To refound it is to reclaim the vanguard of the Cross in the heart of Mesopotamia."
+
+    OTRMR: "Outremer"
+    OTRMR_f: "Outremer"
+    OTRMR_ADJ: "Outremer"
+    OTRMR_f_desc: "Unite the scattered Crusader states into one kingdom beyond the sea. From the walls of Edessa to the gates of Jerusalem, from the cedars of Tripoli to the harbors of Cyprus, the lords of Outremer once forged a Latin realm in the heart of the Islamic world. To restore it is to bind Antioch, Tripoli, Edessa, and the Holy City itself under a single crown — a Christian domain stretching from the Euphrates to the Sinai, and perhaps beyond into the sands of Arabia. What the First Crusade won piecemeal, Outremer shall hold as one."
+
+    KKHAM: "Kham"
+    KKHAM_f: "Kham"
+    KKHAM_ADJ: "Khampa"
+    KKHAM_f_desc: "Unite the wild highlands of eastern Tibet under a single Khampa banner. Kham has long been a land of fiercely independent warrior clans, rugged monasteries perched on impossible peaks, and traders who bridged the worlds of Tibet, China, and the southern kingdoms. Too fractured to resist the ambitions of its neighbors, too proud to ever truly submit. To forge Kham into a nation is to harness the untamed spirit of the plateau's most formidable people and carve a sovereign realm from the roof of the world."
+
+    KDOME: "Domé"
+    KDOME_f: "Domé"
+    KDOME_ADJ: "Domé"
+    KDOME_f_desc: "Forge a unified realm from the vast northeastern reaches of the Tibetan plateau. Domé — the lower province of Tibet — is a land of sweeping grasslands, sacred lakes, and ancient monasteries where the great Yellow River begins its long journey to the sea. Its Amdowa people have long been divided among petty chieftains and monastic estates, caught between the ambitions of Tibet and China. To unite Domé is to give a voice to the plateau's forgotten province and raise a banner where none has flown before."
+
+    KGOBI: "Gobi"
+    KGOBI_f: "Gobi"
+    KGOBI_ADJ: "Gobian"
+    KGOBI_f_desc: "Claim dominion over the vast desert steppe that stretches between the Altai Mountains and the edges of the Chinese heartland. The Gobi has never been empty — it has been the highway of nomadic empires, the graveyard of armies that underestimated its expanse, and the homeland of herders who thrived where no settled people could endure. To forge a kingdom from its windswept plains is to command the great void at the center of the continent."
+
+    ONTRO: "Ontario"
+    ONTRO_f: "Ontario"
+    ONTRO_ADJ: "Ontarian"
+    ONTRO_f_desc: "Establish a colonial dominion over the vast territory surrounding the great inland lakes. Named for the Iroquoian word meaning 'beautiful lake,' Ontario commands the vital waterways linking the heart of the continent to the Atlantic seaboard. From the thundering falls of Niagara to the endless forests of the Canadian Shield, this is a land of boundless timber, fertile soil, and strategic portages that whoever controls them controls the future of North America."

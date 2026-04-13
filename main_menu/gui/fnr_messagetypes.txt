@@ -1,0 +1,100 @@
+﻿# FNR message types placeholder test?
+
+PERFORM_fnr_spread_litergical_copies_of_alexander_ACTION = {
+	log=yes
+	onmap=no
+	popup=yes
+	idle=no
+	option=yes
+	pausepopup=no
+	sound=yes
+	message_category = government
+}
+
+PERFORM_fnr_greco_buddhism_action_hybridize_local_cultures_ACTION = {
+	log=yes
+	onmap=no
+	popup=yes
+	idle=no
+	option=yes
+	pausepopup=no
+	sound=yes
+	message_category = government
+}
+
+PERFORM_fnr_proclaim_bactrian_synod_ACTION = {
+	log=yes
+	onmap=no
+	popup=yes
+	idle=no
+	option=yes
+	pausepopup=no
+	sound=yes
+	message_category = government
+}
+
+PERFORM_fnr_grecobuddhism_embrace_religion_ACTION = {
+	log=yes
+	onmap=no
+	popup=yes
+	idle=no
+	option=yes
+	pausepopup=no
+	sound=yes
+	message_category = government
+}
+
+PERFORM_fnr_moravia_patriarchate_influence_hre_members_ACTION = {
+	log=yes
+	onmap=no
+	popup=yes
+	idle=no
+	option=yes
+	pausepopup=no
+	sound=yes
+	message_category = government
+}
+
+PERFORM_fnr_moravia_patriarchate_polish_coalition_ACTION = {
+	log=yes
+	onmap=no
+	popup=yes
+	idle=no
+	option=yes
+	pausepopup=no
+	sound=yes
+	message_category = government
+}
+
+PERFORM_fnr_moravia_patriarchate_expand_authority_ACTION = {
+	log=yes
+	onmap=no
+	popup=yes
+	idle=no
+	option=yes
+	pausepopup=no
+	sound=yes
+	message_category = government
+}
+
+PERFORM_fnr_moravia_patriarchate_unificatio_unionis_ACTION = {
+	log=yes
+	onmap=no
+	popup=yes
+	idle=no
+	option=yes
+	pausepopup=no
+	sound=yes
+	message_category = government
+}
+
+PERFORM_fnr_mp_periphora_ACTION = {
+	log=yes
+	onmap=no
+	popup=yes
+	idle=no
+	option=yes
+	pausepopup=no
+	sound=yes
+	message_category = government
+}

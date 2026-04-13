@@ -59,35 +59,42 @@
 
     # Moravian Patriarchate
 
-      moravian_patriarchate: "Moravian Patriarchate"
-      moravian_patriarchate_name: "Moravian Patriarchate"
-      moravian_patriarchate_SEAT_NAME: "Autocephalous Patriarchate of Moravia"
-      moravian_patriarchate_desc: "The Moravian Patriarchate represents the autocephalous Orthodox Church centered in Great Moravia, embracing the legacy of Saints Cyril and Methodius and Church Slavonic liturgy."
-      moravian_patriarch_name: "Moravian Patriarchate"
-      moravian_patriarchate_list_who_tt: "$WHO$ is a member of the Moravian Patriarchate with $LIST$"
+      # Main
 
-      game_concept_moravian_patriarchate: "Moravian Patriarchate"
-      game_concept_moravian_patriarchates: "Autocephalous Moravian Patriarchates"
+        moravian_patriarchate: "Moravian Patriarchate"
+        moravian_patriarchate_name: "Moravian Patriarchate"
+        moravian_patriarchate_SEAT_NAME: "Autocephalous Patriarchate of Moravia"
+        moravian_patriarchate_desc: "The Moravian Patriarchate represents the autocephalous Orthodox Church centered in Great Moravia, embracing the legacy of Saints Cyril and Methodius and Church Slavonic liturgy."
+        moravian_patriarch_name: "Moravian Patriarchate"
+        moravian_patriarchate_list_who_tt: "$WHO$ is a member of the Moravian Patriarchate with $LIST$"
 
-      diplomatic_status_moravian_patriarchate_name: "Moravian Patriarchate"
-      diplomatic_status_moravian_patriarchate_tooltip: "#T Moravian Patriarchate#!\nThis country is a member of the Moravian Patriarchate."
+        game_concept_moravian_patriarchate: "Moravian Patriarchate"
+        game_concept_moravian_patriarchates: "Autocephalous Moravian Patriarchates"
 
-      fnr_moravia_patriarchate_influence_hre_members: "Influence Holy Roman Empire Member"
-      fnr_moravia_patriarchate_influence_hre_members_desc: "Through effective scheming and bribery we may be able to influence members of the [GetInternationalOrganizationType('hre').GetName] to join the [GetInternationalOrganizationType('moravian_patriarchate').GetName] and convert to [ShowReligionName('orthodox')] forcing them to abandon [ShowReligionName('catholic')] as well as the so-called '[GetInternationalOrganizationType('hre').GetName]'."
-      fnr_moravia_patriarchate_polish_coalition: "Arrange Polish Coalition"
-      fnr_moravia_patriarchate_polish_coalition_desc: "The nation of [GetCountry('POL').GetNameWithFlag] is a dire threat to the stability of our Patriarchate as well as our nation and with a sufficient number of members we may be able to organize a unified coalition against their constant expansionism and border skrimishing as they seek to claim many of our lands."
-      fnr_moravia_patriarchate_expand_authority: "Expand Authority"
-      fnr_moravia_patriarchate_expand_authority_desc: "With enough members in the [GetInternationalOrganizationType('moravian_patriarchate').GetName] we will be able to expand our authority over the organization in a way that closely resembles the constant expansion of powers within the [GetInternationalOrganizationType('hre').GetName] - It may even be possible for us to use this gained authority to proclaim our ruler as an Emperor in his own right and directly compete with the influence that the [GetInternationalOrganizationType('hre').GetName] historically wielded."
-      fnr_moravia_patriarchate_unificatio_unionis: "Unificatio Unionis"
-      fnr_moravia_patriarchate_unificatio_unionis_desc: "Upon establishing our own counter to the [GetInternationalOrganizationType('hre').GetName] by crowning the leader of the [GetInternationalOrganizationType('moravian_patriarchate').GetName] as an [ShowCountryRankName('rank_empire')] we will gain access to a unique event chain allowing us to establish new laws and policies of the [GetInternationalOrganizationType('moravian_patriarchate').GetName] with the possible penultimate outcome being to reform our nation entirely into the #color_yellow Slavorium Imperium#! establishing the leader of the [GetInternationalOrganizationType('moravian_patriarchate').GetName] as a direct adversary of the [GetInternationalOrganizationType('hre').GetName]."
+        diplomatic_status_moravian_patriarchate_name: "Moravian Patriarchate"
+        diplomatic_status_moravian_patriarchate_tooltip: "#T Moravian Patriarchate#!\nThis country is a member of the Moravian Patriarchate."
+
+        fnr_moravia_patriarchate_influence_hre_members: "Influence Holy Roman Empire Member"
+        fnr_moravia_patriarchate_influence_hre_members_desc: "Through effective scheming and bribery we may be able to influence members of the [GetInternationalOrganizationType('hre').GetName] to join the [GetInternationalOrganizationType('moravian_patriarchate').GetName] and convert to [ShowReligionName('orthodox')] forcing them to abandon [ShowReligionName('catholic')] as well as the so-called '[GetInternationalOrganizationType('hre').GetName]'."
+        fnr_moravia_patriarchate_polish_coalition: "Arrange Polish Coalition"
+        fnr_moravia_patriarchate_polish_coalition_desc: "The nation of [GetCountry('POL').GetNameWithFlag] is a dire threat to the stability of our Patriarchate as well as our nation and with a sufficient number of members we may be able to organize a unified coalition against their constant expansionism and border skrimishing as they seek to claim many of our lands."
+        fnr_moravia_patriarchate_expand_authority: "Expand Authority"
+        fnr_moravia_patriarchate_expand_authority_desc: "With enough members in the [GetInternationalOrganizationType('moravian_patriarchate').GetName] we will be able to expand our authority over the organization in a way that closely resembles the constant expansion of powers within the [GetInternationalOrganizationType('hre').GetName] - It may even be possible for us to use this gained authority to proclaim our ruler as an Emperor in his own right and directly compete with the influence that the [GetInternationalOrganizationType('hre').GetName] historically wielded."
+        fnr_moravia_patriarchate_unificatio_unionis: "Unificatio Unionis"
+        fnr_moravia_patriarchate_unificatio_unionis_desc: "Upon establishing our own counter to the [GetInternationalOrganizationType('hre').GetName] by crowning the leader of the [GetInternationalOrganizationType('moravian_patriarchate').GetName] as an [ShowCountryRankName('rank_empire')] we will gain access to a unique event chain allowing us to establish new laws and policies of the [GetInternationalOrganizationType('moravian_patriarchate').GetName] with the possible penultimate outcome being to reform our nation entirely into the #color_yellow Slavorium Imperium#! establishing the leader of the [GetInternationalOrganizationType('moravian_patriarchate').GetName] as a direct adversary of the [GetInternationalOrganizationType('hre').GetName]."
 
       # Laws 
 
-      fnr_cc_language_laws: "Language Laws"
-      fnr_cc_language_laws_desc: "The [GetInternationalOrganizationType('moravian_patriarchate').GetName] has the unique ability to determine the official [liturgical_language|e] and [court_language|e] of all members though this must be a law that is passed officially."
-      fnr_church_slavoric_policy: "Church Slavoric"
-      fnr_church_slavoric_policy_desc: "The Holy Brothers Cyril and Methodius brought Christianity to Moravia and created Old Church Slavonic so our people could worship in their own tongue. Unlike other churches that restrict sacred texts to Latin, we embraced literacy for all - making Church Slavonic both our liturgical and administrative language. Now we restore this sacred tradition."
-      MORAVIAN_AUTHORITY_DISPLAY: "$VAL$"
+        fnr_cc_language_laws: "Language Laws"
+        fnr_cc_language_laws_desc: "The [GetInternationalOrganizationType('moravian_patriarchate').GetName] has the unique ability to determine the official [liturgical_language|e] and [court_language|e] of all members though this must be a law that is passed officially."
+        fnr_church_slavoric_policy: "Church Slavoric"
+        fnr_church_slavoric_policy_desc: "The Holy Brothers Cyril and Methodius brought Christianity to Moravia and created Old Church Slavonic so our people could worship in their own tongue. Unlike other churches that restrict sacred texts to Latin, we embraced literacy for all - making Church Slavonic both our liturgical and administrative language. Now we restore this sacred tradition."
+
+      # GUI related
+
+        fnr_moravian_imperial_authority: "Moravian Authority"
+        fnr_moravian_imperial_authority_desc: "A measure of the Patriarch's influence over the faithful and the political weight of the Moravian Patriarchate in Eastern Europe. Moravian Authority grows with the strength and ability of the Patriarch, the prestige of his dynasty, and the devotion of member states. As authority rises, the Patriarchate can enact bolder ecclesiastical laws, sway Orthodox and Catholic rulers along its borders to abandon Rome and Constantinople alike, and draw wavering princes of the Holy Roman Empire into its fold with promises of spiritual legitimacy and protection from imperial overreach. Where the Emperor in the West demands fealty through the sword, the Patriarch in Nitra commands loyalty through the cross."
+        MORAVIAN_AUTHORITY_DISPLAY: "$VAL$"
   
     # Papal Holy Roman Empire
 

@@ -34,65 +34,67 @@
 	}
 
 	# Peasant
-	fnr_great_moravia_laborer_protection = {
 
-		estate = peasants_estate
-		
-		potential = {
-			OR = {
-				tag = GMORV
-				has_or_had_tag = GMORV
-			}
-		}
-		allow = {
-			current_age_or_later = { age = age_5_absolutism }
-			OR = {
-				tag = GMORV
-				has_or_had_tag = GMORV
-			}
-		}
-		can_revoke = {
-		}
-		
-		country_modifier = {
-			peasants_estate_target_satisfaction = 0.20
-			global_peasants_estate_power = 0.33
+		# Laborer Protection
+		fnr_great_moravia_laborer_protection = {
 
-			global_production_efficiency = 0.10
-			global_pop_promotion_speed = 0.10
-			global_population_growth = 0.02
+			estate = peasants_estate
 			
-			monthly_towards_free_subjects = 0.10
-		}
-	}
+			potential = {
+				OR = {
+					tag = GMORV
+					has_or_had_tag = GMORV
+				}
+			}
+			allow = {
+				current_age_or_later = { age = age_5_absolutism }
+				OR = {
+					tag = GMORV
+					has_or_had_tag = GMORV
+				}
+			}
+			can_revoke = {
+			}
+			
+			country_modifier = {
+				peasants_estate_target_satisfaction = 0.20
+				global_peasants_estate_power = 0.33
 
-	# Related to Moravia IO
-	fnr_great_moravia_church_slavic = {
-
-		estate = clergy_estate
-		
-		potential = {
-			#government_type = government_type:monarchy
-			OR = {
-				tag = GMORV
-				has_or_had_tag = GMORV
+				global_production_efficiency = 0.10
+				global_pop_promotion_speed = 0.10
+				global_population_growth = 0.02
+				
+				monthly_towards_free_subjects = 0.10
 			}
 		}
-		allow = {
-			OR = {
-				tag = GMORV
-				has_or_had_tag = GMORV
+
+		# Related to Moravia IO
+		fnr_great_moravia_church_slavic = {
+
+			estate = clergy_estate
+			
+			potential = {
+				#government_type = government_type:monarchy
+				OR = {
+					tag = GMORV
+					has_or_had_tag = GMORV
+				}
+			}
+			allow = {
+				OR = {
+					tag = GMORV
+					has_or_had_tag = GMORV
+				}
+			}
+			can_revoke = {
+			}
+			
+			country_modifier = {
+				global_max_literacy = 0.10
+
+				clergy_estate_target_satisfaction = 0.05
+				global_clergy_estate_power = 0.10		
+
+				monthly_towards_spiritualist = societal_value_monthly_move
 			}
 		}
-		can_revoke = {
-		}
-		
-		country_modifier = {
-			global_max_literacy = 0.10
-
-			clergy_estate_target_satisfaction = 0.05
-			global_clergy_estate_power = 0.10		
-
-			monthly_towards_spiritualist = societal_value_monthly_move
-		}
-	}

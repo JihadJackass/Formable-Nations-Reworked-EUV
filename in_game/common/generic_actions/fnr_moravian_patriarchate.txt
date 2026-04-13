@@ -2,6 +2,9 @@
 # TODO POST 2.5.0: disabled for now until 2.5.0
 # Requires generic actions AI list
 
+# scope:actor = country
+# scope:recipient = religion
+
 #######################################
 # Influence Holy Roman Empire Members #
 #######################################
@@ -31,8 +34,7 @@ fnr_moravia_patriarchate_influence_hre_members = {
 		}
 	}
 
-	#price = price:fnr_price_influence_holy_roman_empire_member (TODO: fix)
-	price = price:join_autocephalous_patriarchate
+	price = price:fnr_influence_holy_roman_empire_member_price
 
 	select_trigger = {
 		looking_for_a = international_organization

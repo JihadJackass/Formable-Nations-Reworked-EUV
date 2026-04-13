@@ -13,6 +13,7 @@ colors = {
 	# LANGUAGE COLORS
 		map_FNR_GALUISH_LANG = rgb { 124 169 114 } # greenish
 		map_FNR_AKKADIAN_LANG = rgb { 128 103 36 } # brownish
+		map_FNR_GRECO_BACTRIAN_LANG = rgb { 167 204 196 }
 	# END LANGUAGE COLORS
 
 	# Vanilla Formable Colrs
@@ -20,6 +21,24 @@ colors = {
 		map_china = rgb { 150 150 45 }
 
 	# FORMABLE NATION COLORS
+		# Ontario
+		map_ONTRO = rgb { 171 69 53 }
+		# Gobi
+		map_KGOBI = rgb { 115 135 133 }
+		# Dome
+		map_KDOME = rgb { 130 171 166 }
+		# Kham
+		map_KKHAM = rgb { 89 105 93 }	
+		# Outremer
+		map_OTRMR = rgb { 179 38 16 }	
+		# County of Edessa
+		map_COEDS = rgb { 184 178 106 }		
+		# County of Tripoli
+		map_COTRP = rgb { 153 86 81 }
+		# Prinicpality of Antioch
+		map_POFAN = rgb { 65 71 148 } 
+		# Ḥaššāšīyīn
+		map_ASSSN = rgb { 51 50 47 } 
 		# Macedonia
 		map_BMCDN = rgb { 122 122 234 } 
 		# Persian Kingdom

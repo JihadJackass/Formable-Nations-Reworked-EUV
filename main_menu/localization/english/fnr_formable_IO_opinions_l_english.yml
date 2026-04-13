@@ -1,0 +1,13 @@
+﻿l_english:
+
+  ############################
+  # IO Opinions localization #
+  ############################
+
+    # Bactria IO
+
+      io_opinion_fnr_bactria_synod_io: "Is a member of the [GetInternationalOrganizationType('fnr_bactria_synod_io').GetName]"
+
+    # Japan IO
+
+      io_opinion_fnr_japan_greater_east_asia_io: "Is a member of the [GetInternationalOrganizationType('fnr_japan_greater_east_asia_io').GetName]"
