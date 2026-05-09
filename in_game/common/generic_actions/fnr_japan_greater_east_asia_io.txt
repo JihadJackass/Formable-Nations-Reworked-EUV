@@ -97,7 +97,6 @@
 								destroy_building = PREV
 							}
 						}
-						# TODO: add effect that annexes these remaining clans
 					}
 				}
 			}
@@ -152,7 +151,14 @@
 			}
 			enabled = {
 				NOT = { country_exists = c:CHSEN }
+				region:korea_region = {
+					any_location_in_region = {
+						percent >= 0.80
+						owner = scope:actor
+					}
+				}
 			}
+
 		}
 
 		effect = {

@@ -1,19 +1,27 @@
 ﻿# Great Moravia Building Types
 
-# TODO POST 2.5.0: fix and test
+# Hradiska Government Building
 fnr_hradiska = {
 	max_levels = 1
-	pop_type = soldiers
+	pop_type = peasants
 	
-	category = defense_category
+	category = government_category
 	
-	employment_size = stockade_employment
+	employment_size = 1
 	
 	rural_settlement = yes
 	
 	build_time = small_fort_building
 
 	expensive = yes
+
+	country_potential = {
+		tag = GMORV
+	}
+
+	location_potential = {
+		NOT = { vegetation = desert }
+	}
 	
 	unique_production_methods = {
 	
@@ -33,8 +41,10 @@ fnr_hradiska = {
 	}
 	
 	raw_modifier = {
-		fort_level = 1
-		local_nobles_desired_pop = 0.005
+		local_manpower_modifier = 0.05
+		local_max_rgo_size_modifier = 0.10
+		can_recruit_regiment_in_this_location = yes
+		local_max_control = 0.05
 		propagating_zone_of_control = no
 	}
 }

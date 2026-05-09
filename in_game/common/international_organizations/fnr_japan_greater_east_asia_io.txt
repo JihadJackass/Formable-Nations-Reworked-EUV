@@ -3,7 +3,7 @@
 	unique = yes
 	expel_members_who_are_targets_of_other_members = no
 	has_leader_country = yes
-	leader_type = none # FIX THIS
+	leader_type = country
 
 	leader_modifier = {
 		global_raw_material_output = 0.10

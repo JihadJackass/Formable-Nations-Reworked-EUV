@@ -2,7 +2,25 @@
 
   # BUILDING TYPES LOCALIZATION
 
-    fnr_hradiska: "Hradiská" 
-    fnr_hradiska_desc: "TODO POST 2.5.0: Hradiská" 
-    fnr_hradiska_maintenance: "TODO POST 2.5.0: Hradiská" 
+    # Great Moravia
+
+      fnr_hradiska: "Hradiská" 
+      fnr_hradiska_desc: "A fortified hilltop settlement in the tradition of the Great Moravian princes. Hradiská served as centers of both military and civic authority, ringed by timber palisades and earthen ramparts, housing garrisons alongside craftsmen and farmers. Beyond their defensive purpose, they were industrious hubs of production where smiths, potters, and weavers plied their trades under the protection of the walls, enriching the surrounding countryside. From these strongholds, Moravian lords administered the land, mustered levies in times of war, and collected tribute from the villages under their protection. To build one is to plant the roots of Moravian power deep into the soil." 
+      fnr_hradiska_maintenance: "TODO POST 2.5.0: Hradiská Maintenence" 
+
+    # Bactria
+
+      fnr_gymnasium_building: "Gymnasium"
+      fnr_gymnasium_building_desc: "A center of Hellenic learning and athletic training, built in the tradition of the Greek polis. Within its colonnaded courts, young men wrestle, debate philosophy, and study geometry under the watchful eye of tutors schooled in the traditions of Athens and Alexandria. In the lands beyond the Oxus, the gymnasium serves a deeper purpose: it is the engine of Hellenization, drawing the sons of local elites into Greek customs and forging a shared culture between conqueror and conquered."
+      fnr_gymnasium_maintenance: "Gymnasium Upkeep"
+
+      fnr_bactrian_mint_building: "Bactrian Mint"
+      fnr_bactrian_mint_building_desc: "A royal workshop where skilled engravers strike coins of extraordinary artistry, stamping the likeness of the Basileus into silver and copper for circulation across the trade routes of Central Asia. Greco-Bactrian coinage is renowned from the Mediterranean to the Ganges for its precision and beauty, serving not only as currency but as a declaration of sovereign legitimacy to every merchant and prince who handles it."
+      fnr_bactrian_mint_maintenance: "Minting Operations"
+
+      fnr_heroon_shrine_building: "Heroon Shrine"
+      fnr_heroon_shrine_building_desc: "A sacred shrine consecrated to the memory of a deified hero, where offerings of incense and libation are made before marble altars in the Hellenic fashion. Whether dedicated to Alexander himself or to the bodhisattvas who walk beside him in the Greco-Buddhist pantheon, the heroon anchors the faith of the people to the land and reminds all who enter that the gods once walked among mortals, and may yet do so again."
+      fnr_heroon_maintenance: "Shrine Upkeep"
+
+
 

@@ -490,6 +490,13 @@
 				required_locations_fraction = 0.3
 				rule = plausible
 				potential = {
+					AND = {
+						OR = {
+							has_variable = fnr_historical_enabled
+							has_variable = fnr_netherlands_enabled
+						}
+						NOT = { has_variable = fnr_netherlands_disabled }
+					}
 					culture = { has_culture_group = culture_group:netherlandish_group }
 				}
 				name = NED
@@ -4345,11 +4352,15 @@
 							tag_exists = KOREA
 						}
 					}
-					culture = { has_culture_group = culture_group:confucian_group }
+					AND = {
+						culture = { has_culture_group = culture_group:confucian_group }
+						culture = culture:korean_culture
+					}
 				}
 				allow = {
 					in_civil_war = no
 					current_age_or_later = { age = age_6_revolutions }
+					culture = culture:korean_culture
 				}
 				name = KOREA
 				flag = KOREA
@@ -4436,7 +4447,18 @@
 							tag_exists = NKORA
 						}
 					}
-					culture = { has_culture_group = culture_group:confucian_group }
+					AND = {
+						culture = { has_culture_group = culture_group:confucian_group }
+						culture = culture:korean_culture
+					}
+				}
+				allow = {
+					in_civil_war = no
+					current_age_or_later = { age = age_6_revolutions }
+					AND = {
+						culture = { has_culture_group = culture_group:confucian_group }
+						culture = culture:korean_culture
+					}
 				}
 				name = NKORA
 				flag = NKORA
@@ -4464,10 +4486,18 @@
 							tag_exists = SKORA
 						}
 					}
-					culture = { has_culture_group = culture_group:confucian_group }
+					AND = {
+						culture = { has_culture_group = culture_group:confucian_group }
+						culture = culture:korean_culture
+					}
 				}
 				allow = {
+					in_civil_war = no
 					current_age_or_later = { age = age_6_revolutions }
+					AND = {
+						culture = { has_culture_group = culture_group:confucian_group }
+						culture = culture:korean_culture
+					}
 				}
 				name = SKORA
 				flag = SKORA
@@ -5825,7 +5855,7 @@
 							has_variable = fnr_meme_enabled
 							has_variable = fnr_hyperborea_enabled
 						}
-						NOT = { has_variable = fnr_assyriaempire_disabled }
+						NOT = { has_variable = fnr_hyperborea_disabled }
 					}
 					NOT = { 
 						OR = {
@@ -5833,6 +5863,10 @@
 							tag_exists = HPBRA
 						}
 					}
+					culture = { has_culture_group = culture_group:tungusic_group }
+				}
+				allow = {
+					culture = { has_culture_group = culture_group:tungusic_group }
 				}
 				name = HPBRA
 				flag = HPBRA
@@ -5893,7 +5927,7 @@
 		# Japan - Modern
 			JAPAN_f = {
 				level = 4
-				required_locations_fraction = 1
+				required_locations_fraction = 0.85
 				rule = plausible
 				potential = {
 					AND = {
@@ -5911,6 +5945,14 @@
 					}
 					language = language:japanese_language
 				}
+				allow = {
+					# Has at least 380-400 cultural influence, or has at least 45% of a japanese culture group culture with at least 80% of Japanese Territory
+					culture = { has_culture_group = culture_group:japanese_group }
+					OR = {
+						culture = { cultural_influence >= 380 }
+						culture = { cultural_tradition >= 800 }
+					}
+				}
 				name = JAPAN
 				flag = JAPAN
 				adjective = JAPAN_ADJ
@@ -5922,7 +5964,7 @@
 		# Empire of Japan - Modern
 			EOJPN_f = {
 				level = 5
-				required_locations_fraction = 1
+				required_locations_fraction = 0.01 # 0.90
 				rule = plausible
 				potential = {
 					AND = {
@@ -5939,6 +5981,13 @@
 						}
 					}
 					language = language:japanese_language
+				}
+				allow = {
+					culture = { has_culture_group = culture_group:japanese_group }
+			#		OR = {
+			#			culture = { cultural_influence >= 400 }
+			#			culture = { cultural_tradition >= 825 }
+			#		}
 				}
 				name = EOJPN
 				flag = EOJPN

@@ -5,7 +5,7 @@
 	# Bactria
 
 		fnr_greco_buddhism_religion = { # https://en.wikipedia.org/wiki/Greco-Buddhism
-			color = fnr_map_greco_buddhism_religion
+			color = color_fnr_greco_buddhism_religion
 			group = folk_european_group
 
 			religious_aspects = 2
