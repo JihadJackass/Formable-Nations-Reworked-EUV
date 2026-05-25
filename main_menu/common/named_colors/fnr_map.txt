@@ -21,6 +21,8 @@ colors = {
 		map_china = rgb { 150 150 45 }
 
 	# FORMABLE NATION COLORS
+		# Roman Republic
+		map_RMNRP = rgb { 212 9 79 }
 		# Ontario
 		map_ONTRO = rgb { 171 69 53 }
 		# Gobi

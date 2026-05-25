@@ -9,7 +9,7 @@
 		icon = city_building_advance
 		cultures_capacity = 2
 		diplomatic_reputation = 2
-		army_infantry_maintenance_cost_modifier = -0.025
+		army_light_infantry_maintenance_cost_modifier  = -0.025
 
 		requires = national_sovereignty
 	}

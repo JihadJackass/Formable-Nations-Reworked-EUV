@@ -4,12 +4,37 @@
   # Messages localiation #
   ########################
 
-      PERFORM_fnr_spread_litergical_copies_of_alexander_ACTION: "TODO"
-      PERFORM_fnr_greco_buddhism_action_hybridize_local_cultures_ACTION: "TODO"
+    # Greco-Bactrian Content
+
+      # Spread Liturgical Copies of Alexander
+
+        PERFORM_fnr_spread_litergical_copies_of_alexander_ACTION: "Action Spread Copies"
+        PERFORM_fnr_spread_litergical_copies_of_alexander_ACTION_SETUP: "When we send envoys."
+        PERFORM_fnr_spread_litergical_copies_of_alexander_ACTION_HEADER: "$MESSENGER$"
+        PERFORM_fnr_spread_litergical_copies_of_alexander_ACTION_TITLE: "Sent envoys"
+        PERFORM_fnr_spread_litergical_copies_of_alexander_ACTION_EFFECTS: "[SCOPE.sCountry('actor').GetName] has sent envoys."
+        PERFORM_fnr_spread_litergical_copies_of_alexander_ACTION_LOG: "Sent envoys."
+        PERFORM_fnr_spread_litergical_copies_of_alexander_ACTION_BTN1: "OK"
+        PERFORM_fnr_spread_litergical_copies_of_alexander_ACTION_BTN2: "OK"
+        PERFORM_fnr_spread_litergical_copies_of_alexander_ACTION_BTN3: "$common_string_go_to$"
+        PERFORM_fnr_spread_litergical_copies_of_alexander_ACTION_MAP: ""
+
+      # Hybridize Local Cultures Bactria
+
+        PERFORM_fnr_greco_buddhism_action_hybridize_local_cultures_ACTION: "When we send envoys."
+        PERFORM_fnr_greco_buddhism_action_hybridize_local_cultures_ACTION_SETUP: "$unrestrict_peranakan_trading_rights$."
+        PERFORM_fnr_greco_buddhism_action_hybridize_local_cultures_ACTION_HEADER: "$MESSENGER$"
+        PERFORM_fnr_greco_buddhism_action_hybridize_local_cultures_ACTION_TITLE: "Sent envoys"
+        PERFORM_fnr_greco_buddhism_action_hybridize_local_cultures_ACTION_EFFECTS: "[SCOPE.sCountry('actor').GetName] has sent envoys."
+        PERFORM_fnr_greco_buddhism_action_hybridize_local_cultures_ACTION_LOG: "Sent envoys."
+        PERFORM_fnr_greco_buddhism_action_hybridize_local_cultures_ACTION_BTN1: "OK"
+        PERFORM_fnr_greco_buddhism_action_hybridize_local_cultures_ACTION_BTN2: "OK"
+        PERFORM_fnr_greco_buddhism_action_hybridize_local_cultures_ACTION_BTN3: "$common_string_go_to$"
+        PERFORM_fnr_greco_buddhism_action_hybridize_local_cultures_ACTION_MAP: ""
 
       # Proclaim Bactrian Synod
 
-        PERFORM_fnr_proclaim_bactrian_synod_ACTION: "TODO"
+        PERFORM_fnr_proclaim_bactrian_synod_ACTION: "When we send envoys."
         PERFORM_fnr_proclaim_bactrian_synod_ACTION_SETUP: "$unrestrict_peranakan_trading_rights$."
         PERFORM_fnr_proclaim_bactrian_synod_ACTION_HEADER: "$MESSENGER$"
         PERFORM_fnr_proclaim_bactrian_synod_ACTION_TITLE: "[SCOPE.sCountry('actor').GetName] is restoring Peranakan Trading Rights"
@@ -19,3 +44,83 @@
         PERFORM_fnr_proclaim_bactrian_synod_ACTION_BTN2: "OK"
         PERFORM_fnr_proclaim_bactrian_synod_ACTION_BTN3: "$common_string_go_to$"
         PERFORM_fnr_proclaim_bactrian_synod_ACTION_MAP: ""
+
+      # Embrace Religion
+
+        PERFORM_fnr_grecobuddhism_embrace_religion_ACTION: "When we send envoys."
+        PERFORM_fnr_grecobuddhism_embrace_religion_ACTION_SETUP: "$unrestrict_peranakan_trading_rights$."
+        PERFORM_fnr_grecobuddhism_embrace_religion_ACTION_HEADER: "$MESSENGER$"
+        PERFORM_fnr_grecobuddhism_embrace_religion_ACTION_TITLE: "[SCOPE.sCountry('actor').GetName] is restoring Peranakan Trading Rights"
+        PERFORM_fnr_grecobuddhism_embrace_religion_ACTION_EFFECTS: "$EFFECT$"
+        PERFORM_fnr_grecobuddhism_embrace_religion_ACTION_LOG: "[SCOPE.sCountry('actor').GetName] restored Peranakan Trading Rights"
+        PERFORM_fnr_grecobuddhism_embrace_religion_ACTION_BTN1: "OK"
+        PERFORM_fnr_grecobuddhism_embrace_religion_ACTION_BTN2: "OK"
+        PERFORM_fnr_grecobuddhism_embrace_religion_ACTION_BTN3: "$common_string_go_to$"
+        PERFORM_fnr_grecobuddhism_embrace_religion_ACTION_MAP: ""
+
+    # Moravian Patriarchate
+
+      # Influence HRE Members
+
+        PERFORM_fnr_moravia_patriarchate_influence_hre_members_ACTION: "When we send envoys."
+        PERFORM_fnr_moravia_patriarchate_influence_hre_members_ACTION_SETUP: "$unrestrict_peranakan_trading_rights$."
+        PERFORM_fnr_moravia_patriarchate_influence_hre_members_ACTION_HEADER: "$MESSENGER$"
+        PERFORM_fnr_moravia_patriarchate_influence_hre_members_ACTION_TITLE: "[SCOPE.sCountry('actor').GetName] is restoring Peranakan Trading Rights"
+        PERFORM_fnr_moravia_patriarchate_influence_hre_members_ACTION_EFFECTS: "$EFFECT$"
+        PERFORM_fnr_moravia_patriarchate_influence_hre_members_ACTION_LOG: "[SCOPE.sCountry('actor').GetName] restored Peranakan Trading Rights"
+        PERFORM_fnr_moravia_patriarchate_influence_hre_members_ACTION_BTN1: "OK"
+        PERFORM_fnr_moravia_patriarchate_influence_hre_members_ACTION_BTN2: "OK"
+        PERFORM_fnr_moravia_patriarchate_influence_hre_members_ACTION_BTN3: "$common_string_go_to$"
+        PERFORM_fnr_moravia_patriarchate_influence_hre_members_ACTION_MAP: ""
+
+      # Arrange Polish Coalition
+
+        PERFORM_fnr_moravia_patriarchate_polish_coalition_ACTION: "When we send envoys."
+        PERFORM_fnr_moravia_patriarchate_polish_coalition_ACTION_SETUP: "$unrestrict_peranakan_trading_rights$."
+        PERFORM_fnr_moravia_patriarchate_polish_coalition_ACTION_HEADER: "$MESSENGER$"
+        PERFORM_fnr_moravia_patriarchate_polish_coalition_ACTION_TITLE: "[SCOPE.sCountry('actor').GetName] is restoring Peranakan Trading Rights"
+        PERFORM_fnr_moravia_patriarchate_polish_coalition_ACTION_EFFECTS: "$EFFECT$"
+        PERFORM_fnr_moravia_patriarchate_polish_coalition_ACTION_LOG: "[SCOPE.sCountry('actor').GetName] restored Peranakan Trading Rights"
+        PERFORM_fnr_moravia_patriarchate_polish_coalition_ACTION_BTN1: "OK"
+        PERFORM_fnr_moravia_patriarchate_polish_coalition_ACTION_BTN2: "OK"
+        PERFORM_fnr_moravia_patriarchate_polish_coalition_ACTION_BTN3: "$common_string_go_to$"
+        PERFORM_fnr_moravia_patriarchate_polish_coalition_ACTION_MAP: ""
+
+      # Expand Authority
+
+        PERFORM_fnr_moravia_patriarchate_expand_authority_ACTION: "When we send envoys."
+        PERFORM_fnr_moravia_patriarchate_expand_authority_ACTION_SETUP: "$unrestrict_peranakan_trading_rights$."
+        PERFORM_fnr_moravia_patriarchate_expand_authority_ACTION_HEADER: "$MESSENGER$"
+        PERFORM_fnr_moravia_patriarchate_expand_authority_ACTION_TITLE: "[SCOPE.sCountry('actor').GetName] is restoring Peranakan Trading Rights"
+        PERFORM_fnr_moravia_patriarchate_expand_authority_ACTION_EFFECTS: "$EFFECT$"
+        PERFORM_fnr_moravia_patriarchate_expand_authority_ACTION_LOG: "[SCOPE.sCountry('actor').GetName] restored Peranakan Trading Rights"
+        PERFORM_fnr_moravia_patriarchate_expand_authority_ACTION_BTN1: "OK"
+        PERFORM_fnr_moravia_patriarchate_expand_authority_ACTION_BTN2: "OK"
+        PERFORM_fnr_moravia_patriarchate_expand_authority_ACTION_BTN3: "$common_string_go_to$"
+        PERFORM_fnr_moravia_patriarchate_expand_authority_ACTION_MAP: ""
+
+      # Unificatio Unionis
+
+        PERFORM_fnr_moravia_patriarchate_unificatio_unionis_ACTION: "Test Union"
+        PERFORM_fnr_moravia_patriarchate_unificatio_unionis_ACTION_SETUP: "$unrestrict_peranakan_trading_rights$."
+        PERFORM_fnr_moravia_patriarchate_unificatio_unionis_ACTION_HEADER: "$MESSENGER$"
+        PERFORM_fnr_moravia_patriarchate_unificatio_unionis_ACTION_TITLE: "[SCOPE.sCountry('actor').GetName] is restoring Peranakan Trading Rights"
+        PERFORM_fnr_moravia_patriarchate_unificatio_unionis_ACTION_EFFECTS: "$EFFECT$"
+        PERFORM_fnr_moravia_patriarchate_unificatio_unionis_ACTION_LOG: "[SCOPE.sCountry('actor').GetName] restored Peranakan Trading Rights"
+        PERFORM_fnr_moravia_patriarchate_unificatio_unionis_ACTION_BTN1: "OK"
+        PERFORM_fnr_moravia_patriarchate_unificatio_unionis_ACTION_BTN2: "OK"
+        PERFORM_fnr_moravia_patriarchate_unificatio_unionis_ACTION_BTN3: "$common_string_go_to$"
+        PERFORM_fnr_moravia_patriarchate_unificatio_unionis_ACTION_MAP: ""
+
+      # MP_PERIPHORA TEST BUTTON
+
+        PERFORM_fnr_mp_periphora_ACTION: "Test BUTTON"
+        PERFORM_fnr_mp_periphora_ACTION_SETUP: "$unrestrict_peranakan_trading_rights$."
+        PERFORM_fnr_mp_periphora_ACTION_HEADER: "$MESSENGER$"
+        PERFORM_fnr_mp_periphora_ACTION_TITLE: "[SCOPE.sCountry('actor').GetName] is restoring Peranakan Trading Rights"
+        PERFORM_fnr_mp_periphora_ACTION_EFFECTS: "$EFFECT$"
+        PERFORM_fnr_mp_periphora_ACTION_LOG: "[SCOPE.sCountry('actor').GetName] restored Peranakan Trading Rights"
+        PERFORM_fnr_mp_periphora_ACTION_BTN1: "OK"
+        PERFORM_fnr_mp_periphora_ACTION_BTN2: "OK"
+        PERFORM_fnr_mp_periphora_ACTION_BTN3: "$common_string_go_to$"
+        PERFORM_fnr_mp_periphora_ACTION_MAP: ""        

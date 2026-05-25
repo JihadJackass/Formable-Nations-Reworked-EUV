@@ -5,6 +5,7 @@ flavor_EOJPN.1 = {
 	title = flavor_EOJPN.1.title
 	desc = flavor_EOJPN.1.desc
 	fire_only_once = yes
+	outcome = neutral
 
 	immediate = {
 		random_owned_location = {
@@ -24,7 +25,7 @@ flavor_EOJPN.1 = {
 			change_country_color = map_CHSEN
 			create_character = {
 				save_scope_as = chosen_ruler
-				culture = culture:korean
+				culture = culture:korean_culture
 				religion = religion:shinto
 			}
 			set_new_ruler = scope:chosen_ruler

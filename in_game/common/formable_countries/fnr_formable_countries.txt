@@ -490,13 +490,6 @@
 				required_locations_fraction = 0.3
 				rule = plausible
 				potential = {
-					AND = {
-						OR = {
-							has_variable = fnr_historical_enabled
-							has_variable = fnr_netherlands_enabled
-						}
-						NOT = { has_variable = fnr_netherlands_disabled }
-					}
 					culture = { has_culture_group = culture_group:netherlandish_group }
 				}
 				name = NED
@@ -1671,7 +1664,7 @@
 					}
 					OR = {
 						religion = religion:catholic
-						culture = culture:hellenic
+						culture = culture:greek_culture
 						culture = { has_culture_group = culture_group:greek_group }
 						culture.language = language:latin_language
 					}
@@ -4715,16 +4708,16 @@
 							tag_exists = TPING
 						}
 					}
-					OR = {
-						culture = { has_culture_group = culture_group:chinese_group }
-						culture = { has_culture_group = culture_group:mongolian_group }
-					}
+					culture = { has_culture_group = culture_group:chinese_group }
 				}
 				allow = {
+					# Is a chinese nation with at least 
 					OR = {
 						religion = religion:catholic
 						NOT = { tag = c:CHI }
 					}
+					current_age_or_later = { age = age_5_absolutism }
+					current_date > 1750.1.1
 				}
 				name = TPING
 				flag = TPING
@@ -5593,7 +5586,7 @@
 						}
 					}
 					OR = {
-						culture = culture:hellenic
+						culture = culture:greek_culture
 						culture = { has_culture_group = culture_group:greek_group }
 					}
 				}
@@ -5641,6 +5634,48 @@
 				}
 			}	
 	# Rank 4
+		# Roman Republic - Fantasy
+			RMNRP_f = {
+				level = 4
+				required_locations_fraction = 0.95
+				rule = plausible
+				potential = {
+					AND = {
+						OR = {
+							has_variable = fnr_fantasy_enabled
+							has_variable = fnr_sassanids_enabled
+						}
+						NOT = { has_variable = fnr_sassanids_disabled }
+					}
+					NOT = { 
+						OR = {
+							tag = RMNRP
+							tag_exists = RMNRP
+						}
+					}
+				}
+				name = RMNRP
+				flag = RMNRP
+				adjective = RMNRP_ADJ
+				tag = RMNRP
+				color = map_RMNRP
+				areas = {
+					sicily_area
+					basilicata_area
+					apulia_area
+					campania_area
+					abruzzo_area
+					lazio_area
+					tuscany_area
+					emilia_area
+				}
+				form_effect = {
+					if = {
+						limit = { country_rank_level < 4 }
+						set_country_rank_effect = { rank = country_rank:rank_empire }
+					}				
+				}
+			}	
 		# Sassanids - Fantasy
 			SSNID_f = {
 				level = 4
@@ -8008,8 +8043,7 @@
 						set_country_rank_effect = { rank = country_rank:rank_empire }
 					}
 				}
-			}				
-	# Rank 5
+			}	
 		# Austro-Hungarian Empire
 			ASHNG_f = {
 				level = 5
@@ -8165,7 +8199,7 @@
 						}
 					}
 					OR = {
-						culture = culture:hellenic
+						culture = culture:greek_culture
 						culture = { has_culture_group = culture_group:greek_group }
 					}
 				}
@@ -8575,7 +8609,7 @@
 						}
 					}
 					OR = {
-						culture = culture:hellenic
+						culture = culture:greek_culture
 						culture = { has_culture_group = culture_group:greek_group }
 					}
 				}
@@ -8587,7 +8621,7 @@
 					}
 					trigger_if = {
 						OR = {
-							culture = culture:hellenic
+							culture = culture:greek_culture
 							culture = { has_culture_group = culture_group:greek_group }
 						}
 						OR = {

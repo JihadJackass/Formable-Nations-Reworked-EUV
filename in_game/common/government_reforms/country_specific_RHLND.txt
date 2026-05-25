@@ -118,7 +118,7 @@
 				monthly_diplomats = 0.20
 				trade_range_modifier = 0.10
 				global_merchant_capacity_modifier = 0.10
-				court_spending_cost = 0.01
+				court_spending_cost_modifier = 0.01
 
 				monthly_towards_outward = 0.10
 				monthly_towards_conciliatory = 0.20

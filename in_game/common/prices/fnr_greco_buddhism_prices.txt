@@ -11,7 +11,19 @@
 		max_scale = 3
 	}
 
+	fnr_proclaim_bactrian_synod_price_cost_modifier = {
+		religious_influence = 100
+		min_scale = 1       
+		max_scale = 3
+	}
+
 	fnr_greco_buddhism_action_hybridize_local_cultures_price = {
+		religious_influence = 180
+		min_scale = 1      
+		max_scale = 3
+	}
+
+	fnr_greco_buddhism_action_hybridize_local_cultures_price_cost_modifier = {
 		religious_influence = 180
 		min_scale = 1      
 		max_scale = 3

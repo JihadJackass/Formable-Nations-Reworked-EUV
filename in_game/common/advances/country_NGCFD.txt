@@ -17,7 +17,7 @@
 
 			monthly_towards_absolutism = 0.05
 			global_manpower_modifier = 0.025
-			army_infantry_build_cost_modifier = -0.0050
+			army_light_infantry_build_cost_modifier = -0.0050
 
 			requires = scientific_revolution_advance
 		}

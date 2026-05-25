@@ -59,7 +59,8 @@
 #	on_trigger_fail = {																	# This will be run if a queued event (or one triggered immediately from script) does not fulfill its trigger. Events failing to trigger from an on-action will *not* run this
 #		<effects>
 #	}
-#	fire_only_once = yes																# Event will fire only once per campaign
+#	fire_only_once = yes
+	outcome = neutral																# Event will fire only once per campaign
 #	interface_lock = no																	# Event pauses the game when fired in single player. Default: yes
 #	dynamic_historical_event = {														# The time window for the event to occur, only tags specified in it can get the event
 #		tag = <country tag>																# Can have more than one tag in it

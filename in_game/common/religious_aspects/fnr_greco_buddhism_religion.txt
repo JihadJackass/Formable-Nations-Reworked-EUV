@@ -18,7 +18,7 @@
 
 		modifier = {
 			rebel_monthly_progress = -0.10
-			army_cavalry_power = 0.075
+			army_light_cavalry_power = 0.075
 			pop_leave_rebels_threshold = -0.05
 			monthly_religious_influence = 0.025
 			monthly_karma = -0.010
@@ -121,11 +121,11 @@
     		# Buffs
 			antagonism_received_modifier = -0.15        # World fears you but accepts your conquests
 			global_max_control = 0.1                     # Iron grip on conquered lands
-			army_cavalry_power = 0.1                     # Companion cavalry legacy
+			army_light_cavalry_power = 0.1                     # Companion cavalry legacy
 			army_movement_speed = 0.1                    # Legendary speed of Alexander's campaigns
 			annexation_speed_modifier = 0.15             # Rapid integration of conquered peoples
 			# Debuffs
-			army_cavalry_maintenance_cost_modifier = 0.15  # Elite cavalry is expensive to maintain
+			army_light_cavalry_maintenance_cost_modifier = 0.15  # Elite cavalry is expensive to maintain
 			diplomatic_reputation = -2                      # Feared conqueror, not a trusted partner
 		}
 
@@ -473,7 +473,7 @@
 
 		modifier = {
 			land_morale_modifier = 0.1
-			army_infantry_power = 0.05
+			army_light_infantry_power = 0.05
 		}
 
 		opinions = {

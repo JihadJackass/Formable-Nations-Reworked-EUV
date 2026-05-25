@@ -22,7 +22,7 @@
 		country_modifier = {
 			global_burghers_estate_power = 0.025
 			
-			trade_efficiency = 0.10
+			trade_land_efficiency = 0.10
 			
 			monthly_towards_decentralization = societal_value_monthly_move
 		}

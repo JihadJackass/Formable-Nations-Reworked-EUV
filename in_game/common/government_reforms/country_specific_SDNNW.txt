@@ -14,7 +14,7 @@
 				tag = SDNNW
 			}
 			country_modifier = {
-				army_infantry_power = 0.05
+				army_light_infantry_power = 0.05
 				discipline = 0.05
 				monthly_towards_centralization = societal_value_minor_monthly_move
 				monthly_army_tradition = 0.035
@@ -101,7 +101,7 @@
 			}
 			country_modifier = {
 				discipline = 0.03
-				army_infantry_power = 0.03
+				army_light_infantry_power = 0.03
 				global_levy_size_modifier = -0.05
 			}
 			locked = {

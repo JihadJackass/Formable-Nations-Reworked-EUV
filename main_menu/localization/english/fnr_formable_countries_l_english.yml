@@ -1253,14 +1253,20 @@
     KDOME: "Domé"
     KDOME_f: "Domé"
     KDOME_ADJ: "Domé"
-    KDOME_f_desc: "Forge a unified realm from the vast northeastern reaches of the Tibetan plateau. Domé — the lower province of Tibet — is a land of sweeping grasslands, sacred lakes, and ancient monasteries where the great Yellow River begins its long journey to the sea. Its Amdowa people have long been divided among petty chieftains and monastic estates, caught between the ambitions of Tibet and China. To unite Domé is to give a voice to the plateau's forgotten province and raise a banner where none has flown before."
+    KDOME_f_desc: "Forge a unified realm from the vast northeastern reaches of the Tibetan plateau. The lower province of Tibet is a land of sweeping grasslands, sacred lakes, and ancient monasteries where the great Yellow River begins its long journey to the sea. Its Amdowa people have long been divided among petty chieftains and monastic estates, caught between the ambitions of Tibet and China. To unite Domé is to give a voice to the plateau's forgotten province and raise a banner where none has flown before."
 
     KGOBI: "Gobi"
     KGOBI_f: "Gobi"
     KGOBI_ADJ: "Gobian"
-    KGOBI_f_desc: "Claim dominion over the vast desert steppe that stretches between the Altai Mountains and the edges of the Chinese heartland. The Gobi has never been empty — it has been the highway of nomadic empires, the graveyard of armies that underestimated its expanse, and the homeland of herders who thrived where no settled people could endure. To forge a kingdom from its windswept plains is to command the great void at the center of the continent."
+    KGOBI_f_desc: "Claim dominion over the vast desert steppe that stretches between the Altai Mountains and the edges of the Chinese heartland.\n\nThe Gobi has never been empty.\n\nGobi has been the highway of nomadic empires, the graveyard of armies that underestimated its expanse, and the homeland of herders who thrived where no settled people could endure. To forge a kingdom from its windswept plains is to command the great void at the center of the continent."
 
     ONTRO: "Ontario"
     ONTRO_f: "Ontario"
     ONTRO_ADJ: "Ontarian"
     ONTRO_f_desc: "Establish a colonial dominion over the vast territory surrounding the great inland lakes. Named for the Iroquoian word meaning 'beautiful lake,' Ontario commands the vital waterways linking the heart of the continent to the Atlantic seaboard. From the thundering falls of Niagara to the endless forests of the Canadian Shield, this is a land of boundless timber, fertile soil, and strategic portages that whoever controls them controls the future of North America."
+
+    RMNRP: "Roman Republic"
+    RMNRP_ADJ: "Roman"
+    RMNRP_f: "Roman Republic"
+    RMNRP_f_desc: "TODO: description"
+

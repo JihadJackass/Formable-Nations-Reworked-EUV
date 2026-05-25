@@ -41,7 +41,7 @@
 	# Druzhina
 
 		fnr_druzhina = {
-		category = army_infantry
+		category = army_light_infantry
 
 		# Land modifiers
 		max_strength = 0.5

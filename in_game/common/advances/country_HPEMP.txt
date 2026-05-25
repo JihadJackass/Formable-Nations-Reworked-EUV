@@ -9,8 +9,8 @@
 			}
 			icon = skilled_cavalry_raids
 
-			army_cavalry_power = 0.05
-			army_cavalry_maintenance_cost_modifier = -0.10
+			army_light_cavalry_power = 0.05
+			army_light_cavalry_maintenance_cost_modifier = -0.10
 
 			requires = horse_riding_advance
 		}
@@ -22,7 +22,7 @@
 			}
 			icon = ayu_prestigious_cavalry
 
-			army_cavalry_build_cost_modifier = -0.30
+			army_light_cavalry_build_cost_modifier = -0.30
 			army_food_gathering = 0.05
 			global_soldiers_food_consumption = 0.10
 

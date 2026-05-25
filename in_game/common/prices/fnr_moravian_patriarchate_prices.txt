@@ -5,6 +5,12 @@
 		max_scale = 3
 	}
 
+	fnr_influence_holy_roman_empire_member_price_cost_modifier = {
+		religious_influence = 20
+		min_scale = 1       
+		max_scale = 3
+	}
+
 #	fnr_price_arrange_polish_coalition = {
 #		religious_influence = 30
 #	}

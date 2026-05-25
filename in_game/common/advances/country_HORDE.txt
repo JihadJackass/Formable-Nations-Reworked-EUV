@@ -11,10 +11,10 @@
 			icon = teu_teutonic_heavy_cavalry
 
 			# Buffs
-			army_cavalry_power = 0.10
-			army_cavalry_build_cost_modifier = -0.10
-			army_cavalry_maintenance_cost_modifier = -0.10
-			army_cavalry_reinforce_cost_modifier = -0.05
+			army_light_cavalry_power = 0.10
+			army_light_cavalry_build_cost_modifier = -0.10
+			army_light_cavalry_maintenance_cost_modifier = -0.10
+			army_light_cavalry_reinforce_cost_modifier = -0.05
 			global_peasants_food_consumption = -0.05
 			# Debuffs
 			army_artillery_power = -0.10

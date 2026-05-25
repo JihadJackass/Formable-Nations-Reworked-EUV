@@ -47,7 +47,7 @@
 				nobles_estate_target_satisfaction = 0.10
 				
 				discipline = 0.025
-				army_infantry_power = 0.10
+				army_light_infantry_power = 0.10
 				
 				monthly_towards_decentralization = societal_value_monthly_move
 			}

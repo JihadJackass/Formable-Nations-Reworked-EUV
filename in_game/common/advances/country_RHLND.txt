@@ -11,7 +11,7 @@
 			}
 			icon = colonial_tradition
 
-			army_infantry_power = 0.10
+			army_light_infantry_power = 0.10
 
 			requires = recruitment_improvements_renaissance
 		}
@@ -38,7 +38,7 @@
 			icon = colonial_tradition
 
 			trade_range_modifier = 0.10
-			trade_efficiency = 0.05
+			trade_land_efficiency = 0.05
 
 			requires = printing_press_advance
 		}				

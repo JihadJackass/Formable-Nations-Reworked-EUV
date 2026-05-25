@@ -8,8 +8,8 @@
 	leader_modifier = {
 		organization_parliament_duration_modifier = 0.10
 		parliament_base_support = 0.05
-		army_cavalry_maintenance_cost_modifier = -0.10
-		army_cavalry_power = 0.15
+		army_light_cavalry_maintenance_cost_modifier = -0.10
+		army_light_cavalry_power = 0.15
 	}
 
 	modifier = {

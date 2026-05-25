@@ -29,7 +29,7 @@
 			icon = eastern_ecumenism
 
 			add_accepted_culture_cost_modifier = 0.002
-			army_cavalry_power = 0.0025
+			army_light_cavalry_power = 0.0025
 
 			requires = global_trade_advance
 		}	
