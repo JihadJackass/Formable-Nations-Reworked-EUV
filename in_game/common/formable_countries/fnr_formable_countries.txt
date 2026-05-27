@@ -8259,6 +8259,7 @@
 						}
 						NOT = { has_variable = fnr_westernrome_disabled }
 					}
+					tag = RMNRP
 					NOT = { 
 						OR = {
 							tag = WESRE

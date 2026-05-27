@@ -15,7 +15,9 @@
 
       # Japan East Asia Sphere IO Prices
 
-        fnr_empire_of_japan_integration_of_old_imperial_systems_price: "Price of Imperial Systems Integration"
+        fnr_empire_of_japan_integration_of_old_imperial_systems: "Price of Imperial Systems Integration"
+        MODIFIER_TYPE_NAME_fnr_empire_of_japan_integration_of_old_imperial_systems_cost_modifier: "TODO:TESTNAME"
+        MODIFIER_TYPE_DESC_fnr_empire_of_japan_integration_of_old_imperial_systems_cost_modifier: "TODO:TESTDESC"
 
       # Bactrian IO Prices
 

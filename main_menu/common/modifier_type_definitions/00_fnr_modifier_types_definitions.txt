@@ -1,0 +1,20 @@
+﻿###########################################################
+# Formable Nations: Reworked - Modifier Types Definitions #
+###########################################################
+
+# Greco-Buddhism IO related
+
+# Japan Greater East Asia IO related
+
+	fnr_empire_of_japan_integration_of_old_imperial_systems_cost_modifier={
+		color=neutral
+		percent=yes
+		game_data={
+			category=country
+		}
+	}
+
+# Moravian Patriarchate IO related
+
+# Taiping God Worshipping Society IO related
+

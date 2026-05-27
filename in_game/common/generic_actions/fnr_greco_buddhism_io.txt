@@ -35,6 +35,12 @@
 		}
 
 		price = price:fnr_spread_litergical_copies_of_alexander_price
+		price_modifier = {
+			add = {
+				value = 1
+				#desc = BASE_VALUE
+			}
+		}
 
 		select_trigger = {
 			looking_for_a = religion
@@ -129,6 +135,12 @@
 		}
 
 		price = price:fnr_greco_buddhism_action_hybridize_local_cultures_price
+		price_modifier = {
+			add = {
+				value = 1
+				#desc = BASE_VALUE
+			}
+		}
 
 		select_trigger = {
 			looking_for_a = religion
@@ -238,6 +250,12 @@
 		}
 
 		price = price:fnr_proclaim_bactrian_synod_price
+		price_modifier = {
+			add = {
+				value = 1
+				#desc = BASE_VALUE
+			}
+		}
 
 		select_trigger = {
 			looking_for_a = religion
@@ -317,6 +335,12 @@
 		}
 
 		price = price:fnr_spread_litergical_copies_of_alexander_price
+		price_modifier = {
+			add = {
+				value = 1
+				#desc = BASE_VALUE
+			}
+		}
 
 		select_trigger = {
 			looking_for_a = religion
@@ -397,6 +421,12 @@
 		}
 		
 		price = price:join_branch
+		price_modifier = {
+			add = {
+				value = 1
+				#desc = BASE_VALUE
+			}
+		}
 
 		select_trigger = {
 			looking_for_a = international_organization

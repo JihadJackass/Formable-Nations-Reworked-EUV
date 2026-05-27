@@ -35,6 +35,10 @@
         fnr_papal_hre_established_tt: "The Holy Roman Empire is dissolved. A new sacred confederation under papal authority is established."
         fnr_keep_old_hre_tt: "The Holy Roman Empire continues under our leadership."
 
+      # Roman Empire
+
+        ROM_formable_trigger_1_tt: "This check handles non-Roman candidates for countries who still wish to form the Roman Empire, at a heavier cost. Must not be Roman Republic, Western Roman Empire, Eastern Roman Empire, or Byzantium."
+
       # Bactria
 
         BACTR_formable_trigger_1_tt: "#G 20%#! of our pops will convert to [ShowReligionName('zoroastrian')] in a spread of religious fervor due to the nature of our national reformation."

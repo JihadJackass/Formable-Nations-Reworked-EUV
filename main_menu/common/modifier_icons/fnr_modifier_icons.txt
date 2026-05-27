@@ -22,6 +22,10 @@
 
 	# Japan IO
 
+		fnr_empire_of_japan_integration_of_old_imperial_systems = {
+			positive = "gfx/interface/icons/modifier_types/change_heir_selection_cost_modifier.dds"
+		}
+
 		fnr_empire_of_japan_integration_of_old_imperial_systems_cost_modifier = {
 			positive = "gfx/interface/icons/modifier_types/change_heir_selection_cost_modifier.dds"
 		}

@@ -38,7 +38,14 @@
 			}
 		}
 		
-		price = price:fnr_empire_of_japan_integration_of_old_imperial_systems_price
+		price = price:join_branch
+		#price = price:fnr_japan_integration_of_old_imperial_systems
+		price_modifier = {
+			add = {
+				value = 1
+				#desc = BASE_VALUE
+			}
+		}
 
 		select_trigger = {
 			looking_for_a = international_organization
@@ -137,6 +144,13 @@
 		}
 		
 		price = price:join_branch
+		#price = price:fnr_japan_establish_chosen
+		price_modifier = {
+			add = {
+				value = 1
+				#desc = BASE_VALUE
+			}
+		}
 
 		select_trigger = {
 			looking_for_a = international_organization
@@ -201,6 +215,13 @@
 		}
 		
 		price = price:join_branch
+		#price = price:fnr_japan_establish_manchuria
+		price_modifier = {
+			add = {
+				value = 1
+				#desc = BASE_VALUE
+			}
+		}
 
 		select_trigger = {
 			looking_for_a = international_organization
@@ -253,6 +274,13 @@
 		}
 		
 		price = price:join_branch
+		#price = price:fnr_japan_establish_philippine
+		price_modifier = {
+			add = {
+				value = 1
+				#desc = BASE_VALUE
+			}
+		}
 
 		select_trigger = {
 			looking_for_a = international_organization
@@ -305,6 +333,13 @@
 		}
 		
 		price = price:join_branch
+		#price = price:fnr_japan_establish_china
+		price_modifier = {
+			add = {
+				value = 1
+				#desc = BASE_VALUE
+			}
+		}
 
 		select_trigger = {
 			looking_for_a = international_organization
@@ -357,6 +392,13 @@
 		}
 		
 		price = price:join_branch
+		#price = price:fnr_japan_establish_inner_mongolia
+		price_modifier = {
+			add = {
+				value = 1
+				#desc = BASE_VALUE
+			}
+		}
 
 		select_trigger = {
 			looking_for_a = international_organization

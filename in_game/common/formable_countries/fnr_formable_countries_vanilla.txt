@@ -1328,7 +1328,25 @@
 			country_rank = country_rank:rank_empire
 
 			trigger_if = {
-				tag = BYZ
+				OR = {
+					AND = { # Trigger to handle non-roman candidates, should control both Rome and constantinople, should have at least 90 legitimacy, should be either a Monarchy or Republic, should have at least 2 million pops, 
+						custom_tooltip = {
+							text = ROM_formable_trigger_1_tt
+							NOT = {
+								tag = BYZ
+								tag = RMNRP
+								tag = WESRE
+								tag = EASRE
+							}
+						}
+						owns = location:rome
+						owns = location:constantinople
+					}
+					tag = BYZ
+					tag = RMNRP
+					tag = WESRE
+					tag = EASRE
+				}
 			}
 			OR = {
 				religion.group = religion_group:christian
