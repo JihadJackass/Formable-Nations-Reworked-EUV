@@ -1643,52 +1643,6 @@
 					}					
 				}
 			}	
-		# Latin Empire - Non-historical
-			LTNEM_f = {
-				level = 3
-				required_locations_fraction = 0.90
-				rule = plausible
-				potential = {
-					AND = {
-						OR = {
-							has_variable = fnr_nonhistorical_enabled
-							has_variable = fnr_latinempire_enabled
-						}
-						NOT = { has_variable = fnr_latinempire_disabled }
-					}  
-					NOT = { 
-						OR = {
-							tag = LTNEM
-							tag_exists = LTNEM
-						}
-					}
-					OR = {
-						religion = religion:catholic
-						culture = culture:greek_culture
-						culture = { has_culture_group = culture_group:greek_group }
-						culture.language = language:latin_language
-					}
-				}
-				allow = {
-					owns = location:constantinople
-					religion = religion:catholic
-				}
-				name = LTNEM
-				flag = LTNEM
-				adjective = LTNEM_ADJ
-				tag = LTNEM
-				color = map_LTNEM
-				provinces = { constantinople_province kocaeli_province biga_province edirne_province dardanelles_province evros_province lower_macedonia_province chalkidiki_province central_macedonia_province thessaly_province lemnos_province chios_province }
-				locations = {
-					iznik
-				}
-				form_effect = {
-					if = {
-						limit = { country_rank_level < 4 }
-						set_country_rank_effect = { rank = country_rank:rank_empire }
-					}
-				}
-			}
 
 		################################
 		# Canada Provinces - US States #

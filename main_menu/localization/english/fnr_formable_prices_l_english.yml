@@ -23,6 +23,20 @@
 
         fnr_greco_buddhism_action_hybridize_local_cultures_price: "Price of Hybridizing Local Cultures"
 
+        MODIFIER_TYPE_NAME_fnr_spread_litergical_copies_of_alexander_price_cost_modifier: ""
+        MODIFIER_TYPE_DESC_fnr_spread_litergical_copies_of_alexander_price_cost_modifier: ""
+
+        fnr_proclaim_bactrian_synod_price_cost_modifier: ""
+        MODIFIER_TYPE_NAME_fnr_proclaim_bactrian_synod_price: ""
+        MODIFIER_TYPE_DESC_fnr_proclaim_bactrian_synod_price: ""
+
+        MODIFIER_TYPE_NAME_fnr_proclaim_bactrian_synod_price_cost_modifier: ""
+        MODIFIER_TYPE_DESC_fnr_proclaim_bactrian_synod_price_cost_modifier: ""
+
+        fnr_influence_holy_roman_empire_member_price_cost_modifier: ""
+        MODIFIER_TYPE_NAME_fnr_influence_holy_roman_empire_member_price_cost_modifier: ""
+        MODIFIER_TYPE_DESC_fnr_influence_holy_roman_empire_member_price_cost_modifier: ""
+
       # Moravian Patriarchate IO Prices
 
         fnr_influence_holy_roman_empire_member_price: "Price of Influencing a Holy Roman Empire Member"

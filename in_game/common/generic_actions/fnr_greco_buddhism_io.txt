@@ -34,7 +34,8 @@
 			}
 		}
 
-		price = price:fnr_spread_litergical_copies_of_alexander_price
+		price = price:join_branch
+		#price = price:fnr_spread_litergical_copies_of_alexander
 		price_modifier = {
 			add = {
 				value = 1
@@ -134,7 +135,8 @@
 			}
 		}
 
-		price = price:fnr_greco_buddhism_action_hybridize_local_cultures_price
+		price = price:join_branch
+		#price = price:fnr_greco_buddhism_action_hybridize_local_cultures
 		price_modifier = {
 			add = {
 				value = 1
@@ -249,7 +251,8 @@
 			}
 		}
 
-		price = price:fnr_proclaim_bactrian_synod_price
+		price = price:join_branch
+		#price = price:fnr_proclaim_bactrian_synod
 		price_modifier = {
 			add = {
 				value = 1
@@ -334,7 +337,8 @@
 			}
 		}
 
-		price = price:fnr_spread_litergical_copies_of_alexander_price
+		price = price:join_branch
+		#price = price:fnr_grecobuddhism_embrace_religion
 		price_modifier = {
 			add = {
 				value = 1
@@ -421,6 +425,7 @@
 		}
 		
 		price = price:join_branch
+		#price = price:fnr_bactria_restore_armenia
 		price_modifier = {
 			add = {
 				value = 1
@@ -494,6 +499,13 @@
 		}
 		
 		price = price:join_branch
+		#price = price:fnr_bactria_restore_macedonia
+		price_modifier = {
+			add = {
+				value = 1
+				#desc = BASE_VALUE
+			}
+		}
 
 		select_trigger = {
 			looking_for_a = international_organization
@@ -557,6 +569,13 @@
 		}
 		
 		price = price:join_branch
+		#price = price:fnr_bactria_restore_assyria
+		price_modifier = {
+			add = {
+				value = 1
+				#desc = BASE_VALUE
+			}
+		}
 
 		select_trigger = {
 			looking_for_a = international_organization
@@ -608,6 +627,13 @@
 		}
 		
 		price = price:join_branch
+		#price = price:fnr_bactria_restore_persia
+		price_modifier = {
+			add = {
+				value = 1
+				#desc = BASE_VALUE
+			}
+		}
 
 		select_trigger = {
 			looking_for_a = international_organization
@@ -659,6 +685,13 @@
 		}
 		
 		price = price:join_branch
+		#price = price:fnr_bactria_egyptian_claim
+		price_modifier = {
+			add = {
+				value = 1
+				#desc = BASE_VALUE
+			}
+		}
 
 		select_trigger = {
 			looking_for_a = international_organization
@@ -724,6 +757,13 @@
 		}
 		
 		price = price:join_branch
+		#price = price:fnr_bactria_egyptian_establish
+		price_modifier = {
+			add = {
+				value = 1
+				#desc = BASE_VALUE
+			}
+		}
 
 		select_trigger = {
 			looking_for_a = international_organization
@@ -775,6 +815,13 @@
 		}
 		
 		price = price:join_branch
+		#price = price:fnr_bactria_restore_the_macedonian_empire
+		price_modifier = {
+			add = {
+				value = 1
+				#desc = BASE_VALUE
+			}
+		}
 
 		select_trigger = {
 			looking_for_a = international_organization

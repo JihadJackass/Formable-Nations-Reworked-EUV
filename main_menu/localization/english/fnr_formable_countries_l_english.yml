@@ -368,9 +368,9 @@
 
     # Latin Empire
     LTNEM: "Latin Empire"
-    LTNEM_f: "Latin Empire"
+    LAT_f: "Latin Empire"
     LTNEM_ADJ: "Latin"
-    LTNEM_f_desc: "The Latin Empire was a feudal Crusader state established in 1204 by leaders of the Fourth Crusade on lands conquered from the Byzantine Empire, intended to replace it with a Catholic ruler. Based in Constantinople, it was a short-lived state ruled by a Catholic emperor, like Baldwin I, who was crowned in 1204. The empire gradually weakened due to internal and external conflicts, ultimately falling when the Byzantines recaptured Constantinople in 1261."
+    LAT_f_desc: "The Latin Empire was a feudal Crusader state established in 1204 by leaders of the Fourth Crusade on lands conquered from the Byzantine Empire, intended to replace it with a Catholic ruler. Based in Constantinople, it was a short-lived state ruled by a Catholic emperor, like Baldwin I, who was crowned in 1204. The empire gradually weakened due to internal and external conflicts, ultimately falling when the Byzantines recaptured Constantinople in 1261."
 
     # Lombardy
     LMBDY: "Lombardy"

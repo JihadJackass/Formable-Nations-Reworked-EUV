@@ -12,7 +12,7 @@
 			positive = "gfx/interface/icons/modifier_types/change_heir_selection_cost_modifier.dds"
 		}
 
-		fnr_proclaim_bactrian_synod_price_cost_modifier = {
+		fnr_proclaim_bactrian_synod_price = {
 			positive = "gfx/interface/icons/modifier_types/change_heir_selection_cost_modifier.dds"
 		}
 

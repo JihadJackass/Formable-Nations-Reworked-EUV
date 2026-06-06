@@ -75,8 +75,8 @@ fnr_bactrian_mint_building = {
 	construction_demand = castle_construction
 
     modifier = {
-        merchant_power_from_building = 0.5
-        merchant_capacity_from_building = 0.25
+        trade_income = 0.5
+        trade_land_efficiency = 0.25
         local_crown_estate_power = 0.1
     }
 

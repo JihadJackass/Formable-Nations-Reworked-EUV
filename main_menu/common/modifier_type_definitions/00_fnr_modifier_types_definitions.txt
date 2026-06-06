@@ -4,6 +4,31 @@
 
 # Greco-Buddhism IO related
 
+	fnr_spread_litergical_copies_of_alexander_price_cost_modifier={
+		color=neutral
+		percent=yes
+		game_data={
+			category=country
+		}
+	}
+
+	fnr_proclaim_bactrian_synod_price_cost_modifier={
+		color=neutral
+		percent=yes
+		game_data={
+			category=country
+		}
+	}
+
+	fnr_influence_holy_roman_empire_member_price_cost_modifier={
+		color=neutral
+		percent=yes
+		game_data={
+			category=country
+		}
+	}
+
+
 # Japan Greater East Asia IO related
 
 	fnr_empire_of_japan_integration_of_old_imperial_systems_cost_modifier={
