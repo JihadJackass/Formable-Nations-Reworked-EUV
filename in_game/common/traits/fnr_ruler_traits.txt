@@ -1,0 +1,21 @@
+﻿####################################################
+# Formable Nations: Reworked - Custom Ruler Traits #
+####################################################
+
+# Eranshahar
+
+fnr_shahanshahi_trait = {
+	category = ruler
+	custom_tags = { administrative }
+	flavor = personality
+	modifier = {
+		global_estate_target_satisfaction = tiny_permanent_target_satisfaction
+		monthly_towards_absolutism = societal_value_minor_monthly_move
+		peace_offer_fairness = -0.2
+		stability_importance_modifier = 0.1
+		marriage_desirability = 20
+		heir_of_same_religion = yes
+		wrong_culture_levy_size = 0.10
+	}
+	chance = { base = 0 }
+}

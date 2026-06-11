@@ -4,6 +4,17 @@
   # Holy Site Type localisation #
   ###############################
 
+    # Eranshahar
+
+      fnr_eranshahr_holy_site: "Three Great Fires"
+
+      fnr_ERSHR_holy_site_adur_farnbag: "Adur Farnbag"
+      fnr_ERSHR_holy_site_adur_farnbag_desc: "the priests' fire"
+      fnr_ERSHR_holy_site_adur_gushnasp: "Adur Gushnasp"
+      fnr_ERSHR_holy_site_adur_gushnasp_desc: "the warriors'/kings' fire"
+      fnr_ERSHR_holy_site_burzen_mihr: "Adur Burzen-Mihr"
+      fnr_ERSHR_holy_site_burzen_mihr_desc: "the farmers' fire"
+
     # Greco-Bactrian IO Holy Sites
 
       fnr_historical_greco_holy_site: "Historical Greco Holy Site"

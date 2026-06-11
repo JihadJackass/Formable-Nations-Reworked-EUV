@@ -174,7 +174,35 @@
 				}
 			}
 	# Rank 2
-		# Ontario
+		# Lombardy - Alt-history
+			LMBDY_f = {
+				level = 2
+				required_locations_fraction = 0.90
+				rule = plausible
+				potential = {
+					AND = {
+						OR = {
+							has_variable = fnr_althistory_enabled
+							has_variable = fnr_lombardy_enabled
+						}
+						NOT = { has_variable = fnr_lombardy_disabled }
+					}
+					NOT = { 
+						OR = {
+							tag = LMBDY
+							tag_exists = LMBDY
+						}
+					}
+					culture = { has_culture_group = culture_group:italian_group }
+				}
+				name = LMBDY
+				flag = LMBDY
+				adjective = LMBDY_ADJ
+				tag = LMBDY
+				color = map_LMBDY
+				areas = { lombardy_area }
+			}
+		# Ontario - modern
 			ONTRO_f = {
 				level = 2
 				required_locations_fraction = 0.87
@@ -183,9 +211,9 @@
 					AND = {
 						OR = {
 							has_variable = fnr_modern_enabled
-							has_variable = fnr_badakhshan_enabled
+							has_variable = fnr_ontario_enabled
 						}
-						NOT = { has_variable = fnr_badakhshan_disabled }
+						NOT = { has_variable = fnr_ontario_disabled }
 					}
 					NOT = { 
 						OR = {
@@ -221,7 +249,7 @@
 				required_locations_fraction = 0.90
 				rule = plausible
 				potential = { 
-					#AND = {
+					#AND = { # TODO: finish these missing variables for GUI
 					#	OR = {
 					#		has_variable = fnr_modern_enabled
 					#		has_variable = fnr_pamiristan_enabled
@@ -2828,8 +2856,8 @@
 					OR = {
 						tag = POL
 						tag = HUN
-						culture = culture:polish
-						culture = culture:hungarian
+						#culture = culture:polish TODO: fix, causes Script system error! Error: Invalid culture key! Key: 'polish'
+						#culture = culture:hungarian TODO: fix, causes Script system error! Error: Invalid culture key! Key: 'hungarian'
 					}
 				}
 				allow = { # Has a union over each other, or conquest
@@ -3916,34 +3944,6 @@
 					siikalatva
 				}
 			}
-		# Lombardy - Alt-history
-			LMBDY_f = {
-				level = 3
-				required_locations_fraction = 0.90
-				rule = plausible
-				potential = {
-					AND = {
-						OR = {
-							has_variable = fnr_althistory_enabled
-							has_variable = fnr_lombardy_enabled
-						}
-						NOT = { has_variable = fnr_lombardy_disabled }
-					}
-					NOT = { 
-						OR = {
-							tag = LMBDY
-							tag_exists = LMBDY
-						}
-					}
-					culture = { has_culture_group = culture_group:italian_group }
-				}
-				name = LMBDY
-				flag = LMBDY
-				adjective = LMBDY_ADJ
-				tag = LMBDY
-				color = map_LMBDY
-				areas = { lombardy_area }
-			}
 		# Sardinia–Piedmont - Historical
 			SDPDM_f = {
 				level = 3
@@ -4665,6 +4665,7 @@
 					culture = { has_culture_group = culture_group:chinese_group }
 				}
 				allow = {
+					NOT = { in_civil_war = yes }
 					# Is a chinese nation with at least 
 					OR = {
 						religion = religion:catholic
@@ -5587,6 +5588,102 @@
 					matrega_area
 				}
 			}	
+		# Eranshahr - Non-historical
+			ERSHR_f = {
+				level = 3
+				required_locations_fraction = 0.65
+				rule = plausible
+				potential = {
+					AND = {
+						OR = {
+							has_variable = fnr_nonhistorical_enabled
+							has_variable = fnr_eranshahr_enabled
+						}
+						NOT = { has_variable = fnr_eranshahr_disabled }
+					}
+					NOT = { 
+						OR = {
+							tag = ERSHR
+							tag_exists = ERSHR
+						}
+						tag = IRA
+					}
+				}
+				allow = {
+					OR = {
+						culture = culture:farsi_culture
+						culture = culture:adhari_culture
+						culture = culture:khorasani_culture
+					}
+					stability > 50
+					legitimacy > 70
+					yearly_gold >= 40
+					OR = { # Is current Zoroastrian, or has at least 5% Zoroastrian pops (the less pops, the greater the debuff of a potential Government Reform)
+						religion = religion:zoroastrian
+						OR = {
+							religion_percentage_in_country  = {  # at least 25% zoroastrian pops
+								religion = religion:zoroastrian
+								value >= 0.25
+							}
+							religion_population_in_country = {  # at least 300k zoroastrian pops
+								religion = religion:zoroastrian
+								value >= 300
+							}
+						}
+					}
+				}
+				name = ERSHR
+				flag = ERSHR
+				adjective = ERSHR_ADJ
+				tag = ERSHR
+				color = map_ERSHR
+				areas = {
+					fars_area
+					khuzestan_area
+					kordestan_area
+					iraq_ajam_area
+					western_khorasan_area
+					azerbaijan_area
+					mazandaran_area
+					quhestan_area
+					kerman_area
+					shirvan_area
+					armenia_area
+				}
+				form_effect = {
+					if = {
+						limit = { country_rank_level < 3 }
+						set_country_rank_effect = { rank = country_rank:rank_kingdom }
+					}
+					change_religion = religion:zoroastrian
+					change_religion_for_ruler_and_family = { 
+						country = ROOT 
+						religion = religion:zoroastrian
+					}
+					custom_tooltip = { text = ERSHR_fnr_formable_trigger_1_tt }	
+					set_variable = fnr_zoroastrian_restored_muslim_reaction
+					add_reform = government_reform:fnr_ERSHR_shahanshahi
+					ruler ?= { add_trait = trait:fnr_shahanshahi_trait }
+					custom_tooltip = { text = ERSHR_fnr_formable_trigger_3_tt }
+					hidden_effect = {
+						grant_estate_privilege = estate_privilege:fnr_ERSHR_azadan_cavalry
+						grant_estate_privilege = estate_privilege:fnr_ERSHR_guardians_of_sacred_fire
+						grant_estate_privilege = estate_privilege:fnr_ERSHR_magian_counsel
+					}
+					custom_tooltip = { text = ERSHR_fnr_formable_trigger_2_tt }
+					hidden_effect = {
+						if = {
+							limit = {
+								has_policy = policy:sharia_law_policy
+							}
+							remove_policy = spolicy:sharia_law_policy
+							add_policy = policy:traditional_law_policy
+						}
+					}
+					add_stability = -5
+					custom_tooltip = { text = fnr_eranshahr_azadan_cavalry_1_tt }	
+				}
+			}	
 	# Rank 4
 		# Roman Republic - Fantasy
 			RMNRP_f = {
@@ -5597,9 +5694,9 @@
 					AND = {
 						OR = {
 							has_variable = fnr_fantasy_enabled
-							has_variable = fnr_sassanids_enabled
+							has_variable = fnr_roman_republic_enabled
 						}
-						NOT = { has_variable = fnr_sassanids_disabled }
+						NOT = { has_variable = fnr_roman_republic_disabled }
 					}
 					NOT = { 
 						OR = {
@@ -5633,7 +5730,7 @@
 		# Sassanids - Fantasy
 			SSNID_f = {
 				level = 4
-				required_locations_fraction = 0.35
+				required_locations_fraction = 0.70
 				rule = plausible
 				potential = {
 					AND = {
@@ -5648,6 +5745,14 @@
 							tag = SSNID
 							tag_exists = SSNID
 						}
+					}
+				}
+				allow = {
+					legitimacy > 80
+					stability > 40
+					OR = { # Capital is in the persia region or is Eranshar
+						is_capital_in_persia = yes
+						tag = ERSHR
 					}
 				}
 				name = SSNID
@@ -7606,7 +7711,7 @@
 					}
 					OR = {
 						culture = { has_culture_group = culture_group:polish_group }
-						culture = culture:polish
+						#culture = culture:polish TODO: fix, causes Script system error! Error: Invalid culture key! Key: 'polish'
 						culture = culture:halychian_culture
 						culture = culture:polatskian_culture
 						culture = culture:polesian_culture
@@ -7709,6 +7814,8 @@
 						OR = {
 							tag = UMAYA
 							tag_exists = UMAYA
+							tag = ERSHR
+							tag = IRA
 						}
 						tag = ASYRI
 						tag = ASYRE
@@ -7761,6 +7868,8 @@
 						OR = {
 							tag = RSHDN
 							tag_exists = RSHDN
+							tag = ERSHR
+							tag = IRA
 						}
 						tag = ASYRI
 						tag = ASYRE
@@ -7808,6 +7917,8 @@
 						OR = {
 							tag = ABSID
 							tag_exists = ABSID
+							tag = ERSHR
+							tag = IRA
 						}
 						tag = ASYRI
 						tag = ASYRE
@@ -7852,6 +7963,8 @@
 						OR = {
 							tag = FTMID
 							tag_exists = FTMID
+							tag = ERSHR
+							tag = IRA
 						}
 						tag = ASYRI
 						tag = ASYRE

@@ -1,100 +1,221 @@
 ﻿l_english:
 
-  # events FOR FORMABLE NATIONS
+  #######################################
+  # Formable Nations: Reworked - Events #
+  #######################################
 
-    # Empire of Japan
+    #############
+    # Eranshahr #
+    #############
 
-      flavor_EOJPN.1.title: "Rise of the Sun"
-      flavor_EOJPN.1.desc: "The morning sun rises over the mountains of Korea, casting its light upon a land reborn. Where once rival kingdoms vied for dominance, a new order now takes shape — the Kingdom of Chōsen, forged under the watchful eye of Nippon. A governor shall be appointed to oversee its affairs, and its people shall find their place within the Greater East Asian realm. The old ways fade as the rising sun ushers in a new era."
-      flavor_EOJPN.1.a: "For Nippon!"
+      # The Fires Rejected - Disaster Start Event
 
-    # Bactria
+      flavor_ERSHR.1: "The Fires Rejected"
+      flavor_ERSHR.1.entry: "The Fires Rejected"
+      flavor_ERSHR.1.title: "The Fires Rejected"
+      flavor_ERSHR.1.desc: "Word reaches the court that the reconsecration of the fire temples has provoked open anger. Preachers denounce the crown from the mosques, and in several provinces the people refuse the rites of the magi. Our authority rests on a faith that most of our subjects do not share, and patience among them is wearing thin."
+      flavor_ERSHR.1.a: "The fires will burn whether they will it or not."
 
-      flavor_BACTR.1.title: "Rise of Bactria"
-      flavor_BACTR.1.desc: "With the rise of the nation of Bactria and a restoration of long lost traditions comes waves of both support and dissent which must be swiftly promoted and dealt with respectively or our new status in the region could be threatened."
-      flavor_BACTR.1.a: "We must do this for Alexander!"
+      # Local uprising ---
+      flavor_ERSHR.2.t: "Uprising in the Provinces"
+      flavor_ERSHR.2.entry: "Uprising in the Provinces"
+      flavor_ERSHR.2.desc: "A town has risen against the magi sent to administer it. The local garrison is too weak to restore order alone, and the unrest threatens to spread to neighbouring districts."
+      flavor_ERSHR.2.a: "Send troops to restore order."
+      flavor_ERSHR.2.b: "Let the local governor handle it."
 
-      flavor_BACTR.2.title: "Bactrian Identity"
-      flavor_BACTR.2.desc: "We must declare our official name to the neighboring friends and foes to establish our place in the world."
-      flavor_BACTR.2.a: "Simplicity is better, let us be Bactria."  
-      flavor_BACTR.2.b: "In memory of Alexander 'Greco-Bactrian Kingdom' is quite fitting."  
+      # Clergy demand harsher measures ---
+      flavor_ERSHR.3.t: "The Magi's Demands"
+      flavor_ERSHR.3.entry: "The Magi's Demands"
+      flavor_ERSHR.3.desc: "The high priests of the eternal flame petition the court. They argue that half-measures have emboldened the heretics, and that only the harshest enforcement of the true faith will secure the realm. Others at court warn that such severity will only deepen the revolt."
+      flavor_ERSHR.3.a: "Grant the clergy their harsher measures."
+      flavor_ERSHR.3.b: "Counsel restraint."
 
-      flavor_BACTR.3.title: "Establishment of the Bactrian Synod"
-      flavor_BACTR.3.desc: "TODO: description that explains the purpose of the bactrian synod"
-      flavor_BACTR.3.a: "Alexander would be proud!"
+      # Foreign Muslim power stirs unrest ---
+      flavor_ERSHR.4.t: "Foreign Agitators"
+      flavor_ERSHR.4.entry: "Foreign Agitators"
+      flavor_ERSHR.4.desc: "A neighbouring Muslim power has taken an interest in our troubles. Their agents move among the discontented, supplying coin and encouragement to those who would see the fires extinguished."
+      flavor_ERSHR.4.a: "Root out the foreign agents."
+      flavor_ERSHR.4.b: "We have no men to spare for this."
+
+      #  Moderate faction seeks tolerance ---
+      flavor_ERSHR.5.t: "A Plea for Tolerance"
+      flavor_ERSHR.5.entry: "A Plea for Tolerance"
+      flavor_ERSHR.5.desc: "A faction at court urges a measured path: that the realm tolerate its Muslim subjects rather than compel them, lest the kingdom bleed itself white in endless suppression. The clergy regard the very suggestion as betrayal."
+      flavor_ERSHR.5.a: "Extend a measure of tolerance."
+      flavor_ERSHR.5.b: "There can be no compromise with heresy."
+
+      # Resolution: victory ---
+      flavor_ERSHR.10.t: "The Fires Endure"
+      flavor_ERSHR.10.entry: "The Fires Endure"
+      flavor_ERSHR.10.desc: "The reaction has been broken. Through conversion, patience, and where necessary the sword, the realm has come to accept the restored faith. The sacred fires burn unchallenged, and Eranshahr stands as a Zoroastrian kingdom in truth as well as in name."
+      flavor_ERSHR.10.a: "Ahura Mazda is served."
+
+      # Resolution: relent
+      flavor_ERSHR.11.t: "An Uneasy Peace"
+      flavor_ERSHR.11.entry: "An Uneasy Peace"
+      flavor_ERSHR.11.desc: "The crown has been forced to relent. The fires still burn, but the realm's Muslim majority will be tolerated rather than converted by force. It is not the triumph the magi wished for, yet the kingdom endures—and that, for now, must be enough."
+      flavor_ERSHR.11.a: "The realm survives."
+
+      ##### END DISASTER CHAIN
+
+      flavor_ERSHR.12.t: "Return of the Mobads"
+      flavor_ERSHR.12.entry: "Return of the Mobads"
+      flavor_ERSHR.12.desc: "TODO."
+      flavor_ERSHR.12.a: "Grant them their own Estate."
+      flavor_ERSHR.12.b: "Advisory positions are best!"
+      flavor_ERSHR.12.c: "We do not need these old fools."
+
+      flavor_ERSHR.13.t: "The Sites of Fire"
+      flavor_ERSHR.13.entry: "The Sites of Fire"
+      flavor_ERSHR.13.desc: "TODO."
+      flavor_ERSHR.13.a: "The fires must be lit and remain so."
+
+      flavor_ERSHR.14.t: "Rekindle the Sacred Fires"
+      flavor_ERSHR.14.entry: "Rekindle the Sacred Fires"
+      flavor_ERSHR.14.desc: "TODO."
+      flavor_ERSHR.14.a: "The Fire is a shining blaze!"
+
+
+    ###################
+    # Empire of Japan #
+    ###################
+
+      # Rise of the Sun
+
+        flavor_EOJPN.1.title: "Rise of the Sun"
+        flavor_EOJPN.1.desc: "The morning sun rises over the mountains of Korea, casting its light upon a land reborn. Where once rival kingdoms vied for dominance, a new order now takes shape — the Kingdom of Chōsen, forged under the watchful eye of Nippon. A governor shall be appointed to oversee its affairs, and its people shall find their place within the Greater East Asian realm. The old ways fade as the rising sun ushers in a new era."
+        flavor_EOJPN.1.a: "For Nippon!"
+
+    ###########
+    # Bactria #
+    ###########
+
+      # Rise of Bactria
+
+        flavor_BACTR.1.title: "Rise of Bactria"
+        flavor_BACTR.1.desc: "With the rise of the nation of Bactria and a restoration of long lost traditions comes waves of both support and dissent which must be swiftly promoted and dealt with respectively or our new status in the region could be threatened."
+        flavor_BACTR.1.a: "We must do this for Alexander!"
+
+      # Bactrian Identity
+
+        flavor_BACTR.2.title: "Bactrian Identity"
+        flavor_BACTR.2.desc: "We must declare our official name to the neighboring friends and foes to establish our place in the world."
+        flavor_BACTR.2.a: "Simplicity is better, let us be Bactria."  
+        flavor_BACTR.2.b: "In memory of Alexander 'Greco-Bactrian Kingdom' is quite fitting."  
+
+      # Establishment of the Bactrian Synod
+
+        flavor_BACTR.3.title: "Establishment of the Bactrian Synod"
+        flavor_BACTR.3.desc: "TODO: description that explains the purpose of the bactrian synod"
+        flavor_BACTR.3.a: "Alexander would be proud!"
+
+      # Restoring the Armenian Kingdom
   
-      flavor_BACTR.4.title: "Restoring the Armenian Kingdom"
-      flavor_BACTR.4.desc: "TODO: description"
-      flavor_BACTR.4.a: "The Armenian Kingdom restored!"
+        flavor_BACTR.4.title: "Restoring the Armenian Kingdom"
+        flavor_BACTR.4.desc: "TODO: description"
+        flavor_BACTR.4.a: "The Armenian Kingdom restored!"
 
-      BACTR_event_trigger_4_tt: "The Nation of Armenia will be restored in the [ShowAreaName('armenia_area')] and [ShowAreaName('armenian_highlands_area')] areas with a loyal Pro-Bactrian Armenian King."
+        BACTR_event_trigger_4_tt: "The Nation of Armenia will be restored in the [ShowAreaName('armenia_area')] and [ShowAreaName('armenian_highlands_area')] areas with a loyal Pro-Bactrian Armenian King."
 
-      flavor_BACTR.5.title: "Restoration of the State of Macedonia"
-      flavor_BACTR.5.desc: "TODO: description"
-      flavor_BACTR.5.a: "For the Macedonian descendents!"
+      # Restoration of the State of Macedonia
 
-      BACTR_event_trigger_1_tt: "The Nation of Macedonia will be restored in the [ShowAreaName('macedonia_area')], [ShowAreaName('albania_area')], [ShowAreaName('northern_greece_area')], and [ShowAreaName('thrace_area')] areas with a loyal Pro-Bactrian Macedonian King."
+        flavor_BACTR.5.title: "Restoration of the State of Macedonia"
+        flavor_BACTR.5.desc: "TODO: description"
+        flavor_BACTR.5.a: "For the Macedonian descendents!"
 
-      flavor_BACTR.6.title: "Placing a local on the Assyrian Throne"
-      flavor_BACTR.6.desc: "TODO: description"
-      flavor_BACTR.6.a: "Assyria rises once again."
+        BACTR_event_trigger_1_tt: "The Nation of Macedonia will be restored in the [ShowAreaName('macedonia_area')], [ShowAreaName('albania_area')], [ShowAreaName('northern_greece_area')], and [ShowAreaName('thrace_area')] areas with a loyal Pro-Bactrian Macedonian King."
 
-      BACTR_event_trigger_2_tt: "The Nation of Assyria will be restored in the [ShowAreaName('jazira_area')] area with a loyal Pro-Bactrian Assyrian King."
+      # Placing a local on the Assyrian Throne
 
-      flavor_BACTR.7.title: "Establishing a Pro-Greek Persian King"
-      flavor_BACTR.7.desc: "TODO: description"
-      flavor_BACTR.7.a: "TODO: option"
+        flavor_BACTR.6.title: "Placing a local on the Assyrian Throne"
+        flavor_BACTR.6.desc: "TODO: description"
+        flavor_BACTR.6.a: "Assyria rises once again."
 
-      BACTR_event_trigger_3_tt: "The Nation of Persia will be established in the [ShowRegionName('persia_region')] area with a loyal Pro-Bactrian Persian King."
+        BACTR_event_trigger_2_tt: "The Nation of Assyria will be restored in the [ShowAreaName('jazira_area')] area with a loyal Pro-Bactrian Assyrian King."
 
-      flavor_BACTR.8.title: "Restoring the Ptolemaic Dynasty to the Kingdom of Egypt"
-      flavor_BACTR.8.desc: "TODO: description"
-      flavor_BACTR.8.a: "TODO: option"
+      # Establishing a Pro-Greek Persian King
 
-      flavor_BACTR.9.title: "Honoring Alexander"
-      flavor_BACTR.9.desc: "TODO: description"
-      flavor_BACTR.9.a: "TODO: option"
+        flavor_BACTR.7.title: "Establishing a Pro-Greek Persian King"
+        flavor_BACTR.7.desc: "TODO: description"
+        flavor_BACTR.7.a: "TODO: option"
 
-    # Rhineland
+        BACTR_event_trigger_3_tt: "The Nation of Persia will be established in the [ShowRegionName('persia_region')] area with a loyal Pro-Bactrian Persian King."
 
-      flavor_RHLND.1.title: "The Path Forward"
-      flavor_RHLND.1.desc: "The Rheinkonföderation has endured for decades, but the question of our future can no longer be postponed. Since our founding, we have governed through temporary arrangements and compromise—a necessary evil during our formation, but hardly sustainable indefinitely.\n\nTwo visions have emerged for the path forward. Some advocate for the establishment of Das Rheinische Königreich, a centralized monarchy with strong royal authority capable of binding our territories together through decisive leadership. Others champion Der Rheinbund, a republican confederation that preserves local autonomy while fostering cooperation between our diverse estates.\n\nThe choice we make today will define not merely our government, but the very character of our nation for generations to come."
-      flavor_RHLND.1.a: "The King should be empowered."
-      flavor_RHLND.1.b: "People deserve to hold an opinion on state matters."
+      # Restoring the Ptolemaic Dynasty
 
-      flavor_RHLND.2.title: "Learning from our experience"
-      flavor_RHLND.2.desc: "The nature of warfare has changed, and we must adapt our military accordingly. Modern conflict demands a strong foundation—robust industry and formidable fortifications. We will focus our efforts on enhancing and expanding both."
-      flavor_RHLND.2.a: "We have learned much from these conflicts."
+        flavor_BACTR.8.title: "Restoring the Ptolemaic Dynasty to the Kingdom of Egypt"
+        flavor_BACTR.8.desc: "TODO: description"
+        flavor_BACTR.8.a: "TODO: option"
 
-      flavor_RHLND.3.title: "Sourcing Innovative Investments"
-      flavor_RHLND.3.desc: "Tradition without adaptation leads to ruin—we have witnessed this truth firsthand. Our survival and prosperity demand that we adopt contemporary methods of governance, regardless of how comfortable the old ways may feel."
-      flavor_RHLND.3.a: "Investment is key!"
+      # Honoring Alexander
 
-      flavor_RHLND.4.title: "Pillar of Society and Religion"
-      flavor_RHLND.4.desc: "We have successfully curtailed the Church's political power, but complete suppression would be both impractical and unnecessary. Instead, we will redirect their influence toward what they do best: serving as the cultural and theological backbone that binds our diverse people together."
-      flavor_RHLND.4.a: "The Clergy keep the people under control."
+        flavor_BACTR.9.title: "Honoring Alexander"
+        flavor_BACTR.9.desc: "TODO: description"
+        flavor_BACTR.9.a: "TODO: option"
 
-      flavor_RHLND.5.title: "State of the Confederation"
-      flavor_RHLND.5.desc: "The Rhineland has long been a patchwork of bishoprics, free cities, and petty lordships—proud of their autonomy yet bound by geography and commerce. Our unification under the banner of the United Countries preserves this tradition of local sovereignty, each constituent maintaining its ancient privileges. Yet this very fragmentation weakens us. Foreign powers view us not as a unified duchy but as quarreling neighbors held together by treaty. Our ambassadors lack the authority of a true prince, our armies struggle with divided command, and territorial expansion is complicated by the need for consensus among the member states. Some now argue we must choose: embrace centralization under a ducal crown and claim our place among Europe's principalities, or accept our limitations and preserve the freedoms that make the Rhineland unique. Either path demands sacrifice."
-      flavor_RHLND.5.a: "Remain as the United Counties of Rhineland."
-      flavor_RHLND.5.b: "Give me the title of Duke!"
+    #############
+    # Rhineland #
+    #############
 
-    # North German Confederation Flag Standards
+      # The Path Forward
 
-      flavor_NGCFD.1.title: "Imperial German Flag Standard"
-      flavor_NGCFD.1.desc: "The North German Confederation has been unified - We must declare our official flag for the nation. We could use our historical war ensign as the official flag, or stick to the tricolored Schwarz-Weiß-Rot design."
-      flavor_NGCFD.1.a: "We will use the Reichskriegsflagge!"
-      flavor_NGCFD.1.b: "The Schwarz-Weiß-Rot will do nicely."
-      NGCFD_flag_alternate: "Schwarz-Weiß-Rot"
+        flavor_RHLND.1.title: "The Path Forward"
+        flavor_RHLND.1.desc: "The Rheinkonföderation has endured for decades, but the question of our future can no longer be postponed. Since our founding, we have governed through temporary arrangements and compromise—a necessary evil during our formation, but hardly sustainable indefinitely.\n\nTwo visions have emerged for the path forward. Some advocate for the establishment of Das Rheinische Königreich, a centralized monarchy with strong royal authority capable of binding our territories together through decisive leadership. Others champion Der Rheinbund, a republican confederation that preserves local autonomy while fostering cooperation between our diverse estates.\n\nThe choice we make today will define not merely our government, but the very character of our nation for generations to come."
+        flavor_RHLND.1.a: "The King should be empowered."
+        flavor_RHLND.1.b: "People deserve to hold an opinion on state matters."
 
-    # Sorbic Kingdom Name event
+      # Learning from our experience
 
-      flavor_KSORB.1.title: "Sorbic Naming Standard"
-      flavor_KSORB.1.desc: "We have united the Sorbian lands, but what shall we call our realm? The Sorbic Kingdom projects royal legitimacy and diplomatic gravitas. Sorbia invokes our ancient heritage and cultural identity. The choice is ours."
-      flavor_KSORB.1.a: "Sorbic Kingdom is fitting enough."
-      flavor_KSORB.1.b: "We are Sorbians!"
+        flavor_RHLND.2.title: "Learning from our experience"
+        flavor_RHLND.2.desc: "The nature of warfare has changed, and we must adapt our military accordingly. Modern conflict demands a strong foundation—robust industry and formidable fortifications. We will focus our efforts on enhancing and expanding both."
+        flavor_RHLND.2.a: "We have learned much from these conflicts."
 
-    # Decretum Sacri Romani Imperii (Papal State dominates the HRE)
+      # Sourcing Innovative Investments
+
+        flavor_RHLND.3.title: "Sourcing Innovative Investments"
+        flavor_RHLND.3.desc: "Tradition without adaptation leads to ruin—we have witnessed this truth firsthand. Our survival and prosperity demand that we adopt contemporary methods of governance, regardless of how comfortable the old ways may feel."
+        flavor_RHLND.3.a: "Investment is key!"
+
+      # Pillar of Society and Religion
+
+        flavor_RHLND.4.title: "Pillar of Society and Religion"
+        flavor_RHLND.4.desc: "We have successfully curtailed the Church's political power, but complete suppression would be both impractical and unnecessary. Instead, we will redirect their influence toward what they do best: serving as the cultural and theological backbone that binds our diverse people together."
+        flavor_RHLND.4.a: "The Clergy keep the people under control."
+
+      # State of the Confederation
+
+        flavor_RHLND.5.title: "State of the Confederation"
+        flavor_RHLND.5.desc: "The Rhineland has long been a patchwork of bishoprics, free cities, and petty lordships—proud of their autonomy yet bound by geography and commerce. Our unification under the banner of the United Countries preserves this tradition of local sovereignty, each constituent maintaining its ancient privileges. Yet this very fragmentation weakens us. Foreign powers view us not as a unified duchy but as quarreling neighbors held together by treaty. Our ambassadors lack the authority of a true prince, our armies struggle with divided command, and territorial expansion is complicated by the need for consensus among the member states. Some now argue we must choose: embrace centralization under a ducal crown and claim our place among Europe's principalities, or accept our limitations and preserve the freedoms that make the Rhineland unique. Either path demands sacrifice."
+        flavor_RHLND.5.a: "Remain as the United Counties of Rhineland."
+        flavor_RHLND.5.b: "Give me the title of Duke!"
+
+    ##############################
+    # North German Confederation #
+    ##############################
+
+      # Flag Standards
+
+        flavor_NGCFD.1.title: "Imperial German Flag Standard"
+        flavor_NGCFD.1.desc: "The North German Confederation has been unified - We must declare our official flag for the nation. We could use our historical war ensign as the official flag, or stick to the tricolored Schwarz-Weiß-Rot design."
+        flavor_NGCFD.1.a: "We will use the Reichskriegsflagge!"
+        flavor_NGCFD.1.b: "The Schwarz-Weiß-Rot will do nicely."
+        NGCFD_flag_alternate: "Schwarz-Weiß-Rot"
+
+    ##################
+    # Sorbic Kingdom #
+    ##################
+
+      # Sorbic Naming Standards
+
+        flavor_KSORB.1.title: "Sorbic Naming Standard"
+        flavor_KSORB.1.desc: "We have united the Sorbian lands, but what shall we call our realm? The Sorbic Kingdom projects royal legitimacy and diplomatic gravitas. Sorbia invokes our ancient heritage and cultural identity. The choice is ours."
+        flavor_KSORB.1.a: "Sorbic Kingdom is fitting enough."
+        flavor_KSORB.1.b: "We are Sorbians!"
+
+    ###################################
+    # Decretum Sacri Romani Imperii ###
+    # (Papal State dominates the HRE) #
+    ###################################
 
       flavor_PAPAL.1.title: "Decretum Sacri Romani Imperii"
       flavor_PAPAL.1.desc: "The [GetInternationalOrganizationType('hre').GetName] lies at our feet. Through conquest and diplomacy, the Papal States have achieved unprecedented dominance over the German princes and their territories. The imperial throne stands empty, and none dare claim it without our blessing.\n\nFor centuries, popes and emperors have struggled for supremacy in Christendom. The Investiture Controversy, the humiliation of Henry IV at Canossa, countless wars between papal and imperial factions all stemmed from this fundamental conflict. Now we have the power to resolve it permanently.\n\nWe face two paths: dissolve this troublesome Empire entirely and proclaim ourselves rightful Emperor of Europe, uniting spiritual and temporal authority under one crown. Or assume the imperial title while maintaining the Empire's framework, albeit thoroughly subordinated to papal will. Either way, the age of defiant emperors challenging the Holy See has ended."
@@ -126,7 +247,9 @@
       flavor_PAPAL.4.a: "Establish a new Papal-Dominated Holy Roman Empire focused on Theocratic values."
       flavor_PAPAL.4.b: "Retain the Status Quo"
 
-    # Austro-Hungarian Empire
+    ###########################
+    # Austro-Hungarian Empire #
+    ###########################
 
       # Naming Choice
 
@@ -135,7 +258,9 @@
         flavor_ASHNG.1.a: "Austria-Hungary reflects our dual nature."
         flavor_ASHNG.1.b: "The Austro-Hungarian Empire maintains our imperial dignity."
 
-    # Sweden-Norway
+    #################
+    # Sweden-Norway #
+    #################
 
       # Formation flag choice
 
@@ -144,41 +269,55 @@
         flavor_SDNNW.1.a: "Sweden-Oriented Flag"
         flavor_SDNNW.1.b: "Norway Domination Supreme!"
 
-    # Netherlands
+    ###############
+    # Netherlands #
+    ###############
 
-      # Dutch Republic Opportunity to Centralize 
+      # Opportunity to Centralize 
 
         flavor_DUTCH.1.title: "Resolution regarding the United Provinces"
         flavor_DUTCH.1.desc: "The United Provinces stand as a testament to decentralized governance, each province jealously guarding its autonomy and traditional rights. Yet as our nation grows in stature and faces mounting challenges both at home and abroad, voices have begun calling for a stronger, more unified state.\n\nSome argue that only through centralization can we effectively coordinate our defenses, streamline our commerce, and speak with one voice in international affairs. They point to the inefficiencies of our current system, where each province may veto decisions vital to the nation's interests.\n\nOthers warn that abandoning our cherished provincial liberties would betray the very principles upon which our union was founded. The strength of the United Provinces, they insist, lies precisely in the balance of power between sovereign provinces - a safeguard against tyranny and a wellspring of innovation.\n\nThe question now falls to us: shall we forge a centralized Dutch Republic, or preserve the equality that has defined our confederation?"
         flavor_DUTCH.1.a: "We shall Proclaim the Dutch Republic!"
         flavor_DUTCH.1.b: "The United Provinces remain strong in equality!"
 
-    # Gallci Empire
-    flavor_GLCEM.1.title: "The Gallic Question"
-    flavor_GLCEM.1.desc: "The wars are won. The tribes are united. From the Rhine to the Pyrenees, our standards fly victorious. Yet in this moment of triumph, we face a choice that transcends mere nomenclature. Shall we be the **Gallic Empire**.. a name that speaks of legions, laurels, and lasting dominion? Or simply **Gallia**—evoking the misty forests, proud chieftains, and unconquered spirit of our forefathers? This decision will echo through the halls of history itself."
-    flavor_GLCEM.1.a: "Remain as the Gallic Empire!"
-    flavor_GLCEM.1.b: "Gallia is our home!"
+    #################
+    # Gallic Empire #
+    #################
 
-    flavor_GLCEM.2.title: "Potential for Roman Territory Restorations - 1"
-    flavor_GLCEM.2.desc: ""
-    flavor_GLCEM.2.a: "Establish Terraconensis"
-    flavor_GLCEM.2.b: "We'd rather not."
+      flavor_GLCEM.1.title: "The Gallic Question"
+      flavor_GLCEM.1.desc: "The wars are won. The tribes are united. From the Rhine to the Pyrenees, our standards fly victorious. Yet in this moment of triumph, we face a choice that transcends mere nomenclature. Shall we be the **Gallic Empire**.. a name that speaks of legions, laurels, and lasting dominion? Or simply **Gallia**—evoking the misty forests, proud chieftains, and unconquered spirit of our forefathers? This decision will echo through the halls of history itself."
+      flavor_GLCEM.1.a: "Remain as the Gallic Empire!"
+      flavor_GLCEM.1.b: "Gallia is our home!"
 
-    flavor_GLCEM.3.title: "Potential for Roman Territory Restorations - 2"
-    flavor_GLCEM.3.desc: ""
-    flavor_GLCEM.3.a: "Establish Britannia"
-    flavor_GLCEM.3.b: "We'd rather not."
+      flavor_GLCEM.2.title: "Potential for Roman Territory Restorations - 1"
+      flavor_GLCEM.2.desc: ""
+      flavor_GLCEM.2.a: "Establish Terraconensis"
+      flavor_GLCEM.2.b: "We'd rather not."
 
-    # Great Moravia
-    flavor_GMORV.1.title: "Church Slavic"
-    flavor_GMORV.1.desc: "The Thessalonian brothers Cyril and Methodius brought the light of Eastern Christianity to the Moravian lands in the 9th century. To ensure our people could worship in a tongue they understood rather than incomprehensible Latin, they created Old Church Slavonic and the Glagolitic script to translate scripture and liturgy. This sacred language spread beyond the clergy, becoming the administrative tongue of the Moravian realm and a symbol of our distinct identity within Christendom.\n\nThough Latin eventually supplanted Church Slavonic in our lands, the time has come to restore this legacy. By reviving Old Church Slavonic as both liturgical and administrative language, we honor the mission of Saints Cyril and Methodius while asserting our connection to the Orthodox East. Let the language of our ancestors once again echo through churches and chancelleries alike."
-    flavor_GMORV.1.a: "Embrace Orthodoxy and restore Church Slavonic!"
-    flavor_GMORV.1.b: "We shall remain faithful to Rome."
+      flavor_GLCEM.3.title: "Potential for Roman Territory Restorations - 2"
+      flavor_GLCEM.3.desc: ""
+      flavor_GLCEM.3.a: "Establish Britannia"
+      flavor_GLCEM.3.b: "We'd rather not."
 
-    flavor_GMORV.2.title: "Restoring Borders of Great Moravia"
-    flavor_GMORV.2.desc: "The realm of our ancestors stretched from the Bohemian highlands to the Carpathian valleys, from the banks of the Danube to the Polish plains. Under the rule of Svatopluk I in the 9th century, Great Moravia stood as one of the most powerful Slavic states in Europe. a beacon of Christianity, culture, and learning where Saints Cyril and Methodius spread their sacred mission. Yet this glory faded into memory as the empire crumbled beneath Magyar invasions and internal strife.\n\nNow, after centuries of division and foreign domination, we have reclaimed what was lost. The ancient borders of Great Moravia are restored, and our people are once again united under a single banner. Let all of Europe take notice: the legacy of Svatopluk lives on, and the Moravian realm has returned to claim its rightful place among the great powers of Christendom."
-    flavor_GMORV.2.a: "Great Moravia rises from the ashes."
+    #################
+    # Great Moravia #
+    #################
 
-    flavor_GMORV.3.title: "Tomb of Svätopluk I"
-    flavor_GMORV.3.desc: "Your Majesty, we have discovered what we believe to be the tomb of Svatopluk I, the great ruler who led Great Moravia to its zenith. Our explorers have uncovered a crown and sword within - the very regalia of our ancient kings. These sacred relics shall once again serve as symbols of royal power and legitimacy, connecting your reign to the glory of our forefathers."
-    flavor_GMORV.3.a: "The relic is restored!"
+      # Church Slavic
+
+        flavor_GMORV.1.title: "Church Slavic"
+        flavor_GMORV.1.desc: "The Thessalonian brothers Cyril and Methodius brought the light of Eastern Christianity to the Moravian lands in the 9th century. To ensure our people could worship in a tongue they understood rather than incomprehensible Latin, they created Old Church Slavonic and the Glagolitic script to translate scripture and liturgy. This sacred language spread beyond the clergy, becoming the administrative tongue of the Moravian realm and a symbol of our distinct identity within Christendom.\n\nThough Latin eventually supplanted Church Slavonic in our lands, the time has come to restore this legacy. By reviving Old Church Slavonic as both liturgical and administrative language, we honor the mission of Saints Cyril and Methodius while asserting our connection to the Orthodox East. Let the language of our ancestors once again echo through churches and chancelleries alike."
+        flavor_GMORV.1.a: "Embrace Orthodoxy and restore Church Slavonic!"
+        flavor_GMORV.1.b: "We shall remain faithful to Rome."
+
+      # Restoring Borders of Great Moravia
+
+        flavor_GMORV.2.title: "Restoring Borders of Great Moravia"
+        flavor_GMORV.2.desc: "The realm of our ancestors stretched from the Bohemian highlands to the Carpathian valleys, from the banks of the Danube to the Polish plains. Under the rule of Svatopluk I in the 9th century, Great Moravia stood as one of the most powerful Slavic states in Europe. a beacon of Christianity, culture, and learning where Saints Cyril and Methodius spread their sacred mission. Yet this glory faded into memory as the empire crumbled beneath Magyar invasions and internal strife.\n\nNow, after centuries of division and foreign domination, we have reclaimed what was lost. The ancient borders of Great Moravia are restored, and our people are once again united under a single banner. Let all of Europe take notice: the legacy of Svatopluk lives on, and the Moravian realm has returned to claim its rightful place among the great powers of Christendom."
+        flavor_GMORV.2.a: "Great Moravia rises from the ashes."
+
+      # Tomb of Svätopluk I
+
+        flavor_GMORV.3.title: "Tomb of Svätopluk I"
+        flavor_GMORV.3.desc: "Your Majesty, we have discovered what we believe to be the tomb of Svatopluk I, the great ruler who led Great Moravia to its zenith. Our explorers have uncovered a crown and sword within - the very regalia of our ancient kings. These sacred relics shall once again serve as symbols of royal power and legitimacy, connecting your reign to the glory of our forefathers."
+        flavor_GMORV.3.a: "The relic is restored!"

@@ -1,0 +1,11 @@
+﻿##################################################
+# Formable Nations: Reworked - Scripted Triggers #
+##################################################
+
+is_capital_in_persia = {
+	capital ?= {
+		region = region:persia_region
+	}
+}
+
+

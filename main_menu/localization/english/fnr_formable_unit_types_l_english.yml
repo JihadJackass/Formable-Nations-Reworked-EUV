@@ -2,6 +2,9 @@
 
   # UNIT TYPES
 
+    fnr_azadan_cavalry: "Azadan Cavalry"
+    fnr_azadan_cavalry_desc: "TODO"
+
     fnr_stahlwagen: "Stahlwagen"
     fnr_stahlwagen_desc: "During the Hussite Wars, the Hussite army consisted mainly of peasants, yet they were able to defeat even fabled knights on horseback through their use of wagon forts and early firearms. We have come to the same conclusion: these wagon forts can be useful. But unlike theirs, ours are custom-made for war, armored in steel and constructed to accommodate matchlock firearms and pikes. They will serve as our shield."
 

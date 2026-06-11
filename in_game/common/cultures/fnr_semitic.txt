@@ -1,7 +1,7 @@
 ﻿# Assyrian Empire
 
 fnr_semitic_culture = {
-	language = angevin_dialect
+	language = angevin_dialect # TODO; fix
 	
 	color = rgb { 99 77 68 }
 	

@@ -8,8 +8,31 @@
     burgers_estate_LUSIT_burgueses: "Burgueses"
     clergy_estate_LUSIT_clerigo: "Clérigo"
     commoners_estate_LUSIT_compartes: "Compartes"
+
+    # Eranshahr
+
+    mobads_estate: "Mobads"
+    mobads_estate_desc: "TODO"
   
   # ESTATE PRIVILEGES
+
+    # Eranshahr
+
+      # Nobles
+
+        # Azadan Cavalry
+        fnr_ERSHR_azadan_cavalry: "Azadan Cavalry"
+        fnr_ERSHR_azadan_cavalry_desc: "TODO"
+
+      # Clergy
+
+        fnr_ERSHR_guardians_of_sacred_fire: "Guardians of the Sacred Fire"
+        fnr_ERSHR_guardians_of_sacred_fire_desc: "TODO"
+
+        fnr_ERSHR_magian_counsel: "The Magian Counsel"
+        fnr_ERSHR_magian_counsel_desc: "TODO"
+
+      # Burghers
 
     # Rhineland
     fnr_RHLND_agricultural_concessions_and_investments: "Agricultural Concessions and investments"

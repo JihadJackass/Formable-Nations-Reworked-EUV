@@ -8,32 +8,84 @@
 
 		# Pike Phalanxes
 
+	# Eranshahr
+
+		# Azadan Cavalry
+
+			fnr_azadan_cavalry = {
+				is_special = yes	
+				
+				copy_from = a_age_2_renaissance_heavy_cavalry
+
+				movement_speed = 0.50
+				build_time_modifier = 0.1
+				limit = 25
+
+				# some terrain and climate impacts
+				impact = {
+					grasslands = -0.50
+					woods = -0.50
+					forest = 0.25
+					jungle = 0.25
+				}
+
+				location_potential = {
+					#dominant_culture = { has_culture_group = culture_group:arabian_group }
+					sub_continent = sub_continent:middle_east
+				}
+				
+				#root = location. Checks location_potential first so don't need that scripting in
+				mercenaries_per_location = {
+					pop_type = clergy
+					multiply = 0.3
+				}
+
+				combat = {
+					grasslands = 0.175
+					woods = 0.175
+					forest = 0.15
+					jungle = 0.10
+				}
+
+				country_potential = {
+					AND = {
+						has_or_had_tag = ERSHR
+						has_estate_privilege = estate_privilege:fnr_ERSHR_azadan_cavalry
+					}
+				}
+
+				gfx_tags = { medium_tag }
+			}
+
 	# Elbian Federation
 
 		# Stahlwagen
 
 			fnr_stahlwagen = {
-			category = army_auxiliary
+				category = army_auxiliary
 
-			limit = 20
+				limit = 20
 
-			# Land modifiers
-			max_strength = 0.4
-			combat_power = 1.5
-			frontage = 1.0
-			combat_speed = 3.0
-			initiative = 1.0
-			flanking_ability = 0.50
-			# General modifiers
-			strength_damage_taken = -0.10
-			morale_damage_taken = -0.10
-			secure_flanks_defense = 2.50
+				# Land modifiers
+				max_strength = 0.4
+				combat_power = 1.5
+				frontage = 1.0
+				combat_speed = 3.0
+				initiative = 1.0
+				flanking_ability = 0.50
+				# General modifiers
+				strength_damage_taken = -0.10
+				morale_damage_taken = -0.10
+				secure_flanks_defense = 2.50
 
-			country_potential = {
-				has_or_had_tag = GMORV
-			}
+				country_potential = {
+					AND = { 
+						has_or_had_tag = ELBNF
+						current_age_or_later = { age = age_3_discovery }
+					}
+				}
 
-			gfx_tags = { medium_tag }
+				gfx_tags = { medium_tag }
 			}
 
 	# Great Moravia
@@ -41,38 +93,38 @@
 	# Druzhina
 
 		fnr_druzhina = {
-		category = army_light_infantry
+			category = army_light_infantry
 
-		# Land modifiers
-		max_strength = 0.5
-		combat_power = 1.5
-		frontage = 1.0
-		combat_speed = 2.0
-		initiative = 1.0
-		#flanking_ability = 1.0
-		# General modifiers
-		strength_damage_taken = -0.10
-		strength_damage_done = 0.05
-		morale_damage_taken = -0.10
-		morale_damage_done = 0.05
+			# Land modifiers
+			max_strength = 0.5
+			combat_power = 1.5
+			frontage = 1.0
+			combat_speed = 2.0
+			initiative = 1.0
+			#flanking_ability = 1.0
+			# General modifiers
+			strength_damage_taken = -0.10
+			strength_damage_done = 0.05
+			morale_damage_taken = -0.10
+			morale_damage_done = 0.05
 
-		country_potential = {
-			has_estate_privilege = estate_privilege:fnr_great_moravia_druzhina
-			OR = {
+			country_potential = {
+				has_estate_privilege = estate_privilege:fnr_great_moravia_druzhina
 				OR = {
-					tag = GMORV
-					has_or_had_tag = GMORV
-				}
-				OR = {
-					tag = HUN
-					has_or_had_tag = HUN
-				}
-				OR = {
-					tag = SLO
-					has_or_had_tag = SLO
+					OR = {
+						tag = GMORV
+						has_or_had_tag = GMORV
+					}
+					OR = {
+						tag = HUN
+						has_or_had_tag = HUN
+					}
+					OR = {
+						tag = SLO
+						has_or_had_tag = SLO
+					}
 				}
 			}
-		}
 
-		gfx_tags = { medium_tag }
+			gfx_tags = { medium_tag }
 		}

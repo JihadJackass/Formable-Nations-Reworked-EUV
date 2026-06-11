@@ -2,11 +2,16 @@
 
   # BUILDING TYPES LOCALIZATION
 
+    # Eranshahr
+
+      fnr_ateshkadeh_building: "Atashkadeh"
+      fnr_ateshkadeh_building_desc: "With the restoration of Zoroastrianism as the state religion we are able to once again practice our religion in Fire Temples - these are directly in conflict with the Muslims of the region, and are a dire importance to countering the constant conflict which could lead to [ShowDisasterName('zoroastrian_reaction')]."
+
     # Great Moravia
 
       fnr_hradiska: "Hradiská" 
       fnr_hradiska_desc: "A fortified hilltop settlement in the tradition of the Great Moravian princes. Hradiská served as centers of both military and civic authority, ringed by timber palisades and earthen ramparts, housing garrisons alongside craftsmen and farmers. Beyond their defensive purpose, they were industrious hubs of production where smiths, potters, and weavers plied their trades under the protection of the walls, enriching the surrounding countryside. From these strongholds, Moravian lords administered the land, mustered levies in times of war, and collected tribute from the villages under their protection. To build one is to plant the roots of Moravian power deep into the soil." 
-      fnr_hradiska_maintenance: "TODO POST 2.5.0: Hradiská Maintenence" 
+      fnr_hradiska_maintenance: "Hradiská Maintenence" 
 
     # Bactria
 

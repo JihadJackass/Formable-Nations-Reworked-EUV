@@ -1,0 +1,144 @@
+﻿# Eranshahr Estate Privileges
+
+	# Nobles	
+
+		# Azadan Cavalry
+		fnr_ERSHR_azadan_cavalry = {
+
+			estate = nobles_estate
+			
+			potential = {
+				OR = {
+					tag = ERSHR
+					has_or_had_tag = ERSHR
+				}
+			}
+			allow = {
+				OR = {
+					tag = ERSHR
+					has_or_had_tag = ERSHR
+				}
+			}
+			
+			country_modifier = {
+				global_nobles_estate_power = 0.05
+				nobles_estate_target_satisfaction = 0.025
+
+				army_heavy_cavalry_build_cost_modifier = -0.015
+				army_heavy_cavalry_power = 0.020
+				
+				monthly_towards_quality = 0.010
+			}
+
+			on_activate = {
+				custom_tooltip = {  text = fnr_eranshahr_azadan_cavalry_tt }
+			}
+		}
+
+	# Clergy
+
+		# Guardians of the Sacred Fire
+		fnr_ERSHR_guardians_of_sacred_fire = {
+
+			estate = clergy_estate
+			
+			potential = {
+				OR = {
+					tag = ERSHR
+					has_or_had_tag = ERSHR
+				}
+			}
+			allow = {
+				OR = {
+					tag = ERSHR
+					has_or_had_tag = ERSHR
+				}
+			}
+			
+			country_modifier = {
+				global_clergy_estate_power = 0.10
+				clergy_estate_target_satisfaction = 0.075
+
+				clergy_estate_blocked_from_leading_military = no
+				clergy_estate_levy_size = 0.020
+				
+				monthly_towards_spiritualist = 0.025
+			}
+		}
+
+		# The Magian Counsel
+		fnr_ERSHR_magian_counsel = {
+
+			estate = clergy_estate
+			
+			potential = {
+				OR = {
+					tag = ERSHR
+					has_or_had_tag = ERSHR
+				}
+			}
+			allow = {
+				OR = {
+					tag = ERSHR
+					has_or_had_tag = ERSHR
+				}
+			}
+			
+			country_modifier = {
+				global_clergy_estate_power = 0.20
+				clergy_estate_target_satisfaction = 0.090
+
+				global_nobles_estate_power = -0.05
+				clergy_estate_agenda_impact = 0.20
+				clergy_estate_allowed_in_cabinet = yes
+				clergy_estate_cannot_marry = no
+				
+				monthly_towards_spiritualist = 0.05
+			}
+
+			on_fully_activated = {
+				religion:zoroastrian = {
+					add_religion_modifier = {
+						modifier = fnr_ershr_rise_of_zoroastrian
+						years = -1
+						mode = add
+					}
+				}
+			}
+		}
+
+	# Burghers
+
+		# Silk Road Wardens
+		fnr_ERSHR_silk_road_wardens = {
+
+			estate = nobles_estate
+			
+			potential = {
+				OR = {
+					tag = ERSHR
+					has_or_had_tag = ERSHR
+				}
+			}
+			allow = {
+				OR = {
+					tag = ERSHR
+					has_or_had_tag = ERSHR
+				}
+			}
+			
+			country_modifier = {
+				global_nobles_estate_power = 0.05
+				nobles_estate_target_satisfaction = 0.025
+
+				army_heavy_cavalry_build_cost_modifier = -0.015
+				army_heavy_cavalry_power = 0.020
+				
+				monthly_towards_decentralization = societal_value_monthly_move
+			}
+		}
+
+	# Commoners
+
+	# Zemmi?
+

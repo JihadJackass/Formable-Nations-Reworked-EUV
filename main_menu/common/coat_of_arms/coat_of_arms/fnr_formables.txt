@@ -2,7 +2,14 @@
 # Formable Nation Reworked Scripted Flags #
 ###########################################
 
-# TODO POST 2.5.0: Alternatives for different government types and use less textured flags (only when needed such as sweden-norway with too many colors)
+# TODO: Alternatives for different government types and use less textured flags (only when needed such as sweden-norway with too many colors)
+
+# Eranshahr
+	ERSHR = {
+		textured_emblem = {
+			texture = "te_erenshar.dds"
+		}	
+	}
 
 # Roman Republic
 	RMNRP = {

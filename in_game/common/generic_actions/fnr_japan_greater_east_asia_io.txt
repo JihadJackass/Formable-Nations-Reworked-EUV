@@ -131,6 +131,8 @@
 		message = national_church_action
 		
 		potential = {
+			# TODO: fix
+			always = no
 			NOT = { country_exists = c:CHSEN }
 			exists = international_organization:fnr_japan_greater_east_asia_io
 			scope:actor = { is_member_of_international_organization = international_organization:fnr_japan_greater_east_asia_io }
@@ -204,6 +206,8 @@
 		message = national_church_action
 		
 		potential = {
+			# TODO: fix
+			always = no
 			exists = international_organization:fnr_japan_greater_east_asia_io
 			scope:actor = { is_member_of_international_organization = international_organization:fnr_japan_greater_east_asia_io }
 		}
@@ -263,6 +267,8 @@
 		message = national_church_action
 		
 		potential = {
+			# TODO: fix
+			always = no
 			exists = international_organization:fnr_japan_greater_east_asia_io
 			scope:actor = { is_member_of_international_organization = international_organization:fnr_japan_greater_east_asia_io }
 		}
@@ -322,6 +328,8 @@
 		message = national_church_action
 		
 		potential = {
+			# TODO: fix
+			always = no
 			exists = international_organization:fnr_japan_greater_east_asia_io
 			scope:actor = { is_member_of_international_organization = international_organization:fnr_japan_greater_east_asia_io }
 		}
@@ -381,6 +389,8 @@
 		message = national_church_action
 		
 		potential = {
+			# TODO: fix
+			always = no
 			exists = international_organization:fnr_japan_greater_east_asia_io
 			scope:actor = { is_member_of_international_organization = international_organization:fnr_japan_greater_east_asia_io }
 		}

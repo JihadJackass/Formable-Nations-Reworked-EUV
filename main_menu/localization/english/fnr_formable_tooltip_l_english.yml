@@ -15,6 +15,8 @@
     ######################################
 
       fnr_great_moravia_druzhina_tt: "We will unlock the [ShowUnitDefinitionName('fnr_druzhina')] unit type."
+      fnr_eranshahr_azadan_cavalry_tt: "We will unlock the [ShowUnitDefinitionName('fnr_azadan_cavalry')] unit type."
+      fnr_eranshahr_azadan_cavalry_1_tt: "We will unlock the [ShowUnitDefinitionName('fnr_azadan_cavalry')] unit type as long as we have the [ShowEstatePrivilegeName('fnr_ERSHR_azadan_cavalry')] [estate_privilege|e]."
 
     #################################
     # Formable Requirement Tooltips #
@@ -34,6 +36,14 @@
 
         fnr_papal_hre_established_tt: "The Holy Roman Empire is dissolved. A new sacred confederation under papal authority is established."
         fnr_keep_old_hre_tt: "The Holy Roman Empire continues under our leadership."
+
+      # Eranshahr
+
+        ERSHR_fnr_formable_trigger_1_tt: "If we are under #color_red 50%#! [religious_unity|e] and [ShowReligionName('zoroastrian')] makes up less than #color_red 50%#! of our population then the majority [ShowReligionGroupName('muslim')] [locations|e] in [ShowRegionName('persia_region')] will actively begin hostile actions towards us potentially firing the [ShowDisasterName('fnr_ERSHR_zoroastrian_reaction')]."
+        ERSHR_fnr_formable_trigger_2_tt: "Various [laws|e] and [policy|e] influenced by [ShowReligionGroupName('muslim')] such as [ShowPolicyName('sharia_law_policy')] will be removed in place of [ShowPolicyName('traditional_law_policy')] for the time being - #color_red Angering our populace#!."
+        ERSHR_fnr_formable_trigger_3_tt: "We will grant these privileges: [ShowEstatePrivilegeName('fnr_ERSHR_azadan_cavalry')], [ShowEstatePrivilegeName('fnr_ERSHR_guardians_of_sacred_fire')], and [ShowEstatePrivilegeName('fnr_ERSHR_magian_counsel')].\n[ShowEstatePrivilegeName('fnr_ERSHR_magian_counsel')] will be established granting religious fervor and morale to [ShowReligionName('zoroastrian')] - [ShowModifier('fnr_ershr_rise_of_zoroastrian')]"
+
+        fnr_zoroastrian_restored_muslim_reaction: "#color_yellow Eranshahr#! was formed with a majority [ShowReligionGroupName('muslim')] [population|e]."
 
       # Roman Empire
 

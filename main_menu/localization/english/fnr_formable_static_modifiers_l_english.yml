@@ -4,6 +4,11 @@
   # Static Modifier Localization #
   ################################
 
+    # Eranshar
+
+      STATIC_MODIFIER_NAME_fnr_ershr_rise_of_zoroastrian: "The Return of Zoroastrianism"
+      STATIC_MODIFIER_DESC_fnr_ershr_rise_of_zoroastrian: "After centuries in retreat, the faith of Zarathustra has been restored to the heart of the Iranian state. The sacred fires burn once more under royal patronage, and the magi again hold a place of honour at court. With the crown and the priesthood united behind the eternal flame, the faithful march with renewed conviction."
+
     # Great Moravia
 
       STATIC_MODIFIER_NAME_fnr_gmorv_gained_power: "Moravian Clergy Gains Power"

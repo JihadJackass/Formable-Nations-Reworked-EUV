@@ -2,8 +2,23 @@
 # Formable Nations Static Modifiers #
 #####################################
 
+	# Eranshar
+
+		# Rise of Zoroastrianism
+		fnr_ershr_rise_of_zoroastrian = {
+			game_data = {
+				category = country
+			}
+			global_clergy_estate_power = 0.05
+			clergy_estate_target_satisfaction = 0.05
+			clergy_estate_satisfaction_recovery = 0.02
+			land_morale = 0.05
+			land_morale_recovery = 0.025
+		}
+
 	# Great Moravia Modifiers
 
+		# Clergy mad
 		fnr_gmorv_clergy_upset_by_loss_of_power = {
 			game_data = {
 				category = country
@@ -11,6 +26,7 @@
 			global_clergy_estate_power = -0.05
 		}
 
+		# Clergy gained power
 		fnr_gmorv_gained_power = {
 			game_data = {
 				category = country
@@ -18,6 +34,7 @@
 			global_clergy_estate_power = 0.025
 		}
 
+		# royal cities
 	#	fnr_royal_free_cities_modifier = {
 	#		game_data = {
 	#			category = location
@@ -26,13 +43,13 @@
 	#	}
 
 		# Moravian Patriarchate
-#		fnr_moravian_patrarchate_modifier = {
-#			game_data = {
-#				category = character
-#			}
-#			
-#			character_cabinet_efficiency = 0.05
-#		}
+	#	fnr_moravian_patrarchate_modifier = {
+	#		game_data = {
+	#			category = character
+	#		}
+	#			
+	#		character_cabinet_efficiency = 0.05
+	#	}
 
 
 	# Rhineland

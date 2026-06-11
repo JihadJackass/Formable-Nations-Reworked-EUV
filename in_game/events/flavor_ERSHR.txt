@@ -1,0 +1,429 @@
+﻿namespace = flavor_ERSHR
+
+# ============================================================
+# 1 — Start event (non-silent, fires on_start)
+# ============================================================
+flavor_ERSHR.1 = { 
+	type = country_event
+	title = flavor_ERSHR.1.title
+	desc = flavor_ERSHR.1.desc
+	fire_only_once = yes
+	outcome = negative
+	picture = "gfx/interface/illustrations/disaster/religious_turmoil.dds"
+
+	option = {
+		name = flavor_ERSHR.1.a
+		add_stability = -1
+	}
+	
+	trigger = {
+		has_variable = fnr_zoroastrian_restored_muslim_reaction
+	}
+
+	dynamic_historical_event = {# The time window for the event to occur, only tags specified in it can get the event
+		tag = ERSHR		# Can have more than one tag in it
+		from = 1337.1.1
+		to = 1837.1.1
+		monthly_chance = 100
+	}
+}
+
+# ============================================================
+# 2 — Local uprising
+# ============================================================
+flavor_ERSHR.2 = { 
+	type = country_event
+	title = flavor_ERSHR.2.title
+	desc = flavor_ERSHR.2.desc
+	fire_only_once = yes
+	outcome = negative
+	picture = "gfx/interface/illustrations/disaster/religious_turmoil.dds"
+
+	immediate = {
+		create_rebel = {
+			category = pretender
+			name = rebellious_prince_name
+			save_scope_as = brother_rebel
+		}
+	}
+
+	option = {	# Send troops
+		name = flavor_ERSHR.2.a
+		add_yearly_gold = -0.25
+		add_war_exhaustion = 1
+	}
+	option = {	# Let the governor handle it
+		name = flavor_ERSHR.2.b
+		add_stability = -1
+		random_owned_location = {
+			limit = { NOT = { religion = religion:zoroastrian } }
+			# placeholder: add local unrest / devastation here
+		}
+	}
+	
+	trigger = {
+		#disaster_type = disaster_type:fnr_ERSHR_zoroastrian_reaction
+		any_active_disaster = { disaster_type = disaster_type:fnr_ERSHR_zoroastrian_reaction }
+		had_disaster_for_years = {
+			disaster_type = disaster_type:fnr_ERSHR_zoroastrian_reaction
+			years >= 1
+		}
+	}
+
+	dynamic_historical_event = {# The time window for the event to occur, only tags specified in it can get the event
+		tag = ERSHR		# Can have more than one tag in it
+		from = 1337.1.1
+		to = 1837.1.1
+		monthly_chance = 1
+	}
+}
+
+# ============================================================
+# 3 — Clergy demand harsher measures
+# ============================================================
+flavor_ERSHR.3 = { 
+	type = country_event
+	title = flavor_ERSHR.3.title
+	desc = flavor_ERSHR.3.desc
+	fire_only_once = yes
+	outcome = negative
+	picture = "gfx/interface/illustrations/disaster/religious_turmoil.dds"
+
+	option = {	# Grant harsher measures
+		name = flavor_ERSHR.3.a
+		add_estate_satisfaction = {
+			estate = estate_type:clergy_estate
+			value = 0.1
+		}
+		add_stability = -1
+		add_war_exhaustion = 1
+	}
+	option = {	# Counsel restraint
+		name = flavor_ERSHR.3.b
+		add_estate_satisfaction = {
+			estate = estate_type:clergy_estate
+			value = -0.1
+		}
+		add_stability = 1
+	}
+	
+	trigger = {
+		#disaster_type = disaster_type:fnr_ERSHR_zoroastrian_reaction
+		any_active_disaster = { disaster_type = disaster_type:fnr_ERSHR_zoroastrian_reaction }
+		had_disaster_for_years = {
+			disaster_type = disaster_type:fnr_ERSHR_zoroastrian_reaction
+			years >= 1
+		}
+	}
+
+	dynamic_historical_event = {# The time window for the event to occur, only tags specified in it can get the event
+		tag = ERSHR		# Can have more than one tag in it
+		from = 1337.1.1
+		to = 1837.1.1
+		monthly_chance = 1
+	}
+}
+
+# ============================================================
+# 4 — Foreign Muslim power stirs unrest
+# ============================================================
+flavor_ERSHR.4 = { 
+	type = country_event
+	title = flavor_ERSHR.4.title
+	desc = flavor_ERSHR.4.desc
+	fire_only_once = yes
+	outcome = negative
+	picture = "gfx/interface/illustrations/disaster/religious_turmoil.dds"
+
+	option = {	# Root out the agents
+		name = flavor_ERSHR.4.a
+		add_gold = -15
+		add_stability = 1
+	}
+	option = {	# No men to spare
+		name = flavor_ERSHR.4.b
+		add_war_exhaustion = 2
+	}
+	
+	trigger = {
+		#disaster_type = disaster_type:fnr_ERSHR_zoroastrian_reaction
+		any_active_disaster = { disaster_type = disaster_type:fnr_ERSHR_zoroastrian_reaction }
+		had_disaster_for_years = {
+			disaster_type = disaster_type:fnr_ERSHR_zoroastrian_reaction
+			years >= 1
+		}
+	}
+
+	dynamic_historical_event = {# The time window for the event to occur, only tags specified in it can get the event
+		tag = ERSHR		# Can have more than one tag in it
+		from = 1337.1.1
+		to = 1837.1.1
+		monthly_chance = 1
+	}
+}
+
+# ============================================================
+# 5 — Moderate faction seeks tolerance
+# ============================================================
+flavor_ERSHR.5 = { 
+	type = country_event
+	title = flavor_ERSHR.5.title
+	desc = flavor_ERSHR.5.desc
+	fire_only_once = yes
+	outcome = negative
+	picture = "gfx/interface/illustrations/disaster/religious_turmoil.dds"
+
+	option = {	# Extend tolerance
+		name = flavor_ERSHR.5.a
+		add_war_exhaustion = -2
+		add_estate_satisfaction = {
+			estate = estate_type:clergy_estate
+			value = -0.15
+		}
+		# placeholder: nudge religious_unity up via a temporary modifier
+	}
+	option = {	# No compromise
+		name = flavor_ERSHR.5.b
+		add_estate_satisfaction = {
+			estate = estate_type:clergy_estate
+			value = 0.1
+		}
+		add_war_exhaustion = 1
+	}
+	
+	trigger = {
+		#disaster_type = disaster_type:fnr_ERSHR_zoroastrian_reaction
+		any_active_disaster = { disaster_type = disaster_type:fnr_ERSHR_zoroastrian_reaction }
+		had_disaster_for_years = {
+			disaster_type = disaster_type:fnr_ERSHR_zoroastrian_reaction
+			years >= 1
+		}
+	}
+
+	dynamic_historical_event = {# The time window for the event to occur, only tags specified in it can get the event
+		tag = ERSHR		# Can have more than one tag in it
+		from = 1337.1.1
+		to = 1837.1.1
+		monthly_chance = 1
+	}
+}
+
+# ============================================================
+# 10 — Resolution: victory (fired from on_end)
+# ============================================================
+flavor_ERSHR.10 = { 
+	type = country_event
+	title = flavor_ERSHR.10.title
+	desc = flavor_ERSHR.10.desc
+	fire_only_once = yes
+	outcome = negative
+	picture = "gfx/interface/illustrations/disaster/religious_turmoil.dds"
+
+	option = {
+		name = flavor_ERSHR.10.a
+		add_stability = 2
+		add_legitimacy = legitimacy_extreme_bonus
+		add_estate_satisfaction = {
+			estate = estate_type:clergy_estate
+			value = 0.2
+		}
+	}
+	
+	trigger = {
+		#disaster_type = disaster_type:fnr_ERSHR_zoroastrian_reaction
+		any_active_disaster = { disaster_type = disaster_type:fnr_ERSHR_zoroastrian_reaction }
+		had_disaster_for_years = {
+			disaster_type = disaster_type:fnr_ERSHR_zoroastrian_reaction
+			years >= 1
+		}
+	}
+
+	dynamic_historical_event = {# The time window for the event to occur, only tags specified in it can get the event
+		tag = ERSHR		# Can have more than one tag in it
+		from = 1337.1.1
+		to = 1837.1.1
+		monthly_chance = 1
+	}
+}
+
+# ============================================================
+# 11 — Resolution: relent (fired from on_end)
+# ============================================================
+flavor_ERSHR.11 = { 
+	type = country_event
+	title = flavor_ERSHR.11.title
+	desc = flavor_ERSHR.11.desc
+	fire_only_once = yes
+	outcome = negative
+	picture = "gfx/interface/illustrations/disaster/religious_turmoil.dds"
+
+	option = {
+		name = flavor_ERSHR.11.a
+		add_stability = 1
+		add_war_exhaustion = -3
+		# placeholder: add a permanent "Tolerated Majority" modifier if you want a lasting trade-off
+	}
+	
+	trigger = {
+		#disaster_type = disaster_type:fnr_ERSHR_zoroastrian_reaction
+		any_active_disaster = { disaster_type = disaster_type:fnr_ERSHR_zoroastrian_reaction }
+		had_disaster_for_years = {
+			disaster_type = disaster_type:fnr_ERSHR_zoroastrian_reaction
+			years >= 1
+		}
+	}
+
+	dynamic_historical_event = {# The time window for the event to occur, only tags specified in it can get the event
+		tag = ERSHR		# Can have more than one tag in it
+		from = 1337.1.1
+		to = 1837.1.1
+		monthly_chance = 1
+	}
+}
+
+# Return of the Mobads
+# The Zoroastrian high priesthood (mobads), driven underground or into exile since the Arab conquest, re-emerges to serve a Zoroastrian crown. A choice between elevating them to real political power (clergy bonus, but clergy influence rises) or keeping them advisory (you retain authority).
+
+flavor_ERSHR.12 = { 
+	type = country_event
+	title = flavor_ERSHR.12.title
+	desc = flavor_ERSHR.12.desc
+	fire_only_once = yes
+	outcome = negative
+	picture = "gfx/interface/illustrations/disaster/religious_turmoil.dds"
+
+	option = { # Grant them an estate of their own
+		name = flavor_ERSHR.12.a
+		add_stability = 3
+
+	}
+
+	option = { # Advisory positions are best!
+		name = flavor_ERSHR.12.b
+		add_stability = 1
+	}
+
+	option = { # We do not need these old fools.
+		name = flavor_ERSHR.12.c
+		add_prestige = 5
+	}	
+
+	dynamic_historical_event = {# The time window for the event to occur, only tags specified in it can get the event
+		tag = ERSHR		# Can have more than one tag in it
+		from = 1337.1.1
+		to = 1837.1.1
+		monthly_chance = 0.4
+	}
+}
+
+# The Sites of Fire
+flavor_ERSHR.13 = { 
+	type = country_event
+	title = flavor_ERSHR.13.title
+	desc = flavor_ERSHR.13.desc
+	fire_only_once = yes
+	outcome = negative
+	picture = "gfx/interface/illustrations/disaster/religious_turmoil.dds"
+
+	option = { # The Fire is a shining blaze!
+		name = flavor_ERSHR.13.a
+		add_stability = 1
+		location:kariyan = {
+			create_holy_site = {
+				name = fnr_ERSHR_holy_site_adur_farnbag
+				type = fnr_eranshahr_holy_site
+				importance = 1
+				location = this
+				religions = { religion:zoroastrian }
+			}
+		}
+		location:takht_e_soleyman = {
+			create_holy_site = {
+				name = fnr_ERSHR_holy_site_adur_gushnasp
+				type = fnr_eranshahr_holy_site
+				importance = 1
+				location = this
+				religions = { religion:zoroastrian }
+			}
+		}
+		location:nishapur = {
+			create_holy_site = {
+				name = fnr_ERSHR_holy_site_burzen_mihr
+				type = fnr_eranshahr_holy_site
+				importance = 1
+				location = this
+				religions = { religion:zoroastrian }
+			}
+		}
+	}
+
+	dynamic_historical_event = {# The time window for the event to occur, only tags specified in it can get the event
+		tag = ERSHR		# Can have more than one tag in it
+		from = 1337.1.1
+		to = 1837.1.1
+		monthly_chance = 0.4
+	}
+}
+
+# The Sacred Fires
+# Adur Farnbag (the priests' fire). Generally placed in Pars (Fars)
+# Adur Gushnasp (the warriors'/kings' fire). This is the one with a solid, archaeologically confirmed location: Takht-e Soleyman (Shiz) in Azerbaijan
+# Adur Burzen-Mihr (the farmers' fire). Located in Parthia, in the northeast, traditionally placed on Mount Revand near Nishapur in Khorasan
+
+flavor_ERSHR.14 = { 
+	type = country_event
+	title = flavor_ERSHR.14.title
+	desc = flavor_ERSHR.14.desc
+	fire_only_once = yes
+	outcome = negative
+	picture = "gfx/interface/illustrations/disaster/religious_turmoil.dds"
+
+	trigger = {
+		owns = location:kariyan
+		location:kariyan = {
+			religion_percentage = {
+				religion = religion:zoroastrian
+				value >= 0.10
+			}
+		}
+		owns = location:takht_e_soleyman
+		location:takht_e_soleyman = {
+			religion_percentage = {
+				religion = religion:zoroastrian
+				value >= 0.10
+			}
+		}
+		owns = location:nishapur
+		location:nishapur = {
+			religion_percentage = {
+				religion = religion:zoroastrian
+				value >= 0.10
+			}
+		}
+	}
+
+	option = { # The Fire is a shining blaze!
+		name = flavor_ERSHR.14.a
+		add_stability = 10
+		add_legitimacy = 20
+		religion:sunni = {
+			set_religious_view = {
+				target = religion:zoroastrian
+				value = enemy
+			}
+		}
+		religion:shia = {
+			set_religious_view = {
+				target = religion:zoroastrian
+				value = enemy
+			}
+		}
+	}
+
+	dynamic_historical_event = {# The time window for the event to occur, only tags specified in it can get the event
+		tag = ERSHR		# Can have more than one tag in it
+		from = 1337.1.1
+		to = 1837.1.1
+		monthly_chance = -100
+	}
+}

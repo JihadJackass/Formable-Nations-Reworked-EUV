@@ -26,16 +26,16 @@
         MODIFIER_TYPE_NAME_fnr_spread_litergical_copies_of_alexander_price_cost_modifier: ""
         MODIFIER_TYPE_DESC_fnr_spread_litergical_copies_of_alexander_price_cost_modifier: ""
 
-        fnr_proclaim_bactrian_synod_price_cost_modifier: ""
-        MODIFIER_TYPE_NAME_fnr_proclaim_bactrian_synod_price: ""
-        MODIFIER_TYPE_DESC_fnr_proclaim_bactrian_synod_price: ""
+        fnr_proclaim_bactrian_synod_price_cost_modifier: "Price of Synod"
+        MODIFIER_TYPE_NAME_fnr_proclaim_bactrian_synod_price: "Price of Synod"
+        MODIFIER_TYPE_DESC_fnr_proclaim_bactrian_synod_price: "Price of Synod"
 
-        MODIFIER_TYPE_NAME_fnr_proclaim_bactrian_synod_price_cost_modifier: ""
-        MODIFIER_TYPE_DESC_fnr_proclaim_bactrian_synod_price_cost_modifier: ""
+        MODIFIER_TYPE_NAME_fnr_proclaim_bactrian_synod_price_cost_modifier: "Price of Synod"
+        MODIFIER_TYPE_DESC_fnr_proclaim_bactrian_synod_price_cost_modifier: "Price of Synod"
 
-        fnr_influence_holy_roman_empire_member_price_cost_modifier: ""
-        MODIFIER_TYPE_NAME_fnr_influence_holy_roman_empire_member_price_cost_modifier: ""
-        MODIFIER_TYPE_DESC_fnr_influence_holy_roman_empire_member_price_cost_modifier: ""
+        fnr_influence_holy_roman_empire_member_price_cost_modifier: "Price of Influence HRE member"
+        MODIFIER_TYPE_NAME_fnr_influence_holy_roman_empire_member_price_cost_modifier: "Price of Influence HRE member"
+        MODIFIER_TYPE_DESC_fnr_influence_holy_roman_empire_member_price_cost_modifier: "Price of Influence HRE member"
 
       # Moravian Patriarchate IO Prices
 

@@ -1,0 +1,31 @@
+﻿# Eranshahr Specific Government Reforms
+
+	# Shahanshahi (Restoration of the King of Kings)
+		fnr_ERSHR_shahanshahi = {
+			major = yes
+			unique = yes
+			government = monarchy
+			potential = {
+				tag = ERSHR
+				has_reform = government_reform:fnr_ERSHR_shahanshahi
+			}
+			allow = {
+				tag = ERSHR
+			}
+			country_modifier = {
+				government_reform_slots = 1
+				cultures_capacity = 0.50
+				close_the_borders_cost_modifier = -0.50
+				army_heavy_cavalry_build_cost_modifier = -0.05
+				army_heavy_cavalry_power = 0.05
+			}
+			locked = {
+				is_locked_mechanic = {
+					mechanic = government_reform
+					type = fnr_ERSHR_shahanshahi
+				}
+			}			
+			block_for_rebel = yes
+		}	
+
+		

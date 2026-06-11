@@ -1,0 +1,21 @@
+﻿l_english:
+
+  ####################################################
+  # FORMABLE NATIONS: REWORKED DISASTER LOCALIZATION #
+  ####################################################
+
+    # Eranshahr
+
+      # Disaster name and description
+      fnr_ERSHR_zoroastrian_reaction: "The Zoroastrian Reaction"
+      fnr_ERSHR_zoroastrian_reaction_desc: "The crown has restored the faith of Zarathustra, but the realm remains overwhelmingly Muslim. From the bazaars of the cities to the villages of the countryside, resentment against the reimposed fire-worship is mounting. Unless the state can win the population to the old faith—or crush the resistance outright—the realm risks tearing itself apart."
+
+      # can_start custom tooltip
+      had_zoroastrian_reaction_before_tt: "We have not already endured the Zoroastrian Reaction"
+
+      # Generic monthly tooltips (reuse vanilla if they exist; included here for safety)
+      an_event_occurs_tt: "An event may occur"
+      no_event_occurs_tt: "No event occurs this month"
+
+
+

@@ -1438,7 +1438,7 @@
 		form_effect = {
 			if = { 
 				limit = { NOT = { court_language = language:latin_language } }
-				set_court_language = dialect:latin_language
+				#set_court_language = dialect:latin_language TODO: fix, causes Failed to find 'latin_language' from database for link 'dialect'
 			}
 			if = { 
 				limit = { NOT = { capital = location:rome } }
@@ -2343,6 +2343,9 @@
 		rule = plausible
 		potential = {
 			culture = { has_culture_group = culture_group:iranian_group }
+			NOT = {
+				tag = ERSHR
+			}
 		}
 		name = IRA
 		flag = IRA
@@ -2839,6 +2842,7 @@
 				tag = IRA
 				tag = ASYRI
 				tag = ASYRE
+				tag = ERSHR
 			}
 		}
 

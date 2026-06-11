@@ -45,6 +45,7 @@
 				}
 				# TODO: add a setting to disable static prefix
 				# Add Tags here to set a static name
+				tag = ERSHR
 				tag = RMNRP
 				tag = ONTRO
 				tag = KDOME

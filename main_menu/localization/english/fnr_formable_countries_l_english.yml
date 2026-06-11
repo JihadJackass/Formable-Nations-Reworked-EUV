@@ -1268,5 +1268,9 @@
     RMNRP: "Roman Republic"
     RMNRP_ADJ: "Roman"
     RMNRP_f: "Roman Republic"
-    RMNRP_f_desc: "TODO: description"
+    RMNRP_f_desc: "Born from the ashes of empire, the Roman Republic calls upon citizen and senator alike to restore the glory of the Eternal City. Where once emperors ruled by decree, the will of the people and the wisdom of the Senate shall again guide the legions. Let the eagles fly once more, and let every shore of the Mediterranean remember the name of Rome."
 
+    ERSHR: "Eranshahr"
+    ERSHR_ADJ: "Persian"
+    ERSHR_f: "Eranshahr"
+    ERSHR_f_desc: "The lands of Iran have not known unity under a single crown since the fall of the Sasanians, when the sacred fires were scattered and the faith of Zarathustra gave way to foreign creeds. Yet the memory of Eranshahr endures and the Realm of the Iranians, ruled by the King of Kings from Pars to the Oxus.\n\nToday the followers of Ahura Mazda remain, tending the eternal flame in quiet defiance of the centuries. Should we gather the Iranian peoples once more and restore Zoroastrianism to its rightful place, the title of Shahanshah may again mean what it once did. The fires await their guardian."
