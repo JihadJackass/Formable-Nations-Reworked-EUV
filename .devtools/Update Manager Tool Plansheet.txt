@@ -1,0 +1,10 @@
+Update manager
+- C#
+- run.bat to run
+- build.bat to build
+- integrate existing variable updater
+- add a 'check outdated files' that shows a list of outdated files in a build-in mod file explorer
+- graphical display of comparison between base game files and mod files
+- settings button, with directory adjustment of mod and base game
+- autodetect game directory
+- 

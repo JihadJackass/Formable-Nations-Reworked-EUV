@@ -1701,14 +1701,14 @@
 					}
 					NOT = { 
 						OR = {
-							tag = OKLAH
-							tag_exists = OKLAH
+							tag = ONTRO
+							tag_exists = ONTRO
 						}
 					}			
 					OR =  { # is not a colonial subject
 						is_colonial_subject = no
-						culture ?= { # is a colonial subject of the appropriate culture group
-							is_culture_native_american = no
+						AND = { 
+							is_culture_native_american = no 
 							OR = {
 								culture = culture:english 
 								culture = culture:french 
@@ -1733,6 +1733,7 @@
 					northern_ontario_area 
 				}
 			}
+
 		# TODO POST 2.5.0: Quebec - US States (Rank 3)
 		# TODO POST 2.5.0: Newfoundland - US States (Rank 3)
 		
@@ -2965,7 +2966,7 @@
 						tag = HUN
 						tag = RMN
 						culture = culture:hungarian
-						culture = culture:romanian
+						culture = culture:aromanian
 					}
 				}
 				allow = { # Has a union over each other, or conquest
@@ -5730,9 +5731,9 @@
 					hidden_effect = {
 						if = {
 							limit = {
-								has_policy = policy:sharia_law_policy
+								has_policy = sharia_law_policy
 							}
-							remove_policy = spolicy:sharia_law_policy
+							remove_policy = policy:sharia_law_policy
 							add_policy = policy:traditional_law_policy
 						}
 					}

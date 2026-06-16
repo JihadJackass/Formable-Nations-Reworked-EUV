@@ -23,7 +23,7 @@ fnr_ateshkadeh_building = {
 	
 	unique_production_methods = {
 	
-        fnr_gymnasium_maintenance = {
+        fnr_ateshkadeh_maintenance = {
             masonry = 0.2
             marble = 0.1
             books = 0.1

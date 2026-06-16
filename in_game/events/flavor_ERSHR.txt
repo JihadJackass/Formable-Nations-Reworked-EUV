@@ -63,13 +63,12 @@ flavor_ERSHR.2 = {
 		# Create the rebel faction (note: category goes inside data = {})
 		create_rebel = {
 			name = rebellious_prince_name
-			data = { category = pretender }
+			category = pretender
 			save_scope_as = brother_rebel
 		}
 		# Pick a disloyal location, hand its non-Zoroastrian pops to the rebel,
 		# and crater control so the rebellion actually grows.
 		random_owned_location = {
-			limit = { NOT = { religion = religion:zoroastrian } }
 			save_scope_as = uprising_location
 			change_control = -25
 			every_pop = {
@@ -160,8 +159,7 @@ flavor_ERSHR.3 = {
 	option = {	# Counsel restraint — clergy grumble, the realm calms
 		name = flavor_ERSHR.3.b
 		add_stability = 20
-		add_religious_influence = -5
-		add_pop_satisfaction = 0.1
+		add_religious_influence = -20
 		add_country_modifier = {
 			modifier = fnr_ERSHR_magi_express_disapproval
 			years = 2
@@ -293,7 +291,6 @@ flavor_ERSHR.5 = {
 		custom_tooltip = ERSHR_fnr_formable_trigger_5_tt
 		hidden_effect = {
 			every_owned_location = {
-				limit = { NOT = { religion = religion:zoroastrian } }
 				every_pop = {
 					limit = { NOT = { religion = religion:zoroastrian } }
 					add_pop_satisfaction = -0.1
@@ -605,7 +602,6 @@ flavor_ERSHR.14 = {
 		}
 		# The three reunited fires draw converts across the realm
 		every_owned_location = {
-			limit = { NOT = { religion = religion:zoroastrian } }
 			random_pop = {
 				limit = { NOT = { religion = religion:zoroastrian } }
 				change_pop_religion = religion:zoroastrian
@@ -618,5 +614,46 @@ flavor_ERSHR.14 = {
 		from = 1337.1.1
 		to = 1837.1.1
 		monthly_chance = -100
+	}
+}
+
+# The Royal Colors
+flavor_ERSHR.15 = { 
+	type = country_event
+	title = flavor_ERSHR.15.title
+	desc = flavor_ERSHR.15.desc
+	fire_only_once = yes
+	outcome = positive
+	historical_info = flavor_ERSHR.15.historical_info
+	picture = "gfx/interface/illustrations/disaster/religious_turmoil.dds"
+
+	option = { # Keep Current
+		name = flavor_ERSHR.15.a
+		add_prestige = 5
+	}
+	option = { # Purple
+		name = flavor_ERSHR.15.b
+		change_country_color = map_ERSHR_alt_1
+	}
+	option = { # Light Blue
+		name = flavor_ERSHR.15.c
+		change_country_color = map_ERSHR_alt_2
+	}
+	option = { # White (oh my god)
+		name = flavor_ERSHR.15.d
+		custom_tooltip = ERSHR_fnr_formable_trigger_9_tt
+		ruler ?= { add_trait = trait:fnr_consumed_by_vanity_trait }
+		change_country_color = map_ERSHR_alt_3
+	}
+	
+	trigger = {
+		has_or_had_tag = ERSHR
+	}
+
+	dynamic_historical_event = {# The time window for the event to occur, only tags specified in it can get the event
+		tag = ERSHR		# Can have more than one tag in it
+		from = 1337.1.1
+		to = 1837.1.1
+		monthly_chance = 40
 	}
 }

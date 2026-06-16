@@ -301,6 +301,68 @@ FormableNationsReworkedDebug_initialize = {
 				}
 			}		
 	# Rank 2
+		# Prinicpality of Antioch
+			FormableNationReworked_toggle_principality_of_antioch = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_principality_of_antioch_enabled }
+							NOT = { has_variable = fnr_principality_of_antioch_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_principality_of_antioch_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_principality_of_antioch_disabled }
+						every_country = {
+							remove_variable = fnr_principality_of_antioch_disabled
+							set_variable = { name = fnr_principality_of_antioch_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_principality_of_antioch_enabled }
+						every_country = {
+							remove_variable = fnr_principality_of_antioch_enabled
+						}
+					}
+				}
+			}
+
+		# Knights of Malta
+			FormableNationReworked_toggle_knights_of_malta = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_knights_of_malta_enabled }
+							NOT = { has_variable = fnr_knights_of_malta_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_knights_of_malta_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_knights_of_malta_disabled }
+						every_country = {
+							remove_variable = fnr_knights_of_malta_disabled
+							set_variable = { name = fnr_knights_of_malta_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_knights_of_malta_enabled }
+						every_country = {
+							remove_variable = fnr_knights_of_malta_enabled
+						}
+					}
+				}
+			}
+
 		# Badakhshān - Modern
 			FormableNationReworked_toggle_badakhshan = {
 				scope = country
@@ -580,6 +642,37 @@ FormableNationsReworkedDebug_initialize = {
 				}
 			}
 	# Rank 3
+		# Eranshahr - Non-historical
+			FormableNationReworked_toggle_eranshahr = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_eranshahr_enabled }
+							NOT = { has_variable = fnr_eranshahr_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_eranshahr_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_eranshahr_disabled }
+						every_country = {
+							remove_variable = fnr_eranshahr_disabled
+							set_variable = { name = fnr_eranshahr_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_eranshahr_enabled }
+						every_country = {
+							remove_variable = fnr_eranshahr_enabled
+						}
+					}
+				}
+			}
+
 		# TODO POST 2.5.0 alphebatise all before basque country
 		# Ptolemaic Kingdom - althistory
 			FormableNationReworked_toggle_ptolemaicegypt = {

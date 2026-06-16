@@ -5,4 +5,9 @@
     # Eranshahar
 
       fnr_shahanshahi_trait: "King of Kings"
-      desc_fnr_shahanshahi_trait: "TODO"
+      fnr_shahanshahi_trait_die_desc: "No matter how many lesser kings bowed before the King of Kings, nor how vast the empire ruled as King of Kings, none of it has spared from Death. The crowns and the titles stay behind with the living. Across the Chinvat Bridge passes as every soul must, weighed not by the kings who knelt to us but by the good and the ill ruler wrought in life."
+      desc_fnr_shahanshahi_trait: "Shahanshah, King of Kings, is the ancient title of the great emperors of Iran, claimed anew by the one who raised Eranshahr from the ashes of conquest. To bear it is to stand above mere kings, ruling not a single crown but a realm of many peoples bound together under the sacred fire. It is a weight as much as an honour, carrying the memory of every Iranian monarch who reigned before."
+
+      fnr_consumed_by_vanity_trait: "Consumed by Vanity"
+      fnr_consumed_by_vanity_trait_die_desc: "For all the robes and standards and carefully chosen colors, our ruler could not take a single thread beyond the grave. [CHARACTER.GetSheHe] spent a life staring at what others possessed and our ruler finding himself wanting, and now lies in the plainest garment of all, no finer than the lowest subject has ever looked down upon us."
+      desc_fnr_consumed_by_vanity_trait: "There is a faint sheen to the world that one can never quite possess, and our ruler knows it. A rival's banner hangs a little finer, a neighbor's court gleams a shade brighter, and so every waking thought bends toward the surface of things: the cut of a robe, the weight of a standard, the precise tone of a color. Our ruler drives the army to a harder edge so that none may look down upon us, yet shrinks from the wider world, unwilling to be measured against those who might prove finer still."

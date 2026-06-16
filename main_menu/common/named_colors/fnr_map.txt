@@ -21,10 +21,13 @@ colors = {
 		map_china = rgb { 150 150 45 }
 
 	# FORMABLE NATION COLORS
-		# Eranshahr
+		# Malta
 		map_KOMTA = rgb { 204 37 59 }
 		# Eranshahr
 		map_ERSHR = rgb { 216 188 3 }
+		map_ERSHR_alt_1 = rgb { 162 11 222 }
+		map_ERSHR_alt_2 = rgb { 91 143 184 }
+		map_ERSHR_alt_3 = rgb { 188 196 203 }
 		# Roman Republic
 		map_RMNRP = rgb { 212 9 79 }
 		# Ontario

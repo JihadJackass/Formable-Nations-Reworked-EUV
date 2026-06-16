@@ -6,6 +6,7 @@
 
       fnr_ateshkadeh_building: "Atashkadeh"
       fnr_ateshkadeh_building_desc: "With the restoration of Zoroastrianism as the state religion we are able to once again practice our religion in Fire Temples - these are directly in conflict with the Muslims of the region, and are a dire importance to countering the constant conflict which could lead to [ShowDisasterName('zoroastrian_reaction')]."
+      fnr_ateshkadeh_maintenance: "Fire Temple Upkeep"
 
     # Great Moravia
 

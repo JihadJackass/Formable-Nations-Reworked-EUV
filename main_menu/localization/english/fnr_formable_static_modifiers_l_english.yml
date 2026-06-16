@@ -9,6 +9,7 @@
       STATIC_MODIFIER_NAME_fnr_ershr_rise_of_zoroastrian: "The Return of Zoroastrianism"
       STATIC_MODIFIER_DESC_fnr_ershr_rise_of_zoroastrian: "After centuries in retreat, the faith of Zarathustra has been restored to the heart of the Iranian state. The sacred fires burn once more under royal patronage, and the magi again hold a place of honour at court. With the crown and the priesthood united behind the eternal flame, the faithful march with renewed conviction."
 
+      STATIC_MODIFIER_NAME_fnr_ERSHR_magi_express_disapproval: "Magi Counsel Express Disapproval"
       STATIC_MODIFIER_DESC_fnr_ERSHR_magi_express_disapproval: "The priesthood is angered that the crown has chosen restraint over zeal toward the unbelievers. After so long waiting for the fires to return, the magi see every concession to Islam as a betrayal of the restoration, and their displeasure with the throne will linger until the realm proves its devotion once more."
 
       STATIC_MODIFIER_NAME_fnr_ERSHR_tolerated_majority: "Tolerated Majority"
@@ -19,6 +20,9 @@
 
       STATIC_MODIFIER_NAME_fnr_ERSHR_empowered_mobads: "Empowered Mobads Estate"
       STATIC_MODIFIER_DESC_fnr_ERSHR_empowered_mobads: "The mobads, high priests of the sacred fire, have been raised into an estate of their own, joining priestly authority to the standing of the old nobility. They serve the crown faithfully and lend it the full weight of the restored faith, but a priesthood granted real power over the realm becomes a force the throne must answer to as much as command."
+
+      STATIC_MODIFIER_NAME_fnr_ERSHR_mobad_advisors: "Mobad Advisors"
+      STATIC_MODIFIER_DESC_fnr_ERSHR_mobad_advisors: "The mobads have been welcomed back to court as counselors rather than masters. They lend the crown their learning in the old faith and help guide the restoration, yet they hold no estate of their own and no claim on the realm. The throne keeps its authority while still drawing on the wisdom of the priesthood, a balance that suits a ruler who wants the fire honoured but not obeyed."
 
       STATIC_MODIFIER_NAME_fnr_ERSHR_rejected_mobads: "Rejected Mobad Support"
       STATIC_MODIFIER_DESC_fnr_ERSHR_rejected_mobads: "The crown turned the mobads away, judging the old priests more burden than blessing. The throne keeps its full authority and owes nothing to the priesthood, but the magi remember the slight, and those who hoped the restoration would lift them back to greatness feel the door shut in their faces."

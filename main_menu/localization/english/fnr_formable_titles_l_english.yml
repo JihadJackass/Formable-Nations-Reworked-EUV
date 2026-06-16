@@ -4,6 +4,14 @@
 
     # Eranshahar
 
-      fnr_character_title_kingofkings: "King of Kings"
-      fnr_character_title_kingofkings_female: "Queen of Queens"
-
+      rank_eranshahr: "Empire of the Iranians"
+      rank_eranshahr_ruler_male: "Šâhanšâh"
+      rank_eranshahr_ruler_female: "Bânbišn"
+      rank_eranshahr_heir: "Šâhpur"
+      rank_eranshahr_heir_female: "Šâhdoxt"
+      rank_eranshahr_regent: "Nāyeb"
+      rank_eranshahr_regent_female: "Nāyeb"
+      rank_eranshahr_courtier: "Dorbār"
+      rank_eranshahr_courtier_female: "Dorbār"
+      rank_eranshahr_consort: "Bānu"
+      rank_eranshahr_consort_female: "Bānu"

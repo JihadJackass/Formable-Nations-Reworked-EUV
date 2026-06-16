@@ -19,3 +19,14 @@ fnr_shahanshahi_trait = {
 	}
 	chance = { base = 0 }
 }
+
+fnr_consumed_by_vanity_trait = {
+	category = ruler
+	custom_tags = { administrative }
+	flavor = personality
+	modifier = {
+		diplomatic_capacity_modifier = -0.10
+		discipline = 0.15
+	}
+	chance = { base = 0 }
+}

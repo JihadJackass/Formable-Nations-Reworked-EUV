@@ -48,6 +48,8 @@
         ERSHR_fnr_formable_trigger_7_tt: "Every owned [location|e] [pops|e] that ARE [ShowReligionName('zoroastrian')] will lose -#color_red 10.00%#![pop_satisfaction|e]."
         ERSHR_fnr_formable_trigger_8_tt: "Every owned [location|e] [pops|e] that are not [ShowReligionName('zoroastrian')] will gain #color_green 0.05%#! [pop_satisfaction|e].\nEvery owned [location|e] [pops|e] that ARE [ShowReligionName('zoroastrian')] will gain #color_green 0.15%#! [pop_satisfaction|e]."
 
+        ERSHR_fnr_formable_trigger_9_tt: "The off-white is chosen, and for a time the court admires it. Then word arrives of a neighboring banner.. a subtle ivory, the watermarking finer than ours, the weave somehow thicker. The Šâhanšâh says nothing. The Šâhanšâh stares at our standard, then at the report, then at our standard again. There is a faint sheen to theirs that ours does not have. It is, the Šâhanšâh admits in the quiet of the audience hall, a very nice banner."
+
         fnr_zoroastrian_restored_muslim_reaction: "#color_yellow Eranshahr#! was formed with a majority [ShowReligionGroupName('muslim')] [population|e]."
 
       # Roman Empire

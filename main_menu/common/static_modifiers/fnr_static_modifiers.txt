@@ -70,13 +70,19 @@
 			peasants_estate_max_tax = -0.050
 		}
 
+		fnr_ERSHR_mobad_advisors = {
+			global_crown_estate_power = 0.025
+			clergy_estate_target_satisfaction = 0.05
+			morale_recovery_in_friendly = 0.075
+		}
+
 		# The Sacred Fires Burn  called from flavor_ERSHR.14
 		fnr_ERSHR_sacred_fires_burn = {
 			game_data = {
 				category = country
 			}
 			maximum_religious_influence = 50
-			min_war_exhaustion = -0.05
+			max_war_exhaustion = -0.05
 			may_explore = yes
 			may_hire_eunuch_advisors = yes
 			hire_mercenary_leader_cost_modifier = -0.05

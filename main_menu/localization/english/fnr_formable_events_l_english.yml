@@ -75,6 +75,14 @@
       flavor_ERSHR.14.desc: "The three greatest fires of the realm are within our grasp at last. Adur Farnbag of the priests, Adur Gushnasp of the kings and warriors, and Adur Burzen-Mihr of the farmers all rest in our hands, and the people around them have turned back to the faith in numbers enough to tend the flames. With all three burning under a single crown, the restoration is no longer a quiet hope but a blaze for all the world to see."
       flavor_ERSHR.14.a: "The Fire is a shining blaze!"
 
+      flavor_ERSHR.15.title: "The Royal Colors"
+      flavor_ERSHR.15.entry: "#color_purple The Royal Colors#!"
+      flavor_ERSHR.15.desc: "With the empire reborn, the court turns to a matter of no small weight: the colors our realm will march and rule beneath. A standard is never mere cloth. It is the face the world sees and the symbol our own people gather to. The keepers of the faith press for the gold and yellow of the sacred fire, the very hue of the flames the magi have tended since the days of old. Others summon the memory of the deep purple worn by the Šâhanšâhs of ages past, the color of empire and of kings. Newer voices argue that a reborn realm deserves a fresh shade entirely. Whatever banner is chosen, it will fly over Ērânšahr for generations, so the heralds await your word with no small impatience."
+      flavor_ERSHR.15.historical_info: "It is recommended to save your game before proceeding should you dislike the color."
+      flavor_ERSHR.15.a: "We shall keep our official Zoroastrian Yellow!"    
+      flavor_ERSHR.15.b: "Royal Purple is the choice!"    
+      flavor_ERSHR.15.c: "A Light Blue is subtle, yet nice."    
+      flavor_ERSHR.15.d: "Look at that subtle White coloring. The tasteful thickness of it. Oh my God."    
 
     ###################
     # Empire of Japan #

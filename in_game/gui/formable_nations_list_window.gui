@@ -118,6 +118,22 @@ window = {
 							visible = "[GetVariableSystem.Exists('rank2_open')]"
 							spacing = 3
 							margin = { 10 5 }
+							# Prinicpality of Antioch
+							button_regular = {
+								tooltip = "fnr_placeholder"
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), GetPlayer.HasVariable('fnr_principality_of_antioch_enabled')), Not(GetPlayer.HasVariable('fnr_principality_of_antioch_disabled'))), 'Prinicpality of Antioch: ON - Rank 2', 'Prinicpality of Antioch: OFF - Rank 2')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_principality_of_antioch').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+
+							# Knights of Malta
+							button_regular = {
+								tooltip = "fnr_placeholder"
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), GetPlayer.HasVariable('fnr_knights_of_malta_enabled')), Not(GetPlayer.HasVariable('fnr_knights_of_malta_disabled'))), 'Knights of Malta: ON - Rank 2', 'Knights of Malta: OFF - Rank 2')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_knights_of_malta').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+
 							
 							# Badakhshān - Modern
 							button_regular = {
@@ -206,6 +222,14 @@ window = {
 							visible = "[GetVariableSystem.Exists('rank3_open')]"
 							spacing = 3
 							margin = { 10 5 }
+							# Eranshahr - Non-historical
+							button_regular = {
+								tooltip = "fnr_placeholder"
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), GetPlayer.HasVariable('fnr_eranshahr_enabled')), Not(GetPlayer.HasVariable('fnr_eranshahr_disabled'))), 'Eranshahr: ON - Rank 3', 'Eranshahr: OFF - Rank 3')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_eranshahr').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
+
 
 							# Ptolemaic Kingdom - althistory
 							button_regular = {

@@ -1,8 +1,8 @@
 ﻿l_english:
 
-  ####################
-  # Flag localiation #
-  ####################
+  #####################
+  # Flag localization #
+  #####################
 
     # Netherlands
 
@@ -13,3 +13,13 @@
 
       SDNNW_S: "Flag of Sweden (1844–1905)"
       SDNNW_N: "Flag of Norway (1844–1899)"
+
+  ######################
+  # Color localization #
+  ######################
+
+    # Eranshahar
+
+      map_ERSHR_alt_1: "Eranshahr Royal Purple"
+      map_ERSHR_alt_2: "Eranshahr Light Blue"
+      map_ERSHR_alt_3: "Eranshahr White"

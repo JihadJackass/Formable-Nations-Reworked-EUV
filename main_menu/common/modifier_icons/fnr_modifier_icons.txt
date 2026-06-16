@@ -6,13 +6,21 @@
 			positive = "gfx/interface/icons/modifier_types/change_heir_selection_cost_modifier.dds"
 		}
 
+		fnr_influence_holy_roman_empire_member_price_cost_modifier = {
+			positive = "gfx/interface/icons/modifier_types/change_heir_selection_cost_modifier.dds"
+		}
+
 	# Greco-Bactria
 
 		fnr_greco_buddhism_action_hybridize_local_cultures_price_cost_modifier = {
 			positive = "gfx/interface/icons/modifier_types/change_heir_selection_cost_modifier.dds"
 		}
 
-		fnr_proclaim_bactrian_synod_price = {
+		fnr_proclaim_bactrian_synod_price = { # TODO: remove this one
+			positive = "gfx/interface/icons/modifier_types/change_heir_selection_cost_modifier.dds"
+		}
+
+		fnr_proclaim_bactrian_synod_price_cost_modifier = {
 			positive = "gfx/interface/icons/modifier_types/change_heir_selection_cost_modifier.dds"
 		}
 
