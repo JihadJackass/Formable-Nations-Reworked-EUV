@@ -3775,6 +3775,37 @@ FormableNationsReworkedDebug_initialize = {
 				}
 			}
 
+		# Roman Republic - Fantasy
+			FormableNationReworked_toggle_roman_republic = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_roman_republic_enabled }
+							NOT = { has_variable = fnr_roman_republic_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_roman_republic_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_roman_republic_disabled }
+						every_country = { 
+							remove_variable = fnr_roman_republic_disabled
+							set_variable = { name = fnr_roman_republic_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_roman_republic_enabled }
+						every_country = {
+							remove_variable = fnr_roman_republic_enabled
+						}
+					}
+				}
+			}
+
 		# Serbian Empire - Historical
 			FormableNationReworked_toggle_serbianempire = {
 				scope = country
@@ -5264,6 +5295,37 @@ FormableNationsReworkedDebug_initialize = {
 				}
 			}
 	# North American Formables
+
+		# Ontario - US States (Rank 3)
+			FormableNationReworked_toggle_ontario = {
+				scope = country
+				is_shown = { always = yes }
+				is_valid = { always = yes }
+				effect = {
+					if = { # Cycle: Default → Force OFF → Force ON → Default
+						limit = {
+							NOT = { has_variable = fnr_ontario_enabled }
+							NOT = { has_variable = fnr_ontario_disabled }
+						}
+						every_country = { # Currently DEFAULT → Force OFF
+							set_variable = { name = fnr_ontario_disabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE OFF → Force ON
+						limit = { has_variable = fnr_ontario_disabled }
+						every_country = { 
+							remove_variable = fnr_ontario_disabled
+							set_variable = { name = fnr_ontario_enabled value = yes }
+						}
+					}
+					else_if = { # Currently FORCE ON → Default
+						limit = { has_variable = fnr_ontario_enabled }
+						every_country = {
+							remove_variable = fnr_ontario_enabled
+						}
+					}
+				}
+			}
 
 		# Oklahoma - US States (Rank 3)
 			FormableNationReworked_toggle_oklahoma = {

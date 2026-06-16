@@ -17,62 +17,62 @@
       flavor_ERSHR.1.a: "The fires will burn whether they will it or not."
 
       # Local uprising ---
-      flavor_ERSHR.2.t: "Uprising in the Provinces"
+      flavor_ERSHR.2.title: "Uprising in the Provinces"
       flavor_ERSHR.2.entry: "Uprising in the Provinces"
       flavor_ERSHR.2.desc: "A town has risen against the magi sent to administer it. The local garrison is too weak to restore order alone, and the unrest threatens to spread to neighbouring districts."
       flavor_ERSHR.2.a: "Send troops to restore order."
       flavor_ERSHR.2.b: "Let the local governor handle it."
 
       # Clergy demand harsher measures ---
-      flavor_ERSHR.3.t: "The Magi's Demands"
+      flavor_ERSHR.3.title: "The Magi's Demands"
       flavor_ERSHR.3.entry: "The Magi's Demands"
       flavor_ERSHR.3.desc: "The high priests of the eternal flame petition the court. They argue that half-measures have emboldened the heretics, and that only the harshest enforcement of the true faith will secure the realm. Others at court warn that such severity will only deepen the revolt."
       flavor_ERSHR.3.a: "Grant the clergy their harsher measures."
       flavor_ERSHR.3.b: "Counsel restraint."
 
       # Foreign Muslim power stirs unrest ---
-      flavor_ERSHR.4.t: "Foreign Agitators"
+      flavor_ERSHR.4.title: "Foreign Agitators"
       flavor_ERSHR.4.entry: "Foreign Agitators"
       flavor_ERSHR.4.desc: "A neighbouring Muslim power has taken an interest in our troubles. Their agents move among the discontented, supplying coin and encouragement to those who would see the fires extinguished."
       flavor_ERSHR.4.a: "Root out the foreign agents."
       flavor_ERSHR.4.b: "We have no men to spare for this."
 
       #  Moderate faction seeks tolerance ---
-      flavor_ERSHR.5.t: "A Plea for Tolerance"
+      flavor_ERSHR.5.title: "A Plea for Tolerance"
       flavor_ERSHR.5.entry: "A Plea for Tolerance"
       flavor_ERSHR.5.desc: "A faction at court urges a measured path: that the realm tolerate its Muslim subjects rather than compel them, lest the kingdom bleed itself white in endless suppression. The clergy regard the very suggestion as betrayal."
       flavor_ERSHR.5.a: "Extend a measure of tolerance."
       flavor_ERSHR.5.b: "There can be no compromise with heresy."
 
       # Resolution: victory ---
-      flavor_ERSHR.10.t: "The Fires Endure"
+      flavor_ERSHR.10.title: "The Fires Endure"
       flavor_ERSHR.10.entry: "The Fires Endure"
       flavor_ERSHR.10.desc: "The reaction has been broken. Through conversion, patience, and where necessary the sword, the realm has come to accept the restored faith. The sacred fires burn unchallenged, and Eranshahr stands as a Zoroastrian kingdom in truth as well as in name."
       flavor_ERSHR.10.a: "Ahura Mazda is served."
 
       # Resolution: relent
-      flavor_ERSHR.11.t: "An Uneasy Peace"
+      flavor_ERSHR.11.title: "An Uneasy Peace"
       flavor_ERSHR.11.entry: "An Uneasy Peace"
       flavor_ERSHR.11.desc: "The crown has been forced to relent. The fires still burn, but the realm's Muslim majority will be tolerated rather than converted by force. It is not the triumph the magi wished for, yet the kingdom endures—and that, for now, must be enough."
       flavor_ERSHR.11.a: "The realm survives."
 
       ##### END DISASTER CHAIN
 
-      flavor_ERSHR.12.t: "Return of the Mobads"
+      flavor_ERSHR.12.title: "Return of the Mobads"
       flavor_ERSHR.12.entry: "Return of the Mobads"
-      flavor_ERSHR.12.desc: "TODO."
+      flavor_ERSHR.12.desc: "The mobads, the high priesthood of the old faith, were scattered into hiding and exile through the long centuries of Muslim rule. Now that a Zoroastrian crown sits upon the throne once more, they emerge from the shadows to offer their service, a learned order that binds priestly devotion to the bearing of the old nobility and stands ready to support the crown. The question is what place to grant them in the realm reborn."
       flavor_ERSHR.12.a: "Grant them their own Estate."
       flavor_ERSHR.12.b: "Advisory positions are best!"
       flavor_ERSHR.12.c: "We do not need these old fools."
 
-      flavor_ERSHR.13.t: "The Sites of Fire"
+      flavor_ERSHR.13.title: "The Sites of Fire"
       flavor_ERSHR.13.entry: "The Sites of Fire"
-      flavor_ERSHR.13.desc: "TODO."
+      flavor_ERSHR.13.desc: "Before the conquest, the sacred fires of Iran burned at great temples scattered across the land, the holiest of them now lost beyond our borders or left cold under foreign masters. They can be ours again. Where the realm conquers and holds these ancient sites, the fires may be rekindled and the temples restored to the faith, drawing the faithful back to the heart of the old religion."
       flavor_ERSHR.13.a: "The fires must be lit and remain so."
 
-      flavor_ERSHR.14.t: "Rekindle the Sacred Fires"
+      flavor_ERSHR.14.title: "Rekindle the Sacred Fires"
       flavor_ERSHR.14.entry: "Rekindle the Sacred Fires"
-      flavor_ERSHR.14.desc: "TODO."
+      flavor_ERSHR.14.desc: "The three greatest fires of the realm are within our grasp at last. Adur Farnbag of the priests, Adur Gushnasp of the kings and warriors, and Adur Burzen-Mihr of the farmers all rest in our hands, and the people around them have turned back to the faith in numbers enough to tend the flames. With all three burning under a single crown, the restoration is no longer a quiet hope but a blaze for all the world to see."
       flavor_ERSHR.14.a: "The Fire is a shining blaze!"
 
 

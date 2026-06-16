@@ -1,3 +1,0 @@
-﻿# unused at the moment
-
-# used to inject vanilla estates

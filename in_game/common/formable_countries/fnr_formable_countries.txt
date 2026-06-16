@@ -201,47 +201,6 @@
 				tag = LMBDY
 				color = map_LMBDY
 				areas = { lombardy_area }
-			}
-		# Ontario - modern
-			ONTRO_f = {
-				level = 2
-				required_locations_fraction = 0.87
-				rule = plausible
-				potential = { 
-					AND = {
-						OR = {
-							has_variable = fnr_modern_enabled
-							has_variable = fnr_ontario_enabled
-						}
-						NOT = { has_variable = fnr_ontario_disabled }
-					}
-					NOT = { 
-						OR = {
-							tag = ONTRO
-							tag_exists = ONTRO
-						}
-					}
-					OR = {
-						culture = culture:english 
-						culture = culture:french 
-					}
-				}
-				allow = {
-					OR = {
-						culture = culture:english 
-						culture = culture:french 
-					}
-				}
-				name = ONTRO
-				flag = ONTRO
-				adjective = ONTRO_ADJ
-				tag = ONTRO
-				color = map_ONTRO
-				areas = { 
-					western_ontario_area 
-					eastern_ontario_area 
-					northern_ontario_area 
-				}
 			}	
 		# Prinicpality of Antioch
 			POFAN_f = {
@@ -249,18 +208,22 @@
 				required_locations_fraction = 0.90
 				rule = plausible
 				potential = { 
-					#AND = { # TODO: finish these missing variables for GUI
-					#	OR = {
-					#		has_variable = fnr_modern_enabled
-					#		has_variable = fnr_pamiristan_enabled
-					#	}
-					#	NOT = { has_variable = fnr_pamiristan_disabled }
-					#}
+					AND = { # TODO: finish these missing variables for GUI
+						OR = {
+							has_variable = fnr_nonhistorical_enabled
+							has_variable = fnr_principality_of_antioch_enabled
+						}
+						NOT = { has_variable = fnr_principality_of_antioch_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = POFAN
 							tag_exists = POFAN
 						}
+					}
+					OR = {
+						tag = KNI
+						tag = CYP
 					}
 					#culture = culture:syriac_culture 
 				}
@@ -281,6 +244,53 @@
 					halab_province
 					latakia_province
 					hims_province
+				}
+			}
+		# Knights of Malta
+			KOMTA_f = {
+				level = 2
+				required_locations_fraction = 0.60
+				rule = plausible
+				potential = { 
+					AND = { # TODO: finish these missing variables for GUI
+						OR = {
+							has_variable = fnr_nonhistorical_enabled
+							has_variable = fnr_knights_of_malta_enabled
+						}
+						NOT = { has_variable = fnr_knights_of_malta_disabled }
+					}
+					NOT = { 
+						OR = {
+							tag = KOMTA
+							tag_exists = KOMTA
+						}
+					}
+					OR = {
+						tag = KNI
+						tag = CYP
+						tag = SAO
+					}
+					#culture = culture:syriac_culture 
+				}
+				allow = {
+					AND = {
+						culture = culture:french 
+						capital = location:malta 
+						religion = religion:catholic
+					}
+				}
+				name = KOMTA
+				flag = KOMTA
+				adjective = KOMTA_ADJ
+				tag = KOMTA
+				color = map_KOMTA
+				locations = {
+					malta
+					rodos
+				}
+				provinces = {
+					crete_province
+					cyprus_province
 				}
 			}
 		# Badakhshān - Modern
@@ -1676,7 +1686,53 @@
 		# Canada Provinces - US States #
 		################################
 		
-		# TODO POST 2.5.0: Ontario - US States (Rank 3)
+		# Ontario - US States (Rank 3)
+			ONTRO_f = {
+				level = 3
+				required_locations_fraction = 0.87
+				rule = plausible
+				potential = { 
+					AND = {
+						OR = {
+							has_variable = fnr_us_states_enabled
+							has_variable = fnr_ontario_enabled
+						}
+						NOT = { has_variable = fnr_ontario_disabled }
+					}
+					NOT = { 
+						OR = {
+							tag = OKLAH
+							tag_exists = OKLAH
+						}
+					}			
+					OR =  { # is not a colonial subject
+						is_colonial_subject = no
+						culture ?= { # is a colonial subject of the appropriate culture group
+							is_culture_native_american = no
+							OR = {
+								culture = culture:english 
+								culture = culture:french 
+							}
+						}
+					}
+				}
+				allow = {
+					OR = {
+						culture = culture:english 
+						culture = culture:french 
+					}
+				}
+				name = ONTRO
+				flag = ONTRO
+				adjective = ONTRO_ADJ
+				tag = ONTRO
+				color = map_ONTRO
+				areas = { 
+					western_ontario_area 
+					eastern_ontario_area 
+					northern_ontario_area 
+				}
+			}
 		# TODO POST 2.5.0: Quebec - US States (Rank 3)
 		# TODO POST 2.5.0: Newfoundland - US States (Rank 3)
 		
@@ -8713,4 +8769,4 @@
 				}
 			}
 	
- # end of file do NOT allow LAST line to have any code
+ # end of file do NOT allow LAST line to have any code (file is LF)

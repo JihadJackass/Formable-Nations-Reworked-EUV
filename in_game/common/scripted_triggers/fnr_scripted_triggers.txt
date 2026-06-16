@@ -7,7 +7,7 @@
 		has_reform = government_reform:papacy_reform
 	}
 
-	zoroastrian_reaction_end_trigger = {
+	fnr_zoroastrian_reaction_end_trigger = {
 		OR = { # at least 25% unity, or has at least 500k zoroastrian pops
 			religious_unity > 0.25
 			religion_population_in_country = {

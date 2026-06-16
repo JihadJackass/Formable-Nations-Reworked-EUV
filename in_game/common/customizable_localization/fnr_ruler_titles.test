@@ -1,0 +1,14 @@
+﻿INJECT:character_title_prefix = {
+	type = character
+
+	text = {
+		localization_key = fnr_character_title_kingofkings
+
+		trigger = {
+			is_ruler = yes
+			exists = religion
+			religion = religion:zoroastrian
+		}
+	}
+
+}

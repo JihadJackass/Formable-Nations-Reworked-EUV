@@ -18,21 +18,24 @@
 
     # Eranshahr
 
-      # Nobles
+# Nobles
 
         # Azadan Cavalry
         fnr_ERSHR_azadan_cavalry: "Azadan Cavalry"
-        fnr_ERSHR_azadan_cavalry_desc: "TODO"
+        fnr_ERSHR_azadan_cavalry_desc: "The azadan, the free noble warriors of old Iran, take up the saddle and lance once more. Under foreign rule their houses were stripped of rank and their cavalry forgotten, but a restored Zoroastrian crown returns them to their ancient place at the head of the host. In exchange for their loyalty and their horsemen, the great families expect the honours and lands owed to those who ride to war for the faith."
 
       # Clergy
 
         fnr_ERSHR_guardians_of_sacred_fire: "Guardians of the Sacred Fire"
-        fnr_ERSHR_guardians_of_sacred_fire_desc: "TODO"
+        fnr_ERSHR_guardians_of_sacred_fire_desc: "For centuries the sacred fires were smothered, hidden, or left to die under Muslim rule. Now the priesthood is charged with tending them again, keeping the eternal flames lit and the fire temples whole. So long as they guard the fire, the clergy stand as the visible proof that the old faith has truly returned, and the people who still doubt the restoration are reminded of it daily."
 
         fnr_ERSHR_magian_counsel: "The Magian Counsel"
-        fnr_ERSHR_magian_counsel_desc: "TODO"
+        fnr_ERSHR_magian_counsel_desc: "The Magi who survived the long years of conquest and exile are brought back to the side of the throne to advise on matters of faith and rule. Their word carries weight against those who would see Islam restored, and their counsel steadies a realm still torn by the reaction. The crown gains their wisdom and their authority over the faithful, but a priesthood seated so close to power will not be easily set aside again."
 
       # Burghers
+
+        fnr_ERSHR_silk_road_wardens: "Silk Road Wardens"
+        fnr_ERSHR_silk_road_wardens_desc: "TODO"
 
     # Rhineland
     fnr_RHLND_agricultural_concessions_and_investments: "Agricultural Concessions and investments"

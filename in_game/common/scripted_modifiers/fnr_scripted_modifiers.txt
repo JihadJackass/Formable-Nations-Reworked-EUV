@@ -18,3 +18,4 @@ fnr_GMORV_family_in_cabinet_bonus = {
         global_crown_estate_power = 0.05
     }
 }
+

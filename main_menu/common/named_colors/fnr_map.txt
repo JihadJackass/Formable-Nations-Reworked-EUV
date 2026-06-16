@@ -22,6 +22,8 @@ colors = {
 
 	# FORMABLE NATION COLORS
 		# Eranshahr
+		map_KOMTA = rgb { 204 37 59 }
+		# Eranshahr
 		map_ERSHR = rgb { 216 188 3 }
 		# Roman Republic
 		map_RMNRP = rgb { 212 9 79 }

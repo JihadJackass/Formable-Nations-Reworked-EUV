@@ -1,0 +1,110 @@
+﻿# used to inject vanilla estates
+# and add custom estates
+
+###########################
+# Eranshahr Mobads Estate #
+###########################
+
+mobads_estate = {
+	color = pop_clergy            # or define a custom color; clergy/gold-ish fits the magi
+	power_per_pop = 15            # lower than nobles' 25 — deliberately reduced power
+	tax_per_pop = 110             # high tax base — they enrich the crown
+	rival = -0.01
+	alliance = 0.01
+
+	characters_have_dynasty = always   # noble side: they carry dynasties
+	can_generate_mercenary_leaders = no
+	bank = yes
+
+	revolt_court_language = court_language
+
+	# Satisfaction tends to run high and pays the crown directly (clergy + noble flavor)
+	satisfaction = {
+		monthly_legitimacy = 0.7
+		monthly_prestige = 0.2
+		# consider a piety/clergy-power trickle here if such a modifier exists
+	}
+
+	# When powerful, they hand strong, crown-flavored boons
+	high_power = {
+		mobads_estate_max_tax = -1.0
+		levy_combat_efficiency_modifier = 0.5   # noble military side
+		# religious/admin boon here, e.g. missionary strength or advisor cost,
+		# once you confirm valid modifier names
+	}
+
+	low_power = {
+		mobads_estate_max_tax = 0.5
+	}
+
+	opinion = {
+		# (carried over from nobles, with the nobles-power line repointed)
+		add = {
+			desc = "ESTATE_OPINION_BASE"
+			value = "opinion(scope:target)"
+			multiply = 0.05
+		}
+		add = {
+			desc = "ESTATE_OPINION_PRESTIGE"
+			value = prestige
+			subtract = scope:target.prestige
+			multiply = 0.05
+		}
+		add = {
+			desc = "ESTATE_OPINION_POWER_PROJECTION"
+			value = power_projection
+			subtract = scope:target.power_projection
+			multiply = 0.1
+		}
+		add = {
+			desc = "aristocracy_vs_plutocracy"
+			value = {
+				value = societal_value:aristocracy_vs_plutocracy
+				multiply = -1
+				divide = 10
+			}
+		}
+		if = {
+			limit = {
+				government_type = government_type:monarchy
+				scope:target = { government_type = government_type:monarchy }
+			}
+			add = {
+				desc = "ESTATE_OPINION_BOTH_MONARCHY"
+				value = 5
+			}
+		}
+		add = {
+			desc = "ESTATE_OPINION_TARGET_N_ESTATE_POWER"
+			value = "scope:target.estate_power(estate_type:mobads_estate)"
+			multiply = 5
+		}
+		if = {
+			limit = {
+				court_language = scope:target.court_language
+			}
+			add = {
+				desc = "ESTATE_OPINION_SAME_COURT_LANGUAGE"
+				value = 5
+			}
+		}
+		if = {
+			limit = {
+				is_subject_of = scope:target
+			}
+			if = {
+				limit = { is_disloyal_subject = yes }
+				add = {
+					desc = "ESTATE_OPINION_SUBJECT_DISLOYAL"
+					value = -10
+				}
+			}
+			else = {
+				add = {
+					desc = "ESTATE_OPINION_SUBJECT_LOYAL"
+					value = 10
+				}
+			}
+		}
+	}
+}

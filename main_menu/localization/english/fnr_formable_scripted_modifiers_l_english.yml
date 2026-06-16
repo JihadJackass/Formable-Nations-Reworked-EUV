@@ -7,3 +7,6 @@
   # Great Moravia
   fnr_GMORV_family_in_cabinet_bonus: "Great Moravian Nobility Power Bonus"   # TODO POST 2.5.0: make work
 
+  # ERANSHAR
+  STATIC_MODIFIER_NAME_fnr_ERSHR_vigilant_against_agitators: "Agitator Vigilance"
+  STATIC_MODIFIER_DESC_fnr_ERSHR_vigilant_against_agitators: "A neighbouring Muslim power had been funding agents to inflame our subjects against the restored fire, but they have been hunted down and their network broken. While the reaction still burns, the crown stays watchful, and those who would turn the faithless against us find few willing ears and fewer safe places to hide."

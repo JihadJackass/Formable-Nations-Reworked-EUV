@@ -941,3 +941,12 @@ REPLACE:peasants_estate = {
 		fallback = yes
 	}
 }
+
+#		mobads_estate = {
+#			type = country
+#
+#			text = {
+#				localization_key = mobads_estate
+#				fallback = yes
+#			}
+#		}

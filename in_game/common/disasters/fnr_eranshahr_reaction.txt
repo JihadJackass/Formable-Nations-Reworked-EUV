@@ -12,37 +12,32 @@
 		# Has formed Eranshahr with a majority muslim population
 		has_variable = fnr_zoroastrian_restored_muslim_reaction
 
-		# TODO: add a different variable based on pop
-
-		# The realm is Zoroastrian by crown but not by population
-		religious_unity < 0.25
-
-		# There is a large non-Zoroastrian (Muslim) majority to revolt
-		religion_percentage_in_country = {
-			religion = religion:zoroastrian
-			value < 0.25
+		OR = {
+			religious_unity < 0.25 # The realm is Zoroastrian by crown but not by population
+			religion_percentage_in_country = { # There is a large non-Zoroastrian (Muslim) majority to revolt
+				religion = religion:zoroastrian
+				value < 0.25
+			}
+			OR = {
+				stability < 10
+				religious_unity < 0.35
+			}
 		}
 
 		custom_tooltip = {
 			text = had_zoroastrian_reaction_before_tt
 			NOT = { has_variable = had_disaster_zoroastrian_reaction_variable }
 		}
-
-		OR = {
-			stability < 10
-			religious_unity < 0.35
-		}
 	}
 
 	can_end = {
-		zoroastrian_reaction_end_trigger = yes
+		fnr_zoroastrian_reaction_end_trigger = yes
 	}
 
 	modifier = {
 		clergy_estate_target_satisfaction = huge_permanent_target_satisfaction_penalty
 		monthly_war_exhaustion = 0.10
 		tolerance_heretic = -2
-		#global_unrest = 3
 	}
 
 	on_start = {
@@ -55,7 +50,7 @@
 				max = 0.85
 			}
 		}
-		trigger_event_non_silently = zoroastrian_reaction.1
+		trigger_event_non_silently = flavor_ERSHR.1
 	}
 
 	on_monthly = {
@@ -68,10 +63,10 @@
 		hidden_effect = {
 			random_list = {
 				940 = { }
-				10 = { trigger_event_silently = zoroastrian_reaction.2 }	# Local uprising
-				10 = { trigger_event_silently = zoroastrian_reaction.3 }	# Clergy demand harsher measures
-				10 = { trigger_event_silently = zoroastrian_reaction.4 }	# Foreign Muslim power stirs unrest
-				10 = { trigger_event_silently = zoroastrian_reaction.5 }	# Moderate faction seeks tolerance
+				10 = { trigger_event_silently = flavor_ERSHR.2 }	# Local uprising
+				10 = { trigger_event_silently = flavor_ERSHR.3 }	# Clergy demand harsher measures
+				10 = { trigger_event_silently = flavor_ERSHR.4 }	# Foreign Muslim power stirs unrest
+				10 = { trigger_event_silently = flavor_ERSHR.5 }	# Moderate faction seeks tolerance
 			}
 		}
 	}
@@ -82,10 +77,10 @@
 		remove_variable = target_religious_unity_variable
 		if = {
 			limit = { religious_unity >= var:target_religious_unity_variable }
-			trigger_event_non_silently = zoroastrian_reaction.10	# Suppressed / converted: victory
+			trigger_event_non_silently = flavor_ERSHR.10	# Suppressed / converted: victory
 		}
 		else = {
-			trigger_event_non_silently = zoroastrian_reaction.11	# Forced to relent / tolerance
+			trigger_event_non_silently = flavor_ERSHR.11	# Forced to relent / tolerance
 		}
 	}
 }

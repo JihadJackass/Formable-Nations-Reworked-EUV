@@ -899,7 +899,13 @@ window = {
 								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_historical_enabled'), GetPlayer.HasVariable('fnr_austriahungary_enabled')), Not(GetPlayer.HasVariable('fnr_austriahungary_disabled'))), 'Austria-Hungary: ON', 'Austria-Hungary: OFF')]"
 								onclick = "[GetScriptedGui('FormableNationReworked_toggle_austriahungary').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 							}
-
+							# Roman Republic - Fantasy
+							button_regular = {
+								tooltip = "fnr_placeholder"
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_fantasy_enabled'), GetPlayer.HasVariable('fnr_roman_republic_enabled')), Not(GetPlayer.HasVariable('fnr_roman_republic_disabled'))), 'Roman Republic: ON', 'Roman Republic: OFF')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_roman_republic').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}
 							# Sassanids - Fantasy
 							button_regular = {
 								tooltip = "fnr_placeholder"
@@ -1371,12 +1377,19 @@ window = {
 							down = "[GetVariableSystem.Exists('northamerica_open')]"
 						}
 						
-						# Oklahoma - US States (Rank 3)
+						# US States
 						vbox = {
 							layoutpolicy_horizontal = expanding
 							visible = "[GetVariableSystem.Exists('northamerica_open')]"
 							spacing = 3
 							margin = { 10 5 }
+
+							button_regular = {
+								tooltip = "fnr_placeholder"
+								size = { 400 32 }
+								raw_text = "[SelectLocalization(And(Or(GetPlayer.HasVariable('fnr_us_states_enabled'), GetPlayer.HasVariable('fnr_ontario_enabled')), Not(GetPlayer.HasVariable('fnr_ontario_disabled'))), 'Ontario: ON - Rank 3', 'Ontario: OFF - Rank 3')]"
+								onclick = "[GetScriptedGui('FormableNationReworked_toggle_ontario').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							}	
 
 							button_regular = {
 								tooltip = "fnr_placeholder"

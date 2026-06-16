@@ -128,13 +128,12 @@
 			}
 			
 			country_modifier = {
-				global_nobles_estate_power = 0.05
-				nobles_estate_target_satisfaction = 0.025
+				global_nobles_estate_power = 0.025
+				nobles_estate_target_satisfaction = 0.05
 
-				army_heavy_cavalry_build_cost_modifier = -0.015
-				army_heavy_cavalry_power = 0.020
+				tax_income_efficiency = 0.05
 				
-				monthly_towards_decentralization = societal_value_monthly_move
+				monthly_towards_communalism = 0.025
 			}
 		}
 

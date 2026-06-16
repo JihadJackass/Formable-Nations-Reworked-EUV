@@ -1,7 +1,13 @@
 ﻿namespace = flavor_ERSHR
 
 # ============================================================
+# = NOTES												     =
+# = - Should be improved in the future.						 =
+# ============================================================
+
+# ============================================================
 # 1 — Start event (non-silent, fires on_start)
+# The restoration is proclaimed; the old faithful recoil.
 # ============================================================
 flavor_ERSHR.1 = { 
 	type = country_event
@@ -11,9 +17,22 @@ flavor_ERSHR.1 = {
 	outcome = negative
 	picture = "gfx/interface/illustrations/disaster/religious_turmoil.dds"
 
+	immediate = {
+		# The world reacts to a Zoroastrian crown ruling Muslim subjects
+		every_owned_location = {
+			limit = { NOT = { is_capital = yes } }
+			change_control = -10
+			every_pop = {
+				limit = { NOT = { religion = religion:zoroastrian } }
+				add_pop_satisfaction = -0.1
+			}
+		}
+	}
+
 	option = {
 		name = flavor_ERSHR.1.a
 		add_stability = -1
+		add_war_exhaustion = 5
 	}
 	
 	trigger = {
@@ -30,6 +49,7 @@ flavor_ERSHR.1 = {
 
 # ============================================================
 # 2 — Local uprising
+# A pretender prince raises a real rebellion in a restless location.
 # ============================================================
 flavor_ERSHR.2 = { 
 	type = country_event
@@ -40,24 +60,43 @@ flavor_ERSHR.2 = {
 	picture = "gfx/interface/illustrations/disaster/religious_turmoil.dds"
 
 	immediate = {
+		# Create the rebel faction (note: category goes inside data = {})
 		create_rebel = {
-			category = pretender
 			name = rebellious_prince_name
+			data = { category = pretender }
 			save_scope_as = brother_rebel
 		}
-	}
-
-	option = {	# Send troops
-		name = flavor_ERSHR.2.a
-		add_yearly_gold = -0.25
-		add_war_exhaustion = 1
-	}
-	option = {	# Let the governor handle it
-		name = flavor_ERSHR.2.b
-		add_stability = -1
+		# Pick a disloyal location, hand its non-Zoroastrian pops to the rebel,
+		# and crater control so the rebellion actually grows.
 		random_owned_location = {
 			limit = { NOT = { religion = religion:zoroastrian } }
-			# placeholder: add local unrest / devastation here
+			save_scope_as = uprising_location
+			change_control = -25
+			every_pop = {
+				limit = { NOT = { religion = religion:zoroastrian } }
+				change_pop_allegiance = scope:brother_rebel
+			}
+		}
+		scope:brother_rebel = { add_rebel_progress = 25 }
+	}
+
+	option = {	# Send troops — costly suppression that buys back the location
+		name = flavor_ERSHR.2.a
+		add_yearly_gold = -0.25
+		add_manpower = -0.5
+		add_war_exhaustion = 3
+		scope:brother_rebel = { 
+			add_rebel_progress = -0.25 
+		}
+		scope:uprising_location = { change_control = 0.15 }
+	}
+	option = {	# Let the governor handle it — cheap now, the region rots
+		name = flavor_ERSHR.2.b
+		add_stability = -1
+		scope:brother_rebel = { add_rebel_progress = 0.15 }
+		scope:uprising_location = {
+			change_control = -0.10
+			change_prosperity = -0.10
 		}
 	}
 	
@@ -80,6 +119,7 @@ flavor_ERSHR.2 = {
 
 # ============================================================
 # 3 — Clergy demand harsher measures
+# The magi want a crackdown. Please them, or hold the line.
 # ============================================================
 flavor_ERSHR.3 = { 
 	type = country_event
@@ -89,22 +129,43 @@ flavor_ERSHR.3 = {
 	outcome = negative
 	picture = "gfx/interface/illustrations/disaster/religious_turmoil.dds"
 
-	option = {	# Grant harsher measures
+	option = {	# Grant harsher measures — clergy rejoice, the minority hardens
 		name = flavor_ERSHR.3.a
-		add_estate_satisfaction = {
-			estate = estate_type:clergy_estate
-			value = 0.1
+		add_stability = -5
+		add_war_exhaustion = 2.5
+		add_religious_influence = 10
+		add_estate_satisfaction = { 
+			type = estate_type:clergy_estate
+			value = estate_satisfaction_mild_bonus
 		}
-		add_stability = -1
-		add_war_exhaustion = 1
+		custom_tooltip = ERSHR_fnr_formable_trigger_4_tt
+		hidden_effect = {
+			every_pop = {
+				limit = { 
+					OR = {
+						pop_type = pop_type:peasants
+						pop_type = pop_type:nobles
+						pop_type = pop_type:clergy
+					}
+					OR = {
+						religion = religion:sunni
+						religion = religion:shia
+					}
+					NOT = { religion = religion:zoroastrian } 
+				}
+				add_pop_satisfaction = -0.2
+			}
+		}
 	}
-	option = {	# Counsel restraint
+	option = {	# Counsel restraint — clergy grumble, the realm calms
 		name = flavor_ERSHR.3.b
-		add_estate_satisfaction = {
-			estate = estate_type:clergy_estate
-			value = -0.1
+		add_stability = 20
+		add_religious_influence = -5
+		add_pop_satisfaction = 0.1
+		add_country_modifier = {
+			modifier = fnr_ERSHR_magi_express_disapproval
+			years = 2
 		}
-		add_stability = 1
 	}
 	
 	trigger = {
@@ -126,6 +187,7 @@ flavor_ERSHR.3 = {
 
 # ============================================================
 # 4 — Foreign Muslim power stirs unrest
+# A neighbour funds agitators along the frontier.
 # ============================================================
 flavor_ERSHR.4 = { 
 	type = country_event
@@ -135,14 +197,38 @@ flavor_ERSHR.4 = {
 	outcome = negative
 	picture = "gfx/interface/illustrations/disaster/religious_turmoil.dds"
 
-	option = {	# Root out the agents
+	option = {	# Root out the agents — pay for vigilance
 		name = flavor_ERSHR.4.a
 		add_gold = -15
-		add_stability = 1
+		add_stability = -5
+		add_manpower = -0.10
+		add_country_modifier = {
+			modifier = fnr_ERSHR_vigilant_against_agitators
+			years = 5
+		}
 	}
-	option = {	# No men to spare
+	option = {	# No men to spare — the frontier slips
 		name = flavor_ERSHR.4.b
 		add_war_exhaustion = 2
+		add_stability = -3
+		custom_tooltip = ERSHR_fnr_formable_trigger_5_tt
+		hidden_effect = {
+			every_border_location = {
+				limit = { 
+					is_passable = yes
+					is_ownable = yes
+				}
+				change_control = -0.010
+				every_pop = {
+					limit = { 
+						religion = religion:sunni
+						religion = religion:shia
+						NOT = { religion = religion:zoroastrian } 
+					}
+					add_pop_satisfaction = -0.05
+				}
+			}
+		}
 	}
 	
 	trigger = {
@@ -150,7 +236,7 @@ flavor_ERSHR.4 = {
 		any_active_disaster = { disaster_type = disaster_type:fnr_ERSHR_zoroastrian_reaction }
 		had_disaster_for_years = {
 			disaster_type = disaster_type:fnr_ERSHR_zoroastrian_reaction
-			years >= 1
+			years >= 2
 		}
 	}
 
@@ -164,6 +250,7 @@ flavor_ERSHR.4 = {
 
 # ============================================================
 # 5 — Moderate faction seeks tolerance
+# A voice for coexistence. Concede, or refuse.
 # ============================================================
 flavor_ERSHR.5 = { 
 	type = country_event
@@ -173,22 +260,46 @@ flavor_ERSHR.5 = {
 	outcome = negative
 	picture = "gfx/interface/illustrations/disaster/religious_turmoil.dds"
 
-	option = {	# Extend tolerance
+	option = {	# Extend tolerance — lasting peace at the clergy's expense
 		name = flavor_ERSHR.5.a
-		add_war_exhaustion = -2
+		add_war_exhaustion = -5
 		add_estate_satisfaction = {
-			estate = estate_type:clergy_estate
-			value = -0.15
+			type = estate_type:clergy_estate
+			value = estate_satisfaction_mild_bonus
 		}
-		# placeholder: nudge religious_unity up via a temporary modifier
+		add_country_modifier = {
+			modifier = fnr_ERSHR_tolerated_majority_faction_demand	# define this static modifier
+			months = 6
+		}
+		custom_tooltip = ERSHR_fnr_formable_trigger_6_tt
+		hidden_effect = {
+			every_owned_location = {
+				limit = { 
+					is_passable = yes
+					is_ownable = yes
+				}
+				every_pop = { add_pop_satisfaction = 0.05}
+			}
+		}
 	}
-	option = {	# No compromise
+	option = {	# No compromise — the faithful approve, the rest seethe
 		name = flavor_ERSHR.5.b
 		add_estate_satisfaction = {
-			estate = estate_type:clergy_estate
-			value = 0.1
+			type = estate_type:clergy_estate
+			value = estate_satisfaction_mild_bonus
 		}
-		add_war_exhaustion = 1
+		add_war_exhaustion = 3
+		add_religious_influence = 15
+		custom_tooltip = ERSHR_fnr_formable_trigger_5_tt
+		hidden_effect = {
+			every_owned_location = {
+				limit = { NOT = { religion = religion:zoroastrian } }
+				every_pop = {
+					limit = { NOT = { religion = religion:zoroastrian } }
+					add_pop_satisfaction = -0.1
+				}
+			}
+		}
 	}
 	
 	trigger = {
@@ -196,7 +307,7 @@ flavor_ERSHR.5 = {
 		any_active_disaster = { disaster_type = disaster_type:fnr_ERSHR_zoroastrian_reaction }
 		had_disaster_for_years = {
 			disaster_type = disaster_type:fnr_ERSHR_zoroastrian_reaction
-			years >= 1
+			years >= 2
 		}
 	}
 
@@ -210,6 +321,7 @@ flavor_ERSHR.5 = {
 
 # ============================================================
 # 10 — Resolution: victory (fired from on_end)
+# The reaction is broken; the sacred fire spreads in its wake.
 # ============================================================
 flavor_ERSHR.10 = { 
 	type = country_event
@@ -221,20 +333,41 @@ flavor_ERSHR.10 = {
 
 	option = {
 		name = flavor_ERSHR.10.a
-		add_stability = 2
+		add_stability = 10
 		add_legitimacy = legitimacy_extreme_bonus
+		add_prestige = 15
+		add_religious_influence = 20
 		add_estate_satisfaction = {
-			estate = estate_type:clergy_estate
-			value = 0.2
+			type = estate_type:clergy_estate
+			value = estate_satisfaction_severe_bonus
 		}
+		# Order restored, and one cohort in each restless location turns to the faith
+		every_owned_location = {
+			change_control = 0.15
+			random_pop = {
+				limit = { NOT = { religion = religion:zoroastrian } }
+				change_pop_religion = religion:zoroastrian
+			}
+			random_pop = {
+				limit = { NOT = { religion = religion:zoroastrian } }
+				change_pop_religion = religion:zoroastrian
+			}
+			random_pop = {
+				limit = { NOT = { religion = religion:zoroastrian } }
+				change_pop_religion = religion:zoroastrian
+			}
+		}
+		# Cleanup
+		hidden_effect = { remove_variable = fnr_zoroastrian_restored_muslim_reaction }
 	}
 	
 	trigger = {
 		#disaster_type = disaster_type:fnr_ERSHR_zoroastrian_reaction
 		any_active_disaster = { disaster_type = disaster_type:fnr_ERSHR_zoroastrian_reaction }
+		fnr_zoroastrian_reaction_end_trigger = yes
 		had_disaster_for_years = {
 			disaster_type = disaster_type:fnr_ERSHR_zoroastrian_reaction
-			years >= 1
+			years >= 3
 		}
 	}
 
@@ -242,12 +375,13 @@ flavor_ERSHR.10 = {
 		tag = ERSHR		# Can have more than one tag in it
 		from = 1337.1.1
 		to = 1837.1.1
-		monthly_chance = 1
+		monthly_chance = 0
 	}
 }
 
 # ============================================================
 # 11 — Resolution: relent (fired from on_end)
+# You bought peace by tolerating the majority.
 # ============================================================
 flavor_ERSHR.11 = { 
 	type = country_event
@@ -261,7 +395,23 @@ flavor_ERSHR.11 = {
 		name = flavor_ERSHR.11.a
 		add_stability = 1
 		add_war_exhaustion = -3
-		# placeholder: add a permanent "Tolerated Majority" modifier if you want a lasting trade-off
+		add_country_modifier = {
+			modifier = fnr_ERSHR_tolerated_majority
+			years = -1
+		}
+		custom_tooltip = ERSHR_fnr_formable_trigger_8_tt
+		hidden_effect = {
+			every_owned_location = {
+				every_pop = {
+					limit = { NOT = { religion = religion:zoroastrian } }
+					add_pop_satisfaction = 0.05
+				}
+				every_pop = {
+					limit = { religion = religion:zoroastrian }
+					add_pop_satisfaction = 0.15
+				}
+			}
+		}
 	}
 	
 	trigger = {
@@ -269,7 +419,7 @@ flavor_ERSHR.11 = {
 		any_active_disaster = { disaster_type = disaster_type:fnr_ERSHR_zoroastrian_reaction }
 		had_disaster_for_years = {
 			disaster_type = disaster_type:fnr_ERSHR_zoroastrian_reaction
-			years >= 1
+			years >= 4
 		}
 	}
 
@@ -283,29 +433,55 @@ flavor_ERSHR.11 = {
 
 # Return of the Mobads
 # The Zoroastrian high priesthood (mobads), driven underground or into exile since the Arab conquest, re-emerges to serve a Zoroastrian crown. A choice between elevating them to real political power (clergy bonus, but clergy influence rises) or keeping them advisory (you retain authority).
-
 flavor_ERSHR.12 = { 
 	type = country_event
 	title = flavor_ERSHR.12.title
 	desc = flavor_ERSHR.12.desc
 	fire_only_once = yes
-	outcome = negative
+	outcome = positive
 	picture = "gfx/interface/illustrations/disaster/religious_turmoil.dds"
 
-	option = { # Grant them an estate of their own
+	option = { 
+		# TODO: Grant them an estate of their own 
+		# power to the priesthood
 		name = flavor_ERSHR.12.a
-		add_stability = 3
-
+		add_stability = 5
+		add_religious_influence = 15
+		add_country_modifier = {
+			modifier = fnr_ERSHR_empowered_mobads
+			years = -1
+		}
 	}
 
-	option = { # Advisory positions are best!
+	option = { # Advisory positions are best! — the safe middle
 		name = flavor_ERSHR.12.b
-		add_stability = 1
+		add_stability = 5
+		add_religious_influence = 5
+		add_estate_satisfaction = {
+			type = estate_type:clergy_estate
+			value = estate_satisfaction_weak_bonus
+		}
+		add_country_modifier = {
+			modifier = fnr_ERSHR_mobad_advisors
+			years = 3650
+		}
 	}
 
-	option = { # We do not need these old fools.
+	option = { # We do not need these old fools. — the crown keeps its grip
 		name = flavor_ERSHR.12.c
-		add_prestige = 5
+		ruler ?= {
+			add_character_modifier = { 
+				modifier = fnr_ERSHR_rejected_mobads 
+				years = 5 
+				mode = add_and_extend 
+			}
+		}
+		add_prestige = 15
+		add_estate_satisfaction = {
+			type = estate_type:clergy_estate
+			value = estate_satisfaction_extreme_bonus
+		}
+		add_religious_influence = -10
 	}	
 
 	dynamic_historical_event = {# The time window for the event to occur, only tags specified in it can get the event
@@ -317,6 +493,7 @@ flavor_ERSHR.12 = {
 }
 
 # The Sites of Fire
+# Gives access to the new holy sites spread across Persia
 flavor_ERSHR.13 = { 
 	type = country_event
 	title = flavor_ERSHR.13.title
@@ -328,6 +505,8 @@ flavor_ERSHR.13 = {
 	option = { # The Fire is a shining blaze!
 		name = flavor_ERSHR.13.a
 		add_stability = 1
+		add_prestige = 5
+		add_religious_influence = 15
 		location:kariyan = {
 			create_holy_site = {
 				name = fnr_ERSHR_holy_site_adur_farnbag
@@ -406,6 +585,12 @@ flavor_ERSHR.14 = {
 		name = flavor_ERSHR.14.a
 		add_stability = 10
 		add_legitimacy = 20
+		add_prestige = 25
+		add_religious_influence = 30
+		add_country_modifier = {
+			modifier = fnr_ERSHR_sacred_fires_burn
+			years = -1
+		}
 		religion:sunni = {
 			set_religious_view = {
 				target = religion:zoroastrian
@@ -416,6 +601,14 @@ flavor_ERSHR.14 = {
 			set_religious_view = {
 				target = religion:zoroastrian
 				value = enemy
+			}
+		}
+		# The three reunited fires draw converts across the realm
+		every_owned_location = {
+			limit = { NOT = { religion = religion:zoroastrian } }
+			random_pop = {
+				limit = { NOT = { religion = religion:zoroastrian } }
+				change_pop_religion = religion:zoroastrian
 			}
 		}
 	}

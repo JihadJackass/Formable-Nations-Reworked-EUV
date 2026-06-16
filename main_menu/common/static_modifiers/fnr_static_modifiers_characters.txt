@@ -1,0 +1,14 @@
+﻿####################################################
+# Formable Nations Static Modifiers for Characters #
+####################################################
+
+	# Eranshar
+
+		fnr_ERSHR_rejected_mobads = {
+			game_data = {
+				category = character
+			}
+			global_monthly_control = -0.0001
+		}
+
+

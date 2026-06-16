@@ -4,7 +4,7 @@
 
 	# Eranshar
 
-		# Rise of Zoroastrianism
+		# Rise of Zoroastrianism Religious Bonus - Added via estate privilage
 		fnr_ershr_rise_of_zoroastrian = {
 			game_data = {
 				category = country
@@ -14,6 +14,78 @@
 			clergy_estate_satisfaction_recovery = 0.02
 			land_morale = 0.05
 			land_morale_recovery = 0.025
+		}
+ 
+		# Vigilance Against Agitators - called from flavor_ERSHR.4
+		fnr_ERSHR_vigilant_against_agitators = {
+			game_data = {
+				category = country
+			}
+			counter_espionage = 0.05
+			stability_decay = -0.0001
+		}
+
+		# Magi Express Disapproval - called from flavor_ERSHR.3
+		fnr_ERSHR_magi_express_disapproval = {
+			game_data = {
+				category = country
+			}
+			clergy_estate_max_tax = -0.05
+			subject_loyalty = -0.01
+			subject_opinions = -10
+			stability_cost = 0.0002
+		}
+
+		# Court Demanded Tolerance - called from flavor_ERSHR.5
+		fnr_ERSHR_tolerated_majority_faction_demand = {
+			game_data = {
+				category = country
+			}
+			tolerance_heathen = 1
+			tolerance_heretic = 1
+		}
+
+		# Tolerated Majority - called from flavor_ERSHR.11
+		fnr_ERSHR_tolerated_majority = {
+			game_data = {
+				category = country
+			}
+			clergy_estate_max_tax = 0.025
+			tolerance_own = 1
+			tolerance_heathen = 4
+			tolerance_heretic = 3
+		}
+		
+		# Empowered Mobads Estate - called from flavor_ERSHR.12
+		fnr_ERSHR_empowered_mobads = {
+			game_data = {
+				category = country
+			}
+			government_size = 1
+			global_crown_estate_power = 0.15
+			clergy_estate_target_satisfaction = -0.05
+			nobles_estate_target_satisfaction = -0.05
+			clergy_estate_max_tax = -0.025
+			nobles_estate_max_tax = -0.025
+			peasants_estate_max_tax = -0.050
+		}
+
+		# The Sacred Fires Burn  called from flavor_ERSHR.14
+		fnr_ERSHR_sacred_fires_burn = {
+			game_data = {
+				category = country
+			}
+			maximum_religious_influence = 50
+			min_war_exhaustion = -0.05
+			may_explore = yes
+			may_hire_eunuch_advisors = yes
+			hire_mercenary_leader_cost_modifier = -0.05
+			land_morale = 1
+			land_morale_recovery = 0.05
+			navy_initiative = 0.05
+			naval_range = 50
+			global_max_control = 0.025
+			global_pop_conversion_speed = 0.025
 		}
 
 	# Great Moravia Modifiers
