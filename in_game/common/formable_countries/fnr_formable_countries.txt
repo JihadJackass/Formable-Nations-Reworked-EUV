@@ -7618,6 +7618,16 @@
 					culture = { has_culture_group = culture_group:iberian_group }
 					#always = no
 				}
+				allow = {
+					religion = religion:catholic
+					OR = {
+						is_subject = yes
+						OR = {
+							is_hegemon = yes
+							culture = culture:fnr_gallo_roman_culture
+						}
+					}
+				}
 				name = TRCNS
 				flag = TRCNS
 				adjective = TRCNS_ADJ

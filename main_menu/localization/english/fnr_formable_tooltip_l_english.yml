@@ -3,6 +3,7 @@
   # TOOLTIPS FOR FORMABLE NATIONS
 
     fnr_placeholder: ""
+    fnr_settings_close_tooltip: "Close"
 
     #####################################
     # Formable Estate Variable Tooltips #

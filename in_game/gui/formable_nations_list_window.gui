@@ -30,11 +30,22 @@ window = {
 	visible = "[GetVariableSystem.Exists('formable_list_window_open')]"
 	using = bg_window_default_alt
 	
-	button_close_alt = {
+	widget = {
 		parentanchor = top|right
 		position = { -15 15 }
 		size = { 40 40 }
-		blockoverride "close_onclick" {
+
+		button_close_alt = {
+			blockoverride "close_onclick" {
+				onclick = "[GetVariableSystem.Clear('formable_list_window_open')]"
+			}
+		}
+
+		button = {
+			size = { 40 40 }
+			input_action = "close_window"
+			use_global_input_instance = yes
+			tooltip = "fnr_settings_close_tooltip"
 			onclick = "[GetVariableSystem.Clear('formable_list_window_open')]"
 		}
 	}
