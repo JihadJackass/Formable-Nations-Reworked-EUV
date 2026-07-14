@@ -18,8 +18,8 @@
 				global_production_efficiency = 0.15
 				trade_land_efficiency = 0.10
 				global_trade_center_power = 0.15
-				global_build_buildings_cost = -0.05
-				diplomatic_annexation_cost = 0.20
+				#global_build_buildings_cost = -0.05
+				#diplomatic_annexation_cost = 0.20
 			}
 			locked = {
 				is_locked_mechanic = {

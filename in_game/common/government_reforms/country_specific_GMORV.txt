@@ -71,7 +71,7 @@
 			country_modifier = {
 				tax_income_efficiency = 0.05
 				global_crown_estate_power = 0.05
-				court_spending_cost_modifier = -0.10
+				#court_spending_cost_modifier = -0.10
 
 				monthly_towards_decentralization = 0.05
 			}

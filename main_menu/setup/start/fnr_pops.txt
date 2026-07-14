@@ -6,7 +6,7 @@
 locations={
 
 	stockholm = {
-		define_pop = {	type = nobles	size = 0.001	culture = fnr_anglois	religion = catholic }
+		define_pop = {	type = nobles	size = 0.001	culture = fnr_anglois_culture	religion = catholic }
 		define_pop = {	type = nobles	size = 0.001	culture = fnr_greco_bactrian_culture	religion = catholic }
 		define_pop = {	type = nobles	size = 0.001	culture = fnr_semitic_culture	religion = catholic }
 		define_pop = {	type = nobles	size = 0.001	culture = fnr_gallo_roman_culture	religion = catholic }

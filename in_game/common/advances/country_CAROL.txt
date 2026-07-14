@@ -11,7 +11,7 @@
 			}
 			icon = bohemian_imperial_standing
 
-			stability_cost = -0.10
+			#stability_cost = -0.10
 			monthly_towards_centralization = 0.005
 			monthly_republican_tradition = 0.05
 			monthly_legitimacy = 0.05

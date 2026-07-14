@@ -18,9 +18,10 @@
 		player_automated_category = religiousdoctrines
 
 		potential = {
-			scope:recipient = {
-				this = religion:fnr_greco_buddhism_religion
-			}
+			always = no # TODO: why the fuck is this bugging out?
+	#		scope:recipient = {
+	#			this = religion:fnr_greco_buddhism_religion
+	#		}
 		}
 
 		allow = {
@@ -235,9 +236,10 @@
 		player_automated_category = religiousdoctrines
 
 		potential = {
-			scope:recipient = {
-				this = religion:fnr_greco_buddhism_religion
-			}
+			always = no # TODO: fix this fucking one too
+	#		scope:recipient = {
+	#			this = religion:fnr_greco_buddhism_religion
+	#		}
 		}
 
 		allow = {

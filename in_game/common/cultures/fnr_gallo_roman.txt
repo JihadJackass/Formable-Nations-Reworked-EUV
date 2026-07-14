@@ -1,12 +1,15 @@
-﻿
+﻿#############################################
+# Formable Nations: Reworked Custom Culture #
+#############################################
+
+###############
+# Gallo-Roman #
+###############
 
 fnr_gallo_roman_culture = {
 	language = irish_dialect
-	
 	color = rgb { 87 140 75 }
-	
 	tags = { french_gfx western_european_gfx european_gfx }
-
 	opinions = {
 		gallo = kindred
 		highland = positive
@@ -15,7 +18,6 @@ fnr_gallo_roman_culture = {
 		english = negative
 		anglo_irish = negative
 	}
-	
 	culture_groups = {
 		celtic_group
 		greek_group

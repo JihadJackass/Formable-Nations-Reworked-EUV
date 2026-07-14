@@ -1,12 +1,15 @@
-﻿
+﻿#############################################
+# Formable Nations: Reworked Custom Culture #
+#############################################
 
-fnr_anglois = {
+###########
+# Anglois #
+###########
+
+fnr_anglois_culture = {
 	language = angevin_dialect
-	
 	color = rgb { 40 40 85 }
-	
 	tags = { french_gfx western_european_gfx european_gfx }
-
 	opinions = {
 		berrichon = kindred
 		burgundian = kindred
@@ -21,7 +24,6 @@ fnr_anglois = {
 		saintongeais = kindred
 		walloon = kindred
 	}
-	
 	culture_groups = {
 		french_group british_group
 	}

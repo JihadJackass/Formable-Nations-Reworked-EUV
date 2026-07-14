@@ -15,7 +15,7 @@
 			country_modifier = {
 				government_reform_slots = 1
 				colonial_range = 80
-				colonial_maintenance_cost = -0.05
+				#colonial_maintenance_cost = -0.05
 				colonial_migration_size = 0.05
 				tax_income_efficiency = -0.025
 			}

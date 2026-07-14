@@ -2819,10 +2819,49 @@
 						}
 					}			
 					OR = {
-						owns = location:tenochtitlan
-						OR = {
-							religion = religion:nahuatl
-							culture = culture:nahua_culture
+						AND = { # Check if you are a native, if so, First Mexican Empire becomes the Nahuatl Empire with the option to convert to Mexican instead upon Formation
+							#owns = location:tenochtitlan
+							OR = {
+								religion = religion:nahuatl
+								culture = culture:nahua_culture
+							}
+						}
+						#AND = { # Check if you are Spanish, or Mexican - if Spanish; Mexican becomes the State culture
+							#owns = location:tenochtitlan
+							#OR = {
+								OR = {
+									religion = religion:catholic
+									religion = religion:lutheran
+								}
+								#culture = culture:mexican
+							#}
+						#}
+					}
+				}
+				allow = {
+					government_type = government_type:monarchy
+					is_subject = no
+					OR = {
+						AND = { # Native Check
+							owns = location:tenochtitlan
+							custom_tooltip = {
+								text = MEXCO_fnr_formable_trigger_1_tt
+								OR = {  # Check if you are a native, if so, First Mexican Empire becomes the Nahuatl Empire with the option to convert to Mexican instead upon Formation
+									religion = religion:nahuatl
+									culture = culture:nahua_culture
+								}
+							}
+						}
+						AND = { # Colonizer Check
+							owns = location:tenochtitlan
+							OR = { # Check if you are Spanish, or Mexican - if Spanish; Mexican becomes the State culture
+								culture = { has_culture_group = culture_group:iranian_group }
+								#culture = culture:mexican
+								OR = {
+									religion = religion:catholic
+									religion = religion:lutheran
+								}
+							}
 						}
 					}
 				}
@@ -2834,6 +2873,13 @@
 				regions = { mesoamerica_region }
 				areas = { guachichil_area tamaulipeco_area culiacan_area tahejoc_area zacatecas_area }
 				locations = { sobaipuri jocome }
+				form_effect = {
+					if = {
+						limit = { country_rank_level < 4 }
+						set_country_rank_effect = { rank = country_rank:rank_empire }
+					}
+					#change_culture = culture:mexican
+				}
 			}
 			
 		#####################

@@ -290,11 +290,6 @@ lateralview = {
 									using = action_tooltip_inner_content
 								}
 	
-								blockoverride "tooltip_ui_action_block" {
-									TooltipUIActionBlockOld = {
-										visible = "[PdxGuiWidget.HasUIAction]"
-									}
-								}
 							}
 						}
 						text_single = {
@@ -324,11 +319,6 @@ lateralview = {
 									using = action_tooltip_inner_content
 								}
 	
-								blockoverride "tooltip_ui_action_block" {
-									TooltipUIActionBlockOld = {
-										visible = "[PdxGuiWidget.HasUIAction]"
-									}
-								}
 							}
 						}
 					}
@@ -360,11 +350,6 @@ lateralview = {
 									}	
 								}
 	
-								blockoverride "tooltip_ui_action_block" {
-									TooltipUIActionBlockOld = {
-										visible = "[PdxGuiWidget.HasUIAction]"
-									}
-								}
 							}
 						}
 					}
@@ -396,11 +381,6 @@ lateralview = {
 									}	
 								}
 	
-								blockoverride "tooltip_ui_action_block" {
-									TooltipUIActionBlockOld = {
-										visible = "[PdxGuiWidget.HasUIAction]"
-									}
-								}
 							}
 						}
 					}
@@ -431,11 +411,6 @@ lateralview = {
 									}	
 								}
 	
-								blockoverride "tooltip_ui_action_block" {
-									TooltipUIActionBlockOld = {
-										visible = "[PdxGuiWidget.HasUIAction]"
-									}
-								}
 							}
 						}
 					}
@@ -461,11 +436,6 @@ lateralview = {
 									using = action_tooltip_inner_content
 								}
 	
-								blockoverride "tooltip_ui_action_block" {
-									TooltipUIActionBlockOld = {
-										visible = "[PdxGuiWidget.HasUIAction]"
-									}
-								}
 							}
 						}
 						hbox = {
@@ -506,11 +476,6 @@ lateralview = {
 									}	
 								}
 
-								blockoverride "tooltip_ui_action_block" {
-									TooltipUIActionBlockOld = {
-										visible = "[PdxGuiWidget.HasUIAction]"
-									}
-								}
 							}
 						}
 					}
@@ -542,11 +507,6 @@ lateralview = {
 									}	
 								}
 	
-								blockoverride "tooltip_ui_action_block" {
-									TooltipUIActionBlockOld = {
-										visible = "[PdxGuiWidget.HasUIAction]"
-									}
-								}
 							}
 						}
 					}
@@ -578,11 +538,6 @@ lateralview = {
 									}	
 								}
 	
-								blockoverride "tooltip_ui_action_block" {
-									TooltipUIActionBlockOld = {
-										visible = "[PdxGuiWidget.HasUIAction]"
-									}
-								}
 							}
 						}
 					}
@@ -613,11 +568,6 @@ lateralview = {
 									}	
 								}
 	
-								blockoverride "tooltip_ui_action_block" {
-									TooltipUIActionBlockOld = {
-										visible = "[PdxGuiWidget.HasUIAction]"
-									}
-								}
 							}
 						}
 					}
@@ -638,11 +588,8 @@ lateralview = {
 				}
 
 				blockoverride "scroll_list_layout" {
-					
 					vbox = {
-						margin = {2 0}
-						margin_top = 10
-						
+
 						# Papal Kingdom of God message
 						widget = {
 							visible = "[GetPlayer.HasVariable('fnr_is_papacy')]"
@@ -672,7 +619,6 @@ lateralview = {
 								}
 							}
 						}
-
 						vbox = {
 							spacing = 10
 							layoutpolicy_horizontal = expanding
@@ -760,21 +706,18 @@ lateralview = {
 															debug_text = "[NewCountryCandidate.GetFormableCountry.GetDebugText]"
 														}
 													}
-													datacontext = "[NewCountryCandidate.GetFormableCountry]"
-													using = formablecountry_info
 
-													TooltipScrolledConditionList = {
-														blockoverride "block_scrollarea" { maximumsize = { -1 200 }}
-														ontextcontextchanged = "[SetConditionListWithTitleFromTextContext(PdxGuiWidget.AccessSelf)]"
-														textcontext = "[NewCountryCandidate.GetFormableCountry.GetRequirements]"
+													TooltipContentSection = {
+														datacontext = "[NewCountryCandidate.GetFormableCountry]"
+														using = formablecountry_info
 													}
+
+													# TooltipScrolledRequirementsList = {
+													# 	blockoverride "block_scrollarea" { maximumsize = { -1 200 }}
+													# 	textcontext = "[NewCountryCandidate.GetFormableCountry.GetRequirements]"
+													# }
 												}
 										
-												blockoverride "tooltip_ui_action_block" {
-													TooltipUIActionBlockOld = {
-														visible = "[PdxGuiWidget.HasUIAction]"
-													}
-												}
 											}
 										}
 				

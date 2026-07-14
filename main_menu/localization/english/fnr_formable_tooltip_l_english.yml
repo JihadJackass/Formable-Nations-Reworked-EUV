@@ -37,6 +37,11 @@
         fnr_papal_hre_established_tt: "The Holy Roman Empire is dissolved. A new sacred confederation under papal authority is established."
         fnr_keep_old_hre_tt: "The Holy Roman Empire continues under our leadership."
 
+      # First Mexican Empire
+
+        MEXCO_fnr_formable_trigger_1_tt: "Either our [religion|e] is [ShowReligionName('nahuatl')] OR our [primary_culture|e] is [ShowCultureName('nahua_culture')], which will result in the First Nahua Empire instead of the First Mexican Empire."
+        MEXCO_fnr_formable_trigger_2_tt: "Either our [religion|e] is [ShowReligionName('catholic')] OR [ShowReligionName('lutheran')], OR our [primary_culture|e] is [ShowCultureGroupName('iberian_group')] OR [ShowCultureName('mexican')], which will result in the #color_yellow First Mexican Empire#!."
+
       # Eranshahr
 
         ERSHR_fnr_formable_trigger_1_tt: "If we are under #color_red 50%#! [religious_unity|e] and [ShowReligionName('zoroastrian')] makes up less than #color_red 50%#! of our population then the majority [ShowReligionGroupName('muslim')] [locations|e] in [ShowRegionName('persia_region')] will actively begin hostile actions towards us potentially firing the [ShowDisasterName('fnr_ERSHR_zoroastrian_reaction')]."

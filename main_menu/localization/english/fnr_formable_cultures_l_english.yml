@@ -4,7 +4,7 @@
 
     # Dual Monarchy
 
-      fnr_anglois: "Anglois"
+      fnr_anglois_culture: "Anglois"
 
     # Gallo-Roman Empire
 
@@ -17,3 +17,7 @@
     # Bactria
 
       fnr_greco_bactrian_culture: "Bactrian"
+
+    # First Mexican Empire
+
+      fnr_mexican_culture: "Mexican"

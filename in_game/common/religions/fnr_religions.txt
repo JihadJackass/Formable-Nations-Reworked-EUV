@@ -67,7 +67,7 @@
 				lutheran = kindred
 				calvinist = positive
 				anglican = positive
-				catholic = hostile      # Taiping rejected Catholic hierarchy
+				catholic = negative      # Taiping rejected Catholic hierarchy
 				#confucian = hostile     # Opposed traditional Chinese religion
 				#buddhist = hostile      # Iconoclasm against Buddhist temples
 				#taoist = hostile        # Opposed traditional practices
@@ -164,7 +164,7 @@
 			enable = 9999.1.1
 
 			definition_modifier = {
-				stability_cost = -0.1
+				#stability_cost = -0.1
 				global_max_literacy = 5
 
 				maximum_religious_influence = 400

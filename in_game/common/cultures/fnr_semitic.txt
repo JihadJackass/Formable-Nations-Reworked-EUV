@@ -1,16 +1,15 @@
-﻿# Assyrian Empire
+﻿#############################################
+# Formable Nations: Reworked Custom Culture #
+#############################################
+
+###################
+# Semitic Culture #
+###################
 
 fnr_semitic_culture = {
 	language = angevin_dialect # TODO; fix
-	
 	color = rgb { 99 77 68 }
-	
 	tags = { middle_east_gfx }
-
-	opinions = {
-
-	}
-	
 	culture_groups = {
 		iranian_group
 	}

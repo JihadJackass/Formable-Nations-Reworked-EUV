@@ -33,7 +33,7 @@
 			clergy_estate_max_tax = -0.05
 			subject_loyalty = -0.01
 			subject_opinions = -10
-			stability_cost = 0.0002
+			#stability_cost = 0.0002
 		}
 
 		# Court Demanded Tolerance - called from flavor_ERSHR.5
@@ -136,7 +136,7 @@
 			game_data = {
 				category = country
 			}
-			stability_cost = 0.025
+			#stability_cost = 0.025
 			stability_investment = 0.05
 			global_pop_promotion_speed_modifier = 0.02
 			
