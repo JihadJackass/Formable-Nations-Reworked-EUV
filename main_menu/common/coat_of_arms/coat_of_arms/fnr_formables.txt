@@ -4,6 +4,84 @@
 
 # TODO: Alternatives for different government types and use less textured flags (only when needed such as sweden-norway with too many colors)
 
+# test flag (used for development of flags at the moment)
+	fnr_test_flag = {
+		pattern = "pattern_solid.dds"
+		color1 = hsv360     {    216    75    44    }
+		color2 = "yellow_light"
+		color3 = "white"
+		color4 = "red"
+		color5 = hsv360     {    358    83    51    }
+
+		colored_emblem = {
+			texture = "ce_saltire.dds"
+			color1 = color3
+			color2 = color3
+		}
+		colored_emblem = {
+			texture = "ce_cross_of_burgundy.dds"
+			color3 = color5
+		}
+		colored_emblem = {
+			texture = "ce_cross_overall_plain.dds"
+			color1 = color3
+			color2 = color3
+			instance = { position = { 0.5 0.5 } scale = { 1.5 1.5 } }
+		}
+		colored_emblem = {
+			texture = "ce_cross_overall_plain.dds"
+			color1 = color4
+			color2 = color4
+		}
+		colored_emblem = {
+			texture = "ce_shield_frame_thin.dds"
+			color1 = color1
+			color2 = color3
+			instance = { position = { 0.5 0.51 } scale = { 0.55 0.55 } }
+		}
+		colored_emblem = {
+			texture = "ce_harp_ireland.dds"
+			color1 = color2
+			color2 = color2
+			instance = { position = { 0.5 0.5 } scale = { 0.4 0.4 } }
+		}
+	}
+
+# Jorvik
+
+fnr_norse_jorvik = {
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "black"
+
+	colored_emblem = {
+		texture = "ce_norse_raven_flag.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.495 } scale = { 0.85 0.85 } }					
+	}
+	colored_emblem = {
+		texture = "ce_border_thin.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+
+# Danelaw
+
+fnr_norse_danelaw = {
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "black"
+
+	colored_emblem = {
+		texture = "ce_norse_raven_flag.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.495 } scale = { 1.20 1.20 } }					
+	}
+}
+	
 # Eranshahr
 	KOMTA = {
 		textured_emblem = {
@@ -152,7 +230,7 @@
 	}
 
 ### Rhineland / Rhenania / United Duchies / United Counties / United Republics ###
-# Coded by Tawani
+# Coded by Tawani (208279348556333057)
 
 RHLND_default = {
 	pattern = "pattern_solid.dds"
@@ -271,6 +349,79 @@ RHLND_monarchy_late = { # Rhenish Coat of Arms
 		color2 = color2
 		color3 = color1
 	}	
+}
+
+### Ukrainian Hetmanate ###
+# Coded by Tawani (208279348556333057)
+
+### Hetmanate ###
+
+HET_ce_hetmanate = {
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	
+	colored_emblem = {
+		texture = "ce_border.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.5 } scale = { 1.1 1.2 } }	
+	}	
+	textured_emblem = {
+		texture = "te_coa_hetmanate.dds"
+		instance = { position = { 0.45 0.5 } scale = { 0.85 0.85 } }				
+	}		
+}
+
+HET_ce_zaporozhia = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+	color3 = "white"
+	
+	colored_emblem = {
+		texture = "ce_cross_patty.dds"
+		color1 = color3
+		color2 = color3	
+		instance = { position = { 0.5 0.5 } scale = { 0.925 0.925 } }	
+	}	
+	colored_emblem = {
+		texture = "ce_crescent_increscent.dds"
+		color1 = color2
+		color2 = color2	
+		instance = { position = { 0.85 0.2 } scale = { 0.425 0.425 } }		
+		instance = { position = { 0.15 0.8 } scale = { 0.425 0.425 } rotation = 180 }		
+	}	
+	colored_emblem = {
+		texture = "ce_star_06_mena.dds"
+		color1 = color2
+		color2 = color2	
+		instance = { position = { 0.15 0.215 } scale = { 0.35 0.35 } }		
+	}	
+	colored_emblem = {
+		texture = "ce_sun_face_suryavamsa.dds"
+		color1 = color2
+		color3 = color1
+		instance = { position = { 0.835 0.78 } scale = { 0.4 0.4 } }		
+	}
+}
+
+HET_ce_cossackia = {
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "red"
+
+	colored_emblem = {
+		texture = "ce_tricolor_horizontal.dds"
+		color1 = color1
+		color2 = color2
+		color3 = color3
+	}
+	textured_emblem = {
+		texture = "te_coa_hetmanate.dds"
+		instance = { position = { 0.5 0.5 } scale = { 0.935 0.935 } }				
+	}
 }
 
 # Baden-Wurttemberg
@@ -993,8 +1144,33 @@ RHLND_monarchy_late = { # Rhenish Coat of Arms
 	}
 # Angevin Empire
 	AGEVN = {
-		textured_emblem = {
-			texture = "te_angevin.dds"
+		#sub = {
+		#	parent = "sub_england_three_lions" # Q1
+		#	#instance = { scale = { 0.5 0.5 } offset = { 0.0 0.0 } }
+		#}	
+		pattern = "pattern_quarterly_flag.dds"
+		color1 = "white"
+		color2 = "red"
+
+		sub = {
+			parent = "sub_FRA_fleury_variant" 
+			instance = { scale = { 0.5 0.5 } offset = { 0.0 0.0 } }
+		}
+		sub = {
+			parent = "sub_FRA_fleury_variant" 
+			instance = { scale = { 0.5 0.5 } offset = { 0.5 0.5 } }
+		}		
+		sub = {
+			parent = "sub_div_quarterly_mid"
+			instance = { scale = { 1.0 1.0 } offset = { 0.0 0.0 } }
+		}
+		sub = {
+			parent = "sub_england_three_lions" 
+			instance = { scale = { 0.5 0.5 } offset = { 0.5 0.0 } }
+		}
+		sub = {
+			parent = "sub_england_three_lions" 
+			instance = { scale = { 0.5 0.5 } offset = { 0.0 0.5 } }
 		}
 	}
 # Langobards
@@ -1866,12 +2042,6 @@ RHLND_monarchy_late = { # Rhenish Coat of Arms
 			instance = { position = { 0.50 0.50 } }
 		}
 	}
-# Anglo-Dutch Union
-	ANDUH = {
-		textured_emblem = {
-			texture = "te_agu.dds"
-		}
-	}
 # Netherlands
 	NED_UP_FLAG = {
 		textured_emblem = {
@@ -1883,6 +2053,361 @@ RHLND_monarchy_late = { # Rhenish Coat of Arms
 			texture = "NED_DR_FLAG.dds"
 		}		
 	}
+# Anglo-Dutch Union
+	ANDUH = { # Old Flag, Garbage. Unused, Kept for historical purposes.
+		textured_emblem = { texture = "te_agu.dds" }
+	}
+	############
+	# Monarchy #
+	############
+	# Anglo-Dutch Kingdom | Early-game Monarchy variant | Royal England + Holland Lion
+	ANDUH_ce_FNR_anglo_dutch_royal_england_royal_holland = {
+		pattern = "pattern_quarterly_flag.dds"
+		color1 = "white"
+		color2 = "red"
+
+		sub = {
+			parent = "sub_england_three_lions" # Q1
+			instance = { scale = { 0.5 0.5 } offset = { 0.0 0.0 } }
+		}	
+		sub = {
+			parent = "NED_lion_holland" # Q2
+			instance = { scale = { 0.5 0.5 } offset = { 0.5 0.0 } }
+		}	
+		sub = {
+			parent = "NED_lion_holland" # Q3
+			instance = { scale = { 0.5 0.5 } offset = { 0.0 0.5 } }
+		}		
+		sub = {
+			parent = "sub_england_three_lions" # Q4
+			instance = { scale = { 0.5 0.5 } offset = { 0.5 0.5 } }
+		}		
+		sub = {
+			parent = "sub_div_quarterly_mid"
+			instance = { scale = { 1.0 1.0 } offset = { 0.0 0.0 } }
+		}
+	}
+	# Anglo-Dutch Kingdom | Mid-game Monarchy variant | England+France + Holland Lion | Unique to England
+	ANDUH_ce_FNR_anglo_dutch_midgame_gbr_holland = {
+		pattern = "pattern_quarterly_flag.dds"
+		color1 = "white"
+		color2 = "red"
+
+		sub = {
+			parent = "NED_lion_holland" # Q2
+			instance = { scale = { 0.5 0.5 } offset = { 0.5 0.0 } }
+		}	
+		sub = {
+			parent = "NED_lion_holland" # Q3
+			instance = { scale = { 0.5 0.5 } offset = { 0.0 0.5 } }
+		}			
+		sub = {
+			parent = "sub_div_quarterly_mid"
+			instance = { scale = { 1.0 1.0 } offset = { 0.0 0.0 } }
+		}
+		sub = {
+			parent = "sub_FRA_fleury_variant" 
+			instance = { scale = { 0.25 0.25 } offset = { 0.0 0.0 } }
+			instance = { scale = { 0.25 0.25 } offset = { 0.25 0.25 } }
+			instance = { scale = { 0.25 0.25 } offset = { 0.5 0.5 } }
+			instance = { scale = { 0.25 0.25 } offset = { 0.75 0.75 } }
+		}
+		sub = {
+			parent = "sub_england_three_lions" 
+			instance = { scale = { 0.25 0.25 } offset = { 0.25 0.0 } }
+			instance = { scale = { 0.25 0.25 } offset = { 0.0 0.25 } }
+			instance = { scale = { 0.25 0.25 } offset = { 0.75 0.5 } }
+			instance = { scale = { 0.25 0.25 } offset = { 0.5 0.75 } }
+		}
+	}
+	# Anglo-Batavian Union | Mid-game Monarchy variant | England + Batavian lion 16th/17th c.| Unique to Dutch Republic
+	ANDUH_ce_FNR_anglo_dutch_royal_england_batavian_lion = {
+		pattern = "pattern_quarterly_flag.dds"
+		color1 = "white"
+		color2 = "red"
+
+		sub = {
+			parent = "sub_ENG_cross" # Q1
+			instance = { scale = { 0.5 0.5 } offset = { 0.0 0.0 } }
+		}	
+		sub = {
+			parent = "NED_lion_holland" # Q2
+			instance = { scale = { 0.5 0.5 } offset = { 0.5 0.0 } }
+		}	
+		sub = {
+			parent = "NED_lion_holland" # Q3
+			instance = { scale = { 0.5 0.5 } offset = { 0.0 0.5 } }
+		}		
+		sub = {
+			parent = "sub_ENG_cross" # Q4
+			instance = { scale = { 0.5 0.5 } offset = { 0.5 0.5 } }
+		}		
+		sub = {
+			parent = "sub_div_quarterly_mid"
+			instance = { scale = { 1.0 1.0 } offset = { 0.0 0.0 } }
+		}
+	}
+	# Angevin-Batavian Union | Mid-game Monarchy variant | England+France + Modern Tincture | Unique to England
+	ANDUH_ce_FNR_anglo_dutch_angevin_lion = {
+		pattern = "pattern_quarterly_flag.dds"
+		color1 = "white"
+		color2 = "red"
+
+		sub = {
+			parent = "sub_ENG_cross" # Q1
+			instance = { scale = { 0.5 0.5 } offset = { 0.0 0.0 } }
+		}	
+		sub = {
+			parent = "NED_lion" # Q2
+			instance = { scale = { 0.5 0.5 } offset = { 0.5 0.0 } }
+		}	
+		sub = {
+			parent = "NED_lion" # Q3
+			instance = { scale = { 0.5 0.5 } offset = { 0.0 0.5 } }
+		}		
+		sub = {
+			parent = "sub_ENG_cross" # Q4
+			instance = { scale = { 0.5 0.5 } offset = { 0.5 0.5 } }
+		}		
+		sub = {
+			parent = "sub_div_quarterly_mid"
+			instance = { scale = { 1.0 1.0 } offset = { 0.0 0.0 } }
+		}
+		sub = {
+			parent = "sub_FRA_fleury_variant" 
+			instance = { scale = { 0.25 0.25 } offset = { 0.0 0.0 } }
+			instance = { scale = { 0.25 0.25 } offset = { 0.25 0.25 } }
+			instance = { scale = { 0.25 0.25 } offset = { 0.5 0.5 } }
+			instance = { scale = { 0.25 0.25 } offset = { 0.75 0.75 } }
+		}
+		sub = {
+			parent = "sub_england_three_lions" 
+			instance = { scale = { 0.25 0.25 } offset = { 0.25 0.0 } }
+			instance = { scale = { 0.25 0.25 } offset = { 0.0 0.25 } }
+			instance = { scale = { 0.25 0.25 } offset = { 0.75 0.5 } }
+			instance = { scale = { 0.25 0.25 } offset = { 0.5 0.75 } }
+		}
+	}
+	# United Kingdom of Great Britain & The Netherlands | Late-game Monarchy variant | Modern UK and Netherlands flag
+	ANDUH_ce_FNR_anglo_dutch_gb_netherlands = {
+		pattern = "pattern_quarterly_flag.dds"
+		color1 = "white"
+		color2 = "red"
+
+		sub = {
+			parent = "sub_GBR_uk" # Q1
+			instance = { scale = { 0.5 0.5 } offset = { 0.0 0.0 } }
+		}	
+		sub = {
+			parent = "sub_netherlands_modern_flag" # Q2
+			instance = { scale = { 0.5 0.5 } offset = { 0.5 0.0 } }
+		}	
+		sub = {
+			parent = "sub_netherlands_modern_flag" # Q3
+			instance = { scale = { 0.5 0.5 } offset = { 0.0 0.5 } }
+		}		
+		sub = {
+			parent = "sub_GBR_uk" # Q4
+			instance = { scale = { 0.5 0.5 } offset = { 0.5 0.5 } }
+		}		
+		sub = {
+			parent = "sub_div_quarterly_mid"
+			instance = { scale = { 1.0 1.0 } offset = { 0.0 0.0 } }
+		}
+	}
+	############
+	# Republic #
+	############	
+	# Anglo-Dutch Kingdom | Early-game Republic variant | England + Republican Holland Lion
+	ANDUH_ce_FNR_anglo_dutch_royal_england_republican_holland = {
+		pattern = "pattern_quarterly_flag.dds"
+		color1 = "white"
+		color2 = "red"
+
+		sub = {
+			parent = "sub_england_three_lions" # Q1
+			instance = { scale = { 0.5 0.5 } offset = { 0.0 0.0 } }
+		}	
+		sub = {
+			parent = "NED_lion" # Q2
+			instance = { scale = { 0.5 0.5 } offset = { 0.5 0.0 } }
+		}	
+		sub = {
+			parent = "NED_lion" # Q3
+			instance = { scale = { 0.5 0.5 } offset = { 0.0 0.5 } }
+		}		
+		sub = {
+			parent = "sub_england_three_lions" # Q4
+			instance = { scale = { 0.5 0.5 } offset = { 0.5 0.5 } }
+		}		
+		sub = {
+			parent = "sub_div_quarterly_mid"
+			instance = { scale = { 1.0 1.0 } offset = { 0.0 0.0 } }
+		}
+	}
+	# Anglo-Dutch Kingdom | Mid-game Republic variant | England+France + United Provinces
+	ANDUH_ce_FNR_anglo_dutch_midgame_gbr_united_provinces = {
+		pattern = "pattern_quarterly_flag.dds"
+		color1 = "white"
+		color2 = "red"
+
+		sub = {
+			parent = "NED_seven_stripes_republic" # Q2
+			instance = { scale = { 0.5 0.5 } offset = { 0.5 0.0 } }
+		}	
+		sub = {
+			parent = "NED_seven_stripes_republic" # Q3
+			instance = { scale = { 0.5 0.5 } offset = { 0.0 0.5 } }
+		}			
+		sub = {
+			parent = "sub_div_quarterly_mid"
+			instance = { scale = { 1.0 1.0 } offset = { 0.0 0.0 } }
+		}
+		sub = {
+			parent = "sub_FRA_fleury_variant" 
+			instance = { scale = { 0.25 0.25 } offset = { 0.0 0.0 } }
+			instance = { scale = { 0.25 0.25 } offset = { 0.25 0.25 } }
+			instance = { scale = { 0.25 0.25 } offset = { 0.5 0.5 } }
+			instance = { scale = { 0.25 0.25 } offset = { 0.75 0.75 } }
+		}
+		sub = {
+			parent = "sub_england_three_lions" 
+			instance = { scale = { 0.25 0.25 } offset = { 0.25 0.0 } }
+			instance = { scale = { 0.25 0.25 } offset = { 0.0 0.25 } }
+			instance = { scale = { 0.25 0.25 } offset = { 0.75 0.5 } }
+			instance = { scale = { 0.25 0.25 } offset = { 0.5 0.75 } }
+		}
+		sub = { # quartering
+			parent = "sub_div_quarterly_mid" 
+		}	
+	}
+	# Commonwealth of England and the Dutch Republic | Mid-game Republic variant | England + Prince's Orange | Unique to Dutch Republic
+	ANDUH_ce_FNR_anglo_dutch_commonwealth_dutch_republic = {
+		pattern = "pattern_quarterly_flag.dds"
+		color1 = "white"
+		color2 = "red"
+
+		sub = {
+			parent = "sub_english_commonwealth_flag" # Q1
+			instance = { scale = { 0.5 0.5 } offset = { 0.0 0.0 } }
+		}	
+		sub = {
+			parent = "sub_netherlands_republic_flag" # Q2
+			instance = { scale = { 0.5 0.5 } offset = { 0.5 0.0 } }
+		}	
+		sub = {
+			parent = "sub_netherlands_republic_flag" # Q3
+			instance = { scale = { 0.5 0.5 } offset = { 0.0 0.5 } }
+		}		
+		sub = {
+			parent = "sub_english_commonwealth_flag" # Q4
+			instance = { scale = { 0.5 0.5 } offset = { 0.5 0.5 } }
+		}		
+		sub = {
+			parent = "sub_div_quarterly_mid"
+			instance = { scale = { 1.0 1.0 } offset = { 0.0 0.0 } }
+		}
+	}
+	# Commonwealth of England and the United Provinces | Late-game Republic variant | Commonwealth and United Provinces
+	ANDUH_ce_FNR_anglo_dutch_commonwealth_united_provinces = {
+		pattern = "pattern_quarterly_flag.dds"
+		color1 = "white"
+		color2 = "red"
+
+		sub = {
+			parent = "sub_english_commonwealth_flag" # Q1
+			instance = { scale = { 0.5 0.5 } offset = { 0.0 0.0 } }
+		}	
+		sub = {
+			parent = "NED_seven_stripes" # Q2
+			instance = { scale = { 0.5 0.5 } offset = { 0.5 0.0 } }
+		}	
+		sub = {
+			parent = "NED_seven_stripes" # Q3
+			instance = { scale = { 0.5 0.5 } offset = { 0.0 0.5 } }
+		}		
+		sub = {
+			parent = "sub_english_commonwealth_flag" # Q4
+			instance = { scale = { 0.5 0.5 } offset = { 0.5 0.5 } }
+		}		
+		sub = {
+			parent = "sub_div_quarterly_mid"
+			instance = { scale = { 1.0 1.0 } offset = { 0.0 0.0 } }
+		}
+	}
+	################
+	# Unique Flags #
+	################
+	# Carlist Netherlands and English Cross - Requires Spanish to be present in Low Countries Region
+	ANDUH_ce_FNR_anglo_dutch_carlist_dutch_english_cross = {
+		pattern = "pattern_quarterly_flag.dds"
+		color1 = "white"
+		color2 = "red"
+
+		sub = {
+			parent = "sub_ENG_cross" # Q1
+			instance = { scale = { 0.5 0.5 } offset = { 0.0 0.0 } }
+		}	
+		sub = {
+			parent = "SPA" # Q2
+			instance = { scale = { 0.5 0.5 } offset = { 0.5 0.0 } }
+		}	
+		sub = {
+			parent = "SPA" # Q3
+			instance = { scale = { 0.5 0.5 } offset = { 0.0 0.5 } }
+		}		
+		sub = {
+			parent = "sub_ENG_cross" # Q4
+			instance = { scale = { 0.5 0.5 } offset = { 0.5 0.5 } }
+		}		
+		sub = {
+			parent = "sub_div_quarterly_mid"
+			instance = { scale = { 1.0 1.0 } offset = { 0.0 0.0 } }
+		}
+	}
+	# Irish-Dominant Carlist Anglo-Dutch Union - Requires Dublin to be the capital, and to have had been Ireland upon Formation
+	ANDUH_ce_FNR_anglo_dutch_carlist_irish_union = {
+		pattern = "pattern_solid.dds"
+		color1 = hsv360     {    216    75    44    }
+		color2 = "yellow_light"
+		color3 = "white"
+		color4 = "red"
+		color5 = hsv360     {    358    83    51    }
+
+		colored_emblem = {
+			texture = "ce_saltire.dds"
+			color1 = color3
+			color2 = color3
+		}
+		colored_emblem = {
+			texture = "ce_cross_of_burgundy.dds"
+			color3 = color5
+		}
+		colored_emblem = {
+			texture = "ce_cross_overall_plain.dds"
+			color1 = color3
+			color2 = color3
+			instance = { position = { 0.5 0.5 } scale = { 1.5 1.5 } }
+		}
+		colored_emblem = {
+			texture = "ce_cross_overall_plain.dds"
+			color1 = color4
+			color2 = color4
+		}
+		colored_emblem = {
+			texture = "ce_shield_frame_thin.dds"
+			color1 = color1
+			color2 = color3
+			instance = { position = { 0.5 0.51 } scale = { 0.55 0.55 } }
+		}
+		colored_emblem = {
+			texture = "ce_harp_ireland.dds"
+			color1 = color2
+			color2 = color2
+			instance = { position = { 0.5 0.5 } scale = { 0.4 0.4 } }
+		}
+	}
+	# Union of the Two Companies - EIC + VOC flavor (easter egg) .. TODO
 # Kingdom of Aquitaine
  	AQUIT = {
 		pattern = "pattern_quarterly_flag.dds"

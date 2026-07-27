@@ -1,0 +1,105 @@
+﻿
+# Dutch Republican unique succession law
+#
+# This law is specifically designed to be a combination of a Monarchy with Republican traits.
+#
+#
+fnr_dutch_republican_succession = {
+	use_election = yes
+	all_in_dynasty = yes
+	ignore_ruler = no
+	traverse_family_tree = yes
+	allow_extended_family = yes
+    include_ruler_siblings = yes
+    through_female = yes
+    allow_female = yes
+    allow_children = yes
+    ignore_ruler = yes
+	
+	potential = {
+		AND = {
+			government_type = government_type:monarchy
+			has_reform = government_reform:fnr_dutch_republican_succession
+		}
+	}
+	locked = { # you cannot swap to another heir selection if this is true
+		has_reform = government_reform:fnr_dutch_republican_succession
+	}
+	allowed = {}
+	allowed_estates = { nobles_estate }
+	heir_is_allowed = {
+	}
+	traverse_family_tree = yes
+	depth_first = yes
+	sibling_score = {
+		if = {
+			limit = {
+				exists = root
+			}
+			#bonus for males
+			add = {
+				desc = "HEIR_SELECTION_MALE_DESC"
+				if = {
+					limit = {
+						OR = {
+							not = { exists = root }
+							is_female = no
+						}
+					}
+					value = 200
+				}
+			}
+			add = {
+				desc = "HEIR_SELECTION_LEGALLY_MALE_DESC"
+				if = {
+					limit = {
+						is_a_praefecta = yes
+					}
+					value = 100
+				}
+			}
+			# Bonus for score
+            add = {
+                desc = "HEIR_SELECTION_ADMINISTRATIVE_ABILITY_DESC"
+                value = 2.5
+            }
+            add = {
+                desc = "HEIR_SELECTION_DIPLOMATIC_ABILITY_DESC"
+                value = 2.5
+            }
+            add = {
+                desc = "HEIR_SELECTION_MILITARY_ABILITY_DESC"
+                value = 2.5
+            }
+
+			add = {
+				desc = "HEIR_SELECTION_OLDER_HEIR_DESC"
+				value = character_age
+			}
+			add = {
+				desc = "HEIR_SELECTION_IS_UNSUITED_TO_RULE_DESC"
+				if = { limit = { modifier:blocked_from_being_ruler = yes } value = -1000 }
+			}
+		}
+		else = {
+			#description
+			add = {
+				desc = "HEIR_SELECTION_MALE_DESC"
+				value = 100
+			}
+			add = {
+				desc = "HEIR_SELECTION_LEGALLY_MALE_DESC"
+				value = 100
+			}
+			add = {
+				desc = "HEIR_SELECTION_OLDER_HEIR_DESC"
+				value = 1
+			}
+			add = {
+				desc = "HEIR_SELECTION_IS_UNSUITED_TO_RULE_DESC"
+				value = -1000
+			}
+		}
+	}
+}
+

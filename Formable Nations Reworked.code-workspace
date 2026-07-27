@@ -5,8 +5,8 @@
 			"path": "."
 		},
 		{
-			"name": "Europa Universalis V",
-			"path": "D:/SteamLibrary/steamapps/common/Europa Universalis V"
+			"name": "game",
+			"path": "../../../../../../../Steam/steamapps/common/Europa Universalis V/game"
 		},
 		{
 			"name": "logs",

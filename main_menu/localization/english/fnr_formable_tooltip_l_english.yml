@@ -70,7 +70,12 @@
 
       # Anglo-Dutch Union
 
-        ANDUH_formable_trigger_1_tt: "The [GetCountry('ENG').GetAdjective] Throne will become ruled by a member of the [GetDynasty('orange_dynasty').GetName]-Nassau dynasty which will also establish the #color_yellow Dutch Republic#! as a union member under a relative of the [GetDynasty('orange_dynasty').GetName]-Nassau dynasty under a #color_yellow Stadtholder#!."
+        ANDUH_formable_trigger_1_tt: "The #Y Flag#! and #Y Country Name#! of this [formable_country|e] is heavily influenced by the specific [government_type|e] of the forming country as well as the current [age|e]."
+        ANDUH_formable_trigger_2_tt: "The Kingdom of England and The Kingdom of the Netherlands will enter into a unique Hereditary Union under the [GetDynasty('orange_dynasty').GetName] dynasty."
+        ANDUH_formable_trigger_path_1_tt: "[fnr_formable_organizer_ANDUH_republic_early|e]" # Early Republic - unused
+        ANDUH_formable_trigger_path_1_tt_display: "[fnr_formable_organizer_ANDUH_republic_early|e]" # Early Republic - unused
+        ANDUH_formable_trigger_path_2_tt: "[fnr_formable_organizer_ANDUH_republic_modern|e]" # Modern Republic - unused
+
 
       # The Horde
 
@@ -181,6 +186,7 @@
       # Netherlands
 
         NED_f_tt2: "If #Y $NED$ #!is formed with #Y Decentralization #!as the dominant value, then we will be known as the #Y United Provinces #!and will only be given one opportunity afterwards to establish the #Y Dutch Republic #!as our offical name otherwise we will remain as the #Y United Provinces#!\nThe opposite applies if we form the Netherlands with #Y Centralization #!as the dominant value in that we will be known as the #Y Dutch Republic#! and will #R NOT#! be given an opportunity to establish the #Y United Provinces#!.\nIf we have a balanced centralization societal value of between #R -5#! and #G +5#! then we will remain as the #Y Netherlands#!."
+        NED_f_tt3: "#color_yellow Based on our current Societal Level:#!"
 
     ###################
     # GUI localiation #

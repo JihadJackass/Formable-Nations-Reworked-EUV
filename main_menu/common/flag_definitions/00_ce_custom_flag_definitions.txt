@@ -1,65 +1,149 @@
-﻿### Rhineland / Rhenania / United Duchies / United Counties / United Republics ###
-# Coded by Tawani @Tawani
+﻿# Formable Nations: Reworked Custom Flag Definitions
 
-RHLND_alts = { # Rhineland / Rhenania / United Duchies / United Counties / United Republics
+	### Rhineland / Rhenania / United Duchies / United Counties / United Republics ###
+	# Coded by Tawani @Tawani
 
-	# Rhineland
-	flag_definition = {
-		coa = RHLND_default
-		priority = 5
-	}
-	# Monarchy
-	flag_definition = {
-		coa = RHLND_monarchy
-		priority = 10
-		trigger = {
-			coa_def_monarchy_trigger = yes
-		}
-	}
-	# Republic
-	flag_definition = {
-		coa = RHLND_republic
-		priority = 10
-		trigger = {
-			coa_def_republic_trigger = yes
-		}
-	}
-	# Late Republican Flag
-	flag_definition = {
-		coa = RHLND_republic_late
-		priority = 10
-		trigger = {
-			coa_def_reformation_age_4_trigger = yes
-			coa_def_republic_trigger = yes
-		}
-	}
-	# Federal Republic
-	flag_definition = {
-		coa = RHLND_republic_federal
-		priority = 11
-		trigger = {
-			coa_def_federal_state_trigger = yes
-			coa_def_republic_trigger = yes
-		}
-	}
-	# Revolutionary Republic
-	flag_definition = {
-		coa = RHLND_revolutionary_republic
-		priority = 15
-		trigger = {
-			coa_def_revolutionary_republic_trigger = yes
-		}
-	}
-	# Late Monarchy
-	flag_definition = {
-		coa = RHLND_monarchy_late
-		priority = 15
-		trigger = {
-			coa_def_monarchy_trigger = yes
-			OR = {
-				coa_def_absolutism_age_5_trigger = yes
-				coa_def_kingdom_or_higher_trigger = yes
+		# Rhineland
+		RHLND_alts = { # Rhineland / Rhenania / United Duchies / United Counties / United Republics
+
+			# Rhineland
+			flag_definition = {
+				coa = RHLND_default
+				priority = 5
+			}
+			# Monarchy
+			flag_definition = {
+				coa = RHLND_monarchy
+				priority = 10
+				trigger = {
+					coa_def_monarchy_trigger = yes
+				}
+			}
+			# Republic
+			flag_definition = {
+				coa = RHLND_republic
+				priority = 10
+				trigger = {
+					coa_def_republic_trigger = yes
+				}
+			}
+			# Late Republican Flag
+			flag_definition = {
+				coa = RHLND_republic_late
+				priority = 10
+				trigger = {
+					coa_def_reformation_age_4_trigger = yes
+					coa_def_republic_trigger = yes
+				}
+			}
+			# Federal Republic
+			flag_definition = {
+				coa = RHLND_republic_federal
+				priority = 11
+				trigger = {
+					coa_def_federal_state_trigger = yes
+					coa_def_republic_trigger = yes
+				}
+			}
+			# Revolutionary Republic
+			flag_definition = {
+				coa = RHLND_revolutionary_republic
+				priority = 15
+				trigger = {
+					coa_def_revolutionary_republic_trigger = yes
+				}
+			}
+			# Late Monarchy
+			flag_definition = {
+				coa = RHLND_monarchy_late
+				priority = 15
+				trigger = {
+					coa_def_monarchy_trigger = yes
+					OR = {
+						coa_def_absolutism_age_5_trigger = yes
+						coa_def_kingdom_or_higher_trigger = yes
+					}
+				}
 			}
 		}
-	}
-}
+
+	# Hetmanate / Zaporozhia / Cossackia
+
+		# Hetmanate
+		HET_ce = {
+			flag_definition = {
+				coa = HET_ce_hetmanate
+				priority = 5
+			}
+			flag_definition = {
+				coa = HET_ce_zaporozhia
+				priority = 5
+				trigger = {
+					coa_def_monarchy_trigger = yes
+				}
+			}
+			flag_definition = {
+				coa = HET_ce_cossackia
+				priority = 5
+				trigger = {
+					coa_def_republic_trigger = yes
+				}		
+			}
+		}
+
+	# Anglo-Dutch Union
+		ANDUH_ce = {
+			############
+			# Monarchy #
+			############
+			# Anglo-Dutch Kingdom (Early-game monarchy variant, royal england+holland lion)
+			flag_definition = {
+				coa = ANDUH_ce_FNR_anglo_dutch_royal_england_royal_holland
+				priority = 5
+			}
+			# Anglo-Dutch Kingdom (Mid-game monarchy variant, Mig-game England+France + Holland lion)
+			flag_definition = {
+				coa = ANDUH_ce_FNR_anglo_dutch_midgame_gbr_holland
+				priority = 10
+				trigger = {
+					has_or_had_tag = ENG
+					coa_def_monarchy_trigger = yes
+					coa_def_renaissance_age_2_trigger = yes
+				}
+			}
+			# Anglo-Dutch Kingdom (Mid-game monarchy variant, Mig-game England+France + Holland lion)
+			flag_definition = {
+				coa = ANDUH_ce_FNR_anglo_dutch_england_cross_orange
+				priority = 10
+				trigger = {
+					has_or_had_tag = NED
+					coa_def_monarchy_trigger = yes
+					coa_def_renaissance_age_2_trigger = yes
+				}
+			}
+			# United Kingdom of Great Britain & The Netherlands (Late-game Monarchy Modern variant)
+			flag_definition = {
+				coa = ANDUH_ce_FNR_anglo_dutch_gb_netherlands
+				priority = 10
+				trigger = {
+					coa_def_monarchy_trigger = yes
+					OR = {
+						coa_def_discovery_age_3_trigger = yes
+						coa_def_reformation_age_4_trigger = yes
+					}
+				}
+			############
+			# Republic #
+			############		
+
+			#############
+			# Theocracy #
+			#############
+
+			##########
+			# Tribal #
+			##########
+			}
+		}
+
+

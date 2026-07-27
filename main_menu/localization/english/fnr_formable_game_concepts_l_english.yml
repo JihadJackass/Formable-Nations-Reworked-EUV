@@ -1,0 +1,15 @@
+﻿l_english:
+
+  # GAME CONCEPTS LOCALIZATION
+
+    # Anglo-Dutch Formable Explanation Dividers
+      
+      game_concept_fnr_formable_organizer_ANDUH_republic_early: "Early/Mid-Game Republican Variant:"  
+      game_concept_fnr_formable_organizer_ANDUH_republic_early_desc: "This group of triggers is specific to the Modern variant of the Anglo-Dutch Union.\n\n- #color_concept Country Name:#! Commmonwealth of England and United Provinces\n- #color_concept Dominant Culture:#! Anglo-Dutch."  
+
+      game_concept_fnr_formable_organizer_ANDUH_republic_modern: "Modern Variant:"  
+      game_concept_fnr_formable_organizer_ANDUH_republic_modern_desc: "This group of triggers is specific to the Modern variant of the Anglo-Dutch Union.\n\n- #color_concept Country Name:#! United Kingdom of Great Britain and Netherlands\n- #color_concept Dominant Culture:#! Anglo-Dutch."  
+  
+
+
+

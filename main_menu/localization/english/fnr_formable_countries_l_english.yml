@@ -953,7 +953,19 @@
     ANDUH: "Anglo-Dutch Union"
     ANDUH_f: "Anglo-Dutch Union"
     ANDUH_ADJ: "Anglo-Dutch"
-    ANDUH_f_desc: "The Anglo-Dutch Union was a personal union between Great Britain and the Netherlands, lasting from 1692 to 1712 under monarch William III. It was a period where the same king ruled both countries, leading to a powerful maritime alliance and shared colonial empires, with London and The Hague serving as de facto capitals. This union ended after William III's death in 1712, when the two entities were separated, though the Palatinate and the Netherlands remained in a separate personal union until 1744"
+    ANDUH_f_desc: "The English and the Dutch have long been rivals and partners in equal measure, bound together by the narrow seas that separate them. Their fleets have fought each other for control of trade routes as often as they have sailed together against common enemies, and their merchants compete in every port from the Baltic to the Indies. A union of the two nations, whether forged by a shared crown, a compact of republics, or outright conquest, would join the wealth of Amsterdam with the power of London and create the greatest maritime state in Europe. Whoever leads such a union, and from which side of the sea, will decide whether it stands as a partnership of equals or the dominion of one people over the other."
+
+    # Jorvik
+    JORVK: "Jórvík"
+    JORVK_f: "Jórvík"
+    JORVK_ADJ: "Jórvík"
+    JORVK_f_desc: "In the days of the great heathen armies, Norse kings ruled the north of England from the city the Saxons called Eoforwic and the Danes renamed Jórvík. Though their kingdom fell to Wessex, the north never forgot its Scandinavian blood, and the customs, names, and speech of the settlers endure in every dale and market town. A ruler who can raise the old kingdom anew would command the richest city of the north and a people long accustomed to looking across the sea rather than south to London for their masters."
+
+    # Danelaw
+    DANEL: "Danelaw"
+    DANEL_f: "Danelaw"
+    DANEL_ADJ: "Danish"
+    DANEL_f_desc: "When Alfred and Guthrum divided England between them, the lands north and east of Watling Street passed under the law of the Danes, and the name endured long after the armies that won it were gone. Five boroughs, a hundred villages with Norse names, and generations of mixed blood mark where the old boundary ran. To restore the Danelaw is to claim that inheritance in full, uniting the lands once settled from across the North Sea into a realm where Danish custom stands above Saxon crown."
 
     # Great Scotia
     GSCTL: "Great Scotia"

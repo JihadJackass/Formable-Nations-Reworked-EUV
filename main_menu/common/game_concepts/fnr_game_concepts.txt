@@ -1,6 +1,11 @@
-﻿
-#    great_moravia = {
-#        alias = { great_moravian }
-#        texture = "gfx/interface/icons/flat_icons/country.dds"
-#    }
+﻿# FNR Game Concepts
 
+fnr_formable_organizer_ANDUH_republic_early = { # Early Republic  - unused
+	alias = { fnr_formable_organizer_1 }
+	texture = "gfx/interface/icons/alert_icons/fnr_formable_organizer_ANDUH_republic_early.dds"
+}
+
+fnr_formable_organizer_ANDUH_republic_modern = { # Modern Republic  - unused
+	alias = { fnr_formable_organizer_2 }
+	texture = "gfx/interface/icons/alert_icons/fnr_formable_organizer_ANDUH_republic_modern.dds"
+}

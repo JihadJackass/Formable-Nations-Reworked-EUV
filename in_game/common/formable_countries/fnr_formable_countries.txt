@@ -174,6 +174,66 @@
 				}
 			}
 	# Rank 2
+		# Jorvik (Scandinavian York)
+		JORVK_f = {
+			level = 2
+			required_locations_fraction = 1
+			rule = plausible
+			potential = {
+				culture ?= { language = language:english_language }
+				NOT = {
+					tag = ENG
+				}
+			}
+			allow = {
+				religion = religion:norse
+				# OR at least 20% of pops in the country are norse pagan
+			}
+			name = JORVK
+			flag = fnr_norse_jorvik
+			adjective = JORVK_ADJ
+			tag = JORVK
+			color = map_JORVK
+			provinces = {
+				north_riding_province
+				westmorland_province
+				lancashire_province
+				west_riding_province
+				east_riding_province
+			}
+			locations = {
+				egremont
+			}
+			form_effect = {
+			}
+		}
+		# Danelaw
+		DANEL_f = {
+			level = 2
+			required_locations_fraction = 0.5
+			rule = plausible
+			potential = {
+				culture ?= { language = language:english_language }
+				NOT = {
+					tag = ENG
+				}
+			}
+			allow = {
+				religion = religion:norse
+				# OR at least 20% of pops in the country are norse pagan
+			}
+			name = DANEL
+			flag = fnr_norse_danelaw
+			adjective = DANEL_ADJ
+			tag = DANEL
+			color = map_DANEL
+			areas = {
+				scottish_lowlands_area
+				northumbria_area
+			}
+			form_effect = {
+			}
+		}
 		# Lombardy - Alt-history
 			LMBDY_f = {
 				level = 2
@@ -537,7 +597,9 @@
 				color = map_NED
 				areas = { brabant_area flanders_area friesland_area holland_area wallonia_area }
 				form_effect = {
-					change_government_type = government_type:republic
+					#change_government_type = government_type:republic
+					# Set to a unique form of Heir Selection (Dutch Republicanism)
+					# Monarchy with Elections
 					custom_tooltip = {
 						text = NED_f_tt2
 					}
@@ -561,8 +623,14 @@
 							}
 						}
 						# Become Dutch Republic
+						custom_tooltip = {
+							text = NED_f_tt3
+						}	
 						change_country_name = NED_DR
 						set_variable = NED_DR_var
+						change_heir_selection = heir_selection:fnr_dutch_republican_succession
+						# TODO: add an event that allows you choose between your existing Dutch flag 
+						# or a custom one depending on your societal value
 						hidden_effect = { change_country_flag = NED_DR_FLAG }
 						# Do NOT set variable - cannot switch to United Provinces
 					}
@@ -6161,7 +6229,7 @@
 		# Empire of Japan - Modern
 			EOJPN_f = {
 				level = 5
-				required_locations_fraction = 0.01 # 0.90
+				required_locations_fraction = 0.90 # 0.90
 				rule = plausible
 				potential = {
 					AND = {
@@ -6230,7 +6298,7 @@
 		# Angevin Empire - Alt history
 			AGEVN_f = {
 				level = 4
-				required_locations_fraction = 0.65
+				required_locations_fraction = 1
 				rule = plausible
 				potential = {
 					AND = {
@@ -6254,13 +6322,13 @@
 							region:france_region = {
 								any_ownable_location_in_region = {
 									owner = { this = c:ENG }
-									count > 120
+									count > 126
 								}
 							}
 							region:great_britain_region = {
 								any_ownable_location_in_region = {
 									owner = { this = c:ENG }
-									count > 140
+									count > 145
 								}
 							}
 						}	
@@ -7287,16 +7355,40 @@
 					}
 				}
 				allow = {
-					tag = ENG
-					government_type = government_type:republic
-					has_accepted_culture = culture:english
 					OR = {
-						culture = culture:low_franconian
-						culture = culture:frisian
+						AND = { # Anglo-Dutch Union - English Path
+							tag = ENG
+							OR = {
+								government_type = government_type:monarchy
+								government_type = government_type:republic
+							}
+							OR = {
+								has_accepted_culture = culture:english
+								culture = culture:english
+							}
+						}
+						AND = { # Anglo-Dutch Union - Dutch Path
+							OR = {
+								tag = ENG
+								tag = GBR
+							}
+							OR = {
+								government_type = government_type:monarchy
+								government_type = government_type:republic
+							}
+							OR = {
+								OR  = {
+									has_accepted_culture = culture:low_franconian
+									has_accepted_culture = culture:frisian
+								}
+								culture = culture:low_franconian
+								culture = culture:frisian
+							}
+						}
 					}
 				}
 				name = ANDUH
-				flag = ANDUH
+				flag = ANDUH_ce
 				adjective = ANDUH_ADJ
 				tag = ANDUH
 				color = map_ANDUH
@@ -7314,6 +7406,7 @@
 				}
 				form_effect = {
 					custom_tooltip = { text = ANDUH_formable_trigger_1_tt }
+					custom_tooltip = { text = ANDUH_formable_trigger_2_tt }
 				}
 			}
 		# Catholica Russica - Fantasy

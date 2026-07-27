@@ -2,6 +2,34 @@
 @semy = 0.27
 @semysh = 0.27
 
+sub_netherlands_republic_flag = {
+	pattern = "pattern_solid.dds"
+	textured_emblem = {
+		texture = "NED_DR_FLAG.dds"
+	}	
+}
+
+sub_cross_of_burgundy = {
+	#pattern = "pattern_solid.dds"
+	textured_emblem = {
+		texture = "te_cross_of_burgundy.dds"
+	}	
+}
+
+sub_english_commonwealth_flag = {
+	pattern = "pattern_solid.dds"
+	textured_emblem = {
+		texture = "te_commonwealth.dds"
+	}	
+}
+
+sub_netherlands_modern_flag = {
+	pattern = "pattern_solid.dds"
+	textured_emblem = {
+		texture = "te_netherlands_modern.dds"
+	}	
+}
+
 sub_kleves_flag = {
 	pattern = "pattern_solid.dds"
 	color1 = "red"
