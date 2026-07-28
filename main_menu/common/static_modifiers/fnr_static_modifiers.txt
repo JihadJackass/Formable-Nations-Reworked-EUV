@@ -2,6 +2,55 @@
 # Formable Nations Static Modifiers #
 #####################################
 
+	# Netherlands
+		# Dutch Colonial Slavery
+		fnr_DUTCH_dutch_colonial_slavery = {
+			game_data = {
+				category = country
+			}
+			# slavery is so god damn based oh my god
+			any_pop_can_be_slave = yes
+			allow_rgo_slave_demand = yes
+			allow_privateers_slave_raid = yes
+			auto_slave_raid_different_religion = yes
+
+			# The burghers profit, the clergy grumble
+			burghers_estate_target_satisfaction = 0.05
+			antagonism_received_modifier = 0.10
+		}
+
+	# Prittania
+		# Magi Express Disapproval - called from flavor_ERSHR.3
+		fnr_PRTTA_protect_the_realm = {
+			game_data = {
+				category = country
+			}
+			# Drawbacks
+			clergy_estate_max_tax = -0.05
+			subject_loyalty = -0.01
+			subject_opinions = -10
+			#stability_cost = 0.0002
+			antagonism_received_modifier = 0.015
+
+			# The fleet as standing rampart
+			always_allow_navy_levies = yes
+			allow_cabinet_naval_focus = yes
+			can_convert_galleys_to_light = yes
+			buy_fleet_basing_rights_cost_modifier = -0.25
+
+			# Policing the narrow seas
+			can_create_anti_piracy_cb = yes
+			ban_exports_of_naval_supplies = yes
+
+			# Shield of the Brythonic realms
+			allowed_guarantee = yes
+			allowed_intervene_in_war = yes
+
+			# Slavery is cool, fuck you paradox
+			any_pop_can_be_slave = yes
+			auto_slave_raid_different_religion = yes
+		}
+
 	# Eranshar
 
 		# Rise of Zoroastrianism Religious Bonus - Added via estate privilage

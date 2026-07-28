@@ -26,11 +26,11 @@ fnr_akkadian_language = {
 	dynasty_template_keys = {
 	}
 
-	patronym_prefix_son = "patronym_prefix_french_son"
-	patronym_prefix_daughter = "patronym_prefix_french_daughter"
+	patronym_prefix_son = "patronym_prefix_french_son"  # TODO
+	patronym_prefix_daughter = "patronym_prefix_french_daughter"  # TODO
 
-	location_prefix = "location_prefix_french"
-	location_prefix_vowel = "location_prefix_french_vowel"
+	location_prefix = "location_prefix_french"  # TODO
+	location_prefix_vowel = "location_prefix_french_vowel"  # TODO
 
 	first_name_conjoiner = "-" # to hyphenate compound names like "name_john.name_lucas" as "Jean-Luc" instead of the default "Jean Luc"
 

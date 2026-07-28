@@ -4,8 +4,15 @@
   # Static Modifier Localization #
   ################################
 
-    # Eranshar
+    # Netherlands
+      STATIC_MODIFIER_NAME_fnr_DUTCH_dutch_colonial_slavery: "The Atlantic Trade"
+      STATIC_MODIFIER_DESC_fnr_DUTCH_dutch_colonial_slavery: "The Company has committed itself to the traffic in men. Its forts on the Guinea coast feed the crossing, its ships carry the cargo to the sugar islands, and its factors hold contracts to supply the plantations of rival crowns. The returns are considerable, and the burghers who hold the shares are well satisfied. Abroad, the reputation of the Republic suffers for it."
 
+    # Prittania
+      STATIC_MODIFIER_NAME_fnr_PRTTA_protect_the_realm: "Wall of Wooden Walls"
+      STATIC_MODIFIER_DESC_fnr_PRTTA_protect_the_realm: "The Prittanian realm is bounded not by fortresses but by water, and the fleet is the only rampart that matters. No hostile keel may pass the narrow seas unchallenged; the ships of Prittania stand between the Brythonic peoples and every enemy that would land upon their shores."
+
+    # Eranshar
       STATIC_MODIFIER_NAME_fnr_ershr_rise_of_zoroastrian: "The Return of Zoroastrianism"
       STATIC_MODIFIER_DESC_fnr_ershr_rise_of_zoroastrian: "After centuries in retreat, the faith of Zarathustra has been restored to the heart of the Iranian state. The sacred fires burn once more under royal patronage, and the magi again hold a place of honour at court. With the crown and the priesthood united behind the eternal flame, the faithful march with renewed conviction."
 
@@ -31,11 +38,9 @@
       STATIC_MODIFIER_DESC_fnr_ERSHR_sacred_fires_burn: "The three great fires of old Iran blaze once more under a single crown, and the long night since the conquest is ended. With the priests' fire, the kings' fire, and the farmers' fire all rekindled, the faithful rally to a restoration made whole, the armies march with the confidence of a people reborn, and the old religion reaches outward across land and sea as it once did. The fire will not be smothered again."
 
     # Great Moravia
-
       STATIC_MODIFIER_NAME_fnr_gmorv_gained_power: "Moravian Clergy Gains Power"
       STATIC_MODIFIER_NAME_fnr_gmorv_clergy_upset_by_loss_of_power: "Clergy Upset over loss of Power"
       STATIC_MODIFIER_NAME_fnr_moravian_patrarchate_modifier: "Church Slavoric Efficiency"
 
     # Rhineland
-
       STATIC_MODIFIER_NAME_fnr_RHLND_limitations_of_united_counties: "Limitations of the United Counties"

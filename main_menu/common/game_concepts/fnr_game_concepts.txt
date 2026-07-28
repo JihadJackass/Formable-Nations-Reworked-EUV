@@ -1,11 +1,14 @@
 ﻿# FNR Game Concepts
 
-fnr_formable_organizer_ANDUH_republic_early = { # Early Republic  - unused
-	alias = { fnr_formable_organizer_1 }
-	texture = "gfx/interface/icons/alert_icons/fnr_formable_organizer_ANDUH_republic_early.dds"
-}
+	# Flag Previews
+	# These are cool, but honestly don't really help much. Perhaps in the future. Disabled for now.
 
-fnr_formable_organizer_ANDUH_republic_modern = { # Modern Republic  - unused
-	alias = { fnr_formable_organizer_2 }
-	texture = "gfx/interface/icons/alert_icons/fnr_formable_organizer_ANDUH_republic_modern.dds"
-}
+	#fnr_formable_organizer_ANDUH_republic_early = { # Early Republic  - unused
+	#	alias = { fnr_formable_organizer_1 }
+	#	texture = "gfx/interface/icons/alert_icons/fnr_formable_organizer_ANDUH_republic_early.dds"
+	#}
+
+	#fnr_formable_organizer_ANDUH_republic_modern = { # Modern Republic  - unused
+	#	alias = { fnr_formable_organizer_2 }
+	#	texture = "gfx/interface/icons/alert_icons/fnr_formable_organizer_ANDUH_republic_modern.dds"
+	#}

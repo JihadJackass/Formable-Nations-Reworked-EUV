@@ -5,6 +5,16 @@
   #######################################
 
     #############
+    # Prittania #
+    #############
+
+      # Prittania
+        flavor_PRTTA.1.title: "Union of Celts and Prittanians on the Home Islands!"
+        flavor_PRTTA.1.entry: "Union of Celts and Prittanians on the Home Islands"
+        flavor_PRTTA.1.desc: "After centuries of Norse and Angloization of Britain small pockets of native Byrthonics have held out in the undeveloped wilderness and smaller cities. Census takers overlooked them and counted them among the Welsh, Cornish, Pictitch Highlanders and rare Norse-Gael. Over the last few decades they have coalesced under a united banner of many tribes along with their cultural and dynastic allies of Celts and Norse. Retaking the highlands with their Pictish cousins and pushing through their old lands of Cumbria, reforming into a new culture and religion the tribe of Prittians have re-emerged as a major power in Brittian and they have now claimed dominance over the Anglo English to the south. A new dawn for the Celtic peoples of Great Prittian is apon us."
+        flavor_PRTTA.1.a: "Boudicca’s revenge at last, for the world shakes."
+
+    #############
     # Eranshahr #
     #############
 
@@ -287,6 +297,12 @@
         flavor_DUTCH.1.desc: "The United Provinces stand as a testament to decentralized governance, each province jealously guarding its autonomy and traditional rights. Yet as our nation grows in stature and faces mounting challenges both at home and abroad, voices have begun calling for a stronger, more unified state.\n\nSome argue that only through centralization can we effectively coordinate our defenses, streamline our commerce, and speak with one voice in international affairs. They point to the inefficiencies of our current system, where each province may veto decisions vital to the nation's interests.\n\nOthers warn that abandoning our cherished provincial liberties would betray the very principles upon which our union was founded. The strength of the United Provinces, they insist, lies precisely in the balance of power between sovereign provinces - a safeguard against tyranny and a wellspring of innovation.\n\nThe question now falls to us: shall we forge a centralized Dutch Republic, or preserve the equality that has defined our confederation?"
         flavor_DUTCH.1.a: "We shall Proclaim the Dutch Republic!"
         flavor_DUTCH.1.b: "The United Provinces remain strong in equality!"
+
+      # Dutch Colonial Slavery
+        flavor_DUTCH.2.title: "The Trade in Souls"
+        flavor_DUTCH.2.desc: "The Company's factors report that the richest returns from the Atlantic lie not in gold or ivory but in men. Our forts on the Guinea coast stand within reach of the trade, our ships already cross to the sugar islands, and the Iberians have shown how much a plantation colony can yield when worked by purchased labour. The proposal has found support among the directors, who observe that a contract to supply the Spanish possessions alone would be worth more than the whole pepper trade. It has also found opposition. Ministers of the Reformed Church are divided, some arguing that no Christian commonwealth may deal in baptised souls, others that Scripture nowhere forbids the buying of heathens and that a well-ordered household may hold servants without sin. The Estates await our judgment."
+        flavor_DUTCH.2.a: "We must make profits."
+        flavor_DUTCH.2.b: "This is beneath us Christians!"
 
     #################
     # Gallic Empire #

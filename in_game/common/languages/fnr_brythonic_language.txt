@@ -1,13 +1,12 @@
-﻿# Greco-Bactrian
+﻿# Brythonic language
 
-fnr_greco_bactrian_language = {
+fnr_brythonic_language = {
 
-	color = map_FNR_GRECO_BACTRIAN_LANG
+	color = map_FNR_BRYTHONIC_LANG
 
-	#family = celtic_language_family
+	family = fnr_brythonic_language_family
 
 	male_names = {
-		custom_fnr_gb_this_ruler_title # TODO: test, why is this here?
 	}
 
 	female_names = {
@@ -17,7 +16,6 @@ fnr_greco_bactrian_language = {
 	}
 
 	lowborn = {
-		custom_fnr_gb_this_ruler_title # TODO: test, why is this here?
 	}
 
 	ship_names = {
@@ -26,7 +24,7 @@ fnr_greco_bactrian_language = {
 	dynasty_template_keys = {
 	}
 
-	patronym_prefix_son = "patronym_prefix_french_son"  # TODO
+	patronym_prefix_son = "patronym_prefix_french_son" # TODO
 	patronym_prefix_daughter = "patronym_prefix_french_daughter"  # TODO
 
 	location_prefix = "location_prefix_french"  # TODO

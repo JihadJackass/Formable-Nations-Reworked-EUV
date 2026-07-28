@@ -21,3 +21,11 @@
     # First Mexican Empire
 
       fnr_mexican_culture: "Mexican"
+
+    # Prittania
+      fnr_brythonic_culture: "Brythonic"
+      fnr_brythonic_culture_desc: "The descendants of the peoples who held the island before the Saxon settlements, surviving in the western and northern lands as Welsh, Cornish, Cumbrian, and their kin across the water in Brittany. Long divided into rival kingdoms, they retain a shared inheritance of law, verse, and genealogy, and a persistent claim to the whole of the island rather than the fragments left to them."
+      fnr_brythonic_language: "Brythonic"
+      fnr_brythonic_language_desc: "The common tongue of the Brythonic peoples, descended from the speech of the island before Latin and Germanic influence. It survives in the courts and poetry of the western kingdoms, where bardic tradition has kept its older forms in use long after everyday speech moved on."
+      fnr_brythonic_language_family: "Brythonic"
+      fnr_brythonic_language_family_desc: "The branch of the Celtic tongues native to the island of Britain, distinguished from the Goidelic speech of Ireland and the Highlands. Its members remain close enough that speakers of one can follow another with effort, a fact that has outlasted every political division among them."

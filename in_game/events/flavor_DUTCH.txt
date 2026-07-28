@@ -20,3 +20,24 @@ flavor_DUTCH.1 = { # United Provinces opportunity to centralize into the Dutch R
 		# TODO POST 2.5.0: add decentralization + bonuses
 	}
 }
+
+flavor_DUTCH.2 = { # Official Policy on Dutch Colonial Slavery
+	type = country_event
+	title = flavor_DUTCH.2.title
+	desc = flavor_DUTCH.2.desc
+	fire_only_once = yes
+	outcome = neutral
+	option = { # We shall enact a full policy of Slavery
+		name = flavor_DUTCH.2.a
+		add_country_modifier = {
+			modifier = fnr_DUTCH_dutch_colonial_slavery
+			years = -1
+		}
+		add_stability = -30
+	}
+	option = { # The is against Christian values!
+		name = flavor_DUTCH.2.b
+		add_stability = 10
+		add_legitimacy = 15
+	}
+}

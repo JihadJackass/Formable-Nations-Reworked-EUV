@@ -106,7 +106,7 @@
 				coa = ANDUH_ce_FNR_anglo_dutch_midgame_gbr_holland
 				priority = 10
 				trigger = {
-					has_or_had_tag = ENG
+					#has_or_had_tag = c:ENG # TODO: fix later
 					coa_def_monarchy_trigger = yes
 					coa_def_renaissance_age_2_trigger = yes
 				}
@@ -116,7 +116,7 @@
 				coa = ANDUH_ce_FNR_anglo_dutch_england_cross_orange
 				priority = 10
 				trigger = {
-					has_or_had_tag = NED
+					#has_or_had_tag = c:NED # TODO: fix later
 					coa_def_monarchy_trigger = yes
 					coa_def_renaissance_age_2_trigger = yes
 				}
@@ -146,4 +146,13 @@
 			}
 		}
 
-
+	# Prittania
+		PRTTA_ce = {
+			############
+			# Monarchy #
+			############
+			flag_definition = {
+				coa = PRTTA
+				priority = 5
+			}
+		}

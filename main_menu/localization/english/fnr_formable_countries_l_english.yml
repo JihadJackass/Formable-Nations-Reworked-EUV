@@ -967,6 +967,11 @@
     DANEL_ADJ: "Danish"
     DANEL_f_desc: "When Alfred and Guthrum divided England between them, the lands north and east of Watling Street passed under the law of the Danes, and the name endured long after the armies that won it were gone. Five boroughs, a hundred villages with Norse names, and generations of mixed blood mark where the old boundary ran. To restore the Danelaw is to claim that inheritance in full, uniting the lands once settled from across the North Sea into a realm where Danish custom stands above Saxon crown."
 
+    PRTTA: "Prittania"
+    PRTTA_f: "Prittania"
+    PRTTA_ADJ: "Prittanian"
+    PRTTA_f_desc: "Long before the Romans set foot on these shores, the Greeks spoke of the Pretanic Isles and the Pritani who dwelt upon them. Now the old name is claimed anew. From the Brittonic hills to the Pictish north, the scattered heirs of that ancient people stand united once more, and the tongue of the invader is a memory in a land that never truly ceased to be theirs."
+
     # Great Scotia
     GSCTL: "Great Scotia"
     GSCTL_f: "Great Scotia"

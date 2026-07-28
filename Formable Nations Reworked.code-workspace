@@ -13,5 +13,8 @@
 			"path": "../../logs"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"discord.idleTimeout": 240,
+		"discord.lowerDetailsIdling": ""
+	}
 }

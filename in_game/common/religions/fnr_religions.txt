@@ -2,8 +2,40 @@
 # Formable Nation: Reworked Religions #
 #######################################
 
-	# Bactria
+	# Prittania
+		fnr_hen_gred_religion = { # https://en.wikipedia.org/wiki/Greco-Buddhism
+			color = color_fnr_hen_gred_religion
+			group = folk_european_group
+			#religious_aspects = 2
+			#use_icons = yes
+			#has_karma = yes
+			has_religious_influence = yes
+			enable = 9999.1.1
 
+			definition_modifier = {
+				tolerance_heathen = -3
+				tolerance_heretic = -2
+				trade_land_efficiency = 0.025
+				allow_privateers_slave_raid = yes
+				can_hire_privateers = yes
+				wool_used_for_minting = yes
+			}
+			
+			opinions = {
+				hellenism_religion = enemy
+				orthodox = enemy
+				catholic = enemy
+				ibadi = enemy
+				shia = enemy
+				sunni = enemy
+			}
+
+			tags = {
+				folk_european_gfx pagan_gfx western_christian_gfx
+			}
+		}	
+
+	# Bactria
 		fnr_greco_buddhism_religion = { # https://en.wikipedia.org/wiki/Greco-Buddhism
 			color = color_fnr_greco_buddhism_religion
 			group = folk_european_group

@@ -1,0 +1,9 @@
+﻿################################################
+# Formable Nations: Reworked Language Families #
+################################################
+
+# Prittania
+fnr_brythonic_language_family = {
+	color = map_FNR_brythonic_language_family
+}
+

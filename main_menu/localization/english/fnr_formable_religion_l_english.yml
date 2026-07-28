@@ -4,8 +4,12 @@
   # RELIGIONS #
   #############
 
-    # Bactria
+    # Prittania
+      fnr_hen_gred_religion: "Hen Gred"
+      fnr_hen_gred_religion_ADJ: "Hengredic"
+      fnr_hen_gred_religion_desc: "The Old Belief of the Brythonic peoples, preserved in the west and north where Roman and Saxon religion took shallowest root. It has no central scripture or hierarchy. Worship centres on local powers tied to specific places such as rivers, springs, groves, and hills, with observances following the agricultural year. Its keepers maintain the boundary oaths, the festival calendar, and the genealogies of the tribes."
 
+    # Bactria
       fnr_greco_buddhism_religion: "Greco-Buddhism"
       fnr_greco_buddhism_religion_ADJ: "Greco-Buddhist"
       fnr_greco_buddhism_religion_desc: "Born in the aftermath of Alexander's conquests, Greco-Buddhism emerged where Greek settlers and Buddhist communities met in the valleys of Gandhara and Bactria. It was not a conquest of one faith over another, but a conversation. Greek artists gave the Buddha a human face for the first time, sculpting him in the likeness of Apollo. Buddhist monks offered Greek philosophers a path beyond the world of forms that Plato could only gesture toward. Temples rose with Corinthian columns and lotus motifs side by side. Kings like Menander debated sages and found wisdom worth more than territory. Along the Silk Road, merchants carried this hybrid faith eastward, seeding traditions that would shape Buddhist art for centuries to come. Greco-Buddhism asks what happens when two great civilizations choose to learn from one another rather than simply rule."

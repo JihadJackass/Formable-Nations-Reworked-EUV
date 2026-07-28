@@ -603,6 +603,7 @@
 					custom_tooltip = {
 						text = NED_f_tt2
 					}
+					trigger_event_non_silently = flavor_DUTCH.2
 					if = { # Option 1: Decentralized (-6 or lower) → United Provinces
 						limit = {
 							AND = {
@@ -5856,6 +5857,46 @@
 				}
 			}	
 	# Rank 4
+		# Prittania 
+			PRTTA_f = {
+				level = 4
+				required_locations_fraction = 0.86
+				rule = plausible
+				potential = {
+					AND = {
+						OR = {
+							has_variable = fnr_fantasy_enabled
+							has_variable = fnr_prittania_enabled
+						}
+						NOT = { has_variable = fnr_prittania_disabled }
+					}
+					NOT = { 
+						OR = {
+							tag = PRTTA
+							tag_exists = PRTTA
+						}
+					}
+				}
+				name = PRTTA
+				flag = fnr_test_flag
+				adjective = PRTTA_ADJ
+				tag = PRTTA
+				color = map_PRTTA
+				regions = {
+					great_britain_region
+				}
+				form_effect = {
+					if = {
+						limit = { country_rank_level < 4 }
+						set_country_rank_effect = { rank = country_rank:rank_empire }
+					}
+					trigger_event_non_silently = flavor_PRTTA.1
+					change_culture = culture:fnr_brythonic_culture
+					set_liturgical_language = dialect:fnr_brythonic_language
+					set_court_language = dialect:fnr_brythonic_language	
+					change_religion = religion:fnr_hen_gred_religion		
+				}
+			}	
 		# Roman Republic - Fantasy
 			RMNRP_f = {
 				level = 4

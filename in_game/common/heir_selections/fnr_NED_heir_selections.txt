@@ -19,11 +19,13 @@ fnr_dutch_republican_succession = {
 	potential = {
 		AND = {
 			government_type = government_type:monarchy
-			has_reform = government_reform:fnr_dutch_republican_succession
+			tag = c:NED
+			#has_reform = government_reform:fnr_dutch_republican_succession
 		}
 	}
 	locked = { # you cannot swap to another heir selection if this is true
-		has_reform = government_reform:fnr_dutch_republican_succession
+		tag = c:NED
+		#has_reform = government_reform:fnr_dutch_republican_succession
 	}
 	allowed = {}
 	allowed_estates = { nobles_estate }
