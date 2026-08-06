@@ -2,6 +2,20 @@
 @semy = 0.27
 @semysh = 0.27
 
+sub_test2 = {
+	pattern = "pattern_solid.dds"
+	textured_emblem = {
+		texture = "te_armenian_cilicia_rubenids.dds"
+	}	
+}
+
+sub_test1 = {
+	pattern = "pattern_solid.dds"
+	textured_emblem = {
+		texture = "te_armenian_cilicia_hethumids_coa.dds"
+	}	
+}
+
 sub_netherlands_republic_flag = {
 	pattern = "pattern_solid.dds"
 	textured_emblem = {

@@ -9,6 +9,9 @@ flavor_PRTTA.1 = {
 	option = { # Keep name
 		name = flavor_PRTTA.1.a
 		add_legitimacy = 20
+		set_court_language = dialect:fnr_brythonic_language
+		set_liturgical_language = dialect:fnr_brythonic_language
+		change_religion_for_ruler_and_family = { country = root religion = religion:fnr_heen_gred_religion }
 		add_country_modifier = {
 			modifier = fnr_PRTTA_protect_the_realm
 			years = -1

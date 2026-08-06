@@ -1,5 +1,5 @@
 ﻿fnr_cult_of_personality = {
-	religion = fnr_god_worshipping_society_taiping
+	religion = fnr_god_worshipping_society_religion
 
 	enabled = {
 		is_ai = no

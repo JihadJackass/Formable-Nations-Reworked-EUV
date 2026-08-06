@@ -3,7 +3,7 @@
 #######################################
 
 	# Prittania
-		fnr_hen_gred_religion = { # https://en.wikipedia.org/wiki/Greco-Buddhism
+		fnr_heen_gred_religion = {
 			color = color_fnr_hen_gred_religion
 			group = folk_european_group
 			#religious_aspects = 2
@@ -18,7 +18,7 @@
 				trade_land_efficiency = 0.025
 				allow_privateers_slave_raid = yes
 				can_hire_privateers = yes
-				wool_used_for_minting = yes
+				#wool_used_for_minting = yes
 			}
 			
 			opinions = {
@@ -69,7 +69,7 @@
 		}		
 
 	# Taiping
-		fnr_god_worshipping_society_taiping = { 
+		fnr_god_worshipping_society_religion = { 
 			color = color_fnr_gws_religion
 			group = christian
 

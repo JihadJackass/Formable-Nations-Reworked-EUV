@@ -5,9 +5,9 @@
   #############
 
     # Prittania
-      fnr_hen_gred_religion: "Hen Gred"
-      fnr_hen_gred_religion_ADJ: "Hengredic"
-      fnr_hen_gred_religion_desc: "The Old Belief of the Brythonic peoples, preserved in the west and north where Roman and Saxon religion took shallowest root. It has no central scripture or hierarchy. Worship centres on local powers tied to specific places such as rivers, springs, groves, and hills, with observances following the agricultural year. Its keepers maintain the boundary oaths, the festival calendar, and the genealogies of the tribes."
+      fnr_test_religion: "Hen Gred"
+      fnr_test_religion_ADJ: "Hengredic"
+      fnr_test_religion_desc: "The Old Belief of the Brythonic peoples, preserved in the west and north where Roman and Saxon religion took shallowest root. It has no central scripture or hierarchy. Worship centres on local powers tied to specific places such as rivers, springs, groves, and hills, with observances following the agricultural year. Its keepers maintain the boundary oaths, the festival calendar, and the genealogies of the tribes."
 
     # Bactria
       fnr_greco_buddhism_religion: "Greco-Buddhism"
@@ -16,9 +16,9 @@
 
     # Taiping
 
-      fnr_god_worshipping_society_taiping: "God Worshipping Society"
-      fnr_god_worshipping_society_taiping_ADJ: "God Worshipping Society"
-      fnr_god_worshipping_society_taiping_desc: "The polytheistic Chinese religious movement formed under the influence of Protestant Christianity, incorporating elements of Chinese folk religion and Buddhist concepts was founded by Hong Xiuquan in 1843, viewing God (Shangdi) as supreme and Hong as God's second son, leading to the massive Taiping Rebellion (1850-1864) against the Qing dynasty, which sought social equality, radical reforms, and established the Heavenly Kingdom before its eventual brutal defeat."
+      fnr_god_worshipping_society_religion: "God Worshipping Society"
+      fnr_god_worshipping_society_religion_ADJ: "God Worshipping Society"
+      fnr_god_worshipping_society_religion_desc: "The polytheistic Chinese religious movement formed under the influence of Protestant Christianity, incorporating elements of Chinese folk religion and Buddhist concepts was founded by Hong Xiuquan in 1843, viewing God (Shangdi) as supreme and Hong as God's second son, leading to the massive Taiping Rebellion (1850-1864) against the Qing dynasty, which sought social equality, radical reforms, and established the Heavenly Kingdom before its eventual brutal defeat."
 
     # Gallic Empire
 
@@ -99,5 +99,5 @@
   # Religious Actions #
   #####################
 
-    fnr_god_worshipping_society_taiping_expand_cult: "Expand Cult of Personality"
-    fnr_god_worshipping_society_taiping_expand_cult_desc: "TODO"
+    fnr_god_worshipping_society_religion_expand_cult: "Expand Cult of Personality"
+    fnr_god_worshipping_society_religion_expand_cult_desc: "TODO"

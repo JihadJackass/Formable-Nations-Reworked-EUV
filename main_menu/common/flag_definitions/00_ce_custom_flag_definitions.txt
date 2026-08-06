@@ -1,9 +1,56 @@
 ﻿# Formable Nations: Reworked Custom Flag Definitions
 
+	### Serbian Empire ### TODO
+		fnr_SRBEM_alts = {
+
+			# Monarchy - Duchy
+			flag_definition = {
+				coa = fnr_AMCLC_flag_duchy
+				priority = 5
+				trigger = {
+					coa_def_monarchy_trigger = yes
+					country_rank = country_rank:rank_duchy
+				}
+			}
+			# Monarchy - Kingdom
+			flag_definition = {
+				coa = fnr_AMCLC_flag_kingdom
+				priority = 10
+				trigger = {
+					coa_def_monarchy_trigger = yes
+					country_rank = country_rank:rank_kingdom
+				}
+			}
+		}
+
+	### Serbian Empire ### TODO
+		fnr_SRBEM_alts = {
+
+			# Rhineland
+			flag_definition = {
+				coa = SRBEM_default
+				priority = 5
+			}
+			# Monarchy
+			flag_definition = {
+				coa = SRBEM_monarchy
+				priority = 10
+				trigger = {
+					coa_def_monarchy_trigger = yes
+				}
+			}
+			# Republic
+			flag_definition = {
+				coa = SRBEM_republic
+				priority = 10
+				trigger = {
+					coa_def_republic_trigger = yes
+				}
+			}
+		}
+
 	### Rhineland / Rhenania / United Duchies / United Counties / United Republics ###
 	# Coded by Tawani @Tawani
-
-		# Rhineland
 		RHLND_alts = { # Rhineland / Rhenania / United Duchies / United Counties / United Republics
 
 			# Rhineland
@@ -68,8 +115,6 @@
 		}
 
 	# Hetmanate / Zaporozhia / Cossackia
-
-		# Hetmanate
 		HET_ce = {
 			flag_definition = {
 				coa = HET_ce_hetmanate
@@ -93,15 +138,12 @@
 
 	# Anglo-Dutch Union
 		ANDUH_ce = {
-			############
-			# Monarchy #
-			############
-			# Anglo-Dutch Kingdom (Early-game monarchy variant, royal england+holland lion)
+			# Monarchy - Anglo-Dutch Kingdom (Early-game variant, Royal England + Holland lion)
 			flag_definition = {
 				coa = ANDUH_ce_FNR_anglo_dutch_royal_england_royal_holland
 				priority = 5
 			}
-			# Anglo-Dutch Kingdom (Mid-game monarchy variant, Mig-game England+France + Holland lion)
+			# Monarchy - Anglo-Dutch Kingdom (Mid-game variant, England + France + Holland lion)
 			flag_definition = {
 				coa = ANDUH_ce_FNR_anglo_dutch_midgame_gbr_holland
 				priority = 10
@@ -111,7 +153,7 @@
 					coa_def_renaissance_age_2_trigger = yes
 				}
 			}
-			# Anglo-Dutch Kingdom (Mid-game monarchy variant, Mig-game England+France + Holland lion)
+			# Monarchy - Anglo-Dutch Kingdom (Mid-game variant, England + France + Holland lion)
 			flag_definition = {
 				coa = ANDUH_ce_FNR_anglo_dutch_england_cross_orange
 				priority = 10
@@ -121,7 +163,7 @@
 					coa_def_renaissance_age_2_trigger = yes
 				}
 			}
-			# United Kingdom of Great Britain & The Netherlands (Late-game Monarchy Modern variant)
+			# Monarchy - United Kingdom of Great Britain & The Netherlands (Late-game Modern variant)
 			flag_definition = {
 				coa = ANDUH_ce_FNR_anglo_dutch_gb_netherlands
 				priority = 10
@@ -135,14 +177,11 @@
 			############
 			# Republic #
 			############		
-
+				# TODO
 			#############
 			# Theocracy #
 			#############
-
-			##########
-			# Tribal #
-			##########
+				# TODO
 			}
 		}
 

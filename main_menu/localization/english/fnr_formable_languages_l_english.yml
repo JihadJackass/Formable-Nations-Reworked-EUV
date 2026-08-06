@@ -1,16 +1,36 @@
 ﻿l_english:
 
-  # Cultures
+  #####################################
+  # FNR Custom Languages Localization #
+  #####################################
 
-    # Gallic Empire
-    fnr_gaulish_language: "Gaulish"
+    #############
+    # Languages #
+    #############
 
-    # Assyrian Empire / Assyria
-    fnr_akkadian_language: "Akkadian"
+      # Gallic Empire
+        fnr_gaulish_language: "Gaulish"
 
-    # Church Slavonic
-    fnr_church_slavonic: "Church Slavonic"
+      # Assyrian Empire / Assyria
+        fnr_akkadian_language: "Akkadian"
 
-    # Greco-Bactrian
-    fnr_greco_bactrian_language: "Greco-Bactrian"
+      # Church Slavonic
+        fnr_church_slavonic: "Church Slavonic"
 
+      # Greco-Bactrian
+        fnr_greco_bactrian_language: "Greco-Bactrian"
+
+      # Prittania
+        fnr_brythonic_language: "Brythonic"
+        fnr_brythonic_language_desc: "The common tongue of the Brythonic peoples, descended from the speech of the island before Latin and Germanic influence. It survives in the courts and poetry of the western kingdoms, where bardic tradition has kept its older forms in use long after everyday speech moved on."
+
+    #####################
+    # Language Families #
+    #####################
+
+      # Prittania
+        fnr_brythonic_language_family: "Brythonic"
+        fnr_brythonic_language_family_desc: "The branch of the Celtic tongues native to the island of Britain, distinguished from the Goidelic speech of Ireland and the Highlands. Its members remain close enough that speakers of one can follow another with effort, a fact that has outlasted every political division among them."
+
+
+  # End of file

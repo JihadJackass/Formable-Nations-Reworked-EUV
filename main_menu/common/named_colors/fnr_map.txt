@@ -24,6 +24,8 @@ colors = {
 		map_china = rgb { 150 150 45 }
 
 	# FORMABLE NATION COLORS
+		# Armenian Principality of Cilicia
+		map_AMCLC = rgb { 49 67 83 }
 		# Jorvik
 		map_JORVK = rgb { 50 50 50 } # TODO
 		# Danelaw

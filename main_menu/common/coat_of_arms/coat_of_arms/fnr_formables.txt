@@ -2,9 +2,7 @@
 # Formable Nation Reworked Scripted Flags #
 ###########################################
 
-# TODO: Alternatives for different government types and use less textured flags (only when needed such as sweden-norway with too many colors)
-
-# test flag (used for development of flags at the moment)
+# test flag (used for development of flags at the moment until the flag maker tool is developed.)
 	fnr_test_flag = {
 		pattern = "pattern_solid.dds"
 		color1 = hsv360 { 0 0 0 } # Black
@@ -120,6 +118,74 @@
 
 # end test flag
 
+# Armenian Principality of Cilicia
+ 	fnr_AMCLC_flag_duchy = { # rubenids
+		pattern = "pattern_solid.dds"
+		color1 = hsv360 { 0 0 100 } # white
+		textured_emblem = {
+			texture = "te_armenian_cilicia_rubenids.dds" # Lion
+			#instance = { position = { 0.5 0.5 } scale = { 0.45 0.55 } }
+		}	
+	}	
+ 	fnr_AMCLC_flag_kingdom = { # hethumids_coa
+		pattern = "pattern_solid.dds"
+		color1 = hsv360 { 49 100 100 } # yellow
+		textured_emblem = {
+			texture = "te_armenian_cilicia_hethumids_coa.dds" # COA
+			instance = { position = { 0.5 0.5 } scale = { 0.40 0.60 } }
+		}	
+	}
+
+# Kingdom of Hormuz
+ 	fnr_KHRMZ_flag = {
+		pattern = "pattern_border_thin.dds"
+		color1 = hsv360 { 131 100 53 } # green
+		color2 = hsv360 { 46 81 100 } # yellow
+		color3 = white # white
+		colored_emblem = {
+			texture = "ce_crescent_decrescent.dds"
+			color1 = color3
+			instance = { position = { 0.5 0.5 } scale = { 0.40 0.60 } }
+		}
+	}
+
+# Adriatic Empire
+ 	fnr_SRBEM_flag = {
+		pattern = "pattern_solid.dds"
+		color1 = hsv360 { 356 96 78 } # Venetian Red - https://en.wikipedia.org/wiki/Venetian_red
+		textured_emblem = {
+			texture = "te_adriatic_lion.dds" # COA
+			#instance = { position = { 0.5 0.5 } scale = { 0.45 0.55 } }
+		}	
+	}	
+
+# Serbian Empire
+	fnr_SRBEM = { # 
+		pattern = "pattern_solid.dds"
+		color1 = hsv360 { 48 33 100 } # Black
+		color2 = "red"
+		textured_emblem = {
+			texture = "te_serbian_eagle.dds" # COA
+			instance = { position = { 0.5 0.5 } scale = { 0.45 0.55 } }
+		}	
+	}
+
+# Illyria
+	fnr_ILYRA = { # Croatia - 16th c. - Before that Dalmatia = three lion's (or leopard's) head & Croatia = dextrochere holding dagger - with Dalmatian arms mostly representing both
+		pattern = "pattern_solid.dds"
+		color1 = "white"
+		color2 = "red"
+		colored_emblem = {
+			texture = "ce_checky_07.dds"
+			color1 = color2
+			color2 = color1
+		}
+		textured_emblem = {
+			texture = "te_serbian_korjenic_neoric_coa.dds" # COA
+			instance = { position = { 0.5 0.5 } scale = { 0.50 0.80 } }
+		}	
+	}
+
 # Prittania
 	fnr_test_flag = {
 		pattern = "pattern_solid.dds"
@@ -127,7 +193,6 @@
 		color2 = hsv360 { 50 99 99 } # Yellow
 		color3 = "white" # White
 		color4 = hsv360 { 357 89 73 } # Red
-
 		colored_emblem = {
 			texture = "ce_saltire_fimbriated.dds" # White Saltire
 			color1 = color3
@@ -156,7 +221,6 @@ fnr_norse_jorvik = {
 	pattern = "pattern_solid.dds"
 	color1 = "white"
 	color2 = "black"
-
 	colored_emblem = {
 		texture = "ce_norse_raven_flag.dds"
 		color1 = color2
@@ -175,7 +239,6 @@ fnr_norse_danelaw = {
 	pattern = "pattern_solid.dds"
 	color1 = "white"
 	color2 = "black"
-
 	colored_emblem = {
 		texture = "ce_norse_raven_flag.dds"
 		color1 = color2
@@ -186,30 +249,22 @@ fnr_norse_danelaw = {
 	
 # Eranshahr
 	KOMTA = {
-		textured_emblem = {
-			texture = "te_knights_of_malta.dds"
-		}	
+		textured_emblem = { texture = "te_knights_of_malta.dds" }	
 	}
 
 # Eranshahr
 	ERSHR = {
-		textured_emblem = {
-			texture = "te_erenshar.dds"
-		}	
+		textured_emblem = { texture = "te_erenshar.dds" }	
 	}
 
 # Roman Republic
 	RMNRP = {
-		textured_emblem = {
-			texture = "te_roman_republic.dds"
-		}	
+		textured_emblem = { texture = "te_roman_republic.dds" }	
 	}
 
 # Ontario
 	ONTRO = {
-		textured_emblem = {
-			texture = "te_ontario.dds"
-		}	
+		textured_emblem = { texture = "te_ontario.dds" }	
 	}
 
 # Gobi
@@ -909,22 +964,6 @@ HET_ce_cossackia = {
 			texture = "ce_basque_cross.dds"
 			color1 = color2   # WHITE cross on top
 			color2 = color2
-		}
-	}
-# Serbian Empire
-	SRBEM = {
-		pattern = "pattern_solid.dds"
-		color1 = hsv360{ 45 35 100 }    # Golden yellow
-		color2 = hsv360{ 0 80 80 }     # Red for the eagle
-		
-		colored_emblem = {
-			texture = "ce_eagle_double_headed_shield.dds"  # or your custom eagle
-			color1 = color2
-			color2 = color2
-			instance = { 
-				position = { 0.5 0.5 }
-				scale = { 0.6 0.6 }
-			}
 		}
 	}
 # Dual Monarchy
@@ -2115,12 +2154,6 @@ HET_ce_cossackia = {
 			color1 = color1
 			color2 = color2
 			color3 = color2
-		}
-	}	
-# Adriatic Empire
- 	ADREM = {
-		textured_emblem = {
-			texture = "te_adriatic_empire.dds"
 		}
 	}	
 # Celtic Union

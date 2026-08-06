@@ -5,12 +5,11 @@
 			"path": "."
 		},
 		{
-			"name": "game",
-			"path": "../../../../../../../Steam/steamapps/common/Europa Universalis V/game"
-		},
-		{
 			"name": "logs",
 			"path": "../../logs"
+		},
+		{
+			"path": "../../../../../../../Steam/steamapps/common/Europa Universalis V/game"
 		}
 	],
 	"settings": {

@@ -1,0 +1,111 @@
+﻿#############################################
+# Formable Nations: Reworked Custom Culture #
+#############################################
+
+	# Austrian - 1800s Nationalist variant of Lower Bavarian
+
+	# Illyrian
+
+	###########
+	# Anglois #
+	###########
+
+		fnr_anglois_culture = {
+			language = angevin_dialect
+			color = rgb { 40 40 85 }
+			tags = { french_gfx western_european_gfx european_gfx }
+			opinions = {
+				berrichon = kindred
+				burgundian = kindred
+				champenais = kindred
+				franc_comtois = kindred
+				french = kindred
+				gallo = kindred
+				lorrain = kindred
+				norman = kindred
+				picard = kindred
+				poitevin = kindred
+				saintongeais = kindred
+				walloon = kindred
+			}
+			culture_groups = {
+				french_group british_group
+			}
+			#suppress_no_pops_error = yes
+		}
+
+	#############
+	# Brythonic #
+	#############
+
+		fnr_brythonic_culture = {
+			language = irish_dialect
+			color = rgb { 87 140 75 }
+			opinions = {
+				gallo = kindred
+				highland = positive
+				norse_gael = positive
+				french = negative
+				english = negative
+				anglo_irish = negative
+			}
+			culture_groups = {
+				celtic_group
+				british_group
+			}
+			tags = { french_gfx western_european_gfx european_gfx }
+			#suppress_no_pops_error = yes
+		}
+
+	###############
+	# Gallo-Roman #
+	###############
+
+		fnr_gallo_roman_culture = {
+			language = irish_dialect
+			color = rgb { 87 140 75 }
+			opinions = {
+				gallo = kindred
+				highland = positive
+				norse_gael = positive
+				french = negative
+				english = negative
+				anglo_irish = negative
+			}
+			culture_groups = {
+				celtic_group
+				greek_group
+				french_group
+			}
+			tags = { french_gfx western_european_gfx european_gfx }
+			#suppress_no_pops_error = yes
+		}
+
+	##################
+	# Greco-Bactrian #
+	##################
+
+		fnr_greco_bactrian_culture = {
+			language = greek_language
+			color = rgb { 134 135 209 }
+			tags = { middle_east_gfx }
+			culture_groups = {
+				greek_group iranian_group indian_group
+			}
+			#suppress_no_pops_error = yes
+		}
+
+	###################
+	# Semitic Culture #
+	###################
+
+		fnr_semitic_culture = {
+			language = angevin_dialect # TODO; fix
+			color = rgb { 99 77 68 }
+			tags = { middle_east_gfx }
+			culture_groups = {
+				iranian_group
+			}
+			#suppress_no_pops_error = yes
+		}
+

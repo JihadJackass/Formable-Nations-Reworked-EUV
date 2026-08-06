@@ -263,17 +263,29 @@
     UKRNE_ADJ: "Ukranian"
     UKRNE_f_desc: "Ukraine is a large, historically rich Eastern European nation known for its resilience, fertile lands (often called the 'Breadbasket of Europe')\n\nUkraine is located in South-Eastern Europe and shares borders with several countries, including Russia to the east and the Black Sea to the south. The terrain is mostly flat plains (steppes), with the Carpathian Mountains in the west. It possesses rich natural resources, particularly extensive fertile 'black soil' (chernozem) and significant mineral deposits, including iron, coal, and manganese.\n\nWe care establish what is essentially a modern national state under Kyivan guidance with the right conquests."
 
-    # Donetsk PR
-    DNTPR: "Donetsk People's Republic"
-    DNTPR_f: "Donetsk People's Republic"
-    DNTPR_ADJ: "Donetsk"
-    DNTPR_f_desc: "The Donetsk People's Republic (DPR) is a self-proclaimed, now Russian-annexed state in eastern Ukraine's Donbass region, established in 2014 amid political turmoil. It is a republic of Russia with its capital in Donetsk, established on a territory that was illegally annexed in September 2022. Prior to annexation, it existed as a separatist entity with limited international recognition. Its ideology has been shaped by a mixture of Russian ultranationalism, Orthodox fundamentalism, and Soviet-era ideals."
+    # Armenian Principality of Cilicia (Armenian Kingdom of Cilicia when Kingdom)	
+    AMCLC: "Armenian Cilicia"
+    AMCLC_f: "Armenian Principality of Cilicia"
+    AMCLC_ADJ: "Cilician Armenian"
+    AMCLC_f_desc: "Driven from the highlands by the Seljuk tide, our people found refuge in the passes of the Taurus and made the Cilician plain their own. From Sis and the harbours of Ayas we shall hold the gate between Anatolia and Syria, and prove that Armenia endures wherever Armenians stand."
+
+    # Kingdom of Hormuz
+    KHRMZ: "Kingdom of Hormuz"
+    KHRMZ_f: "Kingdom of Hormuz"
+    KHRMZ_ADJ: "Hormuzi"
+    KHRMZ_f_desc: "Where the Gulf narrows to a knife's edge, no fleet passes without our leave. From our island seat we hold the pearl banks and the customs house, and the merchants of Persia, Arabia and Hind alike must reckon with the price we set. Let the mainland keep its deserts; the sea is our kingdom, and the strait is our gate."
 
     # Illyria
     ILYRA: "Illyria"
     ILYRA_f: "Illyria"
     ILYRA_ADJ: "Illyrian"
-    ILYRA_f_desc: "Illyria was an ancient region on the western Balkan Peninsula, along the Adriatic Sea, that was home to various tribes collectively known as the Illyrians. It included territories in modern-day Albania, Montenegro, and Croatia, and was later expanded to become the Roman province of Illyricum, which stretched from the Adriatic to the Danube. The name has also been used in later historical contexts and in fiction."
+    ILYRA_f_desc: "TODO: french revolution specific."
+
+    # Illyria
+    ILYRK: "Illyria"
+    ILYRK_f: "Illyria"
+    ILYRK_ADJ: "Illyrian"
+    ILYRK_f_desc: "TODO: about kingdom of illyria."
 
     # Eastern Roman Empire
     EASRE: "Eastern Roman Empire"

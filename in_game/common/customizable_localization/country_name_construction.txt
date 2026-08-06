@@ -1,9 +1,34 @@
 ﻿country_name_construction = {
 	type = country
+	###################################
+	# Country Specific Dynamic Naming #
+	###################################
+	# Armenian Kingdom of Cilicia
+	text = {
+		localization_key = AMCLC_name_construction_empire # "Greater Armenian Cilicia"
+		trigger = {
+			tag = AMCLC
+			country_rank = country_rank:rank_empire
+		}
+	}
+	text = {
+		localization_key = AMCLC_name_construction_kingdom # "Kingdom of Armenian Cilicia"
+		trigger = {
+			tag = AMCLC
+			country_rank = country_rank:rank_kingdom
+		}
+	}
+	text = {
+		localization_key = AMCLC_name_construction_principality # "Armenian Principality of Cilicia"
+		trigger = {
+			tag = AMCLC
+			country_rank = country_rank:rank_duchy
+		}
+	}
 	text = {
 		localization_key = country_name_construction_name
 		trigger = {
-			OR = {
+			OR = {	
 				AND = {
 					tag = PAP
 					has_reform = government_reform:papacy_reform
@@ -45,6 +70,8 @@
 				}
 				# TODO: add a setting to disable static prefix
 				# Add Tags here to set a static name
+				tag = AMCLC
+				tag = PRTTA
 				tag = ERSHR
 				tag = RMNRP
 				tag = ONTRO
@@ -139,6 +166,7 @@
 				tag = HORDE
 				tag = IBNEM
 				tag = ILYRA
+				#tag = ILYRK # Does not use a static name
 				tag = ISREL
 				tag = ITMCH
 				tag = ITNEM

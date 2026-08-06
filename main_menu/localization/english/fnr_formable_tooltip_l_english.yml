@@ -38,6 +38,10 @@
         fnr_papal_hre_established_tt: "The Holy Roman Empire is dissolved. A new sacred confederation under papal authority is established."
         fnr_keep_old_hre_tt: "The Holy Roman Empire continues under our leadership."
 
+      # Armenian Principality of Cilicia
+
+        fnr_amclc_armenian_pops_tt: "At least [ShowNamedValue('amclc_armenian_pop_requirement')|%0] of our pops are [ShowCultureName('armenian_culture')] (currently [ROOT.ScriptValue('amclc_armenian_pop_percent')|%1])"
+
       # First Mexican Empire
 
         MEXCO_fnr_formable_trigger_1_tt: "Either our [religion|e] is [ShowReligionName('nahuatl')] OR our [primary_culture|e] is [ShowCultureName('nahua_culture')], which will result in the First Nahua Empire instead of the First Mexican Empire."
@@ -166,7 +170,7 @@
 
       # Taiping
 
-        TPING_formable_trigger_1_tt: "#G 25%#! of our pops will convert to [ShowReligionName('fnr_god_worshipping_society_taiping')] in full support of the #color_yellow Taiping Rebellion#!."
+        TPING_formable_trigger_1_tt: "#G 25%#! of our pops will convert to [ShowReligionName('fnr_god_worshipping_society_religion')] in full support of the #color_yellow Taiping Rebellion#!."
         TPING_formable_trigger_2_tt: "#G 0.25%#! of our pops will convert to [ShowReligionName('catholic')]."
 
       # Austria-Bavaria

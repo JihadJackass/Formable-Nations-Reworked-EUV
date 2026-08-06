@@ -174,6 +174,48 @@
 				}
 			}
 	# Rank 2
+		# Armenian Principality of Cilicia (Armenian Kingdom of Cilicia when Kingdom)	
+		AMCLC_f = {
+			level = 2	
+			required_locations_fraction = 0.85
+			rule = plausible
+			potential = {
+				has_variable = fnr_historical_enabled 
+				NOT = { 
+					OR = {
+						tag = AMCLC
+						tag_exists = AMCLC
+						# reduce spam
+						tag = AMNAE
+					}
+				}
+				culture = culture:armenian_culture
+			}
+			allow = {
+				custom_tooltip = {
+					text = fnr_amclc_armenian_pops_tt
+					any_pop = {
+						percent >= amclc_armenian_pop_requirement
+						culture = culture:armenian_culture
+					}
+				}
+				stability > 60
+				ruler_reign_in_days = 730
+			}
+			name = AMCLC
+			flag = fnr_AMCLC_flag_kingdom
+			adjective = ARM_ADJ
+			tag = AMCLC
+			color = map_AMCLC
+			provinces = {
+				adana_province
+				icel_province
+				malatya_province
+				marash_province
+				sis_province
+				tarsus_province
+			}
+		}
 		# Jorvik (Scandinavian York)
 		JORVK_f = {
 			level = 2
@@ -651,6 +693,69 @@
 				}
 			}
 	# Rank 3
+		# Kingdom of Hormuz
+			KHRMZ_f = {
+				level = 3
+				required_locations_fraction = 1
+				rule = plausible
+				potential = { 
+					#AND = {
+					#	OR = {
+					#		has_variable = fnr_modern_enabled
+					#		has_variable = fnr_pamiristan_enabled
+					#	}
+					#	NOT = { has_variable = fnr_pamiristan_disabled }
+					#}
+					NOT = { 
+						OR = {
+							tag = KHRMZ
+							tag_exists = KHRMZ
+						}
+					}
+					#culture = culture:syriac_culture 
+				}
+				allow = {
+					capital = location:hormuz 
+					location:hormuz = {
+						population >= 30
+					}
+					AND = {
+						OR = {
+							is_dominant_country_of = culture:omani_culture 
+							is_dominant_country_of = culture:farsi_culture 
+						}
+						stability > 60
+						OR = {
+							culture = { has_culture_group = culture_group:arabic_group }
+							culture = { has_culture_group = culture_group:iranian_group }
+						}
+					}
+				}
+				name = KHRMZ
+				flag = fnr_KHRMZ_flag
+				adjective = KHRMZ_ADJ
+				tag = KHRMZ
+				color = map_KHRMZ
+				provinces = {
+					batina_province
+					minab_province
+					gamrun_province
+				}
+				locations = {
+					as_sib
+					masqat
+					qalhat
+					sur
+					julfar
+				}
+				form_effect = {
+					if = {
+						limit = { country_rank_level < 3 }
+						set_country_rank_effect = { rank = country_rank:rank_kingdom }
+					}
+					trigger_event_non_silently = { id = flavor_KHRMZ.1 }
+				}
+			}
 		# Gobi
 			KGOBI_f = {
 				level = 3
@@ -4853,8 +4958,8 @@
 				color = map_TPING
 				areas = { zhejiang_area fujian_area jiangxi_area jiangnan_area guangdong_area hubei_area hunan_area guangxi_area huaidong_area }
 				form_effect = {
-					change_religion = religion:fnr_god_worshipping_society_taiping
-					change_religion_for_ruler_and_family = { country = ROOT religion = religion:fnr_god_worshipping_society_taiping }
+					change_religion = religion:fnr_god_worshipping_society_religion
+					change_religion_for_ruler_and_family = { country = ROOT religion = religion:fnr_god_worshipping_society_religion }
 					custom_tooltip = { text = TPING_formable_trigger_1_tt }
 					custom_tooltip = { text = TPING_formable_trigger_2_tt }
 					hidden_effect = {
@@ -4862,13 +4967,13 @@
 							limit = {
 								OR = {
 									NOT = {
-										religion = religion:fnr_god_worshipping_society_taiping
+										religion = religion:fnr_god_worshipping_society_religion
 									}
 								}
 							}
 							split_pop = {
 								fraction = 0.25
-								religion = religion:fnr_god_worshipping_society_taiping
+								religion = religion:fnr_god_worshipping_society_religion
 							}
 						}
 						every_pop = { # Catholic
@@ -5465,12 +5570,45 @@
 				color = map_BLKLG
 				areas = { bosnia_area slavonia_area croatia_area serbia_area albania_area macedonia_area bulgaria_area thrace_area northern_greece_area }
 			}
-		# Illyria - Fantasy
-			# TODO POST 2.5.0: Illyria (non-napoleonic kingdom) 
-			# TODO POST 2.5.0: illyrian kingdom (nonhistorical)
+		# Napoleonic Illyria - Fantasy
 			ILYRA_f = {
 				level = 3
 				required_locations_fraction = 0.50 # 0.50
+				rule = plausible
+				potential = {
+					current_age_or_later = { age = age_5_absolutism } # Since there is already another Illyria, it makes sense to hide this one till Napoleonic Era
+					AND = {
+						OR = {
+							has_variable = fnr_fantasy_enabled
+							has_variable = fnr_illyria_enabled
+						}
+						NOT = { has_variable = fnr_illyria_disabled }
+					} 
+					NOT = { 
+						OR = {
+							tag = ILYRA
+							tag_exists = ILYRA
+						}
+					}
+					culture = { has_culture_group = culture_group:slavic_group }
+					culture = { has_culture_group = culture_group:south_slavic_group }
+				}
+				allow = {
+					current_age_or_later = { age = age_5_absolutism }
+				}
+				name = ILYRA
+				flag = fnr_ILYRA
+				adjective = ILYRA_ADJ
+				tag = ILYRA
+				color = map_ILYRA
+				areas = { bosnia_area slavonia_area croatia_area serbia_area }
+				provinces = { illyria_province prilep_province lower_carniola_province }
+				locations = { kruje debar skopje tirana durres }
+			}
+		# Kingdom of Illyria - Historical
+			ILYRK_f = { 
+				level = 3
+				required_locations_fraction = 0.68
 				rule = plausible
 				potential = {
 					AND = {
@@ -5490,7 +5628,7 @@
 					culture = { has_culture_group = culture_group:south_slavic_group }
 				}
 				name = ILYRA
-				flag = ILYRA
+				flag = fnr_ILYRA
 				adjective = ILYRA_ADJ
 				tag = ILYRA
 				color = map_ILYRA
@@ -5498,8 +5636,7 @@
 				provinces = { illyria_province prilep_province lower_carniola_province }
 				locations = { kruje debar skopje tirana durres }
 			}
-		# Bosnia-Serbia - Controversial 
-			# TODO POST 2.5.0: add Republica Srbska
+		# Bosnia-Serbia - Controversial
 			BSSER_f = {
 				level = 3
 				required_locations_fraction = 0.75
@@ -5604,7 +5741,7 @@
 					}
 				}
 			}
-		# Frieslande - Alt-history (Germanized Dutch basically)
+		# Frieslande - Alt-history (German Netherlands)
 			FIESL_f = {
 				level = 3
 				required_locations_fraction = 1
@@ -5632,7 +5769,7 @@
 				color = map_FIESL
 				areas = { friesland_area }
 			}
-		# Kingdom of God - Fantasy #
+		# Kingdom of God - Fantasy
 			KOGOD_f = {
 				level = 3
 				required_locations_fraction = 0.35
@@ -5860,16 +5997,16 @@
 		# Prittania 
 			PRTTA_f = {
 				level = 4
-				required_locations_fraction = 0.86
+				required_locations_fraction = 0.81
 				rule = plausible
 				potential = {
-					AND = {
-						OR = {
-							has_variable = fnr_fantasy_enabled
-							has_variable = fnr_prittania_enabled
-						}
-						NOT = { has_variable = fnr_prittania_disabled }
-					}
+				#	AND = {
+				#		OR = {
+				#			has_variable = fnr_fantasy_enabled
+				#			has_variable = fnr_prittania_enabled
+				#		}
+				#		NOT = { has_variable = fnr_prittania_disabled }
+				#	}
 					NOT = { 
 						OR = {
 							tag = PRTTA
@@ -5878,12 +6015,20 @@
 					}
 				}
 				name = PRTTA
-				flag = fnr_test_flag
+				flag = fnr_test_flag # TODO
 				adjective = PRTTA_ADJ
 				tag = PRTTA
 				color = map_PRTTA
 				regions = {
 					great_britain_region
+				}
+				areas = {
+					iceland_area
+				}
+				locations = {
+					orkney
+					shetland
+					torshavn
 				}
 				form_effect = {
 					if = {
@@ -5891,10 +6036,21 @@
 						set_country_rank_effect = { rank = country_rank:rank_empire }
 					}
 					trigger_event_non_silently = flavor_PRTTA.1
+					hidden_efect = {
+						every_pop = {
+							limit = {
+								NOT = {
+									culture = culture:fnr_brythonic_culture
+								}
+							}
+							split_pop = {
+								fraction = 0.19
+								culture = culture:fnr_brythonic_culture
+							}
+						}
+					}
 					change_culture = culture:fnr_brythonic_culture
-					set_liturgical_language = dialect:fnr_brythonic_language
-					set_court_language = dialect:fnr_brythonic_language	
-					change_religion = religion:fnr_hen_gred_religion		
+					change_religion = religion:fnr_heen_gred_religion
 				}
 			}	
 		# Roman Republic - Fantasy
@@ -6880,7 +7036,7 @@
 		# Serbian Empire - Historical
 			SRBEM_f = {
 				level = 4
-				required_locations_fraction = 0.60
+				required_locations_fraction = 0.77
 				rule = plausible
 				potential = { 
 					AND = {
@@ -6899,7 +7055,7 @@
 					culture = culture:serbian 
 				}
 				name = SRBEM
-				flag = SRBEM
+				flag = fnr_SRBEM
 				adjective = SRBEM_ADJ
 				tag = SRBEM
 				color = map_SRBEM
@@ -7328,7 +7484,7 @@
 		# Adriatic Empire - Fantasy
 			ADREM_f = {
 				level = 4
-				required_locations_fraction = 0.65
+				required_locations_fraction = 0.74
 				rule = plausible
 				potential = {
 					AND = {
@@ -7357,13 +7513,13 @@
 					}
 				}
 				name = ADREM
-				flag = ADREM
+				flag = fnr_SRBEM_flag
 				adjective = ADREM_ADJ
 				tag = ADREM
 				color = map_ADREM
 				areas = { veneto_area croatia_area }
-				provinces = { ferrara_province gorizia_province romagna_province urbino_province marche_province zeta_province lower_carniola_province illyria_province abruzzo_citra_province abruzzo_ultra_province molise_province capitanata_province bari_province otranto_province hum_province }
-				locations = { slunj }
+				provinces = { ferrara_province gorizia_province romagna_province urbino_province marche_province zeta_province lower_carniola_province abruzzo_citra_province abruzzo_ultra_province molise_province capitanata_province bari_province otranto_province hum_province }
+				locations = { slunj shkoder koman lezha dukagjini kruje tirana kavaje durres berat kleisoura_epirus argyrokastro butrint corfu ballsh avlonya }
 				form_effect = {
 					if = {
 						limit = { country_rank_level < 4 }

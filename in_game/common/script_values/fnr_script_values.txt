@@ -1,0 +1,28 @@
+﻿#######################################################
+# Custom Script Values for Formable Nations: Reworked #
+#######################################################
+
+# Cilecian Armenia Pop Check Test
+
+	amclc_armenian_pop_requirement = 0.95
+
+	amclc_armenian_pop_percent = {
+		every_pop = {
+			limit = { culture = culture:armenian_culture }
+			add = 1
+		}
+		save_temporary_value_as = armenian_pops
+
+		value = 0
+		every_pop = {
+			add = 1
+		}
+		save_temporary_value_as = total_pops
+
+		value = scope:armenian_pops
+		if = {
+			limit = { scope:total_pops > 0 }
+			divide = scope:total_pops
+		}
+	}
+

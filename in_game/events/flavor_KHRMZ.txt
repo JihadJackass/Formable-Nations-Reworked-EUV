@@ -1,0 +1,21 @@
+﻿namespace = flavor_KHRMZ
+
+flavor_KHRMZ.1 = { 
+	type = country_event
+	title = flavor_KHRMZ.1.title
+	desc = flavor_KHRMZ.1.desc
+	fire_only_once = yes
+	outcome = neutral
+	option = { # Secure the Strait of Hormuz!
+		name = flavor_KHRMZ.1.a
+		# modifier
+	}
+	option = {
+		name = flavor_KHRMZ.1.b
+		add_gold = {
+			value = monthly_income_trade_and_tax
+			multiply = 240
+			max = 20000
+		}
+	}
+}
