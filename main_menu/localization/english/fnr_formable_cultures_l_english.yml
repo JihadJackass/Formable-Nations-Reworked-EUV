@@ -27,11 +27,21 @@
         fnr_brythonic_culture: "Brythonic"
         fnr_brythonic_culture_desc: "The descendants of the peoples who held the island before the Saxon settlements, surviving in the western and northern lands as Welsh, Cornish, Cumbrian, and their kin across the water in Brittany. Long divided into rival kingdoms, they retain a shared inheritance of law, verse, and genealogy, and a persistent claim to the whole of the island rather than the fragments left to them."
 
+      # Eurasian
+
+        fnr_eurasian_culture: "Eurasian"
+        fnr_eurasian_culture_desc: "Born from the union of German and Russian peoples, the Eurasian identity draws on both traditions without fully belonging to either. German discipline and Russian endurance mingle in its customs, its cuisine, and its speech, producing something neither wholly Western nor wholly Slavic, but a people shaped by two great civilizations meeting as equals. Where the union holds, this shared identity binds German and Russian alike; where it strains, old loyalties are quick to resurface."
+
+      # European
+
+        fnr_european_culture: "European"
+        fnr_european_culture_desc: "Centuries of rivalry, war, and shifting borders have at last given way to something new: a single identity claimed by peoples who once called themselves French, German, Italian, and a dozen other names besides. The old tongues and customs are not erased, but a shared European character now sits alongside them, built on the idea that the continent's many crowns are stronger bound together than divided against one another. Whether this unity outlasts the ambitions that forged it remains to be seen, as it always has for those who have tried to unite Europe before."
+
     ##################
     # Culture Groups #
     ##################
 
-      # None currently
+      # None currently, not currently moddable/modular
 
 
   # End of file

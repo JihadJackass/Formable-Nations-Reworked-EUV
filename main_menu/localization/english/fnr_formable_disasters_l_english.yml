@@ -17,5 +17,8 @@
       an_event_occurs_tt: "An event may occur"
       no_event_occurs_tt: "No event occurs this month"
 
+    # Belgium
 
+      fnr_BLGUM_belgian_revolution: "The Belgian Revolution"
+      fnr_BLGUM_belgian_revolution_desc: "TODO"
 

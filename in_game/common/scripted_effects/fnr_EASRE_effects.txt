@@ -1,0 +1,169 @@
+# Eastern Roman Empire scripted effects (Pax Romana)
+
+# Creates the Pentarchy with root as leader (flavor_EASRE.2)
+fnr_EASRE_create_pentarchy_effect = {
+	if = {
+		limit = {
+			NOT = { exists = international_organization:fnr_EASRE_pentarchy_io }
+		}
+		create_international_organization = {
+			type = international_organization_type:fnr_EASRE_pentarchy_io
+			add_country_to_international_organization = ROOT
+			set_leader_country = ROOT
+		}
+	}
+}
+
+# Restored patriarchal see: country bonus while root owns a restored city. Use with CITY = constantinople/antioch/jerusalem
+fnr_EASRE_sync_see_effect = {
+	if = {
+		limit = {
+			owns = location:$CITY$
+			location:$CITY$ = { has_location_modifier = fnr_EASRE_restored_see }
+		}
+		if = {
+			limit = { NOT = { has_country_modifier = fnr_EASRE_see_$CITY$ } }
+			add_country_modifier = { modifier = fnr_EASRE_see_$CITY$ years = -1 }
+		}
+	}
+	else_if = {
+		limit = { has_country_modifier = fnr_EASRE_see_$CITY$ }
+		remove_country_modifier = fnr_EASRE_see_$CITY$
+	}
+}
+
+# Yearly upkeep for everything the ERE content map makes "scale" or "persist while"
+fnr_EASRE_yearly_upkeep_effect = {
+
+	# Years Constantinople has been held continuously (flavor_EASRE.6 needs 50)
+	if = {
+		limit = { owns = location:constantinople }
+		if = {
+			limit = { NOT = { has_variable = fnr_EASRE_constantinople_years } }
+			set_variable = { name = fnr_EASRE_constantinople_years value = 0 }
+		}
+		change_variable = { name = fnr_EASRE_constantinople_years add = 1 }
+	}
+	else_if = {
+		limit = { has_variable = fnr_EASRE_constantinople_years }
+		remove_variable = fnr_EASRE_constantinople_years
+	}
+
+	# Thematic army: 5+ Thema Headquarters
+	if = {
+		limit = {
+			any_owned_location = {
+				count >= 5
+				has_building = building_type:thema_headquarters
+			}
+		}
+		if = {
+			limit = { NOT = { has_country_modifier = fnr_EASRE_thematic_army } }
+			add_country_modifier = { modifier = fnr_EASRE_thematic_army years = -1 }
+		}
+	}
+	else_if = {
+		limit = { has_country_modifier = fnr_EASRE_thematic_army }
+		remove_country_modifier = fnr_EASRE_thematic_army
+	}
+
+	# Autocrator's Court: heavy cavalry drill, one tier per Thema HQ (max 6)
+	remove_country_modifier = fnr_EASRE_cataphract_drill_1
+	remove_country_modifier = fnr_EASRE_cataphract_drill_2
+	remove_country_modifier = fnr_EASRE_cataphract_drill_3
+	remove_country_modifier = fnr_EASRE_cataphract_drill_4
+	remove_country_modifier = fnr_EASRE_cataphract_drill_5
+	remove_country_modifier = fnr_EASRE_cataphract_drill_6
+	if = {
+		limit = { has_advance = EASRE_autocrator_court }
+		if = {
+			limit = { any_owned_location = { count >= 6 has_building = building_type:thema_headquarters } }
+			add_country_modifier = { modifier = fnr_EASRE_cataphract_drill_6 years = -1 }
+		}
+		else_if = {
+			limit = { any_owned_location = { count >= 5 has_building = building_type:thema_headquarters } }
+			add_country_modifier = { modifier = fnr_EASRE_cataphract_drill_5 years = -1 }
+		}
+		else_if = {
+			limit = { any_owned_location = { count >= 4 has_building = building_type:thema_headquarters } }
+			add_country_modifier = { modifier = fnr_EASRE_cataphract_drill_4 years = -1 }
+		}
+		else_if = {
+			limit = { any_owned_location = { count >= 3 has_building = building_type:thema_headquarters } }
+			add_country_modifier = { modifier = fnr_EASRE_cataphract_drill_3 years = -1 }
+		}
+		else_if = {
+			limit = { any_owned_location = { count >= 2 has_building = building_type:thema_headquarters } }
+			add_country_modifier = { modifier = fnr_EASRE_cataphract_drill_2 years = -1 }
+		}
+		else_if = {
+			limit = { any_owned_location = { has_building = building_type:thema_headquarters } }
+			add_country_modifier = { modifier = fnr_EASRE_cataphract_drill_1 years = -1 }
+		}
+	}
+
+	# Roman Water Engineering: 3 Imperial Cisterns
+	if = {
+		limit = {
+			any_owned_location = {
+				count >= 3
+				has_building = building_type:fnr_EASRE_imperial_cistern
+			}
+		}
+		if = {
+			limit = { NOT = { has_country_modifier = fnr_EASRE_roman_water_engineering } }
+			add_country_modifier = { modifier = fnr_EASRE_roman_water_engineering years = -1 }
+		}
+	}
+	else_if = {
+		limit = { has_country_modifier = fnr_EASRE_roman_water_engineering }
+		remove_country_modifier = fnr_EASRE_roman_water_engineering
+	}
+
+	# Greek Fire: enemy fleets suffer attrition in ERE home waters (refreshed each year, lapses if lost)
+	if = {
+		limit = { has_advance = EASRE_greek_fire }
+		every_owned_location = {
+			limit = {
+				OR = {
+					area = area:thrace_area
+					area = area:aegean_archipelago_area
+					area = area:macedonia_area
+					area = area:northern_greece_area
+					area = area:morea_area
+					area = area:pontus_area
+					area = area:crimea_area
+				}
+			}
+			add_location_modifier = { modifier = fnr_EASRE_greek_fire_waters years = 2 mode = add_and_extend }
+		}
+		# Fate of the Phoenix owners get the vanilla Greek Fire galley instead of the FNR dromon
+		if = {
+			limit = {
+				has_dlc = "d008_fate_of_the_phoenix"
+				NOT = { has_variable = unlocked_greek_fire }
+			}
+			set_variable = unlocked_greek_fire
+		}
+	}
+
+	# Restored patriarchal sees
+	fnr_EASRE_sync_see_effect = { CITY = constantinople }
+	fnr_EASRE_sync_see_effect = { CITY = antioch }
+	fnr_EASRE_sync_see_effect = { CITY = jerusalem }
+	if = {
+		limit = {
+			has_country_modifier = fnr_EASRE_see_constantinople
+			has_country_modifier = fnr_EASRE_see_antioch
+			has_country_modifier = fnr_EASRE_see_jerusalem
+		}
+		if = {
+			limit = { NOT = { has_country_modifier = fnr_EASRE_shield_of_christendom } }
+			add_country_modifier = { modifier = fnr_EASRE_shield_of_christendom years = -1 }
+		}
+	}
+	else_if = {
+		limit = { has_country_modifier = fnr_EASRE_shield_of_christendom }
+		remove_country_modifier = fnr_EASRE_shield_of_christendom
+	}
+}

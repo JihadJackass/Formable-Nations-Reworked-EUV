@@ -1,0 +1,113 @@
+# Eastern Roman Empire Building Types
+# Theme Garrison and Theodosian Walls from the content map use the vanilla buildings instead:
+#   - Thema Headquarters: opened to every ERE by EASRE_thematic_reorganization (allow_thema_headquarters)
+#   - Theodosian Walls:   vanilla unique building; ERE upgrades it with the fnr_EASRE_restore_theodosian_walls decision
+
+# Imperial Cistern - capital area only, max 3 (3 cisterns = Roman Water Engineering, applied by the yearly pulse)
+fnr_EASRE_imperial_cistern = {
+	audio_tier = 2
+	is_foreign = no
+	max_levels = 1
+	pop_type = laborers
+	forbidden_for_estates = yes
+
+	employment_size = aqueduct_system_employment
+	category = infrastructure_category
+
+	town = yes
+	city = yes
+	megalopolis = yes
+
+	build_time = infrastructure_build_time
+
+	country_potential = {
+		has_or_had_tag = EASRE
+		has_advance = EASRE_autocrator_court
+	}
+
+	location_potential = {
+		area = owner.capital.area
+	}
+
+	allow = {
+		owner = {
+			NOT = {
+				any_owned_location = {
+					count >= 3
+					has_building = building_type:fnr_EASRE_imperial_cistern
+				}
+			}
+		}
+	}
+
+	unique_production_methods = {
+		fnr_EASRE_imperial_cistern_maintenance = {
+			tools = 0.10
+			marble = 0.05
+			category = building_maintenance
+		}
+	}
+	construction_demand = town_building_construction
+
+	modifier = {
+		local_population_capacity_modifier = 0.05
+		local_disease_resistance = 0.20
+	}
+}
+
+# Great Academy - Path B, capital only; removed if the capital moves or the Academocracy reform is dropped
+fnr_EASRE_great_academy = {
+	audio_tier = 4
+	is_foreign = no
+	max_levels = 1
+	pop_type = burghers
+
+	employment_size = large_noble_employment
+	category = cultural_category
+
+	town = yes
+	city = yes
+	megalopolis = yes
+
+	expensive = yes
+	build_time = large_capital_build_time
+
+	location_potential = {
+		counts_as_capital = yes
+	}
+
+	allow = {
+		is_capital = yes
+		country_has_no_other_copy_of_building = { type = fnr_EASRE_great_academy }
+		owner = { has_reform = government_reform:fnr_EASRE_academocracy }
+	}
+
+	country_potential = {
+		has_or_had_tag = EASRE
+		has_advance = EASRE_academy
+	}
+
+	remove_if = {
+		OR = {
+			is_no_longer_capital = yes
+			location.owner ?= { NOT = { has_reform = government_reform:fnr_EASRE_academocracy } }
+		}
+	}
+
+	capital_country_modifier = {
+		research_speed_modifier = 0.10
+		global_institution_growth_modifier = 0.10
+		tolerance_heretic = 1
+	}
+
+	unique_production_methods = {
+		fnr_EASRE_great_academy_maintenance = {
+			books = 0.20
+			glass = 0.05
+			marble = 0.05
+			category = building_maintenance
+		}
+	}
+
+	construction_demand = early_capital_building_construction
+}

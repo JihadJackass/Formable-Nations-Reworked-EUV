@@ -1,0 +1,47 @@
+﻿# Formable Nations: Reworked - message types
+# 1.4.6 loads every file in main_menu/gui/messagetypes/, so FNR only lists its own
+# entries here instead of replacing vanilla's 00_messagetypes.txt.
+#
+# Generic actions without a 'message =' line look for PERFORM_<action name>_ACTION.
+
+# Greco-Buddhist / Bactrian content
+
+PERFORM_fnr_spread_litergical_copies_of_alexander_ACTION={
+log=yes
+onmap=no
+popup=yes
+idle=no
+option=yes
+pausepopup=no
+message_category = government
+}
+
+PERFORM_fnr_greco_buddhism_action_hybridize_local_cultures_ACTION={
+log=yes
+onmap=no
+popup=yes
+idle=no
+option=yes
+pausepopup=no
+message_category = government
+}
+
+PERFORM_fnr_proclaim_bactrian_synod_ACTION={
+log=yes
+onmap=no
+popup=yes
+idle=no
+option=yes
+pausepopup=no
+message_category = government
+}
+
+PERFORM_fnr_grecobuddhism_embrace_religion_ACTION={
+log=yes
+onmap=no
+popup=yes
+idle=no
+option=yes
+pausepopup=no
+message_category = government
+}

@@ -5,9 +5,9 @@
   #############
 
     # Prittania
-      fnr_test_religion: "Hen Gred"
-      fnr_test_religion_ADJ: "Hengredic"
-      fnr_test_religion_desc: "The Old Belief of the Brythonic peoples, preserved in the west and north where Roman and Saxon religion took shallowest root. It has no central scripture or hierarchy. Worship centres on local powers tied to specific places such as rivers, springs, groves, and hills, with observances following the agricultural year. Its keepers maintain the boundary oaths, the festival calendar, and the genealogies of the tribes."
+      fnr_heen_gred_religion: "Hen Gred"
+      fnr_heen_gred_religion_ADJ: "Hengredic"
+      fnr_heen_gred_religion_desc: "The Old Belief of the Brythonic peoples, preserved in the west and north where Roman and Saxon religion took shallowest root. It has no central scripture or hierarchy. Worship centres on local powers tied to specific places such as rivers, springs, groves, and hills, with observances following the agricultural year. Its keepers maintain the boundary oaths, the festival calendar, and the genealogies of the tribes."
 
     # Bactria
       fnr_greco_buddhism_religion: "Greco-Buddhism"

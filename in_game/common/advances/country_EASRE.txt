@@ -1,15 +1,156 @@
-﻿# Advances for Eastern Roman Empire
+# Advances for Eastern Roman Empire (Pax Romana)
+# Path gates: fnr_EASRE_path_orthodoxy (Path A) / fnr_EASRE_path_hellenistic (Path B), set by flavor_EASRE.2
+# Path is checked in allow, not potential, because advance visibility is not re-evaluated after an age starts.
 
 	# age_1_traditions
 
+		# Thematic Reorganization - opens vanilla Thema Headquarters to every ERE, not just ex-Byzantium
+		EASRE_thematic_reorganization = {
+			age = age_1_traditions
+			icon = byz_shield_of_the_west
+			potential = {
+				has_or_had_tag = EASRE
+			}
+
+			government_size = 1
+			global_manpower_modifier = 0.05
+			allow_thema_headquarters = yes
+
+			requires = feudalism_advance
+			allow_children = no
+		}
+
+		# Greek Fire - galley bonus here; enemy-fleet attrition in home waters is applied by the yearly pulse
+		EASRE_greek_fire = {
+			age = age_1_traditions
+			icon = iron_working
+			potential = {
+				has_or_had_tag = EASRE
+			}
+			allow = {
+				owns = location:constantinople
+			}
+
+			navy_galley_power = 0.20
+
+			requires = iron_working
+			allow_children = no
+		}
+
 	# age_2_renaissance
 
-	# age_3_discovery
+		# Autocrator's Court - heavy cavalry drill scaling with Thema HQs is applied by the yearly pulse
+		EASRE_autocrator_court = {
+			age = age_2_renaissance
+			icon = diplomatic_influence
+			potential = {
+				has_or_had_tag = EASRE
+			}
+			allow = {
+				prestige > 30
+				legitimacy > 40
+			}
+
+			monthly_prestige = 0.05
+			monthly_legitimacy = 0.1
+			diplomatic_reputation = diplomatic_reputation_weak_bonus
+			diplomatic_spending_cost = -0.25
+
+			requires = vibrant_court_advance
+			allow_children = no
+		}
+
+		# Reconquista Orientalis
+		EASRE_reconquest = {
+			age = age_2_renaissance
+			icon = offensive_army
+			potential = {
+				has_or_had_tag = EASRE
+			}
+			allow = {
+				regular_army_size >= 30
+				stability > 30
+			}
+
+			unlock_casus_belli = cb_restore_roman_borders
+			global_integration_speed_modifier = 0.15
+			land_morale_modifier = 0.05
+
+			requires = recruitment_improvements_renaissance
+			allow_children = no
+		}
 
 	# age_4_reformation
 
+		# Path A - Symphonia of Powers
+		EASRE_symphonia = {
+			age = age_4_reformation
+			icon = byz_reaffirm_synod_powers
+			potential = {
+				has_or_had_tag = EASRE
+			}
+			allow = {
+				has_variable = fnr_EASRE_path_orthodoxy
+				religious_unity > 0.6
+			}
+
+			global_pop_conversion_speed_modifier = 0.15
+			monthly_religious_influence = 0.2
+			monthly_legitimacy = 0.05
+			clergy_estate_target_satisfaction = medium_privilege_target_satisfaction
+
+			requires = confessional_court
+			allow_children = no
+		}
+
+		# Path B - The Second Academy (unlocks the Great Academy building)
+		EASRE_academy = {
+			age = age_4_reformation
+			icon = library_advance
+			potential = {
+				has_or_had_tag = EASRE
+			}
+			allow = {
+				has_variable = fnr_EASRE_path_hellenistic
+			}
+
+			research_speed_modifier = 0.10
+			global_institution_growth_modifier = 0.10
+			tolerance_heretic = 1
+
+			requires = gov_reform_reformation_a
+			allow_children = no
+		}
+
 	# age_5_absolutism
 
-	# age_6_revolutions
+		# Capstone - Basileia ton Rhomaion (fires flavor_EASRE.6 through the yearly pulse)
+		EASRE_basileia = {
+			age = age_5_absolutism
+			icon = imperial_ambitions
+			potential = {
+				has_or_had_tag = EASRE
+			}
+			allow = {
+				owns = location:constantinople
+				owns = location:antioch
+				region:anatolia_region = {
+					any_location_in_region = {
+						count >= 10
+						owner = root
+					}
+				}
+				stability > 50
+				OR = {
+					has_advance = EASRE_symphonia
+					has_advance = EASRE_academy
+				}
+			}
 
-			
+			monthly_prestige = 0.1
+			discipline = 0.05
+			trade_income = 0.10
+
+			requires = war_score_absolutism_advance
+			allow_children = no
+		}

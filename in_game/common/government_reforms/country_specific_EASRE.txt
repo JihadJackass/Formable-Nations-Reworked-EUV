@@ -1,0 +1,57 @@
+# Eastern Roman Empire Specific Government Reforms
+# Unlocked by the path chosen in flavor_EASRE.2 (variables fnr_EASRE_path_orthodoxy / fnr_EASRE_path_hellenistic)
+
+	# Path A - Basileus Autokrator (unlocks the Anathematize decision)
+		fnr_EASRE_basileus_autokrator = {
+			unique = yes
+			potential = {
+				has_or_had_tag = EASRE
+				has_variable = fnr_EASRE_path_orthodoxy
+			}
+			allow = {
+				has_variable = fnr_EASRE_path_orthodoxy
+			}
+			country_modifier = {
+				monthly_legitimacy = 0.1
+				monthly_religious_influence = 0.2
+				global_pop_conversion_speed_modifier = 0.10
+				tax_income_efficiency = small_tax_income_efficiency_bonus
+			}
+			years = 2
+			block_for_rebel = yes
+		}
+
+	# Path B - Hellenistic Academocracy
+		fnr_EASRE_academocracy = {
+			unique = yes
+			potential = {
+				has_or_had_tag = EASRE
+				has_variable = fnr_EASRE_path_hellenistic
+			}
+			allow = {
+				has_variable = fnr_EASRE_path_hellenistic
+			}
+			country_modifier = {
+				research_speed_modifier = 0.10
+				tolerance_heretic = 1
+				diplomatic_reputation = diplomatic_reputation_weak_bonus
+				hire_advisor_cost_modifier = -0.25
+				global_clergy_estate_power = -0.15
+			}
+			# Scholar-ruler: +2% research per 10 ruler administration above 30
+			country_modifier = {
+				scale = {
+					value = 0
+					if = {
+						limit = { has_ruler = yes }
+						add = ruler.adm
+						add = -30
+					}
+					divide = 10
+					min = 0
+				}
+				research_speed_modifier = 0.02
+			}
+			years = 2
+			block_for_rebel = yes
+		}

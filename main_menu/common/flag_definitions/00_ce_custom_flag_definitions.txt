@@ -23,32 +23,6 @@
 			}
 		}
 
-	### Serbian Empire ### TODO
-		fnr_SRBEM_alts = {
-
-			# Rhineland
-			flag_definition = {
-				coa = SRBEM_default
-				priority = 5
-			}
-			# Monarchy
-			flag_definition = {
-				coa = SRBEM_monarchy
-				priority = 10
-				trigger = {
-					coa_def_monarchy_trigger = yes
-				}
-			}
-			# Republic
-			flag_definition = {
-				coa = SRBEM_republic
-				priority = 10
-				trigger = {
-					coa_def_republic_trigger = yes
-				}
-			}
-		}
-
 	### Rhineland / Rhenania / United Duchies / United Counties / United Republics ###
 	# Coded by Tawani @Tawani
 		RHLND_alts = { # Rhineland / Rhenania / United Duchies / United Counties / United Republics

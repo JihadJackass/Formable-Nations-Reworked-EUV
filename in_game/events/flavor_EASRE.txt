@@ -1,0 +1,551 @@
+namespace = flavor_EASRE
+
+# ==========================================================================
+# Pax Romana - Eastern Roman Empire: "Justinian's Shadow"
+#  .1  The Purple Chamber             - on formation (EASRE_f form_effect)
+#  .2  The Patriarch's Question       - 1 year later, picks Path A/B, founds the Pentarchy
+#  .3  The Theme Muster               - 3 years after .2
+#  .4  Hagia Sophia's Bells           - 4 years after .2 (5 after formation)
+#  .5  The Varangian Offer            - 7-14 years after .2 (8-15 after formation)
+#  .6  The City of the World's Desire - capstone, yearly pulse
+#  .7  The Strategos Revolts          - 15-25 years after .3 option B, or Thematic Generals risk
+#  .8  Imperial Mismanagement         - Basileus Autokrator + weak administrator
+#  .9  Foreign Scholars               - Second Academy
+#  .10 The Iconoclast Controversy     - rare, Path B immune
+# ==========================================================================
+
+# 1 - The Purple Chamber
+flavor_EASRE.1 = {
+	type = country_event
+	title = flavor_EASRE.1.title
+	desc = flavor_EASRE.1.desc
+	fire_only_once = yes
+	outcome = positive
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = flavor_EASRE.1.a
+		add_country_modifier = {
+			modifier = fnr_EASRE_heir_of_justinian
+			years = 10
+			mode = add_and_extend
+		}
+		trigger_event_non_silently = { id = flavor_EASRE.2 days = 365 }
+	}
+}
+
+# 2 - The Patriarch's Question (path select)
+flavor_EASRE.2 = {
+	type = country_event
+	title = flavor_EASRE.2.title
+	desc = flavor_EASRE.2.desc
+	fire_only_once = yes
+	outcome = neutral
+
+	trigger = {
+		tag = EASRE
+		NOT = { has_variable = fnr_EASRE_path_orthodoxy }
+		NOT = { has_variable = fnr_EASRE_path_hellenistic }
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate }
+	}
+
+	# A - Orthodoxy Triumphant
+	option = {
+		name = flavor_EASRE.2.a
+		ai_chance = { factor = 60 }
+		set_variable = fnr_EASRE_path_orthodoxy
+		add_country_modifier = {
+			modifier = fnr_EASRE_orthodoxy_triumphant
+			years = 20
+			mode = add_and_extend
+		}
+		add_estate_satisfaction = {
+			type = estate_type:clergy_estate
+			value = estate_satisfaction_mild_bonus
+		}
+		custom_tooltip = fnr_EASRE_path_orthodoxy_tt
+		fnr_EASRE_create_pentarchy_effect = yes
+		hidden_effect = {
+			trigger_event_non_silently = { id = flavor_EASRE.3 days = 1095 }
+			trigger_event_non_silently = { id = flavor_EASRE.4 days = 1460 }
+			trigger_event_non_silently = { id = flavor_EASRE.5 days = { 2555 5110 } }
+		}
+	}
+
+	# B - Hellenistic Renaissance
+	option = {
+		name = flavor_EASRE.2.b
+		ai_chance = { factor = 40 }
+		set_variable = fnr_EASRE_path_hellenistic
+		add_country_modifier = {
+			modifier = fnr_EASRE_hellenistic_renaissance
+			years = 20
+			mode = add_and_extend
+		}
+		add_estate_satisfaction = {
+			type = estate_type:clergy_estate
+			value = estate_satisfaction_weak_penalty
+		}
+		add_estate_satisfaction = {
+			type = estate_type:burghers_estate
+			value = estate_satisfaction_mild_bonus
+		}
+		custom_tooltip = fnr_EASRE_path_hellenistic_tt
+		fnr_EASRE_create_pentarchy_effect = yes
+		hidden_effect = {
+			trigger_event_non_silently = { id = flavor_EASRE.3 days = 1095 }
+			trigger_event_non_silently = { id = flavor_EASRE.4 days = 1460 }
+			trigger_event_non_silently = { id = flavor_EASRE.5 days = { 2555 5110 } }
+		}
+	}
+}
+
+# 3 - The Theme Muster
+flavor_EASRE.3 = {
+	type = country_event
+	title = flavor_EASRE.3.title
+	desc = flavor_EASRE.3.desc
+	fire_only_once = yes
+	outcome = neutral
+
+	trigger = {
+		tag = EASRE
+	}
+
+	illustration_tags = {
+		10 = exterior
+		10 = armed
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
+	}
+
+	# A - Enforce central command
+	option = {
+		name = flavor_EASRE.3.a
+		ai_chance = { factor = 50 }
+		add_country_modifier = {
+			modifier = fnr_EASRE_central_command
+			years = 25
+			mode = add_and_extend
+		}
+		add_estate_satisfaction = {
+			type = estate_type:nobles_estate
+			value = estate_satisfaction_weak_penalty
+		}
+	}
+
+	# B - Empower the strategoi (risk: revolt in 15-25 years)
+	option = {
+		name = flavor_EASRE.3.b
+		ai_chance = { factor = 50 }
+		set_variable = fnr_EASRE_strategoi_empowered
+		add_country_modifier = {
+			modifier = fnr_EASRE_empowered_strategoi
+			years = -1
+		}
+		add_estate_satisfaction = {
+			type = estate_type:nobles_estate
+			value = estate_satisfaction_mild_bonus
+		}
+		custom_tooltip = fnr_EASRE_strategoi_risk_tt
+		hidden_effect = {
+			trigger_event_non_silently = { id = flavor_EASRE.7 days = { 5475 9125 } }
+		}
+	}
+}
+
+# 4 - Hagia Sophia's Bells
+flavor_EASRE.4 = {
+	type = country_event
+	title = flavor_EASRE.4.title
+	desc = flavor_EASRE.4.desc
+	fire_only_once = yes
+	outcome = neutral
+
+	trigger = {
+		tag = EASRE
+		owns = location:constantinople
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate }
+	}
+
+	# A - Full restoration
+	option = {
+		name = flavor_EASRE.4.a
+		trigger = { gold >= 800 }
+		add_gold = -800
+		add_prestige = prestige_severe_bonus
+		location:constantinople = {
+			add_location_modifier = { modifier = fnr_EASRE_hagia_sophia_restored years = -1 }
+		}
+		add_country_modifier = {
+			modifier = fnr_EASRE_hagia_sophia_rededicated
+			years = 20
+			mode = add_and_extend
+		}
+	}
+
+	# B - Basic maintenance
+	option = {
+		name = flavor_EASRE.4.b
+		trigger = { gold >= 200 }
+		add_gold = -200
+		add_prestige = prestige_weak_bonus
+	}
+
+	# C - Path A: Reconsecrate
+	option = {
+		name = flavor_EASRE.4.c
+		trigger = {
+			has_variable = fnr_EASRE_path_orthodoxy
+			gold >= 800
+		}
+		add_gold = -800
+		add_prestige = prestige_severe_bonus
+		add_religious_influence = religious_influence_extreme_bonus
+		location:constantinople = {
+			add_location_modifier = { modifier = fnr_EASRE_hagia_sophia_restored years = -1 }
+		}
+		add_country_modifier = {
+			modifier = fnr_EASRE_hagia_sophia_rededicated
+			years = 20
+			mode = add_and_extend
+		}
+	}
+
+	# D - Path B: Public library
+	option = {
+		name = flavor_EASRE.4.d
+		trigger = {
+			has_variable = fnr_EASRE_path_hellenistic
+			gold >= 800
+		}
+		add_gold = -800
+		add_prestige = prestige_severe_bonus
+		location:constantinople = {
+			add_location_modifier = { modifier = fnr_EASRE_hagia_sophia_restored years = -1 }
+			add_location_modifier = { modifier = fnr_EASRE_hagia_sophia_library years = -1 }
+		}
+		add_country_modifier = {
+			modifier = fnr_EASRE_hagia_sophia_rededicated
+			years = 20
+			mode = add_and_extend
+		}
+		add_estate_satisfaction = {
+			type = estate_type:clergy_estate
+			value = estate_satisfaction_weak_penalty
+		}
+	}
+
+	# E - We cannot afford it
+	option = {
+		name = flavor_EASRE.4.e
+		fallback = yes
+		add_prestige = prestige_weak_penalty
+	}
+}
+
+# 5 - The Varangian Offer
+flavor_EASRE.5 = {
+	type = country_event
+	title = flavor_EASRE.5.title
+	desc = flavor_EASRE.5.desc
+	fire_only_once = yes
+	outcome = positive
+
+	trigger = {
+		tag = EASRE
+		any_country = {
+			culture = { has_culture_group = culture_group:scandinavian_group }
+		}
+	}
+
+	illustration_tags = {
+		10 = exterior
+		10 = armed
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
+	}
+
+	# A - Welcome them (3 regiments, full strength)
+	option = {
+		name = flavor_EASRE.5.a
+		ai_chance = { factor = 50 }
+		set_variable = { name = fnr_EASRE_varangian_guard value = 3 }
+		custom_tooltip = fnr_EASRE_varangians_full_tt
+	}
+
+	# B - Decline (permanently locks the Guard)
+	option = {
+		name = flavor_EASRE.5.b
+		ai_chance = { factor = 10 }
+		add_prestige = prestige_weak_bonus
+		add_legitimacy = legitimacy_weak_bonus
+		custom_tooltip = fnr_EASRE_varangians_declined_tt
+	}
+
+	# C - Accept on condition of baptism (2 regiments)
+	option = {
+		name = flavor_EASRE.5.c
+		ai_chance = { factor = 40 }
+		set_variable = { name = fnr_EASRE_varangian_guard value = 2 }
+		add_religious_influence = religious_influence_weak_bonus
+		custom_tooltip = fnr_EASRE_varangians_converted_tt
+	}
+}
+
+# 6 - The City of the World's Desire (capstone)
+flavor_EASRE.6 = {
+	type = country_event
+	title = flavor_EASRE.6.title
+	desc = flavor_EASRE.6.desc
+	fire_only_once = yes
+	outcome = positive
+
+	trigger = {
+		tag = EASRE
+		owns = location:constantinople
+		OR = {
+			has_advance = EASRE_basileia
+			AND = {
+				has_variable = fnr_EASRE_constantinople_years
+				var:fnr_EASRE_constantinople_years >= 50
+				stability > 60
+			}
+		}
+	}
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = flavor_EASRE.6.a
+		location:constantinople = {
+			add_location_modifier = { modifier = fnr_EASRE_queen_of_cities years = -1 }
+		}
+		add_country_modifier = {
+			modifier = fnr_EASRE_city_of_worlds_desire
+			years = -1
+		}
+		add_prestige = prestige_extreme_bonus
+	}
+}
+
+# 7 - The Strategos Revolts
+flavor_EASRE.7 = {
+	type = country_event
+	title = flavor_EASRE.7.title
+	desc = flavor_EASRE.7.desc
+	outcome = negative
+
+	trigger = {
+		tag = EASRE
+		OR = {
+			has_variable = fnr_EASRE_strategoi_empowered
+			has_estate_privilege = estate_privilege:fnr_EASRE_thematic_generals
+		}
+	}
+
+	illustration_tags = {
+		10 = exterior
+		10 = angry
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
+	}
+
+	# A - Buy his loyalty
+	option = {
+		name = flavor_EASRE.7.a
+		ai_chance = { factor = 50 }
+		add_gold = {
+			value = monthly_income_trade_and_tax
+			multiply = -12
+		}
+		add_estate_satisfaction = {
+			type = estate_type:nobles_estate
+			value = estate_satisfaction_mild_bonus
+		}
+	}
+
+	# B - Crush him and rein in the themes
+	option = {
+		name = flavor_EASRE.7.b
+		ai_chance = { factor = 50 }
+		add_stability = stability_severe_penalty
+		add_army_tradition = army_tradition_mild_bonus
+		add_estate_satisfaction = {
+			type = estate_type:nobles_estate
+			value = estate_satisfaction_severe_penalty
+		}
+		if = {
+			limit = { has_variable = fnr_EASRE_strategoi_empowered }
+			remove_variable = fnr_EASRE_strategoi_empowered
+			remove_country_modifier = fnr_EASRE_empowered_strategoi
+		}
+	}
+}
+
+# 8 - Imperial Mismanagement
+flavor_EASRE.8 = {
+	type = country_event
+	title = flavor_EASRE.8.title
+	desc = flavor_EASRE.8.desc
+	outcome = negative
+
+	trigger = {
+		tag = EASRE
+		has_reform = government_reform:fnr_EASRE_basileus_autokrator
+		ruler ?= { adm < 30 }
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = angry
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:nobles_estate }
+	}
+
+	# A - Pay to fix it
+	option = {
+		name = flavor_EASRE.8.a
+		trigger = { gold >= 300 }
+		add_gold = -300
+	}
+
+	# B - Let it fester
+	option = {
+		name = flavor_EASRE.8.b
+		fallback = yes
+		add_stability = stability_mild_penalty
+		add_country_modifier = {
+			modifier = fnr_EASRE_imperial_mismanagement
+			years = 5
+			mode = add_and_extend
+		}
+	}
+}
+
+# 9 - Foreign Scholars
+flavor_EASRE.9 = {
+	type = country_event
+	title = flavor_EASRE.9.title
+	desc = flavor_EASRE.9.desc
+	outcome = positive
+
+	trigger = {
+		tag = EASRE
+		has_advance = EASRE_academy
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate }
+	}
+
+	# A - Welcome them
+	option = {
+		name = flavor_EASRE.9.a
+		add_research_progress = research_progress_mild_bonus
+		add_prestige = prestige_weak_bonus
+	}
+
+	# B - Endow chairs for them
+	option = {
+		name = flavor_EASRE.9.b
+		trigger = { gold >= 300 }
+		add_gold = -300
+		add_research_progress = research_progress_severe_bonus
+		add_country_modifier = {
+			modifier = fnr_EASRE_foreign_scholars
+			years = 5
+			mode = add_and_extend
+		}
+	}
+}
+
+# 10 - The Iconoclast Controversy
+flavor_EASRE.10 = {
+	type = country_event
+	title = flavor_EASRE.10.title
+	desc = flavor_EASRE.10.desc
+	outcome = negative
+
+	trigger = {
+		tag = EASRE
+		NOT = { has_variable = fnr_EASRE_path_hellenistic }
+		NOT = { has_country_modifier = fnr_EASRE_iconoclasm }
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = angry
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate }
+	}
+
+	# A - Defend the holy images
+	option = {
+		name = flavor_EASRE.10.a
+		ai_chance = { factor = 70 }
+		add_stability = stability_mild_penalty
+		add_estate_satisfaction = {
+			type = estate_type:clergy_estate
+			value = estate_satisfaction_mild_bonus
+		}
+	}
+
+	# B - Side with the iconoclasts
+	option = {
+		name = flavor_EASRE.10.b
+		ai_chance = { factor = 30 }
+		add_stability = stability_severe_penalty
+		add_country_modifier = {
+			modifier = fnr_EASRE_iconoclasm
+			years = 10
+			mode = add_and_extend
+		}
+	}
+}

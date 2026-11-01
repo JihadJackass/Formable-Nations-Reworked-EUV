@@ -1,0 +1,248 @@
+# Eastern Roman Empire Decisions (Pax Romana)
+
+# Restore the patriarchal see of Constantinople - permanent location upgrade; country bonus while owned (yearly pulse)
+fnr_EASRE_restore_see_constantinople = {
+	decision_category = religious_decisions
+
+	tags = { EASRE }
+
+	potential = {
+		owns = location:constantinople
+		NOT = { location:constantinople = { has_location_modifier = fnr_EASRE_restored_see } }
+	}
+
+	allow = {
+		owns = location:constantinople
+		OR = {
+			religion.group = religion_group:christian
+			religion = religion:hellenism_religion
+		}
+		gold >= 600
+		at_war = no
+	}
+
+	ai_will_do = { value = 100 }
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate }
+	}
+
+	option = {
+		name = fnr_EASRE_restore_see_constantinople.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -600
+			location:constantinople = {
+				add_location_modifier = { modifier = fnr_EASRE_restored_see years = -1 }
+			}
+			add_country_modifier = { modifier = fnr_EASRE_see_constantinople years = -1 }
+			add_religious_influence = religious_influence_weak_bonus
+			custom_tooltip = fnr_EASRE_restored_see_tt
+		}
+	}
+}
+
+# Restore the patriarchal see of Antioch - permanent location upgrade; country bonus while owned (yearly pulse)
+fnr_EASRE_restore_see_antioch = {
+	decision_category = religious_decisions
+
+	tags = { EASRE }
+
+	potential = {
+		owns = location:antioch
+		NOT = { location:antioch = { has_location_modifier = fnr_EASRE_restored_see } }
+	}
+
+	allow = {
+		owns = location:antioch
+		OR = {
+			religion.group = religion_group:christian
+			religion = religion:hellenism_religion
+		}
+		gold >= 400
+		at_war = no
+	}
+
+	ai_will_do = { value = 100 }
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate }
+	}
+
+	option = {
+		name = fnr_EASRE_restore_see_antioch.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -400
+			location:antioch = {
+				add_location_modifier = { modifier = fnr_EASRE_restored_see years = -1 }
+			}
+			add_country_modifier = { modifier = fnr_EASRE_see_antioch years = -1 }
+			add_religious_influence = religious_influence_weak_bonus
+			custom_tooltip = fnr_EASRE_restored_see_tt
+		}
+	}
+}
+
+# Restore the patriarchal see of Jerusalem - permanent location upgrade; country bonus while owned (yearly pulse)
+fnr_EASRE_restore_see_jerusalem = {
+	decision_category = religious_decisions
+
+	tags = { EASRE }
+
+	potential = {
+		owns = location:jerusalem
+		NOT = { location:jerusalem = { has_location_modifier = fnr_EASRE_restored_see } }
+	}
+
+	allow = {
+		owns = location:jerusalem
+		OR = {
+			religion.group = religion_group:christian
+			religion = religion:hellenism_religion
+		}
+		gold >= 600
+		at_war = no
+	}
+
+	ai_will_do = { value = 100 }
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate }
+	}
+
+	option = {
+		name = fnr_EASRE_restore_see_jerusalem.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -600
+			location:jerusalem = {
+				add_location_modifier = { modifier = fnr_EASRE_restored_see years = -1 }
+			}
+			add_country_modifier = { modifier = fnr_EASRE_see_jerusalem years = -1 }
+			add_religious_influence = religious_influence_weak_bonus
+			custom_tooltip = fnr_EASRE_restored_see_tt
+		}
+	}
+}
+
+# Restore the Theodosian Walls - upgrades the vanilla Theodosian Walls building
+fnr_EASRE_restore_theodosian_walls = {
+	decision_category = country_specific_decisions
+	only_once = yes
+
+	tags = { EASRE }
+
+	potential = {
+		owns = location:constantinople
+	}
+
+	allow = {
+		owns = location:constantinople
+		location:constantinople = { has_building = building_type:theodosian_walls }
+		gold >= 1000
+		at_war = no
+	}
+
+	ai_will_do = { value = 100 }
+
+	illustration_tags = {
+		10 = exterior
+		10 = armed
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_EASRE_restore_theodosian_walls.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -1000
+			location:constantinople = {
+				add_location_modifier = { modifier = fnr_EASRE_walls_restored years = -1 }
+			}
+			add_prestige = prestige_mild_bonus
+		}
+	}
+}
+
+# Anathematize - Basileus Autokrator + Patriarch's Council. Targets every Orthodox rival. 10 year cooldown.
+fnr_EASRE_anathematize = {
+	decision_category = religious_decisions
+
+	tags = { EASRE }
+
+	potential = {
+		has_reform = government_reform:fnr_EASRE_basileus_autokrator
+	}
+
+	allow = {
+		has_reform = government_reform:fnr_EASRE_basileus_autokrator
+		has_estate_privilege = estate_privilege:fnr_EASRE_patriarchs_council
+		NOT = { has_variable = fnr_EASRE_anathema_cooldown }
+		prestige >= 25
+		custom_tooltip = {
+			text = fnr_EASRE_anathematize_targets_tt
+			any_country = {
+				religion = religion:orthodox
+				OR = {
+					is_rival_of = root
+					root = { is_rival_of = prev }
+				}
+			}
+		}
+	}
+
+	ai_will_do = { value = 50 }
+
+	illustration_tags = {
+		10 = interior
+		10 = angry
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate }
+	}
+
+	option = {
+		name = fnr_EASRE_anathematize.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_prestige = -25
+			add_religious_influence = religious_influence_mild_bonus
+			set_variable = { name = fnr_EASRE_anathema_cooldown years = 10 }
+			custom_tooltip = fnr_EASRE_anathematize_effect_tt
+			hidden_effect = {
+				every_country = {
+					limit = {
+						religion = religion:orthodox
+						OR = {
+							is_rival_of = root
+							root = { is_rival_of = prev }
+						}
+					}
+					add_legitimacy = legitimacy_severe_penalty
+					add_country_modifier = { modifier = fnr_EASRE_anathema years = 5 mode = add_and_extend }
+					add_opinion = { target = root modifier = fnr_EASRE_anathematized }
+				}
+			}
+		}
+	}
+}

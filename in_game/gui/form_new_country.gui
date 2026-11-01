@@ -1,19 +1,24 @@
 lateralview = {
 	name = "form_new_country"
+	widgetid = "form_new_country"
+
+	blockoverride "lateralview_topbuttons_extra" {
+		using = content_topbuttons_extra
+	}
 
 	blockoverride "panel_header" {
 		window_header_alt = {
-			using = bg_main_inner_alt
 			blockoverride "header_text" {
-				text = "FORM_NEW_COUNTRY"
+				text = "TAB_TOOLTIP_CONTENT_TITLE" #FORM_NEW_COUNTRY
 			}
-			# Formable Nations Settings GUI button
+			# FNR: Formable Nations: Reworked settings button (opens formable_nations_debug_window)
 			widget = {
 				name = "formable_nations_button"
 				size = { 40 40 }
 				parentanchor = center
-				position = { 230 0 }
-				#ignore_layout = yes
+				# 570px panel: vanilla's close button covers the right 40px of this row,
+				# so stay at or below ~+200 from centre to keep clear of it.
+				position = { 195 0 }
 				allow_outside = yes
 				
 				button = {
@@ -60,13 +65,19 @@ lateralview = {
 					}
 				}
 			}
-			blockoverride "window_header_alt_color_texture"{
-				using = color_default_brown_texture
+			blockoverride "window_header_alt_color_texture" {
+				using = color_decisions_texture
 			}
 		}
 	}
 
 	blockoverride "panel_content" {
+		header_main_tabs = {
+			blockoverride "content" {
+				using = content_main_tabs
+			}
+		}
+
 		vbox = {
 			using = layoutpolicy_expanding
 			using = bg_main_inner_alt
@@ -273,11 +284,17 @@ lateralview = {
 					spacing = 5
 
 					# Migrate button
-					action_button_regular = {
+					targetted_button_regular = {
+						visible = "[PdxGuiWidget.IsUberButtonVisible]"
 						layoutpolicy_horizontal = expanding
 						size = { -1 40 }
-						actor = "[Player]"
-						left_click_and_hold_action = { action_name = "migrate_pop_based_country" }
+						scripted_action_tooltip = {
+							click_type = left
+							click_mode = confirm
+							action_name = "migrate_pop_based_country"
+							actor = "[Player]"
+						}
+						enabled = "[PdxGuiWidget.IsUberButtonEnabled]"
 						tooltipwidget = {
 							ContextualTooltipType = {
 								blockoverride "title_text" {
@@ -300,12 +317,18 @@ lateralview = {
 					}
 					
 					#steppe_horde_to_monarchy
-					action_button_regular = {
+					targetted_button_regular = {
+						visible = "[PdxGuiWidget.IsUberButtonVisible]"
 						layoutpolicy_horizontal = expanding
 						size = { 100 40 }
 						text = "steppe_horde_to_monarchy"
-						actor = "[Player]"
-						left_click_and_hold_action = { action_name = "steppe_horde_to_monarchy" }
+						scripted_action_tooltip = {
+							click_type = left
+							click_mode = confirm
+							action_name = "steppe_horde_to_monarchy"
+							actor = "[Player]"
+						}
+						enabled = "[PdxGuiWidget.IsUberButtonEnabled]"
 						default_format = "#High"
 						tooltipwidget = {
 							ContextualTooltipType = {
@@ -324,12 +347,18 @@ lateralview = {
 					}
 
 					#monarchy_to_republic
-					action_button_regular = {
+					targetted_button_regular = {
+						visible = "[PdxGuiWidget.IsUberButtonVisible]"
 						layoutpolicy_horizontal = expanding
 						size = { 100 40 }
 						text = "monarchy_to_republic"
-						actor = "[Player]"
-						left_click_and_hold_action = { action_name = "monarchy_to_republic" }
+						scripted_action_tooltip = {
+							click_type = left
+							click_mode = confirm
+							action_name = "monarchy_to_republic"
+							actor = "[Player]"
+						}
+						enabled = "[PdxGuiWidget.IsUberButtonEnabled]"
 						default_format = "#High"
 						tooltipwidget = {
 							ContextualTooltipType = {
@@ -355,12 +384,18 @@ lateralview = {
 					}
 
 					#theocracy_to_monarchy
-					action_button_regular = {
+					targetted_button_regular = {
+						visible = "[PdxGuiWidget.IsUberButtonVisible]"
 						layoutpolicy_horizontal = expanding
 						size = { 100 40 }
 						text = "theocracy_to_monarchy"
-						actor = "[Player]"
-						left_click_and_hold_action = { action_name = "theocracy_to_monarchy" }
+						scripted_action_tooltip = {
+							click_type = left
+							click_mode = confirm
+							action_name = "theocracy_to_monarchy"
+							actor = "[Player]"
+						}
+						enabled = "[PdxGuiWidget.IsUberButtonEnabled]"
 						default_format = "#High"
 						tooltipwidget = {
 							ContextualTooltipType = {
@@ -386,12 +421,18 @@ lateralview = {
 					}
 
 					#republic_to_monarchy
-					action_button_regular = {
+					targetted_button_regular = {
+						visible = "[PdxGuiWidget.IsUberButtonVisible]"
 						layoutpolicy_horizontal = expanding
 						size = { 100 40 }
 						text = "republic_to_monarchy"
-						actor = "[Player]"
-						left_click_and_hold_action = { action_name = "republic_to_monarchy" }
+						scripted_action_tooltip = {
+							click_type = left
+							click_mode = confirm
+							action_name = "republic_to_monarchy"
+							actor = "[Player]"
+						}
+						enabled = "[PdxGuiWidget.IsUberButtonEnabled]"
 						default_format = "#High"
 						tooltipwidget = {
 							ContextualTooltipType = {
@@ -416,13 +457,18 @@ lateralview = {
 					}
 	
 					# settle
-					action_button_regular = {
+					targetted_button_regular = {
+						visible = "[PdxGuiWidget.IsUberButtonVisible]"
 						layoutpolicy_horizontal = expanding
 						size = { 100 40 }
 	
-						title = "game_concept_settle"
-						actor = "[Player]"
-						left_click_and_hold_action = { action_name = "settle_country" }
+						scripted_action_tooltip = {
+							click_type = left
+							click_mode = confirm
+							action_name = "settle_country"
+							actor = "[Player]"
+						}
+						enabled = "[PdxGuiWidget.IsUberButtonEnabled]"
 						default_format = "#High"
 						tooltipwidget = {
 							ContextualTooltipType = {
@@ -450,12 +496,18 @@ lateralview = {
 					}
 
 					#tribal_to_monarchy
-					action_button_regular = {
+					targetted_button_regular = {
+						visible = "[PdxGuiWidget.IsUberButtonVisible]"
 						layoutpolicy_horizontal = expanding
 						size = { 100 40 }
 						text = "tribal_to_monarchy"
-						actor = "[Player]"
-						left_click_and_hold_action = { action_name = "tribal_to_monarchy" }
+						scripted_action_tooltip = {
+							click_type = left
+							click_mode = confirm
+							action_name = "tribal_to_monarchy"
+							actor = "[Player]"
+						}
+						enabled = "[PdxGuiWidget.IsUberButtonEnabled]"
 						default_format = "#High"
 						tooltipwidget = {
 							ContextualTooltipType = {
@@ -481,12 +533,18 @@ lateralview = {
 					}
 
 					#republic_to_theocracy
-					action_button_regular = {
+					targetted_button_regular = {
+						visible = "[PdxGuiWidget.IsUberButtonVisible]"
 						layoutpolicy_horizontal = expanding
 						size = { 100 40 }
 						text = "gov_action_republic_to_theocracy"
-						actor = "[Player]"
-						left_click_and_hold_action = { action_name = "gov_action_republic_to_theocracy" }
+						scripted_action_tooltip = {
+							click_type = left
+							click_mode = confirm
+							action_name = "gov_action_republic_to_theocracy"
+							actor = "[Player]"
+						}
+						enabled = "[PdxGuiWidget.IsUberButtonEnabled]"
 						default_format = "#High"
 						tooltipwidget = {
 							ContextualTooltipType = {
@@ -512,12 +570,18 @@ lateralview = {
 					}
 
 					#monarchy_to_theocracy
-					action_button_regular = {
+					targetted_button_regular = {
+						visible = "[PdxGuiWidget.IsUberButtonVisible]"
 						layoutpolicy_horizontal = expanding
 						size = { 100 40 }
 						text = "monarchy_to_theocracy"
-						actor = "[Player]"
-						left_click_and_hold_action = { action_name = "monarchy_to_theocracy" }
+						scripted_action_tooltip = {
+							click_type = left
+							click_mode = confirm
+							action_name = "monarchy_to_theocracy"
+							actor = "[Player]"
+						}
+						enabled = "[PdxGuiWidget.IsUberButtonEnabled]"
 						default_format = "#High"
 						tooltipwidget = {
 							ContextualTooltipType = {
@@ -543,12 +607,18 @@ lateralview = {
 					}
 
 					#theocracy_to_republic
-					action_button_regular = {
+					targetted_button_regular = {
+						visible = "[PdxGuiWidget.IsUberButtonVisible]"
 						layoutpolicy_horizontal = expanding
 						size = { 100 40 }
 						text = "theocracy_to_republic"
-						actor = "[Player]"
-						left_click_and_hold_action = { action_name = "theocracy_to_republic" }
+						scripted_action_tooltip = {
+							click_type = left
+							click_mode = confirm
+							action_name = "theocracy_to_republic"
+							actor = "[Player]"
+						}
+						enabled = "[PdxGuiWidget.IsUberButtonEnabled]"
 						default_format = "#High"
 						tooltipwidget = {
 							ContextualTooltipType = {
@@ -578,7 +648,18 @@ lateralview = {
 			filtered_sorted_list = {
 				datacontext = "[FormNewCountry.GetCandidatesSortSearch]"
 
-				
+				blockoverride "sort_buttons_filtered_list" {
+					sort_by_key_button = {
+						name = "tier"
+						using = layoutpolicy_expanding
+					}
+
+					sort_by_key_button = {
+						name = "name"
+						using = layoutpolicy_expanding
+					}
+				}
+
 				blockoverride "scroll_list_is_empty" {
 					visible = "[IsDataModelEmpty(FormNewCountry.GetCandidates)]"
 				}
@@ -589,13 +670,18 @@ lateralview = {
 
 				blockoverride "scroll_list_layout" {
 					vbox = {
+						margin = {2 0}
+						margin_top = 10
 
-						# Papal Kingdom of God message
-						widget = {
+						# FNR: Papal Kingdom of God message
+						# vbox (not widget) so the card grows to fit its text; a widget with height 0
+						# draws no background and lets the text overlap the first formable card.
+						vbox = {
 							visible = "[GetPlayer.HasVariable('fnr_is_papacy')]"
 							layoutpolicy_horizontal = expanding
-							size = { -1 0 }
-							
+							margin = { 10 10 }
+							margin_bottom = 12
+
 							using = bg_paper_card_fancy
 							blockoverride "card_fancy_shadow" {
 								margin = { 1 2 }
@@ -603,22 +689,22 @@ lateralview = {
 							}
 							using = bg_cabinet_card_frame
 							using = bg_corner_flavor_wood
-							
-							vbox = {
+
+							text_multi = {
 								layoutpolicy_horizontal = expanding
-								margin = { 10 10 }
-								spacing = 5
-								
-								text_multi = {
-									layoutpolicy_horizontal = expanding
-									autoresize = yes
-									max_width = 500
-									text = "PAPAL_KINGDOM_OF_GOD_INFO"
-									default_format = "#emphasis"
-									align = left
-								}
+								autoresize = yes
+								max_width = 500
+								text = "PAPAL_KINGDOM_OF_GOD_INFO"
+								default_format = "#emphasis"
+								align = left
 							}
 						}
+						# FNR: gap between the Papal card and the formables list
+						widget = {
+							visible = "[GetPlayer.HasVariable('fnr_is_papacy')]"
+							size = { 0 10 }
+						}
+
 						vbox = {
 							spacing = 10
 							layoutpolicy_horizontal = expanding
@@ -641,13 +727,6 @@ lateralview = {
 										using = button_regular_texture
 										using = button_common_template
 										
-										fontsize = 13
-										layoutpolicy_horizontal = expanding
-										size = {-1 50}
-										title = "[NewCountryCandidate.GetFormableCountry.GetName]"
-										effects = "[NewCountryCandidate.GetFormableCountry.GetEffects]"
-										conditions = "[NewCountryCandidate.GetCanFormCountryConditions]"
-										enabled = "[NewCountryCandidate.CanFormCountry]"
 										action_tooltip = {
 											click_type = left
 											click_mode = confirm
@@ -658,6 +737,13 @@ lateralview = {
 											cost = "[NewCountryCandidate.GetCanFormCountryCost]"
 											on_action = "[NewCountryCandidate.FormCountry]"
 										}
+										fontsize = 13
+										layoutpolicy_horizontal = expanding
+										size = {-1 50}
+										title = "[NewCountryCandidate.GetFormableCountry.GetName]"
+										effects = "[NewCountryCandidate.GetFormableCountry.GetEffects]"
+										conditions = "[NewCountryCandidate.GetCanFormCountryConditions]"
+										enabled = "[NewCountryCandidate.CanFormCountry]"
 										tooltipwidget = {
 											ContextualTooltipType = {
 												blockoverride "title_icon" {
@@ -788,10 +874,21 @@ lateralview = {
 												}
 											}
 											
-											text_single = {
-												using = layoutpolicy_expanding
-												raw_text = "[Localize('FORM')] [NewCountryCandidate.GetFormableCountry.GetNameWithNoTooltip] ([NewCountryCandidate.GetFormableCountry.GetRankShort])"
-												align = left
+											icon_text_2rows = {
+												layoutpolicy_horizontal = expanding
+
+												blockoverride "icon_texture" {
+													texture = "[GetConceptTexture('tier')]"
+												}
+
+												blockoverride "top_text_setup" {
+													raw_text = "[Localize('FORM')] [NewCountryCandidate.GetFormableCountry.GetNameWithNoTooltip]"
+												}
+
+												blockoverride "bottom_text_setup" {
+													raw_text = "[NewCountryCandidate.GetFormableCountry.GetRankShort]"
+													default_format = "#explanation_link"
+												}
 											}
 
 											hbox = {
@@ -810,11 +907,13 @@ lateralview = {
 										layoutpolicy_horizontal = expanding
 										margin = {10 5}
 
-										RequirementsList = {
+										TooltipScrolledConditionList = {
 											visible = "[Not(StringIsEmpty(NewCountryCandidate.GetFormableCountry.GetRequirements))]"
+											ontextcontextchanged = "[SetConditionListOnlyFailCollapseRequirementFromTextContext(PdxGuiWidget.AccessSelf)]"
 											textcontext = "[NewCountryCandidate.GetFormableCountry.GetRequirements]"
-											blockoverride "requirementslist_datamodel_is_empty" {
-												visible = no
+											blockoverride "block_scrollarea" { maximumsize = { -1 200 }}
+											blockoverride "empty_list_text" {
+												text = "FORMABLE_COUNTRY_ALL_REQUIREMENTS_MET"
 											}
 										}
 									}

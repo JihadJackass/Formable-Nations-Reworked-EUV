@@ -82,7 +82,6 @@
 			clergy_estate_max_tax = -0.05
 			subject_loyalty = -0.01
 			subject_opinions = -10
-			#stability_cost = 0.0002
 		}
 
 		# Court Demanded Tolerance - called from flavor_ERSHR.5
@@ -161,23 +160,6 @@
 			global_clergy_estate_power = 0.025
 		}
 
-		# royal cities
-	#	fnr_royal_free_cities_modifier = {
-	#		game_data = {
-	#			category = location
-	#		}
-	#		free_building_levels = 20
-	#	}
-
-		# Moravian Patriarchate
-	#	fnr_moravian_patrarchate_modifier = {
-	#		game_data = {
-	#			category = character
-	#		}
-	#			
-	#		character_cabinet_efficiency = 0.05
-	#	}
-
 
 	# Rhineland
 
@@ -185,7 +167,6 @@
 			game_data = {
 				category = country
 			}
-			#stability_cost = 0.025
 			stability_investment = 0.05
 			global_pop_promotion_speed_modifier = 0.02
 			

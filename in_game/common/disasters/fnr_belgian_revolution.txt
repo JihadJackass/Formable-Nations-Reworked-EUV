@@ -1,0 +1,56 @@
+﻿fnr_BLGUM_belgian_revolution = {
+
+	image = "gfx/interface/illustrations/disaster/religious_turmoil.dds"
+
+	monthly_spawn_chance = monthly_spawn_chance_high
+
+	can_start = {
+		has_any_active_disaster = no
+		is_subject = no
+		OR = {
+			religion = religion:catholic
+			religion = religion:lutheran
+		}
+		religious_unity < 0.35
+	}
+
+	can_end = {
+		religious_unity > 0.40
+	}
+
+	modifier = {
+		clergy_estate_target_satisfaction = huge_permanent_target_satisfaction_penalty
+		monthly_war_exhaustion = 0.10
+		tolerance_heretic = -2
+	}
+
+	on_start = {
+		set_variable = {
+			name = target_religious_unity_variable
+			value = {
+				add = religious_unity
+				add = 0.2
+				min = 0.55
+				max = 0.85
+			}
+		}
+		#trigger_event_non_silently = flavor_ERSHR.1
+	}
+
+	on_monthly = {
+		show_as_tooltip = {
+			random_list = {
+				94 = { custom_tooltip = no_event_occurs_tt }
+				6 = { custom_tooltip = an_event_occurs_tt }
+			}
+		}
+		hidden_effect = {
+			random_list = {
+				940 = { }
+			}
+		}
+	}
+
+	on_end = {
+	}
+}

@@ -1,0 +1,265 @@
+##################################################
+# Formable Nations: Reworked - Eastern Roman Empire #
+# Static Modifiers (Pax Romana)                     #
+##################################################
+
+	#########################
+	# Country modifiers      #
+	#########################
+
+		# flavor_EASRE.1 - 10 years
+		fnr_EASRE_heir_of_justinian = {
+			game_data = {
+				category = country
+			}
+			monthly_prestige = 0.1
+			monthly_legitimacy = 0.05
+		}
+
+		# flavor_EASRE.2 Path A - 20 years
+		fnr_EASRE_orthodoxy_triumphant = {
+			game_data = {
+				category = country
+			}
+			global_pop_conversion_speed_modifier = 0.10
+			tolerance_heretic = -1
+			clergy_estate_target_satisfaction = small_permanent_target_satisfaction
+		}
+
+		# flavor_EASRE.2 Path B - 20 years
+		fnr_EASRE_hellenistic_renaissance = {
+			game_data = {
+				category = country
+			}
+			research_speed_modifier = 0.10
+			tolerance_heretic = 1
+			global_pop_conversion_speed_modifier = -0.05
+		}
+
+		# flavor_EASRE.3 option A - 25 years
+		fnr_EASRE_central_command = {
+			game_data = {
+				category = country
+			}
+			discipline = 0.05
+			global_manpower_modifier = -0.05
+		}
+
+		# flavor_EASRE.3 option B - permanent until the strategoi are dealt with (flavor_EASRE.7)
+		fnr_EASRE_empowered_strategoi = {
+			game_data = {
+				category = country
+			}
+			global_manpower_modifier = 0.10
+			global_nobles_estate_power = 0.10
+		}
+
+		# flavor_EASRE.4 full restoration - 20 years
+		fnr_EASRE_hagia_sophia_rededicated = {
+			game_data = {
+				category = country
+			}
+			global_pop_conversion_speed_modifier = 0.10
+			monthly_prestige = 0.05
+		}
+
+		# flavor_EASRE.6 - permanent
+		fnr_EASRE_city_of_worlds_desire = {
+			game_data = {
+				category = country
+			}
+			diplomatic_reputation = diplomatic_reputation_weak_bonus
+			monthly_prestige = 0.05
+		}
+
+		# flavor_EASRE.8 - 5 years
+		fnr_EASRE_imperial_mismanagement = {
+			game_data = {
+				category = country
+			}
+			tax_income_efficiency = medium_tax_income_efficiency_penalty
+		}
+
+		# flavor_EASRE.9 - 5 years
+		fnr_EASRE_foreign_scholars = {
+			game_data = {
+				category = country
+			}
+			research_speed_modifier = 0.05
+			global_institution_growth_modifier = 0.05
+		}
+
+		# flavor_EASRE.10 option B - 10 years
+		fnr_EASRE_iconoclasm = {
+			game_data = {
+				category = country
+			}
+			land_morale_modifier = 0.10
+			global_pop_conversion_speed_modifier = -0.10
+			clergy_estate_target_satisfaction = large_permanent_target_satisfaction_penalty
+		}
+
+		# Anathematize decision - applied to the targeted rulers, 5 years
+		fnr_EASRE_anathema = {
+			game_data = {
+				category = country
+			}
+			monthly_legitimacy = -0.2
+			clergy_estate_target_satisfaction = medium_permanent_target_satisfaction_penalty
+		}
+
+		# Yearly pulse - 5+ Thema Headquarters
+		fnr_EASRE_thematic_army = {
+			game_data = {
+				category = country
+			}
+			global_manpower_modifier = 0.10
+			discipline = 0.025
+		}
+
+		# Yearly pulse - 3 Imperial Cisterns
+		fnr_EASRE_roman_water_engineering = {
+			game_data = {
+				category = country
+			}
+			global_population_capacity_modifier = 0.02
+		}
+
+		# Yearly pulse - Autocrator's Court cataphract drill, one tier per Thema HQ (max 6 = +30%)
+
+		fnr_EASRE_cataphract_drill_1 = {
+			game_data = {
+				category = country
+			}
+			army_heavy_cavalry_power = 0.05
+		}
+
+		fnr_EASRE_cataphract_drill_2 = {
+			game_data = {
+				category = country
+			}
+			army_heavy_cavalry_power = 0.10
+		}
+
+		fnr_EASRE_cataphract_drill_3 = {
+			game_data = {
+				category = country
+			}
+			army_heavy_cavalry_power = 0.15
+		}
+
+		fnr_EASRE_cataphract_drill_4 = {
+			game_data = {
+				category = country
+			}
+			army_heavy_cavalry_power = 0.20
+		}
+
+		fnr_EASRE_cataphract_drill_5 = {
+			game_data = {
+				category = country
+			}
+			army_heavy_cavalry_power = 0.25
+		}
+
+		fnr_EASRE_cataphract_drill_6 = {
+			game_data = {
+				category = country
+			}
+			army_heavy_cavalry_power = 0.30
+		}
+
+		# Yearly pulse - restored patriarchal sees, active while ERE owns the restored city
+		fnr_EASRE_see_constantinople = {
+			game_data = {
+				category = country
+			}
+			trade_income = 0.05
+			global_defensive = 0.05
+			monthly_prestige = 0.02
+		}
+
+		fnr_EASRE_see_antioch = {
+			game_data = {
+				category = country
+			}
+			global_pop_conversion_speed_modifier = 0.05
+			land_morale_modifier = 0.05
+			trade_income = 0.03
+		}
+
+		fnr_EASRE_see_jerusalem = {
+			game_data = {
+				category = country
+			}
+			global_pop_conversion_speed_modifier = 0.10
+			monthly_prestige = 0.03
+			monthly_legitimacy = 0.05
+		}
+
+		fnr_EASRE_shield_of_christendom = {
+			game_data = {
+				category = country
+			}
+			land_morale_modifier = 0.05
+			global_pop_conversion_speed_modifier = 0.05
+		}
+
+	#########################
+	# Location modifiers     #
+	#########################
+
+		# flavor_EASRE.4
+		fnr_EASRE_hagia_sophia_restored = {
+			game_data = {
+				category = location
+			}
+			local_unrest = -0.05
+			local_clergy_estate_power = 0.10
+		}
+
+		# flavor_EASRE.4 Path B option
+		fnr_EASRE_hagia_sophia_library = {
+			game_data = {
+				category = location
+			}
+			local_institution_growth_modifier = 0.25
+			local_max_literacy = 5
+		}
+
+		# flavor_EASRE.6
+		fnr_EASRE_queen_of_cities = {
+			game_data = {
+				category = location
+			}
+			local_trade_center_power = 0.20
+			local_population_capacity_modifier = 0.10
+			local_defensive = 0.10
+		}
+
+		# fnr_EASRE_restore_theodosian_walls decision
+		fnr_EASRE_walls_restored = {
+			game_data = {
+				category = location
+			}
+			local_defensive = 0.25
+			local_garrison_size = 0.25
+		}
+
+		# fnr_EASRE_restore_see_* decisions
+		fnr_EASRE_restored_see = {
+			game_data = {
+				category = location
+			}
+			local_unrest = -0.05
+			local_max_literacy = 2.5
+			local_clergy_estate_power = 0.05
+		}
+
+		# Yearly pulse - Greek Fire home waters (Aegean, Thrace, Black Sea coasts)
+		fnr_EASRE_greek_fire_waters = {
+			game_data = {
+				category = location
+			}
+			hostile_fleet_attrition = 2
+		}

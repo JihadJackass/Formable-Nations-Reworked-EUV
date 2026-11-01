@@ -646,24 +646,21 @@
 						text = NED_f_tt2
 					}
 					trigger_event_non_silently = flavor_DUTCH.2
-					if = { # Option 1: Decentralized (-6 or lower) → United Provinces
+					# Societal value scale runs -100 (centralization, left) to +100 (decentralization, right).
+					if = { # Option 1: Decentralized (above +5) -> United Provinces
 						limit = {
-							AND = {
-								has_societal_value = societal_value_type:centralization_vs_decentralization
-								societal_value:centralization_vs_decentralization > -5
-							}
+							has_societal_value = societal_value_type:centralization_vs_decentralization
+							societal_value:centralization_vs_decentralization > 5
 						}
 						# Become United Provinces
 						change_country_name = NED_UP
 						set_variable = NED_UP_var # Set variable allowing future switch to Dutch Republic
 						hidden_effect = { change_country_flag = NED_UP_FLAG }
 					}
-					else_if = { # Option 2: Centralized (+6 or higher) → Dutch Republic
+					else_if = { # Option 2: Centralized (below -5) -> Dutch Republic
 						limit = {
-							AND = {
-								has_societal_value = societal_value_type:centralization_vs_decentralization
-								societal_value:centralization_vs_decentralization < 5
-							}
+							has_societal_value = societal_value_type:centralization_vs_decentralization
+							societal_value:centralization_vs_decentralization < -5
 						}
 						# Become Dutch Republic
 						custom_tooltip = {
@@ -675,17 +672,9 @@
 						# TODO: add an event that allows you choose between your existing Dutch flag 
 						# or a custom one depending on your societal value
 						hidden_effect = { change_country_flag = NED_DR_FLAG }
-						# Do NOT set variable - cannot switch to United Provinces
+						# Do NOT set NED_UP_var - cannot switch to United Provinces
 					}
-					else = { # Option 3: Balanced (-5 to +5) → Netherlands
-						limit = {
-							AND = {
-								has_societal_value = societal_value_type:centralization_vs_decentralization
-								societal_value:centralization_vs_decentralization < -6
-								has_societal_value = societal_value_type:centralization_vs_decentralization
-								societal_value:centralization_vs_decentralization > 6
-							}
-						}
+					else = { # Option 3: Balanced (-5 to +5) -> Netherlands
 						add_prestige = 5
 						# Remain as Netherlands (NED)
 						# No cosmetic tag change needed
@@ -3740,8 +3729,12 @@
 						culture = culture:walloon
 						culture = culture:low_franconian
 					}
-					current_age_or_later = { age = age_6_revolutions }
+					# a unique disaster that can fire upon low religious unity that can spawn Belgian as a culture and help steer the formable being possible
+					#current_age_or_later = { age = age_6_revolutions }
 				}
+				#trigger = {
+				#	current_age_or_later = { age = age_6_revolutions }
+				#}
 				name = BLGUM
 				flag = BLGUM
 				adjective = BLGUM_ADJ
@@ -5994,6 +5987,49 @@
 				}
 			}	
 	# Rank 4
+		# Eurasian Union
+			EURSN_f = {
+				level = 4
+				required_locations_fraction = 0.81
+				rule = plausible
+				potential = {
+				#	AND = {
+				#		OR = {
+				#			has_variable = fnr_fantasy_enabled
+				#			has_variable = fnr_prittania_enabled
+				#		}
+				#		NOT = { has_variable = fnr_prittania_disabled }
+				#	}
+					OR = { # todo: add reqs and fix flag
+						tag = GER
+						tag = RUS
+					}
+					NOT = { 
+						OR = {
+							tag = EURSN
+							tag_exists = EURSN
+						}
+					}
+				}
+				name = EURSN
+				flag = EURSN
+				adjective = EURSN_ADJ
+				tag = EURSN
+				color = map_PRTTA
+				sub_continents = {
+					eastern_europe
+				}
+				form_effect = {
+					if = {
+						limit = { country_rank_level < 4 }
+						set_country_rank_effect = { rank = country_rank:rank_empire }
+					}
+					custom_tooltip = { text = EURSN_fnr_formable_trigger_1_tt }		
+					trigger_event_non_silently = flavor_PRTTA.1
+					change_culture = culture:fnr_eurasian_culture
+					#change_religion = religion:fnr_heen_gred_religion
+				}
+			}	
 		# Prittania 
 			PRTTA_f = {
 				level = 4
@@ -6036,7 +6072,7 @@
 						set_country_rank_effect = { rank = country_rank:rank_empire }
 					}
 					trigger_event_non_silently = flavor_PRTTA.1
-					hidden_efect = {
+					hidden_effect = {
 						every_pop = {
 							limit = {
 								NOT = {
@@ -7823,7 +7859,11 @@
 							has_variable = fnr_gallicempire_enabled
 						}
 						NOT = { has_variable = fnr_gallicempire_disabled }
-					} 
+					}
+					OR = {
+						culture = culture:gallo
+						culture = culture:breton
+					}
 					NOT = { 
 						OR = {
 							tag = GLCEM
@@ -8714,6 +8754,7 @@
 						limit = { country_rank_level < 4 }
 						set_country_rank_effect = { rank = country_rank:rank_empire }
 					}
+					trigger_event_non_silently = flavor_EASRE.1
 				}
 			}
 		# Western Roman Empire - Non-historical
@@ -9076,6 +9117,9 @@
 					NOT = { 
 						OR = {
 							tag = MCDEM
+							tag = BYZ
+							tag = EASRE
+							tag = WESRE
 							tag_exists = MCDEM
 						}
 					}

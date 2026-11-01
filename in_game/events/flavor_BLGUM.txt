@@ -1,0 +1,84 @@
+﻿namespace = flavor_BLGUM
+
+# ============================================================
+# 1 — Start event
+# Conflict in the Low Countries
+# ============================================================
+flavor_BLGUM.1 = { 
+	type = country_event
+	title = flavor_BLGUM.1.title
+	desc = flavor_BLGUM.1.desc
+	fire_only_once = yes
+	outcome = negative
+	picture = "gfx/interface/illustrations/disaster/religious_turmoil.dds"
+
+	immediate = {
+		# The world reacts to a Zoroastrian crown ruling Muslim subjects
+		every_owned_location = {
+			limit = { NOT = { is_capital = yes } }
+			change_control = -10
+			every_pop = {
+				limit = { NOT = { religion = religion:zoroastrian } }
+				add_pop_satisfaction = -0.1
+			}
+		}
+	}
+
+	option = {
+		name = flavor_BLGUM.1.a
+		add_stability = -1
+		add_war_exhaustion = 5
+	}
+	
+	trigger = {
+		AND = {
+			OR = {
+				culture = culture:walloon
+				culture = culture:low_franconian
+			}
+			OR = {
+				tag = FRI
+				tag = HOL
+				tag = BRB
+				tag = FLA
+				tag = FIESL
+				tag = NED
+			}
+		}
+		OR = {
+			AND = {
+				own_entire_area = area:flanders_area
+				own_entire_area = area:wallonia_area
+				own_entire_area = area:brabant_area
+				own_entire_area = area:holland_area
+				own_entire_area = area:friesland_area
+			}
+			any_subject_or_below = {
+				num_locations > 5
+				OR = {
+					OR = {
+						tag = FRI
+						tag = HOL
+						tag = BRB
+						tag = FLA
+					}
+					OR = {
+						culture = culture:walloon
+						culture = culture:low_franconian
+					}
+				}
+			}
+		}
+	}
+
+	dynamic_historical_event = {
+		tag = FRI
+		tag = HOL
+		tag = BRB
+		tag = FLA
+		from = 1500.1.1
+		to = 1837.1.1
+		monthly_chance = 2
+	}
+}
+

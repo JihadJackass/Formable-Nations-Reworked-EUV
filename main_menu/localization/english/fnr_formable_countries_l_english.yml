@@ -287,6 +287,13 @@
     ILYRK_ADJ: "Illyrian"
     ILYRK_f_desc: "TODO: about kingdom of illyria."
 
+    # Eurasian Union
+    EURSN: "Eurasian Union"
+    EURSN_f: "Eurasian Union"
+    EURSN_ADJ: "Eurasian"
+    EURSN_f_desc: "Two empires, one born of the German lands and one of the vast Russian steppe, set aside centuries of rivalry to bind themselves into a single union spanning the breadth of Eurasia. Neither crown submits fully to the other; instead German industry and organization join Russian manpower and reach, forging a colossus that stretches from the heart of Europe to the edge of Asia. Such a union commands respect from every rival power, though holding together two peoples, two languages, and two proud imperial traditions under one banner is no small feat, and lesser rulers than these would see it torn apart within a generation."
+
+
     # Eastern Roman Empire
     EASRE: "Eastern Roman Empire"
     EASRE_f: "Eastern Roman Empire"

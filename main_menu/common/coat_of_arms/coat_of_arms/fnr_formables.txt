@@ -118,6 +118,38 @@
 
 # end test flag
 
+# Eurasian Union
+	EURSN = {
+		#sub = {
+		#	parent = "sub_england_three_lions" # Q1
+		#	#instance = { scale = { 0.5 0.5 } offset = { 0.0 0.0 } }
+		#}	
+		pattern = "pattern_quarterly_flag.dds"
+		color1 = "white"
+		color2 = "red"
+
+		sub = {
+			parent = "RUS" 
+			instance = { scale = { 0.5 0.5 } offset = { 0.0 0.0 } }
+		}
+		sub = {
+			parent = "RUS" 
+			instance = { scale = { 0.5 0.5 } offset = { 0.5 0.5 } }
+		}		
+		sub = {
+			parent = "sub_div_quarterly_mid"
+			instance = { scale = { 1.0 1.0 } offset = { 0.0 0.0 } }
+		}
+		sub = {
+			parent = "GER_tricolor_escutcheon" 
+			instance = { scale = { 0.5 0.5 } offset = { 0.5 0.0 } }
+		}
+		sub = {
+			parent = "GER_tricolor_escutcheon" 
+			instance = { scale = { 0.5 0.5 } offset = { 0.0 0.5 } }
+		}
+	}
+
 # Armenian Principality of Cilicia
  	fnr_AMCLC_flag_duchy = { # rubenids
 		pattern = "pattern_solid.dds"

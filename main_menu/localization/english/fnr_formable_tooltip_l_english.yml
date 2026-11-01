@@ -38,6 +38,11 @@
         fnr_papal_hre_established_tt: "The Holy Roman Empire is dissolved. A new sacred confederation under papal authority is established."
         fnr_keep_old_hre_tt: "The Holy Roman Empire continues under our leadership."
 
+      # European Union
+
+      # Eurasian Union
+        EURSN_fnr_formable_trigger_1_tt: "We will be given the opportunity to decide between the culture of our Homeland OR a homogeneous cultural merge of all Eurasian cultures leading to the [ShowCultureName('fnr_eurasian_culture')] Culture itself."
+
       # Armenian Principality of Cilicia
 
         fnr_amclc_armenian_pops_tt: "At least [ShowNamedValue('amclc_armenian_pop_requirement')|%0] of our pops are [ShowCultureName('armenian_culture')] (currently [ROOT.ScriptValue('amclc_armenian_pop_percent')|%1])"

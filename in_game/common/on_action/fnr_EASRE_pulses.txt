@@ -1,0 +1,70 @@
+# Eastern Roman Empire yearly pulses (Pax Romana)
+# Every child on_action is gated on tag = EASRE so other countries pay one cheap check.
+
+yearly_country_pulse = {
+	on_actions = {
+		fnr_EASRE_yearly_pulse
+		fnr_EASRE_yearly_mismanagement_pulse
+		fnr_EASRE_yearly_scholars_pulse
+		fnr_EASRE_yearly_iconoclasm_pulse
+		fnr_EASRE_yearly_strategos_pulse
+	}
+}
+
+# Upkeep + capstone event
+fnr_EASRE_yearly_pulse = {
+	trigger = { tag = EASRE }
+	effect = {
+		fnr_EASRE_yearly_upkeep_effect = yes
+	}
+	events = {
+		flavor_EASRE.6	# City of the World's Desire (own trigger)
+	}
+}
+
+# Basileus Autokrator with a weak administrator - roughly every 5 years
+fnr_EASRE_yearly_mismanagement_pulse = {
+	trigger = {
+		tag = EASRE
+		has_reform = government_reform:fnr_EASRE_basileus_autokrator
+	}
+	random_events = {
+		chance_to_happen = 20
+		100 = flavor_EASRE.8
+	}
+}
+
+# Second Academy - foreign scholars roughly every 5 years
+fnr_EASRE_yearly_scholars_pulse = {
+	trigger = {
+		tag = EASRE
+		has_advance = EASRE_academy
+	}
+	random_events = {
+		chance_to_happen = 20
+		100 = flavor_EASRE.9
+	}
+}
+
+# Iconoclasm - roughly once per 50 years (Path B immune, see event trigger)
+fnr_EASRE_yearly_iconoclasm_pulse = {
+	trigger = {
+		tag = EASRE
+	}
+	random_events = {
+		chance_to_happen = 2
+		100 = flavor_EASRE.10
+	}
+}
+
+# Thematic Generals privilege - about 20% per 25 years
+fnr_EASRE_yearly_strategos_pulse = {
+	trigger = {
+		tag = EASRE
+		has_estate_privilege = estate_privilege:fnr_EASRE_thematic_generals
+	}
+	random_events = {
+		chance_to_happen = 1
+		100 = flavor_EASRE.7
+	}
+}

@@ -1,0 +1,447 @@
+#################################################################
+# Formable Nations: Reworked - Eastern Roman Empire Unit Types #
+#################################################################
+# These are FNR fallbacks for content that vanilla only gives to Byzantium or to
+# owners of the Fate of the Phoenix DLC, so nobody gets two copies of a unit:
+#   - Cataphracts:      vanilla a_byzantine_cataphracts needs the DLC -> FNR version only without the DLC
+#   - Varangian Guard:  vanilla a_varangians is Byzantium-only     -> FNR version only for an ERE that was never Byzantium
+#   - Greek Fire Dromon: vanilla greek fire galleys need the DLC    -> FNR version only without the DLC
+#                        (with the DLC the yearly pulse sets unlocked_greek_fire so the vanilla galley appears)
+	# Cataphracts (map: 150 off / 130 def / 150 morale / 180 cost, slow, strong on open ground)
+		fnr_EASRE_cataphract_1 = {
+			copy_from = a_age_1_traditions_heavy_cavalry
+			buildable = yes
+			upgrades_to_only = fnr_EASRE_cataphract_2
+
+			strength_damage_done = 0.20
+			strength_damage_taken = -0.20
+			morale_damage_taken = -0.20
+			movement_speed = -0.15
+
+			combat = {
+				grasslands = 0.10
+				woods = -0.10
+				forest = -0.10
+				hills = -0.10
+				mountains = -0.15
+			}
+
+			construction_demand = expensive_heavy_cavalry_construction
+			maintenance_demand = expensive_heavy_cavalry_maintenance
+
+			country_potential = {
+				has_or_had_tag = EASRE
+				NOT = { has_dlc = "d008_fate_of_the_phoenix" }
+			}
+
+			location_potential = {
+				OR = {
+					is_capital = yes
+					has_building = building_type:thema_headquarters
+				}
+			}
+
+			gfx_tags = { spear_tag heavy_tag }
+		}
+
+		fnr_EASRE_cataphract_2 = {
+			copy_from = a_age_2_renaissance_heavy_cavalry
+			buildable = yes
+			upgrades_to_only = fnr_EASRE_cataphract_3
+
+			strength_damage_done = 0.20
+			strength_damage_taken = -0.20
+			morale_damage_taken = -0.20
+			movement_speed = -0.15
+
+			combat = {
+				grasslands = 0.10
+				woods = -0.10
+				forest = -0.10
+				hills = -0.10
+				mountains = -0.15
+			}
+
+			construction_demand = expensive_heavy_cavalry_construction
+			maintenance_demand = expensive_heavy_cavalry_maintenance
+
+			country_potential = {
+				has_or_had_tag = EASRE
+				NOT = { has_dlc = "d008_fate_of_the_phoenix" }
+			}
+
+			location_potential = {
+				OR = {
+					is_capital = yes
+					has_building = building_type:thema_headquarters
+				}
+			}
+
+			gfx_tags = { spear_tag heavy_tag }
+		}
+
+		fnr_EASRE_cataphract_3 = {
+			copy_from = a_age_3_discovery_heavy_cavalry
+			buildable = yes
+			upgrades_to_only = fnr_EASRE_cataphract_4
+
+			strength_damage_done = 0.20
+			strength_damage_taken = -0.20
+			morale_damage_taken = -0.20
+			movement_speed = -0.15
+
+			combat = {
+				grasslands = 0.10
+				woods = -0.10
+				forest = -0.10
+				hills = -0.10
+				mountains = -0.15
+			}
+
+			construction_demand = expensive_heavy_cavalry_construction
+			maintenance_demand = expensive_heavy_cavalry_maintenance
+
+			country_potential = {
+				has_or_had_tag = EASRE
+				NOT = { has_dlc = "d008_fate_of_the_phoenix" }
+			}
+
+			location_potential = {
+				OR = {
+					is_capital = yes
+					has_building = building_type:thema_headquarters
+				}
+			}
+
+			gfx_tags = { spear_tag heavy_tag }
+		}
+
+		fnr_EASRE_cataphract_4 = {
+			copy_from = a_age_4_reformation_heavy_cavalry
+			buildable = yes
+			upgrades_to_only = fnr_EASRE_cataphract_5
+
+			strength_damage_done = 0.20
+			strength_damage_taken = -0.20
+			morale_damage_taken = -0.20
+			movement_speed = -0.15
+
+			combat = {
+				grasslands = 0.10
+				woods = -0.10
+				forest = -0.10
+				hills = -0.10
+				mountains = -0.15
+			}
+
+			construction_demand = expensive_heavy_cavalry_construction
+			maintenance_demand = expensive_heavy_cavalry_maintenance
+
+			country_potential = {
+				has_or_had_tag = EASRE
+				NOT = { has_dlc = "d008_fate_of_the_phoenix" }
+			}
+
+			location_potential = {
+				OR = {
+					is_capital = yes
+					has_building = building_type:thema_headquarters
+				}
+			}
+
+			gfx_tags = { spear_tag heavy_tag }
+		}
+
+		fnr_EASRE_cataphract_5 = {
+			copy_from = a_age_5_absolutism_heavy_cavalry
+			buildable = yes
+			upgrades_to_only = fnr_EASRE_cataphract_6
+
+			strength_damage_done = 0.20
+			strength_damage_taken = -0.20
+			morale_damage_taken = -0.20
+			movement_speed = -0.15
+
+			combat = {
+				grasslands = 0.10
+				woods = -0.10
+				forest = -0.10
+				hills = -0.10
+				mountains = -0.15
+			}
+
+			construction_demand = expensive_heavy_cavalry_construction
+			maintenance_demand = expensive_heavy_cavalry_maintenance
+
+			country_potential = {
+				has_or_had_tag = EASRE
+				NOT = { has_dlc = "d008_fate_of_the_phoenix" }
+			}
+
+			location_potential = {
+				OR = {
+					is_capital = yes
+					has_building = building_type:thema_headquarters
+				}
+			}
+
+			gfx_tags = { spear_tag heavy_tag }
+		}
+
+		fnr_EASRE_cataphract_6 = {
+			copy_from = a_age_6_revolutions_heavy_cavalry
+			buildable = yes
+
+			strength_damage_done = 0.20
+			strength_damage_taken = -0.20
+			morale_damage_taken = -0.20
+			movement_speed = -0.15
+
+			combat = {
+				grasslands = 0.10
+				woods = -0.10
+				forest = -0.10
+				hills = -0.10
+				mountains = -0.15
+			}
+
+			construction_demand = expensive_heavy_cavalry_construction
+			maintenance_demand = expensive_heavy_cavalry_maintenance
+
+			country_potential = {
+				has_or_had_tag = EASRE
+				NOT = { has_dlc = "d008_fate_of_the_phoenix" }
+			}
+
+			location_potential = {
+				OR = {
+					is_capital = yes
+					has_building = building_type:thema_headquarters
+				}
+			}
+
+			gfx_tags = { spear_tag heavy_tag }
+		}
+
+	# Varangian Guard (map: 140/140/145, capital only, 3 regiments - 2 if converted in flavor_EASRE.5)
+		fnr_EASRE_varangians_2 = {
+			copy_from = a_age_2_renaissance_heavy_infantry
+			is_special = yes
+			buildable = yes
+			upgrades_to_only = fnr_EASRE_varangians_3
+
+			max_strength = 0.1
+			strength_damage_done = 0.25
+			strength_damage_taken = -0.15
+			morale_damage_taken = -0.20
+
+			combat = {
+				coastal = 0.10
+				river = 0.15
+			}
+
+			limit = {
+				value = 0
+				if = {
+					limit = { has_variable = fnr_EASRE_varangian_guard }
+					add = var:fnr_EASRE_varangian_guard
+				}
+			}
+
+			location_trigger = {
+				is_capital = yes
+			}
+
+			country_potential = {
+				has_or_had_tag = EASRE
+				NOT = { has_or_had_tag = BYZ }
+				has_variable = fnr_EASRE_varangian_guard
+			}
+
+			gfx_tags = { axe_tag heavy_tag }
+		}
+
+		fnr_EASRE_varangians_3 = {
+			copy_from = a_age_3_discovery_heavy_infantry
+			is_special = yes
+			buildable = yes
+			upgrades_to_only = fnr_EASRE_varangians_4
+
+			max_strength = 0.1
+			strength_damage_done = 0.25
+			strength_damage_taken = -0.15
+			morale_damage_taken = -0.20
+
+			combat = {
+				coastal = 0.10
+				river = 0.15
+			}
+
+			limit = {
+				value = 0
+				if = {
+					limit = { has_variable = fnr_EASRE_varangian_guard }
+					add = var:fnr_EASRE_varangian_guard
+				}
+			}
+
+			location_trigger = {
+				is_capital = yes
+			}
+
+			country_potential = {
+				has_or_had_tag = EASRE
+				NOT = { has_or_had_tag = BYZ }
+				has_variable = fnr_EASRE_varangian_guard
+			}
+
+			gfx_tags = { axe_tag heavy_tag }
+		}
+
+		fnr_EASRE_varangians_4 = {
+			copy_from = a_age_4_reformation_heavy_infantry
+			is_special = yes
+			buildable = yes
+			upgrades_to_only = fnr_EASRE_varangians_5
+
+			max_strength = 0.1
+			strength_damage_done = 0.25
+			strength_damage_taken = -0.15
+			morale_damage_taken = -0.20
+
+			combat = {
+				coastal = 0.10
+				river = 0.15
+			}
+
+			limit = {
+				value = 0
+				if = {
+					limit = { has_variable = fnr_EASRE_varangian_guard }
+					add = var:fnr_EASRE_varangian_guard
+				}
+			}
+
+			location_trigger = {
+				is_capital = yes
+			}
+
+			country_potential = {
+				has_or_had_tag = EASRE
+				NOT = { has_or_had_tag = BYZ }
+				has_variable = fnr_EASRE_varangian_guard
+			}
+
+			gfx_tags = { axe_tag heavy_tag }
+		}
+
+		fnr_EASRE_varangians_5 = {
+			copy_from = a_age_5_absolutism_heavy_infantry
+			is_special = yes
+			buildable = yes
+			upgrades_to_only = fnr_EASRE_varangians_6
+
+			max_strength = 0.1
+			strength_damage_done = 0.25
+			strength_damage_taken = -0.15
+			morale_damage_taken = -0.20
+
+			combat = {
+				coastal = 0.10
+				river = 0.15
+			}
+
+			limit = {
+				value = 0
+				if = {
+					limit = { has_variable = fnr_EASRE_varangian_guard }
+					add = var:fnr_EASRE_varangian_guard
+				}
+			}
+
+			location_trigger = {
+				is_capital = yes
+			}
+
+			country_potential = {
+				has_or_had_tag = EASRE
+				NOT = { has_or_had_tag = BYZ }
+				has_variable = fnr_EASRE_varangian_guard
+			}
+
+			gfx_tags = { axe_tag heavy_tag }
+		}
+
+		fnr_EASRE_varangians_6 = {
+			copy_from = a_age_6_revolutions_heavy_infantry
+			is_special = yes
+			buildable = yes
+
+			max_strength = 0.1
+			strength_damage_done = 0.25
+			strength_damage_taken = -0.15
+			morale_damage_taken = -0.20
+
+			combat = {
+				coastal = 0.10
+				river = 0.15
+			}
+
+			limit = {
+				value = 0
+				if = {
+					limit = { has_variable = fnr_EASRE_varangian_guard }
+					add = var:fnr_EASRE_varangian_guard
+				}
+			}
+
+			location_trigger = {
+				is_capital = yes
+			}
+
+			country_potential = {
+				has_or_had_tag = EASRE
+				NOT = { has_or_had_tag = BYZ }
+				has_variable = fnr_EASRE_varangian_guard
+			}
+
+			gfx_tags = { axe_tag heavy_tag }
+		}
+
+	# Greek Fire Dromon (map: 130 off / 100 def / 120 morale / 150 cost)
+		fnr_EASRE_greek_fire_dromon_2 = {
+			category = navy_galley
+			copy_from = n_age_2_renaissance_galley
+			buildable = yes
+			upgrades_to = fnr_EASRE_greek_fire_dromon_3
+
+			cannons = 12
+			strength_damage_done = 0.30
+
+			country_potential = {
+				has_or_had_tag = EASRE
+				has_advance = EASRE_greek_fire
+				NOT = { has_dlc = "d008_fate_of_the_phoenix" }
+			}
+
+			gfx_tags = { mediterranean_galley_tag }
+		}
+
+		fnr_EASRE_greek_fire_dromon_3 = {
+			category = navy_galley
+			copy_from = n_age_3_discovery_galley
+			buildable = yes
+
+			cannons = 15
+			strength_damage_done = 0.30
+
+			country_potential = {
+				has_or_had_tag = EASRE
+				has_advance = EASRE_greek_fire
+				NOT = { has_dlc = "d008_fate_of_the_phoenix" }
+				current_age_or_later = { age = age_3_discovery }
+			}
+
+			gfx_tags = { mediterranean_galley_tag }
+		}
+

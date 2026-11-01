@@ -1,0 +1,11 @@
+# Eastern Roman Empire opinion modifiers
+
+io_opinion_fnr_EASRE_pentarchy_io = {
+	value = 25
+}
+
+# Anathematize decision - target's opinion of the ERE
+fnr_EASRE_anathematized = {
+	value = -50
+	yearly_decay = 2
+}

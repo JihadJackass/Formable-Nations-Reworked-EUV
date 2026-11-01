@@ -2,9 +2,37 @@
 # Formable Nations: Reworked Custom Culture #
 #############################################
 
-	# Austrian - 1800s Nationalist variant of Lower Bavarian
+	# TODO cultures:
 
-	# Illyrian
+		# Austrian - 1800s Nationalist variant of Lower Bavarian (today)
+
+		# European - TODO: today
+
+		# Illyrian
+
+	############
+	# Eurasian #
+	############
+
+		fnr_eurasian_culture = {
+			language = church_slavonic_language
+			color = rgb { 66 49 153 }
+			tags = { russian_gfx east_slavic_gfx slavic_gfx eastern_european_gfx european_gfx }
+			opinions = {
+				smolenskian_culture = kindred
+				ryazanian = kindred
+				crimean = kindred
+				astrakhani = negative
+				kazani = enemy 
+				mongolian_culture = enemy
+			}
+			culture_groups = {
+				russian_group
+				slavic_group
+				german_group
+			}
+			
+		}
 
 	###########
 	# Anglois #
@@ -31,7 +59,7 @@
 			culture_groups = {
 				french_group british_group
 			}
-			#suppress_no_pops_error = yes
+			
 		}
 
 	#############
@@ -54,7 +82,7 @@
 				british_group
 			}
 			tags = { french_gfx western_european_gfx european_gfx }
-			#suppress_no_pops_error = yes
+			
 		}
 
 	###############
@@ -63,7 +91,7 @@
 
 		fnr_gallo_roman_culture = {
 			language = irish_dialect
-			color = rgb { 87 140 75 }
+			color = rgb { 160 112 80 }
 			opinions = {
 				gallo = kindred
 				highland = positive
@@ -78,7 +106,7 @@
 				french_group
 			}
 			tags = { french_gfx western_european_gfx european_gfx }
-			#suppress_no_pops_error = yes
+			
 		}
 
 	##################
@@ -92,7 +120,7 @@
 			culture_groups = {
 				greek_group iranian_group indian_group
 			}
-			#suppress_no_pops_error = yes
+			
 		}
 
 	###################
@@ -106,6 +134,6 @@
 			culture_groups = {
 				iranian_group
 			}
-			#suppress_no_pops_error = yes
+			
 		}
 

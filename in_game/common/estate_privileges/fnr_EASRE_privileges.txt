@@ -1,0 +1,96 @@
+# Eastern Roman Empire Estate Privileges
+
+	# Nobles
+
+		# Thematic Generals - all paths. Risk: strategos revolt (yearly pulse, flavor_EASRE.7)
+		fnr_EASRE_thematic_generals = {
+
+			estate = nobles_estate
+
+			potential = {
+				has_or_had_tag = EASRE
+			}
+			allow = {
+				has_advance = EASRE_thematic_reorganization
+			}
+
+			country_modifier = {
+				global_nobles_estate_power = 0.05
+				nobles_estate_target_satisfaction = small_privilege_target_satisfaction
+
+				global_manpower_modifier = 0.10
+				global_defensive = 0.05
+			}
+		}
+
+	# Clergy
+
+		# Patriarch's Council - Path A
+		fnr_EASRE_patriarchs_council = {
+
+			estate = clergy_estate
+
+			potential = {
+				has_or_had_tag = EASRE
+				has_variable = fnr_EASRE_path_orthodoxy
+			}
+			allow = {
+				has_variable = fnr_EASRE_path_orthodoxy
+			}
+
+			country_modifier = {
+				global_clergy_estate_power = 0.10
+				clergy_estate_target_satisfaction = medium_privilege_target_satisfaction
+
+				global_pop_conversion_speed_modifier = 0.10
+				monthly_legitimacy = 0.05
+			}
+		}
+
+	# Burghers - Philosophers' Guild (Path B, replaces the separate estate from the content map)
+
+		# Philosophers' Guild
+		fnr_EASRE_philosophers_guild = {
+
+			estate = burghers_estate
+
+			potential = {
+				has_or_had_tag = EASRE
+				has_variable = fnr_EASRE_path_hellenistic
+			}
+			allow = {
+				has_variable = fnr_EASRE_path_hellenistic
+			}
+
+			country_modifier = {
+				global_burghers_estate_power = 0.05
+				burghers_estate_target_satisfaction = small_privilege_target_satisfaction
+
+				research_speed_modifier = 0.05
+				global_max_literacy = 5
+			}
+		}
+
+		# Lyceum Patronage
+		fnr_EASRE_lyceum_patronage = {
+
+			estate = burghers_estate
+
+			potential = {
+				has_or_had_tag = EASRE
+				has_variable = fnr_EASRE_path_hellenistic
+			}
+			allow = {
+				has_variable = fnr_EASRE_path_hellenistic
+				has_estate_privilege = estate_privilege:fnr_EASRE_philosophers_guild
+			}
+
+			country_modifier = {
+				global_burghers_estate_power = 0.05
+				burghers_estate_target_satisfaction = medium_privilege_target_satisfaction
+				clergy_estate_target_satisfaction = small_privilege_target_satisfaction_penalty
+
+				global_institution_growth_modifier = 0.10
+				hire_advisor_cost_modifier = -0.10
+			}
+		}

@@ -36,15 +36,16 @@ window = {
 		size = { 40 40 }
 
 		button_close_alt = {
-			blockoverride "close_onclick" {
-				onclick = "[GetVariableSystem.Clear('formable_list_window_open')]"
-			}
+			# 1.4.6: vanilla closes this button through "close_on_action" (the old
+			# "close_onclick" block is gone). Its own Esc binding is removed so only
+			# the overlay button below owns Esc.
+			blockoverride "close_on_action" { on_action = "[GetVariableSystem.Clear('formable_list_window_open')]" }
+			blockoverride "close_inputaction" {}
 		}
 
 		button = {
 			size = { 40 40 }
 			input_action = "close_window"
-			use_global_input_instance = yes
 			tooltip = "fnr_settings_close_tooltip"
 			onclick = "[GetVariableSystem.Clear('formable_list_window_open')]"
 		}

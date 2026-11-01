@@ -545,7 +545,6 @@ flavor_ERSHR.13 = {
 # Adur Farnbag (the priests' fire). Generally placed in Pars (Fars)
 # Adur Gushnasp (the warriors'/kings' fire). This is the one with a solid, archaeologically confirmed location: Takht-e Soleyman (Shiz) in Azerbaijan
 # Adur Burzen-Mihr (the farmers' fire). Located in Parthia, in the northeast, traditionally placed on Mount Revand near Nishapur in Khorasan
-
 flavor_ERSHR.14 = { 
 	type = country_event
 	title = flavor_ERSHR.14.title

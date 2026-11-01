@@ -111,16 +111,4 @@
         PERFORM_fnr_moravia_patriarchate_unificatio_unionis_ACTION_BTN2: "OK"
         PERFORM_fnr_moravia_patriarchate_unificatio_unionis_ACTION_BTN3: "$common_string_go_to$"
         PERFORM_fnr_moravia_patriarchate_unificatio_unionis_ACTION_MAP: ""
-
-      # MP_PERIPHORA TEST BUTTON
-
-        PERFORM_fnr_mp_periphora_ACTION: "Test BUTTON"
-        PERFORM_fnr_mp_periphora_ACTION_SETUP: "$unrestrict_peranakan_trading_rights$."
-        PERFORM_fnr_mp_periphora_ACTION_HEADER: "$MESSENGER$"
-        PERFORM_fnr_mp_periphora_ACTION_TITLE: "[SCOPE.sCountry('actor').GetName] is restoring Peranakan Trading Rights"
-        PERFORM_fnr_mp_periphora_ACTION_EFFECTS: "$EFFECT$"
-        PERFORM_fnr_mp_periphora_ACTION_LOG: "[SCOPE.sCountry('actor').GetName] restored Peranakan Trading Rights"
-        PERFORM_fnr_mp_periphora_ACTION_BTN1: "OK"
-        PERFORM_fnr_mp_periphora_ACTION_BTN2: "OK"
-        PERFORM_fnr_mp_periphora_ACTION_BTN3: "$common_string_go_to$"
-        PERFORM_fnr_mp_periphora_ACTION_MAP: ""        
+  

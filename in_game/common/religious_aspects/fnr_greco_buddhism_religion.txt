@@ -91,7 +91,7 @@
 			has_religious_aspect = religious_aspect:fnr_aspect_legacy_of_alexander
 			NOT = {
 				OR = {
-					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great # TODO: balance
+					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great
 					has_religious_aspect = religious_aspect:fnr_aspect_zeus_olympios
 					has_religious_aspect = religious_aspect:fnr_aspect_athena_polias
 					has_religious_aspect = religious_aspect:fnr_aspect_ares_stratios
@@ -106,7 +106,7 @@
 			has_religious_aspect = religious_aspect:fnr_aspect_legacy_of_alexander
 			NOT = {
 				OR = {
-					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great # TODO: balance
+					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great
 					has_religious_aspect = religious_aspect:fnr_aspect_zeus_olympios
 					has_religious_aspect = religious_aspect:fnr_aspect_athena_polias
 					has_religious_aspect = religious_aspect:fnr_aspect_ares_stratios
@@ -141,7 +141,7 @@
 			has_religious_aspect = religious_aspect:fnr_aspect_legacy_of_alexander
 			NOT = {
 				OR = {
-					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great # TODO: balance
+					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great
 					has_religious_aspect = religious_aspect:fnr_aspect_zeus_olympios
 					has_religious_aspect = religious_aspect:fnr_aspect_athena_polias
 					has_religious_aspect = religious_aspect:fnr_aspect_ares_stratios
@@ -156,7 +156,7 @@
 			has_religious_aspect = religious_aspect:fnr_aspect_legacy_of_alexander
 			NOT = {
 				OR = {
-					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great # TODO: balance
+					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great
 					has_religious_aspect = religious_aspect:fnr_aspect_zeus_olympios
 					has_religious_aspect = religious_aspect:fnr_aspect_athena_polias
 					has_religious_aspect = religious_aspect:fnr_aspect_ares_stratios
@@ -184,7 +184,7 @@
 			has_religious_aspect = religious_aspect:fnr_aspect_legacy_of_alexander
 			NOT = {
 				OR = {
-					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great # TODO: balance
+					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great
 					has_religious_aspect = religious_aspect:fnr_aspect_zeus_olympios
 					has_religious_aspect = religious_aspect:fnr_aspect_athena_polias
 					has_religious_aspect = religious_aspect:fnr_aspect_ares_stratios
@@ -200,7 +200,7 @@
 			has_religious_aspect = religious_aspect:fnr_aspect_legacy_of_alexander
 			NOT = {
 				OR = {
-					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great # TODO: balance
+					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great
 					has_religious_aspect = religious_aspect:fnr_aspect_zeus_olympios
 					has_religious_aspect = religious_aspect:fnr_aspect_athena_polias
 					has_religious_aspect = religious_aspect:fnr_aspect_ares_stratios
@@ -228,7 +228,7 @@
 			has_religious_aspect = religious_aspect:fnr_aspect_legacy_of_alexander
 			NOT = {
 				OR = {
-					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great # TODO: balance
+					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great
 					has_religious_aspect = religious_aspect:fnr_aspect_zeus_olympios
 					has_religious_aspect = religious_aspect:fnr_aspect_athena_polias
 					has_religious_aspect = religious_aspect:fnr_aspect_ares_stratios
@@ -243,7 +243,7 @@
 			has_religious_aspect = religious_aspect:fnr_aspect_legacy_of_alexander
 			NOT = {
 				OR = {
-					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great # TODO: balance
+					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great
 					has_religious_aspect = religious_aspect:fnr_aspect_zeus_olympios
 					has_religious_aspect = religious_aspect:fnr_aspect_athena_polias
 					has_religious_aspect = religious_aspect:fnr_aspect_ares_stratios
@@ -271,7 +271,7 @@
 			has_religious_aspect = religious_aspect:fnr_aspect_legacy_of_alexander
 			NOT = {
 				OR = {
-					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great # TODO: balance
+					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great
 					has_religious_aspect = religious_aspect:fnr_aspect_zeus_olympios
 					has_religious_aspect = religious_aspect:fnr_aspect_athena_polias
 					has_religious_aspect = religious_aspect:fnr_aspect_ares_stratios
@@ -286,7 +286,7 @@
 			has_religious_aspect = religious_aspect:fnr_aspect_legacy_of_alexander
 			NOT = {
 				OR = {
-					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great # TODO: balance
+					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great
 					has_religious_aspect = religious_aspect:fnr_aspect_zeus_olympios
 					has_religious_aspect = religious_aspect:fnr_aspect_athena_polias
 					has_religious_aspect = religious_aspect:fnr_aspect_ares_stratios
@@ -314,7 +314,7 @@
 			has_religious_aspect = religious_aspect:fnr_aspect_legacy_of_alexander
 			NOT = {
 				OR = {
-					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great # TODO: balance
+					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great
 					has_religious_aspect = religious_aspect:fnr_aspect_zeus_olympios
 					has_religious_aspect = religious_aspect:fnr_aspect_athena_polias
 					has_religious_aspect = religious_aspect:fnr_aspect_ares_stratios
@@ -329,7 +329,7 @@
 			has_religious_aspect = religious_aspect:fnr_aspect_legacy_of_alexander
 			NOT = {
 				OR = {
-					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great # TODO: balance
+					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great
 					has_religious_aspect = religious_aspect:fnr_aspect_zeus_olympios
 					has_religious_aspect = religious_aspect:fnr_aspect_athena_polias
 					has_religious_aspect = religious_aspect:fnr_aspect_ares_stratios
@@ -358,7 +358,7 @@
 			has_religious_aspect = religious_aspect:fnr_aspect_legacy_of_alexander
 			NOT = {
 				OR = {
-					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great # TODO: balance
+					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great
 					has_religious_aspect = religious_aspect:fnr_aspect_zeus_olympios
 					has_religious_aspect = religious_aspect:fnr_aspect_athena_polias
 					has_religious_aspect = religious_aspect:fnr_aspect_ares_stratios
@@ -373,7 +373,7 @@
 			has_religious_aspect = religious_aspect:fnr_aspect_legacy_of_alexander
 			NOT = {
 				OR = {
-					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great # TODO: balance
+					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great
 					has_religious_aspect = religious_aspect:fnr_aspect_zeus_olympios
 					has_religious_aspect = religious_aspect:fnr_aspect_athena_polias
 					has_religious_aspect = religious_aspect:fnr_aspect_ares_stratios
@@ -403,7 +403,7 @@
 			has_religious_aspect = religious_aspect:fnr_aspect_likeness_of_the_buddha
 			NOT = {
 				OR = {
-					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great # TODO: balance
+					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great
 					has_religious_aspect = religious_aspect:fnr_aspect_zeus_olympios
 					has_religious_aspect = religious_aspect:fnr_aspect_athena_polias
 					has_religious_aspect = religious_aspect:fnr_aspect_ares_stratios
@@ -446,7 +446,7 @@
 			has_religious_aspect = religious_aspect:fnr_aspect_likeness_of_the_buddha
 			NOT = {
 				OR = {
-					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great # TODO: balance
+					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great
 					has_religious_aspect = religious_aspect:fnr_aspect_zeus_olympios
 					has_religious_aspect = religious_aspect:fnr_aspect_athena_polias
 					has_religious_aspect = religious_aspect:fnr_aspect_ares_stratios
@@ -488,7 +488,7 @@
 			has_religious_aspect = religious_aspect:fnr_aspect_likeness_of_the_buddha
 			NOT = {
 				OR = {
-					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great # TODO: balance
+					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great
 					has_religious_aspect = religious_aspect:fnr_aspect_zeus_olympios
 					has_religious_aspect = religious_aspect:fnr_aspect_athena_polias
 					has_religious_aspect = religious_aspect:fnr_aspect_ares_stratios
@@ -530,7 +530,7 @@
 			has_religious_aspect = religious_aspect:fnr_aspect_likeness_of_the_buddha
 			NOT = {
 				OR = {
-					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great # TODO: balance
+					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great
 					has_religious_aspect = religious_aspect:fnr_aspect_zeus_olympios
 					has_religious_aspect = religious_aspect:fnr_aspect_athena_polias
 					has_religious_aspect = religious_aspect:fnr_aspect_ares_stratios
@@ -572,7 +572,7 @@
 			has_religious_aspect = religious_aspect:fnr_aspect_likeness_of_the_buddha
 			NOT = {
 				OR = {
-					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great # TODO: balance
+					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great
 					has_religious_aspect = religious_aspect:fnr_aspect_zeus_olympios
 					has_religious_aspect = religious_aspect:fnr_aspect_athena_polias
 					has_religious_aspect = religious_aspect:fnr_aspect_ares_stratios
@@ -614,7 +614,7 @@
 			has_religious_aspect = religious_aspect:fnr_aspect_likeness_of_the_buddha
 			NOT = {
 				OR = {
-					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great # TODO: balance
+					has_religious_aspect = religious_aspect:fnr_aspect_alexander_the_great
 					has_religious_aspect = religious_aspect:fnr_aspect_zeus_olympios
 					has_religious_aspect = religious_aspect:fnr_aspect_athena_polias
 					has_religious_aspect = religious_aspect:fnr_aspect_ares_stratios

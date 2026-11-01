@@ -32,14 +32,13 @@ fnr_japan_IO_list = {
     }
 }
 
-fnr_moravia_patriarchate_list = {
-    potential = {
-		always = no
-    }
-    actions = {
-        fnr_moravia_patriarchate_influence_hre_members
-        fnr_moravia_patriarchate_polish_coalition
-        fnr_moravia_patriarchate_expand_authority
-        fnr_moravia_patriarchate_unificatio_unionis
-    }
-}
+ #       potential = {
+  #          always = no
+ #       }
+ #       actions = {
+ #           fnr_moravia_patriarchate_influence_hre_members
+ #           fnr_moravia_patriarchate_polish_coalition
+ #           fnr_moravia_patriarchate_expand_authority
+ #           fnr_moravia_patriarchate_unificatio_unionis
+ #       }
+#    }

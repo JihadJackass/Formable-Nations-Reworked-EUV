@@ -4,6 +4,16 @@
   # Formable Nations: Reworked - Events #
   #######################################
 
+    ###########
+    # Belgium #
+    ###########
+
+      flavor_BLGUM.1: "Conflict in the Low Countries"
+      flavor_BLGUM.1.entry: "Conflict in the Low Countries"
+      flavor_BLGUM.1.title: "Conflict in the Low Countries"
+      flavor_BLGUM.1.desc: "Beneath the surface of the Low Countries, an old fault line runs deep: a Catholic, French and Flemish-speaking south bound uneasily to a Protestant Dutch north, sharing a crown but little else. Grievances over language, faith, and representation simmer in Wallonia and Flanders alike, and each slight from the north, real or imagined, is remembered and repeated. It is not yet open rebellion, but the mood in the southern provinces grows harder to ignore, and those who watch these things closely wonder how much longer the union can hold before it breaks, as such unions so often do."
+      flavor_BLGUM.1.a: "This remains a concern."
+
     #############
     # Prittania #
     #############
@@ -345,3 +355,14 @@
         flavor_GMORV.3.title: "Tomb of Svätopluk I"
         flavor_GMORV.3.desc: "Your Majesty, we have discovered what we believe to be the tomb of Svatopluk I, the great ruler who led Great Moravia to its zenith. Our explorers have uncovered a crown and sword within - the very regalia of our ancient kings. These sacred relics shall once again serve as symbols of royal power and legitimacy, connecting your reign to the glory of our forefathers."
         flavor_GMORV.3.a: "The relic is restored!"
+
+    #####################
+    # Kingdom of Hormuz #
+    #####################
+
+      # Formation: the Strait
+
+        flavor_KHRMZ.1.title: "Master of the Strait"
+        flavor_KHRMZ.1.desc: "From the walls of our island fortress the whole of the strait lies open below us: the dhows of Basra and Siraf beating down the Gulf, the great ships of Hind and the Swahili coast waiting at anchor for the customs house to open. Every cargo that enters or leaves the Gulf must pass within sight of Hormuz, and now every one of them sails under our protection, and at our price.\n\nThe treasurers urge us to raise the tolls at once and fill the vaults while the merchants have no other road. The captains of the fleet argue that a strait is only worth what we can defend, and that silver spent on war galleys and harbour towers today will be repaid a hundredfold for as long as Hormuz holds the gate."
+        flavor_KHRMZ.1.a: "Secure the Strait of Hormuz!"
+        flavor_KHRMZ.1.b: "Let the merchants fill our treasury."

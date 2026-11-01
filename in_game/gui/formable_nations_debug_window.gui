@@ -1,19 +1,14 @@
 ﻿# Formable Nations Settings GUI
 #
-# 1.3 COMPATIBILITY REWORK OF THE CLOSE LOGIC:
+# CLOSE LOGIC (updated for 1.4.6):
 # - This window's visibility is bound to the 'formable_nations_debug_window_open'
-#   variable, so the ONLY thing that can close it is clearing/toggling that variable.
-# - Previously, closing relied entirely on vanilla template internals:
-#     * button_close_alt  -> blockoverride "close_onclick"
-#     * window_header_alt -> blockoverride "button_close" -> button_close_normal
-#   If a patch renames a block or restructures a template, blockoverrides fail
-#   SILENTLY: the X still renders (vanilla default) but its onclick no longer
-#   clears our variable, and the Esc shortcut rides on that same vanilla button,
-#   so both die together.
-# - Fix: a self-contained transparent overlay button sits exactly on top of the
-#   X. It uses NO vanilla templates, carries its own onclick and the
-#   'close_window' shortcut (Esc), and therefore survives vanilla GUI changes.
-#   The vanilla-styled button underneath is kept purely for the visuals.
+#   variable, so the ONLY thing that can close it is clearing that variable.
+# - 1.4.6 removed the vanilla blocks this file used to hook into
+#   (button_close_alt -> "close_onclick", window_header_alt -> "button_close"),
+#   and 'use_global_input_instance' is no longer a valid property.
+# - The styled X now carries its own onclick, and the transparent overlay
+#   button on top of it carries the 'close_window' shortcut (Esc). The overlay
+#   uses no vanilla templates, so it keeps working if a patch changes them.
 
 window = {
 	name = "formable_nations_debug_window"
@@ -31,12 +26,14 @@ window = {
 		position = { -15 15 }
 		size = { 40 40 }
 
-		# Vanilla-styled X (visuals). Harmless if the blockoverride name ever
-		# stops matching, because the overlay button below does the real work.
+		# Vanilla-styled X. If a patch renames its blocks again it falls back to
+		# visuals only, and the overlay button below still does the work.
 		button_close_alt = {
-			blockoverride "close_onclick" {
-				onclick = "[GetVariableSystem.Clear('formable_nations_debug_window_open')]"
-			}
+			# 1.4.6: vanilla closes this button through "close_on_action" (the old
+			# "close_onclick" block is gone). Its own Esc binding is removed so only
+			# the overlay button below owns Esc.
+			blockoverride "close_on_action" { on_action = "[GetVariableSystem.Clear('formable_nations_debug_window_open')]" }
+			blockoverride "close_inputaction" {}
 		}
 
 		# Patch-proof close: plain button, no vanilla templates involved.
@@ -45,7 +42,6 @@ window = {
 		button = {
 			size = { 40 40 }
 			input_action = "close_window"
-			use_global_input_instance = yes
 			tooltip = "fnr_settings_close_tooltip"   # or raw_text-style: tooltip = "Close (Esc)"
 			onclick = "[GetVariableSystem.Clear('formable_nations_debug_window_open')]"
 		}
@@ -55,17 +51,6 @@ window = {
 		window_header_alt = {
 			blockoverride "header_text" {
 				raw_text = "Formable Nations: Reworked Settings GUI"
-			}
-			# Second X inside the header. Kept for looks; if vanilla ever
-			# removes/renames the "button_close" block this button simply
-			# stops appearing, and the overlay button above still closes
-			# the window.
-			blockoverride "button_close" {
-				button_close_normal = {
-					parentanchor = top|right
-					position = { -10 10 }
-					onclick = "[GetVariableSystem.Clear('formable_nations_debug_window_open')]"
-				}
 			}
 		}
 		# Formable Settings Tab
