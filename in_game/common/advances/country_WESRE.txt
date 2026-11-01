@@ -1,15 +1,127 @@
-﻿# Advances for Western Roman Empire
+﻿# Advances for Western Roman Empire (Pax Romana - "The Last Light")
+# Advances can only carry modifiers and unlocks. Everything the content map makes conditional or
+# persistent (Ravenna's Imperial Capital, Papal Blessing, Renovatio, removing The Last Light)
+# is applied by the yearly pulse in fnr_WESRE_effects.txt.
 
 	# age_1_traditions
 
+		# Foederati Integration - unlocks Foederati Cavalry, the Foederati Chiefs privilege,
+		# the Foederati Settlement law and the Settle the Foederati decision
+		WESRE_foederati_integration = {
+			age = age_1_traditions
+			icon = finest_of_horses
+			potential = {
+				has_or_had_tag = WESRE
+			}
+
+			global_manpower_modifier = 0.15
+			army_light_cavalry_power = 0.10
+			monthly_legitimacy = -0.05
+
+			unlock_law = fnr_WESRE_foederati_law
+
+			requires = feudalism_advance
+			allow_children = no
+		}
+
+		# Limes Reconstruction - unlocks the Watchtower -> Burgus -> Castellum chain
+		WESRE_limes_reconstruction = {
+			age = age_1_traditions
+			icon = defensive_mentality
+			potential = {
+				has_or_had_tag = WESRE
+			}
+			allow = {
+				gold >= 500
+				any_owned_location = {
+					count >= 3
+					is_border = yes
+				}
+			}
+
+			global_defensive = 0.05
+			global_hostile_attrition = 1
+
+			requires = iron_working
+			allow_children = no
+		}
+
 	# age_2_renaissance
 
-	# age_3_discovery
+		# Ravenna's Bureaucracy - Ravenna's "Imperial Capital" location bonus is applied by the yearly pulse
+		WESRE_ravenna_bureaucracy = {
+			age = age_2_renaissance
+			icon = smooth_administration
+			potential = {
+				has_or_had_tag = WESRE
+			}
+			allow = {
+				owns = location:ravenna
+				stability > 20
+			}
+
+			government_size = 1
+			tax_income_efficiency = small_tax_income_efficiency_bonus
+
+			requires = crown_power_advance_renaissance
+			allow_children = no
+		}
+
+		# Ecclesiastical Alliance - permanent "Papal Blessing" is applied by the yearly pulse
+		# Refusing the Pope in flavor_WESRE.4 raises the religious unity requirement from 40% to 55%
+		WESRE_ecclesiastical_alliance = {
+			age = age_2_renaissance
+			icon = scholasticism
+			potential = {
+				has_or_had_tag = WESRE
+			}
+			allow = {
+				owns = location:rome
+				trigger_if = {
+					limit = { has_variable = fnr_WESRE_refused_the_pope }
+					religious_unity > 0.55
+				}
+				trigger_else = {
+					religious_unity > 0.4
+				}
+			}
+
+			global_pop_conversion_speed_modifier = 0.10
+			monthly_legitimacy = 0.05
+			clergy_estate_target_satisfaction = small_privilege_target_satisfaction
+
+			requires = vibrant_court_advance
+			allow_children = no
+		}
 
 	# age_4_reformation
 
-	# age_5_absolutism
+		# Capstone - Renovatio Occidentalis (removes The Last Light and fires flavor_WESRE.8 through the yearly pulse)
+		WESRE_renovatio_occidentalis = {
+			age = age_4_reformation
+			icon = glory_of_rome
+			potential = {
+				has_or_had_tag = WESRE
+			}
+			allow = {
+				owns = location:rome
+				owns = location:ravenna
+				owns = location:milano
+				any_owned_location = {
+					count >= 25
+					OR = {
+						region = region:france_region
+						region = region:iberia_region
+					}
+				}
+				stability > 40
+				has_advance = WESRE_ecclesiastical_alliance
+			}
 
-	# age_6_revolutions
+			monthly_prestige = 0.1
+			land_morale_modifier = 0.05
+			tax_income_efficiency = small_tax_income_efficiency_bonus
 
-			
+			requires = confessionalism_advance
+			allow_children = no
+		}

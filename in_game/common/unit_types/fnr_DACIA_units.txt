@@ -1,0 +1,138 @@
+﻿# Dacia - Falxmen (two-handed curved blades). Needs DACIA_draco_standard. Hit very hard, take more losses.
+		fnr_DACIA_falxmen_1 = {
+			copy_from = a_age_1_traditions_heavy_infantry
+			buildable = yes
+			upgrades_to_only = fnr_DACIA_falxmen_2
+
+			strength_damage_done = 0.30
+			morale_damage_done = 0.10
+			strength_damage_taken = 0.10
+
+			combat = {
+				woods = 0.10
+				forest = 0.10
+				hills = 0.10
+			}
+
+			country_potential = {
+				has_or_had_tag = DACIA
+				has_advance = DACIA_draco_standard
+			}
+
+			gfx_tags = { sword_tag heavy_tag }
+		}
+
+		fnr_DACIA_falxmen_2 = {
+			copy_from = a_age_2_renaissance_heavy_infantry
+			buildable = yes
+			upgrades_to_only = fnr_DACIA_falxmen_3
+
+			strength_damage_done = 0.30
+			morale_damage_done = 0.10
+			strength_damage_taken = 0.10
+
+			combat = {
+				woods = 0.10
+				forest = 0.10
+				hills = 0.10
+			}
+
+			country_potential = {
+				has_or_had_tag = DACIA
+				has_advance = DACIA_draco_standard
+			}
+
+			gfx_tags = { sword_tag heavy_tag }
+		}
+
+		fnr_DACIA_falxmen_3 = {
+			copy_from = a_age_3_discovery_heavy_infantry
+			buildable = yes
+			upgrades_to_only = fnr_DACIA_falxmen_4
+
+			strength_damage_done = 0.30
+			morale_damage_done = 0.10
+			strength_damage_taken = 0.10
+
+			combat = {
+				woods = 0.10
+				forest = 0.10
+				hills = 0.10
+			}
+
+			country_potential = {
+				has_or_had_tag = DACIA
+				has_advance = DACIA_draco_standard
+			}
+
+			gfx_tags = { sword_tag heavy_tag }
+		}
+
+		fnr_DACIA_falxmen_4 = {
+			copy_from = a_age_4_reformation_heavy_infantry
+			buildable = yes
+			upgrades_to_only = fnr_DACIA_falxmen_5
+
+			strength_damage_done = 0.30
+			morale_damage_done = 0.10
+			strength_damage_taken = 0.10
+
+			combat = {
+				woods = 0.10
+				forest = 0.10
+				hills = 0.10
+			}
+
+			country_potential = {
+				has_or_had_tag = DACIA
+				has_advance = DACIA_draco_standard
+			}
+
+			gfx_tags = { sword_tag heavy_tag }
+		}
+
+		fnr_DACIA_falxmen_5 = {
+			copy_from = a_age_5_absolutism_heavy_infantry
+			buildable = yes
+			upgrades_to_only = fnr_DACIA_falxmen_6
+
+			strength_damage_done = 0.30
+			morale_damage_done = 0.10
+			strength_damage_taken = 0.10
+
+			combat = {
+				woods = 0.10
+				forest = 0.10
+				hills = 0.10
+			}
+
+			country_potential = {
+				has_or_had_tag = DACIA
+				has_advance = DACIA_draco_standard
+			}
+
+			gfx_tags = { sword_tag heavy_tag }
+		}
+
+		fnr_DACIA_falxmen_6 = {
+			copy_from = a_age_6_revolutions_heavy_infantry
+			buildable = yes
+
+			strength_damage_done = 0.30
+			morale_damage_done = 0.10
+			strength_damage_taken = 0.10
+
+			combat = {
+				woods = 0.10
+				forest = 0.10
+				hills = 0.10
+			}
+
+			country_potential = {
+				has_or_had_tag = DACIA
+				has_advance = DACIA_draco_standard
+			}
+
+			gfx_tags = { sword_tag heavy_tag }
+		}
+

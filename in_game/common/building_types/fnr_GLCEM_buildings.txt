@@ -1,0 +1,39 @@
+﻿# Gallic Empire Building Types
+
+# Sacred Grove - Druidic Revival path, unlocked by GLCEM_druidic_restoration.
+# A druidic sanctuary in place of a church: converts local pops to the Gallo-Roman faith.
+fnr_GLCEM_sacred_grove = {
+	audio_tier = 1
+	is_foreign = no
+	max_levels = 1
+	pop_type = clergy
+
+	category = religious_category
+	conversion_religion = fnr_gallo_roman_religion
+	employment_size = religious_building_employment
+
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+
+	build_time = religious_building_time
+
+	country_potential = {
+		has_or_had_tag = GLCEM
+		has_advance = GLCEM_druidic_restoration
+		religion = religion:fnr_gallo_roman_religion
+	}
+
+	possible_production_methods = {
+		monastery_maintenance
+	}
+
+	construction_demand = town_building_construction
+
+	modifier = {
+		local_pop_conversion_speed_modifier = 0.15
+		local_clergy_max_literacy = 5
+		local_unrest = -0.25
+	}
+}

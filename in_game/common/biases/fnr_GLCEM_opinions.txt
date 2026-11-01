@@ -1,0 +1,23 @@
+﻿# Gallic Empire opinion modifiers
+
+io_opinion_fnr_GLCEM_celtic_league_io = {
+	value = 15
+}
+
+# fnr_GLCEM_grant_* decisions - the released vassal's opinion of the Gallic Empire
+fnr_GLCEM_granted_self_rule = {
+	value = 25
+	yearly_decay = 1
+}
+
+# Celtic League - a new member's opinion of the Gallic Empire
+fnr_GLCEM_joined_the_league = {
+	value = 15
+	yearly_decay = 1
+}
+
+# Great Assembly decision - each member's opinion of the Gallic Empire
+fnr_GLCEM_attended_assembly = {
+	value = 15
+	yearly_decay = 1
+}

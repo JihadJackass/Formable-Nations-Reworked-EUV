@@ -6,10 +6,13 @@ fnr_EASRE_create_pentarchy_effect = {
 		limit = {
 			NOT = { exists = international_organization:fnr_EASRE_pentarchy_io }
 		}
-		create_international_organization = {
-			type = international_organization_type:fnr_EASRE_pentarchy_io
-			add_country_to_international_organization = ROOT
-			set_leader_country = ROOT
+		custom_tooltip = fnr_EASRE_pentarchy_io_created_tt
+		hidden_effect = {
+			create_international_organization = {
+				type = international_organization_type:fnr_EASRE_pentarchy_io
+				add_country_to_international_organization = ROOT
+				set_leader_country = ROOT
+			}
 		}
 	}
 }

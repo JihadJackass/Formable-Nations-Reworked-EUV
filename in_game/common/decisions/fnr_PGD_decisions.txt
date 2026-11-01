@@ -1,0 +1,126 @@
+﻿# Pontus, Gothia and Dacia Decisions (Pax Romana)
+
+# Pontus - Proclaim the Black Sea Dominion: unlocks the Black Sea Dominion CB
+fnr_PONTU_black_sea_dominion = {
+	decision_category = country_specific_decisions
+
+	tags = { PONTU }
+
+	potential = {
+		NOT = { has_variable = fnr_PONTU_black_sea_dominion }
+	}
+
+	allow = {
+		has_advance = PONTU_black_sea_fleet
+		any_owned_location = {
+			count >= 10
+			fnr_PONTU_is_black_sea_coast = yes
+		}
+	}
+
+	ai_will_do = { value = 100 }
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_PONTU_black_sea_dominion.a
+		ai_chance = { value = 100 }
+		effect = {
+			set_variable = fnr_PONTU_black_sea_dominion
+			add_prestige = prestige_mild_bonus
+			custom_tooltip = fnr_PONTU_black_sea_dominion_tt
+			hidden_effect = {
+				trigger_event_non_silently = { id = fnr_PONTU.3 days = 365 }
+			}
+		}
+	}
+}
+
+# Gothia - Fortify Mangup: permanent fortress upgrade of the capital
+fnr_GOTIA_fortify_mangup = {
+	decision_category = country_specific_decisions
+
+	tags = { GOTIA }
+
+	potential = {
+		owns = location:theodoro
+		NOT = { location:theodoro = { has_location_modifier = fnr_GOTIA_mangup_fortified } }
+	}
+
+	allow = {
+		owns = location:theodoro
+		gold >= 300
+		at_war = no
+	}
+
+	ai_will_do = { value = 100 }
+
+	illustration_tags = {
+		10 = exterior
+		10 = armed
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:peasants_estate }
+	}
+
+	option = {
+		name = fnr_GOTIA_fortify_mangup.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -300
+			location:theodoro = {
+				add_location_modifier = { modifier = fnr_GOTIA_mangup_fortified years = -1 }
+			}
+		}
+	}
+}
+
+# Dacia - Rebuild Sarmizegetusa: permanent upgrade at Hateg; country bonus while owned (yearly pulse)
+fnr_DACIA_rebuild_sarmizegetusa = {
+	decision_category = country_specific_decisions
+
+	tags = { DACIA }
+
+	potential = {
+		owns = location:hateg
+		NOT = { location:hateg = { has_location_modifier = fnr_DACIA_sarmizegetusa } }
+	}
+
+	allow = {
+		owns = location:hateg
+		gold >= 400
+		at_war = no
+	}
+
+	ai_will_do = { value = 100 }
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_DACIA_rebuild_sarmizegetusa.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -400
+			location:hateg = {
+				add_location_modifier = { modifier = fnr_DACIA_sarmizegetusa years = -1 }
+			}
+			add_country_modifier = { modifier = fnr_DACIA_royal_seat years = -1 }
+			custom_tooltip = fnr_DACIA_sarmizegetusa_tt
+		}
+	}
+}

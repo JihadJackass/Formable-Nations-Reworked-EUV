@@ -1,0 +1,5 @@
+﻿# Formable Nations Reworked - Pontus, Gothia and Dacia colors
+colors = {
+	color_fnr_gothic_arian_religion = rgb { 150 120 80 }
+	color_fnr_zalmoxian_religion = rgb { 90 130 160 }
+}

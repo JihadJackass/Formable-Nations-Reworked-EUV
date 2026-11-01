@@ -1,0 +1,139 @@
+﻿# Gallic Empire scripted effects (Pax Romana)
+
+# Releases Tarraconensis as a loyal vassal kingdom (fnr_GLCEM_establish_tarraconensis decision).
+# Same pattern as the Bactrian Synod restorations (flavor_BACTR.5-7).
+fnr_GLCEM_release_tarraconensis_effect = {
+	if = {
+		limit = { owns = location:tarragona location:tarragona = { is_capital = no } }
+		location:tarragona = { save_scope_as = fnr_GLCEM_seat }
+	}
+	else = {
+		random_owned_location = {
+			limit = {
+				is_capital = no
+				region = region:iberia_region
+			}
+			save_scope_as = fnr_GLCEM_seat
+		}
+	}
+	scope:fnr_GLCEM_seat = {
+		create_country_from_location = {
+			save_scope_as = fnr_GLCEM_new_vassal
+			set_country_rank = country_rank:rank_kingdom
+		}
+	}
+	scope:fnr_GLCEM_new_vassal = {
+		form_country = formable_country:TRCNS_f
+		change_country_color = map_TRCNS
+		set_variable = fnr_formation_locked
+		make_subject_of = {
+			target = root
+			type = subject_type:vassal
+		}
+	}
+	every_owned_location = {
+		limit = {
+			is_capital = no
+			region = region:iberia_region
+		}
+		change_location_owner = scope:fnr_GLCEM_new_vassal
+		add_core = scope:fnr_GLCEM_new_vassal
+		change_integration_level = core
+	}
+}
+
+# Releases Britannia as a loyal vassal kingdom (fnr_GLCEM_establish_britannia decision).
+# Same pattern as the Bactrian Synod restorations (flavor_BACTR.5-7).
+fnr_GLCEM_release_britannia_effect = {
+	if = {
+		limit = { owns = location:london location:london = { is_capital = no } }
+		location:london = { save_scope_as = fnr_GLCEM_seat }
+	}
+	else = {
+		random_owned_location = {
+			limit = {
+				is_capital = no
+				fnr_GLCEM_is_britannia_location = yes
+			}
+			save_scope_as = fnr_GLCEM_seat
+		}
+	}
+	scope:fnr_GLCEM_seat = {
+		create_country_from_location = {
+			save_scope_as = fnr_GLCEM_new_vassal
+			set_country_rank = country_rank:rank_kingdom
+		}
+	}
+	scope:fnr_GLCEM_new_vassal = {
+		form_country = formable_country:BRTNA_f
+		change_country_color = map_BRTNA
+		set_variable = fnr_formation_locked
+		make_subject_of = {
+			target = root
+			type = subject_type:vassal
+		}
+	}
+	every_owned_location = {
+		limit = {
+			is_capital = no
+			fnr_GLCEM_is_britannia_location = yes
+		}
+		change_location_owner = scope:fnr_GLCEM_new_vassal
+		add_core = scope:fnr_GLCEM_new_vassal
+		change_integration_level = core
+	}
+}
+
+# Yearly upkeep
+fnr_GLCEM_yearly_upkeep_effect = {
+
+	# Celtic League member count (not counting us) for the leader bonus
+	set_variable = { name = fnr_GLCEM_league_members value = 0 }
+	if = {
+		limit = { exists = international_organization:fnr_GLCEM_celtic_league_io }
+		every_country = {
+			limit = {
+				NOT = { tag = GLCEM }
+				is_member_of_international_organization = international_organization:fnr_GLCEM_celtic_league_io
+			}
+			root = { change_variable = { name = fnr_GLCEM_league_members add = 1 } }
+		}
+	}
+
+	# Provinces of Gaul: overlord bonus while Tarraconensis or Britannia is our subject
+	if = {
+		limit = {
+			any_subject = {
+				OR = {
+					tag = TRCNS
+					tag = BRTNA
+				}
+			}
+		}
+		if = {
+			limit = { NOT = { has_country_modifier = fnr_GLCEM_provinces_of_gaul } }
+			add_country_modifier = { modifier = fnr_GLCEM_provinces_of_gaul years = -1 }
+		}
+	}
+	else_if = {
+		limit = { has_country_modifier = fnr_GLCEM_provinces_of_gaul }
+		remove_country_modifier = fnr_GLCEM_provinces_of_gaul
+	}
+}
+
+# Creates the Celtic League with root as leader (fnr_GLCEM_call_celtic_league)
+fnr_GLCEM_create_celtic_league_effect = {
+	if = {
+		limit = {
+			NOT = { exists = international_organization:fnr_GLCEM_celtic_league_io }
+		}
+		custom_tooltip = fnr_GLCEM_celtic_league_io_created_tt
+		hidden_effect = {
+			create_international_organization = {
+				type = international_organization_type:fnr_GLCEM_celtic_league_io
+				add_country_to_international_organization = ROOT
+				set_leader_country = ROOT
+			}
+		}
+	}
+}

@@ -1,0 +1,584 @@
+﻿#################################################################
+# Formable Nations: Reworked - Western Roman Empire Unit Types #
+#################################################################
+# Content map stats are mapped as: offense -> strength_damage_done, defense -> strength_damage_taken,
+# morale -> morale_damage_taken. One unit per age, each upgrading to the next.
+#   - Foederati Cavalry: needs Foederati Integration and Foederati loyalty 30+. Capital or Foederati settlements.
+#   - Comitatenses:      available on formation. Capital or Castellum locations. Max 10 regiments.
+#   - Bucellarii:        2 regiments per general with 60+ military skill. Any owned location.
+	# Foederati Cavalry (map: 120 off / 100 def / 110 morale / 80% cost, +10% plains)
+		fnr_WESRE_foederati_cavalry_1 = {
+			copy_from = a_age_1_traditions_light_cavalry
+			buildable = yes
+			upgrades_to_only = fnr_WESRE_foederati_cavalry_2
+
+			strength_damage_done = 0.20
+			morale_damage_taken = -0.10
+
+			combat = {
+				grasslands = 0.10
+			}
+
+			country_potential = {
+				has_or_had_tag = WESRE
+				has_advance = WESRE_foederati_integration
+				has_variable = fnr_WESRE_foederati_loyalty
+				var:fnr_WESRE_foederati_loyalty >= 30
+			}
+
+			location_potential = {
+				OR = {
+					is_capital = yes
+					has_location_modifier = fnr_WESRE_foederati_settlement
+				}
+			}
+
+			gfx_tags = { light_tag }
+		}
+
+		fnr_WESRE_foederati_cavalry_2 = {
+			copy_from = a_age_2_renaissance_light_cavalry
+			buildable = yes
+			upgrades_to_only = fnr_WESRE_foederati_cavalry_3
+
+			strength_damage_done = 0.20
+			morale_damage_taken = -0.10
+
+			combat = {
+				grasslands = 0.10
+			}
+
+			country_potential = {
+				has_or_had_tag = WESRE
+				has_advance = WESRE_foederati_integration
+				has_variable = fnr_WESRE_foederati_loyalty
+				var:fnr_WESRE_foederati_loyalty >= 30
+			}
+
+			location_potential = {
+				OR = {
+					is_capital = yes
+					has_location_modifier = fnr_WESRE_foederati_settlement
+				}
+			}
+
+			gfx_tags = { light_tag }
+		}
+
+		fnr_WESRE_foederati_cavalry_3 = {
+			copy_from = a_age_3_discovery_light_cavalry
+			buildable = yes
+			upgrades_to_only = fnr_WESRE_foederati_cavalry_4
+
+			strength_damage_done = 0.20
+			morale_damage_taken = -0.10
+
+			combat = {
+				grasslands = 0.10
+			}
+
+			country_potential = {
+				has_or_had_tag = WESRE
+				has_advance = WESRE_foederati_integration
+				has_variable = fnr_WESRE_foederati_loyalty
+				var:fnr_WESRE_foederati_loyalty >= 30
+			}
+
+			location_potential = {
+				OR = {
+					is_capital = yes
+					has_location_modifier = fnr_WESRE_foederati_settlement
+				}
+			}
+
+			gfx_tags = { light_tag }
+		}
+
+		fnr_WESRE_foederati_cavalry_4 = {
+			copy_from = a_age_4_reformation_light_cavalry
+			buildable = yes
+			upgrades_to_only = fnr_WESRE_foederati_cavalry_5
+
+			strength_damage_done = 0.20
+			morale_damage_taken = -0.10
+
+			combat = {
+				grasslands = 0.10
+			}
+
+			country_potential = {
+				has_or_had_tag = WESRE
+				has_advance = WESRE_foederati_integration
+				has_variable = fnr_WESRE_foederati_loyalty
+				var:fnr_WESRE_foederati_loyalty >= 30
+			}
+
+			location_potential = {
+				OR = {
+					is_capital = yes
+					has_location_modifier = fnr_WESRE_foederati_settlement
+				}
+			}
+
+			gfx_tags = { light_tag }
+		}
+
+		fnr_WESRE_foederati_cavalry_5 = {
+			copy_from = a_age_5_absolutism_light_cavalry
+			buildable = yes
+			upgrades_to_only = fnr_WESRE_foederati_cavalry_6
+
+			strength_damage_done = 0.20
+			morale_damage_taken = -0.10
+
+			combat = {
+				grasslands = 0.10
+			}
+
+			country_potential = {
+				has_or_had_tag = WESRE
+				has_advance = WESRE_foederati_integration
+				has_variable = fnr_WESRE_foederati_loyalty
+				var:fnr_WESRE_foederati_loyalty >= 30
+			}
+
+			location_potential = {
+				OR = {
+					is_capital = yes
+					has_location_modifier = fnr_WESRE_foederati_settlement
+				}
+			}
+
+			gfx_tags = { light_tag }
+		}
+
+		fnr_WESRE_foederati_cavalry_6 = {
+			copy_from = a_age_6_revolutions_light_cavalry
+			buildable = yes
+
+			strength_damage_done = 0.20
+			morale_damage_taken = -0.10
+
+			combat = {
+				grasslands = 0.10
+			}
+
+			country_potential = {
+				has_or_had_tag = WESRE
+				has_advance = WESRE_foederati_integration
+				has_variable = fnr_WESRE_foederati_loyalty
+				var:fnr_WESRE_foederati_loyalty >= 30
+			}
+
+			location_potential = {
+				OR = {
+					is_capital = yes
+					has_location_modifier = fnr_WESRE_foederati_settlement
+				}
+			}
+
+			gfx_tags = { light_tag }
+		}
+
+	# Comitatenses (map: 125 off / 120 def / 130 morale / 150% cost, max 10,000 men)
+		fnr_WESRE_comitatenses_1 = {
+			copy_from = a_age_1_traditions_heavy_infantry
+			is_special = yes
+			buildable = yes
+			upgrades_to_only = fnr_WESRE_comitatenses_2
+
+			strength_damage_done = 0.25
+			strength_damage_taken = -0.20
+			morale_damage_taken = -0.25
+
+			construction_demand = heavy_infantry_construction
+
+			limit = 10
+
+			country_potential = {
+				has_or_had_tag = WESRE
+			}
+
+			location_potential = {
+				OR = {
+					is_capital = yes
+					has_building = building_type:fnr_WESRE_castellum
+				}
+			}
+
+			gfx_tags = { sword_tag heavy_tag }
+		}
+
+		fnr_WESRE_comitatenses_2 = {
+			copy_from = a_age_2_renaissance_heavy_infantry
+			is_special = yes
+			buildable = yes
+			upgrades_to_only = fnr_WESRE_comitatenses_3
+
+			strength_damage_done = 0.25
+			strength_damage_taken = -0.20
+			morale_damage_taken = -0.25
+
+			construction_demand = heavy_infantry_construction
+
+			limit = 10
+
+			country_potential = {
+				has_or_had_tag = WESRE
+			}
+
+			location_potential = {
+				OR = {
+					is_capital = yes
+					has_building = building_type:fnr_WESRE_castellum
+				}
+			}
+
+			gfx_tags = { sword_tag heavy_tag }
+		}
+
+		fnr_WESRE_comitatenses_3 = {
+			copy_from = a_age_3_discovery_heavy_infantry
+			is_special = yes
+			buildable = yes
+			upgrades_to_only = fnr_WESRE_comitatenses_4
+
+			strength_damage_done = 0.25
+			strength_damage_taken = -0.20
+			morale_damage_taken = -0.25
+
+			construction_demand = heavy_infantry_construction
+
+			limit = 10
+
+			country_potential = {
+				has_or_had_tag = WESRE
+			}
+
+			location_potential = {
+				OR = {
+					is_capital = yes
+					has_building = building_type:fnr_WESRE_castellum
+				}
+			}
+
+			gfx_tags = { sword_tag heavy_tag }
+		}
+
+		fnr_WESRE_comitatenses_4 = {
+			copy_from = a_age_4_reformation_heavy_infantry
+			is_special = yes
+			buildable = yes
+			upgrades_to_only = fnr_WESRE_comitatenses_5
+
+			strength_damage_done = 0.25
+			strength_damage_taken = -0.20
+			morale_damage_taken = -0.25
+
+			construction_demand = heavy_infantry_construction
+
+			limit = 10
+
+			country_potential = {
+				has_or_had_tag = WESRE
+			}
+
+			location_potential = {
+				OR = {
+					is_capital = yes
+					has_building = building_type:fnr_WESRE_castellum
+				}
+			}
+
+			gfx_tags = { sword_tag heavy_tag }
+		}
+
+		fnr_WESRE_comitatenses_5 = {
+			copy_from = a_age_5_absolutism_heavy_infantry
+			is_special = yes
+			buildable = yes
+			upgrades_to_only = fnr_WESRE_comitatenses_6
+
+			strength_damage_done = 0.25
+			strength_damage_taken = -0.20
+			morale_damage_taken = -0.25
+
+			construction_demand = heavy_infantry_construction
+
+			limit = 10
+
+			country_potential = {
+				has_or_had_tag = WESRE
+			}
+
+			location_potential = {
+				OR = {
+					is_capital = yes
+					has_building = building_type:fnr_WESRE_castellum
+				}
+			}
+
+			gfx_tags = { sword_tag heavy_tag }
+		}
+
+		fnr_WESRE_comitatenses_6 = {
+			copy_from = a_age_6_revolutions_heavy_infantry
+			is_special = yes
+			buildable = yes
+
+			strength_damage_done = 0.25
+			strength_damage_taken = -0.20
+			morale_damage_taken = -0.25
+
+			construction_demand = heavy_infantry_construction
+
+			limit = 10
+
+			country_potential = {
+				has_or_had_tag = WESRE
+			}
+
+			location_potential = {
+				OR = {
+					is_capital = yes
+					has_building = building_type:fnr_WESRE_castellum
+				}
+			}
+
+			gfx_tags = { sword_tag heavy_tag }
+		}
+
+	# Bucellarii (map: 130 off / 110 def / 115 morale / 120% cost, tied to generals)
+		fnr_WESRE_bucellarii_1 = {
+			copy_from = a_age_1_traditions_heavy_infantry
+			is_special = yes
+			buildable = yes
+			upgrades_to_only = fnr_WESRE_bucellarii_2
+
+			strength_damage_done = 0.30
+			strength_damage_taken = -0.10
+			morale_damage_taken = -0.15
+
+			construction_demand = heavy_infantry_construction
+
+			# 2 regiments for every general with 60+ military skill
+			limit = {
+				value = 0
+				every_character = {
+					limit = {
+						is_general = yes
+						mil >= 60
+					}
+					add = 2
+				}
+			}
+
+			country_potential = {
+				has_or_had_tag = WESRE
+				any_character = {
+					is_general = yes
+					mil >= 60
+				}
+			}
+
+			location_potential = {
+				always = yes
+			}
+
+			gfx_tags = { sword_tag heavy_tag }
+		}
+
+		fnr_WESRE_bucellarii_2 = {
+			copy_from = a_age_2_renaissance_heavy_infantry
+			is_special = yes
+			buildable = yes
+			upgrades_to_only = fnr_WESRE_bucellarii_3
+
+			strength_damage_done = 0.30
+			strength_damage_taken = -0.10
+			morale_damage_taken = -0.15
+
+			construction_demand = heavy_infantry_construction
+
+			# 2 regiments for every general with 60+ military skill
+			limit = {
+				value = 0
+				every_character = {
+					limit = {
+						is_general = yes
+						mil >= 60
+					}
+					add = 2
+				}
+			}
+
+			country_potential = {
+				has_or_had_tag = WESRE
+				any_character = {
+					is_general = yes
+					mil >= 60
+				}
+			}
+
+			location_potential = {
+				always = yes
+			}
+
+			gfx_tags = { sword_tag heavy_tag }
+		}
+
+		fnr_WESRE_bucellarii_3 = {
+			copy_from = a_age_3_discovery_heavy_infantry
+			is_special = yes
+			buildable = yes
+			upgrades_to_only = fnr_WESRE_bucellarii_4
+
+			strength_damage_done = 0.30
+			strength_damage_taken = -0.10
+			morale_damage_taken = -0.15
+
+			construction_demand = heavy_infantry_construction
+
+			# 2 regiments for every general with 60+ military skill
+			limit = {
+				value = 0
+				every_character = {
+					limit = {
+						is_general = yes
+						mil >= 60
+					}
+					add = 2
+				}
+			}
+
+			country_potential = {
+				has_or_had_tag = WESRE
+				any_character = {
+					is_general = yes
+					mil >= 60
+				}
+			}
+
+			location_potential = {
+				always = yes
+			}
+
+			gfx_tags = { sword_tag heavy_tag }
+		}
+
+		fnr_WESRE_bucellarii_4 = {
+			copy_from = a_age_4_reformation_heavy_infantry
+			is_special = yes
+			buildable = yes
+			upgrades_to_only = fnr_WESRE_bucellarii_5
+
+			strength_damage_done = 0.30
+			strength_damage_taken = -0.10
+			morale_damage_taken = -0.15
+
+			construction_demand = heavy_infantry_construction
+
+			# 2 regiments for every general with 60+ military skill
+			limit = {
+				value = 0
+				every_character = {
+					limit = {
+						is_general = yes
+						mil >= 60
+					}
+					add = 2
+				}
+			}
+
+			country_potential = {
+				has_or_had_tag = WESRE
+				any_character = {
+					is_general = yes
+					mil >= 60
+				}
+			}
+
+			location_potential = {
+				always = yes
+			}
+
+			gfx_tags = { sword_tag heavy_tag }
+		}
+
+		fnr_WESRE_bucellarii_5 = {
+			copy_from = a_age_5_absolutism_heavy_infantry
+			is_special = yes
+			buildable = yes
+			upgrades_to_only = fnr_WESRE_bucellarii_6
+
+			strength_damage_done = 0.30
+			strength_damage_taken = -0.10
+			morale_damage_taken = -0.15
+
+			construction_demand = heavy_infantry_construction
+
+			# 2 regiments for every general with 60+ military skill
+			limit = {
+				value = 0
+				every_character = {
+					limit = {
+						is_general = yes
+						mil >= 60
+					}
+					add = 2
+				}
+			}
+
+			country_potential = {
+				has_or_had_tag = WESRE
+				any_character = {
+					is_general = yes
+					mil >= 60
+				}
+			}
+
+			location_potential = {
+				always = yes
+			}
+
+			gfx_tags = { sword_tag heavy_tag }
+		}
+
+		fnr_WESRE_bucellarii_6 = {
+			copy_from = a_age_6_revolutions_heavy_infantry
+			is_special = yes
+			buildable = yes
+
+			strength_damage_done = 0.30
+			strength_damage_taken = -0.10
+			morale_damage_taken = -0.15
+
+			construction_demand = heavy_infantry_construction
+
+			# 2 regiments for every general with 60+ military skill
+			limit = {
+				value = 0
+				every_character = {
+					limit = {
+						is_general = yes
+						mil >= 60
+					}
+					add = 2
+				}
+			}
+
+			country_potential = {
+				has_or_had_tag = WESRE
+				any_character = {
+					is_general = yes
+					mil >= 60
+				}
+			}
+
+			location_potential = {
+				always = yes
+			}
+
+			gfx_tags = { sword_tag heavy_tag }
+		}
+

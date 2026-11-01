@@ -1,0 +1,409 @@
+﻿# Latin Empire Decisions (Pax Romana)
+# Vanilla LAT decisions (Holy Patriarchate, Greater Claims) still apply on top of these.
+
+# Partition of Romania: Principality of Achaea
+fnr_LAT_partition_achaea = {
+	decision_category = country_specific_decisions
+
+	tags = { LAT }
+
+	potential = {
+		NOT = { exists = c:ACH }
+		NOT = { has_variable = fnr_LAT_achaea_granted }
+		any_owned_location = { fnr_LAT_is_achaea_location = yes }
+	}
+
+	allow = {
+		at_war = no
+		any_owned_location = {
+			count >= 5
+			is_capital = no
+			fnr_LAT_is_achaea_location = yes
+		}
+		OR = {
+			has_variable = fnr_LAT_partition_feudal
+			gold >= 300
+		}
+	}
+
+	ai_will_do = { value = 40 }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_LAT_partition_achaea.a
+		ai_chance = { value = 100 }
+		effect = {
+			if = {
+				limit = { NOT = { has_variable = fnr_LAT_partition_feudal } }
+				add_gold = -300
+			}
+			set_variable = fnr_LAT_achaea_granted
+			custom_tooltip = fnr_LAT_partition_achaea_tt
+			custom_tooltip = fnr_LAT_fief_lock_tt
+			hidden_effect = {
+				fnr_LAT_release_fief_effect = { FIEF = achaea SEAT = andravida }
+				scope:fnr_LAT_new_fief = {
+					change_country_name = fnr_LAT_ACHAEA_NAME
+					change_country_color = map_fnr_LAT_achaea
+				}
+			}
+			add_estate_satisfaction = {
+				type = estate_type:nobles_estate
+				value = estate_satisfaction_mild_bonus
+			}
+		}
+	}
+}
+
+# Partition of Romania: Duchy of Athens
+fnr_LAT_partition_athens = {
+	decision_category = country_specific_decisions
+
+	tags = { LAT }
+
+	potential = {
+		NOT = { exists = c:ATH }
+		NOT = { has_variable = fnr_LAT_athens_granted }
+		any_owned_location = { fnr_LAT_is_athens_location = yes }
+	}
+
+	allow = {
+		at_war = no
+		any_owned_location = {
+			count >= 4
+			is_capital = no
+			fnr_LAT_is_athens_location = yes
+		}
+		OR = {
+			has_variable = fnr_LAT_partition_feudal
+			gold >= 300
+		}
+	}
+
+	ai_will_do = { value = 40 }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_LAT_partition_athens.a
+		ai_chance = { value = 100 }
+		effect = {
+			if = {
+				limit = { NOT = { has_variable = fnr_LAT_partition_feudal } }
+				add_gold = -300
+			}
+			set_variable = fnr_LAT_athens_granted
+			custom_tooltip = fnr_LAT_partition_athens_tt
+			custom_tooltip = fnr_LAT_fief_lock_tt
+			hidden_effect = {
+				fnr_LAT_release_fief_effect = { FIEF = athens SEAT = athens }
+				scope:fnr_LAT_new_fief = {
+					change_country_name = fnr_LAT_ATHENS_NAME
+					change_country_color = map_fnr_LAT_athens
+				}
+			}
+			add_estate_satisfaction = {
+				type = estate_type:nobles_estate
+				value = estate_satisfaction_mild_bonus
+			}
+		}
+	}
+}
+
+# Partition of Romania: Kingdom of Thessalonica
+fnr_LAT_partition_thessalonica = {
+	decision_category = country_specific_decisions
+
+	tags = { LAT }
+
+	potential = {
+		NOT = { exists = c:THE }
+		NOT = { has_variable = fnr_LAT_thessalonica_granted }
+		any_owned_location = { fnr_LAT_is_thessalonica_location = yes }
+	}
+
+	allow = {
+		at_war = no
+		any_owned_location = {
+			count >= 8
+			is_capital = no
+			fnr_LAT_is_thessalonica_location = yes
+		}
+		OR = {
+			has_variable = fnr_LAT_partition_feudal
+			gold >= 300
+		}
+	}
+
+	ai_will_do = { value = 40 }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_LAT_partition_thessalonica.a
+		ai_chance = { value = 100 }
+		effect = {
+			if = {
+				limit = { NOT = { has_variable = fnr_LAT_partition_feudal } }
+				add_gold = -300
+			}
+			set_variable = fnr_LAT_thessalonica_granted
+			custom_tooltip = fnr_LAT_partition_thessalonica_tt
+			custom_tooltip = fnr_LAT_fief_lock_tt
+			hidden_effect = {
+				fnr_LAT_release_fief_effect = { FIEF = thessalonica SEAT = thessaloniki }
+				scope:fnr_LAT_new_fief = {
+					form_country = formable_country:THE_f
+					change_country_color = map_THE
+				}
+			}
+			add_estate_satisfaction = {
+				type = estate_type:nobles_estate
+				value = estate_satisfaction_mild_bonus
+			}
+		}
+	}
+}
+
+# Holy site: Notre-Dame d'Athenes - permanent location upgrade; country bonus while owned (yearly pulse)
+fnr_LAT_notre_dame_athenes = {
+	decision_category = religious_decisions
+
+	tags = { LAT }
+
+	potential = {
+		owns = location:athens
+		NOT = { location:athens = { has_location_modifier = fnr_LAT_notre_dame_athenes } }
+	}
+
+	allow = {
+		owns = location:athens
+		OR = {
+			religion = religion:catholic
+			religion = religion:fnr_greek_catholic_religion
+		}
+		gold >= 400
+		at_war = no
+	}
+
+	ai_will_do = { value = 100 }
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate }
+	}
+
+	option = {
+		name = fnr_LAT_notre_dame_athenes.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -400
+			location:athens = {
+				add_location_modifier = { modifier = fnr_LAT_notre_dame_athenes years = -1 }
+			}
+			add_country_modifier = { modifier = fnr_LAT_holy_athens years = -1 }
+			custom_tooltip = fnr_LAT_holy_site_tt
+		}
+	}
+}
+
+# Holy site: Saint Demetrius - permanent location upgrade; country bonus while owned (yearly pulse)
+fnr_LAT_saint_demetrius = {
+	decision_category = religious_decisions
+
+	tags = { LAT }
+
+	potential = {
+		owns = location:thessaloniki
+		NOT = { location:thessaloniki = { has_location_modifier = fnr_LAT_saint_demetrius } }
+	}
+
+	allow = {
+		owns = location:thessaloniki
+		OR = {
+			religion = religion:catholic
+			religion = religion:fnr_greek_catholic_religion
+		}
+		gold >= 400
+		at_war = no
+	}
+
+	ai_will_do = { value = 100 }
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate }
+	}
+
+	option = {
+		name = fnr_LAT_saint_demetrius.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -400
+			location:thessaloniki = {
+				add_location_modifier = { modifier = fnr_LAT_saint_demetrius years = -1 }
+			}
+			add_country_modifier = { modifier = fnr_LAT_holy_thessaloniki years = -1 }
+			custom_tooltip = fnr_LAT_holy_site_tt
+		}
+	}
+}
+
+# Found the Barons of Romania (IO)
+fnr_LAT_found_barons_of_romania = {
+	decision_category = country_specific_decisions
+
+	tags = { LAT }
+
+	potential = {
+		NOT = { exists = international_organization:fnr_LAT_barons_io }
+	}
+
+	allow = {
+		has_advance = LAT_assizes_of_romania
+		gold >= 200
+		at_war = no
+	}
+
+	ai_will_do = { value = 100 }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_LAT_found_barons_of_romania.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -200
+			fnr_LAT_create_barons_effect = yes
+			add_prestige = prestige_mild_bonus
+		}
+	}
+}
+
+# Parliament of Ravennika - peacetime Barons action every 5 years
+fnr_LAT_parliament_of_ravennika = {
+	decision_category = country_specific_decisions
+
+	tags = { LAT }
+
+	potential = {
+		exists = international_organization:fnr_LAT_barons_io
+	}
+
+	allow = {
+		at_war = no
+		gold >= 100
+		NOT = { has_variable = fnr_LAT_parliament_cooldown }
+	}
+
+	ai_will_do = { value = 100 }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_LAT_parliament_of_ravennika.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -100
+			add_prestige = prestige_mild_bonus
+			international_organization:fnr_LAT_barons_io = {
+				every_international_organization_member = {
+					add_country_modifier = { modifier = fnr_LAT_parliament_of_ravennika years = 5 mode = add_and_extend }
+					if = {
+						limit = { NOT = { tag = LAT } }
+						add_opinion = { target = root modifier = fnr_LAT_attended_parliament }
+					}
+				}
+			}
+			set_variable = { name = fnr_LAT_parliament_cooldown years = 5 }
+			custom_tooltip = fnr_LAT_parliament_of_ravennika_tt
+		}
+	}
+}
+
+# Summon the Barons - wartime Barons action every 10 years
+fnr_LAT_summon_the_barons = {
+	decision_category = country_specific_decisions
+
+	tags = { LAT }
+
+	potential = {
+		exists = international_organization:fnr_LAT_barons_io
+	}
+
+	allow = {
+		at_war = yes
+		NOT = { has_variable = fnr_LAT_summon_cooldown }
+	}
+
+	ai_will_do = { value = 100 }
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_LAT_summon_the_barons.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_prestige = prestige_weak_penalty
+			international_organization:fnr_LAT_barons_io = {
+				every_international_organization_member = {
+					add_country_modifier = { modifier = fnr_LAT_barons_summoned years = 2 mode = add_and_extend }
+				}
+			}
+			set_variable = { name = fnr_LAT_summon_cooldown years = 10 }
+			custom_tooltip = fnr_LAT_summon_the_barons_tt
+		}
+	}
+}
+

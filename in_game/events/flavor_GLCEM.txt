@@ -1,51 +1,373 @@
 ﻿namespace = flavor_GLCEM
 
-flavor_GLCEM.1 = { # keep gallic empire
+# ==========================================================================
+# Pax Romana - Gallic Empire: "The Gallic Revival"
+#  .1  The Gallic Question       - on formation (GLCEM_f form_effect): Gallic Empire or Gallia
+#  .2  The Soul of Gaul          - 30 days later: Druidic Revival or Imperium Galliarum
+#  .3  Echoes of Alesia          - 2-4 years after .2
+#  .4  The Sacred Groves         - 5-8 years after .2, Druidic Revival
+#  .5  The Coins of Postumus     - 5-8 years after .2, Imperium Galliarum
+#  .6  The Arverni Chiefs        - yearly pulse, Arverni Confederation advance
+# Tarraconensis and Britannia are released through decisions (fnr_GLCEM_decisions.txt).
+# ==========================================================================
+
+# 1 - The Gallic Question (name)
+flavor_GLCEM.1 = {
 	type = country_event
 	title = flavor_GLCEM.1.title
 	desc = flavor_GLCEM.1.desc
 	fire_only_once = yes
 	outcome = neutral
-	option = { # 
-		name = flavor_GLCEM.1.a
-		add_prestige = 10
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
 	}
-	option = { # gallia
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
+		hidden_effect = {
+			trigger_event_non_silently = { id = flavor_GLCEM.2 days = 30 }
+		}
+	}
+
+	# A - Gallic Empire
+	option = {
+		name = flavor_GLCEM.1.a
+		ai_chance = { factor = 50 }
+		add_prestige = prestige_mild_bonus
+	}
+
+	# B - Gallia
+	option = {
 		name = flavor_GLCEM.1.b
+		ai_chance = { factor = 50 }
 		change_country_name = GLCEM_GALLIA_NAME
 	}
 }
 
-# Establish Terraconensis
-flavor_GLCEM.2 = { 
+# 2 - The Soul of Gaul (path choice)
+flavor_GLCEM.2 = {
 	type = country_event
 	title = flavor_GLCEM.2.title
 	desc = flavor_GLCEM.2.desc
 	fire_only_once = yes
 	outcome = neutral
-	orphan = yes
-	option = { # 
-		name = flavor_GLCEM.2.a
-		# TODO POST 2.5.0: was buggy
+
+	trigger = {
+		tag = GLCEM
+		NOT = { has_variable = fnr_GLCEM_path_druidic }
+		NOT = { has_variable = fnr_GLCEM_path_imperial }
 	}
-	option = { # gallia
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:nobles_estate }
+	}
+
+	# A - Druidic Revival. Easier for pagan realms; Christian realms pay in stability and clergy anger.
+	# Celtic-culture pops embrace the old faith far faster than the rest.
+	option = {
+		name = flavor_GLCEM.2.a
+		ai_chance = { factor = 50 }
+		set_variable = fnr_GLCEM_path_druidic
+		if = {
+			limit = {
+				OR = {
+					religion.group = religion_group:christian
+					religion.group = religion_group:muslim
+				}
+			}
+			add_stability = stability_mild_penalty
+			add_estate_satisfaction = {
+				type = estate_type:clergy_estate
+				value = estate_satisfaction_mild_penalty
+			}
+		}
+		else = {
+			add_legitimacy = legitimacy_mild_bonus
+		}
+		change_religion = religion:fnr_gallo_roman_religion
+		change_religion_for_ruler_and_family = { country = ROOT religion = religion:fnr_gallo_roman_religion }
+		set_liturgical_language = dialect:fnr_gaulish_language
+		set_court_language = dialect:fnr_gaulish_language
+		add_country_modifier = {
+			modifier = fnr_GLCEM_druidic_revival
+			years = 20
+			mode = add_and_extend
+		}
+		custom_tooltip = fnr_GLCEM_path_druidic_tt
+		hidden_effect = {
+			every_pop = {
+				limit = {
+					owner = root
+					NOT = { religion = religion:fnr_gallo_roman_religion }
+				}
+				if = {
+					limit = { culture = { has_culture_group = culture_group:celtic_group } }
+					split_pop = {
+						fraction = 0.30
+						religion = religion:fnr_gallo_roman_religion
+					}
+				}
+				else = {
+					split_pop = {
+						fraction = 0.10
+						religion = religion:fnr_gallo_roman_religion
+					}
+				}
+			}
+			trigger_event_non_silently = { id = flavor_GLCEM.3 days = { 730 1460 } }
+			trigger_event_non_silently = { id = flavor_GLCEM.4 days = { 1825 2920 } }
+		}
+	}
+
+	# B - Imperium Galliarum. Keeps the faith; a Roman breakaway empire in the line of Postumus.
+	# Holding Trier (Augusta Treverorum) or being a former Roman successor adds weight to the claim.
+	option = {
 		name = flavor_GLCEM.2.b
+		trigger = {
+			OR = {
+				religion.group = religion_group:christian
+				religion = religion:hellenism_religion
+			}
+		}
+		ai_chance = { factor = 50 }
+		set_variable = fnr_GLCEM_path_imperial
+		set_court_language = dialect:roman_dialect
+		add_legitimacy = legitimacy_mild_bonus
+		if = {
+			limit = {
+				OR = {
+					owns = location:trier
+					has_or_had_tag = RMNRP
+					has_or_had_tag = WESRE
+					has_or_had_tag = LTNEM
+					has_or_had_tag = LAT
+				}
+			}
+			add_prestige = prestige_mild_bonus
+		}
+		add_country_modifier = {
+			modifier = fnr_GLCEM_imperium_galliarum
+			years = 20
+			mode = add_and_extend
+		}
+		custom_tooltip = fnr_GLCEM_path_imperial_tt
+		hidden_effect = {
+			trigger_event_non_silently = { id = flavor_GLCEM.3 days = { 730 1460 } }
+			trigger_event_non_silently = { id = flavor_GLCEM.5 days = { 1825 2920 } }
+		}
 	}
 }
 
-# Establish Britannia
-flavor_GLCEM.3 = { 
+# 3 - Echoes of Alesia
+flavor_GLCEM.3 = {
 	type = country_event
 	title = flavor_GLCEM.3.title
 	desc = flavor_GLCEM.3.desc
 	fire_only_once = yes
-	outcome = neutral
-	orphan = yes
-	option = { # 
-		name = flavor_GLCEM.3.a
-		# TODO POST 2.5.0: was buggy	
+	outcome = positive
+
+	trigger = {
+		tag = GLCEM
 	}
-	option = { # gallia
-		name = flavor_GLCEM.2.b
+
+	illustration_tags = {
+		10 = exterior
+		10 = armed
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:peasants_estate }
+	}
+
+	# A - A monument to Vercingetorix
+	option = {
+		name = flavor_GLCEM.3.a
+		ai_chance = { factor = 50 }
+		add_prestige = prestige_mild_bonus
+		add_country_modifier = {
+			modifier = fnr_GLCEM_monument_of_alesia
+			years = 15
+			mode = add_and_extend
+		}
+	}
+
+	# B - Learn from Caesar's commentaries
+	option = {
+		name = flavor_GLCEM.3.b
+		ai_chance = { factor = 50 }
+		add_country_modifier = {
+			modifier = fnr_GLCEM_caesars_commentaries
+			years = 15
+			mode = add_and_extend
+		}
+	}
+}
+
+# 4 - The Sacred Groves (Druidic Revival)
+flavor_GLCEM.4 = {
+	type = country_event
+	title = flavor_GLCEM.4.title
+	desc = flavor_GLCEM.4.desc
+	fire_only_once = yes
+	outcome = neutral
+
+	trigger = {
+		tag = GLCEM
+		has_variable = fnr_GLCEM_path_druidic
+	}
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:burghers_estate }
+	}
+
+	# A - Protect the groves
+	option = {
+		name = flavor_GLCEM.4.a
+		ai_chance = { factor = 60 }
+		add_estate_satisfaction = {
+			type = estate_type:clergy_estate
+			value = estate_satisfaction_mild_bonus
+		}
+		add_estate_satisfaction = {
+			type = estate_type:burghers_estate
+			value = estate_satisfaction_weak_penalty
+		}
+		add_country_modifier = {
+			modifier = fnr_GLCEM_groves_protected
+			years = 25
+			mode = add_and_extend
+		}
+	}
+
+	# B - The forests feed the forges
+	option = {
+		name = flavor_GLCEM.4.b
+		ai_chance = { factor = 40 }
+		add_estate_satisfaction = {
+			type = estate_type:burghers_estate
+			value = estate_satisfaction_mild_bonus
+		}
+		add_estate_satisfaction = {
+			type = estate_type:clergy_estate
+			value = estate_satisfaction_mild_penalty
+		}
+		add_country_modifier = {
+			modifier = fnr_GLCEM_forests_felled
+			years = 25
+			mode = add_and_extend
+		}
+	}
+}
+
+# 5 - The Coins of Postumus (Imperium Galliarum)
+flavor_GLCEM.5 = {
+	type = country_event
+	title = flavor_GLCEM.5.title
+	desc = flavor_GLCEM.5.desc
+	fire_only_once = yes
+	outcome = neutral
+
+	trigger = {
+		tag = GLCEM
+		has_variable = fnr_GLCEM_path_imperial
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:crown_estate }
+	}
+
+	# A - Strike our own imperial coinage
+	option = {
+		name = flavor_GLCEM.5.a
+		ai_chance = { factor = 60 }
+		add_legitimacy = legitimacy_mild_bonus
+		add_country_modifier = {
+			modifier = fnr_GLCEM_coins_of_postumus
+			years = 25
+			mode = add_and_extend
+		}
+	}
+
+	# B - Keep to the Roman standard
+	option = {
+		name = flavor_GLCEM.5.b
+		ai_chance = { factor = 40 }
+		add_country_modifier = {
+			modifier = fnr_GLCEM_roman_standard
+			years = 25
+			mode = add_and_extend
+		}
+	}
+}
+
+# 6 - The Arverni Chiefs
+flavor_GLCEM.6 = {
+	type = country_event
+	title = flavor_GLCEM.6.title
+	desc = flavor_GLCEM.6.desc
+	fire_only_once = yes
+	outcome = neutral
+
+	trigger = {
+		tag = GLCEM
+		has_advance = GLCEM_arverni_confederation
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
+	}
+
+	# A - A confederation of free peoples
+	option = {
+		name = flavor_GLCEM.6.a
+		ai_chance = { factor = 60 }
+		add_estate_satisfaction = {
+			type = estate_type:nobles_estate
+			value = estate_satisfaction_mild_bonus
+		}
+		add_country_modifier = {
+			modifier = fnr_GLCEM_arverni_bound
+			years = 25
+			mode = add_and_extend
+		}
+		custom_tooltip = fnr_GLCEM_confederation_tt
+	}
+
+	# B - One crown over Gaul
+	option = {
+		name = flavor_GLCEM.6.b
+		ai_chance = { factor = 40 }
+		add_estate_satisfaction = {
+			type = estate_type:nobles_estate
+			value = estate_satisfaction_mild_penalty
+		}
+		add_stability = stability_weak_bonus
+		add_country_modifier = {
+			modifier = fnr_GLCEM_crown_of_gaul
+			years = 25
+			mode = add_and_extend
+		}
 	}
 }

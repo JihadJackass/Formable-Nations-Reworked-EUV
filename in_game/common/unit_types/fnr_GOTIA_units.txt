@@ -1,0 +1,126 @@
+﻿# Gothia - Gothic Spearmen (hill-fort defenders). Needs GOTIA_bastion_of_mangup. Strong in hills and mountains.
+		fnr_GOTIA_gothic_spearmen_1 = {
+			copy_from = a_age_1_traditions_heavy_infantry
+			buildable = yes
+			upgrades_to_only = fnr_GOTIA_gothic_spearmen_2
+
+			strength_damage_taken = -0.20
+			morale_damage_taken = -0.15
+
+			combat = {
+				hills = 0.15
+				mountains = 0.15
+			}
+
+			country_potential = {
+				has_or_had_tag = GOTIA
+				has_advance = GOTIA_bastion_of_mangup
+			}
+
+			gfx_tags = { spear_tag heavy_tag }
+		}
+
+		fnr_GOTIA_gothic_spearmen_2 = {
+			copy_from = a_age_2_renaissance_heavy_infantry
+			buildable = yes
+			upgrades_to_only = fnr_GOTIA_gothic_spearmen_3
+
+			strength_damage_taken = -0.20
+			morale_damage_taken = -0.15
+
+			combat = {
+				hills = 0.15
+				mountains = 0.15
+			}
+
+			country_potential = {
+				has_or_had_tag = GOTIA
+				has_advance = GOTIA_bastion_of_mangup
+			}
+
+			gfx_tags = { spear_tag heavy_tag }
+		}
+
+		fnr_GOTIA_gothic_spearmen_3 = {
+			copy_from = a_age_3_discovery_heavy_infantry
+			buildable = yes
+			upgrades_to_only = fnr_GOTIA_gothic_spearmen_4
+
+			strength_damage_taken = -0.20
+			morale_damage_taken = -0.15
+
+			combat = {
+				hills = 0.15
+				mountains = 0.15
+			}
+
+			country_potential = {
+				has_or_had_tag = GOTIA
+				has_advance = GOTIA_bastion_of_mangup
+			}
+
+			gfx_tags = { spear_tag heavy_tag }
+		}
+
+		fnr_GOTIA_gothic_spearmen_4 = {
+			copy_from = a_age_4_reformation_heavy_infantry
+			buildable = yes
+			upgrades_to_only = fnr_GOTIA_gothic_spearmen_5
+
+			strength_damage_taken = -0.20
+			morale_damage_taken = -0.15
+
+			combat = {
+				hills = 0.15
+				mountains = 0.15
+			}
+
+			country_potential = {
+				has_or_had_tag = GOTIA
+				has_advance = GOTIA_bastion_of_mangup
+			}
+
+			gfx_tags = { spear_tag heavy_tag }
+		}
+
+		fnr_GOTIA_gothic_spearmen_5 = {
+			copy_from = a_age_5_absolutism_heavy_infantry
+			buildable = yes
+			upgrades_to_only = fnr_GOTIA_gothic_spearmen_6
+
+			strength_damage_taken = -0.20
+			morale_damage_taken = -0.15
+
+			combat = {
+				hills = 0.15
+				mountains = 0.15
+			}
+
+			country_potential = {
+				has_or_had_tag = GOTIA
+				has_advance = GOTIA_bastion_of_mangup
+			}
+
+			gfx_tags = { spear_tag heavy_tag }
+		}
+
+		fnr_GOTIA_gothic_spearmen_6 = {
+			copy_from = a_age_6_revolutions_heavy_infantry
+			buildable = yes
+
+			strength_damage_taken = -0.20
+			morale_damage_taken = -0.15
+
+			combat = {
+				hills = 0.15
+				mountains = 0.15
+			}
+
+			country_potential = {
+				has_or_had_tag = GOTIA
+				has_advance = GOTIA_bastion_of_mangup
+			}
+
+			gfx_tags = { spear_tag heavy_tag }
+		}
+

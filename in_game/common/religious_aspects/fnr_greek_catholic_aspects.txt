@@ -1,0 +1,37 @@
+﻿# Greek Catholic religion - religious aspects (2 slots)
+
+fnr_greek_catholic_byzantine_rite = {
+	religion = fnr_greek_catholic_religion
+
+	modifier = {
+		global_pop_conversion_speed_modifier = 0.15
+		stability_cost_efficiency = 0.1
+	}
+}
+
+fnr_greek_catholic_papal_communion = {
+	religion = fnr_greek_catholic_religion
+
+	modifier = {
+		monthly_legitimacy = 0.05
+		diplomatic_reputation = diplomatic_reputation_weak_bonus
+	}
+}
+
+fnr_greek_catholic_married_clergy = {
+	religion = fnr_greek_catholic_religion
+
+	modifier = {
+		clergy_estate_target_satisfaction = small_permanent_target_satisfaction
+		global_max_literacy = 5
+	}
+}
+
+fnr_greek_catholic_icons_and_relics = {
+	religion = fnr_greek_catholic_religion
+
+	modifier = {
+		monthly_religious_influence = 0.1
+		monthly_prestige = 0.05
+	}
+}

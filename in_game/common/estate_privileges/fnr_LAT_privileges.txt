@@ -1,0 +1,49 @@
+﻿# Latin Empire Estate Privileges
+
+	# Nobles
+
+		# Barons of Romania - the crusader lords hold their fiefs by knight-service
+		fnr_LAT_barons_of_romania = {
+
+			estate = nobles_estate
+
+			potential = {
+				has_or_had_tag = LAT
+			}
+			allow = {
+				has_advance = LAT_assizes_of_romania
+			}
+
+			country_modifier = {
+				global_nobles_estate_power = 0.10
+				nobles_estate_target_satisfaction = small_privilege_target_satisfaction
+
+				global_levy_size_modifier = 0.10
+				army_heavy_cavalry_power = 0.05
+				subject_loyalty = 0.05
+			}
+		}
+
+	# Burghers
+
+		# The Venetian Quarter - only offered after accepting Venice's demands (fnr_LAT.3 A)
+		fnr_LAT_venetian_quarter = {
+
+			estate = burghers_estate
+
+			potential = {
+				has_or_had_tag = LAT
+				has_variable = fnr_LAT_venetian_quarter_offered
+			}
+			allow = {
+				has_variable = fnr_LAT_venetian_quarter_offered
+			}
+
+			country_modifier = {
+				global_burghers_estate_power = 0.10
+				burghers_estate_target_satisfaction = small_privilege_target_satisfaction
+
+				trade_income = 0.10
+				navy_galley_power = 0.05
+			}
+		}

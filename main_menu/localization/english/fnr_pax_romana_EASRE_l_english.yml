@@ -190,6 +190,7 @@
 
       fnr_EASRE_pentarchy_io: "The Pentarchy"
       fnr_EASRE_pentarchy_io_name: "The Pentarchy"
+      fnr_EASRE_pentarchy_io_created_tt: "Founds #Y The Pentarchy#! with us as its permanent leader."
       fnr_EASRE_pentarchy_io_desc: "The five ancient patriarchates of Christendom, Rome, Constantinople, Alexandria, Antioch and Jerusalem, reconstituted under the protection of the Roman Emperor. The Pentarchy lends the Emperor the authority of the whole Orthodox world, and the more of the five sees he holds, the stronger that authority becomes."
       fnr_EASRE_pentarchy_io_list_who_tt: "$WHO$ is a member of [GetUniqueInternationalOrganization('fnr_EASRE_pentarchy_io').GetName] with $LIST$"
       diplomatic_status_fnr_EASRE_pentarchy_io_name: "The Pentarchy"

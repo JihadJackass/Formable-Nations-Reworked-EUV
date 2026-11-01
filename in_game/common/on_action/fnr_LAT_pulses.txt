@@ -1,0 +1,18 @@
+﻿# Latin Empire yearly pulses (Pax Romana)
+# Gated on tag = LAT so other countries pay one cheap check.
+
+yearly_country_pulse = {
+	on_actions = {
+		fnr_LAT_yearly_pulse
+	}
+}
+
+fnr_LAT_yearly_pulse = {
+	trigger = { tag = LAT }
+	effect = {
+		fnr_LAT_yearly_upkeep_effect = yes
+	}
+	events = {
+		fnr_LAT.6	# Imperium Romaniae - capstone advance
+	}
+}

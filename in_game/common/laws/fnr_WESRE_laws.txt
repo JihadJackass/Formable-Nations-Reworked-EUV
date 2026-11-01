@@ -1,0 +1,62 @@
+﻿# Western Roman Empire Laws
+# Foederati Settlement Law - unlocked by WESRE_foederati_integration (unlock_law in the advance).
+# Roman Exclusivity is the starting policy; Foederati Settlement has to be adopted manually.
+# While Foederati Settlement is fully in force the Settle the Foederati decision is available.
+# Repealing it costs 20 Foederati loyalty and unsettles every settlement for 5 years.
+
+fnr_WESRE_foederati_law = {
+	unique = yes
+	law_category = administrative
+	law_country_group = WESRE
+
+	# Unlocked by WESRE_foederati_integration (unlock_law); the advance itself gates visibility
+	potential = {
+		has_or_had_tag = WESRE
+	}
+
+	fnr_WESRE_roman_exclusivity_policy = {
+		country_modifier = {
+			monthly_legitimacy = 0.05
+			global_pop_assimilation_speed_modifier = -0.05
+		}
+		estate_preferences = {
+			nobles_estate
+		}
+		years = 1
+	}
+
+	fnr_WESRE_foederati_settlement_policy = {
+		country_modifier = {
+			global_pop_assimilation_speed_modifier = 0.10
+			global_population_growth = 0.0005
+			monthly_legitimacy = -0.05
+		}
+		estate_preferences = {
+			peasants_estate
+		}
+		years = 2
+
+		on_fully_activated = {
+			set_variable = fnr_WESRE_settlement_law
+		}
+
+		on_deactivate = {
+			if = {
+				limit = { has_variable = fnr_WESRE_settlement_law }
+				remove_variable = fnr_WESRE_settlement_law
+			}
+			if = {
+				limit = { has_variable = fnr_WESRE_foederati_loyalty }
+				change_variable = { name = fnr_WESRE_foederati_loyalty add = -20 }
+			}
+			every_owned_location = {
+				limit = { has_location_modifier = fnr_WESRE_foederati_settlement }
+				add_location_modifier = {
+					modifier = fnr_WESRE_settlement_betrayed
+					years = 5
+					mode = add_and_extend
+				}
+			}
+		}
+	}
+}

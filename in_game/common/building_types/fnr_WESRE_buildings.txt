@@ -1,0 +1,153 @@
+﻿# Western Roman Empire Building Types - the Limes chain
+# Watchtower -> Burgus -> Castellum, border locations only (is_border), unlocked by WESRE_limes_reconstruction.
+# Each tier makes the previous one obsolete, so upgrading replaces it.
+# Castellum locations can recruit Comitatenses. A Castellum with 2+ neighbouring Castella
+# (3+ in a row) gets the "Limes Network" location bonus from the yearly pulse.
+# Not adapted: "destroyed if occupied" - occupation is left to the engine's normal building rules.
+
+# Tier 1 - Limes Watchtower
+fnr_WESRE_watchtower = {
+	audio_tier = 1
+	is_foreign = no
+	max_levels = 1
+	pop_type = soldiers
+	forbidden_for_estates = yes
+
+	category = defense_category
+
+	employment_size = stockade_employment
+
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+
+	build_time = small_fort_building
+
+	country_potential = {
+		has_or_had_tag = WESRE
+		has_advance = WESRE_limes_reconstruction
+	}
+
+	location_potential = {
+		is_border = yes
+	}
+
+	unique_production_methods = {
+		fnr_WESRE_watchtower_maintenance = {
+			lumber = 0.05
+			stone = 0.02
+			category = building_maintenance
+		}
+	}
+	construction_demand = stockade_construction
+
+	modifier = {
+		local_defensive = 0.10
+		local_hostile_attrition = 1
+	}
+}
+
+# Tier 2 - Burgus
+fnr_WESRE_burgus = {
+	audio_tier = 2
+	is_foreign = no
+	max_levels = 1
+	pop_type = soldiers
+	forbidden_for_estates = yes
+
+	category = defense_category
+	obsolete = fnr_WESRE_watchtower
+
+	employment_size = stockade_employment
+
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+
+	build_time = medium_fort_building
+	expensive = yes
+
+	country_potential = {
+		has_or_had_tag = WESRE
+		has_advance = WESRE_limes_reconstruction
+	}
+
+	location_potential = {
+		is_border = yes
+	}
+
+	allow = {
+		has_building = building_type:fnr_WESRE_watchtower
+	}
+
+	unique_production_methods = {
+		fnr_WESRE_burgus_maintenance = {
+			stone = 0.05
+			tools = 0.02
+			weaponry = 0.02
+			category = building_maintenance
+		}
+	}
+	construction_demand = castle_construction
+
+	modifier = {
+		local_defensive = 0.20
+		local_hostile_attrition = 2
+		local_garrison_size = 0.05
+		local_monthly_prosperity = 0.05
+	}
+}
+
+# Tier 3 - Castellum (Comitatenses recruitment)
+fnr_WESRE_castellum = {
+	audio_tier = 3
+	is_foreign = no
+	max_levels = 1
+	pop_type = soldiers
+	forbidden_for_estates = yes
+
+	category = defense_category
+	obsolete = fnr_WESRE_burgus
+
+	employment_size = castle_employment
+
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+
+	build_time = medium_fort_building
+	expensive = yes
+
+	country_potential = {
+		has_or_had_tag = WESRE
+		has_advance = WESRE_limes_reconstruction
+	}
+
+	location_potential = {
+		is_border = yes
+	}
+
+	allow = {
+		has_building = building_type:fnr_WESRE_burgus
+	}
+
+	unique_production_methods = {
+		fnr_WESRE_castellum_maintenance = {
+			stone = 0.10
+			tools = 0.05
+			weaponry = 0.05
+			category = building_maintenance
+		}
+	}
+	construction_demand = castle_construction
+
+	modifier = {
+		local_defensive = 0.30
+		local_hostile_attrition = 3
+		local_garrison_size = 0.10
+		local_manpower_modifier = 0.05
+	}
+}

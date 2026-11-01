@@ -1,0 +1,182 @@
+﻿l_english:
+
+  ###########################################################
+  # Pax Romana - Gallic Empire (GLCEM)                      #
+  ###########################################################
+
+    # FORMATION
+
+      fnr_GLCEM_culture_shift_tt: "Our primary culture becomes [ShowCultureName('fnr_gallo_roman_culture')]. #G 25%#! of Celtic and French pops and #G 10%#! of all others adopt it."
+      fnr_GLCEM_identity_choice_tt: "We will choose the soul of the new Gaul: the #Y Druidic Revival#! or the #Y Imperium Galliarum#!."
+
+    # ADVANCES
+
+      GLCEM_vercingetorix_legacy: "Vercingetorix's Legacy"
+      GLCEM_vercingetorix_legacy_desc: "At Gergovia he beat Caesar; at Alesia he surrendered himself so his people might live. Every Gaul who takes up arms carries a piece of his defiance, and every stranger who settles among us learns his name."
+      GLCEM_druidic_restoration: "Druidic Restoration"
+      GLCEM_druidic_restoration_desc: "The druids return from the forests and the margins of the world. Their colleges are refounded, their oral lore written down for the first time, and their sacred groves are tended once more.\n\nUnlocks the #Y Sacred Grove#!."
+      GLCEM_mint_of_treveri: "The Mint of Treveri"
+      GLCEM_mint_of_treveri_desc: "Augusta Treverorum struck the coins of Postumus and Tetricus, the emperors of the Gauls. Our mint strikes them again: good gold and silver bearing the face of a Gallic Augustus."
+      GLCEM_gaulish_metallurgy: "Gaulish Metallurgy"
+      GLCEM_gaulish_metallurgy_desc: "The Gauls forged iron long before Rome came, and the Romans learned from their smiths. The old workshops of the Bituriges and the Noric iron roads hum again."
+      GLCEM_arverni_confederation: "Arverni Confederation"
+      GLCEM_arverni_confederation_desc: "The Arverni once led a league of Gallic peoples that stretched from the Rhine to the Pyrenees. Their way of binding free peoples together under one war-leader can bind our subjects too.\n\nUnlocks the #Y Gallic Confederation#! reform."
+
+    # EVENTS - The Gallic Revival
+
+      flavor_GLCEM.1: "The Gallic Question"
+      flavor_GLCEM.1.entry: "The Gallic Question"
+      flavor_GLCEM.1.title: "The Gallic Question"
+      flavor_GLCEM.1.desc: "The wars are won. The peoples of Gaul are united. From the Rhine to the Pyrenees, our standards fly victorious. Yet in this moment of triumph we face a choice that goes beyond mere names. Shall we be the Gallic Empire, a name that speaks of legions, laurels and lasting dominion? Or simply Gallia, evoking the misty forests, proud chieftains and unconquered spirit of our forefathers?"
+      flavor_GLCEM.1.a: "Remain as the Gallic Empire!"
+      flavor_GLCEM.1.b: "Gallia is our home!"
+
+      flavor_GLCEM.2: "The Soul of Gaul"
+      flavor_GLCEM.2.entry: "The Soul of Gaul"
+      flavor_GLCEM.2.title: "The Soul of Gaul"
+      flavor_GLCEM.2.desc: "Two Gauls have always lived side by side. One is the Gaul of the forests: of druids and oak groves, of Vercingetorix and the old gods. The other is the Gaul of Lugdunum and Treveri: of aqueducts and basilicas, of Postumus, who wore the purple and made the West answer to a Gallic emperor. Our new realm must choose which Gaul it means to be."
+      flavor_GLCEM.2.a: "Let the old gods walk again."
+      flavor_GLCEM.2.b: "We are the Imperium Galliarum."
+      fnr_GLCEM_path_druidic_tt: "We embrace the [ShowReligionName('fnr_gallo_roman_religion')] faith and Gaulish court. #G 30%#! of Celtic pops and #G 10%#! of all others convert. A Christian or Muslim realm loses stability and angers its clergy; a pagan one gains legitimacy instead.\nUnlocks #Y Druidic Restoration#!, the #Y Sacred Grove#!, the #Y Druids' Council#! and the #Y Celtic League#!."
+      fnr_GLCEM_path_imperial_tt: "We keep our faith and adopt a Latin court. Holding #Y Trier#! or a Roman heritage adds prestige.\nUnlocks #Y The Mint of Treveri#! and the #Y Treveri Mint#! privilege."
+
+      flavor_GLCEM.3: "Echoes of Alesia"
+      flavor_GLCEM.3.entry: "Echoes of Alesia"
+      flavor_GLCEM.3.title: "Echoes of Alesia"
+      flavor_GLCEM.3.desc: "Farmers near the old hill-fort of Alesia have turned up rusted swords, Roman pila and Gallic shield-bosses, the debris of the siege where Vercingetorix made his last stand. Scholars and soldiers alike flock to the site. Some want a monument to the hero; others want to understand how Caesar won."
+      flavor_GLCEM.3.a: "Raise a monument to Vercingetorix."
+      flavor_GLCEM.3.b: "Study how Caesar did it."
+
+      flavor_GLCEM.4: "The Sacred Groves"
+      flavor_GLCEM.4.entry: "The Sacred Groves"
+      flavor_GLCEM.4.title: "The Sacred Groves"
+      flavor_GLCEM.4.desc: "The druids have come to court with a demand: the great oak forests where the old rites are held must be protected. No axe may touch them. The ironmasters and shipwrights, who need timber for their furnaces and keels, are outraged."
+      flavor_GLCEM.4.a: "The groves are sacred. Spare them."
+      flavor_GLCEM.4.b: "The forests feed the forges."
+
+      flavor_GLCEM.5: "The Coins of Postumus"
+      flavor_GLCEM.5.entry: "The Coins of Postumus"
+      flavor_GLCEM.5.title: "The Coins of Postumus"
+      flavor_GLCEM.5.desc: "Our treasurers have found a hoard of coins struck by Postumus at Treveri, bearing the legend RESTITVTOR GALLIARVM. Some at court urge us to strike our own coinage in the same proud style. Others warn that the merchants of the Mediterranean trust only the old Roman standard."
+      flavor_GLCEM.5.a: "Strike the coins of a Gallic Augustus."
+      flavor_GLCEM.5.b: "Keep to the Roman standard."
+
+      flavor_GLCEM.6: "The Arverni Chiefs"
+      flavor_GLCEM.6.entry: "The Arverni Chiefs"
+      flavor_GLCEM.6.title: "The Arverni Chiefs"
+      flavor_GLCEM.6.desc: "The great lords of the Auvergne have revived an old custom: an assembly of free peoples, each ruling itself, all following one war-leader in time of need. They ask that the realm be governed this way. The crown's officials argue that Gaul needs one master, not a council of chiefs."
+      flavor_GLCEM.6.a: "A confederation of free peoples."
+      flavor_GLCEM.6.b: "One crown over Gaul."
+      fnr_GLCEM_confederation_tt: "The #Y Gallic Confederation#! reform suits this choice."
+
+    # GOVERNMENT REFORMS
+
+      fnr_GLCEM_gallic_confederation: "Gallic Confederation"
+      fnr_GLCEM_gallic_confederation_desc: "A federation of Gallic peoples under one war-leader. Our subjects govern themselves and keep more of their income, but they are bound to send their levies when we call."
+
+    # ESTATE PRIVILEGES
+
+      fnr_GLCEM_druids_council: "Druids' Council"
+      fnr_GLCEM_druids_council_desc: "The druids sit in council as judges, teachers and keepers of the calendar, as they did before Rome came."
+      fnr_GLCEM_treveri_mint: "Treveri Mint"
+      fnr_GLCEM_treveri_mint_desc: "The merchant houses of the old imperial cities are granted the right to strike and guarantee the realm's coinage."
+
+    # BUILDINGS
+
+      fnr_GLCEM_sacred_grove: "Sacred Grove"
+      fnr_GLCEM_sacred_grove_desc: "A nemeton: a sanctuary of ancient oaks where the druids keep the rites of the old gods. Draws the local people to the Gallo-Roman faith."
+
+    # DECISIONS
+
+      fnr_GLCEM_establish_tarraconensis.title: "Establish Tarraconensis"
+      fnr_GLCEM_establish_tarraconensis.desc: "Hispania was part of the Gallic Empire of Postumus. Rather than rule it directly, we can restore the old province of Tarraconensis as a kingdom bound to us."
+      fnr_GLCEM_establish_tarraconensis.a: "Restore Tarraconensis."
+      fnr_GLCEM_establish_tarraconensis_tt: "All our non-capital lands in [ShowRegionName('iberia_region')] form the kingdom of #Y Tarraconensis#!, a loyal vassal, seated at #Y Tarragona#! if we hold it."
+      fnr_GLCEM_establish_britannia.title: "Establish Britannia"
+      fnr_GLCEM_establish_britannia.desc: "Britannia stood with the Gallic emperors against Rome. We can restore the old province as a kingdom bound to us, rather than govern it across the sea."
+      fnr_GLCEM_establish_britannia.a: "Restore Britannia."
+      fnr_GLCEM_establish_britannia_tt: "All our non-capital lands in southern Britain (the West Country, Home Counties, East Anglia, Wales and the Midlands) form the kingdom of #Y Britannia#!, a loyal vassal, seated at #Y London#! if we hold it."
+
+    # DECISIONS - Released provinces and the Celtic League
+
+      fnr_GLCEM_grant_tarraconensis.title: "Grant Tarraconensis Self-Rule"
+      fnr_GLCEM_grant_tarraconensis.desc: "Tarraconensis was restored to serve Gaul, not to become a new Spain. If we trust its kings, we may free them to reshape their realm as they see fit."
+      fnr_GLCEM_grant_tarraconensis.a: "Let Tarraconensis choose its own destiny."
+      fnr_GLCEM_grant_britannia.title: "Grant Britannia Self-Rule"
+      fnr_GLCEM_grant_britannia.desc: "Britannia was restored to serve Gaul, not to become a new England. If we trust its kings, we may free them to reshape their realm as they see fit."
+      fnr_GLCEM_grant_britannia.a: "Let Britannia choose its own destiny."
+      fnr_GLCEM_grant_self_rule_tt: "They may now form other nations, even while they remain our subject."
+      fnr_GLCEM_released_lock_tt: "While it remains our subject, the new kingdom #R cannot form other nations#! unless we grant it self-rule. The restriction ends if it becomes independent."
+      fnr_GLCEM_granted_self_rule: "Granted us self-rule"
+
+      fnr_GLCEM_call_celtic_league.title: "Call the Celtic League"
+      fnr_GLCEM_call_celtic_league.desc: "From Armorica to Hibernia, the Celtic peoples share old gods, old tongues and old enemies. The druids can carry our call to every hall and hill-fort: stand together, and no empire will rule us again."
+      fnr_GLCEM_call_celtic_league.a: "Send the druids to every Celtic hall."
+
+    # INTERNATIONAL ORGANIZATION - The Celtic League
+
+      fnr_GLCEM_celtic_league_io: "The Celtic League"
+      fnr_GLCEM_celtic_league_io_name: "The Celtic League"
+      fnr_GLCEM_celtic_league_io_created_tt: "Founds #Y The Celtic League#! with us as its permanent leader. Our subjects join automatically."
+      fnr_GLCEM_celtic_league_io_desc: "A league of the Celtic peoples, called together by the druids of Gaul.\n\n#T How it works#!\n- #Y Who can join:#! any Celtic-culture country, any follower of the [ShowReligionName('fnr_gallo_roman_religion')] faith, and any subject of the Gallic Empire. Our subjects, such as #Y Tarraconensis#! and #Y Britannia#!, join automatically.\n- #Y Defense:#! members are called into each other's defensive wars.\n- #Y Members#! gain morale, defense and tolerance of other faiths, and think better of the Gallic Empire.\n- #Y The Gallic Empire#! gains religious influence and morale, plus levy size and prestige for every member, up to 8.\n- #Y League actions#! (Gallic Empire decisions): hold the #Y Great Assembly#! in peacetime every 5 years, or #Y Sound the Carnyx#! in wartime every 10 years to rally every member at once."
+      fnr_GLCEM_celtic_league_io_list_who_tt: "$WHO$ is a member of [GetUniqueInternationalOrganization('fnr_GLCEM_celtic_league_io').GetName] with $LIST$"
+      diplomatic_status_fnr_GLCEM_celtic_league_io_name: "The Celtic League"
+      diplomatic_status_fnr_GLCEM_celtic_league_io_tooltip: "#T The Celtic League#!\nThis [country|e] is a member of the Celtic League."
+      io_opinion_fnr_GLCEM_celtic_league_io: "Fellow member of the Celtic League"
+
+      fnr_GLCEM_joined_the_league: "Joined the Celtic League"
+      fnr_GLCEM_attended_assembly: "Attended the Great Assembly"
+      fnr_GLCEM_great_assembly.title: "Hold the Great Assembly"
+      fnr_GLCEM_great_assembly.desc: "Once a generation the peoples of the league gathered in the forest of the Carnutes to settle disputes, swear oaths and honour the gods. Let the assembly meet again."
+      fnr_GLCEM_great_assembly.a: "Summon the chiefs and druids to the Carnutes."
+      fnr_GLCEM_great_assembly_tt: "Every member of the #Y Celtic League#!, including us, gains #Y Great Assembly#! for 5 years, and every other member thinks better of us. Can be held again in 5 years."
+      fnr_GLCEM_sound_the_carnyx.title: "Sound the Carnyx"
+      fnr_GLCEM_sound_the_carnyx.desc: "The carnyx, the boar-headed war trumpet of the Gauls, sounds over every hill-fort of the league. Every Celtic warrior knows what it means."
+      fnr_GLCEM_sound_the_carnyx.a: "Let every Celtic hall hear it."
+      fnr_GLCEM_sound_the_carnyx_tt: "Every member of the #Y Celtic League#!, including us, gains #Y The Carnyx Sounds#! for 2 years. Can be used again in 10 years."
+      STATIC_MODIFIER_NAME_fnr_GLCEM_great_assembly: "Great Assembly"
+      STATIC_MODIFIER_DESC_fnr_GLCEM_great_assembly: "The chiefs and druids of the Celtic League have met and sworn their oaths."
+      STATIC_MODIFIER_NAME_fnr_GLCEM_carnyx: "The Carnyx Sounds"
+      STATIC_MODIFIER_DESC_fnr_GLCEM_carnyx: "The war trumpets of the Celtic League have called every warrior to arms."
+
+    # RELIGIOUS ASPECTS - The Gallic gods
+
+      fnr_gallo_roman_worship_taranis: "Worship of Taranis"
+      fnr_gallo_roman_worship_taranis_desc: "The thunderer, wielder of the wheel and the lightning. His worshippers hold their walls and forge their blades in his name."
+      fnr_gallo_roman_worship_lugus: "Worship of Lugus"
+      fnr_gallo_roman_worship_lugus_desc: "The many-skilled god, master of every craft and patron of travellers and traders. Lugdunum itself bears his name."
+      fnr_gallo_roman_worship_cernunnos: "Worship of Cernunnos"
+      fnr_gallo_roman_worship_cernunnos_desc: "The horned lord of the wild things, giver of plenty, who sits cross-legged among the beasts."
+      fnr_gallo_roman_worship_teutates: "Worship of Teutates"
+      fnr_gallo_roman_worship_teutates_desc: "The god of the tribe itself. Every warrior who fights for his people fights for Teutates."
+      fnr_gallo_roman_worship_belenos: "Worship of Belenos"
+      fnr_gallo_roman_worship_belenos_desc: "The bright one, god of the sun and of healing springs. His shrines are places of cure and of learning."
+      fnr_gallo_roman_worship_epona: "Worship of Epona"
+      fnr_gallo_roman_worship_epona_desc: "The great mare, goddess of horses and riders, honoured by Gaulish cavalry and Roman troopers alike."
+      fnr_gallo_roman_worship_sucellus: "Worship of Sucellus"
+      fnr_gallo_roman_worship_sucellus_desc: "The good striker, god of the harvest, the vine and the hearth, carrying his mallet and his pot of plenty."
+
+    # STATIC MODIFIERS
+
+      STATIC_MODIFIER_NAME_fnr_GLCEM_druidic_revival: "Druidic Revival"
+      STATIC_MODIFIER_DESC_fnr_GLCEM_druidic_revival: "The old gods walk in Gaul again."
+      STATIC_MODIFIER_NAME_fnr_GLCEM_imperium_galliarum: "Imperium Galliarum"
+      STATIC_MODIFIER_DESC_fnr_GLCEM_imperium_galliarum: "We rule as the emperors of the Gauls once did, Roman in all but allegiance."
+      STATIC_MODIFIER_NAME_fnr_GLCEM_monument_of_alesia: "Monument of Alesia"
+      STATIC_MODIFIER_DESC_fnr_GLCEM_monument_of_alesia: "Vercingetorix stands in bronze over the field where he made his last stand."
+      STATIC_MODIFIER_NAME_fnr_GLCEM_caesars_commentaries: "Caesar's Commentaries"
+      STATIC_MODIFIER_DESC_fnr_GLCEM_caesars_commentaries: "Our officers study the enemy who conquered Gaul."
+      STATIC_MODIFIER_NAME_fnr_GLCEM_groves_protected: "Protected Groves"
+      STATIC_MODIFIER_DESC_fnr_GLCEM_groves_protected: "No axe may touch the sacred oaks."
+      STATIC_MODIFIER_NAME_fnr_GLCEM_forests_felled: "Forests Felled"
+      STATIC_MODIFIER_DESC_fnr_GLCEM_forests_felled: "The timber of the old forests feeds our furnaces and shipyards."
+      STATIC_MODIFIER_NAME_fnr_GLCEM_coins_of_postumus: "Coins of Postumus"
+      STATIC_MODIFIER_DESC_fnr_GLCEM_coins_of_postumus: "Our coins proclaim a Gallic Augustus, and the world takes note."
+      STATIC_MODIFIER_NAME_fnr_GLCEM_roman_standard: "Roman Standard"
+      STATIC_MODIFIER_DESC_fnr_GLCEM_roman_standard: "Our coinage follows the old Roman weights, trusted in every market."
+      STATIC_MODIFIER_NAME_fnr_GLCEM_arverni_bound: "Confederation of Free Peoples"
+      STATIC_MODIFIER_DESC_fnr_GLCEM_arverni_bound: "Our subjects follow us as free allies, not conquered peoples."
+      STATIC_MODIFIER_NAME_fnr_GLCEM_crown_of_gaul: "One Crown over Gaul"
+      STATIC_MODIFIER_DESC_fnr_GLCEM_crown_of_gaul: "Gaul answers to one master."
+      STATIC_MODIFIER_NAME_fnr_GLCEM_provinces_of_gaul: "Provinces of the Gallic Empire"
+      STATIC_MODIFIER_DESC_fnr_GLCEM_provinces_of_gaul: "Tarraconensis or Britannia stands with us again, as in the days of Postumus."

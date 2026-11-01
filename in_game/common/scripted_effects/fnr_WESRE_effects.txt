@@ -1,0 +1,226 @@
+﻿# Western Roman Empire scripted effects (Pax Romana)
+
+# Hands the whole province of scope:fnr_WESRE_ceded_location to scope:fnr_WESRE_barbarian (flavor_WESRE.2)
+fnr_WESRE_cede_border_province_effect = {
+	random_owned_location = {
+		limit = {
+			is_capital = no
+			any_neighbor_location = {
+				owner ?= scope:fnr_WESRE_barbarian
+			}
+		}
+		save_scope_as = fnr_WESRE_ceded_location
+	}
+	if = {
+		limit = { exists = scope:fnr_WESRE_ceded_location }
+		scope:fnr_WESRE_ceded_location.province = {
+			every_location_in_province = {
+				limit = { owner = root }
+				change_location_owner = scope:fnr_WESRE_barbarian
+			}
+		}
+	}
+}
+
+# Pops of a location's whole province join scope:fnr_WESRE_rebel. Use with LOCATION = saved scope name
+fnr_WESRE_province_joins_rebels_effect = {
+	if = {
+		limit = { exists = scope:$LOCATION$ }
+		scope:$LOCATION$.province = {
+			every_location_in_province = {
+				limit = { owner = root }
+				every_pop = {
+					limit = { owner = root }
+					change_pop_allegiance = scope:fnr_WESRE_rebel
+				}
+			}
+		}
+	}
+}
+
+# Changes Foederati loyalty and keeps it within 0-100. Use with VALUE = amount
+fnr_WESRE_change_foederati_loyalty_effect = {
+	if = {
+		limit = { NOT = { has_variable = fnr_WESRE_foederati_loyalty } }
+		set_variable = { name = fnr_WESRE_foederati_loyalty value = 50 }
+	}
+	change_variable = { name = fnr_WESRE_foederati_loyalty add = $VALUE$ }
+	if = {
+		limit = { var:fnr_WESRE_foederati_loyalty > 100 }
+		set_variable = { name = fnr_WESRE_foederati_loyalty value = 100 }
+	}
+	else_if = {
+		limit = { var:fnr_WESRE_foederati_loyalty < 0 }
+		set_variable = { name = fnr_WESRE_foederati_loyalty value = 0 }
+	}
+}
+
+# Holy site upkeep: country bonus while root owns an upgraded site. Use with CITY = rome/ravenna, SITE = location modifier
+fnr_WESRE_sync_holy_site_effect = {
+	if = {
+		limit = {
+			owns = location:$CITY$
+			location:$CITY$ = { has_location_modifier = $SITE$ }
+		}
+		if = {
+			limit = { NOT = { has_country_modifier = fnr_WESRE_holy_$CITY$ } }
+			add_country_modifier = { modifier = fnr_WESRE_holy_$CITY$ years = -1 }
+		}
+	}
+	else_if = {
+		limit = { has_country_modifier = fnr_WESRE_holy_$CITY$ }
+		remove_country_modifier = fnr_WESRE_holy_$CITY$
+	}
+}
+
+# Creates the Concilium Occidentis with root as leader (fnr_WESRE_convene_concilium)
+fnr_WESRE_create_concilium_effect = {
+	if = {
+		limit = {
+			NOT = { exists = international_organization:fnr_WESRE_concilium_io }
+		}
+		custom_tooltip = fnr_WESRE_concilium_io_created_tt
+		hidden_effect = {
+			create_international_organization = {
+				type = international_organization_type:fnr_WESRE_concilium_io
+				add_country_to_international_organization = ROOT
+				set_leader_country = ROOT
+			}
+		}
+	}
+}
+
+# Yearly upkeep for everything the WRE content map makes "scale" or "persist while"
+fnr_WESRE_yearly_upkeep_effect = {
+
+	# Foederati loyalty: starts at 50 with Foederati Integration, -1 a year, +2 a year with the Foederati Chiefs privilege
+	if = {
+		limit = { has_advance = WESRE_foederati_integration }
+		if = {
+			limit = { has_estate_privilege = estate_privilege:fnr_WESRE_foederati_chiefs }
+			fnr_WESRE_change_foederati_loyalty_effect = { VALUE = 1 }
+		}
+		else = {
+			fnr_WESRE_change_foederati_loyalty_effect = { VALUE = -1 }
+		}
+
+		# Devoted: 80+ with the privilege
+		if = {
+			limit = {
+				var:fnr_WESRE_foederati_loyalty > 80
+				has_estate_privilege = estate_privilege:fnr_WESRE_foederati_chiefs
+			}
+			if = {
+				limit = { NOT = { has_country_modifier = fnr_WESRE_foederati_devoted } }
+				add_country_modifier = { modifier = fnr_WESRE_foederati_devoted years = -1 }
+			}
+		}
+		else_if = {
+			limit = { has_country_modifier = fnr_WESRE_foederati_devoted }
+			remove_country_modifier = fnr_WESRE_foederati_devoted
+		}
+
+		# Restless: below 40 (warning before the revolt at 30)
+		if = {
+			limit = { var:fnr_WESRE_foederati_loyalty < 40 }
+			if = {
+				limit = { NOT = { has_country_modifier = fnr_WESRE_foederati_restless } }
+				add_country_modifier = { modifier = fnr_WESRE_foederati_restless years = -1 }
+			}
+		}
+		else_if = {
+			limit = { has_country_modifier = fnr_WESRE_foederati_restless }
+			remove_country_modifier = fnr_WESRE_foederati_restless
+		}
+	}
+
+	# Concilium member count (not counting the WRE) for the leader bonus
+	set_variable = { name = fnr_WESRE_concilium_members value = 0 }
+	if = {
+		limit = { exists = international_organization:fnr_WESRE_concilium_io }
+		every_country = {
+			limit = {
+				NOT = { tag = WESRE }
+				is_member_of_international_organization = international_organization:fnr_WESRE_concilium_io
+			}
+			root = { change_variable = { name = fnr_WESRE_concilium_members add = 1 } }
+		}
+	}
+
+	# Ravenna's Bureaucracy: Imperial Capital (refreshed each year, lapses if Ravenna is lost)
+	if = {
+		limit = {
+			has_advance = WESRE_ravenna_bureaucracy
+			owns = location:ravenna
+		}
+		location:ravenna = {
+			add_location_modifier = { modifier = fnr_WESRE_imperial_capital years = 2 mode = add_and_extend }
+		}
+	}
+
+	# Ecclesiastical Alliance: Papal Blessing (permanent once earned)
+	if = {
+		limit = {
+			has_advance = WESRE_ecclesiastical_alliance
+			NOT = { has_country_modifier = fnr_WESRE_papal_blessing }
+		}
+		add_country_modifier = { modifier = fnr_WESRE_papal_blessing years = -1 }
+	}
+
+	# Renovatio Occidentalis: The Last Light ends, Renovatio begins
+	if = {
+		limit = { has_advance = WESRE_renovatio_occidentalis }
+		if = {
+			limit = { has_country_modifier = fnr_WESRE_last_light }
+			remove_country_modifier = fnr_WESRE_last_light
+		}
+		if = {
+			limit = { NOT = { has_country_modifier = fnr_WESRE_renovatio } }
+			add_country_modifier = { modifier = fnr_WESRE_renovatio years = -1 }
+		}
+	}
+
+	# Holy sites: Rome and Ravenna
+	fnr_WESRE_sync_holy_site_effect = { CITY = rome SITE = fnr_WESRE_rome_restored }
+	fnr_WESRE_sync_holy_site_effect = { CITY = ravenna SITE = fnr_WESRE_ravenna_seat }
+	if = {
+		limit = {
+			has_country_modifier = fnr_WESRE_holy_rome
+			has_advance = WESRE_ecclesiastical_alliance
+		}
+		if = {
+			limit = { NOT = { has_country_modifier = fnr_WESRE_holy_rome_church } }
+			add_country_modifier = { modifier = fnr_WESRE_holy_rome_church years = -1 }
+		}
+	}
+	else_if = {
+		limit = { has_country_modifier = fnr_WESRE_holy_rome_church }
+		remove_country_modifier = fnr_WESRE_holy_rome_church
+	}
+
+	# Limes Network: a Castellum with 2+ neighbouring Castella
+	if = {
+		limit = { has_advance = WESRE_limes_reconstruction }
+		every_owned_location = {
+			limit = {
+				has_building = building_type:fnr_WESRE_castellum
+				any_neighbor_location = {
+					count >= 2
+					owner ?= root
+					has_building = building_type:fnr_WESRE_castellum
+				}
+			}
+			add_location_modifier = { modifier = fnr_WESRE_limes_network years = 2 mode = add_and_extend }
+		}
+	}
+
+	# Magistrate of the West -> Restored Western Emperor once the Reconquest has begun
+	if = {
+		limit = {
+			has_variable = fnr_WESRE_reconquest_begun
+			has_reform = government_reform:fnr_WESRE_magistrate_of_the_west
+		}
+		remove_reform = government_reform:fnr_WESRE_magistrate_of_the_west
+		add_reform = government_reform:fnr_WESRE_restored_western_emperor
+	}
+}

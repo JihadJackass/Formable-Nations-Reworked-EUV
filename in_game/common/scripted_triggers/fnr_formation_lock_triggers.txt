@@ -1,0 +1,9 @@
+﻿# FNR formation lock
+# Countries released by script (e.g. the Gallic Empire's Tarraconensis and Britannia) get the
+# fnr_formation_locked variable so the AI cannot immediately turn them into Spain, Great Britain, etc.
+# Every formable's potential checks this trigger. The lock is lifted when the country becomes
+# independent (fnr_formation_lock_pulses.txt) or when its overlord grants it by decision.
+
+fnr_not_formation_locked = {
+	NOT = { has_variable = fnr_formation_locked }
+}

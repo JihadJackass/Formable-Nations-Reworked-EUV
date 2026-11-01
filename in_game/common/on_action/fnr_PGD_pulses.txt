@@ -1,0 +1,35 @@
+﻿# Pontus, Gothia and Dacia yearly pulses (Pax Romana)
+# Each child is gated on its tag so other countries pay one cheap check.
+
+yearly_country_pulse = {
+	on_actions = {
+		fnr_PONTU_yearly_poison_pulse
+		fnr_GOTIA_yearly_pulse
+		fnr_DACIA_yearly_pulse
+	}
+}
+
+# Pontus - the Poison King: a court plot roughly once every 30 years
+fnr_PONTU_yearly_poison_pulse = {
+	trigger = { tag = PONTU }
+	random_events = {
+		chance_to_happen = 3
+		100 = fnr_PONTU.4
+	}
+}
+
+# Gothia - capstone event
+fnr_GOTIA_yearly_pulse = {
+	trigger = { tag = GOTIA }
+	events = {
+		fnr_GOTIA.4	# Gothic Renaissance - capstone advance
+	}
+}
+
+# Dacia - Sarmizegetusa upkeep
+fnr_DACIA_yearly_pulse = {
+	trigger = { tag = DACIA }
+	effect = {
+		fnr_DACIA_yearly_upkeep_effect = yes
+	}
+}

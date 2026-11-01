@@ -1,0 +1,24 @@
+﻿# Gallic Empire scripted triggers (Pax Romana)
+
+# Location scope: one of the Britannia formable's areas (BRTNA_f)
+fnr_GLCEM_is_britannia_location = {
+	OR = {
+		area = area:west_country_area
+		area = area:home_counties_area
+		area = area:east_anglia_area
+		area = area:wales_area
+		area = area:midlands_area
+	}
+}
+
+# Country scope: a Roman successor state (for a French-culture Gallic secession)
+fnr_GLCEM_is_roman_successor = {
+	OR = {
+		tag = ROM
+		tag = WESRE
+		tag = RMNRP
+		tag = LTNEM
+		tag = LAT
+		tag = EASRE
+	}
+}

@@ -1,0 +1,118 @@
+﻿# Latin Empire scripted effects (Pax Romana)
+
+# Partition of Romania: releases a crusader fief as a vassal.
+# The fief gets fnr_LAT_frankish_fief (for the overlord bonus) and fnr_formation_locked (see fnr_formation_lock_triggers.txt).
+# Parameters: FIEF = achaea / athens / thessalonica (selects fnr_LAT_is_<FIEF>_location), SEAT = preferred seat location
+
+fnr_LAT_release_fief_effect = {
+	if = {
+		limit = {
+			owns = location:$SEAT$
+			location:$SEAT$ = { is_capital = no }
+		}
+		location:$SEAT$ = { save_scope_as = fnr_LAT_seat }
+	}
+	else = {
+		random_owned_location = {
+			limit = {
+				is_capital = no
+				fnr_LAT_is_$FIEF$_location = yes
+			}
+			save_scope_as = fnr_LAT_seat
+		}
+	}
+	scope:fnr_LAT_seat = {
+		create_country_from_location = {
+			save_scope_as = fnr_LAT_new_fief
+			set_country_rank = country_rank:rank_duchy
+		}
+	}
+	scope:fnr_LAT_new_fief = {
+		set_variable = fnr_LAT_frankish_fief
+		set_variable = fnr_formation_locked
+		make_subject_of = {
+			target = root
+			type = subject_type:vassal
+		}
+	}
+	every_owned_location = {
+		limit = {
+			is_capital = no
+			fnr_LAT_is_$FIEF$_location = yes
+		}
+		change_location_owner = scope:fnr_LAT_new_fief
+		add_core = scope:fnr_LAT_new_fief
+		change_integration_level = core
+	}
+}
+
+# Holy site upkeep: country bonus while root owns an upgraded site. Use with CITY and SITE (location modifier)
+fnr_LAT_sync_holy_site_effect = {
+	if = {
+		limit = {
+			owns = location:$CITY$
+			location:$CITY$ = { has_location_modifier = $SITE$ }
+		}
+		if = {
+			limit = { NOT = { has_country_modifier = fnr_LAT_holy_$CITY$ } }
+			add_country_modifier = { modifier = fnr_LAT_holy_$CITY$ years = -1 }
+		}
+	}
+	else_if = {
+		limit = { has_country_modifier = fnr_LAT_holy_$CITY$ }
+		remove_country_modifier = fnr_LAT_holy_$CITY$
+	}
+}
+
+# Creates the Barons of Romania with root as leader (fnr_LAT_found_barons_of_romania)
+fnr_LAT_create_barons_effect = {
+	if = {
+		limit = {
+			NOT = { exists = international_organization:fnr_LAT_barons_io }
+		}
+		custom_tooltip = fnr_LAT_barons_io_created_tt
+		hidden_effect = {
+			create_international_organization = {
+				type = international_organization_type:fnr_LAT_barons_io
+				add_country_to_international_organization = ROOT
+				set_leader_country = ROOT
+			}
+		}
+	}
+}
+
+# Yearly upkeep
+fnr_LAT_yearly_upkeep_effect = {
+
+	# Barons of Romania member count (not counting us) for the leader bonus
+	set_variable = { name = fnr_LAT_barons_members value = 0 }
+	if = {
+		limit = { exists = international_organization:fnr_LAT_barons_io }
+		every_country = {
+			limit = {
+				NOT = { tag = LAT }
+				is_member_of_international_organization = international_organization:fnr_LAT_barons_io
+			}
+			root = { change_variable = { name = fnr_LAT_barons_members add = 1 } }
+		}
+	}
+
+	# Lord of the Frankish Fiefs: while at least one Partition fief is our subject
+	if = {
+		limit = {
+			any_subject = { fnr_LAT_is_frankish_fief = yes }
+		}
+		if = {
+			limit = { NOT = { has_country_modifier = fnr_LAT_lord_of_the_fiefs } }
+			add_country_modifier = { modifier = fnr_LAT_lord_of_the_fiefs years = -1 }
+		}
+	}
+	else_if = {
+		limit = { has_country_modifier = fnr_LAT_lord_of_the_fiefs }
+		remove_country_modifier = fnr_LAT_lord_of_the_fiefs
+	}
+
+	# Holy sites: Notre-Dame d'Athenes and Saint Demetrius of Thessalonica
+	fnr_LAT_sync_holy_site_effect = { CITY = athens SITE = fnr_LAT_notre_dame_athenes }
+	fnr_LAT_sync_holy_site_effect = { CITY = thessaloniki SITE = fnr_LAT_saint_demetrius }
+}

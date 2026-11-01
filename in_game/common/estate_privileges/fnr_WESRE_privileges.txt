@@ -1,0 +1,28 @@
+﻿# Western Roman Empire Estate Privileges
+
+	# Nobles
+
+		# Foederati Chiefs - the barbarian war-chiefs are granted rank among the nobility.
+		# Raises Foederati loyalty each year (yearly pulse) and doubles loyalty from settlements.
+		# "-20% Foederati unit cost" is approximated with a light cavalry cost reduction.
+		fnr_WESRE_foederati_chiefs = {
+
+			estate = nobles_estate
+
+			potential = {
+				has_or_had_tag = WESRE
+			}
+			allow = {
+				has_advance = WESRE_foederati_integration
+			}
+
+			country_modifier = {
+				global_nobles_estate_power = 0.05
+				nobles_estate_target_satisfaction = small_privilege_target_satisfaction
+
+				global_manpower_modifier = 0.10
+				army_light_cavalry_power = 0.10
+				army_light_cavalry_build_cost_modifier = -0.20
+				army_light_cavalry_maintenance_cost_modifier = -0.20
+			}
+		}

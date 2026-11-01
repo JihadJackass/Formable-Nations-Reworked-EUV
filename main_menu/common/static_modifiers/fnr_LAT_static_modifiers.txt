@@ -1,0 +1,179 @@
+﻿##################################################
+# Formable Nations: Reworked - Latin Empire        #
+# Static Modifiers (Pax Romana)                    #
+##################################################
+
+	#########################
+	# Country modifiers      #
+	#########################
+
+		# fnr_LAT.1 A - 15 years
+		fnr_LAT_latin_coronation = {
+			game_data = {
+				category = country
+			}
+			monthly_legitimacy = 0.1
+			global_pop_conversion_speed_modifier = 0.10
+			tolerance_heretic = -1
+		}
+
+		# fnr_LAT.1 B - 15 years
+		fnr_LAT_two_patriarchs = {
+			game_data = {
+				category = country
+			}
+			tolerance_heretic = 2
+			global_estate_target_satisfaction = 0.03
+		}
+
+		# fnr_LAT.2 A - 25 years
+		fnr_LAT_feudal_partition = {
+			game_data = {
+				category = country
+			}
+			global_levy_size_modifier = 0.10
+			subject_loyalty = 0.10
+			global_max_control = -0.05
+		}
+
+		# fnr_LAT.2 B - 25 years
+		fnr_LAT_imperial_domain = {
+			game_data = {
+				category = country
+			}
+			global_crown_estate_power = 0.10
+			tax_income_efficiency = small_tax_income_efficiency_bonus
+		}
+
+		# fnr_LAT.3 A - 20 years
+		fnr_LAT_venetian_trade = {
+			game_data = {
+				category = country
+			}
+			trade_income = 0.10
+			global_burghers_estate_power = 0.05
+		}
+
+		# fnr_LAT.3 B - 20 years
+		fnr_LAT_our_own_fleets = {
+			game_data = {
+				category = country
+			}
+			navy_galley_power = 0.10
+			trade_income = -0.05
+		}
+
+		# fnr_LAT.4 A - 10 years
+		fnr_LAT_iron_hand = {
+			game_data = {
+				category = country
+			}
+			land_morale_modifier = 0.05
+			tolerance_heretic = -1
+		}
+
+		# fnr_LAT.4 B - 25 years
+		fnr_LAT_greek_archons = {
+			game_data = {
+				category = country
+			}
+			tolerance_heretic = 2
+			global_max_control = 0.05
+			global_nobles_estate_power = -0.05
+		}
+
+		# fnr_LAT.5 B - permanent
+		fnr_LAT_uniate_accord = {
+			game_data = {
+				category = country
+			}
+			tolerance_heretic = 2
+			global_pop_conversion_speed_modifier = 0.10
+			stability_cost_efficiency = 0.1
+		}
+
+		# fnr_LAT.5 C - 25 years
+		fnr_LAT_latin_orthodoxy = {
+			game_data = {
+				category = country
+			}
+			monthly_religious_influence = 0.1
+			global_pop_conversion_speed_modifier = 0.15
+			tolerance_heretic = -1
+		}
+
+		# fnr_LAT.6 - permanent
+		fnr_LAT_imperium_romaniae = {
+			game_data = {
+				category = country
+			}
+			monthly_prestige = 0.1
+			global_max_control = 0.05
+			army_heavy_cavalry_power = 0.10
+			diplomatic_reputation = diplomatic_reputation_weak_bonus
+		}
+
+		# While at least one Partition fief is our subject (yearly pulse)
+		fnr_LAT_lord_of_the_fiefs = {
+			game_data = {
+				category = country
+			}
+			global_levy_size_modifier = 0.05
+			subject_loyalty = 0.05
+			monthly_prestige = 0.05
+		}
+
+		# Barons of Romania actions
+		fnr_LAT_parliament_of_ravennika = {
+			game_data = {
+				category = country
+			}
+			monthly_legitimacy = 0.05
+			global_estate_target_satisfaction = 0.03
+			global_defensive = 0.05
+		}
+
+		fnr_LAT_barons_summoned = {
+			game_data = {
+				category = country
+			}
+			army_heavy_cavalry_power = 0.10
+			global_levy_size_modifier = 0.15
+		}
+
+		# Holy sites - while owned (yearly pulse)
+		fnr_LAT_holy_athens = {
+			game_data = {
+				category = country
+			}
+			monthly_prestige = 0.05
+			monthly_religious_influence = 0.1
+		}
+
+		fnr_LAT_holy_thessaloniki = {
+			game_data = {
+				category = country
+			}
+			monthly_legitimacy = 0.05
+			global_pop_conversion_speed_modifier = 0.05
+		}
+
+	#########################
+	# Location modifiers     #
+	#########################
+
+		fnr_LAT_notre_dame_athenes = {
+			game_data = {
+				category = location
+			}
+			local_monthly_prosperity = 0.10
+			local_unrest = -0.5
+		}
+
+		fnr_LAT_saint_demetrius = {
+			game_data = {
+				category = location
+			}
+			local_monthly_prosperity = 0.10
+			local_pop_conversion_speed_modifier = 0.10
+		}

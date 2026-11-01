@@ -1,0 +1,41 @@
+﻿# Western Roman Empire Specific Government Reforms
+# Magistrate of the West is added by flavor_WESRE.1 on formation.
+# It is swapped for Restored Western Emperor by the yearly pulse once the Reconquest has begun
+# (flavor_WESRE.7). The content map uses "50+ provinces", but WESRE_f already requires far more
+# than that, so the upgrade is tied to the end of the survival phase instead.
+
+	# Crisis government
+		fnr_WESRE_magistrate_of_the_west = {
+			unique = yes
+			potential = {
+				has_or_had_tag = WESRE
+				NOT = { has_variable = fnr_WESRE_reconquest_begun }
+			}
+			country_modifier = {
+				tax_income_efficiency = small_tax_income_efficiency_bonus
+				global_defensive = 0.05
+				global_manpower_modifier = 0.10
+				diplomatic_reputation = -1
+			}
+			years = 2
+			block_for_rebel = yes
+		}
+
+	# Upgrade - keeps the Magistrate bonuses, adds prestige and legitimacy, flips diplomatic reputation
+		fnr_WESRE_restored_western_emperor = {
+			unique = yes
+			potential = {
+				has_or_had_tag = WESRE
+				has_variable = fnr_WESRE_reconquest_begun
+			}
+			country_modifier = {
+				tax_income_efficiency = small_tax_income_efficiency_bonus
+				global_defensive = 0.05
+				global_manpower_modifier = 0.10
+				diplomatic_reputation = diplomatic_reputation_weak_bonus
+				monthly_prestige = 0.05
+				monthly_legitimacy = 0.05
+			}
+			years = 2
+			block_for_rebel = yes
+		}

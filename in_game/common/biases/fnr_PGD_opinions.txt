@@ -1,0 +1,7 @@
+﻿# Pontus, Gothia and Dacia opinion modifiers
+
+# fnr_GOTIA.3 A - the owner of Kaffa's opinion of Gothia
+fnr_GOTIA_genoese_compact = {
+	value = 25
+	yearly_decay = 1
+}

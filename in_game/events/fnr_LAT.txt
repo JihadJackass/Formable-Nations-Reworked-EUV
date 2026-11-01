@@ -1,0 +1,394 @@
+﻿namespace = fnr_LAT
+
+# ==========================================================================
+# Pax Romana - Latin Empire: "The Fourth Crusade Reversed"
+#  .1  Baldwin's Throne           - on formation (LAT_f / LAT_REDUCED_REQUIREMENTS_f form_effect)
+#  .2  The Partition of Romania   - 1 year after .1
+#  .3  Venetian Demands           - 3-5 years after .1, Venice must exist
+#  .4  Greek Resistance           - 5-10 years after .1
+#  .5  The Latin Rite Takes Root  - 30-40 years after .1: optional Greek Catholic rite
+#  .6  Imperium Romaniae          - yearly pulse, capstone advance
+# Vanilla LAT content (Orthodox Status law, Holy Patriarchate, Greater Claims) runs alongside.
+# ==========================================================================
+
+# 1 - Baldwin's Throne
+fnr_LAT.1 = {
+	type = country_event
+	title = fnr_LAT.1.title
+	desc = fnr_LAT.1.desc
+	fire_only_once = yes
+	outcome = positive
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:nobles_estate }
+		hidden_effect = {
+			trigger_event_non_silently = { id = fnr_LAT.2 days = 365 }
+			trigger_event_non_silently = { id = fnr_LAT.3 days = { 1095 1825 } }
+			trigger_event_non_silently = { id = fnr_LAT.4 days = { 1825 3650 } }
+			trigger_event_non_silently = { id = fnr_LAT.5 days = { 10950 14600 } }
+		}
+	}
+
+	# A - Crowned in the Latin rite
+	option = {
+		name = fnr_LAT.1.a
+		ai_chance = { factor = 50 }
+		add_legitimacy = legitimacy_mild_bonus
+		add_estate_satisfaction = {
+			type = estate_type:clergy_estate
+			value = estate_satisfaction_mild_bonus
+		}
+		add_country_modifier = {
+			modifier = fnr_LAT_latin_coronation
+			years = 15
+			mode = add_and_extend
+		}
+	}
+
+	# B - Crowned before both patriarchs
+	option = {
+		name = fnr_LAT.1.b
+		ai_chance = { factor = 50 }
+		add_stability = stability_weak_bonus
+		add_country_modifier = {
+			modifier = fnr_LAT_two_patriarchs
+			years = 15
+			mode = add_and_extend
+		}
+	}
+}
+
+# 2 - The Partition of Romania
+fnr_LAT.2 = {
+	type = country_event
+	title = fnr_LAT.2.title
+	desc = fnr_LAT.2.desc
+	fire_only_once = yes
+	outcome = neutral
+
+	trigger = {
+		tag = LAT
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
+	}
+
+	# A - Divide the empire among the barons
+	option = {
+		name = fnr_LAT.2.a
+		ai_chance = { factor = 60 }
+		set_variable = fnr_LAT_partition_feudal
+		add_estate_satisfaction = {
+			type = estate_type:nobles_estate
+			value = estate_satisfaction_mild_bonus
+		}
+		add_country_modifier = {
+			modifier = fnr_LAT_feudal_partition
+			years = 25
+			mode = add_and_extend
+		}
+		custom_tooltip = fnr_LAT_partition_feudal_tt
+	}
+
+	# B - The emperor keeps the land
+	option = {
+		name = fnr_LAT.2.b
+		ai_chance = { factor = 40 }
+		add_estate_satisfaction = {
+			type = estate_type:nobles_estate
+			value = estate_satisfaction_mild_penalty
+		}
+		add_country_modifier = {
+			modifier = fnr_LAT_imperial_domain
+			years = 25
+			mode = add_and_extend
+		}
+		custom_tooltip = fnr_LAT_partition_central_tt
+	}
+}
+
+# 3 - Venetian Demands
+fnr_LAT.3 = {
+	type = country_event
+	title = fnr_LAT.3.title
+	desc = fnr_LAT.3.desc
+	fire_only_once = yes
+	outcome = neutral
+
+	trigger = {
+		tag = LAT
+		exists = c:VEN
+		NOT = { any_country_at_war_with = { tag = VEN } }
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate }
+	}
+
+	# A - Grant the Venetian Quarter
+	option = {
+		name = fnr_LAT.3.a
+		ai_chance = { factor = 50 }
+		set_variable = fnr_LAT_venetian_quarter_offered
+		c:VEN = {
+			add_opinion = { target = root modifier = fnr_LAT_granted_venice_concessions }
+		}
+		add_country_modifier = {
+			modifier = fnr_LAT_venetian_trade
+			years = 20
+			mode = add_and_extend
+		}
+		custom_tooltip = fnr_LAT_venetian_quarter_tt
+	}
+
+	# B - Refuse
+	option = {
+		name = fnr_LAT.3.b
+		ai_chance = { factor = 25 }
+		c:VEN = {
+			add_opinion = { target = root modifier = fnr_LAT_refused_venice }
+		}
+		add_prestige = prestige_mild_bonus
+		add_country_modifier = {
+			modifier = fnr_LAT_our_own_fleets
+			years = 20
+			mode = add_and_extend
+		}
+	}
+
+	# C - Pay them off
+	option = {
+		name = fnr_LAT.3.c
+		trigger = { gold >= 300 }
+		ai_chance = { factor = 25 }
+		add_gold = -300
+		c:VEN = {
+			add_opinion = { target = root modifier = fnr_LAT_paid_venice }
+		}
+	}
+}
+
+# 4 - Greek Resistance
+fnr_LAT.4 = {
+	type = country_event
+	title = fnr_LAT.4.title
+	desc = fnr_LAT.4.desc
+	fire_only_once = yes
+	outcome = negative
+
+	trigger = {
+		tag = LAT
+		any_owned_location = {
+			is_capital = no
+			any_pop = { religion = religion:orthodox }
+		}
+	}
+
+	illustration_tags = {
+		10 = exterior
+		10 = armed
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:clergy_estate }
+	}
+
+	# A - Crush the pretender (his rising begins at once)
+	option = {
+		name = fnr_LAT.4.a
+		ai_chance = { factor = 50 }
+		create_rebel = {
+			category = pretender
+			name = fnr_LAT_greek_pretender_rebels
+			save_scope_as = fnr_LAT_rebel
+		}
+		random_owned_location = {
+			limit = {
+				is_capital = no
+				any_pop = { religion = religion:orthodox }
+			}
+			save_scope_as = fnr_LAT_revolt
+		}
+		scope:fnr_LAT_revolt.province = {
+			every_location_in_province = {
+				limit = { owner = root }
+				every_pop = {
+					limit = {
+						owner = root
+						religion = religion:orthodox
+					}
+					change_pop_allegiance = scope:fnr_LAT_rebel
+				}
+			}
+		}
+		scope:fnr_LAT_rebel = {
+			add_rebel_progress = 1
+		}
+		add_country_modifier = {
+			modifier = fnr_LAT_iron_hand
+			years = 10
+			mode = add_and_extend
+		}
+		custom_tooltip = fnr_LAT_greek_rising_tt
+	}
+
+	# B - Treat with the Greek archons
+	option = {
+		name = fnr_LAT.4.b
+		ai_chance = { factor = 50 }
+		add_prestige = prestige_mild_penalty
+		add_stability = stability_weak_bonus
+		add_country_modifier = {
+			modifier = fnr_LAT_greek_archons
+			years = 25
+			mode = add_and_extend
+		}
+	}
+}
+
+# 5 - The Latin Rite Takes Root (optional Greek Catholic religion)
+fnr_LAT.5 = {
+	type = country_event
+	title = fnr_LAT.5.title
+	desc = fnr_LAT.5.desc
+	fire_only_once = yes
+	outcome = neutral
+
+	trigger = {
+		tag = LAT
+		OR = {
+			religion = religion:catholic
+			religion = religion:orthodox
+		}
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate }
+	}
+
+	# A - Found a Greek Catholic rite
+	option = {
+		name = fnr_LAT.5.a
+		ai_chance = { factor = 30 }
+		change_religion = religion:fnr_greek_catholic_religion
+		change_religion_for_ruler_and_family = { country = ROOT religion = religion:fnr_greek_catholic_religion }
+		add_stability = stability_mild_penalty
+		if = {
+			limit = { exists = c:PAP }
+			c:PAP = {
+				add_opinion = { target = root modifier = fnr_LAT_founded_uniate_rite }
+			}
+		}
+		custom_tooltip = fnr_LAT_uniate_rite_tt
+		hidden_effect = {
+			every_pop = {
+				limit = {
+					owner = root
+					OR = {
+						religion = religion:orthodox
+						religion = religion:catholic
+					}
+				}
+				if = {
+					limit = { religion = religion:orthodox }
+					split_pop = {
+						fraction = 0.30
+						religion = religion:fnr_greek_catholic_religion
+					}
+				}
+				else = {
+					split_pop = {
+						fraction = 0.15
+						religion = religion:fnr_greek_catholic_religion
+					}
+				}
+			}
+		}
+	}
+
+	# B - A Uniate accord, without a new church
+	option = {
+		name = fnr_LAT.5.b
+		ai_chance = { factor = 40 }
+		add_country_modifier = {
+			modifier = fnr_LAT_uniate_accord
+			years = -1
+		}
+	}
+
+	# C - Rome alone
+	option = {
+		name = fnr_LAT.5.c
+		trigger = { religion = religion:catholic }
+		ai_chance = { factor = 30 }
+		add_estate_satisfaction = {
+			type = estate_type:clergy_estate
+			value = estate_satisfaction_mild_bonus
+		}
+		add_country_modifier = {
+			modifier = fnr_LAT_latin_orthodoxy
+			years = 25
+			mode = add_and_extend
+		}
+		if = {
+			limit = { exists = c:PAP }
+			c:PAP = {
+				add_opinion = { target = root modifier = fnr_LAT_faithful_to_rome }
+			}
+		}
+	}
+}
+
+# 6 - Imperium Romaniae (capstone)
+fnr_LAT.6 = {
+	type = country_event
+	title = fnr_LAT.6.title
+	desc = fnr_LAT.6.desc
+	fire_only_once = yes
+	outcome = positive
+
+	trigger = {
+		tag = LAT
+		has_advance = LAT_imperium_romaniae
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_LAT.6.a
+		add_prestige = prestige_severe_bonus
+		add_legitimacy = legitimacy_severe_bonus
+		add_country_modifier = {
+			modifier = fnr_LAT_imperium_romaniae
+			years = -1
+		}
+	}
+}

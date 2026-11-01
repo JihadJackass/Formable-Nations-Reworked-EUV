@@ -1,0 +1,731 @@
+﻿namespace = flavor_WESRE
+
+# ==========================================================================
+# Pax Romana - Western Roman Empire: "The Last Light"
+#  Phase 1: Survival
+#  .1  The Empty Treasury            - on formation (WESRE_f form_effect); starts the chain
+#  .2  The Barbarian at the Gate     - 1-5 years after formation, needs a strong neighbour
+#  .3  The General's Ambition        - 10-15 years after formation, needs a 60+ military general
+#  .4  The Pope's Bargain            - 5-10 years after formation, owns Rome and is Christian
+#  .5  The Aqueducts Fail            - 15-25 years after formation; ends the survival phase
+#  Phase 2: Stabilization
+#  .6  A Letter from the East        - 20-30 years after formation, only if the ERE exists
+#  .7  The Reconquest Begins         - yearly pulse: survival phase over + stability > 40
+#  Phase 3: Reconquest
+#  .8  Renovatio                     - yearly pulse: capstone advance researched
+#  Follow-ups
+#  .9  The Usurper                   - from .3 B (60%) or a failed assassination in .3 D
+#  .10 The Foederati Revolt          - yearly pulse: Foederati loyalty below 30
+# ==========================================================================
+
+# 1 - The Empty Treasury
+flavor_WESRE.1 = {
+	type = country_event
+	title = flavor_WESRE.1.title
+	desc = flavor_WESRE.1.desc
+	fire_only_once = yes
+	outcome = negative
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:crown_estate }
+		add_country_modifier = { modifier = fnr_WESRE_last_light years = -1 }
+		add_reform = government_reform:fnr_WESRE_magistrate_of_the_west
+		hidden_effect = {
+			trigger_event_non_silently = { id = flavor_WESRE.2 days = { 365 1825 } }
+			trigger_event_non_silently = { id = flavor_WESRE.4 days = { 1825 3650 } }
+			trigger_event_non_silently = { id = flavor_WESRE.3 days = { 3650 5475 } }
+			trigger_event_non_silently = { id = flavor_WESRE.5 days = { 5475 9125 } }
+			trigger_event_non_silently = { id = flavor_WESRE.6 days = { 7300 10950 } }
+		}
+	}
+
+	# A - Debase the currency
+	option = {
+		name = flavor_WESRE.1.a
+		ai_chance = { factor = 40 }
+		add_gold = 500
+		add_country_modifier = {
+			modifier = fnr_WESRE_debased_coinage
+			years = 10
+			mode = add_and_extend
+		}
+	}
+
+	# B - Tax the Church
+	option = {
+		name = flavor_WESRE.1.b
+		ai_chance = { factor = 20 }
+		add_gold = 300
+		add_estate_satisfaction = {
+			type = estate_type:clergy_estate
+			value = estate_satisfaction_mild_penalty
+		}
+		if = {
+			limit = { exists = c:PAP }
+			c:PAP = {
+				add_opinion = { target = root modifier = fnr_WESRE_church_taxed }
+			}
+		}
+	}
+
+	# C - Appeal to Constantinople (50% chance of 400 gold)
+	option = {
+		name = flavor_WESRE.1.c
+		trigger = {
+			exists = c:EASRE
+			c:EASRE = {
+				NOT = { is_rival_of = root }
+				NOT = { any_country_at_war_with = { tag = WESRE } }
+			}
+		}
+		ai_chance = { factor = 30 }
+		random_list = {
+			50 = {
+				add_gold = 400
+				custom_tooltip = fnr_WESRE_east_sends_gold_tt
+			}
+			50 = {
+				add_prestige = prestige_weak_penalty
+				custom_tooltip = fnr_WESRE_east_refuses_tt
+			}
+		}
+	}
+
+	# D - Do nothing
+	option = {
+		name = flavor_WESRE.1.d
+		ai_chance = { factor = 10 }
+		add_legitimacy = legitimacy_weak_bonus
+	}
+}
+
+# 2 - The Barbarian at the Gate
+flavor_WESRE.2 = {
+	type = country_event
+	title = flavor_WESRE.2.title
+	desc = flavor_WESRE.2.desc
+	fire_only_once = yes
+	outcome = negative
+
+	trigger = {
+		tag = WESRE
+		any_neighbor_country = {
+			is_subject = no
+			regular_army_size >= 10
+			NOT = { is_member_of_international_organization = international_organization:fnr_WESRE_concilium_io }
+		}
+	}
+
+	illustration_tags = {
+		10 = exterior
+		10 = armed
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:peasants_estate }
+		random_neighbor_country = {
+			limit = {
+				is_subject = no
+				regular_army_size >= 10
+				NOT = { is_member_of_international_organization = international_organization:fnr_WESRE_concilium_io }
+			}
+			save_scope_as = fnr_WESRE_barbarian
+		}
+	}
+
+	# A - Cede a border province
+	option = {
+		name = flavor_WESRE.2.a
+		ai_chance = { factor = 20 }
+		fnr_WESRE_cede_border_province_effect = yes
+		add_prestige = prestige_mild_penalty
+		add_stability = stability_weak_bonus
+		scope:fnr_WESRE_barbarian = {
+			add_opinion = { target = root modifier = fnr_WESRE_paid_off }
+		}
+	}
+
+	# B - Fight (the battle is resolved here: 60% victory, 75% if our army is the larger)
+	option = {
+		name = flavor_WESRE.2.b
+		ai_chance = { factor = 30 }
+		custom_tooltip = fnr_WESRE_battle_odds_tt
+		if = {
+			limit = { regular_army_size > scope:fnr_WESRE_barbarian.regular_army_size }
+			random_list = {
+				75 = {
+					add_prestige = prestige_severe_bonus
+					add_country_modifier = { modifier = fnr_WESRE_defender_of_rome years = 10 mode = add_and_extend }
+				}
+				25 = {
+					fnr_WESRE_cede_border_province_effect = yes
+					fnr_WESRE_cede_border_province_effect = yes
+					add_prestige = prestige_mild_penalty
+					add_stability = stability_severe_penalty
+					add_country_modifier = { modifier = fnr_WESRE_frontier_collapse years = 10 mode = add_and_extend }
+					add_country_modifier = { modifier = fnr_WESRE_debased_coinage years = 10 mode = add_and_extend }
+				}
+			}
+		}
+		else = {
+			random_list = {
+				60 = {
+					add_prestige = prestige_severe_bonus
+					add_country_modifier = { modifier = fnr_WESRE_defender_of_rome years = 10 mode = add_and_extend }
+				}
+				40 = {
+					fnr_WESRE_cede_border_province_effect = yes
+					fnr_WESRE_cede_border_province_effect = yes
+					add_prestige = prestige_mild_penalty
+					add_stability = stability_severe_penalty
+					add_country_modifier = { modifier = fnr_WESRE_frontier_collapse years = 10 mode = add_and_extend }
+					add_country_modifier = { modifier = fnr_WESRE_debased_coinage years = 10 mode = add_and_extend }
+				}
+			}
+		}
+	}
+
+	# C - Negotiate: they become foederati
+	option = {
+		name = flavor_WESRE.2.c
+		ai_chance = { factor = 35 }
+		add_country_modifier = { modifier = fnr_WESRE_barbarian_tribute years = 10 mode = add_and_extend }
+		fnr_WESRE_change_foederati_loyalty_effect = { VALUE = 10 }
+		add_opinion_mutual_effect = {
+			target = scope:fnr_WESRE_barbarian
+			modifier = fnr_WESRE_foederati_pact
+		}
+	}
+
+	# D - Bribe their general (70% they withdraw, 30% they take the gold and attack anyway)
+	option = {
+		name = flavor_WESRE.2.d
+		trigger = { gold >= 500 }
+		ai_chance = { factor = 15 }
+		add_gold = -500
+		random_list = {
+			70 = {
+				scope:fnr_WESRE_barbarian = {
+					add_opinion = { target = root modifier = fnr_WESRE_paid_off }
+				}
+				custom_tooltip = fnr_WESRE_bribe_works_tt
+			}
+			30 = {
+				fnr_WESRE_cede_border_province_effect = yes
+				add_prestige = prestige_mild_penalty
+				custom_tooltip = fnr_WESRE_bribe_fails_tt
+			}
+		}
+	}
+}
+
+# 3 - The General's Ambition
+flavor_WESRE.3 = {
+	type = country_event
+	title = flavor_WESRE.3.title
+	desc = flavor_WESRE.3.desc
+	fire_only_once = yes
+	outcome = neutral
+
+	trigger = {
+		tag = WESRE
+		any_character = {
+			is_general = yes
+			mil >= 60
+		}
+	}
+
+	illustration_tags = {
+		10 = exterior
+		10 = armed
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
+		random_character = {
+			limit = {
+				is_general = yes
+				mil >= 60
+			}
+			save_scope_as = fnr_WESRE_general
+		}
+	}
+
+	# A - Recall and reward
+	option = {
+		name = flavor_WESRE.3.a
+		ai_chance = { factor = 40 }
+		add_country_modifier = { modifier = fnr_WESRE_recalled_general years = 2 mode = add_and_extend }
+		add_stability = stability_weak_bonus
+		add_estate_satisfaction = {
+			type = estate_type:nobles_estate
+			value = estate_satisfaction_weak_bonus
+		}
+	}
+
+	# B - Let him be (60%: a rival emperor rises within 5-10 years)
+	option = {
+		name = flavor_WESRE.3.b
+		ai_chance = { factor = 15 }
+		custom_tooltip = fnr_WESRE_usurper_risk_tt
+		hidden_effect = {
+			random_list = {
+				40 = { }
+				60 = {
+					set_variable = { name = fnr_WESRE_ambitious_general value = scope:fnr_WESRE_general }
+					trigger_event_non_silently = { id = flavor_WESRE.9 days = { 1825 3650 } }
+				}
+			}
+		}
+	}
+
+	# C - Bind him through marriage
+	option = {
+		name = flavor_WESRE.3.c
+		ai_chance = { factor = 35 }
+		add_stability = stability_weak_bonus
+		add_legitimacy = legitimacy_mild_bonus
+	}
+
+	# D - Have him killed (70% success, 30% he rises in revolt at once)
+	option = {
+		name = flavor_WESRE.3.d
+		ai_chance = { factor = 10 }
+		random_list = {
+			70 = {
+				kill_character_silently = scope:fnr_WESRE_general
+				add_stability = stability_mild_penalty
+				add_country_modifier = { modifier = fnr_WESRE_assassination_scandal years = 5 mode = add_and_extend }
+				custom_tooltip = fnr_WESRE_assassination_works_tt
+			}
+			30 = {
+				set_variable = { name = fnr_WESRE_ambitious_general value = scope:fnr_WESRE_general }
+				custom_tooltip = fnr_WESRE_assassination_fails_tt
+				hidden_effect = {
+					trigger_event_non_silently = { id = flavor_WESRE.9 days = 1 }
+				}
+			}
+		}
+	}
+}
+
+# 4 - The Pope's Bargain
+flavor_WESRE.4 = {
+	type = country_event
+	title = flavor_WESRE.4.title
+	desc = flavor_WESRE.4.desc
+	fire_only_once = yes
+	outcome = neutral
+
+	trigger = {
+		tag = WESRE
+		owns = location:rome
+		religion.group = religion_group:christian
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate }
+	}
+
+	# A - Grant temporal authority
+	option = {
+		name = flavor_WESRE.4.a
+		ai_chance = { factor = 40 }
+		add_legitimacy = legitimacy_severe_bonus
+		add_stability = stability_mild_bonus
+		add_country_modifier = { modifier = fnr_WESRE_papal_temporal_authority years = -1 }
+	}
+
+	# B - Spiritual authority only
+	option = {
+		name = flavor_WESRE.4.b
+		ai_chance = { factor = 45 }
+		add_legitimacy = legitimacy_weak_bonus
+		add_estate_satisfaction = {
+			type = estate_type:clergy_estate
+			value = estate_satisfaction_weak_bonus
+		}
+	}
+
+	# C - Refuse
+	option = {
+		name = flavor_WESRE.4.c
+		ai_chance = { factor = 15 }
+		set_variable = fnr_WESRE_refused_the_pope
+		change_societal_value = {
+			type = centralization_vs_decentralization
+			value = societal_value_move_to_left
+		}
+		add_estate_satisfaction = {
+			type = estate_type:clergy_estate
+			value = estate_satisfaction_mild_penalty
+		}
+		if = {
+			limit = { exists = c:PAP }
+			c:PAP = {
+				add_opinion = { target = root modifier = fnr_WESRE_defied_the_pope }
+			}
+		}
+		custom_tooltip = fnr_WESRE_refused_pope_tt
+	}
+}
+
+# 5 - The Aqueducts Fail (ends the survival phase)
+flavor_WESRE.5 = {
+	type = country_event
+	title = flavor_WESRE.5.title
+	desc = flavor_WESRE.5.desc
+	fire_only_once = yes
+	outcome = negative
+
+	trigger = {
+		tag = WESRE
+	}
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:peasants_estate }
+		set_variable = fnr_WESRE_survival_over
+	}
+
+	# A - Massive investment
+	option = {
+		name = flavor_WESRE.5.a
+		trigger = { gold >= 1000 }
+		ai_chance = { factor = 40 }
+		add_gold = -1000
+		every_owned_location = {
+			limit = { region = region:italy_region }
+			add_location_modifier = { modifier = fnr_WESRE_italian_aqueducts years = -1 }
+		}
+		capital = {
+			add_location_modifier = { modifier = fnr_WESRE_capital_aqueducts years = -1 }
+		}
+	}
+
+	# B - Partial repairs
+	option = {
+		name = flavor_WESRE.5.b
+		trigger = { gold >= 400 }
+		ai_chance = { factor = 40 }
+		add_gold = -400
+		capital = {
+			add_location_modifier = { modifier = fnr_WESRE_capital_repairs years = -1 }
+		}
+	}
+
+	# C - Ignore it
+	option = {
+		name = flavor_WESRE.5.c
+		fallback = yes
+		ai_chance = { factor = 20 }
+		add_country_modifier = { modifier = fnr_WESRE_aqueducts_neglected years = 20 mode = add_and_extend }
+	}
+}
+
+# 6 - A Letter from the East
+flavor_WESRE.6 = {
+	type = country_event
+	title = flavor_WESRE.6.title
+	desc = flavor_WESRE.6.desc
+	fire_only_once = yes
+	outcome = neutral
+
+	trigger = {
+		tag = WESRE
+		exists = c:EASRE
+		NOT = { any_country_at_war_with = { tag = EASRE } }
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:clergy_estate }
+	}
+
+	# A - Accept the alliance
+	option = {
+		name = flavor_WESRE.6.a
+		ai_chance = { factor = 45 }
+		create_alliance = { target = c:EASRE }
+		add_opinion_mutual_effect = {
+			target = c:EASRE
+			modifier = fnr_WESRE_brothers_in_purple
+		}
+		add_legitimacy = legitimacy_mild_bonus
+		add_country_modifier = { modifier = fnr_WESRE_eastern_influence years = 20 mode = add_and_extend }
+	}
+
+	# B - Reject
+	option = {
+		name = flavor_WESRE.6.b
+		ai_chance = { factor = 25 }
+		add_prestige = prestige_mild_bonus
+		c:EASRE = {
+			add_opinion = { target = root modifier = fnr_WESRE_rebuffed_the_east }
+		}
+	}
+
+	# C - Counter-propose an alliance of equals (50/50)
+	option = {
+		name = flavor_WESRE.6.c
+		ai_chance = { factor = 30 }
+		random_list = {
+			50 = {
+				create_alliance = { target = c:EASRE }
+				add_opinion_mutual_effect = {
+					target = c:EASRE
+					modifier = fnr_WESRE_brothers_in_purple
+				}
+				custom_tooltip = fnr_WESRE_east_accepts_tt
+			}
+			50 = {
+				c:EASRE = {
+					add_opinion = { target = root modifier = fnr_WESRE_insulted_the_east }
+				}
+				custom_tooltip = fnr_WESRE_east_insulted_tt
+			}
+		}
+	}
+}
+
+# 7 - The Reconquest Begins (turning point)
+flavor_WESRE.7 = {
+	type = country_event
+	title = flavor_WESRE.7.title
+	desc = flavor_WESRE.7.desc
+	fire_only_once = yes
+	outcome = positive
+
+	trigger = {
+		tag = WESRE
+		has_variable = fnr_WESRE_survival_over
+		stability > 40
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = armed
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
+		set_variable = fnr_WESRE_reconquest_begun
+	}
+
+	# A - Gaul
+	option = {
+		name = flavor_WESRE.7.a
+		ai_chance = { factor = 30 }
+		set_variable = fnr_WESRE_front_gaul
+		add_country_modifier = { modifier = fnr_WESRE_front_gaul years = 20 mode = add_and_extend }
+		custom_tooltip = fnr_WESRE_front_gaul_tt
+		custom_tooltip = fnr_WESRE_reform_upgrade_tt
+	}
+
+	# B - Hispania
+	option = {
+		name = flavor_WESRE.7.b
+		ai_chance = { factor = 30 }
+		set_variable = fnr_WESRE_front_hispania
+		add_country_modifier = { modifier = fnr_WESRE_front_hispania years = 20 mode = add_and_extend }
+		custom_tooltip = fnr_WESRE_front_hispania_tt
+		custom_tooltip = fnr_WESRE_reform_upgrade_tt
+	}
+
+	# C - Africa
+	option = {
+		name = flavor_WESRE.7.c
+		ai_chance = { factor = 20 }
+		set_variable = fnr_WESRE_front_africa
+		add_country_modifier = { modifier = fnr_WESRE_front_africa years = 20 mode = add_and_extend }
+		custom_tooltip = fnr_WESRE_front_africa_tt
+		custom_tooltip = fnr_WESRE_reform_upgrade_tt
+	}
+
+	# D - All fronts
+	option = {
+		name = flavor_WESRE.7.d
+		ai_chance = { factor = 20 }
+		set_variable = fnr_WESRE_front_gaul
+		set_variable = fnr_WESRE_front_hispania
+		set_variable = fnr_WESRE_front_africa
+		custom_tooltip = fnr_WESRE_front_all_tt
+		custom_tooltip = fnr_WESRE_reform_upgrade_tt
+	}
+}
+
+# 8 - Renovatio (capstone)
+flavor_WESRE.8 = {
+	type = country_event
+	title = flavor_WESRE.8.title
+	desc = flavor_WESRE.8.desc
+	fire_only_once = yes
+	outcome = positive
+
+	trigger = {
+		tag = WESRE
+		has_advance = WESRE_renovatio_occidentalis
+	}
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = flavor_WESRE.8.a
+		add_prestige = 50
+		add_legitimacy = 20
+		add_stability = 15
+		add_country_modifier = { modifier = fnr_WESRE_eagles_fly_again years = 20 mode = add_and_extend }
+		every_owned_location = {
+			add_location_modifier = { modifier = fnr_WESRE_western_restoration years = -1 }
+		}
+	}
+}
+
+# 9 - The Usurper (follow-up to .3)
+flavor_WESRE.9 = {
+	type = country_event
+	title = flavor_WESRE.9.title
+	desc = flavor_WESRE.9.desc
+	fire_only_once = yes
+	outcome = negative
+
+	trigger = {
+		tag = WESRE
+		has_variable = fnr_WESRE_ambitious_general
+		var:fnr_WESRE_ambitious_general ?= { is_alive = yes }
+	}
+
+	illustration_tags = {
+		10 = exterior
+		10 = armed
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:peasants_estate }
+		var:fnr_WESRE_ambitious_general = { save_scope_as = fnr_WESRE_general }
+	}
+
+	option = {
+		name = flavor_WESRE.9.a
+		add_stability = stability_severe_penalty
+		add_legitimacy = legitimacy_mild_penalty
+		create_rebel = {
+			category = pretender
+			name = fnr_WESRE_usurper_rebels
+			save_scope_as = fnr_WESRE_rebel
+		}
+		scope:fnr_WESRE_general = {
+			change_character_allegiance = scope:fnr_WESRE_rebel
+		}
+		random_owned_location = {
+			limit = { is_capital = no }
+			save_scope_as = fnr_WESRE_revolt_1
+		}
+		random_owned_location = {
+			limit = {
+				is_capital = no
+				NOT = { this.province = scope:fnr_WESRE_revolt_1.province }
+			}
+			save_scope_as = fnr_WESRE_revolt_2
+		}
+		fnr_WESRE_province_joins_rebels_effect = { LOCATION = fnr_WESRE_revolt_1 }
+		fnr_WESRE_province_joins_rebels_effect = { LOCATION = fnr_WESRE_revolt_2 }
+		scope:fnr_WESRE_rebel = {
+			add_rebel_progress = 1
+		}
+		remove_variable = fnr_WESRE_ambitious_general
+	}
+}
+
+# 10 - The Foederati Revolt (loyalty below 30)
+flavor_WESRE.10 = {
+	type = country_event
+	title = flavor_WESRE.10.title
+	desc = flavor_WESRE.10.desc
+	outcome = negative
+
+	trigger = {
+		tag = WESRE
+		has_variable = fnr_WESRE_foederati_loyalty
+		var:fnr_WESRE_foederati_loyalty < 30
+		NOT = { has_variable = fnr_WESRE_foederati_revolt_cooldown }
+	}
+
+	illustration_tags = {
+		10 = exterior
+		10 = armed
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = flavor_WESRE.10.a
+		add_stability = stability_mild_penalty
+		add_country_modifier = { modifier = fnr_WESRE_foederati_betrayal years = 10 mode = add_and_extend }
+		create_rebel = {
+			category = pretender
+			name = fnr_WESRE_foederati_uprising
+			save_scope_as = fnr_WESRE_rebel
+		}
+		# Up to 3 Foederati settlements rise; with none, a border province does
+		if = {
+			limit = {
+				any_owned_location = { has_location_modifier = fnr_WESRE_foederati_settlement }
+			}
+			ordered_owned_location = {
+				limit = { has_location_modifier = fnr_WESRE_foederati_settlement }
+				order_by = population
+				max = 3
+				check_range_bounds = no
+				every_pop = {
+					limit = { owner = root }
+					change_pop_allegiance = scope:fnr_WESRE_rebel
+				}
+				remove_location_modifier = fnr_WESRE_foederati_settlement
+			}
+		}
+		else = {
+			random_owned_location = {
+				limit = {
+					is_border = yes
+					is_capital = no
+				}
+				save_scope_as = fnr_WESRE_revolt_1
+			}
+			fnr_WESRE_province_joins_rebels_effect = { LOCATION = fnr_WESRE_revolt_1 }
+		}
+		scope:fnr_WESRE_rebel = {
+			add_rebel_progress = 1
+		}
+		set_variable = { name = fnr_WESRE_foederati_loyalty value = 45 }
+		set_variable = { name = fnr_WESRE_foederati_revolt_cooldown years = 10 }
+		custom_tooltip = fnr_WESRE_foederati_revolt_tt
+	}
+}

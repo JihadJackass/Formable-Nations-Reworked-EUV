@@ -1,0 +1,18 @@
+﻿# Gallic Empire yearly pulses (Pax Romana)
+# Gated on tag = GLCEM so other countries pay one cheap check.
+
+yearly_country_pulse = {
+	on_actions = {
+		fnr_GLCEM_yearly_pulse
+	}
+}
+
+fnr_GLCEM_yearly_pulse = {
+	trigger = { tag = GLCEM }
+	effect = {
+		fnr_GLCEM_yearly_upkeep_effect = yes
+	}
+	events = {
+		flavor_GLCEM.6	# The Arverni Chiefs - Arverni Confederation advance
+	}
+}

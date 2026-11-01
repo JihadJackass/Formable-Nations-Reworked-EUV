@@ -12,6 +12,7 @@
 				required_locations_fraction = 0.90
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_modern_enabled
@@ -49,6 +50,7 @@
 				required_locations_fraction = 0.90
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					#AND = {
 					#	OR = {
 					#		has_variable = fnr_modern_enabled
@@ -95,6 +97,7 @@
 				required_locations_fraction = 0.90
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					#AND = {
 					#	OR = {
 					#		has_variable = fnr_modern_enabled
@@ -134,6 +137,7 @@
 				required_locations_fraction = 0.90
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					#AND = {
 					#	OR = {
 					#		has_variable = fnr_modern_enabled
@@ -180,6 +184,7 @@
 			required_locations_fraction = 0.85
 			rule = plausible
 			potential = {
+				fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 				has_variable = fnr_historical_enabled 
 				NOT = { 
 					OR = {
@@ -222,6 +227,7 @@
 			required_locations_fraction = 1
 			rule = plausible
 			potential = {
+				fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 				culture ?= { language = language:english_language }
 				NOT = {
 					tag = ENG
@@ -255,6 +261,7 @@
 			required_locations_fraction = 0.5
 			rule = plausible
 			potential = {
+				fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 				culture ?= { language = language:english_language }
 				NOT = {
 					tag = ENG
@@ -282,6 +289,7 @@
 				required_locations_fraction = 0.90
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_althistory_enabled
@@ -310,6 +318,7 @@
 				required_locations_fraction = 0.90
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = { # TODO: finish these missing variables for GUI
 						OR = {
 							has_variable = fnr_nonhistorical_enabled
@@ -354,6 +363,7 @@
 				required_locations_fraction = 0.60
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = { # TODO: finish these missing variables for GUI
 						OR = {
 							has_variable = fnr_nonhistorical_enabled
@@ -401,6 +411,7 @@
 				required_locations_fraction = 0.87
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_modern_enabled
@@ -438,6 +449,7 @@
 				required_locations_fraction = 0.60
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_fantasy_enabled
@@ -465,6 +477,7 @@
 				required_locations_fraction = 0.07
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_fantasy_enabled
@@ -494,6 +507,7 @@
 				required_locations_fraction = 0.35
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_nonhistorical_enabled
@@ -522,6 +536,7 @@
 				required_locations_fraction = 0.44
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_historical_enabled
@@ -550,6 +565,7 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_historical_enabled
@@ -594,10 +610,11 @@
 			}
 		# Dacia - Non-historical
 			DACIA_f = {
-				level = 2
+				level = 3
 				required_locations_fraction = 0.70
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_nonhistorical_enabled
@@ -611,10 +628,19 @@
 							tag_exists = DACIA
 						}
 					}
+					# FNR Pax Romana: the Romanian peoples (historical Dacia), Bulgarians removed
 					OR = {
-						culture = culture:bulgarian
 						culture = culture:wallachian
 						culture = culture:moldovan
+						culture = culture:transylvanian
+						culture = culture:istroromanian
+					}
+				}
+				allow = {
+					is_subject = no
+					OR = {
+						owns = location:hateg # near Sarmizegetusa
+						owns = location:alba_iulia
 					}
 				}
 				name = DACIA
@@ -622,14 +648,23 @@
 				adjective = DACIA_ADJ
 				tag = DACIA
 				color = map_DACIA 
-				areas = { bulgaria_area wallachia_area moldavia_area }
+				areas = { transylvania_area wallachia_area moldavia_area }
+				form_effect = {
+					if = {
+						limit = { country_rank_level < 3 }
+						set_country_rank_effect = { rank = country_rank:rank_kingdom }
+					}
+					trigger_event_non_silently = fnr_DACIA.1 # FNR Pax Romana
+				}
 			}
+
 		# Netherlands
 			NED_f = {
 				level = 2
 				required_locations_fraction = 0.3
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					culture = { has_culture_group = culture_group:netherlandish_group }
 				}
 				name = NED
@@ -688,6 +723,7 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					#AND = {
 					#	OR = {
 					#		has_variable = fnr_modern_enabled
@@ -751,6 +787,7 @@
 				required_locations_fraction = 0.90
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					#AND = {
 					#	OR = {
 					#		has_variable = fnr_modern_enabled
@@ -789,6 +826,7 @@
 				required_locations_fraction = 0.90
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					#AND = {
 					#	OR = {
 					#		has_variable = fnr_modern_enabled
@@ -822,6 +860,7 @@
 				required_locations_fraction = 0.90
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					#AND = {
 					#	OR = {
 					#		has_variable = fnr_modern_enabled
@@ -855,6 +894,7 @@
 				required_locations_fraction = 0.90
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					#AND = {
 					#	OR = {
 					#		has_variable = fnr_modern_enabled
@@ -911,6 +951,7 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					#AND = {
 						always = no # Used for event, not needed to form
 						#OR = {
@@ -945,6 +986,7 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					#AND = {
 						always = no # Used for event, not needed to form
 						#OR = {
@@ -979,6 +1021,7 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					#AND = {
 						always = no # Used for event, not needed to form
 						#OR = {
@@ -1014,6 +1057,7 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					#AND = {
 						always = no # Used for event, not needed to form
 						#OR = {
@@ -1049,6 +1093,7 @@
 				required_locations_fraction = 0.85 # 0.85
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_nonhistorical_enabled
@@ -1119,6 +1164,7 @@
 				required_locations_fraction = 0.80
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_althistory_enabled
@@ -1167,6 +1213,7 @@
 				required_locations_fraction = 0.60 # 0.60
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_althistory_enabled
@@ -1314,6 +1361,7 @@
 				required_locations_fraction = 0.90
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_althistory_enabled
@@ -1356,6 +1404,7 @@
 				required_locations_fraction = 0.80
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_althistory_enabled
@@ -1404,6 +1453,7 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_althistory_enabled
@@ -1440,6 +1490,7 @@
 				required_locations_fraction = 0.85
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_althistory_enabled
@@ -1476,6 +1527,7 @@
 				required_locations_fraction = 0.85
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_althistory_enabled
@@ -1516,6 +1568,7 @@
 				required_locations_fraction = 0.95
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_althistory_enabled
@@ -1551,6 +1604,7 @@
 				required_locations_fraction = 0.95
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_althistory_enabled
@@ -1599,6 +1653,7 @@
 				required_locations_fraction = 0.95
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_historical_enabled
@@ -1649,6 +1704,7 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_historical_enabled
@@ -1692,6 +1748,7 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_historical_enabled
@@ -1735,6 +1792,7 @@
 				required_locations_fraction = 0.90
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_fantasy_enabled
@@ -1774,6 +1832,7 @@
 				required_locations_fraction = 0.85
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_fantasy_enabled
@@ -1812,6 +1871,7 @@
 				required_locations_fraction = 0.90
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_fantasy_enabled
@@ -1855,6 +1915,7 @@
 				required_locations_fraction = 0.87
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_us_states_enabled
@@ -1910,6 +1971,7 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_us_states_enabled
@@ -1958,6 +2020,7 @@
 				required_locations_fraction = 0.70
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_us_states_enabled
@@ -1993,6 +2056,7 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_us_states_enabled
@@ -2037,6 +2101,7 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_us_states_enabled
@@ -2080,6 +2145,7 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_us_states_enabled
@@ -2127,6 +2193,7 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_us_states_enabled
@@ -2164,6 +2231,7 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_us_states_enabled
@@ -2201,6 +2269,7 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_us_states_enabled
@@ -2238,6 +2307,7 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_us_states_enabled
@@ -2275,6 +2345,7 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_us_states_enabled
@@ -2312,6 +2383,7 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_us_states_enabled
@@ -2349,6 +2421,7 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_us_states_enabled
@@ -2386,6 +2459,7 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_us_states_enabled
@@ -2423,6 +2497,7 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_us_states_enabled
@@ -2460,6 +2535,7 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_us_states_enabled
@@ -2497,6 +2573,7 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_us_states_enabled
@@ -2534,6 +2611,7 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_us_states_enabled
@@ -2571,6 +2649,7 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_us_states_enabled
@@ -2608,6 +2687,7 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_us_states_enabled
@@ -2645,6 +2725,7 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_us_states_enabled
@@ -2682,6 +2763,7 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_us_states_enabled
@@ -2719,6 +2801,7 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_us_states_enabled
@@ -2756,6 +2839,7 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_us_states_enabled
@@ -2793,6 +2877,7 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_us_states_enabled
@@ -2830,6 +2915,7 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_us_states_enabled
@@ -2867,6 +2953,7 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_us_states_enabled
@@ -2904,6 +2991,7 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_us_states_enabled
@@ -2968,6 +3056,7 @@
 				required_locations_fraction = 0.67
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_historical_enabled
@@ -3055,6 +3144,7 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_historical_enabled
@@ -3106,6 +3196,7 @@
 				required_locations_fraction = 0.50
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_althistory_enabled
@@ -3158,6 +3249,7 @@
 				required_locations_fraction = 0.50
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_althistory_enabled
@@ -3210,6 +3302,7 @@
 				required_locations_fraction = 0.65
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_fantasy_enabled
@@ -3241,6 +3334,7 @@
 				required_locations_fraction = 0.85
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_historical_enabled
@@ -3313,6 +3407,7 @@
 				required_locations_fraction = 0.65
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_nonhistorical_enabled
@@ -3331,19 +3426,32 @@
 						culture = culture:gothic_culture
 					}
 				}
+				allow = {
+					is_subject = no
+					owns = location:theodoro # FNR Pax Romana: Mangup, the Gothic fortress-capital
+				}
 				name = GOTIA
 				flag = GOTIA
 				adjective = GOTIA_ADJ
 				tag = GOTIA
 				color = map_GOTIA
 				areas = { crimea_area yedisan_area }
+				form_effect = {
+					if = {
+						limit = { country_rank_level < 3 }
+						set_country_rank_effect = { rank = country_rank:rank_kingdom }
+					}
+					trigger_event_non_silently = fnr_GOTIA.1 # FNR Pax Romana
+				}
 			}		
+
 		# Basque Country - Non-historical
 			BASQU_f = {
 				level = 3
 				required_locations_fraction = 0.65
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_nonhistorical_enabled
@@ -3377,6 +3485,7 @@
 				required_locations_fraction = 0.60
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_modern_enabled
@@ -3405,6 +3514,7 @@
 				required_locations_fraction = 0.60
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_nonhistorical_enabled
@@ -3437,6 +3547,7 @@
 				required_locations_fraction = 0.60
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_nonhistorical_enabled
@@ -3468,6 +3579,7 @@
 				required_locations_fraction = 0.76 # 0.46
 				rule = plausible	
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_historical_enabled
@@ -3496,6 +3608,7 @@
 				required_locations_fraction = 0.26
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_nonhistorical_enabled
@@ -3547,6 +3660,7 @@
 				required_locations_fraction = 0.90
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_nonhistorical_enabled
@@ -3578,6 +3692,7 @@
 				required_locations_fraction = 0.80
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_modern_enabled
@@ -3620,6 +3735,7 @@
 				required_locations_fraction = 0.80
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_althistory_enabled
@@ -3649,6 +3765,7 @@
 				required_locations_fraction = 0.60
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_historical_enabled
@@ -3680,6 +3797,7 @@
 				required_locations_fraction = 0.85 # 0.85
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_modern_enabled
@@ -3712,6 +3830,7 @@
 				required_locations_fraction = 0.44
 				rule = plausible	
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_historical_enabled
@@ -3748,6 +3867,7 @@
 				required_locations_fraction = 0.75
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_nonhistorical_enabled
@@ -3782,6 +3902,7 @@
 				required_locations_fraction = 0.60
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_nonhistorical_enabled
@@ -3856,6 +3977,7 @@
 				required_locations_fraction = 0.80
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_historical_enabled
@@ -3892,6 +4014,7 @@
 				required_locations_fraction = 0.99
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_historical_enabled
@@ -3929,6 +4052,7 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_modern_enabled
@@ -3961,6 +4085,7 @@
 				required_locations_fraction = 0.75
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_modern_enabled
@@ -4002,6 +4127,7 @@
 				required_locations_fraction = 0.80
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_althistory_enabled
@@ -4030,6 +4156,7 @@
 				required_locations_fraction = 0.80
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_althistory_enabled
@@ -4059,6 +4186,7 @@
 				required_locations_fraction = 0.04
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_althistory_enabled
@@ -4166,6 +4294,7 @@
 				required_locations_fraction = 0.75
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_historical_enabled
@@ -4220,6 +4349,7 @@
 				required_locations_fraction = 0.85
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_historical_enabled
@@ -4253,6 +4383,7 @@
 				required_locations_fraction = 0.90
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_althistory_enabled
@@ -4281,6 +4412,7 @@
 				required_locations_fraction = 0.90
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_althistory_enabled
@@ -4309,6 +4441,7 @@
 				required_locations_fraction = 0.90
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_historical_enabled
@@ -4343,6 +4476,7 @@
 				required_locations_fraction = 0.80 # 0.80
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_althistory_enabled
@@ -4372,6 +4506,7 @@
 				required_locations_fraction = 1
 				rule = plausible	
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_modern_enabled
@@ -4417,6 +4552,7 @@
 				required_locations_fraction = 0.95
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_althistory_enabled
@@ -4450,6 +4586,7 @@
 				required_locations_fraction = 0.80 # 0.80
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_historical_enabled
@@ -4485,6 +4622,7 @@
 				required_locations_fraction = 0.85 # 0.85
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_modern_enabled
@@ -4525,6 +4663,7 @@
 				required_locations_fraction = 0.68 # 0.68
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_althistory_enabled
@@ -4556,6 +4695,7 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_modern_enabled
@@ -4592,6 +4732,7 @@
 				required_locations_fraction = 0.80
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_modern_enabled
@@ -4623,6 +4764,7 @@
 				required_locations_fraction = 0.68
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_historical_enabled
@@ -4651,6 +4793,7 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_modern_enabled
@@ -4690,6 +4833,7 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_modern_enabled
@@ -4729,6 +4873,7 @@
 				required_locations_fraction = 0.90
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_modern_enabled
@@ -4761,6 +4906,7 @@
 				required_locations_fraction = 0.67
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_modern_enabled
@@ -4813,6 +4959,7 @@
 				required_locations_fraction = 0.67
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_historical_enabled
@@ -4860,6 +5007,7 @@
 				required_locations_fraction = 0.70
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_modern_enabled
@@ -4888,6 +5036,7 @@
 				required_locations_fraction = 0.75
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_althistory_enabled
@@ -4919,6 +5068,7 @@
 				required_locations_fraction = 0.51
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_nonhistorical_enabled
@@ -4989,6 +5139,7 @@
 				required_locations_fraction = 0.90
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_fantasy_enabled
@@ -5018,6 +5169,7 @@
 				required_locations_fraction = 0.90
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_modern_enabled
@@ -5052,6 +5204,7 @@
 				required_locations_fraction = 0.80
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_modern_enabled
@@ -5083,6 +5236,7 @@
 				required_locations_fraction = 0.60
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_modern_enabled
@@ -5112,6 +5266,7 @@
 				required_locations_fraction = 0.95
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_modern_enabled
@@ -5143,6 +5298,7 @@
 				required_locations_fraction = 0.95
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_modern_enabled
@@ -5171,6 +5327,7 @@
 				required_locations_fraction = 0.90
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_modern_enabled
@@ -5201,6 +5358,7 @@
 				required_locations_fraction = 0.40
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_nonhistorical_enabled
@@ -5234,6 +5392,7 @@
 				required_locations_fraction = 0.85
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_nonhistorical_enabled
@@ -5263,6 +5422,7 @@
 				required_locations_fraction = 0.40
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_controversial_enabled
@@ -5300,6 +5460,7 @@
 				required_locations_fraction = 0.40
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_controversial_enabled
@@ -5331,6 +5492,7 @@
 				required_locations_fraction = 0.65
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_fantasy_enabled
@@ -5376,6 +5538,7 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_historical_enabled
@@ -5477,6 +5640,7 @@
 				required_locations_fraction = 0.65
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_fantasy_enabled
@@ -5505,6 +5669,7 @@
 				required_locations_fraction = 0.35
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							#has_variable = fnr_fantasy_enabled TODO: FOR TESTING
@@ -5538,6 +5703,7 @@
 				required_locations_fraction = 0.50
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_althistory_enabled
@@ -5569,6 +5735,7 @@
 				required_locations_fraction = 0.50 # 0.50
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					current_age_or_later = { age = age_5_absolutism } # Since there is already another Illyria, it makes sense to hide this one till Napoleonic Era
 					AND = {
 						OR = {
@@ -5604,6 +5771,7 @@
 				required_locations_fraction = 0.68
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_fantasy_enabled
@@ -5635,6 +5803,7 @@
 				required_locations_fraction = 0.75
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_controversial_enabled
@@ -5664,6 +5833,7 @@
 				required_locations_fraction = 0.44
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_nonhistorical_enabled
@@ -5696,6 +5866,7 @@
 				required_locations_fraction = 0.35
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_althistory_enabled
@@ -5740,6 +5911,7 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_althistory_enabled
@@ -5768,6 +5940,7 @@
 				required_locations_fraction = 0.35
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_fantasy_enabled
@@ -5801,6 +5974,7 @@
 				required_locations_fraction = 0.85
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_nonhistorical_enabled
@@ -5829,6 +6003,7 @@
 				required_locations_fraction = 0.75
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_nonhistorical_enabled
@@ -5864,6 +6039,7 @@
 				required_locations_fraction = 0.75
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_nonhistorical_enabled
@@ -5877,7 +6053,25 @@
 							tag_exists = PONTU
 						}
 					}
-					culture = culture:pontic_greek_culture
+					# FNR Pax Romana: Pontic Greeks, Trebizond, or any Greek-group power holding Sinope/Trebizond
+					OR = {
+						culture = culture:pontic_greek_culture
+						has_or_had_tag = TRE
+						AND = {
+							culture = { has_culture_group = culture_group:greek_group }
+							OR = {
+								owns = location:sinop
+								owns = location:trebizond
+							}
+						}
+					}
+				}
+				allow = {
+					is_subject = no
+					OR = {
+						owns = location:sinop
+						owns = location:amasya
+					}
 				}
 				name = PONTU
 				flag = PONTU
@@ -5889,13 +6083,22 @@
 					crimea_area
 					matrega_area
 				}
+				form_effect = {
+					if = {
+						limit = { country_rank_level < 3 }
+						set_country_rank_effect = { rank = country_rank:rank_kingdom }
+					}
+					trigger_event_non_silently = fnr_PONTU.1 # FNR Pax Romana
+				}
 			}	
+
 		# Eranshahr - Non-historical
 			ERSHR_f = {
 				level = 3
 				required_locations_fraction = 0.65
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_nonhistorical_enabled
@@ -5993,6 +6196,7 @@
 				required_locations_fraction = 0.81
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 				#	AND = {
 				#		OR = {
 				#			has_variable = fnr_fantasy_enabled
@@ -6036,6 +6240,7 @@
 				required_locations_fraction = 0.81
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 				#	AND = {
 				#		OR = {
 				#			has_variable = fnr_fantasy_enabled
@@ -6095,6 +6300,7 @@
 				required_locations_fraction = 0.95
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_fantasy_enabled
@@ -6137,6 +6343,7 @@
 				required_locations_fraction = 0.70
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_fantasy_enabled
@@ -6194,6 +6401,7 @@
 				required_locations_fraction = 0.85 # 0.85
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_historical_enabled
@@ -6253,6 +6461,7 @@
 				required_locations_fraction = 0.80 # 0.80
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_historical_enabled
@@ -6309,6 +6518,7 @@
 				required_locations_fraction = 0.80
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_althistory_enabled
@@ -6348,6 +6558,7 @@
 				required_locations_fraction = 0.65
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_meme_enabled
@@ -6385,6 +6596,7 @@
 				required_locations_fraction = 0.90
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_fantasy_enabled
@@ -6428,6 +6640,7 @@
 				required_locations_fraction = 0.85
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_modern_enabled
@@ -6465,6 +6678,7 @@
 				required_locations_fraction = 0.90 # 0.90
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_modern_enabled
@@ -6534,6 +6748,7 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_althistory_enabled
@@ -6607,6 +6822,7 @@
 				required_locations_fraction = 0.75
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_historical_enabled
@@ -6674,6 +6890,7 @@
 				required_locations_fraction = 0.60
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_modern_enabled
@@ -6711,6 +6928,7 @@
 				required_locations_fraction = 0.98
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_historical_enabled
@@ -6756,6 +6974,7 @@
 				required_locations_fraction = 0.85 # 0.85
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_historical_enabled
@@ -6887,6 +7106,7 @@
 				required_locations_fraction = 0.90
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_modern_enabled
@@ -6923,6 +7143,7 @@
 				required_locations_fraction = 0.65
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_nonhistorical_enabled
@@ -6985,6 +7206,7 @@
 				required_locations_fraction = 0.88
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_historical_enabled
@@ -7032,6 +7254,7 @@
 				required_locations_fraction = 0.85
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_modern_enabled
@@ -7075,6 +7298,7 @@
 				required_locations_fraction = 0.77
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_historical_enabled
@@ -7109,6 +7333,7 @@
 				required_locations_fraction = 0.95
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_historical_enabled
@@ -7169,6 +7394,7 @@
 				required_locations_fraction = 0.75
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_modern_enabled
@@ -7204,6 +7430,7 @@
 				required_locations_fraction = 0.70
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_althistory_enabled
@@ -7240,6 +7467,7 @@
 				required_locations_fraction = 0.75
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_nonhistorical_enabled
@@ -7274,6 +7502,7 @@
 				required_locations_fraction = 0.75
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_fantasy_enabled
@@ -7311,6 +7540,7 @@
 				required_locations_fraction = 0.95
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_nonhistorical_enabled
@@ -7342,6 +7572,7 @@
 				required_locations_fraction = 0.35
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_fantasy_enabled
@@ -7382,6 +7613,7 @@
 				required_locations_fraction = 1
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_historical_enabled
@@ -7424,6 +7656,7 @@
 				required_locations_fraction = 0.80
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_nonhistorical_enabled
@@ -7458,6 +7691,7 @@
 				required_locations_fraction = 0.30
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_nonhistorical_enabled
@@ -7492,6 +7726,7 @@
 				required_locations_fraction = 0.95
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_althistory_enabled
@@ -7523,6 +7758,7 @@
 				required_locations_fraction = 0.74
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_fantasy_enabled
@@ -7569,6 +7805,7 @@
 				required_locations_fraction = 0.75
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_fantasy_enabled
@@ -7648,6 +7885,7 @@
 				required_locations_fraction = 0.5
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_fantasy_enabled
@@ -7698,6 +7936,7 @@
 				required_locations_fraction = 0.65
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_althistory_enabled
@@ -7739,6 +7978,7 @@
 				required_locations_fraction = 0.90
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_althistory_enabled
@@ -7816,6 +8056,7 @@
 				required_locations_fraction = 0.67
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_fantasy_enabled
@@ -7848,11 +8089,15 @@
 				}
 			}
 		# Gallic Empire - Non-historical
+		# FNR Pax Romana: any Celtic-group or Gallo culture, or a French-group power that holds
+		# Lyon/Trier or is a subject of a Roman successor (a Postumus-style secession). France itself
+		# cannot form it. The religious/cultural identity is chosen in flavor_GLCEM.2.
 			GLCEM_f = {
 				level = 4
 				required_locations_fraction = 0.60 # 0.60
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_nonhistorical_enabled
@@ -7860,20 +8105,32 @@
 						}
 						NOT = { has_variable = fnr_gallicempire_disabled }
 					}
-					OR = {
-						culture = culture:gallo
-						culture = culture:breton
-					}
 					NOT = { 
 						OR = {
 							tag = GLCEM
 							tag_exists = GLCEM
-							culture = culture:french
+							tag = FRA
+						}
+					}
+					OR = {
+						culture = { has_culture_group = culture_group:celtic_group }
+						culture = culture:gallo
+						AND = {
+							culture = { has_culture_group = culture_group:french_group }
+							OR = {
+								owns = location:lyon
+								owns = location:trier
+								overlord ?= { fnr_GLCEM_is_roman_successor = yes }
+							}
 						}
 					}
 				}
 				allow = {
-					culture = { has_culture_group = culture_group:celtic_group }
+					is_subject = no
+					OR = {
+						owns = location:lyon
+						owns = location:trier
+					}
 				}
 				name = GLCEM
 				flag = GLCEM
@@ -7888,42 +8145,34 @@
 					}
 					trigger_event_non_silently = flavor_GLCEM.1
 					change_culture = culture:fnr_gallo_roman_culture
-					set_liturgical_language = dialect:fnr_gaulish_language
-					set_court_language = dialect:fnr_gaulish_language
-					custom_tooltip = { text = GLCEM_formable_trigger_1_tt }
+					custom_tooltip = { text = fnr_GLCEM_culture_shift_tt }
+					custom_tooltip = { text = fnr_GLCEM_identity_choice_tt }
 					hidden_effect = {
+						# Celtic and French-group pops take up the Gallo-Roman identity faster than the rest
 						every_pop = {
 							limit = {
-								NOT = {
+								NOT = { culture = culture:fnr_gallo_roman_culture }
+							}
+							if = {
+								limit = {
+									OR = {
+										culture = { has_culture_group = culture_group:celtic_group }
+										culture = { has_culture_group = culture_group:french_group }
+									}
+								}
+								split_pop = {
+									fraction = 0.25
 									culture = culture:fnr_gallo_roman_culture
 								}
 							}
-							split_pop = {
-								fraction = 0.225
-								culture = culture:fnr_gallo_roman_culture
-							}
-						}
-					}
-					change_religion = religion:fnr_gallo_roman_religion
-					change_religion_for_ruler_and_family = { country = ROOT religion = religion:fnr_gallo_roman_religion }
-					custom_tooltip = { text = GLCEM_formable_trigger_3_tt }
-					# custom_tooltip = { text = GLCEM_formable_trigger_2_tt } - TODO: disabled until 2.5.0 TOKAY
-					hidden_effect = {
-						every_pop = {
-							limit = {
-								NOT = {
-									religion = religion:fnr_gallo_roman_religion
+							else = {
+								split_pop = {
+									fraction = 0.10
+									culture = culture:fnr_gallo_roman_culture
 								}
 							}
-							split_pop = {
-								fraction = 0.225
-								religion = religion:fnr_gallo_roman_religion
-							}
 						}
 					}
-					# TODO POST 2.5.0: make these only trigger with proper reqs
-					#trigger_event_non_silently = flavor_GLCEM.2 # Check that gallic empire can even form terraconensis
-					#trigger_event_non_silently = flavor_GLCEM.3 # Check that gallic empire can even form britannia
 				}
 			}
 		# Tarraconensis
@@ -7932,6 +8181,7 @@
 				required_locations_fraction = 0.85
 				rule = plausible	
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_fantasy_enabled
@@ -7977,6 +8227,7 @@
 				required_locations_fraction = 0.85
 				rule = plausible	
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_fantasy_enabled
@@ -8022,6 +8273,7 @@
 				required_locations_fraction = 0.85
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_althistory_enabled
@@ -8056,6 +8308,7 @@
 				required_locations_fraction = 0.85
 				rule = plausible	
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_fantasy_enabled
@@ -8090,6 +8343,7 @@
 				required_locations_fraction = 0.25
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_althistory_enabled
@@ -8139,6 +8393,7 @@
 				required_locations_fraction = 0.40
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_nonhistorical_enabled
@@ -8246,6 +8501,7 @@
 				required_locations_fraction = 0.35
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_nonhistorical_enabled
@@ -8300,6 +8556,7 @@
 				required_locations_fraction = 0.35
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_nonhistorical_enabled
@@ -8349,6 +8606,7 @@
 				required_locations_fraction = 0.35
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_nonhistorical_enabled
@@ -8395,6 +8653,7 @@
 				required_locations_fraction = 0.45
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_nonhistorical_enabled
@@ -8448,6 +8707,7 @@
 				required_locations_fraction = 0.70
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_nonhistorical_enabled
@@ -8477,6 +8737,7 @@
 				required_locations_fraction = 0.95
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_nonhistorical_enabled
@@ -8511,6 +8772,7 @@
 				required_locations_fraction = 0.75
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_nonhistorical_enabled
@@ -8560,6 +8822,7 @@
 				required_locations_fraction = 0.90
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_historical_enabled
@@ -8633,6 +8896,7 @@
 				required_locations_fraction = 0.80
 				rule = plausible	
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_historical_enabled
@@ -8695,6 +8959,7 @@
 				required_locations_fraction = 0.60
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_nonhistorical_enabled
@@ -8760,9 +9025,10 @@
 		# Western Roman Empire - Non-historical
 			WESRE_f = {
 				level = 5
-				required_locations_fraction = 0.60
+				required_locations_fraction = 0.20
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_nonhistorical_enabled
@@ -8770,20 +9036,43 @@
 						}
 						NOT = { has_variable = fnr_westernrome_disabled }
 					}
-					tag = RMNRP
 					NOT = { 
 						OR = {
 							tag = WESRE
 							tag_exists = WESRE
 						}
 					}
+					NOR = {
+						tag = ROM		# already Rome
+						tag = EASRE		# goes on to the Roman Empire through ROM_BYZ_f
+						tag = BYZ
+						tag = PAP		# keeps its own FNR Papal path
+					}
 					OR = {
-						culture = { has_culture_group = culture_group:italian_group }
-						culture = { has_culture_group = culture_group:french_group }
-						culture = { has_culture_group = culture_group:iberian_group }
+						fnr_WESRE_latin_heritage = yes
+						owns = location:rome
+						AND = {
+							owns = location:constantinople
+							fnr_WESRE_influence_over_rome = yes
+						}
 					}
 				}
-				allow = { owns = location:rome }
+				allow = {
+					is_subject = no
+					country_rank_level >= 3
+					NOT = { country_exists = c:ROM }
+					OR = {
+						owns = location:rome
+						AND = {
+							owns = location:ravenna
+							location:rome.owner ?= { is_subject_or_below_of = root }
+						}
+					}
+					OR = {
+						religion.group = religion_group:christian
+						religion = religion:hellenism_religion
+					}
+				}
 				name = WESRE
 				flag = WESRE
 				adjective = WESRE_ADJ
@@ -8798,6 +9087,7 @@
 						limit = { country_rank_level < 4 }
 						set_country_rank_effect = { rank = country_rank:rank_empire }
 					}
+					trigger_event_non_silently = flavor_WESRE.1 # FNR Pax Romana
 				}
 			}
 		# European Union - Modern
@@ -8806,6 +9096,7 @@
 				required_locations_fraction = 0.34
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_modern_enabled
@@ -8897,6 +9188,7 @@
 				required_locations_fraction = 0.92
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_modern_enabled
@@ -8937,6 +9229,7 @@
 				required_locations_fraction = 0.78
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_modern_enabled
@@ -8971,6 +9264,7 @@
 				required_locations_fraction = 0.85
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_modern_enabled
@@ -8999,6 +9293,7 @@
 				required_locations_fraction = 0.76
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_modern_enabled
@@ -9027,6 +9322,7 @@
 				required_locations_fraction = 0.80
 				rule = plausible
 				potential = { 
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_fantasy_enabled
@@ -9068,6 +9364,7 @@
 				required_locations_fraction = 0.60	
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_nonhistorical_enabled
@@ -9107,6 +9404,7 @@
 				required_locations_fraction = 0.69
 				rule = plausible
 				potential = {
+					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
 							has_variable = fnr_nonhistorical_enabled

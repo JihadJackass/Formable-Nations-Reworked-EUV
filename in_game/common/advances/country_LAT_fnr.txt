@@ -1,0 +1,93 @@
+﻿# Advances for the Latin Empire (Pax Romana - "The Fourth Crusade Reversed")
+# The FNR Latin Empire now forms the vanilla LAT tag; these sit alongside vanilla's LAT content.
+# (country_LTNEM.txt is left as an empty stub from the old separate tag.)
+
+	# age_1_traditions
+
+		# The Assizes of Romania - the feudal law code of Frankish Greece
+		LAT_assizes_of_romania = {
+			age = age_1_traditions
+			icon = laws
+			potential = {
+				has_or_had_tag = LAT
+			}
+
+			nobles_estate_target_satisfaction = small_privilege_target_satisfaction
+			global_max_control = 0.05
+			monthly_legitimacy = 0.05
+
+			requires = feudalism_advance
+			allow_children = no
+		}
+
+		# Frankish Chivalry - unlocks the Frankish Knights
+		LAT_frankish_chivalry = {
+			age = age_1_traditions
+			icon = glorious_arms
+			potential = {
+				has_or_had_tag = LAT
+			}
+
+			army_heavy_cavalry_power = 0.10
+			land_morale_modifier = 0.05
+
+			requires = horse_riding_advance
+			allow_children = no
+		}
+
+	# age_2_renaissance
+
+		# Lords of the Archipelago - the islands and sea-lanes of the Aegean
+		LAT_lords_of_the_archipelago = {
+			age = age_2_renaissance
+			icon = maritime_advance_age_2
+			potential = {
+				has_or_had_tag = LAT
+			}
+
+			navy_galley_power = 0.10
+			trade_income = 0.05
+
+			requires = maritime_advance_age_2
+			allow_children = no
+		}
+
+		# A Bridge Between Rites - living with the Greek Church
+		LAT_bridge_between_rites = {
+			age = age_2_renaissance
+			icon = religious_toleration
+			potential = {
+				has_or_had_tag = LAT
+			}
+
+			tolerance_heretic = 1
+			global_pop_conversion_speed_modifier = 0.05
+			global_pop_assimilation_speed_modifier = 0.05
+
+			requires = renaissance_court
+			allow_children = no
+		}
+
+	# age_4_reformation
+
+		# Capstone - Imperium Romaniae (fires fnr_LAT.6 through the yearly pulse)
+		LAT_imperium_romaniae = {
+			age = age_4_reformation
+			icon = imperial_ambitions
+			potential = {
+				has_or_had_tag = LAT
+			}
+			allow = {
+				owns = location:constantinople
+				owns = location:thessaloniki
+				owns = location:athens
+				stability > 40
+			}
+
+			monthly_prestige = 0.1
+			monthly_legitimacy = 0.05
+			discipline = 0.03
+
+			requires = confessionalism_advance
+			allow_children = no
+		}

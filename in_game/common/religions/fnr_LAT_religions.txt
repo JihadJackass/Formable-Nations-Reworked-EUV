@@ -1,0 +1,33 @@
+﻿# Latin Empire - optional Greek Catholic (Uniate) religion
+# Created by fnr_LAT.5 ("The Latin Rite Takes Root") option A. Catholic in communion, Greek in rite.
+
+fnr_greek_catholic_religion = {
+	color = color_fnr_greek_catholic_religion
+	group = christian
+
+	language = greek_language
+
+	enable = 9999.1.1 # Activated by fnr_LAT.5
+
+	religious_aspects = 2
+	has_religious_influence = yes
+	has_canonization = yes
+	use_icons = yes
+
+	definition_modifier = {
+		global_pop_conversion_speed_modifier = 0.10
+		tolerance_heretic = 1
+		monthly_religious_influence = 0.1
+		maximum_religious_influence = 400
+		country_allow_canonization = yes
+	}
+
+	opinions = {
+		catholic = kindred
+		orthodox = kindred
+		sunni = enemy
+		shia = enemy
+	}
+
+	tags = { orthodox_gfx eastern_christian_gfx christian_gfx abrahamic_gfx }
+}

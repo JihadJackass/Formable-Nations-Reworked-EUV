@@ -1,0 +1,21 @@
+﻿# Western Roman Empire yearly pulses (Pax Romana)
+# Gated on tag = WESRE so other countries pay one cheap check.
+
+yearly_country_pulse = {
+	on_actions = {
+		fnr_WESRE_yearly_pulse
+	}
+}
+
+# Upkeep, then the events that fire on conditions rather than timers (each has its own trigger)
+fnr_WESRE_yearly_pulse = {
+	trigger = { tag = WESRE }
+	effect = {
+		fnr_WESRE_yearly_upkeep_effect = yes
+	}
+	events = {
+		flavor_WESRE.7	# The Reconquest Begins - survival phase over + stability > 40
+		flavor_WESRE.8	# Renovatio - capstone advance
+		flavor_WESRE.10	# Foederati Revolt - loyalty below 30
+	}
+}

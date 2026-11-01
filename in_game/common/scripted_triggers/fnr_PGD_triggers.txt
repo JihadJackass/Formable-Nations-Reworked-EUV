@@ -1,0 +1,16 @@
+﻿# Pontus, Gothia and Dacia scripted triggers (Pax Romana)
+
+# Location scope: a coastal location on the Black Sea
+fnr_PONTU_is_black_sea_coast = {
+	is_coastal = yes
+	OR = {
+		area = area:pontus_area
+		area = area:black_sea_area
+		area = area:crimea_area
+		area = area:matrega_area
+		area = area:yedisan_area
+		area = area:bulgaria_area
+		area = area:moldavia_area
+		area = area:thrace_area
+	}
+}

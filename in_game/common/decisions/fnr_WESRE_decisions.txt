@@ -1,0 +1,179 @@
+﻿# Western Roman Empire Decisions (Pax Romana)
+
+# Convene the Concilium - founds the Concilium Occidentis (needs Ravenna's Bureaucracy)
+fnr_WESRE_convene_concilium = {
+	decision_category = country_specific_decisions
+
+	tags = { WESRE }
+
+	potential = {
+		NOT = { exists = international_organization:fnr_WESRE_concilium_io }
+	}
+
+	allow = {
+		has_advance = WESRE_ravenna_bureaucracy
+		gold >= 300
+	}
+
+	ai_will_do = { value = 100 }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:burghers_estate }
+	}
+
+	option = {
+		name = fnr_WESRE_convene_concilium.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -300
+			fnr_WESRE_create_concilium_effect = yes
+			add_prestige = prestige_mild_bonus
+		}
+	}
+}
+
+# Settle the Foederati - grants a border location to the barbarian allies (Foederati Settlement law in force)
+fnr_WESRE_settle_foederati = {
+	decision_category = government_decisions
+
+	tags = { WESRE }
+
+	potential = {
+		has_advance = WESRE_foederati_integration
+	}
+
+	allow = {
+		has_variable = fnr_WESRE_settlement_law
+		NOT = { has_variable = fnr_WESRE_settlement_cooldown }
+		any_owned_location = {
+			is_border = yes
+			is_capital = no
+			NOT = { has_location_modifier = fnr_WESRE_foederati_settlement }
+		}
+	}
+
+	ai_will_do = { value = 50 }
+
+	illustration_tags = {
+		10 = exterior
+		10 = armed
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:peasants_estate }
+	}
+
+	option = {
+		name = fnr_WESRE_settle_foederati.a
+		ai_chance = { value = 100 }
+		effect = {
+			random_owned_location = {
+				limit = {
+					is_border = yes
+					is_capital = no
+					NOT = { has_location_modifier = fnr_WESRE_foederati_settlement }
+				}
+				add_location_modifier = { modifier = fnr_WESRE_foederati_settlement years = -1 }
+			}
+			if = {
+				limit = { has_estate_privilege = estate_privilege:fnr_WESRE_foederati_chiefs }
+				fnr_WESRE_change_foederati_loyalty_effect = { VALUE = 6 }
+			}
+			else = {
+				fnr_WESRE_change_foederati_loyalty_effect = { VALUE = 3 }
+			}
+			set_variable = { name = fnr_WESRE_settlement_cooldown years = 2 }
+			custom_tooltip = fnr_WESRE_settle_foederati_tt
+		}
+	}
+}
+
+# Holy site: Rome - permanent location upgrade; country bonus while owned (yearly pulse)
+fnr_WESRE_restore_rome = {
+	decision_category = religious_decisions
+
+	tags = { WESRE }
+
+	potential = {
+		owns = location:rome
+		NOT = { location:rome = { has_location_modifier = fnr_WESRE_rome_restored } }
+	}
+
+	allow = {
+		owns = location:rome
+		religion.group = religion_group:christian
+		gold >= 500
+		at_war = no
+	}
+
+	ai_will_do = { value = 100 }
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate }
+	}
+
+	option = {
+		name = fnr_WESRE_restore_rome.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -500
+			location:rome = {
+				add_location_modifier = { modifier = fnr_WESRE_rome_restored years = -1 }
+			}
+			add_country_modifier = { modifier = fnr_WESRE_holy_rome years = -1 }
+			custom_tooltip = fnr_WESRE_holy_site_tt
+		}
+	}
+}
+
+# Holy site: Ravenna - permanent location upgrade; country bonus while owned (yearly pulse)
+fnr_WESRE_seat_of_ravenna = {
+	decision_category = government_decisions
+
+	tags = { WESRE }
+
+	potential = {
+		owns = location:ravenna
+		NOT = { location:ravenna = { has_location_modifier = fnr_WESRE_ravenna_seat } }
+	}
+
+	allow = {
+		owns = location:ravenna
+		gold >= 400
+		at_war = no
+	}
+
+	ai_will_do = { value = 100 }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:burghers_estate }
+	}
+
+	option = {
+		name = fnr_WESRE_seat_of_ravenna.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -400
+			location:ravenna = {
+				add_location_modifier = { modifier = fnr_WESRE_ravenna_seat years = -1 }
+			}
+			add_country_modifier = { modifier = fnr_WESRE_holy_ravenna years = -1 }
+			custom_tooltip = fnr_WESRE_holy_site_tt
+		}
+	}
+}

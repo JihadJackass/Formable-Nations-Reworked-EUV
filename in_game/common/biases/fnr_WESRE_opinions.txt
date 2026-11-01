@@ -1,0 +1,46 @@
+﻿# Western Roman Empire opinion modifiers
+
+io_opinion_fnr_WESRE_concilium_io = {
+	value = 10
+}
+
+# flavor_WESRE.1 B - the Pope's opinion of the WRE
+fnr_WESRE_church_taxed = {
+	value = -15
+	yearly_decay = 1
+}
+
+# flavor_WESRE.4 C - the Pope's opinion of the WRE
+fnr_WESRE_defied_the_pope = {
+	value = -15
+	yearly_decay = 1
+}
+
+# flavor_WESRE.2 C / D - the barbarians' opinion of the WRE
+fnr_WESRE_foederati_pact = {
+	value = 25
+	yearly_decay = 1
+}
+
+fnr_WESRE_paid_off = {
+	value = 10
+	yearly_decay = 1
+}
+
+# flavor_WESRE.6 A / C - mutual
+fnr_WESRE_brothers_in_purple = {
+	value = 20
+	yearly_decay = 1
+}
+
+# flavor_WESRE.6 B - the ERE's opinion of the WRE
+fnr_WESRE_rebuffed_the_east = {
+	value = -20
+	yearly_decay = 1
+}
+
+# flavor_WESRE.6 C (failed) - the ERE's opinion of the WRE
+fnr_WESRE_insulted_the_east = {
+	value = -30
+	yearly_decay = 1
+}

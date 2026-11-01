@@ -1,0 +1,17 @@
+﻿# FNR formation lock - lifts the lock once a locked country is no longer a subject
+
+yearly_country_pulse = {
+	on_actions = {
+		fnr_formation_lock_yearly_pulse
+	}
+}
+
+fnr_formation_lock_yearly_pulse = {
+	trigger = {
+		has_variable = fnr_formation_locked
+		is_subject = no
+	}
+	effect = {
+		remove_variable = fnr_formation_locked
+	}
+}

@@ -1,0 +1,47 @@
+﻿# Latin Empire scripted triggers (Pax Romana)
+
+# Location scope: lands of the Duchy of Athens (Attica and Euboea)
+fnr_LAT_is_athens_location = {
+	OR = {
+		this = location:athens
+		this = location:atalanti
+		this = location:livadeia
+		this = location:megara
+		this = location:thebes
+		this = location:negroponte
+		this = location:eretreia
+		this = location:karystos
+		this = location:kleisoura
+		this = location:kymi
+		this = location:oreos
+	}
+}
+
+# Country scope: one of the fiefs created by the Partition of Romania
+fnr_LAT_is_frankish_fief = {
+	has_variable = fnr_LAT_frankish_fief
+}
+
+# Location scope: lands of the Kingdom of Thessalonica (Macedonia and Thessaly)
+fnr_LAT_is_thessalonica_location = {
+	OR = {
+		area = area:macedonia_area
+		this = location:neopatras
+		this = location:bodonitsa
+		this = location:gravia
+		this = location:zetounion
+		this = location:larissa
+		this = location:demetrias
+		this = location:elassona
+		this = location:farsala
+		this = location:karditsa
+		this = location:stomio
+		this = location:trikala
+		this = location:tyrnavos
+	}
+}
+
+# Location scope: lands of the Principality of Achaea (the Morea)
+fnr_LAT_is_achaea_location = {
+	area = area:morea_area
+}

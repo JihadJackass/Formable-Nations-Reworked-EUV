@@ -1,0 +1,257 @@
+﻿##################################################
+# Formable Nations: Reworked - Pontus, Gothia, Dacia #
+# Static Modifiers (Pax Romana)                      #
+##################################################
+
+	# Pontus
+
+		# fnr_PONTU.1 A - 20 years
+		fnr_PONTU_hellenic_basileus = {
+			game_data = {
+				category = country
+			}
+			monthly_prestige = 0.1
+			cultural_tradition_modifier = 0.10
+			global_max_literacy = 5
+		}
+
+		# fnr_PONTU.1 B - 20 years
+		fnr_PONTU_achaemenid_heir = {
+			game_data = {
+				category = country
+			}
+			monthly_legitimacy = 0.1
+			tolerance_heathen = 1
+			tolerance_heretic = 1
+		}
+
+		# fnr_PONTU.2 A - 25 years
+		fnr_PONTU_greek_schools = {
+			game_data = {
+				category = country
+			}
+			global_max_literacy = 5
+			global_pop_assimilation_speed_modifier = 0.10
+		}
+
+		# fnr_PONTU.2 B - 25 years
+		fnr_PONTU_hill_levies = {
+			game_data = {
+				category = country
+			}
+			global_manpower_modifier = 0.10
+			army_light_infantry_power = 0.10
+		}
+
+		# fnr_PONTU.3 A - 25 years
+		fnr_PONTU_sea_tolls = {
+			game_data = {
+				category = country
+			}
+			trade_income = 0.15
+			diplomatic_reputation = -1
+		}
+
+		# fnr_PONTU.3 B - 25 years
+		fnr_PONTU_open_sea = {
+			game_data = {
+				category = country
+			}
+			trade_sea_efficiency = 0.15
+			diplomatic_reputation = diplomatic_reputation_weak_bonus
+		}
+
+		# fnr_PONTU.4 C - 5 years
+		fnr_PONTU_poisoned_king = {
+			game_data = {
+				category = country
+			}
+			monthly_legitimacy = -0.1
+			global_estate_target_satisfaction = -0.03
+		}
+
+	# Gothia
+
+		# fnr_GOTIA.1 A - 20 years
+		fnr_GOTIA_hill_forts = {
+			game_data = {
+				category = country
+			}
+			global_defensive = 0.15
+			global_garrison_growth = 0.10
+		}
+
+		# fnr_GOTIA.1 B - 15 years
+		fnr_GOTIA_steppe_peace = {
+			game_data = {
+				category = country
+			}
+			trade_income = 0.05
+			global_population_growth = 0.0002
+		}
+
+		# fnr_GOTIA.2 B - 25 years
+		fnr_GOTIA_gothic_scripture = {
+			game_data = {
+				category = country
+			}
+			global_max_literacy = 5
+			cultural_tradition_modifier = 0.10
+		}
+
+		# fnr_GOTIA.2 C - 25 years
+		fnr_GOTIA_hellenized = {
+			game_data = {
+				category = country
+			}
+			global_pop_assimilation_speed_modifier = 0.15
+			diplomatic_reputation = diplomatic_reputation_weak_bonus
+		}
+
+		# fnr_GOTIA.3 A - 25 years
+		fnr_GOTIA_genoese_trade = {
+			game_data = {
+				category = country
+			}
+			trade_income = 0.10
+			global_wine_output_modifier = 0.10
+		}
+
+		# fnr_GOTIA.3 C - 15 years
+		fnr_GOTIA_genoese_crossbowmen = {
+			game_data = {
+				category = country
+			}
+			army_light_infantry_power = 0.15
+			global_defensive = 0.05
+		}
+
+		# fnr_GOTIA.4 - permanent
+		fnr_GOTIA_gothic_renaissance = {
+			game_data = {
+				category = country
+			}
+			monthly_prestige = 0.1
+			cultural_tradition_modifier = 0.15
+			global_defensive = 0.10
+		}
+
+	# Dacia
+
+		# fnr_DACIA.1 - 15 years
+		fnr_DACIA_burebistas_heir = {
+			game_data = {
+				category = country
+			}
+			monthly_prestige = 0.05
+			land_morale_modifier = 0.05
+		}
+
+		# fnr_DACIA.2 A - 20 years
+		fnr_DACIA_zalmoxian_revival = {
+			game_data = {
+				category = country
+			}
+			global_pop_conversion_speed_modifier = 0.15
+			monthly_religious_influence = 0.1
+			land_morale_modifier = 0.05
+		}
+
+		# fnr_DACIA.2 B - 20 years
+		fnr_DACIA_dacoroman_heritage = {
+			game_data = {
+				category = country
+			}
+			monthly_legitimacy = 0.1
+			global_pop_assimilation_speed_modifier = 0.10
+			diplomatic_reputation = diplomatic_reputation_weak_bonus
+		}
+
+		# fnr_DACIA.3 A - 25 years
+		fnr_DACIA_royal_mines = {
+			game_data = {
+				category = country
+			}
+			global_goods_gold_output_modifier = 0.20
+			tax_income_efficiency = small_tax_income_efficiency_bonus
+		}
+
+		# fnr_DACIA.3 B - 25 years
+		fnr_DACIA_free_miners = {
+			game_data = {
+				category = country
+			}
+			global_goods_gold_output_modifier = 0.10
+			global_silver_output_modifier = 0.10
+			global_burghers_estate_power = 0.05
+		}
+
+		# fnr_DACIA.4 A - 25 years
+		fnr_DACIA_kogaionon = {
+			game_data = {
+				category = country
+			}
+			monthly_religious_influence = 0.1
+			monthly_prestige = 0.05
+		}
+
+		# fnr_DACIA.4 B - 25 years
+		fnr_DACIA_messenger_to_zalmoxis = {
+			game_data = {
+				category = country
+			}
+			land_morale_modifier = 0.10
+			monthly_war_exhaustion = -0.05
+		}
+
+		# fnr_DACIA.5 A - 25 years
+		fnr_DACIA_heirs_of_rome = {
+			game_data = {
+				category = country
+			}
+			monthly_legitimacy = 0.05
+			diplomatic_reputation = diplomatic_reputation_weak_bonus
+			global_pop_assimilation_speed_modifier = 0.05
+		}
+
+		# fnr_DACIA.5 B - 25 years
+		fnr_DACIA_heirs_of_decebalus = {
+			game_data = {
+				category = country
+			}
+			land_morale_modifier = 0.10
+			global_defensive = 0.10
+		}
+
+		# Sarmizegetusa rebuilt - while owned (yearly pulse)
+		fnr_DACIA_royal_seat = {
+			game_data = {
+				category = country
+			}
+			monthly_prestige = 0.05
+			monthly_legitimacy = 0.05
+			global_defensive = 0.05
+		}
+
+		# Rebuild Sarmizegetusa decision - permanent
+		fnr_DACIA_sarmizegetusa = {
+			game_data = {
+				category = location
+			}
+			local_defensive = 0.25
+			local_monthly_prosperity = 0.10
+			local_garrison_size = 0.10
+		}
+
+	# Gothia (location)
+
+		# Fortify Mangup decision - permanent
+		fnr_GOTIA_mangup_fortified = {
+			game_data = {
+				category = location
+			}
+			local_defensive = 0.30
+			local_garrison_size = 0.20
+			local_hostile_attrition = 2
+		}
+

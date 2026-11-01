@@ -1,0 +1,52 @@
+﻿# Pax Romana optional religions for Gothia and Dacia
+
+# Gothic Arian church - restored by fnr_GOTIA.2 option A ("The Bible of Wulfila")
+fnr_gothic_arian_religion = {
+	color = color_fnr_gothic_arian_religion
+	group = christian
+
+	language = gothic_language
+
+	enable = 9999.1.1 # Activated by fnr_GOTIA.2
+
+	religious_aspects = 1
+	has_religious_influence = yes
+
+	definition_modifier = {
+		global_max_literacy = 5
+		global_defensive = 0.05
+		monthly_religious_influence = 0.1
+		maximum_religious_influence = 400
+	}
+
+	opinions = {
+		orthodox = negative
+		catholic = negative
+		sunni = enemy
+		shia = enemy
+	}
+
+	tags = { eastern_christian_gfx christian_gfx abrahamic_gfx }
+}
+
+# Zalmoxian faith - revived by fnr_DACIA.2 option A ("The Soul of Dacia")
+fnr_zalmoxian_religion = {
+	color = color_fnr_zalmoxian_religion
+	group = folk_european_group
+
+	enable = 9999.1.1 # Activated by fnr_DACIA.2
+
+	religious_aspects = 1
+
+	definition_modifier = {
+		land_morale_modifier = 0.05
+		global_pop_conversion_speed_modifier = 0.05
+		monthly_religious_influence = 0.1
+		maximum_religious_influence = 200
+	}
+
+	opinions = {
+	}
+
+	tags = { folk_european_gfx pagan_gfx }
+}

@@ -1,0 +1,21 @@
+﻿# Gallic Empire Specific Government Reforms
+
+	# Gallic Confederation - unlocked by GLCEM_arverni_confederation.
+	# Subjects keep wide autonomy (less income) but are bound to send their levies.
+		fnr_GLCEM_gallic_confederation = {
+			unique = yes
+			potential = {
+				has_or_had_tag = GLCEM
+			}
+			allow = {
+				has_advance = GLCEM_arverni_confederation
+			}
+			country_modifier = {
+				subject_loyalty = 0.15
+				global_levy_size_modifier = 0.15
+				subject_income_modifier = -0.10
+				global_nobles_estate_power = 0.05
+			}
+			years = 2
+			block_for_rebel = yes
+		}

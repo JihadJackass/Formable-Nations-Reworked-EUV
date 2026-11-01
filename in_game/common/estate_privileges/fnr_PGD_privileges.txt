@@ -1,0 +1,64 @@
+﻿# Pontus, Gothia and Dacia Estate Privileges (Pax Romana)
+
+	# Pontus - Merchants of Sinope (burghers)
+		fnr_PONTU_merchants_of_sinope = {
+
+			estate = burghers_estate
+
+			potential = {
+				has_or_had_tag = PONTU
+			}
+			allow = {
+				owns = location:sinop
+			}
+
+			country_modifier = {
+				global_burghers_estate_power = 0.10
+				burghers_estate_target_satisfaction = small_privilege_target_satisfaction
+
+				trade_income = 0.10
+				trade_sea_efficiency = 0.10
+			}
+		}
+
+	# Gothia - Archons of Theodoro (nobles)
+		fnr_GOTIA_archons_of_theodoro = {
+
+			estate = nobles_estate
+
+			potential = {
+				has_or_had_tag = GOTIA
+			}
+			allow = {
+				owns = location:theodoro
+			}
+
+			country_modifier = {
+				global_nobles_estate_power = 0.05
+				nobles_estate_target_satisfaction = small_privilege_target_satisfaction
+
+				global_defensive = 0.10
+				global_garrison_size_modifier = 0.10
+			}
+		}
+
+	# Dacia - Tarabostes (nobles): the cap-wearing Dacian nobility
+		fnr_DACIA_tarabostes = {
+
+			estate = nobles_estate
+
+			potential = {
+				has_or_had_tag = DACIA
+			}
+			allow = {
+				has_advance = DACIA_draco_standard
+			}
+
+			country_modifier = {
+				global_nobles_estate_power = 0.10
+				nobles_estate_target_satisfaction = small_privilege_target_satisfaction
+
+				army_heavy_infantry_power = 0.10
+				global_levy_size_modifier = 0.10
+			}
+		}

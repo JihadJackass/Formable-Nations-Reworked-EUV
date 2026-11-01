@@ -1,0 +1,163 @@
+﻿# The Celtic League - simple IO for the Gallic Empire (Druidic Revival path)
+# Created by the fnr_GLCEM_call_celtic_league decision. GLCEM always leads.
+# Celtic-culture countries, anyone following the Gallo-Roman faith, and any subject of the Gallic
+# Empire may join. The Gallic Empire's subjects (e.g. Tarraconensis, Britannia) join automatically
+# (monthly_effect). Members are called into each other's defensive wars; the leader's bonus scales
+# with members. League actions: the Great Assembly and Sound the Carnyx decisions.
+
+fnr_GLCEM_celtic_league_io = {
+	has_target = no
+	unique = yes
+	expel_members_who_are_targets_of_other_members = no
+
+	has_leader_country = yes
+	leader_type = country
+	leader_change_trigger_type = none
+
+	diplomatic_capacity_cost = {
+		add = {
+			desc = "UPKEEP_BASE_VALUE"
+			value = 1
+		}
+	}
+
+	# Leader: base package
+	leader_modifier = {
+		monthly_religious_influence = 0.1
+		land_morale_modifier = 0.05
+	}
+
+	# Leader: per member (not counting the Gallic Empire)
+	leader_modifier = {
+		scale = {
+			value = 0
+			if = {
+				limit = { has_variable = fnr_GLCEM_league_members }
+				add = var:fnr_GLCEM_league_members
+			}
+			max = 8
+		}
+		global_levy_size_modifier = 0.02
+		monthly_prestige = 0.02
+	}
+
+	# Other members
+	non_leader_modifier = {
+		land_morale_modifier = 0.05
+		global_defensive = 0.05
+		tolerance_heathen = 1
+	}
+
+	join_defensive_wars_can_call = {
+		always = yes
+	}
+
+	join_defensive_wars_auto_call = {
+		always = yes
+	}
+
+	create_visible_trigger = {
+		always = no
+	}
+
+	invite_visible_trigger = {
+		tag = GLCEM
+	}
+
+	can_lead_trigger = {
+		tag = GLCEM
+	}
+
+	can_join_trigger = {
+		OR = {
+			culture = { has_culture_group = culture_group:celtic_group }
+			religion = religion:fnr_gallo_roman_religion
+			is_subject_of = c:GLCEM
+		}
+		NOT = { is_member_of_international_organization = international_organization:fnr_GLCEM_celtic_league_io }
+		NOT = {
+			any_country_at_war_with = {
+				is_member_of_international_organization = international_organization:fnr_GLCEM_celtic_league_io
+			}
+		}
+	}
+
+	can_leave_trigger = {
+		NOT = { tag = GLCEM }
+	}
+
+	auto_leave_trigger = {
+		NOT = { tag = GLCEM }
+		NOT = { culture = { has_culture_group = culture_group:celtic_group } }
+		NOT = { religion = religion:fnr_gallo_roman_religion }
+		NOT = { is_subject_of = c:GLCEM }
+	}
+
+	# The Gallic Empire's subjects join automatically
+	monthly_effect = {
+		leader_country ?= {
+			every_subject = {
+				limit = {
+					NOT = { is_member_of_international_organization = international_organization:fnr_GLCEM_celtic_league_io }
+				}
+				save_scope_as = fnr_GLCEM_league_joiner
+				international_organization:fnr_GLCEM_celtic_league_io = {
+					add_country_to_international_organization = scope:fnr_GLCEM_league_joiner
+				}
+			}
+		}
+	}
+
+	# A new member honours the league's war-leader
+	on_joined = {
+		if = {
+			limit = { NOT = { tag = GLCEM } }
+			add_opinion = { target = c:GLCEM modifier = fnr_GLCEM_joined_the_league }
+		}
+	}
+
+	can_declare_war = {
+		always = yes
+	}
+
+	ai_desire_to_join = {
+		add = {
+			desc = "BASE_DESIRE"
+			value = -30
+		}
+		if = {
+			limit = { at_war = yes }
+			subtract = {
+				desc = "IS_AT_WAR"
+				value = 1000
+			}
+		}
+		if = {
+			limit = { exists = scope:actor }
+			add = {
+				desc = "DIPLOREASON_OPINION"
+				value = {
+					value = "opinion(scope:actor)"
+					multiply = 0.5
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = scope:actor
+				religion = scope:actor.religion
+			}
+			add = {
+				desc = "DIPLOREASON_SAME_RELIGION"
+				value = 30
+			}
+		}
+	}
+
+	ai_desire_to_allow_new_member = {
+		add = {
+			desc = "WE_WANT_THE_ORGANIZATION_TO_GROW"
+			value = 20
+		}
+	}
+}

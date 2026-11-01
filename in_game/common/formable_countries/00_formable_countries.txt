@@ -19,6 +19,7 @@ SCA_f = {
 	content_priority = 800
 	
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		has_variable = fnr_historical_enabled # FNR
 		NOT = { # FNR
 			OR = {
@@ -57,6 +58,7 @@ sweden_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		has_variable = fnr_historical_enabled # FNR
 		NOT = { # FNR
 			OR = {
@@ -97,6 +99,7 @@ denmark_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = culture:danish
 	}
 	
@@ -125,6 +128,7 @@ DRD_f = {
 	rule = fantasy
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		any_primary_or_accepted_or_tolerated_culture = {
 			OR = {
 				has_culture_group = culture_group:scottish_group
@@ -170,6 +174,7 @@ GBR_f = {
 	rule = historical
 	
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture ?= { has_culture_group = culture_group:british_group }
 	}
 
@@ -256,6 +261,7 @@ ENG_f = {
 	rule = historical
 	
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		OR = {
 			culture = culture:english
 			culture.language = language:english_language
@@ -291,6 +297,7 @@ WLS_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		OR = {
 			culture = culture:welsh
 			culture.language = language:brythonic_language
@@ -320,6 +327,7 @@ SCO_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = { has_culture_group = culture_group:scottish_group }
 	}
 
@@ -348,6 +356,7 @@ NOL_f = {
 	rule = plausible
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture ?= { language = language:english_language }
 		NOT = { tag = ENG } # FNR
 	}
@@ -379,6 +388,7 @@ IRE_f = {
 	# Generic path. Mutually exclusive with the two IO variants: only shows when the country
 	# belongs to neither the High Kingship nor the Lordship of Ireland.
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		OR = {
 			culture = { has_culture_group = culture_group:hibernian_group }
 			tag = PLE
@@ -429,6 +439,7 @@ IRE_high_kingship_f = {
 
 	# Shown only to High Kingship members. The leader-of-the-IO check lives in allow.
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		is_member_of_international_organization_of_type = { type = high_kingship }
 	}
 
@@ -484,6 +495,7 @@ IRE_lordship_of_ireland_f = {
 	potential_requires_own = no
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		is_member_of_international_organization = international_organization:lordship_of_ireland
 	}
 
@@ -526,6 +538,7 @@ MTH_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = { has_culture_group = culture_group:hibernian_group }
 	}
 
@@ -557,6 +570,7 @@ MCM_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = { has_culture_group = culture_group:hibernian_group }
 	}
 
@@ -589,6 +603,7 @@ SWI_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = { has_culture_group = culture_group:swiss_group }
 	}
 
@@ -633,6 +648,7 @@ ADU_f = {
 	rule = plausible
 	
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = { has_culture_group = culture_group:iberian_group }
 		religion.group = religion_group:muslim
 
@@ -675,6 +691,7 @@ ARA_f = { # Aragon
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		NOT = { tag = ARA }
 		OR = {
 			culture = culture:aragonese
@@ -706,6 +723,7 @@ CAS_f = { # Castile
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		NOT = { tag = CAS }
 		culture = culture:castilian
 		religion.group = religion_group:christian
@@ -734,6 +752,7 @@ CAT_f = { # Catalonia
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		NOT = { tag = CAT }
 		culture = culture:catalan
 		religion.group = religion_group:christian
@@ -762,6 +781,7 @@ GLC_f = { # Galicia
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		NOT = { tag = GLC }
 		culture = culture:galician
 		religion.group = religion_group:christian
@@ -790,6 +810,7 @@ LON_f = { # Leon
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		NOT = { tag = LON }
 		culture = culture:leonese
 		religion.group = religion_group:christian
@@ -818,6 +839,7 @@ MLL_f = { # Mallorca
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		NOT = { tag = MLL }
 		culture = culture:catalan
 		religion.group = religion_group:christian
@@ -846,6 +868,7 @@ NAV_f = { # Navarre
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		NOT = { tag = NAV }
 		NOT = { # FNR
 			OR = {
@@ -884,6 +907,7 @@ POR_f = { # Portugal
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		NOT = { tag = POR }
 		culture = culture:portuguese
 		religion.group = religion_group:christian
@@ -915,6 +939,7 @@ SPA_f = {
 	rule = historical
 	
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture ?= { has_culture_group = culture_group:iberian_group }
 		religion.group = religion_group:christian
 	}
@@ -955,6 +980,7 @@ VAL_f = { # Valencia
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		NOT = { tag = VAL }
 		culture = culture:catalan
 		religion.group = religion_group:christian
@@ -984,6 +1010,7 @@ AIA_f = { # Arabia
 	rule = plausible
 	
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = { has_culture_group = culture_group:arabian_group }
 	}
 
@@ -1011,6 +1038,7 @@ EGY_f = {
 	rule = historical
 	
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		NOT = { tag = MAM }
 	}
 
@@ -1038,6 +1066,7 @@ KOA_f = {
 	rule = plausible
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		religion = religion:catholic
 	}
 
@@ -1073,51 +1102,56 @@ KOA_f = {
 	}
 }
 
-# Latin Empire - FNR version (tag LTNEM). Replaces vanilla LAT_f.
-# The reduced-requirements path below still forms vanilla LAT.
+# Latin Empire - FNR version. Replaces vanilla LAT_f and forms the vanilla LAT tag, so the Latin
+# Empire keeps all vanilla content (Restored Rule of the Latins, Orthodox Status law, Holy Patriarchate
+# and Greater Claims decisions, reconquest CB) plus the FNR Pax Romana content (fnr_LAT_*).
+# FNR: no age limit; any Catholic power with a crusader/Frankokratia background, a Latin culture with a
+# foothold in the Balkans or Anatolia, or Constantinople itself can see it. Fraction lowered from 0.90.
+# The reduced-requirements path below is vanilla's and also forms LAT.
 LAT_f = {
 	level = 3
-	required_locations_fraction = 0.90
+	required_locations_fraction = 0.50
 	rule = plausible
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		OR = {
 			has_variable = fnr_nonhistorical_enabled
 			has_variable = fnr_latinempire_enabled
 		}
 		NOT = { has_variable = fnr_latinempire_disabled }
-		NOT = { 
-			OR = {
-				tag = LTNEM
-				tag_exists = LTNEM
-			}
-		}
+		NOT = { tag = LAT }
+		NOT = { country_exists = c:LAT }
 		NOT = { has_variable = lat_reduced_requirements_to_form }
 		religion = religion:catholic
-		is_frankokratia_state = yes
-		NOT = { current_age_or_later = { age = age_5_absolutism } }
-		NOT = { country_exists = c:LAT }
+		OR = {
+			is_frankokratia_state = yes
+			owns = location:constantinople
+			AND = {
+				OR = {
+					culture = { has_culture_group = culture_group:french_group }
+					culture = { has_culture_group = culture_group:iberian_group }
+					culture = { has_culture_group = culture_group:italian_group }
+				}
+				any_owned_location = {
+					OR = {
+						region = region:balkan_region
+						region = region:anatolia_region
+					}
+				}
+			}
+		}
 	}
 	allow = {
 		NOT = { country_exists = c:LAT }
+		is_subject = no
 		owns = location:constantinople
 		religion = religion:catholic
-		OR = {
-			culture = { has_culture_group = culture_group:french_group }
-			culture = { has_culture_group = culture_group:iberian_group }
-			culture = { has_culture_group = culture_group:italian_group }
-		}
-		OR = {
-			current_age = age_1_traditions
-			current_age = age_2_renaissance
-			current_age = age_3_discovery
-			current_age = age_4_reformation
-		}	
 	}
-	name = LTNEM
-	flag = LTNEM
-	adjective = LTNEM_ADJ
-	tag = LTNEM
-	color = map_LTNEM
+	name = LAT
+	flag = LAT
+	adjective = LAT_ADJ
+	tag = LAT
+	color = map_LAT
 	provinces = { constantinople_province kocaeli_province biga_province edirne_province dardanelles_province evros_province lower_macedonia_province chalkidiki_province central_macedonia_province thessaly_province lemnos_province chios_province }
 	locations = {
 		iznik
@@ -1143,6 +1177,17 @@ LAT_f = {
 			}
 			location:constantinople = { add_core = ROOT }
 		}
+		if = {
+			limit = { has_reform = government_reform:lat_papal_restoration_claimant }
+			remove_reform = government_reform:lat_papal_restoration_claimant
+		}
+		if = {
+			limit = { has_reform = government_reform:partitio_reform }
+			remove_reform = government_reform:partitio_reform
+		}
+		unlock_government_reform_effect = { type = lat_restored_rule_of_the_latins }
+		add_reform = government_reform:lat_restored_rule_of_the_latins
+		trigger_event_non_silently = fnr_LAT.1 # FNR Pax Romana
 	}
 }
 
@@ -1153,6 +1198,7 @@ LAT_REDUCED_REQUIREMENTS_f = {
 	rule = plausible
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		NOT = { country_exists = c:LAT }
 		religion = religion:catholic
 		has_variable = lat_reduced_requirements_to_form
@@ -1230,6 +1276,7 @@ LAT_REDUCED_REQUIREMENTS_f = {
 		}
 		unlock_government_reform_effect = { type = lat_restored_rule_of_the_latins }
 		add_reform = government_reform:lat_restored_rule_of_the_latins
+		trigger_event_non_silently = fnr_LAT.1 # FNR Pax Romana
 		if = {
 			limit = { 
 				culture = culture:catalan
@@ -1268,6 +1315,7 @@ THE_f = {
 	rule = plausible
 	capital_required = no
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		NOT = { country_exists = c:THE }
 		NOT = { tag = LAT }
 		is_frankokratia_state = yes
@@ -1318,6 +1366,7 @@ THE_REDUCED_REQUIREMENTS_f = {
 	rule = plausible
 	capital_required = no
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		NOT = { country_exists = c:THE }
 		NOT = { tag = LAT }
 		is_frankokratia_state = yes
@@ -1374,6 +1423,7 @@ SAR_f = {
 	capital_required = no
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = culture:sardinian
 	}
 
@@ -1409,6 +1459,7 @@ SAR_piedmont_f = {
 	capital_required = no
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = { has_culture_group = culture_group:italian_group }
 	}
 
@@ -1443,6 +1494,7 @@ MSI_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = culture:mossi
 	}
 
@@ -1471,6 +1523,7 @@ BEJ_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = culture:beja_culture
 	}
 
@@ -1502,6 +1555,7 @@ ETH_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		OR = {
 			culture = culture:agaw_culture
 			culture = culture:amhara
@@ -1540,6 +1594,7 @@ BAV_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = culture:danube_bavarian
 	}
 
@@ -1576,6 +1631,7 @@ HAB_f = {
 	rule = historical
 	
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		OR = {
 			culture = culture:danube_bavarian
 			culture = culture:southern_bavarian
@@ -1619,6 +1675,7 @@ BOH_f = {
 	rule = historical
 	
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		OR = {
 			culture = culture:czech
 			culture = culture:moravian
@@ -1664,6 +1721,7 @@ SAX_f = { # Saxony
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		OR = {
 			culture = culture:saxon
 			culture = culture:lower_saxon
@@ -1702,6 +1760,7 @@ NSA_f = { # Nassau
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		OR = {
 			culture = culture:rhine_franconian
 			culture = culture:moselle_franconian
@@ -1728,6 +1787,7 @@ MKL_f = {
 	level = 1
 	rule = historical
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = culture:western_pomeranian
 	}
 	
@@ -1751,6 +1811,7 @@ POM_f = {
 	level = 2
 	rule = historical
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		OR = {
 			culture = culture:eastern_pomeranian
 			culture = culture:western_pomeranian
@@ -1779,6 +1840,7 @@ PRU_f = { #Prussia
 	capital_required = no
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = { has_culture_group = culture_group:german_group }
 	}
 	allow = {
@@ -1825,6 +1887,7 @@ LIV_f = {
 	level = 1
 	rule = plausible
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		any_primary_or_accepted_or_tolerated_culture = { has_culture_group = culture_group:german_group }
 	}
 
@@ -1851,6 +1914,7 @@ LVA_f = { # Baltic
 	rule = fantasy
 	 
 	potential = {	
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		any_primary_or_accepted_or_tolerated_culture = { has_culture_group = culture_group:baltic_group }
 	}
 
@@ -1883,6 +1947,7 @@ GER_f = {
 	required_locations_fraction = 0.6
 	rule = plausible
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = { has_culture_group = culture_group:german_group }
 	}
 	
@@ -1911,6 +1976,7 @@ HRE_f = {
 	required_locations_fraction = 0.75
 	rule = plausible
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		exists = international_organization:hre
 		is_member_of_international_organization = international_organization:hre
 	}
@@ -1942,6 +2008,7 @@ MOL_f = {
 	level = 1
 	rule = historical
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = culture:moldovan
 	}
 	
@@ -1963,6 +2030,7 @@ MAZ_f = { # Mazovia
 	required_locations_fraction = 0.9
 	rule = historical
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = culture:mazovian
 	}
 	allow = {
@@ -1989,6 +2057,7 @@ SIL_f = {
 	required_locations_fraction = 0.75
 	rule = historical
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		OR = {
 			culture = culture:silesian
 			culture = culture:german_silesian
@@ -2017,6 +2086,7 @@ POL_f = {
 	required_locations_fraction = 0.75
 	rule = historical
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = { has_culture_group = culture_group:polish_group }
 	}
 	allow = {
@@ -2047,6 +2117,7 @@ PLC_f = {
 	required_locations_fraction = 0.5
 	rule = historical
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		has_variable = fnr_historical_enabled # FNR
 		NOT = { # FNR
 			OR = {
@@ -2136,6 +2207,7 @@ UKR_f = { #Ruthenia
 	required_locations_fraction = 0.6
 	rule = plausible
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		OR = {
 			culture = culture:halychian_culture
 			culture = culture:polatskian_culture
@@ -2172,6 +2244,7 @@ ROM_f = {
 	rule = fantasy
 	
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		NOR = {
 			has_or_had_tag = BYZ
 			has_or_had_tag = TRE
@@ -2253,6 +2326,7 @@ ROM_BYZ_f = {
 	potential_requires_own = no
 	
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		OR = {
 			has_or_had_tag = BYZ
 			has_or_had_tag = TRE
@@ -2315,6 +2389,7 @@ CTH_f = {
 	rule = fantasy
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = { has_culture_group = culture_group:amazigh_group }
 	}
 
@@ -2357,6 +2432,7 @@ MLC_f = {
 	level = 2
 	rule = historical
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		always = no #Event
 	}
 	allow = {
@@ -2385,6 +2461,7 @@ ULS_f = {
 	rule = historical
 	 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		OR = {
 			culture = { has_culture_group = culture_group:celtic_group }
 			culture = { has_culture_group = culture_group:hibernian_group }
@@ -2414,6 +2491,7 @@ CNN_f = {
 	rule = historical
 	 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		OR = {
 			culture = { has_culture_group = culture_group:celtic_group }
 			culture = { has_culture_group = culture_group:hibernian_group }
@@ -2443,6 +2521,7 @@ ITA_f = {
 	rule = plausible
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = { has_culture_group = culture_group:italian_group }
 	}
 
@@ -2480,6 +2559,7 @@ FRA_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = { has_culture_group = culture_group:french_group }
 	}
 
@@ -2507,6 +2587,7 @@ LOT_f = {
 	rule = plausible
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		OR = {
 			tag = AAC # FNR
 			culture = culture:rhine_alemannic
@@ -2550,6 +2631,7 @@ BGP_f = {
 	rule = plausible
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		OR = {
 			culture = culture:arpitan
 			culture = culture:vivaro_alpine
@@ -2587,6 +2669,7 @@ TWS_f = {
 	rule = historical
 	content_priority = 800
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		not = { tag = ITA }
 		OR = {
 			culture = culture:sicilian
@@ -2650,6 +2733,7 @@ RUS_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = { has_culture_group = culture_group:russian_group }
 		NOT = { # FNR
 			OR = {
@@ -2703,6 +2787,7 @@ GRE_f = {
 	required_locations_fraction = 0.5
 	rule = historical
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		NOT = { country_exists = c:BYZ }
 		NOT = { tag = TUR }
 	}
@@ -2734,6 +2819,7 @@ BYZ_f = {
 	required_locations_fraction = 0.5
 	rule = historical
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = { has_culture_group = culture_group:greek_group }
 		NOT = { has_or_had_tag = TRE }
 	}
@@ -2779,6 +2865,7 @@ BYZ_trebizond_f = {
 	required_locations_fraction = 0.15
 	rule = historical
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		has_or_had_tag = TRE
 		culture = { has_culture_group = culture_group:greek_group }
 	}
@@ -2836,6 +2923,7 @@ HEN_f = {
 	rule = fantasy
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture.language = language:brythonic_language
 	}
 
@@ -2865,6 +2953,7 @@ USA_f = {
 	capital_required = yes
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture ?= {
 			is_culture_native_american = no
 			has_culture_group = culture_group:british_group
@@ -2896,6 +2985,7 @@ CAN_f = {
 	capital_required = yes
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture ?= {
 			is_culture_native_american = no
 			OR = {
@@ -2930,6 +3020,7 @@ MEX_f = {
 	capital_required = yes
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		OR = {
 			any_primary_or_accepted_or_tolerated_culture ?= { has_culture_group = culture_group:iberian_group }
 			religion.group = religion_group:christian
@@ -2961,6 +3052,9 @@ MEX_f = {
 
 # Bengal
 BNG_f = {
+	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+	}
 	level = 3
 	required_locations_fraction = 0.8
 	rule = historical
@@ -2988,6 +3082,7 @@ DLH_f = {
 	rule = historical
 	
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 	}
 	allow = {
 		religion.group = religion_group:muslim
@@ -3026,6 +3121,7 @@ NPL_f = {
 	required_locations_fraction = 0.7
 	rule = historical
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 	}
 	allow = {
 		culture = { has_culture_group = culture_group:nepali_group }
@@ -3049,6 +3145,7 @@ MUG_f = {
 	rule = historical
 	
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		religion.group = religion_group:muslim
 		culture ?= {
 			OR = {
@@ -3093,6 +3190,7 @@ DEC_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		any_primary_or_accepted_or_tolerated_culture = {
 			OR = {
 				language = language:marathi_language
@@ -3131,6 +3229,7 @@ MHR_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		any_primary_or_accepted_or_tolerated_culture = {
 			language = language:marathi_language
 		}
@@ -3160,6 +3259,7 @@ HIN_f = {
 	required_locations_fraction = 0.7
 	rule = plausible
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 	}
 	allow = {
 	}
@@ -3182,6 +3282,7 @@ PUN_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = culture:punjabi
 	}
 
@@ -3208,6 +3309,7 @@ RJP_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture.language = language:rajasthani_language
 	}
 
@@ -3234,6 +3336,7 @@ GUJ_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture.language = language:gujarati_language
 	}
 
@@ -3262,6 +3365,7 @@ SHA_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = { has_culture_group = culture_group:shan_group }
 	}
 
@@ -3288,6 +3392,7 @@ MSA_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = culture:malay_culture
 		religion.group = religion_group:muslim
 	}
@@ -3315,6 +3420,7 @@ SIA_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = culture:thai_culture
 	}
 
@@ -3342,6 +3448,7 @@ BAN_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = culture:sundanese_culture
 	}
 
@@ -3371,6 +3478,7 @@ IRA_f = {
 	required_locations_fraction = 0.5
 	rule = historical
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = { has_culture_group = culture_group:iranian_group }
 		NOT = { tag = ERSHR } # FNR
 	}
@@ -3398,6 +3506,7 @@ TIB_f = {
 	required_locations_fraction = 0.6
 	rule = historical
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = { has_culture_group = culture_group:tibetan_group }
 	}
 	name = TIB
@@ -3419,6 +3528,7 @@ SKO_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		OR = {
 			culture = culture:hausa
 			culture = culture:fulbe
@@ -3451,6 +3561,7 @@ HAU_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = culture:hausa
 	}
 
@@ -3478,6 +3589,7 @@ KON_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		religion = religion:bantu_religion
 	}
 
@@ -3505,6 +3617,7 @@ NTR_f = {
 	rule = plausible
 	
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = culture:maori_culture
 	}
 
@@ -3531,6 +3644,7 @@ AIR_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = culture:tuareg
 	}
 
@@ -3559,6 +3673,7 @@ KOJ_f = {
 	capital_required = no
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		religion = religion:catholic
 		OR = {
 			tag = CYP
@@ -3604,6 +3719,7 @@ INC_f = {
 	required_locations_fraction = 0.8
 	rule = historical	
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture.language = language:quechuan_language
 	}
 
@@ -3652,6 +3768,7 @@ TIM_f = {
 	rule = historical
 	
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = culture:uzbek_culture
 	}
 
@@ -3675,6 +3792,7 @@ SER_f = {
 	
 	rule = historical
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = culture:serbian
 	}
 
@@ -3697,6 +3815,7 @@ MCH_f = {
 	rule = historical
 	
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture ?= { has_culture_group = culture_group:jurchen_group }
 	}
 
@@ -3723,6 +3842,7 @@ YMT_f = {
 	level = 3
 	rule = historical
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		always = no
 	}
 
@@ -3741,6 +3861,7 @@ SHL_f = {
 	rule = historical
 	
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = culture:holsatian
 	}
 
@@ -3762,6 +3883,7 @@ RUM_f = {
 	required_locations_fraction = 0.85
 	rule = historical
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		has_variable = fnr_nonhistorical_enabled # FNR
 		NOT = { # FNR
 			OR = {
@@ -3804,6 +3926,7 @@ MGE_f = {
 	required_locations_fraction = 0.85
 	rule = historical
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		has_variable = fnr_fantasy_enabled # FNR
 		NOT = { # FNR
 			OR = {
@@ -3887,6 +4010,7 @@ MGO_f = {
 	required_locations_fraction = 0.85
 	rule = historical
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = {
 			has_culture_group = culture_group:mongolian_group
 		}
@@ -3914,6 +4038,7 @@ ILK_f = {
 	required_locations_fraction = 0.75
 	rule = historical
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		exists = international_organization:ilkhanate
 		is_member_of_international_organization = international_organization:ilkhanate
 		NOT = { 
@@ -3967,6 +4092,7 @@ GEO_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = culture:georgian_culture
 	}
 	
@@ -3995,6 +4121,7 @@ ARM_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		has_variable = fnr_historical_enabled # FNR
 		NOT = { # FNR
 			OR = {
@@ -4032,6 +4159,7 @@ AYU_f = {
 	level = 2	
 	rule = historical
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		always = no #Formed by event
 	}
 	
@@ -4060,6 +4188,7 @@ ALB_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = culture:albanian
 	}
 	
@@ -4087,6 +4216,7 @@ BAH_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		always = no #Formed by event
 	}
 	
@@ -4115,6 +4245,7 @@ DAH_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		always = no #Formed by event
 	}
 	
@@ -4142,6 +4273,7 @@ MAY_f = {
 	rule = plausible
 	 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		OR = {
 			culture.language = language:maya_language
 			religion = religion:mayan
@@ -4176,6 +4308,7 @@ KRY_f = {
 	rule = plausible
 	 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = culture:gilak_culture
 	}
 
@@ -4205,6 +4338,7 @@ RYU_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = culture:ryukyu_culture
 	}
 
@@ -4232,6 +4366,7 @@ CHI_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = {
 			has_culture_group = culture_group:chinese_group
 		}
@@ -4261,6 +4396,7 @@ IRO_f = { # Haudenosaunee / Iroquois Confederacy
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = { has_culture_group = culture_group:haudenosaunee_group }
 	}
 
@@ -4294,6 +4430,7 @@ PUE_f = { # United Pueblo
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		OR = {
 			culture = culture:keres_culture
 			culture = culture:zuni_culture
@@ -4343,6 +4480,7 @@ RMN_f = {
 	rule = plausible
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = { has_culture_group = culture_group:romanian_group }
 	}
 	allow = {
@@ -4373,6 +4511,7 @@ SWA_f = {
 	rule = plausible
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = culture:swabian
 	}
 	allow = {
@@ -4399,6 +4538,7 @@ WES_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = culture:westphalian
 	}
 	allow = {
@@ -4436,6 +4576,7 @@ FKN_f = {
 	rule = plausible
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = culture:east_franconian
 	}
 	allow = {
@@ -4462,6 +4603,7 @@ HAN_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = culture:lower_saxon
 	}
 	allow = {
@@ -4489,6 +4631,7 @@ TUS_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = culture:tuscan
 	}
 	allow = {
@@ -4516,6 +4659,7 @@ BUL_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = culture:bulgarian
 	}
 	allow = {
@@ -4543,6 +4687,7 @@ DAL_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		OR = {
 			culture = culture:dalmatian
 			culture = culture:croatian
@@ -4573,6 +4718,7 @@ HUN_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		NOT = { # FNR
 			OR = {
 				tag = HNGEM
@@ -4610,6 +4756,7 @@ KRS_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = culture:kurdish_culture
 	}
 	allow = {
@@ -4650,6 +4797,7 @@ SOI_f = {
 	rule = plausible
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = culture:somali_culture
 	}
 	allow = {
@@ -4676,6 +4824,7 @@ CRO_f = {
 	rule = plausible
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = culture:croatian
 	}
 	allow = {
@@ -4704,6 +4853,7 @@ TRA_f = {
 	rule = plausible
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		OR = {
 			culture = culture:hungarian
 			culture = culture:transylvanian
@@ -4735,6 +4885,7 @@ MAL_f = {
 	rule = plausible
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture.language = language:mande_language
 	}
 	allow = {
@@ -4764,6 +4915,7 @@ NUB_f = {
 	rule = plausible
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = culture:nubian
 	}
 	allow = {
@@ -4791,6 +4943,7 @@ FIN_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = culture:finnish
 	}
 	allow = {
@@ -4817,6 +4970,7 @@ ICE_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = culture:icelandic
 	}
 	allow = {
@@ -4843,6 +4997,7 @@ KAZ_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture.language = language:kipchak_language
 	}
 	allow = {
@@ -4870,6 +5025,7 @@ MIR_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = { has_culture_group = culture_group:malagasy_group }
 	}
 	allow = {
@@ -4896,6 +5052,7 @@ MOR_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		OR = {
 			culture = culture:moroccan
 			culture = culture:zenati
@@ -4928,6 +5085,7 @@ ALG_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		OR = {
 			culture = culture:algerian
 			culture = culture:kabyle
@@ -4964,6 +5122,7 @@ TUN_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		OR = {
 			culture = culture:tunisian
 			culture = culture:eastern_amazigh
@@ -4994,6 +5153,7 @@ NUS_f = {
 	rule = plausible
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		OR = {
 			culture = culture:javanese_culture
 			culture = culture:sundanese_culture
@@ -5026,6 +5186,7 @@ SLO_f = {
 	rule = plausible
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = culture:slovak
 	}
 	allow = {
@@ -5051,6 +5212,7 @@ BNO_f = { # Borneo
 	rule = plausible
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 	}
 	allow = {
 	}
@@ -5076,6 +5238,7 @@ CIR_f = { # Circassia
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = culture:circassian_culture
 	}
 	allow = {
@@ -5103,6 +5266,7 @@ AZT_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		OR = {
 			religion = religion:nahuatl
 			culture = culture:nahua_culture
@@ -5138,6 +5302,7 @@ PON_f = {
 	rule = fantasy
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		OR = {			
 			culture = culture:pontic_greek_culture
 			owns = location:trebizond
@@ -5180,6 +5345,7 @@ TUR_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		always = no #Formed by event
 	}
 
@@ -5199,6 +5365,7 @@ ASK_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		always = no #Formed by event
 	}
 
@@ -5222,6 +5389,7 @@ JAP_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		always = no #Formed by event
 	}
 
@@ -5241,6 +5409,7 @@ PGR_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		always = no #Formed by event
 	}
 
@@ -5264,6 +5433,7 @@ MTM_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		always = no #Formed by event
 	}
 
@@ -5287,6 +5457,7 @@ YUA_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		always = no #Formed by event
 	}
 
@@ -5306,6 +5477,7 @@ CSH_f = {
 	rule = historical
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		always = no #Formed by event
 	}
 
@@ -5330,6 +5502,7 @@ OCC_f = { #Occitania
 	required_locations_fraction = 0.75
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		OR = {
 			culture.dialect = dialect:occitan_dialect
 			culture.dialect = dialect:gascon_dialect
@@ -5384,6 +5557,7 @@ TRG_f = {
 	rule = plausible
 
 	potential = {
+		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 		culture = culture:tuareg
 	}
 

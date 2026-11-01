@@ -1,0 +1,50 @@
+﻿#root is country
+#scope:target is the target
+
+# Western Roman Empire - regional reconquest CBs, unlocked by flavor_WESRE.7 ("The Reconquest Begins")
+# Option A unlocks Gaul, B Hispania, C Africa, D all three.
+
+fnr_WESRE_cb_reconquer_gaul = {
+	create_visible = {
+		has_variable = fnr_WESRE_front_gaul
+	}
+	create_enabled = {
+		scope:target = {
+			any_owned_location = {
+				region = region:france_region
+			}
+		}
+	}
+	speed = 10
+	war_goal_type = fnr_WESRE_reconquer_gaul_wargoal
+}
+
+fnr_WESRE_cb_reconquer_hispania = {
+	create_visible = {
+		has_variable = fnr_WESRE_front_hispania
+	}
+	create_enabled = {
+		scope:target = {
+			any_owned_location = {
+				region = region:iberia_region
+			}
+		}
+	}
+	speed = 10
+	war_goal_type = fnr_WESRE_reconquer_hispania_wargoal
+}
+
+fnr_WESRE_cb_reconquer_africa = {
+	create_visible = {
+		has_variable = fnr_WESRE_front_africa
+	}
+	create_enabled = {
+		scope:target = {
+			any_owned_location = {
+				region = region:maghreb_region
+			}
+		}
+	}
+	speed = 10
+	war_goal_type = fnr_WESRE_reconquer_africa_wargoal
+}

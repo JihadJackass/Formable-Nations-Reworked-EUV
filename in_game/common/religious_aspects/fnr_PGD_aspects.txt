@@ -1,0 +1,66 @@
+﻿# Religious aspects for the Gothic Arian church and the Zalmoxian faith (1 slot each)
+
+# Gothic Arian
+fnr_gothic_arian_wulfilas_bible = {
+	icon = religious_aspect_folk_brown
+	religion = fnr_gothic_arian_religion
+	modifier = {
+		global_max_literacy = 5
+		cultural_tradition_modifier = 0.10
+	}
+}
+
+fnr_gothic_arian_homoian_creed = {
+	icon = religious_aspect_folk_blue
+	religion = fnr_gothic_arian_religion
+	modifier = {
+		tolerance_heretic = 2
+		stability_cost_efficiency = 0.1
+	}
+}
+
+fnr_gothic_arian_warrior_bishops = {
+	icon = religious_aspect_folk_red
+	religion = fnr_gothic_arian_religion
+	modifier = {
+		global_defensive = 0.10
+		land_morale_modifier = 0.05
+	}
+}
+
+# Zalmoxian
+fnr_zalmoxian_worship_zalmoxis = {
+	icon = religious_aspect_folk_white
+	religion = fnr_zalmoxian_religion
+	modifier = {
+		land_morale_modifier = 0.10
+		monthly_war_exhaustion = -0.05
+	}
+}
+
+fnr_zalmoxian_worship_gebeleizis = {
+	icon = religious_aspect_folk_yellow
+	religion = fnr_zalmoxian_religion
+	modifier = {
+		global_defensive = 0.15
+		global_weaponry_output_modifier = 0.10
+	}
+}
+
+fnr_zalmoxian_worship_bendis = {
+	icon = religious_aspect_folk_green
+	religion = fnr_zalmoxian_religion
+	modifier = {
+		global_monthly_food_modifier = monthly_food_productivity_mild_bonus
+		global_population_growth = 0.0002
+	}
+}
+
+fnr_zalmoxian_worship_derzelas = {
+	icon = religious_aspect_folk_dark_blue
+	religion = fnr_zalmoxian_religion
+	modifier = {
+		global_disease_resistance = 0.10
+		global_horses_output_modifier = 0.15
+	}
+}

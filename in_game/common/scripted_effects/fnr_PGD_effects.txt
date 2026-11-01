@@ -1,0 +1,19 @@
+﻿# Pontus, Gothia and Dacia scripted effects (Pax Romana)
+
+# Dacia yearly upkeep: Sarmizegetusa country bonus while Hateg is owned and rebuilt
+fnr_DACIA_yearly_upkeep_effect = {
+	if = {
+		limit = {
+			owns = location:hateg
+			location:hateg = { has_location_modifier = fnr_DACIA_sarmizegetusa }
+		}
+		if = {
+			limit = { NOT = { has_country_modifier = fnr_DACIA_royal_seat } }
+			add_country_modifier = { modifier = fnr_DACIA_royal_seat years = -1 }
+		}
+	}
+	else_if = {
+		limit = { has_country_modifier = fnr_DACIA_royal_seat }
+		remove_country_modifier = fnr_DACIA_royal_seat
+	}
+}

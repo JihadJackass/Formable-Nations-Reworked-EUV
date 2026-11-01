@@ -1,0 +1,31 @@
+﻿# Western Roman Empire scripted triggers (Pax Romana)
+
+# Influence over Rome: we own or occupy it, hold a core on it, or its owner is our subject,
+# in a union with us, or thinks well of us.
+fnr_WESRE_influence_over_rome = {
+	OR = {
+		owns = location:rome
+		controls = location:rome
+		has_core = location:rome
+		location:rome.owner ?= {
+			OR = {
+				is_subject_or_below_of = root
+				in_union_with = root
+				has_positive_opinion = root
+			}
+		}
+	}
+}
+
+# Latin heritage: the peoples of the old Western provinces, or a Roman successor state
+fnr_WESRE_latin_heritage = {
+	OR = {
+		culture = { has_culture_group = culture_group:italian_group }
+		culture = { has_culture_group = culture_group:french_group }
+		culture = { has_culture_group = culture_group:iberian_group }
+		has_or_had_tag = RMNRP
+		has_or_had_tag = LTNEM
+		has_or_had_tag = LAT
+		has_or_had_tag = GLCEM
+	}
+}

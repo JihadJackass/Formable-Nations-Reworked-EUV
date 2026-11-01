@@ -1,0 +1,306 @@
+﻿# Gallic Empire Decisions (Pax Romana)
+# Replace the orphaned flavor_GLCEM.2 / .3 formation events: Tarraconensis and Britannia,
+# the historical provinces of the Gallic Empire, can be released as loyal vassals at any time.
+
+# Establish Tarraconensis - hands our Iberian lands to a new vassal kingdom
+fnr_GLCEM_establish_tarraconensis = {
+	decision_category = country_specific_decisions
+
+	tags = { GLCEM }
+
+	potential = {
+		NOT = { exists = c:TRCNS }
+		any_owned_location = { region = region:iberia_region }
+	}
+
+	allow = {
+		at_war = no
+		any_owned_location = {
+			count >= 15
+			is_capital = no
+			region = region:iberia_region
+		}
+	}
+
+	ai_will_do = { value = 50 }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:burghers_estate }
+	}
+
+	option = {
+		name = fnr_GLCEM_establish_tarraconensis.a
+		ai_chance = { value = 100 }
+		effect = {
+			custom_tooltip = fnr_GLCEM_establish_tarraconensis_tt
+			custom_tooltip = fnr_GLCEM_released_lock_tt
+			hidden_effect = {
+				fnr_GLCEM_release_tarraconensis_effect = yes
+			}
+			add_prestige = prestige_mild_bonus
+		}
+	}
+}
+
+# Establish Britannia - hands our lands in southern Britain to a new vassal kingdom
+fnr_GLCEM_establish_britannia = {
+	decision_category = country_specific_decisions
+
+	tags = { GLCEM }
+
+	potential = {
+		NOT = { exists = c:BRTNA }
+		any_owned_location = { fnr_GLCEM_is_britannia_location = yes }
+	}
+
+	allow = {
+		at_war = no
+		any_owned_location = {
+			count >= 10
+			is_capital = no
+			fnr_GLCEM_is_britannia_location = yes
+		}
+	}
+
+	ai_will_do = { value = 50 }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:burghers_estate }
+	}
+
+	option = {
+		name = fnr_GLCEM_establish_britannia.a
+		ai_chance = { value = 100 }
+		effect = {
+			custom_tooltip = fnr_GLCEM_establish_britannia_tt
+			custom_tooltip = fnr_GLCEM_released_lock_tt
+			hidden_effect = {
+				fnr_GLCEM_release_britannia_effect = yes
+			}
+			add_prestige = prestige_mild_bonus
+		}
+	}
+}
+
+# Grant Tarraconensis the right to reshape itself - lifts the formation lock on our released vassal
+fnr_GLCEM_grant_tarraconensis = {
+	decision_category = country_specific_decisions
+
+	tags = { GLCEM }
+
+	potential = {
+		exists = c:TRCNS
+		c:TRCNS = {
+			is_subject_of = root
+			has_variable = fnr_formation_locked
+		}
+	}
+
+	allow = {
+		at_war = no
+	}
+
+	ai_will_do = { value = 0 }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_GLCEM_grant_tarraconensis.a
+		ai_chance = { value = 100 }
+		effect = {
+			c:TRCNS = {
+				remove_variable = fnr_formation_locked
+				add_opinion = { target = root modifier = fnr_GLCEM_granted_self_rule }
+			}
+			custom_tooltip = fnr_GLCEM_grant_self_rule_tt
+		}
+	}
+}
+
+# Grant Britannia the right to reshape itself - lifts the formation lock on our released vassal
+fnr_GLCEM_grant_britannia = {
+	decision_category = country_specific_decisions
+
+	tags = { GLCEM }
+
+	potential = {
+		exists = c:BRTNA
+		c:BRTNA = {
+			is_subject_of = root
+			has_variable = fnr_formation_locked
+		}
+	}
+
+	allow = {
+		at_war = no
+	}
+
+	ai_will_do = { value = 0 }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_GLCEM_grant_britannia.a
+		ai_chance = { value = 100 }
+		effect = {
+			c:BRTNA = {
+				remove_variable = fnr_formation_locked
+				add_opinion = { target = root modifier = fnr_GLCEM_granted_self_rule }
+			}
+			custom_tooltip = fnr_GLCEM_grant_self_rule_tt
+		}
+	}
+}
+
+# Call the Celtic League - Druidic Revival path founds a league of Celtic peoples
+fnr_GLCEM_call_celtic_league = {
+	decision_category = country_specific_decisions
+
+	tags = { GLCEM }
+
+	potential = {
+		has_variable = fnr_GLCEM_path_druidic
+		NOT = { exists = international_organization:fnr_GLCEM_celtic_league_io }
+	}
+
+	allow = {
+		religion = religion:fnr_gallo_roman_religion
+		gold >= 200
+		at_war = no
+	}
+
+	ai_will_do = { value = 100 }
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_GLCEM_call_celtic_league.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -200
+			fnr_GLCEM_create_celtic_league_effect = yes
+			add_prestige = prestige_mild_bonus
+		}
+	}
+}
+
+# The Great Assembly - peacetime league action every 5 years
+fnr_GLCEM_great_assembly = {
+	decision_category = country_specific_decisions
+
+	tags = { GLCEM }
+
+	potential = {
+		exists = international_organization:fnr_GLCEM_celtic_league_io
+	}
+
+	allow = {
+		at_war = no
+		gold >= 100
+		NOT = { has_variable = fnr_GLCEM_assembly_cooldown }
+	}
+
+	ai_will_do = { value = 100 }
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_GLCEM_great_assembly.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -100
+			add_prestige = prestige_mild_bonus
+			international_organization:fnr_GLCEM_celtic_league_io = {
+				every_international_organization_member = {
+					add_country_modifier = { modifier = fnr_GLCEM_great_assembly years = 5 mode = add_and_extend }
+					if = {
+						limit = { NOT = { tag = GLCEM } }
+						add_opinion = { target = root modifier = fnr_GLCEM_attended_assembly }
+					}
+				}
+			}
+			set_variable = { name = fnr_GLCEM_assembly_cooldown years = 5 }
+			custom_tooltip = fnr_GLCEM_great_assembly_tt
+		}
+	}
+}
+
+# Sound the Carnyx - wartime league action every 10 years
+fnr_GLCEM_sound_the_carnyx = {
+	decision_category = country_specific_decisions
+
+	tags = { GLCEM }
+
+	potential = {
+		exists = international_organization:fnr_GLCEM_celtic_league_io
+	}
+
+	allow = {
+		at_war = yes
+		NOT = { has_variable = fnr_GLCEM_carnyx_cooldown }
+	}
+
+	ai_will_do = { value = 100 }
+
+	illustration_tags = {
+		10 = exterior
+		10 = armed
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:peasants_estate }
+	}
+
+	option = {
+		name = fnr_GLCEM_sound_the_carnyx.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_prestige = prestige_weak_penalty
+			international_organization:fnr_GLCEM_celtic_league_io = {
+				every_international_organization_member = {
+					add_country_modifier = { modifier = fnr_GLCEM_carnyx years = 2 mode = add_and_extend }
+				}
+			}
+			set_variable = { name = fnr_GLCEM_carnyx_cooldown years = 10 }
+			custom_tooltip = fnr_GLCEM_sound_the_carnyx_tt
+		}
+	}
+}

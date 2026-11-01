@@ -1,0 +1,102 @@
+﻿# Pontus - Chalkaspides (bronze-shield phalanx). Needs PONTU_mithridatic_legacy.
+		fnr_PONTU_chalkaspides_1 = {
+			copy_from = a_age_1_traditions_heavy_infantry
+			buildable = yes
+			upgrades_to_only = fnr_PONTU_chalkaspides_2
+
+			strength_damage_done = 0.10
+			strength_damage_taken = -0.15
+			morale_damage_taken = -0.10
+
+			country_potential = {
+				has_or_had_tag = PONTU
+				has_advance = PONTU_mithridatic_legacy
+			}
+
+			gfx_tags = { spear_tag heavy_tag }
+		}
+
+		fnr_PONTU_chalkaspides_2 = {
+			copy_from = a_age_2_renaissance_heavy_infantry
+			buildable = yes
+			upgrades_to_only = fnr_PONTU_chalkaspides_3
+
+			strength_damage_done = 0.10
+			strength_damage_taken = -0.15
+			morale_damage_taken = -0.10
+
+			country_potential = {
+				has_or_had_tag = PONTU
+				has_advance = PONTU_mithridatic_legacy
+			}
+
+			gfx_tags = { spear_tag heavy_tag }
+		}
+
+		fnr_PONTU_chalkaspides_3 = {
+			copy_from = a_age_3_discovery_heavy_infantry
+			buildable = yes
+			upgrades_to_only = fnr_PONTU_chalkaspides_4
+
+			strength_damage_done = 0.10
+			strength_damage_taken = -0.15
+			morale_damage_taken = -0.10
+
+			country_potential = {
+				has_or_had_tag = PONTU
+				has_advance = PONTU_mithridatic_legacy
+			}
+
+			gfx_tags = { spear_tag heavy_tag }
+		}
+
+		fnr_PONTU_chalkaspides_4 = {
+			copy_from = a_age_4_reformation_heavy_infantry
+			buildable = yes
+			upgrades_to_only = fnr_PONTU_chalkaspides_5
+
+			strength_damage_done = 0.10
+			strength_damage_taken = -0.15
+			morale_damage_taken = -0.10
+
+			country_potential = {
+				has_or_had_tag = PONTU
+				has_advance = PONTU_mithridatic_legacy
+			}
+
+			gfx_tags = { spear_tag heavy_tag }
+		}
+
+		fnr_PONTU_chalkaspides_5 = {
+			copy_from = a_age_5_absolutism_heavy_infantry
+			buildable = yes
+			upgrades_to_only = fnr_PONTU_chalkaspides_6
+
+			strength_damage_done = 0.10
+			strength_damage_taken = -0.15
+			morale_damage_taken = -0.10
+
+			country_potential = {
+				has_or_had_tag = PONTU
+				has_advance = PONTU_mithridatic_legacy
+			}
+
+			gfx_tags = { spear_tag heavy_tag }
+		}
+
+		fnr_PONTU_chalkaspides_6 = {
+			copy_from = a_age_6_revolutions_heavy_infantry
+			buildable = yes
+
+			strength_damage_done = 0.10
+			strength_damage_taken = -0.15
+			morale_damage_taken = -0.10
+
+			country_potential = {
+				has_or_had_tag = PONTU
+				has_advance = PONTU_mithridatic_legacy
+			}
+
+			gfx_tags = { spear_tag heavy_tag }
+		}
+

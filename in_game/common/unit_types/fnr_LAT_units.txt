@@ -1,0 +1,125 @@
+﻿#################################################################
+# Formable Nations: Reworked - Latin Empire Unit Types          #
+#################################################################
+# Frankish Knights - heavy cavalry of the crusader lords of Romania. Needs LAT_frankish_chivalry.
+# Raised in the capital or in lands of the Partition of Romania fiefs we still own.
+# No age-6 version: heavy cavalry is obsolete in the Age of Revolutions.
+		fnr_LAT_frankish_knights_1 = {
+			copy_from = a_age_1_traditions_heavy_cavalry
+			buildable = yes
+			upgrades_to_only = fnr_LAT_frankish_knights_2
+
+			strength_damage_done = 0.20
+			morale_damage_taken = -0.15
+			strength_damage_taken = -0.10
+
+			combat = {
+				grasslands = 0.10
+			}
+
+			construction_demand = expensive_heavy_cavalry_construction
+			maintenance_demand = expensive_heavy_cavalry_maintenance
+
+			country_potential = {
+				has_or_had_tag = LAT
+				has_advance = LAT_frankish_chivalry
+			}
+
+			gfx_tags = { spear_tag heavy_tag }
+		}
+
+		fnr_LAT_frankish_knights_2 = {
+			copy_from = a_age_2_renaissance_heavy_cavalry
+			buildable = yes
+			upgrades_to_only = fnr_LAT_frankish_knights_3
+
+			strength_damage_done = 0.20
+			morale_damage_taken = -0.15
+			strength_damage_taken = -0.10
+
+			combat = {
+				grasslands = 0.10
+			}
+
+			construction_demand = expensive_heavy_cavalry_construction
+			maintenance_demand = expensive_heavy_cavalry_maintenance
+
+			country_potential = {
+				has_or_had_tag = LAT
+				has_advance = LAT_frankish_chivalry
+			}
+
+			gfx_tags = { spear_tag heavy_tag }
+		}
+
+		fnr_LAT_frankish_knights_3 = {
+			copy_from = a_age_3_discovery_heavy_cavalry
+			buildable = yes
+			upgrades_to_only = fnr_LAT_frankish_knights_4
+
+			strength_damage_done = 0.20
+			morale_damage_taken = -0.15
+			strength_damage_taken = -0.10
+
+			combat = {
+				grasslands = 0.10
+			}
+
+			construction_demand = expensive_heavy_cavalry_construction
+			maintenance_demand = expensive_heavy_cavalry_maintenance
+
+			country_potential = {
+				has_or_had_tag = LAT
+				has_advance = LAT_frankish_chivalry
+			}
+
+			gfx_tags = { spear_tag heavy_tag }
+		}
+
+		fnr_LAT_frankish_knights_4 = {
+			copy_from = a_age_4_reformation_heavy_cavalry
+			buildable = yes
+			upgrades_to_only = fnr_LAT_frankish_knights_5
+
+			strength_damage_done = 0.20
+			morale_damage_taken = -0.15
+			strength_damage_taken = -0.10
+
+			combat = {
+				grasslands = 0.10
+			}
+
+			construction_demand = expensive_heavy_cavalry_construction
+			maintenance_demand = expensive_heavy_cavalry_maintenance
+
+			country_potential = {
+				has_or_had_tag = LAT
+				has_advance = LAT_frankish_chivalry
+			}
+
+			gfx_tags = { spear_tag heavy_tag }
+		}
+
+		fnr_LAT_frankish_knights_5 = {
+			copy_from = a_age_5_absolutism_heavy_cavalry
+			buildable = yes
+
+			strength_damage_done = 0.20
+			morale_damage_taken = -0.15
+			strength_damage_taken = -0.10
+
+			combat = {
+				grasslands = 0.10
+			}
+
+			construction_demand = expensive_heavy_cavalry_construction
+			maintenance_demand = expensive_heavy_cavalry_maintenance
+
+			country_potential = {
+				has_or_had_tag = LAT
+				has_advance = LAT_frankish_chivalry
+			}
+
+			gfx_tags = { spear_tag heavy_tag }
+		}
+

@@ -1,0 +1,6 @@
+﻿# Formable Nations Reworked - Latin Empire colors
+colors = {
+	color_fnr_greek_catholic_religion = rgb { 196 160 214 }
+	map_fnr_LAT_achaea = rgb { 168 122 74 }
+	map_fnr_LAT_athens = rgb { 120 150 190 }
+}

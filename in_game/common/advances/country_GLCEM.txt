@@ -1,15 +1,93 @@
-﻿# Advances for Gallic Empire
+﻿# Advances for Gallic Empire (Pax Romana - Gallic Revival tree)
+# Path gates: fnr_GLCEM_path_druidic (Druidic Revival) / fnr_GLCEM_path_imperial (Imperium Galliarum),
+# set by flavor_GLCEM.2. The path is checked in allow, not potential, because advance visibility
+# is not re-evaluated after an age starts.
 
 	# age_1_traditions
 
+		# Vercingetorix's Legacy - all paths
+		GLCEM_vercingetorix_legacy = {
+			age = age_1_traditions
+			icon = glorious_arms
+			potential = {
+				has_or_had_tag = GLCEM
+			}
+
+			land_morale_modifier = 0.10
+			global_pop_assimilation_speed_modifier = 0.15
+
+			requires = feudalism_advance
+			allow_children = no
+		}
+
+		# Druidic Restoration - Druidic Revival path (unlocks the Sacred Grove)
+		GLCEM_druidic_restoration = {
+			age = age_1_traditions
+			icon = religious_toleration
+			potential = {
+				has_or_had_tag = GLCEM
+			}
+			allow = {
+				has_variable = fnr_GLCEM_path_druidic
+			}
+
+			global_pop_conversion_speed_modifier = 0.10
+			monthly_religious_influence = 0.1
+			tolerance_own = 1
+
+			requires = organized_religion
+			allow_children = no
+		}
+
 	# age_2_renaissance
+
+		# The Mint of Treveri - Imperium Galliarum path
+		GLCEM_mint_of_treveri = {
+			age = age_2_renaissance
+			icon = standardized_coins
+			potential = {
+				has_or_had_tag = GLCEM
+			}
+			allow = {
+				has_variable = fnr_GLCEM_path_imperial
+			}
+
+			trade_income = 0.10
+			tax_income_efficiency = small_tax_income_efficiency_bonus
+			monthly_legitimacy = 0.05
+
+			requires = standardized_coins
+			allow_children = no
+		}
+
+		# Gaulish Metallurgy - all paths
+		GLCEM_gaulish_metallurgy = {
+			age = age_2_renaissance
+			icon = efficient_mining
+			potential = {
+				has_or_had_tag = GLCEM
+			}
+
+			global_iron_output_modifier = 0.15
+			global_weaponry_output_modifier = 0.15
+
+			requires = armory_advance
+			allow_children = no
+		}
 
 	# age_3_discovery
 
-	# age_4_reformation
+		# Arverni Confederation - all paths (unlocks the Gallic Confederation reform and flavor_GLCEM.6)
+		GLCEM_arverni_confederation = {
+			age = age_3_discovery
+			icon = laws
+			potential = {
+				has_or_had_tag = GLCEM
+			}
 
-	# age_5_absolutism
+			subject_loyalty = 0.10
+			global_levy_size_modifier = 0.10
 
-	# age_6_revolutions
-
-			
+			requires = council_hall_advance
+			allow_children = no
+		}

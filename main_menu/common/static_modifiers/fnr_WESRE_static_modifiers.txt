@@ -1,0 +1,300 @@
+﻿##################################################
+# Formable Nations: Reworked - Western Roman Empire #
+# Static Modifiers (Pax Romana)                     #
+##################################################
+
+	#########################
+	# Country modifiers      #
+	#########################
+
+		# flavor_WESRE.1 - permanent, removed by the capstone (yearly pulse)
+		fnr_WESRE_last_light = {
+			game_data = {
+				category = country
+			}
+			global_defensive = 0.10
+			monthly_legitimacy = 0.1
+			trade_income = -0.10
+			global_manpower_modifier = -0.05
+		}
+
+		# flavor_WESRE.1 A / losing flavor_WESRE.2 B - 10 years
+		fnr_WESRE_debased_coinage = {
+			game_data = {
+				category = country
+			}
+			trade_income = -0.10
+			global_population_growth = -0.0005
+		}
+
+		# flavor_WESRE.2 B (victory) - 10 years
+		fnr_WESRE_defender_of_rome = {
+			game_data = {
+				category = country
+			}
+			land_morale_modifier = 0.15
+			monthly_prestige = 0.1
+		}
+
+		# flavor_WESRE.2 B (defeat) - 10 years
+		fnr_WESRE_frontier_collapse = {
+			game_data = {
+				category = country
+			}
+			land_morale_modifier = -0.05
+			global_estate_target_satisfaction = -0.05
+		}
+
+		# flavor_WESRE.2 C - 10 years: tribute paid to the new foederati
+		fnr_WESRE_barbarian_tribute = {
+			game_data = {
+				category = country
+			}
+			tax_income_efficiency = -0.05
+			global_manpower_modifier = 0.10
+		}
+
+		# flavor_WESRE.3 A - 2 years
+		fnr_WESRE_recalled_general = {
+			game_data = {
+				category = country
+			}
+			land_morale_modifier = -0.05
+		}
+
+		# flavor_WESRE.3 D (success) - 5 years
+		fnr_WESRE_assassination_scandal = {
+			game_data = {
+				category = country
+			}
+			land_morale_modifier = -0.10
+			monthly_legitimacy = -0.05
+		}
+
+		# flavor_WESRE.4 A - permanent: the Pope's temporal authority, paid for with a tithe
+		fnr_WESRE_papal_temporal_authority = {
+			game_data = {
+				category = country
+			}
+			global_clergy_estate_power = 0.10
+			clergy_estate_target_satisfaction = medium_permanent_target_satisfaction
+			global_pop_conversion_speed_modifier = 0.10
+			tax_income_efficiency = -0.10
+		}
+
+		# flavor_WESRE.5 C - 20 years
+		fnr_WESRE_aqueducts_neglected = {
+			game_data = {
+				category = country
+			}
+			global_population_growth = -0.0005
+			global_disease_resistance = -0.10
+			national_bubonic_plague_resistance_modifier = -0.50
+		}
+
+		# flavor_WESRE.6 A - 20 years
+		fnr_WESRE_eastern_influence = {
+			game_data = {
+				category = country
+			}
+			monthly_legitimacy = 0.05
+			diplomatic_reputation = diplomatic_reputation_weak_bonus
+			tolerance_heretic = 1
+			global_pop_conversion_speed_modifier = -0.05
+		}
+
+		# flavor_WESRE.7 - 20 years each. The map's "morale there" is applied army-wide.
+		fnr_WESRE_front_gaul = {
+			game_data = {
+				category = country
+			}
+			land_morale_modifier = 0.10
+		}
+
+		fnr_WESRE_front_hispania = {
+			game_data = {
+				category = country
+			}
+			land_morale_modifier = 0.10
+		}
+
+		fnr_WESRE_front_africa = {
+			game_data = {
+				category = country
+			}
+			naval_damage_done = 0.10
+		}
+
+		# Advance 4 - permanent (yearly pulse)
+		fnr_WESRE_papal_blessing = {
+			game_data = {
+				category = country
+			}
+			monthly_legitimacy = 0.1
+			monthly_prestige = 0.05
+			diplomatic_reputation = diplomatic_reputation_weak_bonus
+		}
+
+		# Advance 5 - permanent (yearly pulse)
+		fnr_WESRE_renovatio = {
+			game_data = {
+				category = country
+			}
+			monthly_prestige = 0.15
+			land_morale_modifier = 0.10
+			tax_income_efficiency = 0.10
+			discipline = 0.05
+		}
+
+		# flavor_WESRE.8 - 20 years
+		fnr_WESRE_eagles_fly_again = {
+			game_data = {
+				category = country
+			}
+			land_morale_modifier = 0.10
+		}
+
+		# Foederati loyalty tiers (yearly pulse)
+		fnr_WESRE_foederati_devoted = {
+			game_data = {
+				category = country
+			}
+			army_light_cavalry_power = 0.10
+			discipline = 0.02
+		}
+
+		fnr_WESRE_foederati_restless = {
+			game_data = {
+				category = country
+			}
+			army_light_cavalry_power = -0.10
+			global_estate_target_satisfaction = -0.03
+		}
+
+		# flavor_WESRE.10 - 10 years
+		fnr_WESRE_foederati_betrayal = {
+			game_data = {
+				category = country
+			}
+			global_manpower_modifier = -0.10
+			land_morale_modifier = -0.05
+		}
+
+		# Holy sites - while the site is owned (yearly pulse)
+		fnr_WESRE_holy_rome = {
+			game_data = {
+				category = country
+			}
+			monthly_prestige = 0.1
+			monthly_legitimacy = 0.1
+			global_pop_conversion_speed_modifier = 0.05
+		}
+
+		# Extra unity from Rome with the Ecclesiastical Alliance
+		fnr_WESRE_holy_rome_church = {
+			game_data = {
+				category = country
+			}
+			global_pop_conversion_speed_modifier = 0.05
+		}
+
+		fnr_WESRE_holy_ravenna = {
+			game_data = {
+				category = country
+			}
+			government_size = 1
+			tax_income_efficiency = 0.05
+			global_defensive = 0.05
+		}
+
+	#########################
+	# Location modifiers     #
+	#########################
+
+		# Advance 3 - Ravenna (yearly pulse, lapses if lost)
+		fnr_WESRE_imperial_capital = {
+			game_data = {
+				category = location
+			}
+			local_max_control = 0.10
+			local_monthly_prosperity = 0.10
+			local_defensive = 0.05
+		}
+
+		# flavor_WESRE.5 A - every owned location in Italy, permanent
+		fnr_WESRE_italian_aqueducts = {
+			game_data = {
+				category = location
+			}
+			local_population_growth = 0.001
+		}
+
+		# flavor_WESRE.5 A - capital, permanent
+		fnr_WESRE_capital_aqueducts = {
+			game_data = {
+				category = location
+			}
+			local_population_growth = 0.0005
+			local_monthly_prosperity = 0.05
+			local_disease_resistance = 0.25
+		}
+
+		# flavor_WESRE.5 B - capital, permanent
+		fnr_WESRE_capital_repairs = {
+			game_data = {
+				category = location
+			}
+			local_population_growth = 0.0005
+		}
+
+		# Settle the Foederati decision - permanent
+		fnr_WESRE_foederati_settlement = {
+			game_data = {
+				category = location
+			}
+			local_manpower_modifier = 0.10
+			local_unrest = -0.5
+		}
+
+		# Repealing the Foederati Settlement law - 5 years
+		fnr_WESRE_settlement_betrayed = {
+			game_data = {
+				category = location
+			}
+			local_unrest = 1
+		}
+
+		# Castellum with 2+ neighbouring Castella (yearly pulse)
+		fnr_WESRE_limes_network = {
+			game_data = {
+				category = location
+			}
+			local_hostile_attrition = 2
+			local_defensive = 0.05
+		}
+
+		# flavor_WESRE.8 - every owned location, permanent
+		fnr_WESRE_western_restoration = {
+			game_data = {
+				category = location
+			}
+			local_unrest = -0.5
+			local_population_growth = 0.0005
+		}
+
+		# Holy site decisions - permanent location upgrades
+		fnr_WESRE_rome_restored = {
+			game_data = {
+				category = location
+			}
+			local_monthly_prosperity = 0.10
+			local_unrest = -0.5
+		}
+
+		fnr_WESRE_ravenna_seat = {
+			game_data = {
+				category = location
+			}
+			local_max_control = 0.05
+			local_defensive = 0.05
+		}

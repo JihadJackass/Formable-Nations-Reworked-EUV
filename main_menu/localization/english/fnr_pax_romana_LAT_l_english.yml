@@ -1,0 +1,194 @@
+﻿l_english:
+
+  ###########################################################
+  # Pax Romana - Latin Empire (LAT)                         #
+  ###########################################################
+
+    # PARTITION FIEF NAMES
+
+      fnr_LAT_ACHAEA_NAME: "Principality of Achaea"
+      fnr_LAT_ACHAEA_NAME_ADJ: "Achaean"
+      fnr_LAT_ATHENS_NAME: "Duchy of Athens"
+      fnr_LAT_ATHENS_NAME_ADJ: "Athenian"
+
+    # ADVANCES
+
+      LAT_assizes_of_romania: "The Assizes of Romania"
+      LAT_assizes_of_romania_desc: "The barons of Frankish Greece write down the customs by which they hold their fiefs, judge their vassals and serve their emperor. The law of Outremer becomes the law of Romania.\n\nUnlocks the #Y Barons of Romania#! privilege and allows us to found the #Y Barons of Romania#!."
+      LAT_frankish_chivalry: "Frankish Chivalry"
+      LAT_frankish_chivalry_desc: "The armoured knights who stormed Constantinople are the empire's sword. Their tournaments at Andravida are the finest in Christendom.\n\nUnlocks the #Y Frankish Knights#!."
+      LAT_lords_of_the_archipelago: "Lords of the Archipelago"
+      LAT_lords_of_the_archipelago_desc: "The islands of the Aegean are held by Latin lords and Italian merchant houses. Their galleys and counting-houses bind the empire's scattered coasts together."
+      LAT_bridge_between_rites: "A Bridge Between Rites"
+      LAT_bridge_between_rites_desc: "Latin bishops and Greek priests learn, slowly and grudgingly, to share the same towns, the same feasts and sometimes the same churches."
+      LAT_imperium_romaniae: "Imperium Romaniae"
+      LAT_imperium_romaniae_desc: "Constantinople, Thessalonica and Athens all answer to the Latin emperor. The Empire of Romania is no longer a crusader camp in a hostile land, but an empire in its own right."
+
+    # EVENTS - The Fourth Crusade Reversed
+
+      fnr_LAT.1.title: "Baldwin's Throne"
+      fnr_LAT.1.desc: "Beneath the great dome of Hagia Sophia, a Latin emperor is crowned once more. The Frankish knights crowd the nave in their mail; the Greek clergy watch from the galleries, silent. How the crown is placed on his head will tell every Greek in the empire what kind of master he means to be."
+      fnr_LAT.1.a: "Crown him in the Latin rite."
+      fnr_LAT.1.b: "Let both patriarchs bless him."
+
+      fnr_LAT.2.title: "The Partition of Romania"
+      fnr_LAT.2.desc: "The barons who won the empire expect their reward. Achaea, Athens and Thessalonica, each a rich prize, each claimed by a great lord. Granting them as fiefs would bind the barons to the throne; keeping them would make the emperor master in his own house."
+      fnr_LAT.2.a: "Divide the empire among the barons."
+      fnr_LAT.2.b: "The land belongs to the emperor."
+      fnr_LAT_partition_feudal_tt: "The #Y Partition of Romania#! decisions to release #Y Achaea#!, #Y Athens#! and #Y Thessalonica#! as vassal fiefs cost no gold."
+      fnr_LAT_partition_central_tt: "The #Y Partition of Romania#! decisions remain available, but each fief costs #Y 300#! gold to grant."
+
+      fnr_LAT.3.title: "Venetian Demands"
+      fnr_LAT.3.desc: "The envoys of the Doge remind us that Venetian ships carried the crusade to Constantinople, and that Venice was promised three-eighths of the empire. They will settle for less: a quarter of their own in our cities, free of our taxes and our courts."
+      fnr_LAT.3.a: "Grant them their quarter."
+      fnr_LAT.3.b: "The empire owes Venice nothing."
+      fnr_LAT.3.c: "Pay them, and be done with it."
+      fnr_LAT_venetian_quarter_tt: "Unlocks the #Y Venetian Quarter#! burgher privilege."
+
+      fnr_LAT.4.title: "Greek Resistance"
+      fnr_LAT.4.desc: "A Greek lord claiming descent from the old emperors has raised his banner in the provinces. Orthodox monks preach for him, and villagers hide his men. He promises to drive the Latins into the sea, as the Nicaeans once did."
+      fnr_LAT.4.a: "Crush the pretender."
+      fnr_LAT.4.b: "Treat with the Greek archons."
+      fnr_LAT_greek_rising_tt: "The Orthodox pops of one province rise for the pretender."
+      fnr_LAT_greek_pretender_rebels: "Greek Loyalists"
+
+      fnr_LAT.5.title: "The Latin Rite Takes Root"
+      fnr_LAT.5.desc: "Two generations have passed since the conquest. Latin and Greek families have intermarried, and in many villages priests of both rites serve the same flock. Some bishops propose a bold step: a church in communion with Rome that keeps the Greek liturgy, the Greek calendar and married priests. Rome would not be pleased."
+      fnr_LAT.5.a: "Found a Greek Catholic church."
+      fnr_LAT.5.b: "Seek an accord, but found no new church."
+      fnr_LAT.5.c: "There is one rite, and it is Rome's."
+      fnr_LAT_uniate_rite_tt: "We adopt the [ShowReligionName('fnr_greek_catholic_religion')] faith. #G 30%#! of Orthodox pops and #G 15%#! of Catholic pops follow."
+
+      fnr_LAT.6.title: "Imperium Romaniae"
+      fnr_LAT.6.desc: "From the walls of Constantinople to the Acropolis of Athens, the banners of the Latin emperor fly unchallenged. What began as a crusade gone astray has become an empire, Frankish in its knights, Greek in its people, and Roman in its claim."
+      fnr_LAT.6.a: "Long live the Empire of Romania."
+
+    # ESTATE PRIVILEGES
+
+      fnr_LAT_barons_of_romania: "Barons of Romania"
+      fnr_LAT_barons_of_romania_desc: "The crusader lords hold their fiefs by knight-service, under the Assizes of Romania."
+      fnr_LAT_venetian_quarter: "The Venetian Quarter"
+      fnr_LAT_venetian_quarter_desc: "Venetian merchants keep their own quarter in our cities, free of our tolls and courts, and their galleys sail at our call."
+
+    # UNITS
+
+      fnr_LAT_frankish_knights_1: "Frankish Knights"
+      fnr_LAT_frankish_knights_1_desc: "The armoured crusader cavalry of the Latin Empire, sons of the barons of Champagne, Flanders and Burgundy."
+      fnr_LAT_frankish_knights_2: "Frankish Knights"
+      fnr_LAT_frankish_knights_2_desc: "$fnr_LAT_frankish_knights_1_desc$"
+      fnr_LAT_frankish_knights_3: "Frankish Knights"
+      fnr_LAT_frankish_knights_3_desc: "$fnr_LAT_frankish_knights_1_desc$"
+      fnr_LAT_frankish_knights_4: "Frankish Knights"
+      fnr_LAT_frankish_knights_4_desc: "$fnr_LAT_frankish_knights_1_desc$"
+      fnr_LAT_frankish_knights_5: "Frankish Knights"
+      fnr_LAT_frankish_knights_5_desc: "$fnr_LAT_frankish_knights_1_desc$"
+
+    # DECISIONS
+
+      fnr_LAT_partition_achaea.title: "Grant the Principality of Achaea"
+      fnr_LAT_partition_achaea.desc: "The Morea is rich, rugged and far from Constantinople. A Frankish prince at Andravida could hold it for us."
+      fnr_LAT_partition_achaea.a: "Invest a prince of Achaea."
+      fnr_LAT_partition_achaea_tt: "All our non-capital lands in the #Y Morea#! become the #Y Principality of Achaea#!, a vassal fief, seated at #Y Andravida#! if we hold it."
+      fnr_LAT_partition_athens.title: "Grant the Duchy of Athens"
+      fnr_LAT_partition_athens.desc: "Attica and Euboea, with the ancient city of Athens at their heart, would make a fine duchy for a loyal baron."
+      fnr_LAT_partition_athens.a: "Invest a duke of Athens."
+      fnr_LAT_partition_athens_tt: "All our non-capital lands in #Y Attica#! and #Y Euboea#! become the #Y Duchy of Athens#!, a vassal fief, seated at #Y Athens#! if we hold it."
+      fnr_LAT_partition_thessalonica.title: "Grant the Kingdom of Thessalonica"
+      fnr_LAT_partition_thessalonica.desc: "Thessalonica, the second city of the empire, has always demanded a king of its own. Better that he be our vassal."
+      fnr_LAT_partition_thessalonica.a: "Crown a king of Thessalonica."
+      fnr_LAT_partition_thessalonica_tt: "All our non-capital lands in #Y Macedonia#! and #Y Thessaly#! become the #Y Kingdom of Thessalonica#!, a vassal fief, seated at #Y Thessaloniki#! if we hold it."
+      fnr_LAT_fief_lock_tt: "While it remains our subject, the fief #R cannot form other nations#!. It joins the #Y Barons of Romania#! automatically if the league exists."
+
+      fnr_LAT_notre_dame_athenes.title: "Notre-Dame d'Athenes"
+      fnr_LAT_notre_dame_athenes.desc: "The Parthenon has stood on the Acropolis for two thousand years, and for centuries it has been a church of the Virgin. Let it be restored as a Latin cathedral worthy of its glory."
+      fnr_LAT_notre_dame_athenes.a: "Restore the cathedral on the Acropolis."
+      fnr_LAT_saint_demetrius.title: "The Basilica of Saint Demetrius"
+      fnr_LAT_saint_demetrius.desc: "The warrior saint of Thessalonica is honoured by Greek and Latin alike. Restoring his basilica would win hearts on both sides of the schism."
+      fnr_LAT_saint_demetrius.a: "Restore the basilica."
+      fnr_LAT_holy_site_tt: "While we own this city we keep its country bonus."
+
+      fnr_LAT_found_barons_of_romania.title: "Found the Barons of Romania"
+      fnr_LAT_found_barons_of_romania.desc: "Bind the crusader lords of Greece, our own fiefs and the free Frankish states alike, into a single league sworn to defend one another under the emperor."
+      fnr_LAT_found_barons_of_romania.a: "Summon the barons to swear."
+      fnr_LAT_parliament_of_ravennika.title: "Parliament of Ravennika"
+      fnr_LAT_parliament_of_ravennika.desc: "In 1209 the emperor summoned the lords of Frankish Greece to Ravennika to settle their quarrels and swear fealty. Let the parliament meet again."
+      fnr_LAT_parliament_of_ravennika.a: "Convene the parliament."
+      fnr_LAT_parliament_of_ravennika_tt: "Every member of the #Y Barons of Romania#!, including us, gains #Y Parliament of Ravennika#! for 5 years, and every other member thinks better of us. Can be held again in 5 years."
+      fnr_LAT_summon_the_barons.title: "Summon the Barons"
+      fnr_LAT_summon_the_barons.desc: "The empire is at war. Every baron who holds land by knight-service owes us his sword."
+      fnr_LAT_summon_the_barons.a: "To arms, barons of Romania!"
+      fnr_LAT_summon_the_barons_tt: "Every member of the #Y Barons of Romania#!, including us, gains #Y The Barons Summoned#! for 2 years. Can be used again in 10 years."
+
+    # INTERNATIONAL ORGANIZATION - The Barons of Romania
+
+      fnr_LAT_barons_io: "The Barons of Romania"
+      fnr_LAT_barons_io_name: "The Barons of Romania"
+      fnr_LAT_barons_io_created_tt: "Founds the #Y Barons of Romania#! with us as its permanent leader. Our subjects join automatically."
+      fnr_LAT_barons_io_desc: "The sworn league of the crusader lords of Greece, led by the Latin emperor.\n\n#T How it works#!\n- #Y Who can join:#! any subject of the Latin Empire, and any Catholic Frankokratia state. Our subjects, such as the #Y Partition of Romania#! fiefs, join automatically.\n- #Y Defense:#! members are called into each other's defensive wars.\n- #Y Members#! gain defense and heavy cavalry power, and think better of the Latin Empire.\n- #Y The Latin Empire#! gains legitimacy and heavy cavalry power, plus levy size and prestige for every member, up to 8.\n- #Y League actions#! (Latin Empire decisions): convene the #Y Parliament of Ravennika#! in peacetime every 5 years, or #Y Summon the Barons#! in wartime every 10 years."
+      fnr_LAT_barons_io_list_who_tt: "$WHO$ is a member of [GetUniqueInternationalOrganization('fnr_LAT_barons_io').GetName] with $LIST$"
+      diplomatic_status_fnr_LAT_barons_io_name: "The Barons of Romania"
+      diplomatic_status_fnr_LAT_barons_io_tooltip: "#T The Barons of Romania#!\nThis [country|e] is a member of the Barons of Romania."
+      io_opinion_fnr_LAT_barons_io: "Fellow Baron of Romania"
+
+    # OPINIONS
+
+      fnr_LAT_sworn_baron: "Sworn to the Barons of Romania"
+      fnr_LAT_attended_parliament: "Attended the Parliament of Ravennika"
+      fnr_LAT_granted_venice_concessions: "Granted us the Venetian Quarter"
+      fnr_LAT_refused_venice: "Refused our demands"
+      fnr_LAT_paid_venice: "Paid us off"
+      fnr_LAT_founded_uniate_rite: "Founded a Greek Catholic church"
+      fnr_LAT_faithful_to_rome: "Faithful to the Latin rite"
+
+    # RELIGION - Greek Catholic
+
+      fnr_greek_catholic_religion: "Greek Catholic"
+      fnr_greek_catholic_religion_ADJ: "Greek Catholic"
+      fnr_greek_catholic_religion_desc: "A church in communion with Rome that keeps the Greek liturgy, the Greek calendar and a married clergy. Born in the Latin Empire as a bridge between the two halves of Christendom."
+      fnr_greek_catholic_byzantine_rite: "Byzantine Rite"
+      fnr_greek_catholic_byzantine_rite_desc: "The liturgy of Saint John Chrysostom, sung in Greek, under the authority of Rome."
+      fnr_greek_catholic_papal_communion: "Communion with Rome"
+      fnr_greek_catholic_papal_communion_desc: "Our bishops commemorate the Pope, and the Catholic world counts us among its own."
+      fnr_greek_catholic_married_clergy: "Married Clergy"
+      fnr_greek_catholic_married_clergy_desc: "As in the Greek tradition, our village priests may marry, and their sons often follow them into the Church."
+      fnr_greek_catholic_icons_and_relics: "Icons and Relics"
+      fnr_greek_catholic_icons_and_relics_desc: "The icons of the East and the relics of the West are honoured side by side."
+
+    # STATIC MODIFIERS
+
+      STATIC_MODIFIER_NAME_fnr_LAT_latin_coronation: "Latin Coronation"
+      STATIC_MODIFIER_DESC_fnr_LAT_latin_coronation: "Our emperor was crowned in the Latin rite, and the Greeks know it."
+      STATIC_MODIFIER_NAME_fnr_LAT_two_patriarchs: "Blessed by Two Patriarchs"
+      STATIC_MODIFIER_DESC_fnr_LAT_two_patriarchs: "Our emperor was crowned before both the Latin and the Greek patriarchs."
+      STATIC_MODIFIER_NAME_fnr_LAT_feudal_partition: "Feudal Partition"
+      STATIC_MODIFIER_DESC_fnr_LAT_feudal_partition: "The empire is held by barons who owe their emperor knight-service."
+      STATIC_MODIFIER_NAME_fnr_LAT_imperial_domain: "Imperial Domain"
+      STATIC_MODIFIER_DESC_fnr_LAT_imperial_domain: "The emperor keeps the conquered lands in his own hands."
+      STATIC_MODIFIER_NAME_fnr_LAT_venetian_trade: "Venetian Trade"
+      STATIC_MODIFIER_DESC_fnr_LAT_venetian_trade: "Venetian merchants fill our harbours."
+      STATIC_MODIFIER_NAME_fnr_LAT_our_own_fleets: "Our Own Fleets"
+      STATIC_MODIFIER_DESC_fnr_LAT_our_own_fleets: "Without Venetian galleys, we build our own."
+      STATIC_MODIFIER_NAME_fnr_LAT_iron_hand: "The Iron Hand"
+      STATIC_MODIFIER_DESC_fnr_LAT_iron_hand: "Greek resistance is met with Frankish steel."
+      STATIC_MODIFIER_NAME_fnr_LAT_greek_archons: "Greek Archons"
+      STATIC_MODIFIER_DESC_fnr_LAT_greek_archons: "The Greek landed families keep their lands and offices under Latin rule."
+      STATIC_MODIFIER_NAME_fnr_LAT_uniate_accord: "Uniate Accord"
+      STATIC_MODIFIER_DESC_fnr_LAT_uniate_accord: "Latin and Greek clergy have agreed to live in communion, each keeping its own rite."
+      STATIC_MODIFIER_NAME_fnr_LAT_latin_orthodoxy: "Rome Alone"
+      STATIC_MODIFIER_DESC_fnr_LAT_latin_orthodoxy: "The Latin rite is the only rite of the empire."
+      STATIC_MODIFIER_NAME_fnr_LAT_imperium_romaniae: "Imperium Romaniae"
+      STATIC_MODIFIER_DESC_fnr_LAT_imperium_romaniae: "The Latin Empire of Romania stands as a true empire."
+      STATIC_MODIFIER_NAME_fnr_LAT_lord_of_the_fiefs: "Lord of the Frankish Fiefs"
+      STATIC_MODIFIER_DESC_fnr_LAT_lord_of_the_fiefs: "The princes and dukes of the Partition of Romania hold their lands from us."
+      STATIC_MODIFIER_NAME_fnr_LAT_parliament_of_ravennika: "Parliament of Ravennika"
+      STATIC_MODIFIER_DESC_fnr_LAT_parliament_of_ravennika: "The lords of Frankish Greece have met and sworn their fealty."
+      STATIC_MODIFIER_NAME_fnr_LAT_barons_summoned: "The Barons Summoned"
+      STATIC_MODIFIER_DESC_fnr_LAT_barons_summoned: "Every baron of Romania rides to war."
+      STATIC_MODIFIER_NAME_fnr_LAT_holy_athens: "Notre-Dame d'Athenes"
+      STATIC_MODIFIER_DESC_fnr_LAT_holy_athens: "The cathedral on the Acropolis is ours."
+      STATIC_MODIFIER_NAME_fnr_LAT_holy_thessaloniki: "Saint Demetrius"
+      STATIC_MODIFIER_DESC_fnr_LAT_holy_thessaloniki: "The basilica of the warrior saint is ours."
+      STATIC_MODIFIER_NAME_fnr_LAT_notre_dame_athenes: "Notre-Dame d'Athenes"
+      STATIC_MODIFIER_DESC_fnr_LAT_notre_dame_athenes: "The Parthenon stands restored as a Latin cathedral."
+      STATIC_MODIFIER_NAME_fnr_LAT_saint_demetrius: "Basilica of Saint Demetrius"
+      STATIC_MODIFIER_DESC_fnr_LAT_saint_demetrius: "The basilica of Thessalonica's patron saint stands restored."

@@ -1,0 +1,18 @@
+﻿#root is country
+#scope:target is the target
+
+# Pontus - Black Sea Dominion, unlocked by the fnr_PONTU_black_sea_dominion decision
+fnr_PONTU_cb_black_sea_dominion = {
+	create_visible = {
+		has_variable = fnr_PONTU_black_sea_dominion
+	}
+	create_enabled = {
+		scope:target = {
+			any_owned_location = {
+				fnr_PONTU_is_black_sea_coast = yes
+			}
+		}
+	}
+	speed = 10
+	war_goal_type = fnr_PONTU_black_sea_wargoal
+}

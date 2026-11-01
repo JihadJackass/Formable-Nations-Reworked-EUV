@@ -1,0 +1,183 @@
+﻿namespace = fnr_PONTU
+
+# ==========================================================================
+# Pax Romana - Pontus: "Pontic Revival"
+#  .1  Mithridates' Heir        - on formation (PONTU_f form_effect)
+#  .2  The Pontic Greeks        - 3-5 years after .1
+#  .3  Black Sea Dominion       - 1 year after the Black Sea Dominion decision
+#  .4  The Poison King          - random court plot (yearly pulse, ~3% a year)
+# ==========================================================================
+
+# 1 - Mithridates' Heir
+fnr_PONTU.1 = {
+	type = country_event
+	title = fnr_PONTU.1.title
+	desc = fnr_PONTU.1.desc
+	fire_only_once = yes
+	outcome = positive
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:burghers_estate }
+		hidden_effect = {
+			trigger_event_non_silently = { id = fnr_PONTU.2 days = { 1095 1825 } }
+		}
+	}
+
+	# A - A Hellenic Basileus
+	option = {
+		name = fnr_PONTU.1.a
+		ai_chance = { factor = 50 }
+		add_prestige = prestige_mild_bonus
+		add_country_modifier = { modifier = fnr_PONTU_hellenic_basileus years = 20 mode = add_and_extend }
+	}
+
+	# B - Heir of the Achaemenids
+	option = {
+		name = fnr_PONTU.1.b
+		ai_chance = { factor = 50 }
+		add_legitimacy = legitimacy_mild_bonus
+		add_country_modifier = { modifier = fnr_PONTU_achaemenid_heir years = 20 mode = add_and_extend }
+	}
+}
+
+# 2 - The Pontic Greeks
+fnr_PONTU.2 = {
+	type = country_event
+	title = fnr_PONTU.2.title
+	desc = fnr_PONTU.2.desc
+	fire_only_once = yes
+	outcome = neutral
+
+	trigger = {
+		tag = PONTU
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:peasants_estate }
+	}
+
+	# A - Protect the Greek schools and churches
+	option = {
+		name = fnr_PONTU.2.a
+		ai_chance = { factor = 50 }
+		add_estate_satisfaction = {
+			type = estate_type:clergy_estate
+			value = estate_satisfaction_mild_bonus
+		}
+		add_country_modifier = { modifier = fnr_PONTU_greek_schools years = 25 mode = add_and_extend }
+	}
+
+	# B - Welcome the hill peoples into the army
+	option = {
+		name = fnr_PONTU.2.b
+		ai_chance = { factor = 50 }
+		add_country_modifier = { modifier = fnr_PONTU_hill_levies years = 25 mode = add_and_extend }
+	}
+}
+
+# 3 - Black Sea Dominion
+fnr_PONTU.3 = {
+	type = country_event
+	title = fnr_PONTU.3.title
+	desc = fnr_PONTU.3.desc
+	fire_only_once = yes
+	outcome = positive
+
+	trigger = {
+		tag = PONTU
+		has_variable = fnr_PONTU_black_sea_dominion
+	}
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate }
+	}
+
+	# A - Toll the sea-lanes
+	option = {
+		name = fnr_PONTU.3.a
+		ai_chance = { factor = 50 }
+		add_country_modifier = { modifier = fnr_PONTU_sea_tolls years = 25 mode = add_and_extend }
+	}
+
+	# B - Open the sea to every merchant
+	option = {
+		name = fnr_PONTU.3.b
+		ai_chance = { factor = 50 }
+		add_country_modifier = { modifier = fnr_PONTU_open_sea years = 25 mode = add_and_extend }
+	}
+}
+
+# 4 - The Poison King
+fnr_PONTU.4 = {
+	type = country_event
+	title = fnr_PONTU.4.title
+	desc = fnr_PONTU.4.desc
+	outcome = negative
+
+	trigger = {
+		tag = PONTU
+		has_ruler = yes
+		NOT = { has_variable = fnr_PONTU_poison_cooldown }
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:crown_estate }
+		set_variable = { name = fnr_PONTU_poison_cooldown years = 15 }
+	}
+
+	# A - The king has drunk Mithridatium since childhood
+	option = {
+		name = fnr_PONTU.4.a
+		trigger = { has_advance = PONTU_mithridatium }
+		ai_chance = { factor = 100 }
+		add_prestige = prestige_mild_bonus
+		add_legitimacy = legitimacy_mild_bonus
+	}
+
+	# B - Purge the court
+	option = {
+		name = fnr_PONTU.4.b
+		ai_chance = { factor = 50 }
+		add_stability = stability_mild_penalty
+		add_legitimacy = legitimacy_mild_bonus
+		add_estate_satisfaction = {
+			type = estate_type:nobles_estate
+			value = estate_satisfaction_mild_penalty
+		}
+	}
+
+	# C - Trust to luck
+	option = {
+		name = fnr_PONTU.4.c
+		ai_chance = { factor = 25 }
+		random_list = {
+			50 = {
+				custom_tooltip = fnr_PONTU_poison_survived_tt
+			}
+			50 = {
+				add_legitimacy = legitimacy_mild_penalty
+				add_country_modifier = { modifier = fnr_PONTU_poisoned_king years = 5 mode = add_and_extend }
+			}
+		}
+	}
+}

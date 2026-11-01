@@ -1,15 +1,93 @@
-﻿# Advances for Dacia
+﻿# Advances for Dacia (Pax Romana)
+# Path checks sit in allow, not potential, because advance visibility is not re-evaluated after an age starts.
 
 	# age_1_traditions
 
+		# The Draco Standard - the wolf-headed banner of the Dacians; unlocks the Falxmen
+		DACIA_draco_standard = {
+			age = age_1_traditions
+			icon = glorious_arms
+			potential = {
+				has_or_had_tag = DACIA
+			}
+
+			land_morale_modifier = 0.10
+			army_heavy_infantry_power = 0.05
+
+			requires = feudalism_advance
+			allow_children = no
+		}
+
+		# Carpathian Gold - the mines of the Apuseni mountains
+		DACIA_carpathian_gold = {
+			age = age_1_traditions
+			icon = efficient_mining
+			potential = {
+				has_or_had_tag = DACIA
+			}
+
+			global_goods_gold_output_modifier = 0.15
+			global_silver_output_modifier = 0.10
+			global_salt_output_modifier = 0.10
+
+			requires = fine_metals_mining
+			allow_children = no
+		}
+
 	# age_2_renaissance
+
+		# The Mountain of Zalmoxis - Zalmoxian Revival path
+		DACIA_mountain_of_zalmoxis = {
+			age = age_2_renaissance
+			icon = religious_toleration
+			potential = {
+				has_or_had_tag = DACIA
+			}
+			allow = {
+				has_variable = fnr_DACIA_path_zalmoxian
+			}
+
+			monthly_religious_influence = 0.1
+			land_morale_modifier = 0.05
+			global_pop_conversion_speed_modifier = 0.10
+
+			requires = renaissance_court
+			allow_children = no
+		}
+
+		# Trajan's Legacy - Daco-Roman Heritage path
+		DACIA_trajans_legacy = {
+			age = age_2_renaissance
+			icon = imperial_ambitions
+			potential = {
+				has_or_had_tag = DACIA
+			}
+			allow = {
+				has_variable = fnr_DACIA_path_dacoroman
+			}
+
+			monthly_legitimacy = 0.05
+			global_pop_assimilation_speed_modifier = 0.10
+			tax_income_efficiency = small_tax_income_efficiency_bonus
+
+			requires = renaissance_court
+			allow_children = no
+		}
 
 	# age_3_discovery
 
-	# age_4_reformation
+		# Carpathian Fortresses - the mountain citadels of Dacia
+		DACIA_carpathian_fortresses = {
+			age = age_3_discovery
+			icon = defensive_mentality
+			potential = {
+				has_or_had_tag = DACIA
+			}
 
-	# age_5_absolutism
+			global_defensive = 0.15
+			global_garrison_growth = 0.10
 
-	# age_6_revolutions
+			requires = council_hall_advance
+			allow_children = no
+		}
 
-			
