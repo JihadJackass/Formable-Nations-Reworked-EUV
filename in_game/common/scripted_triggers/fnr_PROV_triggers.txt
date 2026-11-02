@@ -1,0 +1,36 @@
+﻿# Roman provinces of the Gallic Empire (Pax Romana): Tarraconensis, Britannia, Baetica, Lusitania
+
+# Country scope: one of the provinces
+fnr_PROV_is_province = {
+	OR = {
+		has_or_had_tag = TRCNS
+		has_or_had_tag = BRTNA
+		has_variable = fnr_GLCEM_province
+	}
+}
+
+# Years served as a subject is at least VALUE
+fnr_PROV_years_at_least = {
+	custom_tooltip = {
+		text = fnr_PROV_years_at_least_$VALUE$_tt
+		trigger_if = {
+			limit = { has_variable = fnr_PROV_years_in_service }
+			var:fnr_PROV_years_in_service >= $VALUE$
+		}
+		trigger_else = { always = no }
+	}
+}
+
+# Our overlord is weak enough for a rising: at war, and either unstable or out-mustered by us
+fnr_PROV_overlord_weakened = {
+	custom_tooltip = {
+		text = fnr_PROV_overlord_weakened_tt
+		overlord ?= {
+			at_war = yes
+			OR = {
+				stability < 0
+				army_size < root.army_size
+			}
+		}
+	}
+}

@@ -1,15 +1,56 @@
-﻿# Advances for Tarraconensis
+﻿# Advances for Tarraconensis (Pax Romana)
 
-	# age_1_traditions
+		TRCNS_via_augusta = {
+			age = age_1_traditions
+			icon = smooth_administration
+			potential = {
+				has_or_had_tag = TRCNS
+			}
 
-	# age_2_renaissance
+			global_max_control = 0.05
+			trade_income = 0.05
 
-	# age_3_discovery
+			requires = codified_laws
+			allow_children = no
+		}
 
-	# age_4_reformation
+		TRCNS_iberian_auxiliaries = {
+			age = age_2_renaissance
+			icon = professional_armies_advance
+			potential = {
+				has_or_had_tag = TRCNS
+			}
 
-	# age_5_absolutism
+			global_manpower_modifier = 0.10
+			land_morale_modifier = 0.03
 
-	# age_6_revolutions
+			requires = professional_armies_advance
+			allow_children = no
+		}
 
-			
+		TRCNS_silver_of_hispania = {
+			age = age_3_discovery
+			icon = gel_healthy_economy
+			potential = {
+				has_or_had_tag = TRCNS
+			}
+
+			tax_income_efficiency = small_tax_income_efficiency_bonus
+
+			requires = TRCNS_via_augusta
+			allow_children = no
+		}
+
+		TRCNS_concilium_provinciae = {
+			age = age_4_reformation
+			icon = smooth_administration
+			potential = {
+				has_or_had_tag = TRCNS
+			}
+
+			stability_cost_efficiency = 0.10
+			monthly_legitimacy = 0.05
+
+			requires = TRCNS_silver_of_hispania
+			allow_children = no
+		}

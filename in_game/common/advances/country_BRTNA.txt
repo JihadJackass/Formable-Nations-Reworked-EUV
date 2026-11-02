@@ -1,15 +1,56 @@
-﻿# Advances for Britannia
+﻿# Advances for Britannia (Pax Romana)
 
-	# age_1_traditions
+		BRTNA_hadrians_wall = {
+			age = age_1_traditions
+			icon = tre_pontic_mountains
+			potential = {
+				has_or_had_tag = BRTNA
+			}
 
-	# age_2_renaissance
+			global_defensive = 0.10
 
-	# age_3_discovery
+			requires = codified_laws
+			allow_children = no
+		}
 
-	# age_4_reformation
+		BRTNA_classis_britannica = {
+			age = age_2_renaissance
+			icon = teu_crusader_discipline
+			potential = {
+				has_or_had_tag = BRTNA
+			}
 
-	# age_5_absolutism
+			navy_maintenance_efficiency = 0.10
+			naval_morale_modifier = 0.05
 
-	# age_6_revolutions
+			requires = professional_armies_advance
+			allow_children = no
+		}
 
-			
+		BRTNA_tin_of_cornwall = {
+			age = age_3_discovery
+			icon = gel_healthy_economy
+			potential = {
+				has_or_had_tag = BRTNA
+			}
+
+			trade_income = 0.05
+			tax_income_efficiency = small_tax_income_efficiency_bonus
+
+			requires = BRTNA_hadrians_wall
+			allow_children = no
+		}
+
+		BRTNA_londinium = {
+			age = age_4_reformation
+			icon = smooth_administration
+			potential = {
+				has_or_had_tag = BRTNA
+			}
+
+			global_max_control = 0.05
+			monthly_legitimacy = 0.05
+
+			requires = BRTNA_tin_of_cornwall
+			allow_children = no
+		}

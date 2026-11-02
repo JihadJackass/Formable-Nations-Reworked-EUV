@@ -1,6 +1,5 @@
 ﻿# Advances for the Latin Empire (Pax Romana - "The Fourth Crusade Reversed")
 # The FNR Latin Empire now forms the vanilla LAT tag; these sit alongside vanilla's LAT content.
-# (country_LTNEM.txt is left as an empty stub from the old separate tag.)
 
 	# age_1_traditions
 

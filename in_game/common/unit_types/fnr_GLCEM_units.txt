@@ -1,0 +1,189 @@
+﻿#################################################################
+# Formable Nations: Reworked - Gallic Empire Unit Types (Pax Romana)
+#################################################################
+#   - Gaesatae:      Druidic Revival path. Light infantry, hits hard, breaks easily.
+#   - Gallic Legion: Imperium Galliarum path. Heavy infantry, steady and well armoured.
+
+		fnr_GLCEM_gaesatae_1 = {
+			copy_from = a_age_1_traditions_light_infantry
+			buildable = yes
+			upgrades_to_only = fnr_GLCEM_gaesatae_2
+
+			strength_damage_done = 0.25
+			morale_damage_done = 0.10
+			morale_damage_taken = 0.10
+
+			country_potential = {
+				has_or_had_tag = GLCEM
+				has_variable = fnr_GLCEM_path_druidic
+			}
+		}
+
+		fnr_GLCEM_gaesatae_2 = {
+			copy_from = a_age_2_renaissance_light_infantry
+			buildable = yes
+			upgrades_to_only = fnr_GLCEM_gaesatae_3
+
+			strength_damage_done = 0.25
+			morale_damage_done = 0.10
+			morale_damage_taken = 0.10
+
+			country_potential = {
+				has_or_had_tag = GLCEM
+				has_variable = fnr_GLCEM_path_druidic
+			}
+		}
+
+		fnr_GLCEM_gaesatae_3 = {
+			copy_from = a_age_3_discovery_light_infantry
+			buildable = yes
+			upgrades_to_only = fnr_GLCEM_gaesatae_4
+
+			strength_damage_done = 0.25
+			morale_damage_done = 0.10
+			morale_damage_taken = 0.10
+
+			country_potential = {
+				has_or_had_tag = GLCEM
+				has_variable = fnr_GLCEM_path_druidic
+			}
+		}
+
+		fnr_GLCEM_gaesatae_4 = {
+			copy_from = a_age_4_reformation_light_infantry
+			buildable = yes
+			upgrades_to_only = fnr_GLCEM_gaesatae_5
+
+			strength_damage_done = 0.25
+			morale_damage_done = 0.10
+			morale_damage_taken = 0.10
+
+			country_potential = {
+				has_or_had_tag = GLCEM
+				has_variable = fnr_GLCEM_path_druidic
+			}
+		}
+
+		fnr_GLCEM_gaesatae_5 = {
+			copy_from = a_age_5_absolutism_light_infantry
+			buildable = yes
+			upgrades_to_only = fnr_GLCEM_gaesatae_6
+
+			strength_damage_done = 0.25
+			morale_damage_done = 0.10
+			morale_damage_taken = 0.10
+
+			country_potential = {
+				has_or_had_tag = GLCEM
+				has_variable = fnr_GLCEM_path_druidic
+			}
+		}
+
+		fnr_GLCEM_gaesatae_6 = {
+			copy_from = a_age_6_revolutions_light_infantry
+			buildable = yes
+
+			strength_damage_done = 0.25
+			morale_damage_done = 0.10
+			morale_damage_taken = 0.10
+
+			country_potential = {
+				has_or_had_tag = GLCEM
+				has_variable = fnr_GLCEM_path_druidic
+			}
+		}
+
+		fnr_GLCEM_gallic_legion_1 = {
+			copy_from = a_age_1_traditions_heavy_infantry
+			buildable = yes
+			upgrades_to_only = fnr_GLCEM_gallic_legion_2
+
+			strength_damage_taken = -0.15
+			morale_damage_taken = -0.15
+
+			country_potential = {
+				has_or_had_tag = GLCEM
+				has_variable = fnr_GLCEM_path_imperial
+			}
+
+			gfx_tags = { sword_tag heavy_tag }
+		}
+
+		fnr_GLCEM_gallic_legion_2 = {
+			copy_from = a_age_2_renaissance_heavy_infantry
+			buildable = yes
+			upgrades_to_only = fnr_GLCEM_gallic_legion_3
+
+			strength_damage_taken = -0.15
+			morale_damage_taken = -0.15
+
+			country_potential = {
+				has_or_had_tag = GLCEM
+				has_variable = fnr_GLCEM_path_imperial
+			}
+
+			gfx_tags = { sword_tag heavy_tag }
+		}
+
+		fnr_GLCEM_gallic_legion_3 = {
+			copy_from = a_age_3_discovery_heavy_infantry
+			buildable = yes
+			upgrades_to_only = fnr_GLCEM_gallic_legion_4
+
+			strength_damage_taken = -0.15
+			morale_damage_taken = -0.15
+
+			country_potential = {
+				has_or_had_tag = GLCEM
+				has_variable = fnr_GLCEM_path_imperial
+			}
+
+			gfx_tags = { sword_tag heavy_tag }
+		}
+
+		fnr_GLCEM_gallic_legion_4 = {
+			copy_from = a_age_4_reformation_heavy_infantry
+			buildable = yes
+			upgrades_to_only = fnr_GLCEM_gallic_legion_5
+
+			strength_damage_taken = -0.15
+			morale_damage_taken = -0.15
+
+			country_potential = {
+				has_or_had_tag = GLCEM
+				has_variable = fnr_GLCEM_path_imperial
+			}
+
+			gfx_tags = { sword_tag heavy_tag }
+		}
+
+		fnr_GLCEM_gallic_legion_5 = {
+			copy_from = a_age_5_absolutism_heavy_infantry
+			buildable = yes
+			upgrades_to_only = fnr_GLCEM_gallic_legion_6
+
+			strength_damage_taken = -0.15
+			morale_damage_taken = -0.15
+
+			country_potential = {
+				has_or_had_tag = GLCEM
+				has_variable = fnr_GLCEM_path_imperial
+			}
+
+			gfx_tags = { sword_tag heavy_tag }
+		}
+
+		fnr_GLCEM_gallic_legion_6 = {
+			copy_from = a_age_6_revolutions_heavy_infantry
+			buildable = yes
+
+			strength_damage_taken = -0.15
+			morale_damage_taken = -0.15
+
+			country_potential = {
+				has_or_had_tag = GLCEM
+				has_variable = fnr_GLCEM_path_imperial
+			}
+
+			gfx_tags = { sword_tag heavy_tag }
+		}

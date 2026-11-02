@@ -11,7 +11,7 @@ fnr_GLCEM_release_tarraconensis_effect = {
 		random_owned_location = {
 			limit = {
 				is_capital = no
-				region = region:iberia_region
+				fnr_GLCEM_is_tarraconensis_location = yes
 			}
 			save_scope_as = fnr_GLCEM_seat
 		}
@@ -34,12 +34,13 @@ fnr_GLCEM_release_tarraconensis_effect = {
 	every_owned_location = {
 		limit = {
 			is_capital = no
-			region = region:iberia_region
+			fnr_GLCEM_is_tarraconensis_location = yes
 		}
 		change_location_owner = scope:fnr_GLCEM_new_vassal
 		add_core = scope:fnr_GLCEM_new_vassal
 		change_integration_level = core
 	}
+	scope:fnr_GLCEM_new_vassal ?= { trigger_event_non_silently = fnr_PROV.1 }
 }
 
 # Releases Britannia as a loyal vassal kingdom (fnr_GLCEM_establish_britannia decision).
@@ -82,10 +83,84 @@ fnr_GLCEM_release_britannia_effect = {
 		add_core = scope:fnr_GLCEM_new_vassal
 		change_integration_level = core
 	}
+	scope:fnr_GLCEM_new_vassal ?= { trigger_event_non_silently = fnr_PROV.1 }
+}
+
+# Releases Baetica or Lusitania as a loyal vassal kingdom (no formable: the new country is renamed and given a Roman flag).
+# Use with KEY = baetica / lusitania, SEAT = the preferred seat (cordoba / merida)
+fnr_GLCEM_release_province_effect = {
+	set_variable = fnr_GLCEM_released_$KEY$
+	if = {
+		limit = { owns = location:$SEAT$ location:$SEAT$ = { is_capital = no } }
+		location:$SEAT$ = { save_scope_as = fnr_GLCEM_seat }
+	}
+	else = {
+		random_owned_location = {
+			limit = {
+				is_capital = no
+				fnr_GLCEM_is_$KEY$_location = yes
+			}
+			save_scope_as = fnr_GLCEM_seat
+		}
+	}
+	scope:fnr_GLCEM_seat ?= {
+		create_country_from_location = {
+			save_scope_as = fnr_GLCEM_new_vassal
+			set_country_rank = country_rank:rank_kingdom
+		}
+	}
+	scope:fnr_GLCEM_new_vassal ?= {
+		change_country_name = fnr_GLCEM_PROVINCE_$KEY$
+		change_country_flag = fnr_GLCEM_$KEY$_flag
+		change_country_color = map_fnr_GLCEM_$KEY$
+		set_variable = fnr_GLCEM_province
+		set_variable = fnr_formation_locked
+		create_character = {
+			save_scope_as = fnr_GLCEM_province_ruler
+		}
+		set_new_ruler = scope:fnr_GLCEM_province_ruler
+		make_subject_of = {
+			target = root
+			type = subject_type:vassal
+		}
+	}
+	every_owned_location = {
+		limit = {
+			is_capital = no
+			fnr_GLCEM_is_$KEY$_location = yes
+		}
+		change_location_owner = scope:fnr_GLCEM_new_vassal
+		add_core = scope:fnr_GLCEM_new_vassal
+		change_integration_level = core
+	}
+	scope:fnr_GLCEM_new_vassal ?= { trigger_event_non_silently = fnr_PROV.1 }
+}
+
+# Holy site: country bonus while we own the restored site. Use with CITY = chartres / lyon / semur_en_auxois
+fnr_GLCEM_sync_site_effect = {
+	if = {
+		limit = {
+			owns = location:$CITY$
+			location:$CITY$ = { has_location_modifier = fnr_GLCEM_restored_site }
+		}
+		if = {
+			limit = { NOT = { has_country_modifier = fnr_GLCEM_site_$CITY$ } }
+			add_country_modifier = { modifier = fnr_GLCEM_site_$CITY$ years = -1 }
+		}
+	}
+	else_if = {
+		limit = { has_country_modifier = fnr_GLCEM_site_$CITY$ }
+		remove_country_modifier = fnr_GLCEM_site_$CITY$
+	}
 }
 
 # Yearly upkeep
 fnr_GLCEM_yearly_upkeep_effect = {
+
+	# Holy sites
+	fnr_GLCEM_sync_site_effect = { CITY = chartres }
+	fnr_GLCEM_sync_site_effect = { CITY = lyon }
+	fnr_GLCEM_sync_site_effect = { CITY = semur_en_auxois }
 
 	# Celtic League member count (not counting us) for the leader bonus
 	set_variable = { name = fnr_GLCEM_league_members value = 0 }
@@ -104,10 +179,7 @@ fnr_GLCEM_yearly_upkeep_effect = {
 	if = {
 		limit = {
 			any_subject = {
-				OR = {
-					tag = TRCNS
-					tag = BRTNA
-				}
+				fnr_GLCEM_is_gallic_province = yes
 			}
 		}
 		if = {

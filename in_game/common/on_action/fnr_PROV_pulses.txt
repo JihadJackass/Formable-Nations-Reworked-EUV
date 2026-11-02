@@ -1,0 +1,30 @@
+﻿# Roman provinces of the Gallic Empire - yearly pulses (Pax Romana)
+
+yearly_country_pulse = {
+	on_actions = {
+		fnr_PROV_yearly_pulse
+		fnr_PROV_flavour_pulse
+	}
+}
+
+fnr_PROV_yearly_pulse = {
+	trigger = {
+		fnr_PROV_is_province = yes
+	}
+	effect = {
+		fnr_PROV_yearly_effect = yes
+	}
+}
+
+# The Emperor's call (overlord at war) and provincial pride - about 12% a year
+fnr_PROV_flavour_pulse = {
+	trigger = {
+		fnr_PROV_is_province = yes
+		is_subject = yes
+	}
+	random_events = {
+		chance_to_happen = 12
+		100 = fnr_PROV.2
+		100 = fnr_PROV.5
+	}
+}

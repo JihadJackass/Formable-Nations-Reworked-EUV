@@ -1,0 +1,48 @@
+﻿# Roman provinces of the Gallic Empire (Pax Romana)
+
+# Setup (on release or formation, and as a yearly safety net)
+fnr_PROV_setup_effect = {
+	if = {
+		limit = { NOT = { has_variable = fnr_PROV_years_in_service } }
+		set_variable = { name = fnr_PROV_years_in_service value = 0 }
+	}
+}
+
+# Yearly: years of loyal service count up while we are a subject
+fnr_PROV_yearly_effect = {
+	fnr_PROV_setup_effect = yes
+	if = {
+		limit = { is_subject = yes }
+		change_variable = { name = fnr_PROV_years_in_service add = 1 }
+	}
+}
+
+# The Provincial Rising (fnr_PROV_throw_off_the_yoke): leave the overlord's wars and declare independence
+fnr_PROV_rising_effect = {
+	save_scope_as = fnr_PROV_rebel
+	overlord ?= { save_scope_as = fnr_PROV_overlord }
+	set_variable = fnr_PROV_rising_done
+	add_country_modifier = { modifier = fnr_PROV_provincial_rising years = 10 }
+	custom_tooltip = fnr_PROV_rising_tt
+	hidden_effect = {
+		scope:fnr_PROV_overlord ?= {
+			trigger_event_non_silently = fnr_PROV.4
+		}
+		leave_all_wars_with = scope:fnr_PROV_overlord
+		if = {
+			limit = {
+				can_declare_legal_war_on = { target = scope:fnr_PROV_overlord }
+			}
+			declare_war_with_cb = {
+				target = scope:fnr_PROV_overlord
+				type = casus_belli:cb_independence_war
+			}
+		}
+		else = {
+			add_casus_belli = {
+				target = scope:fnr_PROV_overlord
+				type = casus_belli:cb_independence_war
+			}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+﻿# Roman provinces of the Gallic Empire - opinion modifiers (Pax Romana)
+
+# The overlord's opinion of a province that sent aid
+fnr_PROV_loyal_province = {
+	value = 20
+	yearly_decay = 1
+}
+
+# The overlord's opinion of a province that refused its call (fnr_PROV.2 B)
+fnr_PROV_refused_the_call = {
+	value = -20
+	yearly_decay = 1
+}
+
+# The overlord's opinion of a province that rose against it (fnr_PROV.4)
+fnr_PROV_rebel_province = {
+	value = -75
+	yearly_decay = 1
+}

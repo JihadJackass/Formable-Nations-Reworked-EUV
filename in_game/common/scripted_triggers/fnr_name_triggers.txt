@@ -118,7 +118,6 @@ fnr_uses_static_name = {
 		tag = LMBDY
 		tag = LMBYV
 		tag = LNGBD
-		tag = LTNEM
 		tag = LUSIT
 		tag = LWSXY
 		tag = MACED

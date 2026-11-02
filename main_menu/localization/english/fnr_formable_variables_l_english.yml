@@ -978,3 +978,10 @@
       fnr_TRE_emperor_of_romans: "Proclaimed Emperor of the Romans"
       fnr_TRE_inheritance: "Claimed the Inheritance of Constantinople"
       fnr_TRE_siege_cooldown: "The Sultan's Army Recently Came Before Trebizond"
+
+    # Roman provinces of the Gallic Empire (Pax Romana)
+      fnr_GLCEM_province: "Province of the Gallic Empire"
+      fnr_GLCEM_released_baetica: "Restored Baetica"
+      fnr_GLCEM_released_lusitania: "Restored Lusitania"
+      fnr_PROV_years_in_service: "Years of Service"
+      fnr_PROV_rising_done: "Has Risen Against Our Overlord"

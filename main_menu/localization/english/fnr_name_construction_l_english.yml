@@ -27,6 +27,12 @@
       fnr_rank_PTLMY_pharaoh_empire_ruler_male: "Pharaoh"
       fnr_rank_PTLMY_pharaoh_empire_ruler_female: "Pharaoh"
 
+  # Roman Principate (and a Roman Empire under the Principate reform)
+      fnr_rank_RMNRP_princeps: "$rank_empire$"
+      fnr_rank_RMNRP_princeps_ADJ: "$rank_empire_ADJ$"
+      fnr_rank_RMNRP_princeps_ruler_male: "Princeps"
+      fnr_rank_RMNRP_princeps_ruler_female: "Princeps"
+
   # Roman Empire
       fnr_rank_ROM_imperator: "$rank_empire$"
       fnr_rank_ROM_imperator_ADJ: "$rank_empire_ADJ$"

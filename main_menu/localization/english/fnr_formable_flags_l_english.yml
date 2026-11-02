@@ -38,3 +38,8 @@
       map_ERSHR_alt_1: "Eranshahr Royal Purple"
       map_ERSHR_alt_2: "Eranshahr Light Blue"
       map_ERSHR_alt_3: "Eranshahr White"
+
+    # Gallic Empire provinces
+
+      fnr_GLCEM_baetica_flag: "Eagle of Baetica"
+      fnr_GLCEM_lusitania_flag: "Eagle of Lusitania"

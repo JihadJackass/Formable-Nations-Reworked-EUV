@@ -146,7 +146,6 @@ flavor_GLCEM.2 = {
 					owns = location:trier
 					has_or_had_tag = RMNRP
 					has_or_had_tag = WESRE
-					has_or_had_tag = LTNEM
 					has_or_had_tag = LAT
 				}
 			}

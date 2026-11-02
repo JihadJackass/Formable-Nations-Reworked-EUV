@@ -17,8 +17,40 @@ fnr_GLCEM_is_roman_successor = {
 		tag = ROM
 		tag = WESRE
 		tag = RMNRP
-		tag = LTNEM
 		tag = LAT
 		tag = EASRE
+	}
+}
+
+# Location scope: Baetica (Andalusia and Granada)
+fnr_GLCEM_is_baetica_location = {
+	OR = {
+		area = area:andalusia_area
+		area = area:granada_area
+	}
+}
+
+# Location scope: Lusitania (Portugal and Extremadura)
+fnr_GLCEM_is_lusitania_location = {
+	OR = {
+		area = area:north_portugal_area
+		area = area:south_portugal_area
+		area = area:extremadura_area
+	}
+}
+
+# Location scope: Tarraconensis - Iberia outside Baetica and Lusitania
+fnr_GLCEM_is_tarraconensis_location = {
+	region = region:iberia_region
+	NOT = { fnr_GLCEM_is_baetica_location = yes }
+	NOT = { fnr_GLCEM_is_lusitania_location = yes }
+}
+
+# Country scope: one of our released provinces (for Provinces of the Gallic Empire)
+fnr_GLCEM_is_gallic_province = {
+	OR = {
+		tag = TRCNS
+		tag = BRTNA
+		has_variable = fnr_GLCEM_province
 	}
 }

@@ -1,0 +1,53 @@
+﻿# FNR - flags for the Roman provinces released by the Gallic Empire (fnr_GLCEM_release_province_effect)
+
+	# Baetica: a golden eagle in a laurel wreath on olive green
+	fnr_GLCEM_baetica_flag = {
+		pattern = "pattern_solid.dds"
+		color1 = hsv360 { 95 55 40 }
+		color2 = "yellow"
+		colored_emblem = {
+			texture = "ce_laurel_wreath.dds"
+			color1 = color2
+			color2 = color2
+			instance = {
+				position = { 0.5 0.5 }
+				scale = { 0.95 0.95 }
+			}
+		}
+		colored_emblem = {
+			texture = "ce_roman_aquila.dds"
+			color1 = color2
+			color2 = color2
+			color3 = color1
+			instance = {
+				position = { 0.5 0.5 }
+				scale = { 0.6 0.6 }
+			}
+		}
+	}
+
+	# Lusitania: a golden eagle in a laurel wreath on Atlantic blue
+	fnr_GLCEM_lusitania_flag = {
+		pattern = "pattern_solid.dds"
+		color1 = hsv360 { 210 55 38 }
+		color2 = "yellow"
+		colored_emblem = {
+			texture = "ce_laurel_wreath.dds"
+			color1 = color2
+			color2 = color2
+			instance = {
+				position = { 0.5 0.5 }
+				scale = { 0.95 0.95 }
+			}
+		}
+		colored_emblem = {
+			texture = "ce_roman_aquila.dds"
+			color1 = color2
+			color2 = color2
+			color3 = color1
+			instance = {
+				position = { 0.5 0.5 }
+				scale = { 0.6 0.6 }
+			}
+		}
+	}

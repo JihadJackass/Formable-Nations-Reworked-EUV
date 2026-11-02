@@ -44,6 +44,25 @@
 		}
 	}
 
+	# Princeps: the Roman Principate (fnr_RMNRP.7 B), and a Roman Empire under the Principate reform
+	text = {
+		localization_key = fnr_rank_RMNRP_princeps
+		trigger = {
+			tag = RMNRP
+			has_variable = fnr_RMNRP_principate
+			government_type = government_type:monarchy
+		}
+	}
+	text = {
+		localization_key = fnr_rank_RMNRP_princeps
+		trigger = {
+			tag = ROM
+			government_type = government_type:monarchy
+			has_reform = government_reform:fnr_ROM_principate
+			NOT = { culture = { has_culture_group = culture_group:greek_group } }
+		}
+	}
+
 	# Roman Empire: Imperator, unless Greek (vanilla's Basileus applies then)
 	text = {
 		localization_key = fnr_rank_ROM_imperator

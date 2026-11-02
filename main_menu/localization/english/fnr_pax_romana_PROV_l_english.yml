@@ -1,0 +1,82 @@
+﻿l_english:
+
+  ###########################################################
+  # Pax Romana - Roman provinces of the Gallic Empire        #
+  # Tarraconensis, Britannia, Baetica, Lusitania             #
+  ###########################################################
+
+      fnr_PROV_years_current: "We have served our overlord for #Y [GetPlayer.MakeScope.GetVariable('fnr_PROV_years_in_service').GetValue|0]#! years."
+      fnr_PROV_explained_tt: "#T A Roman Province#!\n- #Y Send Auxiliaries#! and #Y Remit the Provincial Tribute#! help our overlord and win its favour.\n- Every year as a subject counts as a year of service.\n- After #Y 25#! years, if our overlord is at war and either unstable or out-mustered by us, we may #Y Throw Off the Yoke#! once."
+      fnr_PROV_years_at_least_15_tt: "Has served our overlord for at least #Y 15#! years"
+      fnr_PROV_years_at_least_25_tt: "Has served our overlord for at least #Y 25#! years"
+      fnr_PROV_overlord_weakened_tt: "Our overlord is #Y at war#!, and either has negative [stability|e] or a smaller army than ours"
+      fnr_PROV_rising_tt: "We leave our overlord's wars and #R declare a war of independence#! against it. If we cannot declare war right now, we gain a casus belli instead."
+      fnr_PROV_pride_tt: "Counts as #Y 5#! more years of service."
+
+    # Decisions
+
+      fnr_PROV_send_auxiliaries.title: "Send Auxiliaries to the Emperor"
+      fnr_PROV_send_auxiliaries.desc: "Our cohorts can march under the Emperor's eagles, as provincial auxiliaries always have. Our overlord will remember who came when called.\n\n$fnr_PROV_years_current$"
+      fnr_PROV_send_auxiliaries.a: "The cohorts march."
+      fnr_PROV_remit_tribute.title: "Remit the Provincial Tribute"
+      fnr_PROV_remit_tribute.desc: "A province pays its way. Sending more than is owed, and on time, keeps the governors in the capital friendly.\n\n$fnr_PROV_years_current$"
+      fnr_PROV_remit_tribute.a: "Send the tribute."
+      fnr_PROV_throw_off_the_yoke.title: "Throw Off the Yoke"
+      fnr_PROV_throw_off_the_yoke.desc: "We have served for a generation, and our overlord is weaker than it has ever been. The legions in the province are ours, and so is the province. If we are ever to rule ourselves, it is now.\n\n$fnr_PROV_years_current$"
+      fnr_PROV_throw_off_the_yoke.a: "Raise the standard of revolt."
+
+    # Events
+
+      fnr_PROV.1.title: "A Province of the Empire"
+      fnr_PROV.1.desc: "We have been restored as a kingdom, bound to the Empire that made us. Our first duty is to the Emperor. Our second, some of our nobles whisper, is to ourselves."
+      fnr_PROV.1.a: "We serve the Empire."
+      fnr_PROV.2.title: "The Emperor's Call"
+      fnr_PROV.2.desc: "[SCOPE.sCountry('fnr_PROV_overlord').GetName] is at war, and its envoys ask what men we can spare."
+      fnr_PROV.2.a: "Send what we can."
+      fnr_PROV.2.b: "Our own borders come first."
+      fnr_PROV.3.title: "The Provincial Rising"
+      fnr_PROV.3.desc: "The governors have been driven out and the provincial legions have taken a new oath, to us. Our overlord's armies are busy elsewhere. There will not be a better time."
+      fnr_PROV.3.a: "We are free."
+      fnr_PROV.4.title: "A Province Rises"
+      fnr_PROV.4.desc: "While our armies were busy, [SCOPE.sCountry('fnr_PROV_rebel').GetName] has thrown out our governors and declared itself free."
+      fnr_PROV.4.a: "They will pay for this."
+      fnr_PROV.5.title: "Provincial Pride"
+      fnr_PROV.5.desc: "A new generation of our nobles has grown up with stories of the days before the Empire. Some of them have started to ask why our taxes leave the province.\n\n$fnr_PROV_years_current$"
+      fnr_PROV.5.a: "We are loyal subjects of the Empire."
+      fnr_PROV.5.b: "We are a people of our own."
+
+    # Modifiers and opinions
+
+      STATIC_MODIFIER_NAME_fnr_PROV_provincial_auxiliaries: "Provincial Auxiliaries"
+      STATIC_MODIFIER_DESC_fnr_PROV_provincial_auxiliaries: "Cohorts from our provinces march with our armies."
+      STATIC_MODIFIER_NAME_fnr_PROV_auxiliaries_sent: "Auxiliaries Sent"
+      STATIC_MODIFIER_DESC_fnr_PROV_auxiliaries_sent: "Our cohorts recently marched for the Emperor."
+      STATIC_MODIFIER_NAME_fnr_PROV_tribute_sent: "Tribute Remitted"
+      STATIC_MODIFIER_DESC_fnr_PROV_tribute_sent: "We recently sent extra tribute to our overlord."
+      STATIC_MODIFIER_NAME_fnr_PROV_provincial_rising: "The Provincial Rising"
+      STATIC_MODIFIER_DESC_fnr_PROV_provincial_rising: "The whole province has taken up arms for its freedom."
+      fnr_PROV_loyal_province: "Loyal province"
+      fnr_PROV_refused_the_call: "Refused our call"
+      fnr_PROV_rebel_province: "Rebel province"
+
+    # Advances - Tarraconensis
+
+      TRCNS_via_augusta: "Via Augusta"
+      TRCNS_via_augusta_desc: "The great road of Hispania runs from the Pyrenees through Tarraco to the south. Keep it repaired and the province stays in one piece."
+      TRCNS_iberian_auxiliaries: "Iberian Auxiliaries"
+      TRCNS_iberian_auxiliaries_desc: "Celtiberian swordsmen and Balearic slingers have served every empire that ruled Hispania."
+      TRCNS_silver_of_hispania: "Silver of Hispania"
+      TRCNS_silver_of_hispania_desc: "The mines of the Sierra have paid for armies since Carthage."
+      TRCNS_concilium_provinciae: "Concilium Provinciae"
+      TRCNS_concilium_provinciae_desc: "Delegates of every city of the province meet each year at Tarraco to honour the Emperor and settle their quarrels."
+
+    # Advances - Britannia
+
+      BRTNA_hadrians_wall: "Hadrian's Wall"
+      BRTNA_hadrians_wall_desc: "The wall still stands across the north, and the frontier forts still keep watch."
+      BRTNA_classis_britannica: "Classis Britannica"
+      BRTNA_classis_britannica_desc: "The British fleet guards the narrow sea between the island and Gaul."
+      BRTNA_tin_of_cornwall: "Tin of Cornwall"
+      BRTNA_tin_of_cornwall_desc: "Cornish tin has been traded across the sea since before Rome."
+      BRTNA_londinium: "Londinium"
+      BRTNA_londinium_desc: "The port on the Thames is the heart of the province, and its governors rule from there."

@@ -1,4 +1,4 @@
-###########################################
+﻿###########################################
 # Formable Nation Reworked Scripted Flags #
 ###########################################
 
@@ -1571,12 +1571,6 @@ HET_ce_cossackia = {
 	KYVRU = {
 		textured_emblem = {
 			texture = "te_kyivan_rus.dds"
-		}
-	}
-# Latin Empire
-	LTNEM = {
-		textured_emblem = {
-			texture = "te_latin_empire.dds"
 		}
 	}
 # Lombardy

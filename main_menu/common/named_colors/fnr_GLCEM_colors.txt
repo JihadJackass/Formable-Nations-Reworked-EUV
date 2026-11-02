@@ -1,0 +1,5 @@
+﻿# Formable Nations Reworked - Gallic Empire province colors (Baetica, Lusitania)
+colors = {
+	map_fnr_GLCEM_baetica = rgb { 176 158 72 }
+	map_fnr_GLCEM_lusitania = rgb { 92 128 150 }
+}

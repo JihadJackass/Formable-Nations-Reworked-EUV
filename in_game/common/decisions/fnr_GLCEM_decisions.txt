@@ -10,15 +10,15 @@ fnr_GLCEM_establish_tarraconensis = {
 
 	potential = {
 		NOT = { exists = c:TRCNS }
-		any_owned_location = { region = region:iberia_region }
+		any_owned_location = { fnr_GLCEM_is_tarraconensis_location = yes }
 	}
 
 	allow = {
 		at_war = no
 		any_owned_location = {
-			count >= 15
+			count >= 12
 			is_capital = no
-			region = region:iberia_region
+			fnr_GLCEM_is_tarraconensis_location = yes
 		}
 	}
 
@@ -91,6 +91,230 @@ fnr_GLCEM_establish_britannia = {
 		}
 	}
 }
+
+# Establish Baetica - hands our lands in Baetica to a new vassal kingdom
+fnr_GLCEM_establish_baetica = {
+	decision_category = country_specific_decisions
+
+	tags = { GLCEM }
+
+	potential = {
+		NOT = { has_variable = fnr_GLCEM_released_baetica }
+		any_owned_location = { fnr_GLCEM_is_baetica_location = yes }
+	}
+
+	allow = {
+		at_war = no
+		any_owned_location = {
+			count >= 8
+			is_capital = no
+			fnr_GLCEM_is_baetica_location = yes
+		}
+	}
+
+	ai_will_do = { value = 50 }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:burghers_estate }
+	}
+
+	option = {
+		name = fnr_GLCEM_establish_baetica.a
+		ai_chance = { value = 100 }
+		effect = {
+			custom_tooltip = fnr_GLCEM_establish_baetica_tt
+			custom_tooltip = fnr_GLCEM_released_lock_tt
+			hidden_effect = {
+				fnr_GLCEM_release_province_effect = { KEY = baetica SEAT = cordoba }
+			}
+			add_prestige = prestige_mild_bonus
+		}
+	}
+}
+
+# Establish Lusitania - hands our lands in Lusitania to a new vassal kingdom
+fnr_GLCEM_establish_lusitania = {
+	decision_category = country_specific_decisions
+
+	tags = { GLCEM }
+
+	potential = {
+		NOT = { has_variable = fnr_GLCEM_released_lusitania }
+		any_owned_location = { fnr_GLCEM_is_lusitania_location = yes }
+	}
+
+	allow = {
+		at_war = no
+		any_owned_location = {
+			count >= 8
+			is_capital = no
+			fnr_GLCEM_is_lusitania_location = yes
+		}
+	}
+
+	ai_will_do = { value = 50 }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:burghers_estate }
+	}
+
+	option = {
+		name = fnr_GLCEM_establish_lusitania.a
+		ai_chance = { value = 100 }
+		effect = {
+			custom_tooltip = fnr_GLCEM_establish_lusitania_tt
+			custom_tooltip = fnr_GLCEM_released_lock_tt
+			hidden_effect = {
+				fnr_GLCEM_release_province_effect = { KEY = lusitania SEAT = merida }
+			}
+			add_prestige = prestige_mild_bonus
+		}
+	}
+}
+
+# ==================== Holy sites ====================
+
+# Holy site - the Forest of the Carnutes: permanent location upgrade; country bonus while owned (yearly pulse)
+fnr_GLCEM_restore_site_chartres = {
+	decision_category = religious_decisions
+
+	tags = { GLCEM }
+
+	potential = {
+		has_variable = fnr_GLCEM_path_druidic
+		owns = location:chartres
+		NOT = { location:chartres = { has_location_modifier = fnr_GLCEM_restored_site } }
+	}
+
+	allow = {
+		owns = location:chartres
+		gold >= 300
+		at_war = no
+	}
+
+	ai_will_do = { value = 100 }
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate }
+	}
+
+	option = {
+		name = fnr_GLCEM_restore_site_chartres.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -300
+			location:chartres = {
+				add_location_modifier = { modifier = fnr_GLCEM_restored_site years = -1 }
+			}
+			add_country_modifier = { modifier = fnr_GLCEM_site_chartres years = -1 }
+			add_prestige = prestige_weak_bonus
+			custom_tooltip = fnr_GLCEM_restored_site_tt
+		}
+	}
+}
+
+# Holy site - the Altar of the Three Gauls: permanent location upgrade; country bonus while owned (yearly pulse)
+fnr_GLCEM_restore_site_lyon = {
+	decision_category = religious_decisions
+
+	tags = { GLCEM }
+
+	potential = {
+		has_variable = fnr_GLCEM_path_imperial
+		owns = location:lyon
+		NOT = { location:lyon = { has_location_modifier = fnr_GLCEM_restored_site } }
+	}
+
+	allow = {
+		owns = location:lyon
+		gold >= 300
+		at_war = no
+	}
+
+	ai_will_do = { value = 100 }
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate }
+	}
+
+	option = {
+		name = fnr_GLCEM_restore_site_lyon.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -300
+			location:lyon = {
+				add_location_modifier = { modifier = fnr_GLCEM_restored_site years = -1 }
+			}
+			add_country_modifier = { modifier = fnr_GLCEM_site_lyon years = -1 }
+			add_prestige = prestige_weak_bonus
+			custom_tooltip = fnr_GLCEM_restored_site_tt
+		}
+	}
+}
+
+# Holy site - the Field of Alesia: permanent location upgrade; country bonus while owned (yearly pulse)
+fnr_GLCEM_restore_site_semur_en_auxois = {
+	decision_category = religious_decisions
+
+	tags = { GLCEM }
+
+	potential = {
+		owns = location:semur_en_auxois
+		NOT = { location:semur_en_auxois = { has_location_modifier = fnr_GLCEM_restored_site } }
+	}
+
+	allow = {
+		owns = location:semur_en_auxois
+		gold >= 200
+		at_war = no
+	}
+
+	ai_will_do = { value = 100 }
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate }
+	}
+
+	option = {
+		name = fnr_GLCEM_restore_site_semur_en_auxois.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -200
+			location:semur_en_auxois = {
+				add_location_modifier = { modifier = fnr_GLCEM_restored_site years = -1 }
+			}
+			add_country_modifier = { modifier = fnr_GLCEM_site_semur_en_auxois years = -1 }
+			add_prestige = prestige_weak_bonus
+			custom_tooltip = fnr_GLCEM_restored_site_tt
+		}
+	}
+}
+
 
 # Grant Tarraconensis the right to reshape itself - lifts the formation lock on our released vassal
 fnr_GLCEM_grant_tarraconensis = {

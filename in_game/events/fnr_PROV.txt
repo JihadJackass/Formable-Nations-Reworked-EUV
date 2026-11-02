@@ -1,0 +1,178 @@
+﻿namespace = fnr_PROV
+
+# Roman provinces of the Gallic Empire (Pax Romana): Tarraconensis, Britannia, Baetica, Lusitania
+# .1 a new province | .2 the Emperor's call | .3 the Provincial Rising | .4 the overlord learns of it | .5 provincial pride
+
+# 1 - A Province of the Empire
+fnr_PROV.1 = {
+	type = country_event
+	title = fnr_PROV.1.title
+	desc = fnr_PROV.1.desc
+	outcome = positive
+
+	trigger = {
+		fnr_PROV_is_province = yes
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+		fnr_PROV_setup_effect = yes
+	}
+
+	option = {
+		name = fnr_PROV.1.a
+		ai_chance = { factor = 100 }
+		custom_tooltip = fnr_PROV_explained_tt
+	}
+}
+
+# 2 - The Emperor's Call (our overlord is at war)
+fnr_PROV.2 = {
+	type = country_event
+	title = fnr_PROV.2.title
+	desc = fnr_PROV.2.desc
+	outcome = neutral
+
+	trigger = {
+		fnr_PROV_is_province = yes
+		is_subject = yes
+		overlord ?= { at_war = yes }
+	}
+
+	illustration_tags = {
+		10 = exterior
+		10 = armed
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:crown_estate }
+		overlord ?= { save_scope_as = fnr_PROV_overlord }
+	}
+
+	# Answer the call
+	option = {
+		name = fnr_PROV.2.a
+		ai_chance = { factor = 70 }
+		add_manpower = -1
+		add_liberty_desire = -10
+		scope:fnr_PROV_overlord ?= {
+			add_country_modifier = { modifier = fnr_PROV_provincial_auxiliaries years = 3 mode = add_and_extend }
+			add_opinion = { modifier = fnr_PROV_loyal_province target = root }
+		}
+	}
+
+	# Our own borders come first
+	option = {
+		name = fnr_PROV.2.b
+		ai_chance = { factor = 30 }
+		add_liberty_desire = 10
+		add_stability = stability_weak_bonus
+		scope:fnr_PROV_overlord ?= {
+			add_opinion = { modifier = fnr_PROV_refused_the_call target = root }
+		}
+	}
+}
+
+# 3 - The Provincial Rising (decision)
+fnr_PROV.3 = {
+	type = country_event
+	title = fnr_PROV.3.title
+	desc = fnr_PROV.3.desc
+	outcome = positive
+
+	trigger = {
+		always = yes
+	}
+
+	illustration_tags = {
+		10 = exterior
+		10 = armed
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:peasants_estate }
+	}
+
+	option = {
+		name = fnr_PROV.3.a
+		ai_chance = { factor = 100 }
+		add_prestige = prestige_mild_bonus
+		fnr_PROV_rising_effect = yes
+	}
+}
+
+# 4 - A Province Rises (for the overlord)
+fnr_PROV.4 = {
+	type = country_event
+	title = fnr_PROV.4.title
+	desc = fnr_PROV.4.desc
+	outcome = negative
+
+	trigger = {
+		exists = scope:fnr_PROV_overlord
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = angry
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_PROV.4.a
+		ai_chance = { factor = 100 }
+		add_prestige = prestige_mild_penalty
+		scope:fnr_PROV_rebel ?= {
+			root = { add_opinion = { modifier = fnr_PROV_rebel_province target = prev } }
+		}
+	}
+}
+
+# 5 - Provincial Pride
+fnr_PROV.5 = {
+	type = country_event
+	title = fnr_PROV.5.title
+	desc = fnr_PROV.5.desc
+	outcome = neutral
+
+	trigger = {
+		fnr_PROV_is_province = yes
+		is_subject = yes
+		NOT = { has_variable = fnr_PROV_rising_done }
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:burghers_estate }
+	}
+
+	# We are loyal subjects of the Empire
+	option = {
+		name = fnr_PROV.5.a
+		ai_chance = { factor = 70 }
+		add_liberty_desire = -10
+		add_legitimacy = legitimacy_weak_bonus
+	}
+
+	# We are a people of our own
+	option = {
+		name = fnr_PROV.5.b
+		ai_chance = { factor = 30 }
+		add_liberty_desire = 10
+		add_stability = stability_weak_bonus
+		change_variable = { name = fnr_PROV_years_in_service add = 5 }
+		custom_tooltip = fnr_PROV_pride_tt
+	}
+}

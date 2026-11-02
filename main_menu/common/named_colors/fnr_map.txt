@@ -348,8 +348,6 @@ colors = {
 		map_KYVRU = rgb { 6 57 103 }
 		# Langobards
 		map_LNGBD = rgb { 23 26 77 }
-		# Latin Empire
-		map_LTNEM = rgb { 165 147 2 }
 		# Lombardy
 		map_LMBDY = rgb { 50 165 12 }
 		# Lombardy-Venetia
