@@ -26,6 +26,7 @@ fnr_PROV_rising_effect = {
 	custom_tooltip = fnr_PROV_rising_tt
 	hidden_effect = {
 		scope:fnr_PROV_overlord ?= {
+			set_variable = { name = fnr_PROV_risen_province value = root }
 			trigger_event_non_silently = fnr_PROV.4
 		}
 		leave_all_wars_with = scope:fnr_PROV_overlord

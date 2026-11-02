@@ -26,7 +26,9 @@ fnr_TRE_yearly_pulse = {
 fnr_TRE_raid_pulse = {
 	trigger = {
 		fnr_TRE_is_komnenian = yes
+		fnr_TRE_has_peril = yes
 		fnr_TRE_peril_at_least = { VALUE = 50 }
+		any_neighbor_country = { fnr_TRE_is_turkish = yes }
 	}
 	random_events = {
 		chance_to_happen = 20
@@ -38,6 +40,7 @@ fnr_TRE_raid_pulse = {
 fnr_TRE_siege_pulse = {
 	trigger = {
 		fnr_TRE_is_komnenian = yes
+		fnr_TRE_has_peril = yes
 		fnr_TRE_peril_at_least = { VALUE = 80 }
 		NOT = { has_variable = fnr_TRE_siege_cooldown }
 	}

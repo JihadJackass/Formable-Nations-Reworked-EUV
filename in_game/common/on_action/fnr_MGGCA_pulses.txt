@@ -8,6 +8,19 @@ yearly_country_pulse = {
 		fnr_MGGCA_discontent_stage_3
 		fnr_MGGCA_discontent_stage_4
 		fnr_MGGCA_foreign_pulse
+		fnr_MGGCA_cleanup_pulse
+	}
+}
+
+# A claimant left behind when another state forms Magna Graecia
+fnr_MGGCA_cleanup_pulse = {
+	trigger = {
+		has_variable = fnr_MGGCA_stage
+		NOT = { has_or_had_tag = MGGCA }
+		NOT = { fnr_MGGCA_can_revive = yes }
+	}
+	effect = {
+		fnr_MGGCA_cleanup_effect = yes
 	}
 }
 

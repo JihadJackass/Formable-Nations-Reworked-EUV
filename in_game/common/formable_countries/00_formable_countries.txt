@@ -2751,7 +2751,7 @@ ROM_BYZ_f = {
 				region:italy_region = {
 					any_location_in_region = {
 						percent >= 0.8
-						owner = root
+						owner ?= root
 					}
 				}
 			}
@@ -2789,7 +2789,7 @@ ROM_BYZ_f = {
 		}
 		province_definition:marittima_province = {
 			every_ownable_location_in_province_definition = {
-				limit = { owner = root }
+				limit = { owner ?= root }
 				change_integration_level = integrated
 			}
 		}

@@ -61,6 +61,14 @@ fnr_ROM.1 = {
 	}
 
 	immediate = {
+		# The Great Republic's Senate reform (added here as well: the formation effect runs before the tag changes)
+		if = {
+			limit = {
+				has_variable = fnr_ROM_origin_great_republic
+				NOT = { has_reform = government_reform:fnr_ROM_senate_of_generals }
+			}
+			add_reform = government_reform:fnr_ROM_senate_of_generals
+		}
 		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
 		if = {
 			limit = { has_variable = fnr_ROM_origin_great_republic }
@@ -288,6 +296,11 @@ fnr_ROM.4 = {
 			text = fnr_ROM_usurpers_gone_tt
 			fnr_ROM_usurpers_in_field = no
 		}
+		# He did not win: the usurper is not on our throne
+		trigger_if = {
+			limit = { has_variable = fnr_ROM_usurper_leader }
+			ruler ?= { NOT = { this = root.var:fnr_ROM_usurper_leader } }
+		}
 	}
 
 	illustration_tags = {
@@ -504,7 +517,7 @@ fnr_ROM.9 = {
 		name = fnr_ROM.9.a
 		ai_chance = { factor = 70 }
 		add_legitimacy = legitimacy_weak_penalty
-		hidden_effect = { fnr_ROM_pick_region_location_effect = { REGION = france_region } }
+		hidden_effect = { fnr_ROM_pick_region_location_effect = { TRIGGER = fnr_ROM_gallic_secession_location } }
 		fnr_ROM_raise_usurper_effect = { NAME = fnr_ROM_gallic_empire }
 		custom_tooltip = fnr_ROM_secession_tt
 	}
@@ -556,7 +569,7 @@ fnr_ROM.10 = {
 		name = fnr_ROM.10.a
 		ai_chance = { factor = 70 }
 		add_legitimacy = legitimacy_weak_penalty
-		hidden_effect = { fnr_ROM_pick_region_location_effect = { REGION = crescent_region } }
+		hidden_effect = { fnr_ROM_pick_region_location_effect = { TRIGGER = fnr_ROM_palmyrene_secession_location } }
 		fnr_ROM_raise_usurper_effect = { NAME = fnr_ROM_palmyrene_empire }
 		custom_tooltip = fnr_ROM_secession_tt
 	}

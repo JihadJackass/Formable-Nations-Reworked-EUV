@@ -13,7 +13,7 @@
       flavor_BLGUM.1.title: "Conflict in the Low Countries"
       flavor_BLGUM.1.desc: "Beneath the surface of the Low Countries an old fault line runs deep. The Catholic, French and Flemish-speaking south is bound uneasily to a crown that rules it from afar and shares little of its faith or tongue. Grievances over language, religion and representation simmer in Wallonia and Flanders alike, and every slight is remembered and repeated. The mood in Brussels has turned to open defiance, and those who watch these things closely wonder how much longer the union can hold."
       flavor_BLGUM.1.a: "This remains a concern."
-      fnr_BLGUM_revolution_tt: "#T The Belgian Revolution#!\n#Y Belgian Independence#! starts at #Y 20#! and grows by #Y 1#! every month, or #Y 2#! while our state religion is not Catholic. At #Y 100#! the Belgian lands we hold break away as the #Y Kingdom of Belgium#!.\nThe revolution fails if Independence falls back to #Y 0#! after at least #Y 3#! years, and ends on its own after #Y 25#! years."
+      fnr_BLGUM_revolution_tt: "#T The Belgian Revolution#!\n#Y Belgian Independence#! starts at #Y 20#!. Each month it grows by #Y 1#! while our [stability|e] is below 0 and by #Y 1#! while our state religion is not Catholic. With neither, it falls by #Y 1#! a month. At #Y 100#! the Belgian lands we hold break away as the #Y Kingdom of Belgium#!.\nThe revolution fails if Independence falls back to #Y 0#! after at least #Y 3#! years, and ends on its own after #Y 25#! years."
       fnr_BLGUM_independence_crushed_tt: "#Y Belgian Independence#! has fallen to #Y 0#!"
       fnr_BLGUM_independence_plus_10_tt: "#Y Belgian Independence#! #R +10#!"
       fnr_BLGUM_independence_minus_10_tt: "#Y Belgian Independence#! #G -10#!"
@@ -164,13 +164,13 @@
       # Establishment of the Bactrian Synod
 
         flavor_BACTR.3.title: "Establishment of the Bactrian Synod"
-        flavor_BACTR.3.desc: "TODO: description that explains the purpose of the bactrian synod"
+        flavor_BACTR.3.desc: "The successors of Alexander tore his empire apart, and for centuries his heirs in the East have looked west toward the lands that were lost. Now the time has come to gather them again. We will found a Synod of the Hellenic East, a pact of nations sworn to restore the realms of the old empire, from Macedonia to Mesopotamia, under loyal kings who answer to Bactria. What the Diadochi divided, the Synod will bring back together."
         flavor_BACTR.3.a: "Alexander would be proud!"
 
       # Restoring the Armenian Kingdom
   
         flavor_BACTR.4.title: "Restoring the Armenian Kingdom"
-        flavor_BACTR.4.desc: "TODO: description"
+        flavor_BACTR.4.desc: "The Armenian highlands have known many masters, but their people have never forgotten that they were once a kingdom of their own. With the lands of Armenia under our control, the Synod may raise a new king over them, an Armenian of our faith who will rule in our name and hold the mountain passes for us. A grateful Armenia will make a loyal guardian of our western frontier."
         flavor_BACTR.4.a: "The Armenian Kingdom restored!"
 
         BACTR_event_trigger_4_tt: "The Nation of Armenia will be restored in the [ShowAreaName('armenia_area')] and [ShowAreaName('armenian_highlands_area')] areas with a loyal Pro-Bactrian Armenian King."
@@ -178,7 +178,7 @@
       # Restoration of the State of Macedonia
 
         flavor_BACTR.5.title: "Restoration of the State of Macedonia"
-        flavor_BACTR.5.desc: "TODO: description"
+        flavor_BACTR.5.desc: "Macedonia, the cradle of Alexander, lies in our hands at last. It would be fitting for the land that gave birth to the great conqueror to stand once more as a kingdom, ruled by a Macedonian king who owes his crown to the Synod. Let the descendants of the old phalanx guard the western gates of the empire their ancestors once built."
         flavor_BACTR.5.a: "For the Macedonian descendents!"
 
         BACTR_event_trigger_1_tt: "The Nation of Macedonia will be restored in the [ShowAreaName('macedonia_area')], [ShowAreaName('albania_area')], [ShowAreaName('northern_greece_area')], and [ShowAreaName('thrace_area')] areas with a loyal Pro-Bactrian Macedonian King."
@@ -186,7 +186,7 @@
       # Placing a local on the Assyrian Throne
 
         flavor_BACTR.6.title: "Placing a local on the Assyrian Throne"
-        flavor_BACTR.6.desc: "TODO: description"
+        flavor_BACTR.6.desc: "The plains of upper Mesopotamia were once the heart of Assyria, the first of the great empires to rule from the Tigris. Its descendants still live along the rivers, keeping their old language and their old faith. If we place one of their own on a restored Assyrian throne, bound to us by gratitude and oath, we will gain a loyal kingdom in the very centre of the old Seleucid realm."
         flavor_BACTR.6.a: "Assyria rises once again."
 
         BACTR_event_trigger_2_tt: "The Nation of Assyria will be restored in the [ShowAreaName('jazira_area')] area with a loyal Pro-Bactrian Assyrian King."
@@ -194,22 +194,22 @@
       # Establishing a Pro-Greek Persian King
 
         flavor_BACTR.7.title: "Establishing a Pro-Greek Persian King"
-        flavor_BACTR.7.desc: "TODO: description"
-        flavor_BACTR.7.a: "TODO: option"
+        flavor_BACTR.7.desc: "Persia is too large and too proud to be ruled directly from Bactra. Better to raise a Persian king who looks kindly upon the Hellenic world, one who keeps the customs of his people while acknowledging the leadership of the Synod. With a friendly throne over the Iranian plateau, the heart of our restored empire will be secure."
+        flavor_BACTR.7.a: "A friend of the Greeks shall rule in Persia."
 
         BACTR_event_trigger_3_tt: "The Nation of Persia will be established in the [ShowRegionName('persia_region')] area with a loyal Pro-Bactrian Persian King."
 
       # Restoring the Ptolemaic Dynasty
 
         flavor_BACTR.8.title: "Restoring the Ptolemaic Dynasty to the Kingdom of Egypt"
-        flavor_BACTR.8.desc: "TODO: description"
-        flavor_BACTR.8.a: "TODO: option"
+        flavor_BACTR.8.desc: "Egypt was the richest of the kingdoms carved from Alexander's empire, and for three centuries the house of Ptolemy ruled it from Alexandria. Its line has long since ended, but a claimant of Macedonian blood may yet be found to take up the double crown. Restored under our protection, the Ptolemaic Kingdom would bring the granaries and harbours of the Nile into the Synod."
+        flavor_BACTR.8.a: "The House of Ptolemy returns to Alexandria."
 
       # Honoring Alexander
 
         flavor_BACTR.9.title: "Honoring Alexander"
-        flavor_BACTR.9.desc: "TODO: description"
-        flavor_BACTR.9.a: "TODO: option"
+        flavor_BACTR.9.desc: "From Macedonia to the Indus, the lands Alexander conquered are once more bound together under kings who answer to the Synod. It is time to honour the man whose dream we have restored. Statues will be raised in every city of the empire, his deeds will be read aloud in the temples, and our ruler will be proclaimed the true heir of the great conqueror."
+        flavor_BACTR.9.a: "Glory to Alexander, and to his heirs!"
 
     #############
     # Rhineland #

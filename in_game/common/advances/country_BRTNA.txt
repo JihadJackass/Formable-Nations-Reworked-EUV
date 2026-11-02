@@ -37,7 +37,7 @@
 			trade_income = 0.05
 			tax_income_efficiency = small_tax_income_efficiency_bonus
 
-			requires = BRTNA_hadrians_wall
+			requires = printing_press_advance
 			allow_children = no
 		}
 
@@ -51,6 +51,6 @@
 			global_max_control = 0.05
 			monthly_legitimacy = 0.05
 
-			requires = BRTNA_tin_of_cornwall
+			requires = confessionalism_advance
 			allow_children = no
 		}

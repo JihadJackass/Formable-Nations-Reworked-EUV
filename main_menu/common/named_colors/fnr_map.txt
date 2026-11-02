@@ -322,6 +322,7 @@ colors = {
 		map_IBNEM = rgb { 118 116 2 }
 		# Illyria
 		map_ILYRA =  rgb { 80 40 2 }
+		map_ILYRK =  rgb { 150 52 60 }
 		# Israel
 		map_ISREL = rgb { 18 103 163 }
 		# Italian Empire

@@ -51,3 +51,9 @@ fnr_PTLMY_refused_rome = {
 	value = -25
 	yearly_decay = 1
 }
+
+# Rome turned down our offer (Seek Roman Amicitia rejected)
+fnr_PTLMY_spurned_by_rome = {
+	value = -25
+	yearly_decay = 1
+}

@@ -79,7 +79,6 @@ fnr_PTLMY.2 = {
 	type = country_event
 	title = fnr_PTLMY.2.title
 	desc = fnr_PTLMY.2.desc
-	fire_only_once = yes
 	outcome = neutral
 
 	trigger = {
@@ -841,6 +840,35 @@ fnr_PTLMY.64 = {
 	}
 }
 
+# 65 - The Thebaid Unbowed (the revolt ran out its 15 years without being put down)
+fnr_PTLMY.65 = {
+	type = country_event
+	title = fnr_PTLMY.65.title
+	desc = fnr_PTLMY.65.desc
+	outcome = negative
+
+	trigger = {
+		has_or_had_tag = PTLMY
+	}
+
+	illustration_tags = {
+		10 = exterior
+		10 = angry
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:clergy_estate }
+	}
+
+	option = {
+		name = fnr_PTLMY.65.a
+		ai_chance = { factor = 100 }
+		add_stability = stability_mild_penalty
+		add_legitimacy = legitimacy_mild_penalty
+		fnr_PTLMY_change_crown_effect = { VALUE = -20 TT = egyptian_20 }
+	}
+}
+
 # 51 - (hidden) a Ptolemaic subject of Rome tells its overlord
 fnr_PTLMY.51 = {
 	type = country_event
@@ -849,6 +877,7 @@ fnr_PTLMY.51 = {
 
 	trigger = {
 		has_or_had_tag = PTLMY
+		is_ai = yes # a player's Ptolemaic Kingdom is never annexed without a choice
 		overlord ?= { fnr_PTLMY_is_rome = yes }
 	}
 

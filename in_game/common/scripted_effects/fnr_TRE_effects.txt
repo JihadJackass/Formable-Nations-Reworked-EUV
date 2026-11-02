@@ -74,20 +74,19 @@ fnr_TRE_setup_effect = {
 # Recount the pacts (countries holding our bride variable)
 fnr_TRE_count_pacts_effect = {
 	hidden_effect = {
+		save_scope_as = fnr_TRE_counter
 		set_variable = { name = fnr_TRE_pacts value = 0 }
 		every_country = {
 			limit = { has_variable = fnr_TRE_bride_of_trebizond }
-			root = { change_variable = { name = fnr_TRE_pacts add = 1 } }
+			scope:fnr_TRE_counter = { change_variable = { name = fnr_TRE_pacts add = 1 } }
 		}
 	}
 }
 
 # ---------- Yearly ----------
 
-fnr_TRE_yearly_effect = {
-	fnr_TRE_setup_effect = yes
-	fnr_TRE_count_pacts_effect = yes
-
+# Peril, yearly (Trebizond or Pontus only)
+fnr_TRE_yearly_peril_effect = {
 	# Peril rises
 	if = {
 		limit = { fnr_TRE_stronger_turk_neighbor = yes }
@@ -130,6 +129,27 @@ fnr_TRE_yearly_effect = {
 		fnr_TRE_shift_peril_effect = { VALUE = -2 }
 	}
 	fnr_TRE_refresh_peril_tier_effect = yes
+}
+
+
+fnr_TRE_yearly_effect = {
+	fnr_TRE_setup_effect = yes
+	fnr_TRE_count_pacts_effect = yes
+
+	# Peril is Trebizond's (and Pontus's) problem; a Komnenian Rome leaves it behind
+	if = {
+		limit = { fnr_TRE_has_peril = no }
+		hidden_effect = {
+			if = { limit = { has_country_modifier = fnr_TRE_peril_secure } remove_country_modifier = fnr_TRE_peril_secure }
+			if = { limit = { has_country_modifier = fnr_TRE_peril_watchful } remove_country_modifier = fnr_TRE_peril_watchful }
+			if = { limit = { has_country_modifier = fnr_TRE_peril_threatened } remove_country_modifier = fnr_TRE_peril_threatened }
+			if = { limit = { has_country_modifier = fnr_TRE_peril_dire } remove_country_modifier = fnr_TRE_peril_dire }
+		}
+	}
+	else = {
+		fnr_TRE_yearly_peril_effect = yes
+	}
+
 
 	# Fortified passes only count while we hold Gumushane
 	hidden_effect = {
@@ -155,6 +175,7 @@ fnr_TRE_yearly_effect = {
 		if = { limit = { has_country_modifier = fnr_TRE_tabriz_caravans } remove_country_modifier = fnr_TRE_tabriz_caravans }
 		if = {
 			limit = {
+				owns = location:trebizond
 				location:tabriz = {
 					owner ?= {
 						NOT = { is_at_war_with = root }

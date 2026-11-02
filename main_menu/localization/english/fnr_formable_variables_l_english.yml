@@ -985,3 +985,12 @@
       fnr_GLCEM_released_lusitania: "Restored Lusitania"
       fnr_PROV_years_in_service: "Years of Service"
       fnr_PROV_rising_done: "Has Risen Against Our Overlord"
+
+    # Review fixes (2026-11-02)
+      fnr_PTLMY_thebaid_cooldown: "The Thebaid Recently Rose"
+      fnr_MGGCA_event_20_done: "Received the Shadow of Rome"
+      fnr_MGGCA_event_22_done: "Received the Catepan's Envoy"
+      fnr_MGGCA_event_23_done: "Received the Scholars from Alexandria"
+      fnr_GLCEM_province_baetica: "Restored Province of Baetica"
+      fnr_GLCEM_province_lusitania: "Restored Province of Lusitania"
+      fnr_PROV_risen_province: "A Province Has Risen Against Us"

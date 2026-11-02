@@ -274,6 +274,7 @@
       fnr_PTLMY_lagid_marriage: "Joined by Marriage"
       fnr_PTLMY_grain_for_rome: "Sent the Grain Fleet"
       fnr_PTLMY_refused_rome: "Refused Rome"
+      fnr_PTLMY_spurned_by_rome: "Spurned by Rome"
       fnr_PTLMY_seek_amicitia: "Seek Roman Amicitia"
       dip_fnr_PTLMY_seek_amicitia_CATEGORY: "CATEGORY_FRIENDLY_ACTIONS"
       fnr_PTLMY_seek_amicitia_act: "Ask [SCOPE.sCountry('recipient').GetName] to name us Friend and Ally of the Roman People."
@@ -418,7 +419,7 @@
       hint_fnr_PTLMY_nile_military: "$hint_advisor_salute_military$"
       fnr_PTLMY_crown_current: "#Y Basileus and Pharaoh#! is currently #Y [GetPlayer.MakeScope.GetVariable('fnr_PTLMY_crown').GetValue|0]#! (from -100 Pharaoh to +100 Basileus)"
       fnr_PTLMY_crown_tiers: "#T Tiers#!\n- #Y Living Horus#! at -60 and below\n- #Y Lord of the Two Lands#! from -59 to -20\n- #Y The Double Crown#! from -19 to 19\n- #Y Macedonian Court#! from 20 to 59\n- #Y Basileus of Alexandria#! at 60 and above"
-      fnr_PTLMY_crown_moves: "#T What moves it#!\n- Each year it drifts #Y 1#! point towards 0.\n- #Y Towards the Basileus#! - a capital at Alexandria, the Kleruchoi, Hellenistic Basileia, Greek Tax Farmers, founding a Greek Polis.\n- #Y Towards the Pharaoh#! - a capital elsewhere, the Priests of Ptah, the Machimoi, Pharaonic Kingship, the Temple Economy, being crowned at Memphis, honouring the temples."
+      fnr_PTLMY_crown_moves: "#T What moves it#!\n- Each year it drifts #Y 2#! points towards 0.\n- #Y Towards the Basileus#! - a capital at Alexandria, the Kleruchoi, Hellenistic Basileia, Greek Tax Farmers, founding a Greek Polis.\n- #Y Towards the Pharaoh#! - a capital elsewhere, the Priests of Ptah, the Machimoi, Pharaonic Kingship, the Temple Economy, being crowned at Memphis, honouring the temples."
       fnr_PTLMY_scholarship_current: "#Y Scholarship#! is currently #Y [GetPlayer.MakeScope.GetVariable('fnr_PTLMY_scholarship').GetValue|0]#!"
       fnr_PTLMY_library_tiers: "#T Tiers#!\n- #Y Scrolls Gathered#! below 25\n- #Y A Growing Library#! from 25\n- #Y The Great Library#! from 75\n- #Y Light of the World#! from 150"
       fnr_PTLMY_library_moves: "#T What raises it#!\n- #G +1#! a year for holding Alexandria, #G +2#! for the Mouseion, #G +3#! for the Great Library, #G +1#! for the Scholars of the Mouseion, #G +1#! with a Macedonian Court and #G +1#! more as Basileus.\n- Inviting great scholars, searching the ships for books and stipends for visiting scholars."
@@ -434,3 +435,8 @@
       fnr_PTLMY.51.title: "Aegyptus Provincia"
       diplomatic_status_fnr_PTLMY_nesiotic_league_name: "League of the Islanders"
       diplomatic_status_fnr_PTLMY_nesiotic_league_tooltip: "Both are members of the #Y League of the Islanders#!"
+
+    # The Thebaid unbowed (disaster ending without victory)
+      fnr_PTLMY.65.title: "The Thebaid Unbowed"
+      fnr_PTLMY.65.desc: "Fifteen years of war in the south have ended without victory. The rebels have melted back into the villages of the Thebaid, and to make peace with the temples the court must give way."
+      fnr_PTLMY.65.a: "Make peace with the priests."

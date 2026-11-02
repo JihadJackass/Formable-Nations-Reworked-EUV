@@ -95,7 +95,6 @@ fnr_PROV_throw_off_the_yoke = {
 		stability >= 50
 		gold >= 300
 		fnr_PROV_overlord_weakened = yes
-		at_war = no
 	}
 
 	ai_will_do = { value = 100 }

@@ -423,6 +423,7 @@ fnr_RMNRP.7 = {
 	# B - Princeps: rule as first citizen, and build the Empire from a united Italy
 	option = {
 		name = fnr_RMNRP.7.c
+		trigger = { NOT = { has_variable = fnr_RMNRP_great_republic } }
 		ai_chance = { factor = 40 }
 		fnr_RMNRP_end_republic_effect = yes
 		set_variable = fnr_RMNRP_principate

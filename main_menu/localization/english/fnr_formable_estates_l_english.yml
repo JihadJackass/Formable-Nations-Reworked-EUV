@@ -12,7 +12,7 @@
     # Eranshahr
 
     mobads_estate: "Mobads"
-    mobads_estate_desc: "TODO"
+    mobads_estate_desc: "The Mobads are the high priests of the Zoroastrian faith, keepers of the sacred fires and interpreters of the law of the Avesta. In the restored Eranshahr they form a powerful estate of their own, anointing the Shahanshah, judging matters of faith and holding the great fire temples and their lands."
   
   # ESTATE PRIVILEGES
 
@@ -35,7 +35,7 @@
       # Burghers
 
         fnr_ERSHR_silk_road_wardens: "Silk Road Wardens"
-        fnr_ERSHR_silk_road_wardens_desc: "TODO"
+        fnr_ERSHR_silk_road_wardens_desc: "The great noble houses whose lands straddle the old caravan roads are charged with guarding them, keeping the routes from Merv to Ctesiphon free of bandits and the caravanserais in good repair. In return they are allowed to collect tolls in the name of the crown, and while much of that silver reaches the treasury, the wardens grow rich and influential on what remains."
 
     # Rhineland
     fnr_RHLND_agricultural_concessions_and_investments: "Agricultural Concessions and investments"

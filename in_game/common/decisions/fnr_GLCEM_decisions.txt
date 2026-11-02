@@ -22,7 +22,7 @@ fnr_GLCEM_establish_tarraconensis = {
 		}
 	}
 
-	ai_will_do = { value = 50 }
+	ai_will_do = { value = 0 } # the AI would hand away whole regions
 
 	illustration_tags = {
 		10 = interior
@@ -67,7 +67,7 @@ fnr_GLCEM_establish_britannia = {
 		}
 	}
 
-	ai_will_do = { value = 50 }
+	ai_will_do = { value = 0 } # the AI would hand away whole regions
 
 	illustration_tags = {
 		10 = interior
@@ -112,7 +112,7 @@ fnr_GLCEM_establish_baetica = {
 		}
 	}
 
-	ai_will_do = { value = 50 }
+	ai_will_do = { value = 0 } # the AI would hand away whole regions
 
 	illustration_tags = {
 		10 = interior
@@ -157,7 +157,7 @@ fnr_GLCEM_establish_lusitania = {
 		}
 	}
 
-	ai_will_do = { value = 50 }
+	ai_will_do = { value = 0 } # the AI would hand away whole regions
 
 	illustration_tags = {
 		10 = interior
@@ -392,6 +392,96 @@ fnr_GLCEM_grant_britannia = {
 		ai_chance = { value = 100 }
 		effect = {
 			c:BRTNA = {
+				remove_variable = fnr_formation_locked
+				add_opinion = { target = root modifier = fnr_GLCEM_granted_self_rule }
+			}
+			custom_tooltip = fnr_GLCEM_grant_self_rule_tt
+		}
+	}
+}
+
+# Grant Baetica the right to reshape itself - lifts the formation lock on our released vassal
+fnr_GLCEM_grant_baetica = {
+	decision_category = country_specific_decisions
+
+	tags = { GLCEM }
+
+	potential = {
+		any_subject = {
+			has_variable = fnr_GLCEM_province_baetica
+			has_variable = fnr_formation_locked
+		}
+	}
+
+	allow = {
+		at_war = no
+	}
+
+	ai_will_do = { value = 0 }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_GLCEM_grant_baetica.a
+		ai_chance = { value = 100 }
+		effect = {
+			every_subject = {
+				limit = {
+					has_variable = fnr_GLCEM_province_baetica
+					has_variable = fnr_formation_locked
+				}
+				remove_variable = fnr_formation_locked
+				add_opinion = { target = root modifier = fnr_GLCEM_granted_self_rule }
+			}
+			custom_tooltip = fnr_GLCEM_grant_self_rule_tt
+		}
+	}
+}
+
+# Grant Lusitania the right to reshape itself - lifts the formation lock on our released vassal
+fnr_GLCEM_grant_lusitania = {
+	decision_category = country_specific_decisions
+
+	tags = { GLCEM }
+
+	potential = {
+		any_subject = {
+			has_variable = fnr_GLCEM_province_lusitania
+			has_variable = fnr_formation_locked
+		}
+	}
+
+	allow = {
+		at_war = no
+	}
+
+	ai_will_do = { value = 0 }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_GLCEM_grant_lusitania.a
+		ai_chance = { value = 100 }
+		effect = {
+			every_subject = {
+				limit = {
+					has_variable = fnr_GLCEM_province_lusitania
+					has_variable = fnr_formation_locked
+				}
 				remove_variable = fnr_formation_locked
 				add_opinion = { target = root modifier = fnr_GLCEM_granted_self_rule }
 			}

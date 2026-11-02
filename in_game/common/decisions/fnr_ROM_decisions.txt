@@ -9,6 +9,7 @@ fnr_ROM_restore_diocese_italia = {
 
 	potential = {
 		has_or_had_tag = ROM
+		has_variable = fnr_ROM_formed
 		NOT = { has_variable = fnr_ROM_diocese_italia }
 	}
 
@@ -49,6 +50,7 @@ fnr_ROM_restore_diocese_galliae = {
 
 	potential = {
 		has_or_had_tag = ROM
+		has_variable = fnr_ROM_formed
 		NOT = { has_variable = fnr_ROM_diocese_galliae }
 	}
 
@@ -89,6 +91,7 @@ fnr_ROM_restore_diocese_hispaniae = {
 
 	potential = {
 		has_or_had_tag = ROM
+		has_variable = fnr_ROM_formed
 		NOT = { has_variable = fnr_ROM_diocese_hispaniae }
 	}
 
@@ -129,6 +132,7 @@ fnr_ROM_restore_diocese_britanniae = {
 
 	potential = {
 		has_or_had_tag = ROM
+		has_variable = fnr_ROM_formed
 		NOT = { has_variable = fnr_ROM_diocese_britanniae }
 	}
 
@@ -169,6 +173,7 @@ fnr_ROM_restore_diocese_raetia = {
 
 	potential = {
 		has_or_had_tag = ROM
+		has_variable = fnr_ROM_formed
 		NOT = { has_variable = fnr_ROM_diocese_raetia }
 	}
 
@@ -209,6 +214,7 @@ fnr_ROM_restore_diocese_illyricum = {
 
 	potential = {
 		has_or_had_tag = ROM
+		has_variable = fnr_ROM_formed
 		NOT = { has_variable = fnr_ROM_diocese_illyricum }
 	}
 
@@ -249,6 +255,7 @@ fnr_ROM_restore_diocese_dacia = {
 
 	potential = {
 		has_or_had_tag = ROM
+		has_variable = fnr_ROM_formed
 		NOT = { has_variable = fnr_ROM_diocese_dacia }
 	}
 
@@ -289,6 +296,7 @@ fnr_ROM_restore_diocese_asiana = {
 
 	potential = {
 		has_or_had_tag = ROM
+		has_variable = fnr_ROM_formed
 		NOT = { has_variable = fnr_ROM_diocese_asiana }
 	}
 
@@ -329,6 +337,7 @@ fnr_ROM_restore_diocese_oriens = {
 
 	potential = {
 		has_or_had_tag = ROM
+		has_variable = fnr_ROM_formed
 		NOT = { has_variable = fnr_ROM_diocese_oriens }
 	}
 
@@ -369,6 +378,7 @@ fnr_ROM_restore_diocese_aegyptus = {
 
 	potential = {
 		has_or_had_tag = ROM
+		has_variable = fnr_ROM_formed
 		NOT = { has_variable = fnr_ROM_diocese_aegyptus }
 	}
 
@@ -409,6 +419,7 @@ fnr_ROM_restore_diocese_africa = {
 
 	potential = {
 		has_or_had_tag = ROM
+		has_variable = fnr_ROM_formed
 		NOT = { has_variable = fnr_ROM_diocese_africa }
 	}
 

@@ -13,6 +13,8 @@ fnr_PTLMY_revolt_of_the_thebaid = {
 		has_variable = fnr_PTLMY_formed
 		fnr_PTLMY_crown_at_least = { VALUE = 75 }
 		in_civil_war = no
+		NOT = { has_variable = fnr_PTLMY_thebaid_cooldown }
+		NOT = { has_country_modifier = fnr_PTLMY_thebaid_pacified }
 	}
 
 	can_end = {
@@ -75,6 +77,16 @@ fnr_PTLMY_revolt_of_the_thebaid = {
 			limit = { has_variable = fnr_PTLMY_revolt_months }
 			remove_variable = fnr_PTLMY_revolt_months
 		}
-		trigger_event_non_silently = fnr_PTLMY.64
+		set_variable = { name = fnr_PTLMY_thebaid_cooldown years = 10 }
+		if = {
+			limit = {
+				fnr_PTLMY_crown_below = { VALUE = 50 }
+				fnr_PTLMY_rebels_in_field = no
+			}
+			trigger_event_non_silently = fnr_PTLMY.64
+		}
+		else = {
+			trigger_event_non_silently = fnr_PTLMY.65
+		}
 	}
 }

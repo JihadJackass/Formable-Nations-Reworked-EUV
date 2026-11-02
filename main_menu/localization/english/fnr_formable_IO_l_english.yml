@@ -10,7 +10,7 @@
         fnr_japan_greater_east_asia_io_name: "Greater East Asia Co-Prosperity Sphere"
         fnr_japan_greater_east_asia_io_desc: "Proclaimed as a brotherhood of Asian nations united against Western imperialism, the Greater East Asia Co-Prosperity Sphere is the instrument through which the Empire of Japan extends its influence across the continent. In principle, it promises liberation: freedom from European colonial rule, mutual economic development, and a new order in which Asian peoples determine their own fate under Japanese guidance. In practice, it is a hierarchy. Tokyo sets the terms. Member nations supply the resources, the labor, and the markets that fuel the imperial war machine. Those who join willingly receive the fiction of sovereignty. Those who resist receive the reality of occupation. Whether it is remembered as a genuine attempt to unite Asia or as a veil draped over conquest depends entirely on who is left to write the history."
 
-        fnr_japan_greater_east_asia_io_list_who_tt: "TODO: list who TT"
+        fnr_japan_greater_east_asia_io_list_who_tt: "$WHO$ is a member of the [GetUniqueInternationalOrganization('fnr_japan_greater_east_asia_io').GetName] with $LIST$"
 
       # Tooltips
 
@@ -29,18 +29,18 @@
         fnr_japan_establish_chosen_desc: "The Korean peninsula has long stood as a land of ancient tradition, yet its future now lies within our sphere. By establishing the Kingdom of Chōsen under our guidance, we shall bring order to its provinces and bind its people to the greater cause of East Asian unity beneath the banner of Nippon."
 
         fnr_japan_establish_manchuria: "Establish the Manchou Empire"
-        fnr_japan_establish_manchuria_desc: "TODO"
+        fnr_japan_establish_manchuria_desc: "Manchuria is the homeland of the last imperial dynasty of China, a vast land of forests, farmland and mineral wealth lying between our holdings in Korea and the heart of the continent. By restoring the Manchou Empire under a ruler of the old imperial house, we can give its people a throne of their own while its railways, mines and garrisons remain firmly in our hands."
 
         fnr_japan_establish_philippine: "Proclaim the Second Philippine Republic"
-        fnr_japan_establish_philippine_desc: "TODO"
+        fnr_japan_establish_philippine_desc: "For centuries the Philippine islands were ruled from distant European capitals. We will grant them what their old masters never did, a republic of their own, governed by Filipinos and freed from Western rule. Its government will look to Tokyo for protection, and its harbours will serve the fleets of the Empire."
 
         fnr_japan_establish_china: "Reorganize the National Government of the Republic of China"
-        fnr_japan_establish_china_desc: "TODO"
+        fnr_japan_establish_china_desc: "China is too vast to be ruled from Tokyo alone. Instead we will reorganize its national government in Nanjing under Chinese statesmen willing to work with us, a government that speaks for China in name while it follows our lead in all matters of war, trade and foreign policy."
 
         fnr_japan_establish_inner_mongolia: "Reorganize the Inner Mongolian Region"
-        fnr_japan_establish_inner_mongolia_desc: "TODO"
+        fnr_japan_establish_inner_mongolia_desc: "The Mongol princes of the southern steppe have long resented Chinese rule over their pastures. By organizing their lands into an autonomous government under their own nobility, we gain a loyal buffer on the frontier and a base from which to watch the north."
 
-      # TODO
+      # Diplomatic Status
 
         diplomatic_status_fnr_japan_greater_east_asia_io_name: "Greater East Asia Co-Prosperity Sphere"
         diplomatic_status_fnr_japan_greater_east_asia_io_tooltip: "#T Greater East Asia Co-Prosperity Sphere#!\nThis [country|e] is a member of the Greater East Asia Co-Prosperity Sphere."

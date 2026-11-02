@@ -21,9 +21,17 @@ fnr_MGGCA_set_stage_effect = {
 
 # Favouring the Italians: the next stage is pushed back 5 years
 fnr_MGGCA_delay_effect = {
-	custom_tooltip = fnr_MGGCA_delay_tt
-	hidden_effect = {
-		set_variable = { name = fnr_MGGCA_delayed years = 5 }
+	if = {
+		limit = { fnr_MGGCA_stage_at_least = { VALUE = 4 } }
+		# No stage left to delay: the concession costs the crown instead
+		add_legitimacy = legitimacy_weak_penalty
+		add_prestige = prestige_weak_penalty
+	}
+	else = {
+		custom_tooltip = fnr_MGGCA_delay_tt
+		hidden_effect = {
+			set_variable = { name = fnr_MGGCA_delayed years = 5 }
+		}
 	}
 }
 
@@ -40,7 +48,20 @@ fnr_MGGCA_hasten_effect = {
 			limit = { has_variable = fnr_MGGCA_stage_wait }
 			remove_variable = fnr_MGGCA_stage_wait
 		}
+		if = {
+			limit = { has_variable = fnr_MGGCA_delayed }
+			remove_variable = fnr_MGGCA_delayed
+		}
 	}
+}
+
+# A claimant that can no longer revive (another state formed Magna Graecia) loses the stage bonuses and penalties
+fnr_MGGCA_cleanup_effect = {
+	if = { limit = { has_country_modifier = fnr_MGGCA_stage_1 } remove_country_modifier = fnr_MGGCA_stage_1 }
+	if = { limit = { has_country_modifier = fnr_MGGCA_stage_2 } remove_country_modifier = fnr_MGGCA_stage_2 }
+	if = { limit = { has_country_modifier = fnr_MGGCA_stage_3 } remove_country_modifier = fnr_MGGCA_stage_3 }
+	if = { limit = { has_country_modifier = fnr_MGGCA_stage_4 } remove_country_modifier = fnr_MGGCA_stage_4 }
+	remove_variable = fnr_MGGCA_stage
 }
 
 # A tenth of the non-Griko people of Salento and Calabria take up Griko

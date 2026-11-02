@@ -11,14 +11,14 @@ monthly_country_pulse = {
 fnr_GMORV_monthly_pulse = {
 	trigger = {
 		OR = {
-			succession_law = heir_selection:moravian_meritocratic_succession
+			succession_law ?= heir_selection:moravian_meritocratic_succession
 			has_country_modifier = fnr_GMORV_family_in_cabinet_bonus
 		}
 	}
 	effect = {
 		if = {
 			limit = {
-				succession_law = heir_selection:moravian_meritocratic_succession
+				succession_law ?= heir_selection:moravian_meritocratic_succession
 				has_ruler = yes
 				ruler = {
 					has_dynasty = yes

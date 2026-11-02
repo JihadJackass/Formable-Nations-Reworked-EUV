@@ -114,7 +114,7 @@ fnr_PROV.4 = {
 	outcome = negative
 
 	trigger = {
-		exists = scope:fnr_PROV_overlord
+		has_variable = fnr_PROV_risen_province
 	}
 
 	illustration_tags = {
@@ -130,9 +130,10 @@ fnr_PROV.4 = {
 		name = fnr_PROV.4.a
 		ai_chance = { factor = 100 }
 		add_prestige = prestige_mild_penalty
-		scope:fnr_PROV_rebel ?= {
+		var:fnr_PROV_risen_province ?= {
 			root = { add_opinion = { modifier = fnr_PROV_rebel_province target = prev } }
 		}
+		remove_variable = fnr_PROV_risen_province
 	}
 }
 

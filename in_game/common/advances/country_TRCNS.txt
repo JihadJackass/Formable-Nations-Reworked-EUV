@@ -37,7 +37,7 @@
 
 			tax_income_efficiency = small_tax_income_efficiency_bonus
 
-			requires = TRCNS_via_augusta
+			requires = printing_press_advance
 			allow_children = no
 		}
 
@@ -51,6 +51,6 @@
 			stability_cost_efficiency = 0.10
 			monthly_legitimacy = 0.05
 
-			requires = TRCNS_silver_of_hispania
+			requires = confessionalism_advance
 			allow_children = no
 		}

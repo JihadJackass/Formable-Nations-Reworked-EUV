@@ -202,7 +202,7 @@
 		}	
 	}
 
-# Illyria
+# Kingdom of Illyria
 	fnr_ILYRA = { # Croatia - 16th c. - Before that Dalmatia = three lion's (or leopard's) head & Croatia = dextrochere holding dagger - with Dalmatian arms mostly representing both
 		pattern = "pattern_solid.dds"
 		color1 = "white"
@@ -219,7 +219,7 @@
 	}
 
 # Prittania
-	fnr_test_flag = {
+	PRTTA = {
 		pattern = "pattern_solid.dds"
 		color1 = hsv360 { 0 0 0 } # Black
 		color2 = hsv360 { 50 99 99 } # Yellow
@@ -377,7 +377,7 @@ fnr_norse_danelaw = {
 	}
 
 # Kingdom of Armenia (Bactria)
-	CHSEN = {
+	ARMNA = {
 		textured_emblem = {
 			texture = "te_bactria_armenia.dds"
 		}	
@@ -1195,7 +1195,7 @@ HET_ce_cossackia = {
 			}
 		}
 	}
-# Illyria
+# Illyrian Provinces (Napoleonic)
 	ILYRA = {
 		pattern = "pattern_horizontal_split_01.dds"
 		color1 = "white"
@@ -1473,13 +1473,6 @@ HET_ce_cossackia = {
 			color2 = color2	
 			color3 = color3
 		}
-	}
-# Ducal Prussia
-	DCLPR = {
-		pattern = "pattern_horizontal_split_01.dds"
-		color1 = "black"
-		color2 = "white"
-		color3 = "black"
 	}
 # Ukraine
 	UKRNE = {

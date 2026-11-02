@@ -13,6 +13,13 @@ fnr_BLGUM_belgian_revolution = {
 	fire_only_once = yes
 
 	can_start = {
+		AND = { # Belgium must be allowed by the Formable Nations settings (same check as BLGUM_f)
+			OR = {
+				has_variable = fnr_historical_enabled
+				has_variable = fnr_belgium_enabled
+			}
+			NOT = { has_variable = fnr_belgium_disabled }
+		}
 		is_subject = no
 		NOT = { exists = c:BLGUM }
 		current_age_or_later = { age = age_5_absolutism }
@@ -59,10 +66,21 @@ fnr_BLGUM_belgian_revolution = {
 
 	on_monthly = {
 		hidden_effect = {
-			fnr_BLGUM_shift_independence_effect = { VALUE = 1 }
+			# Grows while the causes remain (unrest at home, a non-Catholic crown); fades once they are gone
+			if = {
+				limit = { stability < 0 }
+				fnr_BLGUM_shift_independence_effect = { VALUE = 1 }
+			}
 			if = {
 				limit = { NOT = { religion = religion:catholic } }
 				fnr_BLGUM_shift_independence_effect = { VALUE = 1 }
+			}
+			if = {
+				limit = {
+					stability >= 0
+					religion = religion:catholic
+				}
+				fnr_BLGUM_shift_independence_effect = { VALUE = -1 }
 			}
 			if = {
 				limit = {
@@ -70,7 +88,13 @@ fnr_BLGUM_belgian_revolution = {
 					NOT = { exists = c:BLGUM }
 				}
 				fnr_BLGUM_independence_effect = yes
-				trigger_event_non_silently = flavor_BLGUM.5
+				if = {
+					limit = { exists = c:BLGUM }
+					trigger_event_non_silently = flavor_BLGUM.5
+				}
+				else = {
+					set_variable = { name = fnr_BLGUM_independence value = 90 }
+				}
 			}
 		}
 		random_list = {
@@ -89,7 +113,10 @@ fnr_BLGUM_belgian_revolution = {
 
 	on_end = {
 		if = {
-			limit = { NOT = { exists = c:BLGUM } }
+			limit = {
+				NOT = { exists = c:BLGUM }
+				any_owned_location = { fnr_BLGUM_is_belgian_location = yes }
+			}
 			trigger_event_non_silently = flavor_BLGUM.6
 		}
 		if = {

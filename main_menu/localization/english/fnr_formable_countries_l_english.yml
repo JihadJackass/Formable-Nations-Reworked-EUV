@@ -106,25 +106,25 @@
     BMCDN: "Macedonia"
     BMCDN_f: "Macedonia"
     BMCDN_ADJ: "Macedonian"
-    BMCDN_f_desc: "TODO"
+    BMCDN_f_desc: "The homeland of Alexander has long been ruled by others, its people scattered and its glories remembered only in songs and ruins. Restored under the protection of Bactria, Macedonia rises again as a kingdom of its own, a living link between the far eastern heirs of the Hellenic world and the land where the great conquest began. Its kings owe their crown to the Synod, and are expected to guard the western reaches of a reborn empire."
 
     # Kingdom of Persia (Bactria)
     BPSNE: "Kingdom of Persia"
     BPSNE_f: "Kingdom of Persia"
     BPSNE_ADJ: "Persian"
-    BPSNE_f_desc: "TODO"
+    BPSNE_f_desc: "Persia has been conquered many times and has outlasted every conqueror. Under the guidance of Bactria a new throne is raised over the Iranian plateau, held by a king who honours the old traditions of the land while looking to the Hellenic East for his protection. The Kingdom of Persia is a bridge between Bactria and the West, and its rulers know well that their crown is secure only so long as they keep faith with the Synod."
 
     # Kingdom of Armenia (Bactria)
     ARMNA: "Kingdom of Armenia"
     ARMNA_f: "Kingdom of Armenia"
     ARMNA_ADJ: "Armenian"
-    ARMNA_f_desc: "TODO"
+    ARMNA_f_desc: "Armenia was a kingdom before Alexander and remained one long after his successors had fallen, a highland realm of fortresses and monasteries that has survived every empire around it. Restored under Bactrian protection, the Kingdom of Armenia once more takes its place among the nations, guarding the mountain passes between Anatolia, the Caucasus and Mesopotamia for its patrons in the East."
 
     # Chosen
     CHSEN: "Kingdom of Chōsen"
     CHSEN_f: "Kingdom of Chōsen"
     CHSEN_ADJ: "Korean"
-    CHSEN_f_desc: "TODO"
+    CHSEN_f_desc: "Korea is an ancient kingdom with its own dynasties, its own script and its own long history, yet its future is now decided in Tokyo. As the Kingdom of Chōsen it becomes a protectorate of the Empire of Japan, its throne held by a prince of the imperial house and its ports, mines and railways bound to the needs of the Empire. Some see in it a modern state. Many more see an occupation, and they will not forget it."
 
     # Angevin Empire
     AGEVN: "Angevin Empire"
@@ -276,16 +276,16 @@
     KHRMZ_f_desc: "Where the Gulf narrows to a knife's edge, no fleet passes without our leave. From our island seat we hold the pearl banks and the customs house, and the merchants of Persia, Arabia and Hind alike must reckon with the price we set. Let the mainland keep its deserts; the sea is our kingdom, and the strait is our gate."
 
     # Illyria
-    ILYRA: "Illyria"
-    ILYRA_f: "Illyria"
+    ILYRA: "Illyrian Provinces"
+    ILYRA_f: "Illyrian Provinces"
     ILYRA_ADJ: "Illyrian"
-    ILYRA_f_desc: "TODO: french revolution specific."
+    ILYRA_f_desc: "When the armies of the Revolution and the Empire redrew the map of Europe, the lands between the Alps and the Adriatic were gathered into a single administration and given an old and half-forgotten name. The Illyrian Provinces swept away the privileges of the old lords, opened schools in the language of the people, built roads along the coast and brought the codes of a new age to towns that had known only the law of Venice and Vienna. Short as their life may have been, they planted an idea that would not die, that the South Slavs could stand together as one people. To proclaim the Illyrian Provinces is to take up that idea and to build a modern state out of it."
 
     # Illyria
     ILYRK: "Illyria"
     ILYRK_f: "Illyria"
     ILYRK_ADJ: "Illyrian"
-    ILYRK_f_desc: "TODO: about kingdom of illyria."
+    ILYRK_f_desc: "Long before Rome reached the Adriatic, the Illyrian kings ruled the mountains and coasts of the western Balkans, and their name outlived their crowns. Scholars, poets and princes would return to it again and again, calling the lands of Carniola, Croatia, Dalmatia and Bosnia by the name of Illyria and dreaming of the kingdom that once held them together. A ruler who unites these lands may claim that ancient crown, binding Slavs, Albanians and the peoples of the coast under one throne in the heart of the Balkans."
 
     # Eurasian Union
     EURSN: "Eurasian Union"
@@ -1145,7 +1145,7 @@
     HNGEM: "Hungarian Empire"
     HNGEM_f: "Hungarian Empire"
     HNGEM_ADJ: "Hungarian"
-    HUNGARIANEMPIRE_f_desc: "The Hungarians once stood as the principal nation of Europe and held potential for Great Power status but were devastated by the Bubonic Plague, and the subjugated by the Austrians leading to the Austro-Hungarian Union.\n\nSuch a fate is unacceptable to the historical Magyar Realm and with the right determination we can establish an Empire of Hungarians for Hungarians."
+    HNGEM_f_desc: "The Hungarians once stood as the principal nation of Europe and held potential for Great Power status but were devastated by the Bubonic Plague, and the subjugated by the Austrians leading to the Austro-Hungarian Union.\n\nSuch a fate is unacceptable to the historical Magyar Realm and with the right determination we can establish an Empire of Hungarians for Hungarians."
 
     # Iberian Empire
     IBNEM: "Iberian Union"

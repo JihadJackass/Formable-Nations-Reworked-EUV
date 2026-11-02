@@ -83,8 +83,16 @@ fnr_TRE_offer_bride = {
 			scope:actor = { fnr_TRE_count_pacts_effect = yes }
 			if = {
 				limit = { scope:recipient = { fnr_TRE_is_georgia = yes } }
-				scope:recipient = { save_scope_as = fnr_TRE_georgia }
-				scope:actor = { trigger_event_non_silently = fnr_TRE.5 }
+				scope:recipient = {
+					save_scope_as = fnr_TRE_georgia
+					add_country_modifier = { modifier = fnr_TRE_orthodox_bulwark years = 25 }
+					add_opinion = { modifier = fnr_TRE_orthodox_bulwark_opinion target = scope:actor }
+				}
+				scope:actor = {
+					add_country_modifier = { modifier = fnr_TRE_orthodox_bulwark years = 25 }
+					add_opinion = { modifier = fnr_TRE_orthodox_bulwark_opinion target = scope:recipient }
+					trigger_event_non_silently = fnr_TRE.5
+				}
 			}
 		}
 	}

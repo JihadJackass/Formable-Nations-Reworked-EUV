@@ -67,7 +67,7 @@ fnr_PTLMY_seek_amicitia = {
 
 	reject_effect = {
 		scope:actor = {
-			add_opinion = { target = scope:recipient modifier = fnr_PTLMY_refused_rome }
+			add_opinion = { target = scope:recipient modifier = fnr_PTLMY_spurned_by_rome }
 		}
 	}
 

@@ -25,6 +25,7 @@
 			}
 
 			country_modifier = {
+				global_burghers_estate_power = 0.05
 				burghers_estate_target_satisfaction = small_privilege_target_satisfaction
 				trade_income = 0.05
 				trade_range_modifier = 0.05

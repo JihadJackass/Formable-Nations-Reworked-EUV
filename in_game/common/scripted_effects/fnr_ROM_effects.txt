@@ -89,8 +89,19 @@ fnr_ROM_yearly_legion_effect = {
 		limit = { war_exhaustion >= 5 }
 		fnr_ROM_shift_loyalty_effect = { VALUE = -3 }
 	}
-	# The Emperor's standing
+	# The Emperor's standing (republican tradition for a republican Rome)
 	if = {
+		limit = { government_type = government_type:republic }
+		if = {
+			limit = { republican_tradition < 40 }
+			fnr_ROM_shift_loyalty_effect = { VALUE = -3 }
+		}
+		else_if = {
+			limit = { republican_tradition >= 80 }
+			fnr_ROM_shift_loyalty_effect = { VALUE = 1 }
+		}
+	}
+	else_if = {
 		limit = { legitimacy < 40 }
 		fnr_ROM_shift_loyalty_effect = { VALUE = -3 }
 	}
@@ -187,10 +198,11 @@ fnr_ROM_yearly_legion_effect = {
 			fnr_RMNRP_change_senate_effect = { VALUE = -2 }
 		}
 	}
-	# Overstretch: too many frontiers for one Emperor (the Tetrarchy solves it)
+	# Overstretch: too many frontiers for one Emperor (the Tetrarchy, or the Great Republic's Senate of Generals, solves it)
 	if = {
 		limit = {
 			fnr_ROM_has_tetrarchy = no
+			NOT = { has_reform = government_reform:fnr_ROM_senate_of_generals }
 			fnr_ROM_dioceses_at_least = { VALUE = 6 }
 		}
 		fnr_ROM_shift_loyalty_effect = { VALUE = -2 }
@@ -198,6 +210,7 @@ fnr_ROM_yearly_legion_effect = {
 	if = {
 		limit = {
 			fnr_ROM_has_tetrarchy = no
+			NOT = { has_reform = government_reform:fnr_ROM_senate_of_generals }
 			fnr_ROM_dioceses_at_least = { VALUE = 9 }
 		}
 		fnr_ROM_shift_loyalty_effect = { VALUE = -2 }
@@ -315,7 +328,10 @@ fnr_ROM_formation_effect = {
 				set_variable = fnr_ROM_origin_restorer
 				set_variable = { name = fnr_ROM_legion_loyalty value = 50 }
 			}
-			set_variable = { name = fnr_ROM_dioceses value = 0 }
+			if = {
+				limit = { NOT = { has_variable = fnr_ROM_dioceses } }
+				set_variable = { name = fnr_ROM_dioceses value = 0 }
+			}
 		}
 		fnr_ROM_refresh_legion_tier_effect = yes
 		custom_tooltip = fnr_ROM_formation_tt
@@ -367,20 +383,21 @@ fnr_ROM_pick_far_location_effect = {
 	}
 }
 
-# Picks the heart of a secession in one region, or a far diocese if we hold too little there. Use with REGION
+# Picks the heart of a secession in a group of regions, or a far diocese if we hold too little there.
+# Use with TRIGGER = a location-scope scripted trigger (fnr_ROM_gallic_secession_location / fnr_ROM_palmyrene_secession_location)
 fnr_ROM_pick_region_location_effect = {
 	if = {
 		limit = {
 			any_owned_location = {
 				count >= 2
 				is_capital = no
-				region = region:$REGION$
+				$TRIGGER$ = yes
 			}
 		}
 		random_owned_location = {
 			limit = {
 				is_capital = no
-				region = region:$REGION$
+				$TRIGGER$ = yes
 			}
 			save_scope_as = fnr_ROM_revolt_1
 		}
@@ -433,7 +450,7 @@ fnr_ROM_raise_usurper_effect = {
 					is_capital = no
 					region = scope:fnr_ROM_revolt_1.region
 					NOT = { this.province = scope:fnr_ROM_revolt_1.province }
-					NOT = { this.province = scope:fnr_ROM_revolt_2.province }
+					NOT = { scope:fnr_ROM_revolt_2 ?= { province = prev.province } }
 				}
 				save_scope_as = fnr_ROM_revolt_3
 			}
@@ -442,8 +459,8 @@ fnr_ROM_raise_usurper_effect = {
 					is_capital = no
 					region = scope:fnr_ROM_revolt_1.region
 					NOT = { this.province = scope:fnr_ROM_revolt_1.province }
-					NOT = { this.province = scope:fnr_ROM_revolt_2.province }
-					NOT = { this.province = scope:fnr_ROM_revolt_3.province }
+					NOT = { scope:fnr_ROM_revolt_2 ?= { province = prev.province } }
+					NOT = { scope:fnr_ROM_revolt_3 ?= { province = prev.province } }
 				}
 				save_scope_as = fnr_ROM_revolt_4
 			}

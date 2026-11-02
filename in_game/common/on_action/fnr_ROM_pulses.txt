@@ -10,6 +10,8 @@ yearly_country_pulse = {
 		fnr_ROM_yearly_restless_pulse
 		fnr_ROM_yearly_praetorian_pulse
 		fnr_ROM_yearly_frontier_pulse
+		fnr_ROM_yearly_census_pulse
+		fnr_ROM_yearly_senate_pulse
 	}
 }
 
@@ -103,9 +105,31 @@ fnr_ROM_yearly_frontier_pulse = {
 		fnr_ROM_dioceses_at_least = { VALUE = 2 }
 	}
 	random_events = {
-		chance_to_happen = 8
+		chance_to_happen = 3
 		100 = fnr_ROM.5	# Foederati at the Limes
+	}
+}
+
+fnr_ROM_yearly_census_pulse = {
+	trigger = {
+		has_or_had_tag = ROM
+		has_variable = fnr_ROM_formed
+		fnr_ROM_dioceses_at_least = { VALUE = 2 }
+	}
+	random_events = {
+		chance_to_happen = 3
 		100 = fnr_ROM.6	# The Census of the Empire
-		100 = fnr_ROM.15	# The Senate of Rome
+	}
+}
+
+fnr_ROM_yearly_senate_pulse = {
+	trigger = {
+		has_or_had_tag = ROM
+		has_variable = fnr_ROM_formed
+		fnr_ROM_dioceses_at_least = { VALUE = 2 }
+	}
+	random_events = {
+		chance_to_happen = 2
+		100 = fnr_ROM.15	# The Senate of Rome (once)
 	}
 }

@@ -5617,7 +5617,7 @@ FormableNationsReworkedDebug_initialize = {
 				effect = {
 					if = { # Cycle: Default → Force OFF → Force ON → Default
 						limit = {
-							NOT = { has_variable = fnr_southcarolinaus_enabled }
+							NOT = { has_variable = fnr_southcarolina_enabled }
 							NOT = { has_variable = fnr_southcarolina_disabled }
 						}
 						every_country = { # Currently DEFAULT → Force OFF
@@ -5628,13 +5628,13 @@ FormableNationsReworkedDebug_initialize = {
 						limit = { has_variable = fnr_southcarolina_disabled }
 						every_country = { 
 							remove_variable = fnr_southcarolina_disabled
-							set_variable = { name = fnr_southcarolinaus_enabled value = yes }
+							set_variable = { name = fnr_southcarolina_enabled value = yes }
 						}
 					}
 					else_if = { # Currently FORCE ON → Default
-						limit = { has_variable = fnr_southcarolinaus_enabled }
+						limit = { has_variable = fnr_southcarolina_enabled }
 						every_country = {
-							remove_variable = fnr_southcarolinaus_enabled
+							remove_variable = fnr_southcarolina_enabled
 						}
 					}
 				}
@@ -5648,7 +5648,7 @@ FormableNationsReworkedDebug_initialize = {
 				effect = {
 					if = { # Cycle: Default → Force OFF → Force ON → Default
 						limit = {
-							NOT = { has_variable = fnr_northcarolinaus_enabled }
+							NOT = { has_variable = fnr_northcarolina_enabled }
 							NOT = { has_variable = fnr_northcarolina_disabled }
 						}
 						every_country = { # Currently DEFAULT → Force OFF
@@ -5659,13 +5659,13 @@ FormableNationsReworkedDebug_initialize = {
 						limit = { has_variable = fnr_northcarolina_disabled }
 						every_country = { 
 							remove_variable = fnr_northcarolina_disabled
-							set_variable = { name = fnr_northcarolinaus_enabled value = yes }
+							set_variable = { name = fnr_northcarolina_enabled value = yes }
 						}
 					}
 					else_if = { # Currently FORCE ON → Default
-						limit = { has_variable = fnr_northcarolinaus_enabled }
+						limit = { has_variable = fnr_northcarolina_enabled }
 						every_country = {
-							remove_variable = fnr_northcarolinaus_enabled
+							remove_variable = fnr_northcarolina_enabled
 						}
 					}
 				}

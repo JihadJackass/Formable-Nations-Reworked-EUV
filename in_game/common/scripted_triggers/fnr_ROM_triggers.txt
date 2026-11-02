@@ -119,3 +119,21 @@ fnr_ROM_client_area_brigantia = {
 		area = area:northumbria_area
 	}
 }
+
+# Location scope: where a Gallic Empire can secede (fnr_ROM.9)
+fnr_ROM_gallic_secession_location = {
+	OR = {
+		region = region:france_region
+		region = region:iberia_region
+		region = region:great_britain_region
+	}
+}
+
+# Location scope: where a Palmyrene Empire can secede (fnr_ROM.10)
+fnr_ROM_palmyrene_secession_location = {
+	OR = {
+		region = region:crescent_region
+		region = region:egypt_region
+		region = region:anatolia_region
+	}
+}

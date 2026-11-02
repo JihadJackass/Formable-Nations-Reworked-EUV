@@ -67,7 +67,7 @@ fnr_ROM_crisis_of_the_third_century = {
 		}
 		hidden_effect = {
 			random_list = {
-				260 = { }
+				450 = { }
 				10 = { trigger_event_silently = fnr_ROM.8 }
 				10 = { trigger_event_silently = fnr_ROM.9 }
 				10 = { trigger_event_silently = fnr_ROM.10 }

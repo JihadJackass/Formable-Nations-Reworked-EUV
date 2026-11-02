@@ -366,9 +366,9 @@ fnr_MGGCA.20 = {
 	title = fnr_MGGCA.20.title
 	desc = fnr_MGGCA.20.desc
 	outcome = neutral
-	fire_only_once = yes
 
 	trigger = {
+		NOT = { has_variable = fnr_MGGCA_event_20_done }
 		has_or_had_tag = MGGCA
 		OR = {
 			exists = c:ROM
@@ -384,6 +384,7 @@ fnr_MGGCA.20 = {
 	}
 
 	immediate = {
+		set_variable = fnr_MGGCA_event_20_done
 		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
 	}
 
@@ -440,9 +441,9 @@ fnr_MGGCA.22 = {
 	title = fnr_MGGCA.22.title
 	desc = fnr_MGGCA.22.desc
 	outcome = neutral
-	fire_only_once = yes
 
 	trigger = {
+		NOT = { has_variable = fnr_MGGCA_event_22_done }
 		fnr_MGGCA_can_revive = yes
 		fnr_MGGCA_stage_at_least = { VALUE = 1 }
 		OR = {
@@ -457,6 +458,7 @@ fnr_MGGCA.22 = {
 	}
 
 	immediate = {
+		set_variable = fnr_MGGCA_event_22_done
 		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:crown_estate }
 	}
 
@@ -481,9 +483,9 @@ fnr_MGGCA.23 = {
 	title = fnr_MGGCA.23.title
 	desc = fnr_MGGCA.23.desc
 	outcome = positive
-	fire_only_once = yes
 
 	trigger = {
+		NOT = { has_variable = fnr_MGGCA_event_23_done }
 		fnr_MGGCA_can_revive = yes
 		fnr_MGGCA_stage_at_least = { VALUE = 1 }
 		exists = c:PTLMY
@@ -495,6 +497,7 @@ fnr_MGGCA.23 = {
 	}
 
 	immediate = {
+		set_variable = fnr_MGGCA_event_23_done
 		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:clergy_estate }
 	}
 

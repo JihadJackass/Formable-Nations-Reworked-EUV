@@ -38,7 +38,7 @@
       fnr_PROV.3.desc: "The governors have been driven out and the provincial legions have taken a new oath, to us. Our overlord's armies are busy elsewhere. There will not be a better time."
       fnr_PROV.3.a: "We are free."
       fnr_PROV.4.title: "A Province Rises"
-      fnr_PROV.4.desc: "While our armies were busy, [SCOPE.sCountry('fnr_PROV_rebel').GetName] has thrown out our governors and declared itself free."
+      fnr_PROV.4.desc: "While our armies were busy, one of our provinces has thrown out our governors and declared itself free. Its new rulers want a war of independence, and they have chosen their moment well."
       fnr_PROV.4.a: "They will pay for this."
       fnr_PROV.5.title: "Provincial Pride"
       fnr_PROV.5.desc: "A new generation of our nobles has grown up with stories of the days before the Empire. Some of them have started to ask why our taxes leave the province.\n\n$fnr_PROV_years_current$"

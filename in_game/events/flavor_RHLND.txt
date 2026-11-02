@@ -8,6 +8,10 @@ flavor_RHLND.1 = {
 	fire_only_once = yes
 	outcome = neutral
 
+	trigger = {
+		tag = RHLND
+	}
+
 	image = "gfx/interface/illustrations/event/backgrounds/exterior/nobles/north_german_nobles_exterior.dds"
 
 	option = { # Das Rheinische Königreich
@@ -147,6 +151,10 @@ flavor_RHLND.5 = {
 	fire_only_once = yes
 	outcome = neutral
 
+	trigger = {
+		tag = RHLND
+	}
+
 	option = {
 		name = flavor_RHLND.5.a
 		# Stay at the current rank (scope:recipient does not exist in a country event, so the modifier was never applied)
@@ -216,7 +224,7 @@ flavor_RHLND.7 = {
 		random_owned_location = {
 			limit = {
 				is_capital = no
-				NOT = { this.province = scope:fnr_RHLND_capital.province }
+				NOT = { scope:fnr_RHLND_capital ?= { province = prev.province } }
 			}
 			save_scope_as = fnr_RHLND_seceding
 		}

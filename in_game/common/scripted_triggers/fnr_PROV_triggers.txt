@@ -1,12 +1,9 @@
 ﻿# Roman provinces of the Gallic Empire (Pax Romana): Tarraconensis, Britannia, Baetica, Lusitania
 
 # Country scope: one of the provinces
+# (set when the Gallic Empire releases it; a Tarraconensis or Britannia formed some other way is not a province)
 fnr_PROV_is_province = {
-	OR = {
-		has_or_had_tag = TRCNS
-		has_or_had_tag = BRTNA
-		has_variable = fnr_GLCEM_province
-	}
+	has_variable = fnr_GLCEM_province
 }
 
 # Years served as a subject is at least VALUE

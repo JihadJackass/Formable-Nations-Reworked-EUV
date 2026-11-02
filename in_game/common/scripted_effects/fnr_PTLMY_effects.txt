@@ -171,10 +171,18 @@ fnr_PTLMY_yearly_crown_effect = {
 		limit = { NOT = { has_variable = fnr_PTLMY_crown } }
 		set_variable = { name = fnr_PTLMY_crown value = 0 }
 	}
-	# Drift 1 a year towards the Double Crown
+	# Drift 2 a year towards the Double Crown (1 when only 1 away)
 	if = {
+		limit = { trigger_if = { limit = { has_variable = fnr_PTLMY_crown } var:fnr_PTLMY_crown > 1 } trigger_else = { always = no } }
+		fnr_PTLMY_shift_crown_effect = { VALUE = -2 }
+	}
+	else_if = {
 		limit = { trigger_if = { limit = { has_variable = fnr_PTLMY_crown } var:fnr_PTLMY_crown > 0 } trigger_else = { always = no } }
 		fnr_PTLMY_shift_crown_effect = { VALUE = -1 }
+	}
+	else_if = {
+		limit = { trigger_if = { limit = { has_variable = fnr_PTLMY_crown } var:fnr_PTLMY_crown < -1 } trigger_else = { always = no } }
+		fnr_PTLMY_shift_crown_effect = { VALUE = 2 }
 	}
 	else_if = {
 		limit = { trigger_if = { limit = { has_variable = fnr_PTLMY_crown } var:fnr_PTLMY_crown < 0 } trigger_else = { always = no } }
@@ -466,7 +474,7 @@ fnr_PTLMY_rebellion_effect = {
 					is_capital = no
 					area = scope:fnr_PTLMY_revolt_1.area
 					NOT = { this.province = scope:fnr_PTLMY_revolt_1.province }
-					NOT = { this.province = scope:fnr_PTLMY_revolt_2.province }
+					NOT = { scope:fnr_PTLMY_revolt_2 ?= { province = prev.province } }
 				}
 				save_scope_as = fnr_PTLMY_revolt_3
 			}
@@ -474,9 +482,9 @@ fnr_PTLMY_rebellion_effect = {
 				limit = {
 					is_capital = no
 					NOT = { this.province = scope:fnr_PTLMY_revolt_1.province }
-					NOT = { this.province = scope:fnr_PTLMY_revolt_2.province }
-					NOT = { this.province = scope:fnr_PTLMY_revolt_3.province }
-					region = scope:fnr_PTLMY_revolt_1.region
+					NOT = { scope:fnr_PTLMY_revolt_2 ?= { province = prev.province } }
+					NOT = { scope:fnr_PTLMY_revolt_3 ?= { province = prev.province } }
+					area = scope:fnr_PTLMY_revolt_1.area
 				}
 				save_scope_as = fnr_PTLMY_revolt_4
 			}

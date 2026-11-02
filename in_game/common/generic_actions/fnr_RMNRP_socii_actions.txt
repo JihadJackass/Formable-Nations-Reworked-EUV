@@ -265,6 +265,11 @@ fnr_RMNRP_socii_incorporate = {
 
 		}
 		enabled = {
+			is_ai = yes
+			OR = {
+				is_subject = no
+				is_subject_of = scope:actor
+			}
 			at_war = no
 			num_locations < 30
 			opinion = {

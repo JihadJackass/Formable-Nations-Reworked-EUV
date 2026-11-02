@@ -5805,6 +5805,8 @@
 						OR = {
 							tag = ILYRA
 							tag_exists = ILYRA
+							tag = ILYRK
+							tag_exists = ILYRK
 						}
 					}
 					culture = { has_culture_group = culture_group:slavic_group }
@@ -5814,7 +5816,7 @@
 					current_age_or_later = { age = age_5_absolutism }
 				}
 				name = ILYRA
-				flag = fnr_ILYRA
+				flag = ILYRA
 				adjective = ILYRA_ADJ
 				tag = ILYRA
 				color = map_ILYRA
@@ -5840,16 +5842,18 @@
 						OR = {
 							tag = ILYRA
 							tag_exists = ILYRA
+							tag = ILYRK
+							tag_exists = ILYRK
 						}
 					}
 					culture = { has_culture_group = culture_group:slavic_group }
 					culture = { has_culture_group = culture_group:south_slavic_group }
 				}
-				name = ILYRA
+				name = ILYRK
 				flag = fnr_ILYRA
-				adjective = ILYRA_ADJ
-				tag = ILYRA
-				color = map_ILYRA
+				adjective = ILYRK_ADJ
+				tag = ILYRK
+				color = map_ILYRK
 				areas = { bosnia_area slavonia_area croatia_area serbia_area }
 				provinces = { illyria_province prilep_province lower_carniola_province }
 				locations = { kruje debar skopje tirana durres }
@@ -6313,7 +6317,7 @@
 					}
 				}
 				name = PRTTA
-				flag = fnr_test_flag # TODO
+				flag = PRTTA_ce
 				adjective = PRTTA_ADJ
 				tag = PRTTA
 				color = map_PRTTA

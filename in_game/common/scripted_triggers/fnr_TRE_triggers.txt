@@ -64,3 +64,11 @@ fnr_TRE_is_byzantium = {
 		tag = EASRE
 	}
 }
+
+# Country scope: Peril applies (Trebizond itself, or Pontus formed by it - not a Komnenian Rome)
+fnr_TRE_has_peril = {
+	OR = {
+		tag = TRE
+		tag = PONTU
+	}
+}

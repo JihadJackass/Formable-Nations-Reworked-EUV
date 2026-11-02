@@ -39,7 +39,9 @@ fnr_TRE.2 = {
 
 	trigger = {
 		fnr_TRE_is_komnenian = yes
+		fnr_TRE_has_peril = yes
 		fnr_TRE_peril_at_least = { VALUE = 50 }
+		any_neighbor_country = { fnr_TRE_is_turkish = yes }
 	}
 
 	illustration_tags = {
@@ -194,7 +196,7 @@ fnr_TRE.5 = {
 	outcome = positive
 
 	trigger = {
-		exists = scope:fnr_TRE_georgia
+		always = yes
 	}
 
 	illustration_tags = {
@@ -209,12 +211,7 @@ fnr_TRE.5 = {
 	option = {
 		name = fnr_TRE.5.a
 		ai_chance = { factor = 100 }
-		add_country_modifier = { modifier = fnr_TRE_orthodox_bulwark years = 25 }
-		add_opinion = { modifier = fnr_TRE_orthodox_bulwark_opinion target = scope:fnr_TRE_georgia }
-		scope:fnr_TRE_georgia = {
-			add_country_modifier = { modifier = fnr_TRE_orthodox_bulwark years = 25 }
-			add_opinion = { modifier = fnr_TRE_orthodox_bulwark_opinion target = root }
-		}
+		custom_tooltip = fnr_TRE_bulwark_tt
 	}
 }
 
