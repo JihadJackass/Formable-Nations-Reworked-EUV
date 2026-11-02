@@ -50,7 +50,7 @@
       # IO
 
         fnr_bactria_synod_io: "Bactrian Synod"
-        fnr_bactria_synod_io_desc: "Born in the shadow of the Hindu Kush, the Bactrian Synod is a pact of nations united by a shared vision — the restoration of Alexander's empire. Its members pledge to reclaim the old Hellenic domains, from the mountains of Macedonia to the plains of Mesopotamia, re-establishing loyal states under Bactrian leadership. What the Diadochi tore apart, the Synod shall forge anew. Where once there were many successors, there shall be one empire reborn."
+        fnr_bactria_synod_io_desc: "Born in the shadow of the Hindu Kush, the Bactrian Synod is a pact of nations united by a shared vision, the restoration of Alexander's empire. Its members pledge to reclaim the old Hellenic domains, from the mountains of Macedonia to the plains of Mesopotamia, re-establishing loyal states under Bactrian leadership. What the Diadochi tore apart, the Synod shall forge anew. Where once there were many successors, there shall be one empire reborn."
 
         fnr_bactria_synod_io_list_who_tt: "$WHO$ is a member of the [GetUniqueInternationalOrganization('fnr_bactria_synod_io').GetName] with $LIST$"
 

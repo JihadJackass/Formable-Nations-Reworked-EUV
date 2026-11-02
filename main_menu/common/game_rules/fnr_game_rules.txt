@@ -1,0 +1,17 @@
+﻿# Formable Nations: Reworked game rules
+
+fnr_country_names = {
+	default = fnr_country_names_default
+	fnr_country_names_default = {
+		flag = fnr_country_names_default
+		flag = flavour_rule
+	}
+	fnr_country_names_simple = {
+		flag = fnr_country_names_simple
+		flag = flavour_rule
+	}
+	fnr_country_names_vanilla = {
+		flag = fnr_country_names_vanilla
+		flag = flavour_rule
+	}
+}

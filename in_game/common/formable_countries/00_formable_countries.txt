@@ -20,7 +20,13 @@ SCA_f = {
 	
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
-		has_variable = fnr_historical_enabled # FNR
+		AND = { # FNR: historical formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				has_variable = fnr_historical_enabled
+				has_variable = fnr_vanilla_sca_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_sca_disabled }
+		}
 		NOT = { # FNR
 			OR = {
 				tag = SCA
@@ -59,7 +65,13 @@ sweden_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
-		has_variable = fnr_historical_enabled # FNR
+		AND = { # FNR: historical formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				has_variable = fnr_historical_enabled
+				has_variable = fnr_vanilla_sweden_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_sweden_disabled }
+		}
 		NOT = { # FNR
 			OR = {
 				tag = SWE
@@ -100,6 +112,13 @@ denmark_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_denmark_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_denmark_disabled }
+		}
 		culture = culture:danish
 	}
 	
@@ -129,6 +148,13 @@ DRD_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_drd_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_drd_disabled }
+		}
 		any_primary_or_accepted_or_tolerated_culture = {
 			OR = {
 				has_culture_group = culture_group:scottish_group
@@ -175,6 +201,13 @@ GBR_f = {
 	
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_gbr_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_gbr_disabled }
+		}
 		culture ?= { has_culture_group = culture_group:british_group }
 	}
 
@@ -262,6 +295,13 @@ ENG_f = {
 	
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_eng_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_eng_disabled }
+		}
 		OR = {
 			culture = culture:english
 			culture.language = language:english_language
@@ -298,6 +338,13 @@ WLS_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_wls_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_wls_disabled }
+		}
 		OR = {
 			culture = culture:welsh
 			culture.language = language:brythonic_language
@@ -328,6 +375,13 @@ SCO_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_sco_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_sco_disabled }
+		}
 		culture = { has_culture_group = culture_group:scottish_group }
 	}
 
@@ -357,6 +411,13 @@ NOL_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_nol_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_nol_disabled }
+		}
 		culture ?= { language = language:english_language }
 		NOT = { tag = ENG } # FNR
 	}
@@ -389,6 +450,13 @@ IRE_f = {
 	# belongs to neither the High Kingship nor the Lordship of Ireland.
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_ire_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_ire_disabled }
+		}
 		OR = {
 			culture = { has_culture_group = culture_group:hibernian_group }
 			tag = PLE
@@ -440,6 +508,13 @@ IRE_high_kingship_f = {
 	# Shown only to High Kingship members. The leader-of-the-IO check lives in allow.
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_ire_high_kingship_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_ire_high_kingship_disabled }
+		}
 		is_member_of_international_organization_of_type = { type = high_kingship }
 	}
 
@@ -496,6 +571,13 @@ IRE_lordship_of_ireland_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_ire_lordship_of_ireland_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_ire_lordship_of_ireland_disabled }
+		}
 		is_member_of_international_organization = international_organization:lordship_of_ireland
 	}
 
@@ -539,6 +621,13 @@ MTH_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_mth_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_mth_disabled }
+		}
 		culture = { has_culture_group = culture_group:hibernian_group }
 	}
 
@@ -571,6 +660,13 @@ MCM_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_mcm_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_mcm_disabled }
+		}
 		culture = { has_culture_group = culture_group:hibernian_group }
 	}
 
@@ -604,6 +700,13 @@ SWI_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_swi_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_swi_disabled }
+		}
 		culture = { has_culture_group = culture_group:swiss_group }
 	}
 
@@ -649,6 +752,13 @@ ADU_f = {
 	
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_adu_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_adu_disabled }
+		}
 		culture = { has_culture_group = culture_group:iberian_group }
 		religion.group = religion_group:muslim
 
@@ -692,6 +802,13 @@ ARA_f = { # Aragon
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_ara_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_ara_disabled }
+		}
 		NOT = { tag = ARA }
 		OR = {
 			culture = culture:aragonese
@@ -724,6 +841,13 @@ CAS_f = { # Castile
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_cas_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_cas_disabled }
+		}
 		NOT = { tag = CAS }
 		culture = culture:castilian
 		religion.group = religion_group:christian
@@ -753,6 +877,13 @@ CAT_f = { # Catalonia
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_cat_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_cat_disabled }
+		}
 		NOT = { tag = CAT }
 		culture = culture:catalan
 		religion.group = religion_group:christian
@@ -782,6 +913,13 @@ GLC_f = { # Galicia
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_glc_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_glc_disabled }
+		}
 		NOT = { tag = GLC }
 		culture = culture:galician
 		religion.group = religion_group:christian
@@ -811,6 +949,13 @@ LON_f = { # Leon
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_lon_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_lon_disabled }
+		}
 		NOT = { tag = LON }
 		culture = culture:leonese
 		religion.group = religion_group:christian
@@ -840,6 +985,13 @@ MLL_f = { # Mallorca
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_mll_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_mll_disabled }
+		}
 		NOT = { tag = MLL }
 		culture = culture:catalan
 		religion.group = religion_group:christian
@@ -869,6 +1021,13 @@ NAV_f = { # Navarre
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_nav_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_nav_disabled }
+		}
 		NOT = { tag = NAV }
 		NOT = { # FNR
 			OR = {
@@ -908,6 +1067,13 @@ POR_f = { # Portugal
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_por_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_por_disabled }
+		}
 		NOT = { tag = POR }
 		culture = culture:portuguese
 		religion.group = religion_group:christian
@@ -940,6 +1106,13 @@ SPA_f = {
 	
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_spa_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_spa_disabled }
+		}
 		culture ?= { has_culture_group = culture_group:iberian_group }
 		religion.group = religion_group:christian
 	}
@@ -981,6 +1154,13 @@ VAL_f = { # Valencia
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_val_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_val_disabled }
+		}
 		NOT = { tag = VAL }
 		culture = culture:catalan
 		religion.group = religion_group:christian
@@ -1011,6 +1191,13 @@ AIA_f = { # Arabia
 	
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_aia_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_aia_disabled }
+		}
 		culture = { has_culture_group = culture_group:arabian_group }
 	}
 
@@ -1039,6 +1226,13 @@ EGY_f = {
 	
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_egy_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_egy_disabled }
+		}
 		NOT = { tag = MAM }
 	}
 
@@ -1067,6 +1261,13 @@ KOA_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_koa_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_koa_disabled }
+		}
 		religion = religion:catholic
 	}
 
@@ -1114,6 +1315,13 @@ LAT_f = {
 	rule = plausible
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_lat_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_lat_disabled }
+		}
 		OR = {
 			has_variable = fnr_nonhistorical_enabled
 			has_variable = fnr_latinempire_enabled
@@ -1199,6 +1407,13 @@ LAT_REDUCED_REQUIREMENTS_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_lat_reduced_requirements_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_lat_reduced_requirements_disabled }
+		}
 		NOT = { country_exists = c:LAT }
 		religion = religion:catholic
 		has_variable = lat_reduced_requirements_to_form
@@ -1316,6 +1531,13 @@ THE_f = {
 	capital_required = no
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_the_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_the_disabled }
+		}
 		NOT = { country_exists = c:THE }
 		NOT = { tag = LAT }
 		is_frankokratia_state = yes
@@ -1367,6 +1589,13 @@ THE_REDUCED_REQUIREMENTS_f = {
 	capital_required = no
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_the_reduced_requirements_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_the_reduced_requirements_disabled }
+		}
 		NOT = { country_exists = c:THE }
 		NOT = { tag = LAT }
 		is_frankokratia_state = yes
@@ -1424,6 +1653,13 @@ SAR_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_sar_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_sar_disabled }
+		}
 		culture = culture:sardinian
 	}
 
@@ -1460,6 +1696,13 @@ SAR_piedmont_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_sar_piedmont_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_sar_piedmont_disabled }
+		}
 		culture = { has_culture_group = culture_group:italian_group }
 	}
 
@@ -1495,6 +1738,13 @@ MSI_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_msi_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_msi_disabled }
+		}
 		culture = culture:mossi
 	}
 
@@ -1524,6 +1774,13 @@ BEJ_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_bej_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_bej_disabled }
+		}
 		culture = culture:beja_culture
 	}
 
@@ -1556,6 +1813,13 @@ ETH_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_eth_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_eth_disabled }
+		}
 		OR = {
 			culture = culture:agaw_culture
 			culture = culture:amhara
@@ -1595,6 +1859,13 @@ BAV_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_bav_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_bav_disabled }
+		}
 		culture = culture:danube_bavarian
 	}
 
@@ -1632,6 +1903,13 @@ HAB_f = {
 	
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_hab_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_hab_disabled }
+		}
 		OR = {
 			culture = culture:danube_bavarian
 			culture = culture:southern_bavarian
@@ -1676,6 +1954,13 @@ BOH_f = {
 	
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_boh_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_boh_disabled }
+		}
 		OR = {
 			culture = culture:czech
 			culture = culture:moravian
@@ -1722,6 +2007,13 @@ SAX_f = { # Saxony
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_sax_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_sax_disabled }
+		}
 		OR = {
 			culture = culture:saxon
 			culture = culture:lower_saxon
@@ -1761,6 +2053,13 @@ NSA_f = { # Nassau
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_nsa_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_nsa_disabled }
+		}
 		OR = {
 			culture = culture:rhine_franconian
 			culture = culture:moselle_franconian
@@ -1788,6 +2087,13 @@ MKL_f = {
 	rule = historical
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_mkl_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_mkl_disabled }
+		}
 		culture = culture:western_pomeranian
 	}
 	
@@ -1812,6 +2118,13 @@ POM_f = {
 	rule = historical
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_pom_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_pom_disabled }
+		}
 		OR = {
 			culture = culture:eastern_pomeranian
 			culture = culture:western_pomeranian
@@ -1841,6 +2154,13 @@ PRU_f = { #Prussia
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_pru_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_pru_disabled }
+		}
 		culture = { has_culture_group = culture_group:german_group }
 	}
 	allow = {
@@ -1888,6 +2208,13 @@ LIV_f = {
 	rule = plausible
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_liv_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_liv_disabled }
+		}
 		any_primary_or_accepted_or_tolerated_culture = { has_culture_group = culture_group:german_group }
 	}
 
@@ -1915,6 +2242,13 @@ LVA_f = { # Baltic
 	 
 	potential = {	
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_lva_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_lva_disabled }
+		}
 		any_primary_or_accepted_or_tolerated_culture = { has_culture_group = culture_group:baltic_group }
 	}
 
@@ -1948,6 +2282,13 @@ GER_f = {
 	rule = plausible
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_ger_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_ger_disabled }
+		}
 		culture = { has_culture_group = culture_group:german_group }
 	}
 	
@@ -1977,6 +2318,13 @@ HRE_f = {
 	rule = plausible
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_hre_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_hre_disabled }
+		}
 		exists = international_organization:hre
 		is_member_of_international_organization = international_organization:hre
 	}
@@ -2009,6 +2357,13 @@ MOL_f = {
 	rule = historical
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_mol_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_mol_disabled }
+		}
 		culture = culture:moldovan
 	}
 	
@@ -2031,6 +2386,13 @@ MAZ_f = { # Mazovia
 	rule = historical
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_maz_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_maz_disabled }
+		}
 		culture = culture:mazovian
 	}
 	allow = {
@@ -2058,6 +2420,13 @@ SIL_f = {
 	rule = historical
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_sil_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_sil_disabled }
+		}
 		OR = {
 			culture = culture:silesian
 			culture = culture:german_silesian
@@ -2087,6 +2456,13 @@ POL_f = {
 	rule = historical
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_pol_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_pol_disabled }
+		}
 		culture = { has_culture_group = culture_group:polish_group }
 	}
 	allow = {
@@ -2118,7 +2494,13 @@ PLC_f = {
 	rule = historical
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
-		has_variable = fnr_historical_enabled # FNR
+		AND = { # FNR: historical formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				has_variable = fnr_historical_enabled
+				has_variable = fnr_vanilla_plc_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_plc_disabled }
+		}
 		NOT = { # FNR
 			OR = {
 				tag = PLC
@@ -2208,6 +2590,13 @@ UKR_f = { #Ruthenia
 	rule = plausible
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_ukr_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_ukr_disabled }
+		}
 		OR = {
 			culture = culture:halychian_culture
 			culture = culture:polatskian_culture
@@ -2245,6 +2634,13 @@ ROM_f = {
 	
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_rom_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_rom_disabled }
+		}
 		NOR = {
 			has_or_had_tag = BYZ
 			has_or_had_tag = TRE
@@ -2329,6 +2725,13 @@ ROM_BYZ_f = {
 	
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_rom_byz_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_rom_byz_disabled }
+		}
 		OR = {
 			has_or_had_tag = BYZ
 			has_or_had_tag = TRE
@@ -2416,6 +2819,13 @@ CTH_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_cth_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_cth_disabled }
+		}
 		culture = { has_culture_group = culture_group:amazigh_group }
 	}
 
@@ -2459,6 +2869,13 @@ MLC_f = {
 	rule = historical
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_mlc_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_mlc_disabled }
+		}
 		always = no #Event
 	}
 	allow = {
@@ -2488,6 +2905,13 @@ ULS_f = {
 	 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_uls_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_uls_disabled }
+		}
 		OR = {
 			culture = { has_culture_group = culture_group:celtic_group }
 			culture = { has_culture_group = culture_group:hibernian_group }
@@ -2518,6 +2942,13 @@ CNN_f = {
 	 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_cnn_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_cnn_disabled }
+		}
 		OR = {
 			culture = { has_culture_group = culture_group:celtic_group }
 			culture = { has_culture_group = culture_group:hibernian_group }
@@ -2548,6 +2979,13 @@ ITA_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_ita_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_ita_disabled }
+		}
 		culture = { has_culture_group = culture_group:italian_group }
 	}
 
@@ -2586,6 +3024,13 @@ FRA_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_fra_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_fra_disabled }
+		}
 		culture = { has_culture_group = culture_group:french_group }
 	}
 
@@ -2614,6 +3059,13 @@ LOT_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_lot_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_lot_disabled }
+		}
 		OR = {
 			tag = AAC # FNR
 			culture = culture:rhine_alemannic
@@ -2658,6 +3110,13 @@ BGP_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_bgp_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_bgp_disabled }
+		}
 		OR = {
 			culture = culture:arpitan
 			culture = culture:vivaro_alpine
@@ -2696,6 +3155,13 @@ TWS_f = {
 	content_priority = 800
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_tws_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_tws_disabled }
+		}
 		not = { tag = ITA }
 		OR = {
 			culture = culture:sicilian
@@ -2760,6 +3226,13 @@ RUS_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_rus_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_rus_disabled }
+		}
 		culture = { has_culture_group = culture_group:russian_group }
 		NOT = { # FNR
 			OR = {
@@ -2814,6 +3287,13 @@ GRE_f = {
 	rule = historical
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_gre_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_gre_disabled }
+		}
 		NOT = { country_exists = c:BYZ }
 		NOT = { tag = TUR }
 	}
@@ -2846,6 +3326,13 @@ BYZ_f = {
 	rule = historical
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_byz_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_byz_disabled }
+		}
 		culture = { has_culture_group = culture_group:greek_group }
 		NOT = { has_or_had_tag = TRE }
 	}
@@ -2892,6 +3379,13 @@ BYZ_trebizond_f = {
 	rule = historical
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_byz_trebizond_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_byz_trebizond_disabled }
+		}
 		has_or_had_tag = TRE
 		culture = { has_culture_group = culture_group:greek_group }
 	}
@@ -2950,6 +3444,13 @@ HEN_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_hen_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_hen_disabled }
+		}
 		culture.language = language:brythonic_language
 	}
 
@@ -2980,6 +3481,13 @@ USA_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_usa_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_usa_disabled }
+		}
 		culture ?= {
 			is_culture_native_american = no
 			has_culture_group = culture_group:british_group
@@ -3012,6 +3520,13 @@ CAN_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_can_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_can_disabled }
+		}
 		culture ?= {
 			is_culture_native_american = no
 			OR = {
@@ -3047,6 +3562,13 @@ MEX_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_mex_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_mex_disabled }
+		}
 		OR = {
 			any_primary_or_accepted_or_tolerated_culture ?= { has_culture_group = culture_group:iberian_group }
 			religion.group = religion_group:christian
@@ -3080,6 +3602,13 @@ MEX_f = {
 BNG_f = {
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_bng_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_bng_disabled }
+		}
 	}
 	level = 3
 	required_locations_fraction = 0.8
@@ -3109,6 +3638,13 @@ DLH_f = {
 	
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_dlh_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_dlh_disabled }
+		}
 	}
 	allow = {
 		religion.group = religion_group:muslim
@@ -3148,6 +3684,13 @@ NPL_f = {
 	rule = historical
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_npl_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_npl_disabled }
+		}
 	}
 	allow = {
 		culture = { has_culture_group = culture_group:nepali_group }
@@ -3172,6 +3715,13 @@ MUG_f = {
 	
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_mug_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_mug_disabled }
+		}
 		religion.group = religion_group:muslim
 		culture ?= {
 			OR = {
@@ -3217,6 +3767,13 @@ DEC_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_dec_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_dec_disabled }
+		}
 		any_primary_or_accepted_or_tolerated_culture = {
 			OR = {
 				language = language:marathi_language
@@ -3256,6 +3813,13 @@ MHR_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_mhr_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_mhr_disabled }
+		}
 		any_primary_or_accepted_or_tolerated_culture = {
 			language = language:marathi_language
 		}
@@ -3286,6 +3850,13 @@ HIN_f = {
 	rule = plausible
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_hin_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_hin_disabled }
+		}
 	}
 	allow = {
 	}
@@ -3309,6 +3880,13 @@ PUN_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_pun_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_pun_disabled }
+		}
 		culture = culture:punjabi
 	}
 
@@ -3336,6 +3914,13 @@ RJP_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_rjp_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_rjp_disabled }
+		}
 		culture.language = language:rajasthani_language
 	}
 
@@ -3363,6 +3948,13 @@ GUJ_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_guj_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_guj_disabled }
+		}
 		culture.language = language:gujarati_language
 	}
 
@@ -3392,6 +3984,13 @@ SHA_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_sha_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_sha_disabled }
+		}
 		culture = { has_culture_group = culture_group:shan_group }
 	}
 
@@ -3419,6 +4018,13 @@ MSA_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_msa_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_msa_disabled }
+		}
 		culture = culture:malay_culture
 		religion.group = religion_group:muslim
 	}
@@ -3447,6 +4053,13 @@ SIA_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_sia_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_sia_disabled }
+		}
 		culture = culture:thai_culture
 	}
 
@@ -3475,6 +4088,13 @@ BAN_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_ban_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_ban_disabled }
+		}
 		culture = culture:sundanese_culture
 	}
 
@@ -3505,6 +4125,13 @@ IRA_f = {
 	rule = historical
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_ira_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_ira_disabled }
+		}
 		culture = { has_culture_group = culture_group:iranian_group }
 		NOT = { tag = ERSHR } # FNR
 	}
@@ -3533,6 +4160,13 @@ TIB_f = {
 	rule = historical
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_tib_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_tib_disabled }
+		}
 		culture = { has_culture_group = culture_group:tibetan_group }
 	}
 	name = TIB
@@ -3555,6 +4189,13 @@ SKO_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_sko_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_sko_disabled }
+		}
 		OR = {
 			culture = culture:hausa
 			culture = culture:fulbe
@@ -3588,6 +4229,13 @@ HAU_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_hau_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_hau_disabled }
+		}
 		culture = culture:hausa
 	}
 
@@ -3616,6 +4264,13 @@ KON_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_kon_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_kon_disabled }
+		}
 		religion = religion:bantu_religion
 	}
 
@@ -3644,6 +4299,13 @@ NTR_f = {
 	
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_ntr_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_ntr_disabled }
+		}
 		culture = culture:maori_culture
 	}
 
@@ -3671,6 +4333,13 @@ AIR_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_air_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_air_disabled }
+		}
 		culture = culture:tuareg
 	}
 
@@ -3700,6 +4369,13 @@ KOJ_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_koj_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_koj_disabled }
+		}
 		religion = religion:catholic
 		OR = {
 			tag = CYP
@@ -3746,6 +4422,13 @@ INC_f = {
 	rule = historical	
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_inc_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_inc_disabled }
+		}
 		culture.language = language:quechuan_language
 	}
 
@@ -3795,6 +4478,13 @@ TIM_f = {
 	
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_tim_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_tim_disabled }
+		}
 		culture = culture:uzbek_culture
 	}
 
@@ -3819,6 +4509,13 @@ SER_f = {
 	rule = historical
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_ser_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_ser_disabled }
+		}
 		culture = culture:serbian
 	}
 
@@ -3842,6 +4539,13 @@ MCH_f = {
 	
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_mch_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_mch_disabled }
+		}
 		culture ?= { has_culture_group = culture_group:jurchen_group }
 	}
 
@@ -3869,6 +4573,13 @@ YMT_f = {
 	rule = historical
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_ymt_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_ymt_disabled }
+		}
 		always = no
 	}
 
@@ -3888,6 +4599,13 @@ SHL_f = {
 	
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_shl_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_shl_disabled }
+		}
 		culture = culture:holsatian
 	}
 
@@ -3910,7 +4628,13 @@ RUM_f = {
 	rule = historical
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
-		has_variable = fnr_nonhistorical_enabled # FNR
+		AND = { # FNR: nonhistorical formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				has_variable = fnr_nonhistorical_enabled
+				has_variable = fnr_vanilla_rum_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_rum_disabled }
+		}
 		NOT = { # FNR
 			OR = {
 				tag = RUM
@@ -3953,7 +4677,13 @@ MGE_f = {
 	rule = historical
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
-		has_variable = fnr_fantasy_enabled # FNR
+		AND = { # FNR: fantasy formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				has_variable = fnr_fantasy_enabled
+				has_variable = fnr_vanilla_mge_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_mge_disabled }
+		}
 		NOT = { # FNR
 			OR = {
 				tag = MGE
@@ -4037,6 +4767,13 @@ MGO_f = {
 	rule = historical
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_mgo_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_mgo_disabled }
+		}
 		culture = {
 			has_culture_group = culture_group:mongolian_group
 		}
@@ -4065,6 +4802,13 @@ ILK_f = {
 	rule = historical
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_ilk_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_ilk_disabled }
+		}
 		exists = international_organization:ilkhanate
 		is_member_of_international_organization = international_organization:ilkhanate
 		NOT = { 
@@ -4119,6 +4863,13 @@ GEO_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_geo_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_geo_disabled }
+		}
 		culture = culture:georgian_culture
 	}
 	
@@ -4148,7 +4899,13 @@ ARM_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
-		has_variable = fnr_historical_enabled # FNR
+		AND = { # FNR: historical formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				has_variable = fnr_historical_enabled
+				has_variable = fnr_vanilla_arm_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_arm_disabled }
+		}
 		NOT = { # FNR
 			OR = {
 				tag = ARM
@@ -4186,6 +4943,13 @@ AYU_f = {
 	rule = historical
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_ayu_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_ayu_disabled }
+		}
 		always = no #Formed by event
 	}
 	
@@ -4215,6 +4979,13 @@ ALB_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_alb_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_alb_disabled }
+		}
 		culture = culture:albanian
 	}
 	
@@ -4243,6 +5014,13 @@ BAH_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_bah_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_bah_disabled }
+		}
 		always = no #Formed by event
 	}
 	
@@ -4272,6 +5050,13 @@ DAH_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_dah_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_dah_disabled }
+		}
 		always = no #Formed by event
 	}
 	
@@ -4300,6 +5085,13 @@ MAY_f = {
 	 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_may_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_may_disabled }
+		}
 		OR = {
 			culture.language = language:maya_language
 			religion = religion:mayan
@@ -4335,6 +5127,13 @@ KRY_f = {
 	 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_kry_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_kry_disabled }
+		}
 		culture = culture:gilak_culture
 	}
 
@@ -4365,6 +5164,13 @@ RYU_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_ryu_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_ryu_disabled }
+		}
 		culture = culture:ryukyu_culture
 	}
 
@@ -4393,6 +5199,13 @@ CHI_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_chi_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_chi_disabled }
+		}
 		culture = {
 			has_culture_group = culture_group:chinese_group
 		}
@@ -4423,6 +5236,13 @@ IRO_f = { # Haudenosaunee / Iroquois Confederacy
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_iro_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_iro_disabled }
+		}
 		culture = { has_culture_group = culture_group:haudenosaunee_group }
 	}
 
@@ -4457,6 +5277,13 @@ PUE_f = { # United Pueblo
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_pue_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_pue_disabled }
+		}
 		OR = {
 			culture = culture:keres_culture
 			culture = culture:zuni_culture
@@ -4507,6 +5334,13 @@ RMN_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_rmn_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_rmn_disabled }
+		}
 		culture = { has_culture_group = culture_group:romanian_group }
 	}
 	allow = {
@@ -4538,6 +5372,13 @@ SWA_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_swa_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_swa_disabled }
+		}
 		culture = culture:swabian
 	}
 	allow = {
@@ -4565,6 +5406,13 @@ WES_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_wes_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_wes_disabled }
+		}
 		culture = culture:westphalian
 	}
 	allow = {
@@ -4603,6 +5451,13 @@ FKN_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_fkn_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_fkn_disabled }
+		}
 		culture = culture:east_franconian
 	}
 	allow = {
@@ -4630,6 +5485,13 @@ HAN_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_han_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_han_disabled }
+		}
 		culture = culture:lower_saxon
 	}
 	allow = {
@@ -4658,6 +5520,13 @@ TUS_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_tus_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_tus_disabled }
+		}
 		culture = culture:tuscan
 	}
 	allow = {
@@ -4686,6 +5555,13 @@ BUL_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_bul_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_bul_disabled }
+		}
 		culture = culture:bulgarian
 	}
 	allow = {
@@ -4714,6 +5590,13 @@ DAL_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_dal_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_dal_disabled }
+		}
 		OR = {
 			culture = culture:dalmatian
 			culture = culture:croatian
@@ -4745,6 +5628,13 @@ HUN_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_hun_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_hun_disabled }
+		}
 		NOT = { # FNR
 			OR = {
 				tag = HNGEM
@@ -4783,6 +5673,13 @@ KRS_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_krs_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_krs_disabled }
+		}
 		culture = culture:kurdish_culture
 	}
 	allow = {
@@ -4824,6 +5721,13 @@ SOI_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_soi_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_soi_disabled }
+		}
 		culture = culture:somali_culture
 	}
 	allow = {
@@ -4851,6 +5755,13 @@ CRO_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_cro_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_cro_disabled }
+		}
 		culture = culture:croatian
 	}
 	allow = {
@@ -4880,6 +5791,13 @@ TRA_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_tra_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_tra_disabled }
+		}
 		OR = {
 			culture = culture:hungarian
 			culture = culture:transylvanian
@@ -4912,6 +5830,13 @@ MAL_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_mal_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_mal_disabled }
+		}
 		culture.language = language:mande_language
 	}
 	allow = {
@@ -4942,6 +5867,13 @@ NUB_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_nub_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_nub_disabled }
+		}
 		culture = culture:nubian
 	}
 	allow = {
@@ -4970,6 +5902,13 @@ FIN_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_fin_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_fin_disabled }
+		}
 		culture = culture:finnish
 	}
 	allow = {
@@ -4997,6 +5936,13 @@ ICE_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_ice_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_ice_disabled }
+		}
 		culture = culture:icelandic
 	}
 	allow = {
@@ -5024,6 +5970,13 @@ KAZ_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_kaz_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_kaz_disabled }
+		}
 		culture.language = language:kipchak_language
 	}
 	allow = {
@@ -5052,6 +6005,13 @@ MIR_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_mir_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_mir_disabled }
+		}
 		culture = { has_culture_group = culture_group:malagasy_group }
 	}
 	allow = {
@@ -5079,6 +6039,13 @@ MOR_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_mor_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_mor_disabled }
+		}
 		OR = {
 			culture = culture:moroccan
 			culture = culture:zenati
@@ -5112,6 +6079,13 @@ ALG_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_alg_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_alg_disabled }
+		}
 		OR = {
 			culture = culture:algerian
 			culture = culture:kabyle
@@ -5149,6 +6123,13 @@ TUN_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_tun_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_tun_disabled }
+		}
 		OR = {
 			culture = culture:tunisian
 			culture = culture:eastern_amazigh
@@ -5180,6 +6161,13 @@ NUS_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_nus_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_nus_disabled }
+		}
 		OR = {
 			culture = culture:javanese_culture
 			culture = culture:sundanese_culture
@@ -5213,6 +6201,13 @@ SLO_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_slo_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_slo_disabled }
+		}
 		culture = culture:slovak
 	}
 	allow = {
@@ -5239,6 +6234,13 @@ BNO_f = { # Borneo
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_bno_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_bno_disabled }
+		}
 	}
 	allow = {
 	}
@@ -5265,6 +6267,13 @@ CIR_f = { # Circassia
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_cir_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_cir_disabled }
+		}
 		culture = culture:circassian_culture
 	}
 	allow = {
@@ -5293,6 +6302,13 @@ AZT_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_azt_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_azt_disabled }
+		}
 		OR = {
 			religion = religion:nahuatl
 			culture = culture:nahua_culture
@@ -5329,6 +6345,13 @@ PON_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_pon_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_pon_disabled }
+		}
 		OR = {			
 			culture = culture:pontic_greek_culture
 			owns = location:trebizond
@@ -5372,6 +6395,13 @@ TUR_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_tur_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_tur_disabled }
+		}
 		always = no #Formed by event
 	}
 
@@ -5392,6 +6422,13 @@ ASK_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_ask_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_ask_disabled }
+		}
 		always = no #Formed by event
 	}
 
@@ -5416,6 +6453,13 @@ JAP_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_jap_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_jap_disabled }
+		}
 		always = no #Formed by event
 	}
 
@@ -5436,6 +6480,13 @@ PGR_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_pgr_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_pgr_disabled }
+		}
 		always = no #Formed by event
 	}
 
@@ -5460,6 +6511,13 @@ MTM_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_mtm_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_mtm_disabled }
+		}
 		always = no #Formed by event
 	}
 
@@ -5484,6 +6542,13 @@ YUA_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_yua_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_yua_disabled }
+		}
 		always = no #Formed by event
 	}
 
@@ -5504,6 +6569,13 @@ CSH_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_csh_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_csh_disabled }
+		}
 		always = no #Formed by event
 	}
 
@@ -5529,6 +6601,13 @@ OCC_f = { #Occitania
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_occ_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_occ_disabled }
+		}
 		OR = {
 			culture.dialect = dialect:occitan_dialect
 			culture.dialect = dialect:gascon_dialect
@@ -5584,6 +6663,13 @@ TRG_f = {
 
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+			OR = {
+				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_vanilla_trg_enabled
+			}
+			NOT = { has_variable = fnr_vanilla_trg_disabled }
+		}
 		culture = culture:tuareg
 	}
 

@@ -1,14 +1,17 @@
 ﻿country_name_construction = {
 	type = country
-	###################################
-	# Country Specific Dynamic Naming #
-	###################################
+	# ===== FNR START =====
+	# Formable Nations: Reworked. Everything between FNR START and FNR END is the mod's;
+	# the rest of this file is vanilla 1.4.6 unchanged. On a game update, copy the new
+	# vanilla file and paste these two FNR blocks back in.
+
 	# Armenian Kingdom of Cilicia
 	text = {
 		localization_key = AMCLC_name_construction_empire # "Greater Armenian Cilicia"
 		trigger = {
 			tag = AMCLC
 			country_rank = country_rank:rank_empire
+			NOT = { has_game_rule = fnr_country_names_vanilla }
 		}
 	}
 	text = {
@@ -16,6 +19,7 @@
 		trigger = {
 			tag = AMCLC
 			country_rank = country_rank:rank_kingdom
+			NOT = { has_game_rule = fnr_country_names_vanilla }
 		}
 	}
 	text = {
@@ -23,233 +27,73 @@
 		trigger = {
 			tag = AMCLC
 			country_rank = country_rank:rank_duchy
+			NOT = { has_game_rule = fnr_country_names_vanilla }
+		}
+	}
+
+	# Formables whose names already read as full names (fnr_name_triggers.txt)
+	text = {
+		localization_key = country_name_construction_name
+		trigger = {
+			fnr_uses_static_name = yes
+			NOT = { has_game_rule = fnr_country_names_vanilla }
+		}
+	}
+	# ===== FNR END =====
+
+	text = {
+		localization_key = country_name_construction_ROM_republic # Senatus Populusque Romanus
+		trigger = {
+			tag = ROM
+			government_type = government_type:republic
+
+			OR = {
+				court_language ?= language:latin_language
+				culture.language = language:latin_language
+			}
+		}
+	}
+	text = {
+		localization_key = country_name_construction_BYZ_greek # Basileía Rhōmaíōn
+		trigger = {
+			has_game_rule = byz_name_greek
+
+			OR = {
+				tag = BYZ
+				tag = ROM
+			}
+
+			country_rank = country_rank:rank_empire
+			government_type = government_type:monarchy
+
+			OR = {
+				court_language ?= language:greek_language
+				culture.language = language:greek_language
+			}
 		}
 	}
 	text = {
 		localization_key = country_name_construction_name
 		trigger = {
-			OR = {	
+			OR = {
 				AND = {
 					tag = PAP
 					has_reform = government_reform:papacy_reform
 				}
-				AND = {
-					tag = RHLND
-					OR = {
-						AND = {
-							government_type = government_type:monarchy
-							OR = {
-								has_policy = feudal_administration
-								has_policy = autonomous_councils
-								has_policy = local_courts_administration
-								has_policy = confederal_union
-								has_policy = federal_state
-								has_policy = decentralized_trade_federations
-							}
-							OR = {
-								country_rank = country_rank:rank_duchy
-								country_rank = country_rank:rank_county
-							}
-							NOT = {
-								current_age = age_5_absolutism
-								current_age = age_6_revolutions
-							}
-						}
-						AND = {
-							government_type = government_type:republic
-							OR = {
-								has_policy = feudal_administration
-								has_policy = autonomous_councils
-								has_policy = local_courts_administration
-								has_policy = confederal_union
-								has_policy = federal_state
-								has_policy = decentralized_trade_federations
-							}
-						}
-					}
-				}
-				# TODO: add a setting to disable static prefix
-				# Add Tags here to set a static name
-				tag = AMCLC
-				tag = PRTTA
-				tag = ERSHR
-				tag = RMNRP
-				tag = ONTRO
-				tag = KDOME
-				tag = KKHAM
-				tag = OTRMR
-				tag = COTRP
-				tag = COEDS
-				tag = POFAN
-				tag = ASSSN
-				tag = BMCDN
-				tag = BPSNE
-				tag = ARMNA
-				tag = EOJPN
-				tag = CHSEN
-				tag = BACTR
-				tag = BDKSN 
-				tag = PMSTN 
-				tag = BDWTB
-				tag = MGGCA
-				tag = FLVDK
-				tag = SWBIA
-				tag = FROCA
-				tag = HPEMP
-				tag = ZPDSL
-				tag = BBLON
-				tag = SROAU
-				tag = GSCTL
-				tag = ASHNG
-				tag = GLCLD
-				tag = GCOLM
-				tag = ELBNF
-				tag = ABYSA
-				tag = ACHAD
-				tag = ADREM
-				tag = AFGAN
-				tag = AGEVN
-				tag = ALPLN
-				tag = ALSKA
-				tag = ALSLO
-				tag = AMNAE
-				tag = ANDUH
-				tag = AQUIT
-				tag = ARABE
-				tag = ARPIT
-				tag = ASTBV
-				tag = AUSEM
-				tag = BALCH
-				tag = BASQU
-				tag = BISHE
-				tag = BLGEM
-				tag = BLGUM
-				tag = BLKLG
-				tag = BLRUS
-				tag = BLTST
-				tag = BMNVD
-				tag = BNLUX
-				tag = BSSER
-				tag = BURMA
-				tag = CAROL
-				tag = CATRU
-				tag = CCASA
-				tag = CDOBA
-				tag = CHOLA
-				tag = CNAEM
-				tag = CSPNA
-				tag = CTUNN
-				tag = CYLON
-				tag = CZSLO
-				tag = DACIA
-				tag = DCLPR
-				tag = DLMON
-				tag = DNTPR
-				tag = EASRE
-				tag = EMLRO
-				tag = ENGCM
-				tag = ESLAV
-				tag = EUROP
-				tag = FIESL
-				tag = FILPN
-				tag = FNCEM
-				tag = FNCIB
-				tag = GGURY
-				tag = GLCEM
-				tag = GMNEM
-				tag = GSORB
-				tag = HAWAI
-				tag = HESNA
-				tag = HMLAY
-				tag = HNGEM
-				tag = HNSLG
-				tag = HORDE
-				tag = IBNEM
-				tag = ILYRA
-				#tag = ILYRK # Does not use a static name
-				tag = ISREL
-				tag = ITMCH
-				tag = ITNEM
-				tag = JAPAN
-				tag = JGLNN
-				tag = KLMUN
-				tag = KOFHN
-				tag = KOGER
-				tag = KOGOD
-				tag = KOREA
-				tag = KSORB
-				tag = KYVRU
-				tag = LMBDY
-				tag = LMBYV
-				tag = LNGBD
-				tag = LTNEM
-				tag = LUSIT
-				tag = LWSXY
-				tag = MACED
-				tag = MALTA
-				tag = MCDEM
-				tag = MDGSC
-				tag = MNCRA
-				tag = MNGRL
-				tag = MRCIA
-				tag = NKORA
-				tag = NOSEM
-				tag = OCCIT
-				tag = OMANE
-				tag = PLSTN
-				tag = POLBA
-				tag = POLNE
-				tag = PONTU
-				tag = PRCCN
-				tag = RCONF
-				tag = ROCCN
-				tag = RUFED
-				tag = RUSEM
-				tag = SAUDI
-				tag = SDNNW
-				tag = SKORA
-				tag = SOVET
-				tag = SRBEM
-				tag = SULAW
-				tag = SWDEM
-				tag = TBETE
-				tag = TNGKU
-				tag = TPING
-				tag = TURKY
-				tag = UKKDM
-				tag = UKRNE
-				tag = UMAYA
-				tag = UNARR
-				tag = VTNAM
-				tag = WESRE
-				tag = WNDEM
-				tag = YGOSL
-				tag = ASYRI
-				tag = RSHDN
-				tag = ABSID
-				tag = GOTIA
-				tag = GMORV
-				tag = CMLOT
-				tag = PLHUN
-				tag = NITAC
-				tag = SITAC
-				tag = SDPDM
-				tag = ASYRE
-				tag = HPBRA
-				tag = TRCNS
-				tag = BRTNA
-				tag = BISRA
-				# US States
-				tag = OKLAH
-				tag = FLRDA
-				# Modern Americas Formables
-				tag = MEXCO
-				# dutch
-				has_variable = NED_DR_var
-				has_variable = NED_UP_var
 			}
 		}
 	}
+	
+
+	text = {
+		localization_key = country_name_construction_prefix_rank_of_name
+		trigger = {
+			has_variable = hafsid_caliphate_name
+			country_rank_is_empire = yes
+			religion.group = religion_group:muslim
+		}
+	}
+
 	text = {
 		localization_key = country_name_construction_prefix_rank_of_name_but_map_is_just_prefix_rank
 		trigger = {
@@ -283,6 +127,7 @@
 			}
 		}
 	}
+
 	text = {
 		localization_key = country_name_construction_prefix_name_rank
 		trigger = {
@@ -294,6 +139,7 @@
 			tag = MAL
 		}
 	}
+
 	text = {
 		localization_key = country_name_construction_prefix_name
 		trigger = {
@@ -301,6 +147,35 @@
 			court_language ?= { language_family ?= language_family:chinese_language_family }
 		}
 	}
+
+	text = {
+		localization_key = country_name_construction_prefix_name_horde
+		trigger = {
+			government_type = government_type:steppe_horde
+		}
+	}
+
+	text = {
+		localization_key = country_name_construction_prefix_name_bank_special
+		trigger = {
+			OR = {
+				tag = HBURG #Bank of Hamburg
+				tag = BGIRO #Banco del Giro
+			}
+		}
+	}
+
+	# ===== FNR START =====
+	# Simple Names game rule: plain country names, except tags whose plain name is a fragment
+	text = {
+		localization_key = country_name_construction_name
+		trigger = {
+			has_game_rule = fnr_country_names_simple
+			NOT = { fnr_needs_vanilla_country_name = yes }
+		}
+	}
+	# ===== FNR END =====
+
 	text = {
 		localization_key = country_name_construction_prefix_adjective_rank
 		trigger = {
@@ -336,15 +211,41 @@
 						country_rank = country_rank:rank_kingdom
 						country_rank = country_rank:rank_duchy
 					}
+					NOT = { tag = KNI }
 				}
-				AND = {
-					has_reform = government_reform:japanese_clan
-					country_rank = country_rank:rank_county
-				}
+				has_reform = government_reform:japanese_clan
 				country_type = pop
 			}
 		}
 	}
+
+	text = {
+		localization_key = country_name_construction_sultanate
+		trigger = {
+			religion.group = religion_group:muslim
+		}
+	}
+
+	text = {
+		localization_key = country_name_construction_crown
+		trigger = {
+
+			country_rank_is_kingdom = yes
+			OR = {
+				tag = ARA
+				tag = CAS
+				AND = {
+					tag = POL
+					has_advance = corona_regni_poloniae
+				}
+				AND = {
+					tag = BOH
+					has_variable = crown_of_bohemia_variable
+				}
+			}
+		}
+	}
+
 	text = {
 		localization_key = country_name_construction_prefix_rank_of_name
 		fallback = yes

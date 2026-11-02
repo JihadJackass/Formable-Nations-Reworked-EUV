@@ -317,3 +317,7 @@
       war_goal_fnr_WESRE_reconquer_hispania_wargoal_desc: "Restore the provinces of Hispania to the Western Empire."
       war_goal_fnr_WESRE_reconquer_africa_wargoal: "Reconquer Africa"
       war_goal_fnr_WESRE_reconquer_africa_wargoal_desc: "Restore the provinces of Roman Africa to the Western Empire."
+      fnr_WESRE_usurper_rebels_country: "$fnr_WESRE_usurper_rebels$"
+      fnr_WESRE_usurper_rebels_country_adjective: "Usurper"
+      fnr_WESRE_foederati_uprising_country: "$fnr_WESRE_foederati_uprising$"
+      fnr_WESRE_foederati_uprising_country_adjective: "Foederati"

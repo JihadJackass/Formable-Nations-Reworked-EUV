@@ -45,3 +45,276 @@ option=yes
 pausepopup=no
 message_category = government
 }
+
+# Pax Romana - IO actions (generic actions) and Roman / Ptolemaic country interactions
+
+PERFORM_fnr_RMNRP_socii_renew_foedera_ACTION={
+log=yes
+onmap=no
+popup=no
+idle=no
+option=yes
+pausepopup=no
+message_category = government
+}
+
+PERFORM_fnr_RMNRP_socii_levy_ACTION={
+log=yes
+onmap=no
+popup=no
+idle=no
+option=yes
+pausepopup=no
+message_category = government
+}
+
+PERFORM_fnr_RMNRP_socii_promote_latin_ACTION={
+log=yes
+onmap=no
+popup=no
+idle=no
+option=yes
+pausepopup=no
+message_category = government
+}
+
+PERFORM_fnr_RMNRP_socii_grant_ius_latii_ACTION={
+log=yes
+onmap=no
+popup=no
+idle=no
+option=yes
+pausepopup=no
+message_category = government
+}
+
+PERFORM_fnr_RMNRP_socii_incorporate_ACTION={
+log=yes
+onmap=no
+popup=no
+idle=no
+option=yes
+pausepopup=no
+message_category = government
+}
+
+PERFORM_fnr_ROM_foederati_renew_foedera_ACTION={
+log=yes
+onmap=no
+popup=no
+idle=no
+option=yes
+pausepopup=no
+message_category = government
+}
+
+PERFORM_fnr_ROM_foederati_levy_ACTION={
+log=yes
+onmap=no
+popup=no
+idle=no
+option=yes
+pausepopup=no
+message_category = government
+}
+
+PERFORM_fnr_ROM_foederati_grant_title_ACTION={
+log=yes
+onmap=no
+popup=no
+idle=no
+option=yes
+pausepopup=no
+message_category = government
+}
+
+PERFORM_fnr_ROM_foederati_settle_limes_ACTION={
+log=yes
+onmap=no
+popup=no
+idle=no
+option=yes
+pausepopup=no
+message_category = government
+}
+
+PERFORM_fnr_ROM_foederati_hostages_ACTION={
+log=yes
+onmap=no
+popup=no
+idle=no
+option=yes
+pausepopup=no
+message_category = government
+}
+
+PERFORM_fnr_ROM_foederati_romanize_ACTION={
+log=yes
+onmap=no
+popup=no
+idle=no
+option=yes
+pausepopup=no
+message_category = government
+}
+
+PERFORM_fnr_ROM_foederati_incorporate_ACTION={
+log=yes
+onmap=no
+popup=no
+idle=no
+option=yes
+pausepopup=no
+message_category = government
+}
+
+PERFORM_fnr_PTLMY_league_ptolemaieia_ACTION={
+log=yes
+onmap=no
+popup=no
+idle=no
+option=yes
+pausepopup=no
+message_category = government
+}
+
+PERFORM_fnr_PTLMY_league_levy_ACTION={
+log=yes
+onmap=no
+popup=no
+idle=no
+option=yes
+pausepopup=no
+message_category = government
+}
+
+PERFORM_fnr_PTLMY_league_send_grain_ACTION={
+log=yes
+onmap=no
+popup=no
+idle=no
+option=yes
+pausepopup=no
+message_category = government
+}
+
+PERFORM_fnr_PTLMY_league_garrison_ACTION={
+log=yes
+onmap=no
+popup=no
+idle=no
+option=yes
+pausepopup=no
+message_category = government
+}
+
+PERFORM_fnr_PTLMY_league_incorporate_ACTION={
+log=yes
+onmap=no
+popup=no
+idle=no
+option=yes
+pausepopup=no
+message_category = government
+}
+
+WE_PERFORM_fnr_PTLMY_seek_amicitia_ACTION={
+log=yes
+onmap=no
+popup=no
+idle=no
+option=yes
+pausepopup=no
+message_category = diplomacy
+}
+
+ACTION_fnr_PTLMY_seek_amicitia_PERFORMED_ON_US={
+log=yes
+onmap=no
+popup=yes
+idle=no
+option=yes
+pausepopup=no
+message_category = diplomacy
+}
+
+WE_PERFORM_fnr_PTLMY_royal_marriage_rome_ACTION={
+log=yes
+onmap=no
+popup=no
+idle=no
+option=yes
+pausepopup=no
+message_category = diplomacy
+}
+
+ACTION_fnr_PTLMY_royal_marriage_rome_PERFORMED_ON_US={
+log=yes
+onmap=no
+popup=yes
+idle=no
+option=yes
+pausepopup=no
+message_category = diplomacy
+}
+
+WE_PERFORM_fnr_PTLMY_request_grain_fleet_ACTION={
+log=yes
+onmap=no
+popup=no
+idle=no
+option=yes
+pausepopup=no
+message_category = diplomacy
+}
+
+ACTION_fnr_PTLMY_request_grain_fleet_PERFORMED_ON_US={
+log=yes
+onmap=no
+popup=yes
+idle=no
+option=yes
+pausepopup=no
+message_category = diplomacy
+}
+
+WE_PERFORM_fnr_RMNRP_embassy_of_romanitas_ACTION={
+log=yes
+onmap=no
+popup=no
+idle=no
+option=yes
+pausepopup=no
+message_category = diplomacy
+}
+
+ACTION_fnr_RMNRP_embassy_of_romanitas_PERFORMED_ON_US={
+log=yes
+onmap=no
+popup=yes
+idle=no
+option=yes
+pausepopup=no
+message_category = diplomacy
+}
+
+WE_PERFORM_fnr_RMNRP_propose_reunion_ACTION={
+log=yes
+onmap=no
+popup=no
+idle=no
+option=yes
+pausepopup=no
+message_category = diplomacy
+}
+
+ACTION_fnr_RMNRP_propose_reunion_PERFORMED_ON_US={
+log=yes
+onmap=no
+popup=yes
+idle=no
+option=yes
+pausepopup=no
+message_category = diplomacy
+}
+

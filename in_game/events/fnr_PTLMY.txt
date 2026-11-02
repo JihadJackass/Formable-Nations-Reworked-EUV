@@ -17,6 +17,10 @@ fnr_PTLMY.1 = {
 				desc = fnr_PTLMY.1.desc.egyptian
 			}
 			triggered_desc = {
+				trigger = { has_variable = fnr_PTLMY_origin_greek }
+				desc = fnr_PTLMY.1.desc.greek
+			}
+			triggered_desc = {
 				desc = fnr_PTLMY.1.desc.greek
 			}
 		}
@@ -840,6 +844,7 @@ fnr_PTLMY.64 = {
 # 51 - (hidden) a Ptolemaic subject of Rome tells its overlord
 fnr_PTLMY.51 = {
 	type = country_event
+	title = fnr_PTLMY.51.title
 	hidden = yes
 
 	trigger = {

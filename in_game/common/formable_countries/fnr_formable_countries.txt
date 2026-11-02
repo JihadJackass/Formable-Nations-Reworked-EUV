@@ -51,13 +51,13 @@
 				rule = plausible
 				potential = { 
 					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
-					#AND = {
-					#	OR = {
-					#		has_variable = fnr_modern_enabled
-					#		has_variable = fnr_pamiristan_enabled
-					#	}
-					#	NOT = { has_variable = fnr_pamiristan_disabled }
-					#}
+					AND = { # FNR: game rule toggles (Formable Nations settings)
+						OR = {
+							has_variable = fnr_nonhistorical_enabled
+							has_variable = fnr_hashashin_enabled
+						}
+						NOT = { has_variable = fnr_hashashin_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = ASSSN
@@ -98,13 +98,13 @@
 				rule = plausible
 				potential = { 
 					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
-					#AND = {
-					#	OR = {
-					#		has_variable = fnr_modern_enabled
-					#		has_variable = fnr_pamiristan_enabled
-					#	}
-					#	NOT = { has_variable = fnr_pamiristan_disabled }
-					#}
+					AND = { # FNR: game rule toggles (Formable Nations settings)
+						OR = {
+							has_variable = fnr_nonhistorical_enabled
+							has_variable = fnr_county_of_tripoli_enabled
+						}
+						NOT = { has_variable = fnr_county_of_tripoli_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = COTRP
@@ -138,13 +138,13 @@
 				rule = plausible
 				potential = { 
 					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
-					#AND = {
-					#	OR = {
-					#		has_variable = fnr_modern_enabled
-					#		has_variable = fnr_pamiristan_enabled
-					#	}
-					#	NOT = { has_variable = fnr_pamiristan_disabled }
-					#}
+					AND = { # FNR: game rule toggles (Formable Nations settings)
+						OR = {
+							has_variable = fnr_nonhistorical_enabled
+							has_variable = fnr_county_of_edessa_enabled
+						}
+						NOT = { has_variable = fnr_county_of_edessa_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = COEDS
@@ -185,7 +185,13 @@
 			rule = plausible
 			potential = {
 				fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
-				has_variable = fnr_historical_enabled 
+				AND = { # FNR: game rule toggles (Formable Nations settings)
+					OR = {
+						has_variable = fnr_historical_enabled
+						has_variable = fnr_armenian_cilicia_enabled
+					}
+					NOT = { has_variable = fnr_armenian_cilicia_disabled }
+				}
 				NOT = { 
 					OR = {
 						tag = AMCLC
@@ -228,6 +234,13 @@
 			rule = plausible
 			potential = {
 				fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+				AND = { # FNR: game rule toggles (Formable Nations settings)
+					OR = {
+						has_variable = fnr_nonhistorical_enabled
+						has_variable = fnr_jorvik_enabled
+					}
+					NOT = { has_variable = fnr_jorvik_disabled }
+				}
 				culture ?= { language = language:english_language }
 				NOT = {
 					tag = ENG
@@ -262,6 +275,13 @@
 			rule = plausible
 			potential = {
 				fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+				AND = { # FNR: game rule toggles (Formable Nations settings)
+					OR = {
+						has_variable = fnr_nonhistorical_enabled
+						has_variable = fnr_danelaw_enabled
+					}
+					NOT = { has_variable = fnr_danelaw_disabled }
+				}
 				culture ?= { language = language:english_language }
 				NOT = {
 					tag = ENG
@@ -665,6 +685,13 @@
 				rule = plausible
 				potential = {
 					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
+					AND = { # FNR: game rule toggles (Formable Nations settings)
+						OR = {
+							has_variable = fnr_historical_enabled
+							has_variable = fnr_netherlands_enabled
+						}
+						NOT = { has_variable = fnr_netherlands_disabled }
+					}
 					culture = { has_culture_group = culture_group:netherlandish_group }
 				}
 				name = NED
@@ -724,13 +751,13 @@
 				rule = plausible
 				potential = { 
 					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
-					#AND = {
-					#	OR = {
-					#		has_variable = fnr_modern_enabled
-					#		has_variable = fnr_pamiristan_enabled
-					#	}
-					#	NOT = { has_variable = fnr_pamiristan_disabled }
-					#}
+					AND = { # FNR: game rule toggles (Formable Nations settings)
+						OR = {
+							has_variable = fnr_historical_enabled
+							has_variable = fnr_hormuz_enabled
+						}
+						NOT = { has_variable = fnr_hormuz_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = KHRMZ
@@ -788,13 +815,13 @@
 				rule = plausible
 				potential = { 
 					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
-					#AND = {
-					#	OR = {
-					#		has_variable = fnr_modern_enabled
-					#		has_variable = fnr_pamiristan_enabled
-					#	}
-					#	NOT = { has_variable = fnr_pamiristan_disabled }
-					#}
+					AND = { # FNR: game rule toggles (Formable Nations settings)
+						OR = {
+							has_variable = fnr_althistory_enabled
+							has_variable = fnr_gobi_enabled
+						}
+						NOT = { has_variable = fnr_gobi_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = KGOBI
@@ -827,13 +854,13 @@
 				rule = plausible
 				potential = { 
 					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
-					#AND = {
-					#	OR = {
-					#		has_variable = fnr_modern_enabled
-					#		has_variable = fnr_pamiristan_enabled
-					#	}
-					#	NOT = { has_variable = fnr_pamiristan_disabled }
-					#}
+					AND = { # FNR: game rule toggles (Formable Nations settings)
+						OR = {
+							has_variable = fnr_althistory_enabled
+							has_variable = fnr_kham_enabled
+						}
+						NOT = { has_variable = fnr_kham_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = KKHAM
@@ -861,13 +888,13 @@
 				rule = plausible
 				potential = { 
 					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
-					#AND = {
-					#	OR = {
-					#		has_variable = fnr_modern_enabled
-					#		has_variable = fnr_pamiristan_enabled
-					#	}
-					#	NOT = { has_variable = fnr_pamiristan_disabled }
-					#}
+					AND = { # FNR: game rule toggles (Formable Nations settings)
+						OR = {
+							has_variable = fnr_althistory_enabled
+							has_variable = fnr_dome_enabled
+						}
+						NOT = { has_variable = fnr_dome_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = KDOME
@@ -895,13 +922,13 @@
 				rule = plausible
 				potential = { 
 					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
-					#AND = {
-					#	OR = {
-					#		has_variable = fnr_modern_enabled
-					#		has_variable = fnr_pamiristan_enabled
-					#	}
-					#	NOT = { has_variable = fnr_pamiristan_disabled }
-					#}
+					AND = { # FNR: game rule toggles (Formable Nations settings)
+						OR = {
+							has_variable = fnr_nonhistorical_enabled
+							has_variable = fnr_outremer_enabled
+						}
+						NOT = { has_variable = fnr_outremer_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = OTRMR
@@ -2243,7 +2270,7 @@
 					AND = {
 						OR = {
 							has_variable = fnr_us_states_enabled
-							has_variable = fnr_southcarolinaus_enabled
+							has_variable = fnr_southcarolina_enabled
 						}
 						NOT = { has_variable = fnr_southcarolina_disabled }
 					}
@@ -2281,7 +2308,7 @@
 					AND = {
 						OR = {
 							has_variable = fnr_us_states_enabled
-							has_variable = fnr_northcarolinaus_enabled
+							has_variable = fnr_northcarolina_enabled
 						}
 						NOT = { has_variable = fnr_northcarolina_disabled }
 					}
@@ -5782,10 +5809,10 @@
 					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
 					AND = {
 						OR = {
-							has_variable = fnr_fantasy_enabled
-							has_variable = fnr_illyria_enabled
+							has_variable = fnr_historical_enabled
+							has_variable = fnr_illyria_kingdom_enabled
 						}
-						NOT = { has_variable = fnr_illyria_disabled }
+						NOT = { has_variable = fnr_illyria_kingdom_disabled }
 					} 
 					NOT = { 
 						OR = {
@@ -6205,13 +6232,13 @@
 				rule = plausible
 				potential = {
 					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
-				#	AND = {
-				#		OR = {
-				#			has_variable = fnr_fantasy_enabled
-				#			has_variable = fnr_prittania_enabled
-				#		}
-				#		NOT = { has_variable = fnr_prittania_disabled }
-				#	}
+					AND = { # FNR: game rule toggles (Formable Nations settings)
+						OR = {
+							has_variable = fnr_modern_enabled
+							has_variable = fnr_eurasian_union_enabled
+						}
+						NOT = { has_variable = fnr_eurasian_union_disabled }
+					}
 					OR = { # todo: add reqs and fix flag
 						tag = GER
 						tag = RUS
@@ -6249,13 +6276,13 @@
 				rule = plausible
 				potential = {
 					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
-				#	AND = {
-				#		OR = {
-				#			has_variable = fnr_fantasy_enabled
-				#			has_variable = fnr_prittania_enabled
-				#		}
-				#		NOT = { has_variable = fnr_prittania_disabled }
-				#	}
+					AND = { # FNR: game rule toggles (Formable Nations settings)
+						OR = {
+							has_variable = fnr_fantasy_enabled
+							has_variable = fnr_prittania_enabled
+						}
+						NOT = { has_variable = fnr_prittania_disabled }
+					}
 					NOT = { 
 						OR = {
 							tag = PRTTA
@@ -6721,9 +6748,9 @@
 					AND = {
 						OR = {
 							has_variable = fnr_modern_enabled
-							has_variable = fnr_japan_enabled
+							has_variable = fnr_empire_of_japan_enabled
 						}
-						NOT = { has_variable = fnr_japan_disabled }
+						NOT = { has_variable = fnr_empire_of_japan_disabled }
 					} 
 					NOT = { 
 						OR = {

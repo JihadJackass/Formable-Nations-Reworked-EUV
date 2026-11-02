@@ -94,7 +94,7 @@
       fnr_DACIA_path_zalmoxian_tt: "We embrace the [ShowReligionName('fnr_zalmoxian_religion')] faith. #G 25%#! of Romanian pops and #G 10%#! of all others convert. A Christian or Muslim realm loses stability and angers its clergy; a pagan one gains legitimacy instead.\nUnlocks #Y The Mountain of Zalmoxis#!."
       fnr_DACIA_path_dacoroman_tt: "We keep our faith and embrace our Latin roots.\nUnlocks #Y Trajan's Legacy#!."
       fnr_DACIA.3.title: "The Gold of the Carpathians"
-      fnr_DACIA.3.desc: "Miners in the Apuseni mountains have opened a new vein of gold, the richest found since Roman times. The crown could take the mines for itself, or let the mining towns work them freely and pay their dues."
+      fnr_DACIA.3.d: "Miners in the Apuseni mountains have opened a new vein of gold, the richest found since Roman times. The crown could take the mines for itself, or let the mining towns work them freely and pay their dues."
       fnr_DACIA.3.a: "A royal monopoly."
       fnr_DACIA.3.b: "Free miners' towns."
       fnr_DACIA.4.title: "The Mountain of Zalmoxis"

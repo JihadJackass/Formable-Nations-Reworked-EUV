@@ -70,7 +70,7 @@ disaster_panel = {
 						size = { -1 30 }
 						autoresize = no
 						align = center|nobaseline
-						text = "[DisasterView.GetDisaster.GetOwner.MakeScope.GetVariable('fnr_PTLMY_crown').GetValue|0]"
+						raw_text = "[DisasterView.GetDisaster.GetOwner.MakeScope.GetVariable('fnr_PTLMY_crown').GetValue|0]"
 					}
 					progressbar = {
 						size = { 100 10 }

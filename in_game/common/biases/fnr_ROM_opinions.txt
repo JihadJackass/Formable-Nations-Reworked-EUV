@@ -1,4 +1,4 @@
-# Roman Empire opinion modifiers (Pax Romana)
+﻿# Roman Empire opinion modifiers (Pax Romana)
 
 io_opinion_fnr_ROM_foederati_io = {
 	value = 15

@@ -94,7 +94,7 @@
     JAPAN: "Japan"
     JAPAN_f: "Japan"
     JAPAN_ADJ: "Japanese"
-    JAPAN_f_desc: "Japan is an East Asian island nation with a unique blend of ancient tradition and advanced technology. It is an archipelago of four main islands—Hokkaido, Honshu, Shikoku, and Kyushu—and thousands of smaller ones, with a government that is a parliamentary constitutional monarchy led by an emperor and prime minister. Characterized by mountainous terrain, Japan's population is concentrated along coastal plains, with Tokyo as its capital and largest city."
+    JAPAN_f_desc: "Japan is an East Asian island nation with a unique blend of ancient tradition and advanced technology. It is an archipelago of four main islands (Hokkaido, Honshu, Shikoku, and Kyushu) and thousands of smaller ones, with a government that is a parliamentary constitutional monarchy led by an emperor and prime minister. Characterized by mountainous terrain, Japan's population is concentrated along coastal plains, with Tokyo as its capital and largest city."
 
     # Empire of Japan
     EOJPN: "Empire of Japan"
@@ -136,7 +136,7 @@
     BLTST: "Baltic States"
     BLTST_f: "Baltic States"
     BLTST_ADJ: "Baltic"
-    BLTST_f_desc: "The Baltic states—Estonia, Latvia, and Lithuania—are nations in northeastern Europe on the eastern coast of the Baltic Sea, characterized by a flat landscape of forests, lakes, and rivers. Historically, they were independent after World War I, occupied by the Soviet Union, and regained sovereignty in 1991"
+    BLTST_f_desc: "The Baltic states (Estonia, Latvia, and Lithuania) are nations in northeastern Europe on the eastern coast of the Baltic Sea, characterized by a flat landscape of forests, lakes, and rivers. Historically, they were independent after World War I, occupied by the Soviet Union, and regained sovereignty in 1991"
 
     # Alsace-Lorraine
     ALSLO: "Alsace-Lorraine"
@@ -219,7 +219,7 @@
     BLGEM: "Bulgarian Empire"
     BLGEM_f: "Bulgarian Empire"
     BLGEM_ADJ: "Bulgarian"
-    BLGEM_f_desc: "Bulgaria was a powerful kingdom in Southeastern Europe, often competing with the Byzantine Empire. The First Bulgarian Empire (681–1018 AD) originated from the Bulgars settling south of the Danube and grew to become a major power, culturally and politically, especially under rulers like Boris I and Simeon the Great. The Second Bulgarian Empire arose after a period of Byzantine rule, beginning in 1185 and lasting until 1396."
+    BLGEM_f_desc: "Bulgaria was a powerful kingdom in Southeastern Europe, often competing with the Byzantine Empire. The First Bulgarian Empire (681-1018 AD) originated from the Bulgars settling south of the Danube and grew to become a major power, culturally and politically, especially under rulers like Boris I and Simeon the Great. The Second Bulgarian Empire arose after a period of Byzantine rule, beginning in 1185 and lasting until 1396."
 
     # British Empire
     BISHE: "British Empire"
@@ -377,12 +377,12 @@
     ITNEM: "Italian Empire"
     ITNEM_f: "Italian Empire"
     ITNEM_ADJ: "Italian"
-    ITNEM_f_desc: "The Italian Empire was a colonial empire that existed between 1882 and 1960, encompassing territories in Africa, the Mediterranean, and China that were controlled by the Kingdom of Italy. At its peak (1936–1941), it included colonies in North and East Africa like Libya, Eritrea, Somalia, and Ethiopia (Africa Orientale Italiana), as well as the Dodecanese Islands, and a protectorate in Albania. Its existence was tied to the expansionist policies of the Italian government, particularly the Fascist regime under Benito Mussolini."
+    ITNEM_f_desc: "The Italian Empire was a colonial empire that existed between 1882 and 1960, encompassing territories in Africa, the Mediterranean, and China that were controlled by the Kingdom of Italy. At its peak (1936-1941), it included colonies in North and East Africa like Libya, Eritrea, Somalia, and Ethiopia (Africa Orientale Italiana), as well as the Dodecanese Islands, and a protectorate in Albania. Its existence was tied to the expansionist policies of the Italian government, particularly the Fascist regime under Benito Mussolini."
 
     # Kalmar Union
     KLMUN: "Kalmar Union"
     KLMUN_f: "Kalmar Union"
-    KLMUN_f_desc: "The Kalmar Union (1397–1523) was a personal union that united the three sovereign kingdoms of Denmark, Sweden (including most of present-day Finland), and Norway (including Iceland, Greenland, the Faroe Islands, Orkney, and Shetland) under a single monarch. It was not a single, unified nation-state, but rather an arrangement where each country legally retained its separate laws and governing councils, while sharing a common ruler and a unified foreign policy."
+    KLMUN_f_desc: "The Kalmar Union (1397-1523) was a personal union that united the three sovereign kingdoms of Denmark, Sweden (including most of present-day Finland), and Norway (including Iceland, Greenland, the Faroe Islands, Orkney, and Shetland) under a single monarch. It was not a single, unified nation-state, but rather an arrangement where each country legally retained its separate laws and governing councils, while sharing a common ruler and a unified foreign policy."
     KLMUN_ADJ: "Kalmar"
 
     # Latin Empire
@@ -398,10 +398,10 @@
     LMBDY_f_desc: "Lombardy is a leading industrial and cultural region in northern Italy with a population and economy comparable to a small nation. It is Italy's most populated region, with a diverse landscape that includes the Alps and lakes like Como and Garda, and is a major economic hub in Europe known for its manufacturing, finance, and fashion industries centered in the Italian region."
 
     # Lombardy-Venetia
-    LMBYV: "Lombardy–Venetia"
-    LMBYV_f: "Lombardy–Venetia"
+    LMBYV: "Lombardy-Venetia"
+    LMBYV_f: "Lombardy-Venetia"
     LMBYV_ADJ: "Lombardo-Venetian"
-    LMBYV_f_desc: "The Kingdom of Lombardy–Venetia was a crown land of the Austrian Empire from 1815 to 1866, encompassing the regions of Lombardy and Venetia in northern Italy. Established by the Congress of Vienna after the fall of Napoleon's Kingdom of Italy, it was a monarchy ruled by the Austrian Habsburg emperors, with a capital that moved from Milan to Venice during its existence. The kingdom dissolved when Venice was annexed by the Kingdom of Italy in 1866, following the Austro-Prussian War."
+    LMBYV_f_desc: "The Kingdom of Lombardy-Venetia was a crown land of the Austrian Empire from 1815 to 1866, encompassing the regions of Lombardy and Venetia in northern Italy. Established by the Congress of Vienna after the fall of Napoleon's Kingdom of Italy, it was a monarchy ruled by the Austrian Habsburg emperors, with a capital that moved from Milan to Venice during its existence. The kingdom dissolved when Venice was annexed by the Kingdom of Italy in 1866, following the Austro-Prussian War."
 
     # Lower Saxony
     LWSXY: "Lower Saxony"
@@ -496,7 +496,7 @@
     CNAEM: "Empire of China"
     CNAEM_f: "Empire of China"
     CNAEM_ADJ: "Chinese"
-    CNAEM_f_desc: "the short-lived 'Hongxian Monarchy' (1915–1916) and the long-standing 'Chinese Empire' ruled by various dynasties - The Hongxian Monarchy was a failed attempt by Yuan Shikai to reinstate the monarchy after the collapse of the Qing Dynasty, while the 'Chinese Empire' is a general term for the rule of dynasties like the Qin, Han, Ming, and Qing, which spanned centuries"
+    CNAEM_f_desc: "the short-lived 'Hongxian Monarchy' (1915-1916) and the long-standing 'Chinese Empire' ruled by various dynasties - The Hongxian Monarchy was a failed attempt by Yuan Shikai to reinstate the monarchy after the collapse of the Qing Dynasty, while the 'Chinese Empire' is a general term for the rule of dynasties like the Qin, Han, Ming, and Qing, which spanned centuries"
 
     # Goguryeo
     GGURY: "Goguryeo"
@@ -591,13 +591,13 @@
     SULAW: "Sulawesi"
     SULAW_f: "Sulawesi"
     SULAW_ADJ: "Sulawesian"
-    SULAW_f_desc: "ulawesi sits centrally within the Indonesian archipelago, with its four protruding arms reaching out in all directions, creating an intriguing outline between the Celebes, Java and Banda Seas. Owing to this – no place in Sulawesi is more than 100km from the sea."
+    SULAW_f_desc: "ulawesi sits centrally within the Indonesian archipelago, with its four protruding arms reaching out in all directions, creating an intriguing outline between the Celebes, Java and Banda Seas. Owing to this, no place in Sulawesi is more than 100km from the sea."
 
     # Taiping
     TPING: "Taiping Heavenly Kingdom"
     TPING_f: "Taiping Heavenly Kingdom"
     TPING_ADJ: "Taiping"
-    TPING_f_desc: "The Taiping Heavenly Kingdom was a theocratic monarchy that existed from 1851–1864 in southern and central China, with its capital at Nanjing. It was led by Hong Xiuquan and aimed to overthrow the Qing dynasty through a rebellion based on a form of Christianity, common ownership of land, and radical social reforms such as abolishing foot-binding and granting women equal rights. Despite initial success in seizing major cities, the kingdom ultimately failed due to internal strife and Qing forces, ultimately collapsing in 1864"
+    TPING_f_desc: "The Taiping Heavenly Kingdom was a theocratic monarchy that existed from 1851-1864 in southern and central China, with its capital at Nanjing. It was led by Hong Xiuquan and aimed to overthrow the Qing dynasty through a rebellion based on a form of Christianity, common ownership of land, and radical social reforms such as abolishing foot-binding and granting women equal rights. Despite initial success in seizing major cities, the kingdom ultimately failed due to internal strife and Qing forces, ultimately collapsing in 1864"
 
     # Tengoku
     TNGKU: "Tengoku"
@@ -609,7 +609,7 @@
     HORDE: "The Horde"
     HORDE_f: "The Horde"
     HORDE_ADJ: "Horde"
-    HORDE_f_desc: "The endless plains once thundered with the hooves of a thousand khans each claiming descent from ancient conquerors, each dreaming of dominion over the world. Now, all have fallen silent. From the Volga to the Yellow Sea, from the Siberian tundra to the Persian sands, only one banner remains: The Horde.\n\nThe steppe has been united at last, its tribes forged into a single will of iron and fire. The last khan stands as heir to the legacy of every rider who ever rode out of the steppe — Genghis, Timur, Batu, and beyond. There are no rivals left among the horse lords… only the world to conquer."
+    HORDE_f_desc: "The endless plains once thundered with the hooves of a thousand khans each claiming descent from ancient conquerors, each dreaming of dominion over the world. Now, all have fallen silent. From the Volga to the Yellow Sea, from the Siberian tundra to the Persian sands, only one banner remains: The Horde.\n\nThe steppe has been united at last, its tribes forged into a single will of iron and fire. The last khan stands as heir to the legacy of every rider who ever rode out of the steppe, from Genghis and Timur to Batu and beyond. There are no rivals left among the horse lords… only the world to conquer."
 
     # Tibetan Empire
     TBETE: "Empire of Tibet"
@@ -639,7 +639,7 @@
     CHOLA: "Empire of Chola"
     CHOLA_f: "Empire of Chola"
     CHOLA_ADJ: "Cholan"
-    CHOLA_f_desc: "The Chola Empire was a medieval thalassocratic (maritime) empire in southern India (c. 848–1279) known for its strong navy and overseas influence in Southeast Asia. It was characterized by a centralized government, disciplined bureaucracy, and significant advancements in art, architecture, and literature. The empire reached its peak under kings like Rajaraja Chola I, who expanded its territory and commissioned monumental structures like the Brihadisvara Temple at Thanjavur."
+    CHOLA_f_desc: "The Chola Empire was a medieval thalassocratic (maritime) empire in southern India (c. 848-1279) known for its strong navy and overseas influence in Southeast Asia. It was characterized by a centralized government, disciplined bureaucracy, and significant advancements in art, architecture, and literature. The empire reached its peak under kings like Rajaraja Chola I, who expanded its territory and commissioned monumental structures like the Brihadisvara Temple at Thanjavur."
 
     # Ceylon
     CYLON: "Ceylon"
@@ -669,7 +669,7 @@
     PLSTN: "Palestine"
     PLSTN_f: "Palestine"
     PLSTN_ADJ: "Palestinian"
-    PLSTN_f_desc: "Generally, Palestine is used to refer to the geographic region spanning from the Mediterranean Sea in the east to the Jordan River in the west. Historical Palestine is made up of the current Palestinian territories of the Gaza Strip and the West Bank—referred to as the State of Palestine."
+    PLSTN_f_desc: "Generally, Palestine is used to refer to the geographic region spanning from the Mediterranean Sea in the east to the Jordan River in the west. Historical Palestine is made up of the current Palestinian territories of the Gaza Strip and the West Bank, referred to as the State of Palestine."
 
     # Israel
     ISREL: "Israel"
@@ -697,7 +697,7 @@
     PMSTN: "Pamiristan"
     PMSTN_f: "Pamiristan"
     PMSTN_ADJ: "Pamiristani"
-    PMSTN_f_desc: "Atop the Roof of the World, where ancient Silk Road caravans once braved passes that scrape the heavens, the Pamiri peoples have endured for millennia — isolated by towering peaks, united by shared tongue and faith. Descended from the Eastern Iranian tribes who settled these high valleys centuries before the common era, the Pamiris preserved their own languages, their own Ismaili traditions, and their own fierce independence long after the empires around them rose and fell. The principalities of Wakhan, Shughnan, and Rushan governed themselves for centuries from mountain fortresses no outside power could easily reach. Now, as the modern age reshapes the map, a sovereign Pamiristan would at last give political form to what geography and culture have long defined — a homeland for the people of the Pamirs, standing where four nations converge and five great mountain ranges meet."
+    PMSTN_f_desc: "Atop the Roof of the World, where ancient Silk Road caravans once braved passes that scrape the heavens, the Pamiri peoples have endured for millennia, isolated by towering peaks, united by shared tongue and faith. Descended from the Eastern Iranian tribes who settled these high valleys centuries before the common era, the Pamiris preserved their own languages, their own Ismaili traditions, and their own fierce independence long after the empires around them rose and fell. The principalities of Wakhan, Shughnan, and Rushan governed themselves for centuries from mountain fortresses no outside power could easily reach. Now, as the modern age reshapes the map, a sovereign Pamiristan would at last give political form to what geography and culture have long defined, a homeland for the people of the Pamirs, standing where four nations converge and five great mountain ranges meet."
 
     # Sardinia-Piedmont
     SDPDM: "Sardinia-Piedmont"
@@ -769,7 +769,7 @@
     IOWAU: "Iowa"
     IOWAU_f: "Iowa"
     IOWAU_ADJ: "Iowan"
-    IOWAU_f_desc: "Iowa, purchased from France and wrested from native tribes, became the archetypal American heartland—endless prairies transformed into the world's most productive farmland. The deep, rich soil produces corn and soybeans in staggering quantities, feeding livestock and exporting grain worldwide. No mountains interrupt Iowa's rolling landscape, no great cities dominate its interior. This is agricultural America at its purest: small towns, family farms, and conservative values rooted in the land. Iowa's caucuses and harvests both shape national futures."
+    IOWAU_f_desc: "Iowa, purchased from France and wrested from native tribes, became the archetypal American heartland, endless prairies transformed into the world's most productive farmland. The deep, rich soil produces corn and soybeans in staggering quantities, feeding livestock and exporting grain worldwide. No mountains interrupt Iowa's rolling landscape, no great cities dominate its interior. This is agricultural America at its purest: small towns, family farms, and conservative values rooted in the land. Iowa's caucuses and harvests both shape national futures."
 
     # California
     CLFRN: "California"
@@ -781,25 +781,25 @@
     CSCDA: "Cascadia"
     CSCDA_f: "Cascadia"
     CSCDA_ADJ: "Cascadian"
-    CSCDA_f_desc: "Cascadia represents a bioregional identity spanning the Pacific Northwest, bound together by the Cascade Range, Pacific coastline, and shared environmental values rather than political borders. This region's temperate rainforests, salmon-rich rivers, and volcanic peaks create a landscape distinct from the rest of North America. The concept of Cascadian independence emerged from cultural differences with interior regions—environmentalism over extraction, urbanism over ruralism, Pacific Rim orientation over Atlantic ties. Cascadia exists more as cultural identity than political reality, yet the idea persists."
+    CSCDA_f_desc: "Cascadia represents a bioregional identity spanning the Pacific Northwest, bound together by the Cascade Range, Pacific coastline, and shared environmental values rather than political borders. This region's temperate rainforests, salmon-rich rivers, and volcanic peaks create a landscape distinct from the rest of North America. The concept of Cascadian independence emerged from cultural differences with interior regions; environmentalism over extraction, urbanism over ruralism, Pacific Rim orientation over Atlantic ties. Cascadia exists more as cultural identity than political reality, yet the idea persists."
 
     # Wyoming
     WYMNG: "Wyoming"
     WYMNG_f: "Wyoming"
     WYMNG_ADJ: "Wyomingite"
-    WYMNG_f_desc: "Wyoming, the least populated state despite its considerable size, encompasses the Rocky Mountain spine and the high plains east of the continental divide. Yellowstone's geothermal wonders and the Grand Tetons draw tourists, while vast ranches and energy extraction sustain the economy. Wyoming's political culture embraces frontier independence—minimal government, maximum personal freedom, and fierce protection of gun rights and property. The state remains stubbornly rural, resisting urbanization and federal interference, embodying the mythology of the American West."
+    WYMNG_f_desc: "Wyoming, the least populated state despite its considerable size, encompasses the Rocky Mountain spine and the high plains east of the continental divide. Yellowstone's geothermal wonders and the Grand Tetons draw tourists, while vast ranches and energy extraction sustain the economy. Wyoming's political culture embraces frontier independence, with minimal government, maximum personal freedom, and fierce protection of gun rights and property. The state remains stubbornly rural, resisting urbanization and federal interference, embodying the mythology of the American West."
 
     # Texas
     TEXAS: "Texas"
     TEXAS_f: "Texas"
     TEXAS_ADJ: "Texan"
-    TEXAS_f_desc: "Texas, wrested from Mexico after a revolutionary struggle, spent a decade as an independent republic before joining the United States—a history Texans never forget. The state's immense size encompasses deserts, forests, prairies, and coastline, while oil discoveries transformed it from cattle country into an energy superpower. Texas maintains a distinct identity, blending Southern, Western, and Mexican influences into a culture that views itself as exceptional. The state's independent streak, military tradition, and economic might make it unlike anywhere else in America."
+    TEXAS_f_desc: "Texas, wrested from Mexico after a revolutionary struggle, spent a decade as an independent republic before joining the United States, a history Texans never forget. The state's immense size encompasses deserts, forests, prairies, and coastline, while oil discoveries transformed it from cattle country into an energy superpower. Texas maintains a distinct identity, blending Southern, Western, and Mexican influences into a culture that views itself as exceptional. The state's independent streak, military tradition, and economic might make it unlike anywhere else in America."
 
     # Michigan
     MCHGN: "Michigan"
     MCHGN_f: "Michigan"
     MCHGN_ADJ: "Michigander"
-    MCHGN_f_desc: "Michigan, surrounded by four of the five Great Lakes, possesses more freshwater coastline than any other state, shaping its identity as a maritime power in America's interior. The Upper and Lower Peninsulas offer contrasting landscapes—industrial cities and farmland below, wilderness and mining country above. Detroit's rise as automotive capital made Michigan synonymous with American manufacturing, though that industrial dominance has waned. The Great Lakes moderate the climate, provide transportation, and offer endless recreational opportunities, making Michigan's geography its greatest asset."
+    MCHGN_f_desc: "Michigan, surrounded by four of the five Great Lakes, possesses more freshwater coastline than any other state, shaping its identity as a maritime power in America's interior. The Upper and Lower Peninsulas offer contrasting landscapes; industrial cities and farmland below, wilderness and mining country above. Detroit's rise as automotive capital made Michigan synonymous with American manufacturing, though that industrial dominance has waned. The Great Lakes moderate the climate, provide transportation, and offer endless recreational opportunities, making Michigan's geography its greatest asset."
 
     # Wisconsin
     WSCNS: "Wisconsin"
@@ -811,7 +811,7 @@
     WSHNT: "Washington"
     WSHNT_f: "Washington"
     WSHNT_ADJ: "Washingtonian"
-    WSHNT_f_desc: "Washington, named for the first president yet geographically distant from the original states, encompasses dramatically varied terrain from Pacific rainforests to arid interior plateaus. The Cascade Range divides the state climatically and culturally—wet, liberal west versus dry, conservative east. Puget Sound's sheltered waters created a natural harbor for Seattle, which grew from lumber town to tech hub. The Columbia River system provides irrigation and hydroelectric power, transforming the interior into productive farmland. Washington looks west to the Pacific Rim, connecting America to Asian trade and immigration."
+    WSHNT_f_desc: "Washington, named for the first president yet geographically distant from the original states, encompasses dramatically varied terrain from Pacific rainforests to arid interior plateaus. The Cascade Range divides the state climatically and culturally into a wet, liberal west and a dry, conservative east. Puget Sound's sheltered waters created a natural harbor for Seattle, which grew from lumber town to tech hub. The Columbia River system provides irrigation and hydroelectric power, transforming the interior into productive farmland. Washington looks west to the Pacific Rim, connecting America to Asian trade and immigration."
 
     # Oregon
     OREGN: "Oregon"
@@ -823,19 +823,19 @@
     MISSR: "Missouri"
     MISSR_f: "Missouri"
     MISSR_ADJ: "Missourian"
-    MISSR_f_desc: "Missouri, gateway to the West, sits at the confluence of the continent's greatest rivers—the Mississippi and Missouri—making it the natural starting point for westward expansion. St. Louis outfitted trappers, traders, and settlers heading into the frontier, while Kansas City became a major railroad hub. Missouri's position between North and South made it a border state during the Civil War, torn between opposing loyalties and plagued by guerrilla violence. The state remains politically divided, culturally mixed, and geographically transitional—Southern in the Bootheel, Midwestern in the north, Western in spirit."
+    MISSR_f_desc: "Missouri, gateway to the West, sits at the confluence of the continent's greatest rivers, the Mississippi and Missouri, making it the natural starting point for westward expansion. St. Louis outfitted trappers, traders, and settlers heading into the frontier, while Kansas City became a major railroad hub. Missouri's position between North and South made it a border state during the Civil War, torn between opposing loyalties and plagued by guerrilla violence. The state remains politically divided, culturally mixed, and geographically transitional; Southern in the Bootheel, Midwestern in the north, Western in spirit."
 
     # Georgia
     GRGUS: "Georgia"
     GRGUS_f: "Georgia"
     GRGUS_ADJ: "Georgian"
-    GRGUS_f_desc: "Georgia, named for King George II, began as a haven for debtors and a buffer against Spanish Florida before developing into a cotton kingdom built on slave labor. The coastal lowlands produced rice and indigo on plantations, while the interior Piedmont became the heart of King Cotton's domain. Atlanta's destruction and rebirth during and after the Civil War made it the symbol of the New South—rebuilt, industrialized, yet haunted by its Confederate past. Georgia balances rural conservatism with Atlanta's cosmopolitan influence, tradition with progress, remembrance with reinvention."
+    GRGUS_f_desc: "Georgia, named for King George II, began as a haven for debtors and a buffer against Spanish Florida before developing into a cotton kingdom built on slave labor. The coastal lowlands produced rice and indigo on plantations, while the interior Piedmont became the heart of King Cotton's domain. Atlanta's destruction and rebirth during and after the Civil War made it the symbol of the New South, rebuilt, industrialized, yet haunted by its Confederate past. Georgia balances rural conservatism with Atlanta's cosmopolitan influence, tradition with progress, remembrance with reinvention."
 
     # Alabama
     ALBMA: "Alabama"
     ALBMA_f: "Alabama"
     ALBMA_ADJ: "Alabaman"
-    ALBMA_f_desc: "Alabama, carved from lands ceded by the Creek Nation, rapidly filled with cotton planters seeking virgin soil after exhausting eastern fields. The Black Belt—named for its dark, fertile earth—became the heart of the Cotton Kingdom, worked by enslaved labor producing wealth for white planters. Alabama's rivers provided transportation to the Gulf port of Mobile, connecting interior plantations to global markets. The state's history is inseparable from slavery, Civil War, and Civil Rights struggles—a past that shapes Alabama's identity as the quintessential Deep South state, for better and worse."
+    ALBMA_f_desc: "Alabama, carved from lands ceded by the Creek Nation, rapidly filled with cotton planters seeking virgin soil after exhausting eastern fields. The Black Belt (named for its dark, fertile earth) became the heart of the Cotton Kingdom, worked by enslaved labor producing wealth for white planters. Alabama's rivers provided transportation to the Gulf port of Mobile, connecting interior plantations to global markets. The state's history is inseparable from slavery, Civil War, and Civil Rights struggles, a past that shapes Alabama's identity as the quintessential Deep South state, for better and worse."
 
     # South Carolina
     SCRLA: "South Carolina"
@@ -859,7 +859,7 @@
     KNTKY: "Kentucky"
     KNTKY_f: "Kentucky"
     KNTKY_ADJ: "Kentuckan"
-    KNTKY_f_desc: "Kentucky, the first state west of the Appalachians, was Daniel Boone's promised land of fertile bluegrass and abundant game. The state's agriculture focused on tobacco, hemp, and breeding thoroughbred horses rather than cotton, creating a more moderate slave society than the Deep South. Kentucky's border state status during the Civil War reflected its divided loyalties—Confederate and Union supporters splitting families and communities. Bourbon whiskey, horse racing, and coalfields define Kentucky's economy and identity, while its position between North and South, East and West, makes it uniquely transitional."
+    KNTKY_f_desc: "Kentucky, the first state west of the Appalachians, was Daniel Boone's promised land of fertile bluegrass and abundant game. The state's agriculture focused on tobacco, hemp, and breeding thoroughbred horses rather than cotton, creating a more moderate slave society than the Deep South. Kentucky's border state status during the Civil War reflected its divided loyalties; Confederate and Union supporters splitting families and communities. Bourbon whiskey, horse racing, and coalfields define Kentucky's economy and identity, while its position between North and South, East and West, makes it uniquely transitional."
 
     # Ohio
     OHIOU: "Ohio"
@@ -871,13 +871,13 @@
     VRGNA: "Virginia"
     VRGNA_f: "Virginia"
     VRGNA_ADJ: "Virginian"
-    VRGNA_f_desc: "Virginia, the oldest and most influential of the thirteen colonies, produced more presidents and shaped more of American history than any other state. The Tidewater plantations built wealth on tobacco and slavery, creating a planter aristocracy that led the Revolution yet defended human bondage. Virginia's role as capital of the Confederacy and site of countless Civil War battles left it devastated, yet its historical legacy—Washington, Jefferson, Madison, Lee—remains central to American identity. The state balances reverence for its past with the modern reality of Northern Virginia's federal workforce and diverse suburbs."
+    VRGNA_f_desc: "Virginia, the oldest and most influential of the thirteen colonies, produced more presidents and shaped more of American history than any other state. The Tidewater plantations built wealth on tobacco and slavery, creating a planter aristocracy that led the Revolution yet defended human bondage. Virginia's role as capital of the Confederacy and site of countless Civil War battles left it devastated, yet its historical legacy (Washington, Jefferson, Madison, Lee) remains central to American identity. The state balances reverence for its past with the modern reality of Northern Virginia's federal workforce and diverse suburbs."
 
     # West Virginia
     WVGNA: "West Virginia"
     WVGNA_f: "West Virginia"
     WVGNA_ADJ: "West Virginian"
-    WVGNA_f_desc: "West Virginia, born from Virginia's division during the Civil War, represents Appalachian mountain culture that had little in common with Tidewater aristocracy. The mountaineers, subsistence farmers with few slaves, refused to join the Confederacy and formed their own Unionist state. Coal mining became West Virginia's economic foundation and curse—providing jobs and energy while devastating the environment and health of miners. The state struggles with poverty, opioid addiction, and population loss, yet maintains fierce pride in its independent origins and mountain heritage."
+    WVGNA_f_desc: "West Virginia, born from Virginia's division during the Civil War, represents Appalachian mountain culture that had little in common with Tidewater aristocracy. The mountaineers, subsistence farmers with few slaves, refused to join the Confederacy and formed their own Unionist state. Coal mining became West Virginia's economic foundation and curse, providing jobs and energy while devastating the environment and health of miners. The state struggles with poverty, opioid addiction, and population loss, yet maintains fierce pride in its independent origins and mountain heritage."
 
     # Poland-Hungary
     PLHUN: "Poland-Hungary"
@@ -895,7 +895,7 @@
     FLVDK: "Felvidek"
     FLVDK_f: "Felvidek"
     FLVDK_ADJ: "Hungarian"
-    FLVDK_f_desc: "Felvidék—the 'Uplands'—is the Hungarian name for the mountainous northern territories that have been part of the Kingdom of Hungary for centuries. These Slovak-populated highlands provided the kingdom with mineral wealth, defensive fortifications, and trade routes to Poland. Though ethnically distinct from the Magyar heartland, Felvidék remains integral to Hungarian identity and economy. This formable represents Hungarian authority over these historic northern territories."
+    FLVDK_f_desc: "Felvidék, the 'Uplands', is the Hungarian name for the mountainous northern territories that have been part of the Kingdom of Hungary for centuries. These Slovak-populated highlands provided the kingdom with mineral wealth, defensive fortifications, and trade routes to Poland. Though ethnically distinct from the Magyar heartland, Felvidék remains integral to Hungarian identity and economy. This formable represents Hungarian authority over these historic northern territories."
 
     # Hephthalite Empire / White Huns
     HPEMP: "Hephthalites"
@@ -967,7 +967,7 @@
     ALPLN: "Alpland"
     ALPLN_f: "Alpland"
     ALPLN_ADJ: "Alplands"
-    ALPLN_f_desc: "mong the clouds and crags of the great mountains, a new power has taken root. Forged from the hardy peoples of the Alps — shepherds, merchants, warriors, and republics alike — Alpland stands as a bastion of unity amid stone and snow. Where others see only cold and peril, the Alplanders see strength, freedom, and opportunity. Their passes channel the wealth of Europe; their peaks guard against invasion.\n\nNeither empire nor mere federation, Alpland is a nation of the heights — resilient, disciplined, and eternally watchful."
+    ALPLN_f_desc: "mong the clouds and crags of the great mountains, a new power has taken root. Forged from the hardy peoples of the Alps (shepherds, merchants, warriors, and republics alike), Alpland stands as a bastion of unity amid stone and snow. Where others see only cold and peril, the Alplanders see strength, freedom, and opportunity. Their passes channel the wealth of Europe; their peaks guard against invasion.\n\nNeither empire nor mere federation, Alpland is a nation of the heights, resilient, disciplined, and eternally watchful."
 
     ANDUH: "Anglo-Dutch Union"
     ANDUH_f: "Anglo-Dutch Union"
@@ -1012,7 +1012,7 @@
     ASTBV: "Austria-Bavaria"
     ASTBV_f: "Austria-Bavaria"
     ASTBV_ADJ: "Austro-Bavarian"
-    ASTBV_f_desc: "Austria and Bavaria — long divided by pride, faith, and ambition now stand united at the heart of Europe. This new realm blends the imperial tradition of Vienna with the cultural vigor of Munich, commanding the gateways between Italy and Germany, East and West."
+    ASTBV_f_desc: "Austria and Bavaria, long divided by pride, faith, and ambition, now stand united at the heart of Europe. This new realm blends the imperial tradition of Vienna with the cultural vigor of Munich, commanding the gateways between Italy and Germany, East and West."
 
     BLKLG: "Balkan League"
     BLKLG_f: "Balkan League"
@@ -1022,13 +1022,13 @@
     BASQU: "Basque Country"
     BASQU_f: "Basque Country"
     BASQU_ADJ: "Basque"
-    BASQU_f_desc: "The Basque Country consists of seven provinces that stretch from the Pyrenees to the Bay of Biscay in the country's north, plus a small area reaching into southwestern France. In Spanish, it's known as País Vasco; in Euskara—the ancient Basque language that predates Greek and Latin — Eusakadi."
+    BASQU_f_desc: "The Basque Country consists of seven provinces that stretch from the Pyrenees to the Bay of Biscay in the country's north, plus a small area reaching into southwestern France. In Spanish, it's known as País Vasco; in Euskara, the ancient Basque language that predates Greek and Latin, Eusakadi."
 
     # bosnia serbia
     BSSER: "Bosnia-Serbia"
     BSSER_f: "Bosnia-Serbia"
     BSSER_ADJ: "Bosno-Serbian"
-    BSSER_f_desc: "Bosnia and Serbia now stand united — a bastion of Slavic strength in the heart of the Balkans.\n\nThis new kingdom inherits the resilience of Bosnia and the martial legacy of Serbia, blending western and eastern traditions into a single, unyielding state. Together, they guard the crossroads of empires and carve their own destiny amid the shifting powers of the continent."
+    BSSER_f_desc: "Bosnia and Serbia now stand united, a bastion of Slavic strength in the heart of the Balkans.\n\nThis new kingdom inherits the resilience of Bosnia and the martial legacy of Serbia, blending western and eastern traditions into a single, unyielding state. Together, they guard the crossroads of empires and carve their own destiny amid the shifting powers of the continent."
 
     # Catholica Russica
     CATRU: "Catholica Russica"
@@ -1129,7 +1129,7 @@
     BRTNA: "Britannia"
     BRTNA_f: "Britannia"
     BRTNA_ADJ: "Britannian"
-    BRTNA_f_desc: "Britannia, Rome's northernmost province, represented the empire's ambition to conquer the known world—even the remote, fog-shrouded island beyond the ocean. Though never fully subdued, with Caledonia remaining free beyond Hadrian's Wall, Roman Britannia developed towns, roads, and villas that brought Mediterranean civilization to the Celtic north. The province provided grain, metals, and soldiers to the empire while serving as a frontier where legions held back barbarian tribes. When Rome withdrew, Britannia's Romano-British culture survived briefly before succumbing to Saxon invasion, yet the memory of Roman order lingered."
+    BRTNA_f_desc: "Britannia, Rome's northernmost province, represented the empire's ambition to conquer the known world, even the remote, fog-shrouded island beyond the ocean. Though never fully subdued, with Caledonia remaining free beyond Hadrian's Wall, Roman Britannia developed towns, roads, and villas that brought Mediterranean civilization to the Celtic north. The province provided grain, metals, and soldiers to the empire while serving as a frontier where legions held back barbarian tribes. When Rome withdrew, Britannia's Romano-British culture survived briefly before succumbing to Saxon invasion, yet the memory of Roman order lingered."
 
     # Kingdom of Jerusalem
     JRSLM: "Kingdom of Jerusalem"
@@ -1141,7 +1141,7 @@
     BISRA: "Beta Israel"
     BISRA_f: "Beta Israel"
     BISRA_ADJ: "Beta Israeli"
-    BISRA_f_desc: "Beta Israel, the Ethiopian Jewish community, maintained their faith in isolation for centuries, practicing a unique form of Judaism that preserved ancient traditions while developing distinctive customs unknown to other Jewish communities. Their origin remains debated—descendants of King Solomon and the Queen of Sheba according to tradition, or converts from ancient times. For generations, Beta Israel remained unknown to the wider Jewish world, practicing their religion in the highlands of Ethiopia until contact was reestablished in modern times. Their distinct rituals, including animal sacrifice and strict purity laws, reflect Judaism as it existed before rabbinic reforms."
+    BISRA_f_desc: "Beta Israel, the Ethiopian Jewish community, maintained their faith in isolation for centuries, practicing a unique form of Judaism that preserved ancient traditions while developing distinctive customs unknown to other Jewish communities. Their origin remains debated; descendants of King Solomon and the Queen of Sheba according to tradition, or converts from ancient times. For generations, Beta Israel remained unknown to the wider Jewish world, practicing their religion in the highlands of Ethiopia until contact was reestablished in modern times. Their distinct rituals, including animal sacrifice and strict purity laws, reflect Judaism as it existed before rabbinic reforms."
 
     # Hungarian Empire
     HNGEM: "Hungarian Empire"
@@ -1165,13 +1165,13 @@
     FROCA: "Federal Republic of Central America"
     FROCA_f: "Federal Republic of Central America"
     FROCA_ADJ: "Central American"
-    FROCA_f_desc: "The Federal Republic of Central America, born from independence and Spanish America's dissolution, united Guatemala, El Salvador, Honduras, Nicaragua, and Costa Rica into a single federal state from 1823 to 1841. This liberal experiment sought to create a unified Central American nation capable of economic development and political stability, yet regional rivalries, conservative opposition, and geographic obstacles doomed it. Each province maintained distinct interests—Guatemala City's conservatives versus liberal reformers elsewhere—while poor infrastructure prevented true integration. The republic's collapse left five weak nations where one might have thrived, forever fragmenting the isthmus."
+    FROCA_f_desc: "The Federal Republic of Central America, born from independence and Spanish America's dissolution, united Guatemala, El Salvador, Honduras, Nicaragua, and Costa Rica into a single federal state from 1823 to 1841. This liberal experiment sought to create a unified Central American nation capable of economic development and political stability, yet regional rivalries, conservative opposition, and geographic obstacles doomed it. Each province maintained distinct interests; Guatemala City's conservatives versus liberal reformers elsewhere, while poor infrastructure prevented true integration. The republic's collapse left five weak nations where one might have thrived, forever fragmenting the isthmus."
 
     # Jagiellonian Empire
     JGLNN: "Jagiellonian Empire"
     JGLNN_f: "Jagiellonian Empire"
     JGLNN_ADJ: "Jagiellonian"
-    JGLNN_f_desc: "The 'Jagiellonian Empire' refers to the vast territories ruled by the Jagiellonian dynasty between the 14th and 16th centuries, which included the Kingdom of Poland, the Grand Duchy of Lithuania, and at times, the Kingdoms of Hungary and Bohemia. While not a single empire with one emperor, the personal union between Poland and Lithuania grew into the Polish–Lithuanian Commonwealth and is sometimes considered an empire due to its immense size and influence, ruling over modern-day Poland, Lithuania, Belarus, and western Ukraine."
+    JGLNN_f_desc: "The 'Jagiellonian Empire' refers to the vast territories ruled by the Jagiellonian dynasty between the 14th and 16th centuries, which included the Kingdom of Poland, the Grand Duchy of Lithuania, and at times, the Kingdoms of Hungary and Bohemia. While not a single empire with one emperor, the personal union between Poland and Lithuania grew into the Polish-Lithuanian Commonwealth and is sometimes considered an empire due to its immense size and influence, ruling over modern-day Poland, Lithuania, Belarus, and western Ukraine."
 
     # Kyivan Rus
     KYVRU: "Kyivan Rus"
@@ -1183,7 +1183,7 @@
     UMAYA: "Umayyad Caliphate"
     UMAYA_f: "Umayyad Caliphate"
     UMAYA_ADJ: "Umayyad"
-    UMAYA_f_desc: "The Umayyad Caliphate (661–750 CE) was the first major Islamic dynasty, transforming the Muslim community into a vast, centralized Arab-Islamic empire. Ruled from its capital in Damascus, Syria, it became one of the largest unitary states in history, stretching from the Iberian Peninsula (Spain and Portugal) in the west to India and Central Asia in the east."
+    UMAYA_f_desc: "The Umayyad Caliphate (661-750 CE) was the first major Islamic dynasty, transforming the Muslim community into a vast, centralized Arab-Islamic empire. Ruled from its capital in Damascus, Syria, it became one of the largest unitary states in history, stretching from the Iberian Peninsula (Spain and Portugal) in the west to India and Central Asia in the east."
 
     # Rashidun Caliphate
     RSHDN: "Rashidun Caliphate"
@@ -1230,7 +1230,7 @@
     MACED: "Macedon"
     MACED_f: "Macedon"
     MACED_ADJ: "Macedonian"
-    MACED_f_desc: "Macedon, the kingdom that gave rise to Philip II and his son Alexander the Great, transformed from a semi-barbarous realm on the fringes of the Greek world into history's most successful conquest state. Philip's military reforms created the Macedonian phalanx and professional army that conquered Greece, while Alexander used this war machine to subjugate the Persian Empire and reach India. Though Alexander's empire fragmented upon his death, Macedon's legacy—Hellenistic culture, Greek language spreading east, and the idea that one man could conquer the known world—shaped antiquity. Macedon proved that military genius and ruthless ambition could overcome any obstacle."
+    MACED_f_desc: "Macedon, the kingdom that gave rise to Philip II and his son Alexander the Great, transformed from a semi-barbarous realm on the fringes of the Greek world into history's most successful conquest state. Philip's military reforms created the Macedonian phalanx and professional army that conquered Greece, while Alexander used this war machine to subjugate the Persian Empire and reach India. Though Alexander's empire fragmented upon his death, Macedon's legacy (Hellenistic culture, Greek language spreading east, and the idea that one man could conquer the known world) shaped antiquity. Macedon proved that military genius and ruthless ambition could overcome any obstacle."
 
     # Macedonian Empire
     MCDEM: "Macedonian Empire"
@@ -1259,12 +1259,12 @@
     ASSSN: "Ḥaššāšīyīn"
     ASSSN_f: "Ḥaššāšīyīn"
     ASSSN_ADJ: "Ḥaššāšīyīn"
-    ASSSN_f_desc: "Restore the legendary Order of Assassins, the Nizari Ismaili state that once commanded an invisible empire from its mountain fortresses. From Alamut to Masyaf, the Ḥaššāšīyīn answered to no sultan or caliph — wielding the dagger and the threat of the dagger as instruments of statecraft. To refound their order is to reclaim a tradition where a single devoted fidā'ī could topple kingdoms, and where the mightiest rulers in the world paid tribute not out of love, but out of fear."
+    ASSSN_f_desc: "Restore the legendary Order of Assassins, the Nizari Ismaili state that once commanded an invisible empire from its mountain fortresses. From Alamut to Masyaf, the Ḥaššāšīyīn answered to no sultan or caliph, wielding the dagger and the threat of the dagger as instruments of statecraft. To refound their order is to reclaim a tradition where a single devoted fidā'ī could topple kingdoms, and where the mightiest rulers in the world paid tribute not out of love, but out of fear."
 
     POFAN: "Principality of Antioch"
     POFAN_f: "Principality of Antioch"
     POFAN_ADJ: "Antichian"
-    POFAN_f_desc: "Revive the Crusader principality that once stood as a bastion of Latin Christendom on the banks of the Orontes. Founded by Bohemond during the First Crusade, the Principality of Antioch endured for nearly two centuries as a crossroads of Greek, Armenian, and Frankish culture — a realm where Norman ambition met the riches of the Levant. To restore it is to plant the cross once more upon the ancient walls of one of Christendom's five great patriarchal sees."
+    POFAN_f_desc: "Revive the Crusader principality that once stood as a bastion of Latin Christendom on the banks of the Orontes. Founded by Bohemond during the First Crusade, the Principality of Antioch endured for nearly two centuries as a crossroads of Greek, Armenian, and Frankish culture, a realm where Norman ambition met the riches of the Levant. To restore it is to plant the cross once more upon the ancient walls of one of Christendom's five great patriarchal sees."
 
     COTRP: "County of Tripoli"
     COTRP_f: "County of Tripoli"
@@ -1274,12 +1274,12 @@
     COEDS: "County of Edessa"
     COEDS_f: "County of Edessa"
     COEDS_ADJ: "Edessan"
-    COEDS_f_desc: "Restore the first Crusader state, carved from the lands beyond the Euphrates by Baldwin of Boulogne before Jerusalem itself had fallen. The County of Edessa stood as the easternmost outpost of Latin Christendom — a frontier realm surrounded on all sides by Muslim powers, sustained by its Armenian Christian subjects and the sheer audacity of its Frankish lords. Its fall in 1144 shocked Christendom and sparked the Second Crusade. To refound it is to reclaim the vanguard of the Cross in the heart of Mesopotamia."
+    COEDS_f_desc: "Restore the first Crusader state, carved from the lands beyond the Euphrates by Baldwin of Boulogne before Jerusalem itself had fallen. The County of Edessa stood as the easternmost outpost of Latin Christendom, a frontier realm surrounded on all sides by Muslim powers, sustained by its Armenian Christian subjects and the sheer audacity of its Frankish lords. Its fall in 1144 shocked Christendom and sparked the Second Crusade. To refound it is to reclaim the vanguard of the Cross in the heart of Mesopotamia."
 
     OTRMR: "Outremer"
     OTRMR_f: "Outremer"
     OTRMR_ADJ: "Outremer"
-    OTRMR_f_desc: "Unite the scattered Crusader states into one kingdom beyond the sea. From the walls of Edessa to the gates of Jerusalem, from the cedars of Tripoli to the harbors of Cyprus, the lords of Outremer once forged a Latin realm in the heart of the Islamic world. To restore it is to bind Antioch, Tripoli, Edessa, and the Holy City itself under a single crown — a Christian domain stretching from the Euphrates to the Sinai, and perhaps beyond into the sands of Arabia. What the First Crusade won piecemeal, Outremer shall hold as one."
+    OTRMR_f_desc: "Unite the scattered Crusader states into one kingdom beyond the sea. From the walls of Edessa to the gates of Jerusalem, from the cedars of Tripoli to the harbors of Cyprus, the lords of Outremer once forged a Latin realm in the heart of the Islamic world. To restore it is to bind Antioch, Tripoli, Edessa, and the Holy City itself under a single crown, a Christian domain stretching from the Euphrates to the Sinai, and perhaps beyond into the sands of Arabia. What the First Crusade won piecemeal, Outremer shall hold as one."
 
     KKHAM: "Kham"
     KKHAM_f: "Kham"

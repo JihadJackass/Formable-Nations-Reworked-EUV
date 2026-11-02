@@ -14,15 +14,7 @@
       SDNNW_S: "Flag of Sweden (1844-1905)"
       SDNNW_N: "Flag of Norway (1844-1899)"
 
-    # North German Confederation
-
-      NGCFD_flag_alternate: "Reichskriegsflagge"
-
-    # Papal Empire
-
-      PAP_HRE_EMPIRE_1_FLAG: "Imperial Papal Banner"
-      PAP_HRE_EMPIRE_2_FLAG: "Quaternion Eagle"
-      PAP_HRE_EMPIRE_3_FLAG: "Banner of the Holy Roman Empire"
+    # North German Confederation and Papal Empire flags are named in fnr_formable_events / fnr_formable_tooltip
 
     # Pax Romana - Roman Republic
 

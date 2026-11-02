@@ -1,4 +1,4 @@
-# The Foederati - actions shown in the Foederati panel (Pax Romana)
+﻿# The Foederati - actions shown in the Foederati panel (Pax Romana)
 # scope:actor = Rome, scope:recipient = the Foederati, scope:source = the chosen member
 
 # Renew the Foedera - peace, every 5 years: every member gains Foedus Renewed and thinks better of Rome

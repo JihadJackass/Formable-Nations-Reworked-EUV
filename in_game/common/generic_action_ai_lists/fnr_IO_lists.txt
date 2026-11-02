@@ -42,3 +42,45 @@ fnr_japan_IO_list = {
  #           fnr_moravia_patriarchate_unificatio_unionis
  #       }
 #    }
+
+# Pax Romana IO actions (evaluated only by the leaders who can use them)
+fnr_RMNRP_socii_list = {
+	potential = {
+		has_or_had_tag = RMNRP
+	}
+	actions = {
+		fnr_RMNRP_socii_renew_foedera
+		fnr_RMNRP_socii_levy
+		fnr_RMNRP_socii_promote_latin
+		fnr_RMNRP_socii_grant_ius_latii
+		fnr_RMNRP_socii_incorporate
+	}
+}
+
+fnr_ROM_foederati_list = {
+	potential = {
+		has_or_had_tag = ROM
+	}
+	actions = {
+		fnr_ROM_foederati_renew_foedera
+		fnr_ROM_foederati_levy
+		fnr_ROM_foederati_grant_title
+		fnr_ROM_foederati_settle_limes
+		fnr_ROM_foederati_hostages
+		fnr_ROM_foederati_romanize
+		fnr_ROM_foederati_incorporate
+	}
+}
+
+fnr_PTLMY_league_list = {
+	potential = {
+		has_or_had_tag = PTLMY
+	}
+	actions = {
+		fnr_PTLMY_league_ptolemaieia
+		fnr_PTLMY_league_levy
+		fnr_PTLMY_league_send_grain
+		fnr_PTLMY_league_garrison
+		fnr_PTLMY_league_incorporate
+	}
+}

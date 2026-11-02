@@ -1,0 +1,34 @@
+﻿l_english:
+
+  # Game rule: country names
+      rule_fnr_country_names: "Country Names"
+      setting_fnr_country_names_default: "Default"
+      setting_fnr_country_names_default_desc: "Countries are named by their rank and government, such as the Kingdom of Castile or the Sultanate of Egypt. Formable nations whose names already include a title, such as the Ptolemaic Kingdom, keep their own names."
+      setting_fnr_country_names_simple: "Simple Names"
+      setting_fnr_country_names_simple_desc: "Countries use their plain names, such as Castile, Egypt or the Ptolemaic Kingdom, without a rank or title added. A few countries whose plain names would read oddly, such as the Timurids or the Hansa, keep their usual names."
+      setting_fnr_country_names_vanilla: "Vanilla"
+      setting_fnr_country_names_vanilla_desc: "Every country is named by the base game's rules, formable nations included. Some formables will get unusual names, such as the Sultanate of the Ptolemaic Kingdom."
+
+  # Ptolemaic Kingdom
+      fnr_rank_PTLMY_basileus: "$rank_kingdom$"
+      fnr_rank_PTLMY_basileus_ADJ: "$rank_kingdom_ADJ$"
+      fnr_rank_PTLMY_basileus_ruler_male: "Basileus"
+      fnr_rank_PTLMY_basileus_ruler_female: "Basilissa"
+      fnr_rank_PTLMY_basileus_empire: "$rank_empire$"
+      fnr_rank_PTLMY_basileus_empire_ADJ: "$rank_empire_ADJ$"
+      fnr_rank_PTLMY_basileus_empire_ruler_male: "Great Basileus"
+      fnr_rank_PTLMY_basileus_empire_ruler_female: "Great Basilissa"
+      fnr_rank_PTLMY_pharaoh: "$rank_kingdom$"
+      fnr_rank_PTLMY_pharaoh_ADJ: "$rank_kingdom_ADJ$"
+      fnr_rank_PTLMY_pharaoh_ruler_male: "Pharaoh"
+      fnr_rank_PTLMY_pharaoh_ruler_female: "Pharaoh"
+      fnr_rank_PTLMY_pharaoh_empire: "$rank_empire$"
+      fnr_rank_PTLMY_pharaoh_empire_ADJ: "$rank_empire_ADJ$"
+      fnr_rank_PTLMY_pharaoh_empire_ruler_male: "Pharaoh"
+      fnr_rank_PTLMY_pharaoh_empire_ruler_female: "Pharaoh"
+
+  # Roman Empire
+      fnr_rank_ROM_imperator: "$rank_empire$"
+      fnr_rank_ROM_imperator_ADJ: "$rank_empire_ADJ$"
+      fnr_rank_ROM_imperator_ruler_male: "Imperator"
+      fnr_rank_ROM_imperator_ruler_female: "Imperatrix"

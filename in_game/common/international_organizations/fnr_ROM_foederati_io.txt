@@ -1,4 +1,4 @@
-# The Foederati - Amici et Socii Populi Romani: Rome's client kings and frontier allies (Pax Romana)
+﻿# The Foederati - Amici et Socii Populi Romani: Rome's client kings and frontier allies (Pax Romana)
 # Founded by the fnr_ROM_found_foederati decision, or converted from the Republic's Socii when Rome forms
 # (fnr_ROM_convert_socii_effect, from fnr_ROM.1). The Roman Empire always leads.
 # Who can join: subjects of Rome (they join automatically), former Socii, and any country with its capital

@@ -8,9 +8,12 @@ hint_fnr_RMNRP_senate = {
 		has_variable = fnr_RMNRP_senate_authority
 	}
 	hide = {
+		# NOT with several entries is NOR in this engine, so wrap them in AND
 		NOT = {
-			has_or_had_tag = RMNRP
-			has_variable = fnr_RMNRP_senate_authority
+			AND = {
+				has_or_had_tag = RMNRP
+				has_variable = fnr_RMNRP_senate_authority
+			}
 		}
 	}
 }
@@ -22,9 +25,12 @@ hint_fnr_RMNRP_servile = {
 		fnr_RMNRP_has_roman_slavery = yes
 	}
 	hide = {
+		# NOT with several entries is NOR in this engine, so wrap them in AND
 		NOT = {
-			has_or_had_tag = RMNRP
-			fnr_RMNRP_has_roman_slavery = yes
+			AND = {
+				has_or_had_tag = RMNRP
+				fnr_RMNRP_has_roman_slavery = yes
+			}
 		}
 	}
 }
@@ -37,9 +43,12 @@ hint_fnr_RMNRP_byzantium = {
 		c:BYZ = { is_subject = no }
 	}
 	hide = {
+		# NOT with several entries is NOR in this engine, so wrap them in AND
 		NOT = {
-			has_or_had_tag = RMNRP
-			exists = c:BYZ
+			AND = {
+				has_or_had_tag = RMNRP
+				exists = c:BYZ
+			}
 		}
 	}
 }

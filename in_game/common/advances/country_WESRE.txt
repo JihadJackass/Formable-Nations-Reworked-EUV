@@ -115,7 +115,6 @@
 					}
 				}
 				stability > 40
-				has_advance = WESRE_ecclesiastical_alliance
 			}
 
 			monthly_prestige = 0.1

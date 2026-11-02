@@ -7,9 +7,12 @@ hint_fnr_ROM_legions = {
 		has_variable = fnr_ROM_formed
 	}
 	hide = {
+		# NOT with several entries is NOR in this engine, so wrap them in AND
 		NOT = {
-			has_or_had_tag = ROM
-			has_variable = fnr_ROM_formed
+			AND = {
+				has_or_had_tag = ROM
+				has_variable = fnr_ROM_formed
+			}
 		}
 	}
 }
@@ -21,9 +24,12 @@ hint_fnr_ROM_dioceses = {
 		has_variable = fnr_ROM_formed
 	}
 	hide = {
+		# NOT with several entries is NOR in this engine, so wrap them in AND
 		NOT = {
-			has_or_had_tag = ROM
-			has_variable = fnr_ROM_formed
+			AND = {
+				has_or_had_tag = ROM
+				has_variable = fnr_ROM_formed
+			}
 		}
 	}
 }

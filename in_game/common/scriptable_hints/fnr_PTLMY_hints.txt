@@ -7,9 +7,12 @@ hint_fnr_PTLMY_crown = {
 		has_variable = fnr_PTLMY_formed
 	}
 	hide = {
+		# NOT with several entries is NOR in this engine, so wrap them in AND
 		NOT = {
-			has_or_had_tag = PTLMY
-			has_variable = fnr_PTLMY_formed
+			AND = {
+				has_or_had_tag = PTLMY
+				has_variable = fnr_PTLMY_formed
+			}
 		}
 	}
 }
@@ -21,9 +24,12 @@ hint_fnr_PTLMY_library = {
 		has_variable = fnr_PTLMY_formed
 	}
 	hide = {
+		# NOT with several entries is NOR in this engine, so wrap them in AND
 		NOT = {
-			has_or_had_tag = PTLMY
-			has_variable = fnr_PTLMY_formed
+			AND = {
+				has_or_had_tag = PTLMY
+				has_variable = fnr_PTLMY_formed
+			}
 		}
 	}
 }
@@ -35,9 +41,12 @@ hint_fnr_PTLMY_nile = {
 		has_variable = fnr_PTLMY_formed
 	}
 	hide = {
+		# NOT with several entries is NOR in this engine, so wrap them in AND
 		NOT = {
-			has_or_had_tag = PTLMY
-			has_variable = fnr_PTLMY_formed
+			AND = {
+				has_or_had_tag = PTLMY
+				has_variable = fnr_PTLMY_formed
+			}
 		}
 	}
 }

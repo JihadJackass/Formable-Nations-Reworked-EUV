@@ -531,3 +531,5 @@
       fnr_ROM_client_brigantia.desc: "Queen Cartimandua ruled the Brigantes of northern Britain as Rome's ally, and handed Caratacus over in chains.\n\nOur lands there will be given to a new king, who will rule them as our vassal and join the #Y Foederati#!."
       fnr_ROM_client_brigantia.a: "Crown a friend of Rome."
       fnr_ROM_client_brigantia_tt: "Our lands there, apart from the capital, become the #Y Regnum Brigantum#!, a kingdom that is our #Y vassal#! and joins the #Y Foederati#!."
+      diplomatic_status_fnr_ROM_foederati_io_name: "Foederati"
+      diplomatic_status_fnr_ROM_foederati_io_tooltip: "Both are members of the #Y Foederati#!"

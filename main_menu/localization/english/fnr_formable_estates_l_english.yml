@@ -74,7 +74,7 @@
 
     # Hanseatic League
     fnr_HNSLG_federal_trade_monopolies: "Federal Trade Monopolies"
-    fnr_HNSLG_federal_trade_monopolies_desc: "Grant the merchant estate exclusive control over strategic exports throughout our territorial federation. Unlike the old kontor system where monopolies applied only within foreign enclaves, our territorial sovereignty allows us to enforce trade restrictions across entire provinces. Timber from Pomerania, grain from Prussia, fish from Holstein—all flow through Hanseatic merchants who pay generous taxes in exchange for guaranteed profits."
+    fnr_HNSLG_federal_trade_monopolies_desc: "Grant the merchant estate exclusive control over strategic exports throughout our territorial federation. Unlike the old kontor system where monopolies applied only within foreign enclaves, our territorial sovereignty allows us to enforce trade restrictions across entire provinces. Timber from Pomerania, grain from Prussia, fish from Holstein; all flow through Hanseatic merchants who pay generous taxes in exchange for guaranteed profits."
 
     fnr_HNSLG_urban_development_authority: "Urban Development Authority"
     fnr_HNSLG_urban_development_authority_desc: "Empower wealthy merchants to direct urban expansion and infrastructure projects in our territorial cities. The merchant estate receives authority to construct markets, harbors, and warehouses using private capital, transforming our conquered provinces into thriving commercial centers. Unlike the old system where kontors existed as isolated islands in foreign cities, we now reshape entire urban landscapes to serve our economic vision."
@@ -86,6 +86,6 @@
     fnr_HNSLG_territorial_fleet_requisition_desc: "Require merchant houses to contribute vessels to our national navy in proportion to their wealth. Unlike the old voluntary system where cities might refuse naval cooperation, our territorial government can compel participation in collective defense. In exchange, participating merchants receive priority access to newly conquered ports and exemption from certain harbor fees, ensuring that private interests align with national security."
 
     fnr_HNSLG_provincial_trading_companies: "Provincial Trading Companies"   
-    fnr_HNSLG_provincial_trading_companies_desc: "Authorize the formation of joint-stock trading companies with monopoly rights over commerce in specific conquered regions. These territorial companies operate differently from old kontor networks—rather than maintaining enclaves in foreign cities, they administer entire provinces as economic enterprises. Merchant shareholders profit from regional trade while bearing costs of local administration and development."   
+    fnr_HNSLG_provincial_trading_companies_desc: "Authorize the formation of joint-stock trading companies with monopoly rights over commerce in specific conquered regions. These territorial companies operate differently from old kontor networks. Rather than maintaining enclaves in foreign cities, they administer entire provinces as economic enterprises. Merchant shareholders profit from regional trade while bearing costs of local administration and development."   
 
 

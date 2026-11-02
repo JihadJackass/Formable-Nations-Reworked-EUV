@@ -21,7 +21,7 @@
       fnr_greco_buddhism_action_hybridize_local_cultures_pops_tt: "#color_green 35%#! of [ShowReligionName('fnr_greco_buddhism_religion')] pops in locations with Greco-Buddhist communities will begin adopting the new [ShowCultureName('fnr_greco_bactrian_culture')] culture."
 
       fnr_proclaim_bactrian_synod: "Proclaim the Bactrian Synod"
-      fnr_proclaim_bactrian_synod_desc: "The heirs of Alexander once carved an empire from the Aegean to the Indus, yet that great union of peoples has long since fractured into squabbling successors. By proclaiming the Bactrian Synod, we shall gather the scattered remnants of the Hellenic world under one banner once more. From Macedonia to Armenia, from Assyria to the banks of the Oxus, those who still honour the legacy of Alexander shall be called to our cause — not merely as allies, but as pillars of a restored empire worthy of the Conqueror himself."
+      fnr_proclaim_bactrian_synod_desc: "The heirs of Alexander once carved an empire from the Aegean to the Indus, yet that great union of peoples has long since fractured into squabbling successors. By proclaiming the Bactrian Synod, we shall gather the scattered remnants of the Hellenic world under one banner once more. From Macedonia to Armenia, from Assyria to the banks of the Oxus, those who still honour the legacy of Alexander shall be called to our cause, not merely as allies, but as pillars of a restored empire worthy of the Conqueror himself."
 
       fnr_grecobuddhism_embrace_religion: "Embrace Greco-Buddhism for the Ruling Family"
       fnr_grecobuddhism_embrace_religion_desc: "Command the royal household to forsake the old gods and take up the teachings of the enlightened Hellenic path. The ruler and all members of the dynasty will publicly profess the [ShowReligionName('fnr_greco_buddhism_religion')] faith, binding the throne to the Dharma and the legacy of Alexander in equal measure."
@@ -33,10 +33,10 @@
       fnr_bactria_restore_armenia_desc: "Armenia has long served as a buffer between the great powers of the east and west. By restoring a friendly king to the Armenian throne, we secure a loyal ally on our western flank and extend the reach of Hellenic civilization into the highlands of the Caucasus."
 
       fnr_bactria_restore_macedonia: "Restore the Glorious State of Macedonia"
-      fnr_bactria_restore_macedonia_desc: "Macedonia is the cradle of our heritage — the homeland of Alexander and the wellspring from which all successor kingdoms draw their legitimacy. To see it restored under worthy stewardship would rekindle the spirit of the Diadochi and affirm our place as the true inheritors of his legacy."
+      fnr_bactria_restore_macedonia_desc: "Macedonia is the cradle of our heritage, the homeland of Alexander and the wellspring from which all successor kingdoms draw their legitimacy. To see it restored under worthy stewardship would rekindle the spirit of the Diadochi and affirm our place as the true inheritors of his legacy."
 
       fnr_bactria_restore_assyria: "Position a local on the Assyrian Throne"
-      fnr_bactria_restore_assyria_desc: "The ancient lands of Assyria remain restive under foreign rule. By elevating a local figure amenable to our interests, we can establish a compliant satrap in the heart of Mesopotamia — one who owes his throne, and thus his loyalty, entirely to us."
+      fnr_bactria_restore_assyria_desc: "The ancient lands of Assyria remain restive under foreign rule. By elevating a local figure amenable to our interests, we can establish a compliant satrap in the heart of Mesopotamia, one who owes his throne, and thus his loyalty, entirely to us."
 
       fnr_bactria_restore_persia: "Establish a Pro-Greek Persian King"
       fnr_bactria_restore_persia_desc: "Persia is the jewel of the east, and whoever holds sway over its throne commands the respect of a hundred peoples. A Persian king raised in the Greek tradition and indebted to Bactrian patronage would transform a historic rival into our most valuable partner."
@@ -45,7 +45,7 @@
       fnr_bactria_egyptian_claim_desc: "The wealth of the Nile has sustained dynasties for millennia. By pressing a legitimate claim to the Egyptian throne, we assert that the riches of Alexandria and the granaries of the Delta need not remain beyond our reach forever."
 
       fnr_bactria_egyptian_establish: "Restore the Ptolemaic Dynasty to Egypt"
-      fnr_bactria_egyptian_establish_desc: "The Ptolemaic dynasty once presided over the greatest center of learning and commerce in the known world. Restoring them to power in Egypt — under our guidance — would see a grateful ally enthroned on the banks of the Nile, and Hellenic culture flourishing once more from Memphis to the sea."
+      fnr_bactria_egyptian_establish_desc: "The Ptolemaic dynasty once presided over the greatest center of learning and commerce in the known world. Restoring them to power in Egypt, under our guidance, would see a grateful ally enthroned on the banks of the Nile, and Hellenic culture flourishing once more from Memphis to the sea."
 
       fnr_bactria_restore_the_macedonian_empire: "Restore the Macedonian Empire"
-      fnr_bactria_restore_the_macedonian_empire_desc: "The dream of Alexander was never merely conquest — it was the unity of all peoples under one crown, from the pillars of Herakles to the waters of the Ganges. The Synod has gathered the faithful, the old domains have bent the knee, and the hour has come to cast aside the title of successor. We shall reclaim what was lost and proclaim anew what the world has not seen since the death of the Conqueror — a single Macedonian Empire, stretching from West to East, with Bactria as its beating heart."
+      fnr_bactria_restore_the_macedonian_empire_desc: "The dream of Alexander was never merely conquest; it was the unity of all peoples under one crown, from the pillars of Herakles to the waters of the Ganges. The Synod has gathered the faithful, the old domains have bent the knee, and the hour has come to cast aside the title of successor. We shall reclaim what was lost and proclaim anew what the world has not seen since the death of the Conqueror, a single Macedonian Empire, stretching from West to East, with Bactria as its beating heart."

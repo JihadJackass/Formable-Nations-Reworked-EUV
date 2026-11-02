@@ -141,10 +141,6 @@
 					}
 				}
 				stability > 50
-				OR = {
-					has_advance = EASRE_symphonia
-					has_advance = EASRE_academy
-				}
 			}
 
 			monthly_prestige = 0.1

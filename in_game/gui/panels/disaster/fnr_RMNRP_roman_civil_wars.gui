@@ -28,12 +28,12 @@ disaster_panel = {
 						maximumsize = { 200 -1 }
 					}
 					blockoverride "character_name_text"{
-						text = "[DisasterView.GetDisaster.GetOwner.MakeScope.GetVariable('fnr_RMNRP_rebel_leader').GetCharacter.GetShortNameWithNoTooltip]"
+						raw_text = "[DisasterView.GetDisaster.GetOwner.MakeScope.GetVariable('fnr_RMNRP_rebel_leader').GetCharacter.GetShortNameWithNoTooltip]"
 					}
 
 					blockoverride "character_title" {
 						visible = "[Character.HasNickName]"
-						text = "[Character.GetNickname]"
+						raw_text = "[Character.GetNickname]"
 					}
 				}
 			}
@@ -115,7 +115,7 @@ disaster_panel = {
 						size = { -1 30 }
 						autoresize = no
 						align = center|nobaseline
-						text = "[DisasterView.GetDisaster.GetOwner.MakeScope.GetVariable('fnr_RMNRP_senate_authority').GetValue|0] / 100"
+						raw_text = "[DisasterView.GetDisaster.GetOwner.MakeScope.GetVariable('fnr_RMNRP_senate_authority').GetValue|0] / 100"
 					}
 					progressbar = {
 						size = { 100 10 }

@@ -402,15 +402,6 @@
 			research_speed_modifier = 0.05
 		}
 
-		# The Thebaid Crushed
-		fnr_PTLMY_native_pharaohs_crushed = {
-			game_data = {
-				category = country
-			}
-			global_max_control = 0.03
-			peasants_estate_target_satisfaction = -0.05
-		}
-
 		# The Philanthropa Decrees
 		fnr_PTLMY_philanthropa = {
 			game_data = {
