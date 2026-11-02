@@ -51,6 +51,8 @@
       fnr_LAT.4.b: "Treat with the Greek archons."
       fnr_LAT_greek_rising_tt: "The Orthodox pops of one province rise for the pretender."
       fnr_LAT_greek_pretender_rebels: "Greek Loyalists"
+      fnr_LAT_greek_pretender_rebels_country: "$fnr_LAT_greek_pretender_rebels$"
+      fnr_LAT_greek_pretender_rebels_country_adjective: "$fnr_LAT_greek_pretender_rebels$"
 
       fnr_LAT.5.title: "The Latin Rite Takes Root"
       fnr_LAT.5.desc: "Two generations have passed since the conquest. Latin and Greek families have intermarried, and in many villages priests of both rites serve the same flock. Some bishops propose a bold step: a church in communion with Rome that keeps the Greek liturgy, the Greek calendar and married priests. Rome would not be pleased."
@@ -124,7 +126,7 @@
       fnr_LAT_barons_io: "The Barons of Romania"
       fnr_LAT_barons_io_name: "The Barons of Romania"
       fnr_LAT_barons_io_created_tt: "Founds the #Y Barons of Romania#! with us as its permanent leader. Our subjects join automatically."
-      fnr_LAT_barons_io_desc: "The sworn league of the crusader lords of Greece, led by the Latin emperor.\n\n#T How it works#!\n- #Y Who can join:#! any subject of the Latin Empire, and any Catholic Frankokratia state. Our subjects, such as the #Y Partition of Romania#! fiefs, join automatically.\n- #Y Defense:#! members are called into each other's defensive wars.\n- #Y Members#! gain defense and heavy cavalry power, and think better of the Latin Empire.\n- #Y The Latin Empire#! gains legitimacy and heavy cavalry power, plus levy size and prestige for every member, up to 8.\n- #Y League actions#! (Latin Empire decisions): convene the #Y Parliament of Ravennika#! in peacetime every 5 years, or #Y Summon the Barons#! in wartime every 10 years."
+      fnr_LAT_barons_io_desc: "The sworn league of the crusader lords of Greece, led by the Latin emperor.\n\n#T How it works#!\n- #Y Who can join#! - any subject of the Latin Empire, and any Catholic Frankokratia state. Our subjects, such as the #Y Partition of Romania#! fiefs, join automatically.\n- #Y Defense#! - members are called into each other's defensive wars.\n- #Y Members#! gain defense and heavy cavalry power, and think better of the Latin Empire.\n- #Y The Latin Empire#! gains legitimacy and heavy cavalry power, plus levy size and prestige for every member, up to 8.\n- #Y League actions#! (Latin Empire decisions) - convene the #Y Parliament of Ravennika#! in peacetime every 5 years, or #Y Summon the Barons#! in wartime every 10 years."
       fnr_LAT_barons_io_list_who_tt: "$WHO$ is a member of [GetUniqueInternationalOrganization('fnr_LAT_barons_io').GetName] with $LIST$"
       diplomatic_status_fnr_LAT_barons_io_name: "The Barons of Romania"
       diplomatic_status_fnr_LAT_barons_io_tooltip: "#T The Barons of Romania#!\nThis [country|e] is a member of the Barons of Romania."

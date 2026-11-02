@@ -7,7 +7,7 @@
     # FORMATION
 
       fnr_GLCEM_culture_shift_tt: "Our primary culture becomes [ShowCultureName('fnr_gallo_roman_culture')]. #G 25%#! of Celtic and French pops and #G 10%#! of all others adopt it."
-      fnr_GLCEM_identity_choice_tt: "We will choose the soul of the new Gaul: the #Y Druidic Revival#! or the #Y Imperium Galliarum#!."
+      fnr_GLCEM_identity_choice_tt: "We will choose the soul of the new Gaul, either the #Y Druidic Revival#! or the #Y Imperium Galliarum#!."
 
     # ADVANCES
 
@@ -16,7 +16,7 @@
       GLCEM_druidic_restoration: "Druidic Restoration"
       GLCEM_druidic_restoration_desc: "The druids return from the forests and the margins of the world. Their colleges are refounded, their oral lore written down for the first time, and their sacred groves are tended once more.\n\nUnlocks the #Y Sacred Grove#!."
       GLCEM_mint_of_treveri: "The Mint of Treveri"
-      GLCEM_mint_of_treveri_desc: "Augusta Treverorum struck the coins of Postumus and Tetricus, the emperors of the Gauls. Our mint strikes them again: good gold and silver bearing the face of a Gallic Augustus."
+      GLCEM_mint_of_treveri_desc: "Augusta Treverorum struck the coins of Postumus and Tetricus, the emperors of the Gauls. Our mint strikes them again - good gold and silver bearing the face of a Gallic Augustus."
       GLCEM_gaulish_metallurgy: "Gaulish Metallurgy"
       GLCEM_gaulish_metallurgy_desc: "The Gauls forged iron long before Rome came, and the Romans learned from their smiths. The old workshops of the Bituriges and the Noric iron roads hum again."
       GLCEM_arverni_confederation: "Arverni Confederation"
@@ -84,7 +84,7 @@
     # BUILDINGS
 
       fnr_GLCEM_sacred_grove: "Sacred Grove"
-      fnr_GLCEM_sacred_grove_desc: "A nemeton: a sanctuary of ancient oaks where the druids keep the rites of the old gods. Draws the local people to the Gallo-Roman faith."
+      fnr_GLCEM_sacred_grove_desc: "A nemeton - a sanctuary of ancient oaks where the druids keep the rites of the old gods. Draws the local people to the Gallo-Roman faith."
 
     # DECISIONS
 
@@ -118,7 +118,7 @@
       fnr_GLCEM_celtic_league_io: "The Celtic League"
       fnr_GLCEM_celtic_league_io_name: "The Celtic League"
       fnr_GLCEM_celtic_league_io_created_tt: "Founds #Y The Celtic League#! with us as its permanent leader. Our subjects join automatically."
-      fnr_GLCEM_celtic_league_io_desc: "A league of the Celtic peoples, called together by the druids of Gaul.\n\n#T How it works#!\n- #Y Who can join:#! any Celtic-culture country, any follower of the [ShowReligionName('fnr_gallo_roman_religion')] faith, and any subject of the Gallic Empire. Our subjects, such as #Y Tarraconensis#! and #Y Britannia#!, join automatically.\n- #Y Defense:#! members are called into each other's defensive wars.\n- #Y Members#! gain morale, defense and tolerance of other faiths, and think better of the Gallic Empire.\n- #Y The Gallic Empire#! gains religious influence and morale, plus levy size and prestige for every member, up to 8.\n- #Y League actions#! (Gallic Empire decisions): hold the #Y Great Assembly#! in peacetime every 5 years, or #Y Sound the Carnyx#! in wartime every 10 years to rally every member at once."
+      fnr_GLCEM_celtic_league_io_desc: "A league of the Celtic peoples, called together by the druids of Gaul.\n\n#T How it works#!\n- #Y Who can join#! - any Celtic-culture country, any follower of the [ShowReligionName('fnr_gallo_roman_religion')] faith, and any subject of the Gallic Empire. Our subjects, such as #Y Tarraconensis#! and #Y Britannia#!, join automatically.\n- #Y Defense#! - members are called into each other's defensive wars.\n- #Y Members#! gain morale, defense and tolerance of other faiths, and think better of the Gallic Empire.\n- #Y The Gallic Empire#! gains religious influence and morale, plus levy size and prestige for every member, up to 8.\n- #Y League actions#! (Gallic Empire decisions) - hold the #Y Great Assembly#! in peacetime every 5 years, or #Y Sound the Carnyx#! in wartime every 10 years to rally every member at once."
       fnr_GLCEM_celtic_league_io_list_who_tt: "$WHO$ is a member of [GetUniqueInternationalOrganization('fnr_GLCEM_celtic_league_io').GetName] with $LIST$"
       diplomatic_status_fnr_GLCEM_celtic_league_io_name: "The Celtic League"
       diplomatic_status_fnr_GLCEM_celtic_league_io_tooltip: "#T The Celtic League#!\nThis [country|e] is a member of the Celtic League."

@@ -7,19 +7,19 @@
     # ADVANCES
 
       WESRE_foederati_integration: "Foederati Integration"
-      WESRE_foederati_integration_desc: "The legions are shadows of what they were. The Western Emperor looks to the barbarian warriors camped beyond his borders, Goths, Franks and Vandals, and sees not enemies but salvation. If Rome cannot field enough soldiers of her own, she will buy the swords of others. The foederati are a gamble: cheap, fierce and effective, but loyal only so long as the gold flows and the land is shared.\n\nUnlocks #Y Foederati Cavalry#!, the #Y Foederati Chiefs#! privilege, the #Y Foederati Settlement#! law and the #Y Settle the Foederati#! decision. Our #Y Foederati loyalty#! starts at 50."
+      WESRE_foederati_integration_desc: "The legions are shadows of what they were. The Western Emperor looks to the barbarian warriors camped beyond his borders, Goths, Franks and Vandals, and sees not enemies but salvation. If Rome cannot field enough soldiers of her own, she will buy the swords of others. The foederati are a gamble - cheap, fierce and effective, but loyal only so long as the gold flows and the land is shared.\n\nUnlocks #Y Foederati Cavalry#!, the #Y Foederati Chiefs#! privilege, the #Y Foederati Settlement#! law and the #Y Settle the Foederati#! decision. Our #Y Foederati loyalty#! starts at 50."
 
       WESRE_limes_reconstruction: "Limes Reconstruction"
-      WESRE_limes_reconstruction_desc: "Stone by stone, the old border fortifications are rebuilt. Watchtowers rise from rubble and signal fires are relit along the Rhine and Danube. It is grueling, expensive work: every coin poured into mortar is a coin that cannot feed a soldier or bribe a chieftain. But the Limes are more than walls. They are a statement that Rome still draws lines on the map, and that those lines still mean something.\n\nUnlocks the #Y Limes Watchtower#!, #Y Burgus#! and #Y Castellum#! in border locations."
+      WESRE_limes_reconstruction_desc: "Stone by stone, the old border fortifications are rebuilt. Watchtowers rise from rubble and signal fires are relit along the Rhine and Danube. It is grueling, expensive work - every coin poured into mortar is a coin that cannot feed a soldier or bribe a chieftain. But the Limes are more than walls. They are a statement that Rome still draws lines on the map, and that those lines still mean something.\n\nUnlocks the #Y Limes Watchtower#!, #Y Burgus#! and #Y Castellum#! in border locations."
 
       WESRE_ravenna_bureaucracy: "Ravenna's Bureaucracy"
-      WESRE_ravenna_bureaucracy_desc: "Ravenna sits behind its marshes like a jewel in a casket, untouchable by land and supplied by sea. It is the perfect capital for an empire under siege. Here the Western Emperor builds a bureaucracy from scratch: tax collectors, administrators and legal scholars, all dedicated to wringing order from the chaos of the dying West. What Ravenna lacks in glory, it makes up in survival.\n\nWhile we own Ravenna it gains the #Y Imperial Capital#! bonus. Allows us to #Y Convene the Concilium#!."
+      WESRE_ravenna_bureaucracy_desc: "Ravenna sits behind its marshes like a jewel in a casket, untouchable by land and supplied by sea. It is the perfect capital for an empire under siege. Here the Western Emperor builds a bureaucracy from scratch - tax collectors, administrators and legal scholars, all dedicated to wringing order from the chaos of the dying West. What Ravenna lacks in glory, it makes up in survival.\n\nWhile we own Ravenna it gains the #Y Imperial Capital#! bonus. Allows us to #Y Convene the Concilium#!."
 
       WESRE_ecclesiastical_alliance: "Ecclesiastical Alliance"
-      WESRE_ecclesiastical_alliance_desc: "Where the legions have failed, the Church endures. The Bishop of Rome commands a network of clergy, monasteries and faithful stretching from Hispania to the Danube. An alliance with the Church buys the Western Emperor something no army can provide: legitimacy in the eyes of millions. The cross and the eagle become one banner.\n\nGrants the permanent #Y Papal Blessing#!."
+      WESRE_ecclesiastical_alliance_desc: "Where the legions have failed, the Church endures. The Bishop of Rome commands a network of clergy, monasteries and faithful stretching from Hispania to the Danube. An alliance with the Church buys the Western Emperor something no army can provide - legitimacy in the eyes of millions. The cross and the eagle become one banner.\n\nGrants the permanent #Y Papal Blessing#!."
 
       WESRE_renovatio_occidentalis: "Renovatio Occidentalis"
-      WESRE_renovatio_occidentalis_desc: "Against every expectation and every prophecy of doom, the Western Roman Empire has endured. More than endured: it has reclaimed its ancient provinces, rebuilt its shattered institutions and rekindled the flame the world believed extinguished forever. The Renovatio Occidentalis is proclaimed from the steps of the restored Capitol. The last candle has become a bonfire.\n\nEnds #Y The Last Light#! and grants the permanent #Y Renovatio#!."
+      WESRE_renovatio_occidentalis_desc: "Against every expectation and every prophecy of doom, the Western Roman Empire has endured. More than endured - it has reclaimed its ancient provinces, rebuilt its shattered institutions and rekindled the flame the world believed extinguished forever. The Renovatio Occidentalis is proclaimed from the steps of the restored Capitol. The last candle has become a bonfire.\n\nEnds #Y The Last Light#! and grants the permanent #Y Renovatio#!."
 
     # EVENTS - The Last Light
 
@@ -31,8 +31,8 @@
       flavor_WESRE.1.b: "The Church is rich. Tax it."
       flavor_WESRE.1.c: "Appeal to our brothers in Constantinople."
       flavor_WESRE.1.d: "We will endure without their gold."
-      fnr_WESRE_east_sends_gold_tt: "#G 50%#!: Constantinople sends #Y 400#! gold."
-      fnr_WESRE_east_refuses_tt: "#R 50%#!: Constantinople refuses, and the whole court knows it."
+      fnr_WESRE_east_sends_gold_tt: "#G 50%#! chance that Constantinople sends #Y 400#! gold."
+      fnr_WESRE_east_refuses_tt: "#R 50%#! chance that Constantinople refuses, and the whole court knows it."
 
       flavor_WESRE.2: "The Barbarian at the Gate"
       flavor_WESRE.2.entry: "The Barbarian at the Gate"
@@ -42,9 +42,9 @@
       flavor_WESRE.2.b: "To arms! Rome does not yield."
       flavor_WESRE.2.c: "Let them settle as foederati."
       flavor_WESRE.2.d: "Every general has a price."
-      fnr_WESRE_battle_odds_tt: "The frontier battle decides it. #G 60%#! chance of victory, #G 75%#! if our army is the larger.\nVictory: #G Defender of Rome#! for 10 years.\nDefeat: we lose #R 2#! border provinces, #R Frontier Collapse#! and #R Debased Coinage#! for 10 years."
-      fnr_WESRE_bribe_works_tt: "#G 70%#!: they take the gold and turn back."
-      fnr_WESRE_bribe_fails_tt: "#R 30%#!: they take the gold AND a border province."
+      fnr_WESRE_battle_odds_tt: "The frontier battle decides it. #G 60%#! chance of victory, #G 75%#! if our army is the larger.\nIf we win, #G Defender of Rome#! for 10 years.\nIf we lose, we lose #R 2#! border provinces, #R Frontier Collapse#! and #R Debased Coinage#! for 10 years."
+      fnr_WESRE_bribe_works_tt: "#G 70%#! chance that they take the gold and turn back."
+      fnr_WESRE_bribe_fails_tt: "#R 30%#! chance that they take the gold AND a border province."
 
       flavor_WESRE.3: "The General's Ambition"
       flavor_WESRE.3.entry: "The General's Ambition"
@@ -54,9 +54,9 @@
       flavor_WESRE.3.b: "He has earned his glory. Leave him be."
       flavor_WESRE.3.c: "Bind him to the dynasty through marriage."
       flavor_WESRE.3.d: "An accident can be arranged."
-      fnr_WESRE_usurper_risk_tt: "#R 60%#!: within 5 to 10 years he proclaims himself emperor and raises a rebellion."
-      fnr_WESRE_assassination_works_tt: "#G 70%#!: the general dies, and the army mourns him."
-      fnr_WESRE_assassination_fails_tt: "#R 30%#!: the plot fails and he rises in revolt at once."
+      fnr_WESRE_usurper_risk_tt: "#R 60%#! chance that within 5 to 10 years he proclaims himself emperor and raises a rebellion."
+      fnr_WESRE_assassination_works_tt: "#G 70%#! chance that the general dies, and the army mourns him."
+      fnr_WESRE_assassination_fails_tt: "#R 30%#! chance that the plot fails and he rises in revolt at once."
 
       flavor_WESRE.4: "The Pope's Bargain"
       flavor_WESRE.4.entry: "The Pope's Bargain"
@@ -82,8 +82,8 @@
       flavor_WESRE.6.a: "Accept the alliance."
       flavor_WESRE.6.b: "The West bows to no one."
       flavor_WESRE.6.c: "Propose an alliance of equals."
-      fnr_WESRE_east_accepts_tt: "#G 50%#!: the Eastern Emperor agrees, as one Augustus to another."
-      fnr_WESRE_east_insulted_tt: "#R 50%#!: the Eastern Emperor takes it as an insult."
+      fnr_WESRE_east_accepts_tt: "#G 50%#! chance that the Eastern Emperor agrees, as one Augustus to another."
+      fnr_WESRE_east_insulted_tt: "#R 50%#! chance that the Eastern Emperor takes it as an insult."
 
       flavor_WESRE.7: "The Reconquest Begins"
       flavor_WESRE.7.entry: "The Reconquest Begins"
@@ -168,7 +168,7 @@
       fnr_WESRE_foederati_cavalry_6: "Foederati Cavalry"
       fnr_WESRE_foederati_cavalry_6_desc: "$fnr_WESRE_foederati_cavalry_1_desc$"
       fnr_WESRE_comitatenses_1: "Comitatenses"
-      fnr_WESRE_comitatenses_1_desc: "The field army of the late Empire: professional, well equipped and expensive. The backbone of the West. Guard them carefully. At most 10 regiments."
+      fnr_WESRE_comitatenses_1_desc: "The field army of the late Empire - professional, well equipped and expensive. The backbone of the West. Guard them carefully. At most 10 regiments."
       fnr_WESRE_comitatenses_2: "Comitatenses"
       fnr_WESRE_comitatenses_2_desc: "$fnr_WESRE_comitatenses_1_desc$"
       fnr_WESRE_comitatenses_3: "Comitatenses"
@@ -226,7 +226,7 @@
       fnr_WESRE_concilium_io: "Concilium Occidentis"
       fnr_WESRE_concilium_io_name: "Concilium Occidentis"
       fnr_WESRE_concilium_io_created_tt: "Founds the #Y Concilium Occidentis#! with us as its permanent leader."
-      fnr_WESRE_concilium_io_desc: "The Council of the West: a pragmatic alliance born of necessity rather than ideology. Where the Eastern Empire projects imperial grandeur, the Western Empire offers a defensive compact. Members defend one another against the barbarian tide, and the Emperor's authority grows with every realm that joins."
+      fnr_WESRE_concilium_io_desc: "The Council of the West - a pragmatic alliance born of necessity rather than ideology. Where the Eastern Empire projects imperial grandeur, the Western Empire offers a defensive compact. Members defend one another against the barbarian tide, and the Emperor's authority grows with every realm that joins."
       fnr_WESRE_concilium_io_list_who_tt: "$WHO$ is a member of [GetUniqueInternationalOrganization('fnr_WESRE_concilium_io').GetName] with $LIST$"
       diplomatic_status_fnr_WESRE_concilium_io_name: "Concilium Occidentis"
       diplomatic_status_fnr_WESRE_concilium_io_tooltip: "#T Concilium Occidentis#!\nThis [country|e] is a member of the Council of the West."
@@ -308,3 +308,12 @@
       STATIC_MODIFIER_DESC_fnr_WESRE_rome_restored: "Rome's holy places and monuments have been restored."
       STATIC_MODIFIER_NAME_fnr_WESRE_ravenna_seat: "Imperial Seat"
       STATIC_MODIFIER_DESC_fnr_WESRE_ravenna_seat: "Ravenna has been rebuilt as a true imperial seat."
+
+    # WAR GOALS
+
+      war_goal_fnr_WESRE_reconquer_gaul_wargoal: "Reconquer Gaul"
+      war_goal_fnr_WESRE_reconquer_gaul_wargoal_desc: "Restore the provinces of Gaul to the Western Empire."
+      war_goal_fnr_WESRE_reconquer_hispania_wargoal: "Reconquer Hispania"
+      war_goal_fnr_WESRE_reconquer_hispania_wargoal_desc: "Restore the provinces of Hispania to the Western Empire."
+      war_goal_fnr_WESRE_reconquer_africa_wargoal: "Reconquer Africa"
+      war_goal_fnr_WESRE_reconquer_africa_wargoal_desc: "Restore the provinces of Roman Africa to the Western Empire."

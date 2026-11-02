@@ -35,7 +35,7 @@
       fnr_PONTU.4.a: "The king has drunk Mithridatium since childhood."
       fnr_PONTU.4.b: "Purge the court."
       fnr_PONTU.4.c: "Trust to luck."
-      fnr_PONTU_poison_survived_tt: "#G 50%#!: the plot fails and nothing comes of it."
+      fnr_PONTU_poison_survived_tt: "#G 50%#! chance that the plot fails and nothing comes of it."
 
     # GOTHIA - ADVANCES
 
@@ -118,7 +118,7 @@
     # UNITS
 
       fnr_PONTU_chalkaspides_1: "Chalkaspides"
-      fnr_PONTU_chalkaspides_1_desc: "The bronze-shield phalanx of the Pontic kings: steady, well armoured and hard to break."
+      fnr_PONTU_chalkaspides_1_desc: "The bronze-shield phalanx of the Pontic kings - steady, well armoured and hard to break."
       fnr_PONTU_chalkaspides_2: "Chalkaspides"
       fnr_PONTU_chalkaspides_2_desc: "$fnr_PONTU_chalkaspides_1_desc$"
       fnr_PONTU_chalkaspides_3: "Chalkaspides"
@@ -130,7 +130,7 @@
       fnr_PONTU_chalkaspides_6: "Chalkaspides"
       fnr_PONTU_chalkaspides_6_desc: "$fnr_PONTU_chalkaspides_1_desc$"
       fnr_GOTIA_gothic_spearmen_1: "Gothic Spearmen"
-      fnr_GOTIA_gothic_spearmen_1_desc: "The hill-fort garrisons of Gothia: hard to dislodge, especially in the mountains."
+      fnr_GOTIA_gothic_spearmen_1_desc: "The hill-fort garrisons of Gothia - hard to dislodge, especially in the mountains."
       fnr_GOTIA_gothic_spearmen_2: "Gothic Spearmen"
       fnr_GOTIA_gothic_spearmen_2_desc: "$fnr_GOTIA_gothic_spearmen_1_desc$"
       fnr_GOTIA_gothic_spearmen_3: "Gothic Spearmen"
@@ -254,3 +254,8 @@
       STATIC_MODIFIER_DESC_fnr_DACIA_royal_seat: "Sarmizegetusa stands rebuilt as the heart of Dacia."
       STATIC_MODIFIER_NAME_fnr_DACIA_sarmizegetusa: "Sarmizegetusa Regia"
       STATIC_MODIFIER_DESC_fnr_DACIA_sarmizegetusa: "The royal city of the Dacian kings, rebuilt with walls and sanctuaries."
+
+    # WAR GOALS
+
+      war_goal_fnr_PONTU_black_sea_wargoal: "Black Sea Dominion"
+      war_goal_fnr_PONTU_black_sea_wargoal_desc: "Bring the coasts of the Black Sea under Pontic rule."

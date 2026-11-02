@@ -1,0 +1,856 @@
+﻿namespace = fnr_PTLMY
+
+# Pax Romana - The Ptolemaic Kingdom: the House of Ptolemy
+
+# 1 - The House of Ptolemy
+fnr_PTLMY.1 = {
+	type = country_event
+	title = fnr_PTLMY.1.title
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { has_variable = fnr_PTLMY_origin_bactrian }
+				desc = fnr_PTLMY.1.desc.bactrian
+			}
+			triggered_desc = {
+				trigger = { has_variable = fnr_PTLMY_origin_egyptian }
+				desc = fnr_PTLMY.1.desc.egyptian
+			}
+			triggered_desc = {
+				desc = fnr_PTLMY.1.desc.greek
+			}
+		}
+	}
+	fire_only_once = yes
+	outcome = positive
+
+	trigger = {
+		has_variable = fnr_PTLMY_formed
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+		if = {
+			limit = { has_variable = fnr_PTLMY_origin_bactrian }
+			add_country_modifier = { modifier = fnr_PTLMY_origin_bactrian years = -1 }
+		}
+		else_if = {
+			limit = { has_variable = fnr_PTLMY_origin_egyptian }
+			add_country_modifier = { modifier = fnr_PTLMY_origin_egyptian years = -1 }
+		}
+		else = {
+			add_country_modifier = { modifier = fnr_PTLMY_origin_greek years = -1 }
+		}
+	}
+
+	option = {
+		name = fnr_PTLMY.1.a
+		ai_chance = { factor = 50 }
+		fnr_PTLMY_change_crown_effect = { VALUE = 15 TT = greek_15 }
+		custom_tooltip = fnr_PTLMY_systems_tt
+	}
+
+	option = {
+		name = fnr_PTLMY.1.b
+		ai_chance = { factor = 50 }
+		fnr_PTLMY_change_crown_effect = { VALUE = -15 TT = egyptian_15 }
+		custom_tooltip = fnr_PTLMY_systems_tt
+	}
+
+	option = {
+		name = fnr_PTLMY.1.c
+		ai_chance = { factor = 50 }
+		add_legitimacy = legitimacy_mild_bonus
+		custom_tooltip = fnr_PTLMY_systems_tt
+	}
+}
+
+# 2 - Restoring the House of Ptolemy
+fnr_PTLMY.2 = {
+	type = country_event
+	title = fnr_PTLMY.2.title
+	desc = fnr_PTLMY.2.desc
+	fire_only_once = yes
+	outcome = neutral
+
+	trigger = {
+		owns = location:alexandria
+		NOT = { tag_exists = PTLMY }
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:clergy_estate }
+	}
+
+	option = {
+		name = fnr_PTLMY.2.a
+		ai_chance = { factor = 50 }
+		custom_tooltip = fnr_PTLMY_bactrian_restoration_tt
+		hidden_effect = {
+	location:alexandria = {
+		create_country_from_location = {
+			save_scope_as = fnr_PTLMY_new_egypt
+			set_country_rank = country_rank:rank_kingdom
+		}
+	}
+	if = {
+		limit = { exists = scope:fnr_PTLMY_new_egypt }
+		every_owned_location = {
+			limit = {
+				OR = {
+					area = area:lower_egypt_area
+					area = area:upper_egypt_area
+					area = area:cyrenaica_area
+				}
+				is_capital = no
+			}
+			change_location_owner = scope:fnr_PTLMY_new_egypt
+			change_integration_level = core
+		}
+		scope:fnr_PTLMY_new_egypt = {
+			set_variable = fnr_PTLMY_origin_bactrian
+			form_country = formable_country:PTLMY_f
+			change_country_color = map_PTLMY
+			create_character = {
+				save_scope_as = fnr_PTLMY_new_ruler
+				culture = culture:greek_culture
+				religion = religion:fnr_greco_buddhism_religion
+			}
+			set_new_ruler = scope:fnr_PTLMY_new_ruler
+			change_religion = religion:fnr_greco_buddhism_religion
+			make_subject_of = {
+				target = root
+				type = subject_type:vassal
+			}
+		}
+	}
+}
+	}
+}
+
+# 10 - Unrest in the Thebaid
+fnr_PTLMY.10 = {
+	type = country_event
+	title = fnr_PTLMY.10.title
+	desc = fnr_PTLMY.10.desc
+	outcome = negative
+
+	trigger = {
+		has_or_had_tag = PTLMY
+		fnr_PTLMY_crown_at_least = { VALUE = 60 }
+		NOT = { has_variable = fnr_PTLMY_revolt_cooldown }
+		in_civil_war = no
+	}
+
+	illustration_tags = {
+		10 = exterior
+		10 = armed
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:clergy_estate }
+		set_variable = { name = fnr_PTLMY_revolt_cooldown years = 10 }
+	}
+
+	option = {
+		name = fnr_PTLMY.10.a
+		ai_chance = { factor = 40 }
+		add_legitimacy = legitimacy_weak_penalty
+		fnr_PTLMY_rebellion_effect = { NAME = fnr_PTLMY_native_pharaohs AREA = upper_egypt_area FEMALE_OK = no }
+		custom_tooltip = fnr_PTLMY_native_revolt_tt
+	}
+
+	option = {
+		name = fnr_PTLMY.10.b
+		ai_chance = { factor = 60 }
+		add_estate_satisfaction = { type = estate_type:clergy_estate value = estate_satisfaction_mild_bonus }
+		fnr_PTLMY_change_crown_effect = { VALUE = -15 TT = egyptian_15 }
+	}
+}
+
+# 11 - The Alexandrian Mob
+fnr_PTLMY.11 = {
+	type = country_event
+	title = fnr_PTLMY.11.title
+	desc = fnr_PTLMY.11.desc
+	outcome = negative
+
+	trigger = {
+		has_or_had_tag = PTLMY
+		fnr_PTLMY_crown_below = { VALUE = -59 }
+		NOT = { has_variable = fnr_PTLMY_mob_cooldown }
+	}
+
+	illustration_tags = {
+		10 = exterior
+		10 = armed
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:crown_estate }
+		set_variable = { name = fnr_PTLMY_mob_cooldown years = 10 }
+	}
+
+	option = {
+		name = fnr_PTLMY.11.a
+		trigger = { gold >= 100 }
+		ai_chance = { factor = 60 }
+		add_gold = -100
+		fnr_PTLMY_change_crown_effect = { VALUE = 15 TT = greek_15 }
+		add_estate_satisfaction = { type = estate_type:burghers_estate value = estate_satisfaction_mild_bonus }
+	}
+
+	option = {
+		name = fnr_PTLMY.11.b
+		ai_chance = { factor = 40 }
+		add_legitimacy = legitimacy_mild_bonus
+		add_country_modifier = { modifier = fnr_PTLMY_greek_purge years = 10 mode = add_and_extend }
+		add_estate_satisfaction = { type = estate_type:burghers_estate value = estate_satisfaction_mild_penalty }
+	}
+}
+
+# 12 - The Cult of Serapis
+fnr_PTLMY.12 = {
+	type = country_event
+	title = fnr_PTLMY.12.title
+	desc = fnr_PTLMY.12.desc
+	outcome = neutral
+
+	trigger = {
+		has_or_had_tag = PTLMY
+		NOT = { has_variable = fnr_PTLMY_serapis_done }
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:burghers_estate }
+		set_variable = fnr_PTLMY_serapis_done
+	}
+
+	option = {
+		name = fnr_PTLMY.12.a
+		trigger = { gold >= 100 }
+		ai_chance = { factor = 50 }
+		add_gold = -100
+		fnr_PTLMY_crown_to_balance_effect = yes
+		add_legitimacy = legitimacy_weak_bonus
+	}
+
+	option = {
+		name = fnr_PTLMY.12.b
+		ai_chance = { factor = 50 }
+		add_prestige = prestige_weak_bonus
+	}
+}
+
+# 20 - Euclid's Elements
+fnr_PTLMY.20 = {
+	type = country_event
+	title = fnr_PTLMY.20.title
+	desc = fnr_PTLMY.20.desc
+	fire_only_once = yes
+	outcome = positive
+
+	trigger = {
+		has_or_had_tag = PTLMY
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:clergy_estate }
+		set_variable = fnr_PTLMY_milestone_1
+	}
+
+	option = {
+		name = fnr_PTLMY.20.a
+		ai_chance = { factor = 50 }
+		add_country_modifier = { modifier = fnr_PTLMY_elements years = -1 }
+		add_prestige = prestige_mild_bonus
+	}
+}
+
+# 21 - Eratosthenes Measures the World
+fnr_PTLMY.21 = {
+	type = country_event
+	title = fnr_PTLMY.21.title
+	desc = fnr_PTLMY.21.desc
+	fire_only_once = yes
+	outcome = positive
+
+	trigger = {
+		has_or_had_tag = PTLMY
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:clergy_estate }
+		set_variable = fnr_PTLMY_milestone_2
+	}
+
+	option = {
+		name = fnr_PTLMY.21.a
+		ai_chance = { factor = 50 }
+		add_country_modifier = { modifier = fnr_PTLMY_measured_world years = -1 }
+		add_prestige = prestige_mild_bonus
+	}
+}
+
+# 22 - The Physicians of Alexandria
+fnr_PTLMY.22 = {
+	type = country_event
+	title = fnr_PTLMY.22.title
+	desc = fnr_PTLMY.22.desc
+	fire_only_once = yes
+	outcome = positive
+
+	trigger = {
+		has_or_had_tag = PTLMY
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:clergy_estate }
+		set_variable = fnr_PTLMY_milestone_3
+	}
+
+	option = {
+		name = fnr_PTLMY.22.a
+		ai_chance = { factor = 50 }
+		add_country_modifier = { modifier = fnr_PTLMY_anatomy years = -1 }
+		add_prestige = prestige_mild_bonus
+	}
+}
+
+# 23 - The Seventy Translators
+fnr_PTLMY.23 = {
+	type = country_event
+	title = fnr_PTLMY.23.title
+	desc = fnr_PTLMY.23.desc
+	fire_only_once = yes
+	outcome = positive
+
+	trigger = {
+		has_or_had_tag = PTLMY
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:clergy_estate }
+		set_variable = fnr_PTLMY_milestone_4
+	}
+
+	option = {
+		name = fnr_PTLMY.23.a
+		ai_chance = { factor = 50 }
+		add_country_modifier = { modifier = fnr_PTLMY_septuagint years = -1 }
+		add_prestige = prestige_mild_bonus
+	}
+}
+
+# 24 - The Engines of Heron
+fnr_PTLMY.24 = {
+	type = country_event
+	title = fnr_PTLMY.24.title
+	desc = fnr_PTLMY.24.desc
+	fire_only_once = yes
+	outcome = positive
+
+	trigger = {
+		has_or_had_tag = PTLMY
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:clergy_estate }
+		set_variable = fnr_PTLMY_milestone_5
+	}
+
+	option = {
+		name = fnr_PTLMY.24.a
+		ai_chance = { factor = 50 }
+		add_country_modifier = { modifier = fnr_PTLMY_heron_engines years = -1 }
+		add_prestige = prestige_mild_bonus
+	}
+}
+
+# 25 - A Scholar at the Harbour
+fnr_PTLMY.25 = {
+	type = country_event
+	title = fnr_PTLMY.25.title
+	desc = fnr_PTLMY.25.desc
+	outcome = neutral
+
+	trigger = {
+		has_or_had_tag = PTLMY
+		owns = location:alexandria
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:crown_estate }
+	}
+
+	option = {
+		name = fnr_PTLMY.25.a
+		trigger = { gold >= 50 }
+		ai_chance = { factor = 70 }
+		add_gold = -50
+		fnr_PTLMY_change_scholarship_effect = { VALUE = 10 TT = plus_10 }
+	}
+
+	option = {
+		name = fnr_PTLMY.25.b
+		ai_chance = { factor = 30 }
+		add_gold = 25
+	}
+}
+
+# 30 - A Bountiful Flood
+fnr_PTLMY.30 = {
+	type = country_event
+	title = fnr_PTLMY.30.title
+	desc = fnr_PTLMY.30.desc
+	outcome = positive
+
+	trigger = {
+		has_or_had_tag = PTLMY
+	}
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:clergy_estate }
+	}
+
+	option = {
+		name = fnr_PTLMY.30.a
+		ai_chance = { factor = 50 }
+		add_legitimacy = legitimacy_weak_bonus
+	}
+}
+
+# 31 - The Nile Fails
+fnr_PTLMY.31 = {
+	type = country_event
+	title = fnr_PTLMY.31.title
+	desc = fnr_PTLMY.31.desc
+	outcome = negative
+
+	trigger = {
+		has_or_had_tag = PTLMY
+	}
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:clergy_estate }
+	}
+
+	option = {
+		name = fnr_PTLMY.31.a
+		ai_chance = { factor = 50 }
+		add_stability = stability_weak_penalty
+	}
+}
+
+# 32 - The Granaries Are Opened
+fnr_PTLMY.32 = {
+	type = country_event
+	title = fnr_PTLMY.32.title
+	desc = fnr_PTLMY.32.desc
+	outcome = neutral
+
+	trigger = {
+		has_or_had_tag = PTLMY
+	}
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:crown_estate }
+	}
+
+	option = {
+		name = fnr_PTLMY.32.a
+		ai_chance = { factor = 50 }
+		add_legitimacy = legitimacy_weak_bonus
+	}
+}
+
+# 40 - A New Ptolemy
+fnr_PTLMY.40 = {
+	type = country_event
+	title = fnr_PTLMY.40.title
+	desc = fnr_PTLMY.40.desc
+	outcome = neutral
+
+	trigger = {
+		has_or_had_tag = PTLMY
+		has_variable = fnr_PTLMY_formed
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:clergy_estate }
+		fnr_PTLMY_clear_epithet_effect = yes
+		if = {
+			limit = { has_variable = fnr_PTLMY_crowned_ruler }
+			remove_variable = fnr_PTLMY_crowned_ruler
+		}
+	}
+
+	option = {
+		name = fnr_PTLMY.40.a
+		ai_chance = { factor = 50 }
+		add_country_modifier = { modifier = fnr_PTLMY_epithet_soter years = -1 }
+	}
+
+	option = {
+		name = fnr_PTLMY.40.b
+		ai_chance = { factor = 50 }
+		add_country_modifier = { modifier = fnr_PTLMY_epithet_philadelphos years = -1 }
+		fnr_PTLMY_change_crown_effect = { VALUE = -5 TT = egyptian_5 }
+	}
+
+	option = {
+		name = fnr_PTLMY.40.c
+		ai_chance = { factor = 50 }
+		add_country_modifier = { modifier = fnr_PTLMY_epithet_euergetes years = -1 }
+	}
+
+	option = {
+		name = fnr_PTLMY.40.d
+		ai_chance = { factor = 50 }
+		add_country_modifier = { modifier = fnr_PTLMY_epithet_philopator years = -1 }
+	}
+
+	option = {
+		name = fnr_PTLMY.40.e
+		ai_chance = { factor = 50 }
+		add_country_modifier = { modifier = fnr_PTLMY_epithet_epiphanes years = -1 }
+		fnr_PTLMY_change_crown_effect = { VALUE = -10 TT = egyptian_10 }
+	}
+
+	option = {
+		name = fnr_PTLMY.40.f
+		trigger = { ruler ?= { is_female = yes } }
+		ai_chance = { factor = 200 }
+		add_country_modifier = { modifier = fnr_PTLMY_epithet_thea_philopator years = -1 }
+	}
+}
+
+# 41 - The Rival Sibling
+fnr_PTLMY.41 = {
+	type = country_event
+	title = fnr_PTLMY.41.title
+	desc = fnr_PTLMY.41.desc
+	outcome = negative
+
+	trigger = {
+		has_or_had_tag = PTLMY
+		has_variable = fnr_PTLMY_formed
+		in_civil_war = no
+		legitimacy < 70
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = armed
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:crown_estate }
+	}
+
+	option = {
+		name = fnr_PTLMY.41.a
+		ai_chance = { factor = 50 }
+		add_country_modifier = { modifier = fnr_PTLMY_co_rulers years = 10 mode = add_and_extend }
+	}
+
+	option = {
+		name = fnr_PTLMY.41.b
+		ai_chance = { factor = 30 }
+		add_legitimacy = legitimacy_weak_penalty
+		fnr_PTLMY_rebellion_effect = { NAME = fnr_PTLMY_lagid_pretenders AREA = lower_egypt_area FEMALE_OK = yes }
+		custom_tooltip = fnr_PTLMY_lagid_war_tt
+	}
+
+	option = {
+		name = fnr_PTLMY.41.c
+		trigger = { gold >= 150 }
+		ai_chance = { factor = 20 }
+		add_gold = -150
+		add_prestige = prestige_mild_penalty
+	}
+}
+
+# 50 - Aegyptus Provincia
+fnr_PTLMY.50 = {
+	type = country_event
+	title = fnr_PTLMY.50.title
+	desc = fnr_PTLMY.50.desc
+	outcome = neutral
+
+	trigger = {
+		fnr_PTLMY_is_rome = yes
+		has_variable = fnr_PTLMY_province_candidate
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_PTLMY.50.a
+		ai_chance = { factor = 60 }
+		add_stability = stability_weak_penalty
+		if = {
+	limit = { var:fnr_PTLMY_province_candidate ?= { is_subject_of = root } }
+	annex_country = { country = var:fnr_PTLMY_province_candidate }
+}
+		custom_tooltip = fnr_PTLMY_aegyptus_tt
+		remove_variable = fnr_PTLMY_province_candidate
+	}
+
+	option = {
+		name = fnr_PTLMY.50.b
+		ai_chance = { factor = 40 }
+		add_prestige = prestige_weak_bonus
+		remove_variable = fnr_PTLMY_province_candidate
+	}
+}
+
+# 60 - The Revolt of the Thebaid
+fnr_PTLMY.60 = {
+	type = country_event
+	title = fnr_PTLMY.60.title
+	desc = fnr_PTLMY.60.desc
+	outcome = negative
+
+	trigger = {
+		has_or_had_tag = PTLMY
+	}
+
+	illustration_tags = {
+		10 = exterior
+		10 = armed
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:clergy_estate }
+	}
+
+	option = {
+		name = fnr_PTLMY.60.a
+		ai_chance = { factor = 50 }
+		fnr_PTLMY_rebellion_effect = { NAME = fnr_PTLMY_native_pharaohs AREA = upper_egypt_area FEMALE_OK = no }
+		custom_tooltip = fnr_PTLMY_thebaid_tt
+	}
+}
+
+# 61 - The Temples Close
+fnr_PTLMY.61 = {
+	type = country_event
+	title = fnr_PTLMY.61.title
+	desc = fnr_PTLMY.61.desc
+	outcome = negative
+
+	trigger = {
+		has_or_had_tag = PTLMY
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:crown_estate }
+	}
+
+	option = {
+		name = fnr_PTLMY.61.a
+		ai_chance = { factor = 50 }
+		add_country_modifier = { modifier = fnr_PTLMY_temple_strike years = 5 mode = add_and_extend }
+		fnr_PTLMY_change_crown_effect = { VALUE = 5 TT = greek_5 }
+	}
+
+	option = {
+		name = fnr_PTLMY.61.b
+		trigger = { gold >= 100 }
+		ai_chance = { factor = 50 }
+		add_gold = -100
+		fnr_PTLMY_change_crown_effect = { VALUE = -10 TT = egyptian_10 }
+	}
+}
+
+# 62 - Greek Settlers Flee
+fnr_PTLMY.62 = {
+	type = country_event
+	title = fnr_PTLMY.62.title
+	desc = fnr_PTLMY.62.desc
+	outcome = negative
+
+	trigger = {
+		has_or_had_tag = PTLMY
+	}
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:peasants_estate }
+	}
+
+	option = {
+		name = fnr_PTLMY.62.a
+		ai_chance = { factor = 50 }
+		add_country_modifier = { modifier = fnr_PTLMY_settlers_flee years = 5 mode = add_and_extend }
+	}
+
+	option = {
+		name = fnr_PTLMY.62.b
+		ai_chance = { factor = 50 }
+		add_estate_satisfaction = { type = estate_type:nobles_estate value = estate_satisfaction_mild_penalty }
+		fnr_PTLMY_change_crown_effect = { VALUE = 5 TT = greek_5 }
+	}
+}
+
+# 63 - The Philanthropa
+fnr_PTLMY.63 = {
+	type = country_event
+	title = fnr_PTLMY.63.title
+	desc = fnr_PTLMY.63.desc
+	outcome = neutral
+
+	trigger = {
+		has_or_had_tag = PTLMY
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:peasants_estate }
+	}
+
+	option = {
+		name = fnr_PTLMY.63.a
+		ai_chance = { factor = 50 }
+		add_country_modifier = { modifier = fnr_PTLMY_philanthropa years = 10 mode = add_and_extend }
+		fnr_PTLMY_crown_to_balance_effect = yes
+	}
+
+	option = {
+		name = fnr_PTLMY.63.b
+		ai_chance = { factor = 50 }
+		add_army_tradition = army_tradition_weak_bonus
+	}
+}
+
+# 64 - The Thebaid Pacified
+fnr_PTLMY.64 = {
+	type = country_event
+	title = fnr_PTLMY.64.title
+	desc = fnr_PTLMY.64.desc
+	outcome = positive
+
+	trigger = {
+		has_or_had_tag = PTLMY
+	}
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:peasants_estate }
+	}
+
+	option = {
+		name = fnr_PTLMY.64.a
+		ai_chance = { factor = 50 }
+		add_country_modifier = { modifier = fnr_PTLMY_thebaid_pacified years = 25 mode = add_and_extend }
+		add_legitimacy = legitimacy_mild_bonus
+	}
+}
+
+# 51 - (hidden) a Ptolemaic subject of Rome tells its overlord
+fnr_PTLMY.51 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		has_or_had_tag = PTLMY
+		overlord ?= { fnr_PTLMY_is_rome = yes }
+	}
+
+	immediate = {
+		overlord = {
+			set_variable = { name = fnr_PTLMY_province_candidate value = root }
+			trigger_event_non_silently = fnr_PTLMY.50
+		}
+	}
+}

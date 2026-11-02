@@ -1,0 +1,20 @@
+﻿# Restore the East - cheap conquest of the Balkans and Anatolia (see fnr_RMNRP_casus_belli.txt)
+
+fnr_RMNRP_restore_the_east_wargoal = {
+	type = superiority
+	attacker = {
+		conquer_cost = 0.75
+		subjugate_cost = 0.75
+		allowed_locations = {
+			OR = {
+				region = region:balkan_region
+				region = region:anatolia_region
+			}
+		}
+	}
+	defender = {
+		conquer_cost = 1
+		subjugate_cost = 1
+	}
+	ticking_war_score = 0.25
+}

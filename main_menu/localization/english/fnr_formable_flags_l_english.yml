@@ -11,8 +11,31 @@
 
     # Sweden-Norway
 
-      SDNNW_S: "Flag of Sweden (1844–1905)"
-      SDNNW_N: "Flag of Norway (1844–1899)"
+      SDNNW_S: "Flag of Sweden (1844-1905)"
+      SDNNW_N: "Flag of Norway (1844-1899)"
+
+    # North German Confederation
+
+      NGCFD_flag_alternate: "Reichskriegsflagge"
+
+    # Papal Empire
+
+      PAP_HRE_EMPIRE_1_FLAG: "Imperial Papal Banner"
+      PAP_HRE_EMPIRE_2_FLAG: "Quaternion Eagle"
+      PAP_HRE_EMPIRE_3_FLAG: "Banner of the Holy Roman Empire"
+
+    # Pax Romana - Roman Republic
+
+      fnr_RMNRP_republican_loyalists_flag: "SPQR Vexillum"
+      fnr_RMNRP_rubicon_rebels_flag: "Eagle of the Rubicon"
+      fnr_RMNRP_principate_flag: "Banner of the Principate"
+
+    # Pax Romana - Roman Empire
+
+      fnr_ROM_great_republic_flag: "Eagle and SPQR of the Great Republic"
+      fnr_ROM_usurper_rebels_flag: "Usurper's Eagle"
+      fnr_ROM_gallic_empire_flag: "Eagle of the Gallic Empire"
+      fnr_ROM_palmyrene_empire_flag: "Eagle of Palmyra"
 
   ######################
   # Color localization #

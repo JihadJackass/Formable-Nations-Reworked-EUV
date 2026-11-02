@@ -1,0 +1,111 @@
+﻿# Roman Empire yearly pulses (Pax Romana)
+# Gated on has_or_had_tag = ROM plus fnr_ROM_formed so other countries pay one cheap check.
+
+yearly_country_pulse = {
+	on_actions = {
+		fnr_ROM_yearly_setup_pulse
+		fnr_ROM_yearly_pulse
+		fnr_ROM_yearly_usurper_pulse
+		fnr_ROM_yearly_usurper_tetrarchy_pulse
+		fnr_ROM_yearly_restless_pulse
+		fnr_ROM_yearly_praetorian_pulse
+		fnr_ROM_yearly_frontier_pulse
+	}
+}
+
+# A Rome made some other way (a vanilla event, a console tag switch) still gets its origin and systems
+fnr_ROM_yearly_setup_pulse = {
+	trigger = {
+		tag = ROM
+		NOT = { has_variable = fnr_ROM_formed }
+	}
+	effect = {
+		fnr_ROM_formation_effect = yes
+	}
+}
+
+# Upkeep, then condition-driven events (each has its own trigger)
+fnr_ROM_yearly_pulse = {
+	trigger = {
+		has_or_had_tag = ROM
+		has_variable = fnr_ROM_formed
+	}
+	effect = {
+		fnr_ROM_yearly_upkeep_effect = yes
+	}
+	events = {
+		fnr_ROM.4	# The Usurper Falls - our usurper rebels are gone
+	}
+}
+
+# The Legions Proclaim an Emperor - Legion Loyalty below 25, ~20% a year (no Tetrarchy)
+fnr_ROM_yearly_usurper_pulse = {
+	trigger = {
+		has_or_had_tag = ROM
+		has_variable = fnr_ROM_formed
+		fnr_ROM_loyalty_below = { VALUE = 25 }
+		fnr_ROM_has_tetrarchy = no
+	}
+	random_events = {
+		chance_to_happen = 20
+		100 = fnr_ROM.2
+	}
+}
+
+# The same with a Tetrarchy - ~8% a year
+fnr_ROM_yearly_usurper_tetrarchy_pulse = {
+	trigger = {
+		has_or_had_tag = ROM
+		has_variable = fnr_ROM_formed
+		fnr_ROM_loyalty_below = { VALUE = 25 }
+		fnr_ROM_has_tetrarchy = yes
+	}
+	random_events = {
+		chance_to_happen = 8
+		100 = fnr_ROM.2
+	}
+}
+
+# Restless legions (25-39) - ~5% a year, never with a Tetrarchy
+fnr_ROM_yearly_restless_pulse = {
+	trigger = {
+		has_or_had_tag = ROM
+		has_variable = fnr_ROM_formed
+		fnr_ROM_loyalty_below = { VALUE = 40 }
+		fnr_ROM_loyalty_at_least = { VALUE = 25 }
+		fnr_ROM_has_tetrarchy = no
+	}
+	random_events = {
+		chance_to_happen = 5
+		100 = fnr_ROM.2
+	}
+}
+
+# The Praetorians Stir - with the Praetorian Guard and Legion Loyalty below 50, ~10% a year
+fnr_ROM_yearly_praetorian_pulse = {
+	trigger = {
+		has_or_had_tag = ROM
+		has_variable = fnr_ROM_formed
+		has_estate_privilege = estate_privilege:fnr_ROM_praetorian_guard
+		fnr_ROM_loyalty_below = { VALUE = 50 }
+	}
+	random_events = {
+		chance_to_happen = 10
+		100 = fnr_ROM.3
+	}
+}
+
+# Frontier and administration flavour - ~8% a year, once there are restored dioceses
+fnr_ROM_yearly_frontier_pulse = {
+	trigger = {
+		has_or_had_tag = ROM
+		has_variable = fnr_ROM_formed
+		fnr_ROM_dioceses_at_least = { VALUE = 2 }
+	}
+	random_events = {
+		chance_to_happen = 8
+		100 = fnr_ROM.5	# Foederati at the Limes
+		100 = fnr_ROM.6	# The Census of the Empire
+		100 = fnr_ROM.15	# The Senate of Rome
+	}
+}

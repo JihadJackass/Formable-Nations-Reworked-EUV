@@ -1,0 +1,411 @@
+# The Foederati - actions shown in the Foederati panel (Pax Romana)
+# scope:actor = Rome, scope:recipient = the Foederati, scope:source = the chosen member
+
+# Renew the Foedera - peace, every 5 years: every member gains Foedus Renewed and thinks better of Rome
+fnr_ROM_foederati_renew_foedera = {
+	type = internationalorganization
+	ai_tick = monthly
+	ai_tick_frequency = 12
+	automation_tick = never
+	automation_tick_frequency = 12
+	potential = {
+		scope:actor = { has_or_had_tag = ROM }
+	}
+	allow = {
+		scope:actor = {
+			at_war = no
+			gold >= 100
+			NOT = { has_variable = fnr_ROM_foedera_cooldown }
+		}
+	}
+	select_trigger = {
+		looking_for_a = international_organization
+		source = actor
+		target_flag = recipient
+		name = "choose_international_organization"
+		column = {
+			data = name
+		}
+		visible = {
+			this = international_organization:fnr_ROM_foederati_io
+			leader_country ?= scope:actor
+		}
+	}
+	effect = {
+		scope:actor = {
+			add_gold = -100
+			add_prestige = prestige_mild_bonus
+			set_variable = { name = fnr_ROM_foedera_cooldown years = 5 }
+		}
+		scope:recipient = {
+			every_international_organization_member = {
+				add_country_modifier = { modifier = fnr_ROM_foedus_renewed years = 5 mode = add_and_extend }
+				if = {
+					limit = { NOT = { this = scope:actor } }
+					add_opinion = { target = scope:actor modifier = fnr_ROM_renewed_foedus }
+				}
+			}
+		}
+		custom_tooltip = fnr_ROM_renew_foedera_tt
+	}
+	ai_will_do = {
+		add = 50
+	}
+}
+
+# Levy the Foederati - war, every 10 years: every member gains Foederati Levied, Rome gains Foederati Levies
+fnr_ROM_foederati_levy = {
+	type = internationalorganization
+	ai_tick = monthly
+	ai_tick_frequency = 12
+	automation_tick = never
+	automation_tick_frequency = 12
+	potential = {
+		scope:actor = { has_or_had_tag = ROM }
+	}
+	allow = {
+		scope:actor = {
+			at_war = yes
+			NOT = { has_variable = fnr_ROM_levy_cooldown }
+		}
+	}
+	select_trigger = {
+		looking_for_a = international_organization
+		source = actor
+		target_flag = recipient
+		name = "choose_international_organization"
+		column = {
+			data = name
+		}
+		visible = {
+			this = international_organization:fnr_ROM_foederati_io
+			leader_country ?= scope:actor
+		}
+	}
+	effect = {
+		scope:actor = {
+			set_variable = { name = fnr_ROM_levy_cooldown years = 10 }
+			add_country_modifier = { modifier = fnr_ROM_foederati_levies years = 2 mode = add_and_extend }
+		}
+		scope:recipient = {
+			every_international_organization_member = {
+				limit = { NOT = { this = scope:actor } }
+				add_country_modifier = { modifier = fnr_ROM_foederati_levied years = 2 mode = add_and_extend }
+			}
+		}
+		custom_tooltip = fnr_ROM_levy_foederati_tt
+	}
+	ai_will_do = {
+		add = 75
+	}
+}
+
+# Grant Roman Titles - one member's ruler becomes Patricius and Magister Militum. Once per member.
+fnr_ROM_foederati_grant_title = {
+	type = internationalorganization
+	ai_tick = monthly
+	ai_tick_frequency = 12
+	automation_tick = never
+	automation_tick_frequency = 12
+	potential = {
+		scope:actor = { has_or_had_tag = ROM }
+	}
+	allow = {
+		scope:actor = {
+			gold >= 100
+		}
+	}
+	select_trigger = {
+		looking_for_a = international_organization
+		source = actor
+		target_flag = recipient
+		name = "choose_international_organization"
+		column = {
+			data = name
+		}
+		visible = {
+			this = international_organization:fnr_ROM_foederati_io
+			leader_country ?= scope:actor
+		}
+	}
+	select_trigger = {
+		looking_for_a = country
+		source = recipient
+		target_flag = source
+		name = "choose_country"
+		column = {
+			data = name
+		}
+		visible = {
+			root != scope:actor
+		}
+		enabled = {
+			NOT = { has_country_modifier = fnr_ROM_patricius }
+		}
+	}
+	effect = {
+		scope:actor = {
+			add_gold = -100
+		}
+		scope:source = {
+			add_country_modifier = { modifier = fnr_ROM_patricius years = -1 }
+			add_opinion = { target = scope:actor modifier = fnr_ROM_roman_title }
+		}
+	}
+	ai_will_do = {
+		add = 20
+	}
+}
+
+# Settle on the Limes - one member guards a stretch of the frontier for 20 years. Rome every 10 years.
+fnr_ROM_foederati_settle_limes = {
+	type = internationalorganization
+	ai_tick = monthly
+	ai_tick_frequency = 12
+	automation_tick = never
+	automation_tick_frequency = 12
+	potential = {
+		scope:actor = { has_or_had_tag = ROM }
+	}
+	allow = {
+		scope:actor = {
+			gold >= 50
+			NOT = { has_variable = fnr_ROM_limes_cooldown }
+		}
+	}
+	select_trigger = {
+		looking_for_a = international_organization
+		source = actor
+		target_flag = recipient
+		name = "choose_international_organization"
+		column = {
+			data = name
+		}
+		visible = {
+			this = international_organization:fnr_ROM_foederati_io
+			leader_country ?= scope:actor
+		}
+	}
+	select_trigger = {
+		looking_for_a = country
+		source = recipient
+		target_flag = source
+		name = "choose_country"
+		column = {
+			data = name
+		}
+		visible = {
+			root != scope:actor
+		}
+		enabled = {
+			NOT = { has_country_modifier = fnr_ROM_limes_guardians }
+		}
+	}
+	effect = {
+		scope:actor = {
+			add_gold = -50
+			set_variable = { name = fnr_ROM_limes_cooldown years = 10 }
+			add_country_modifier = { modifier = fnr_ROM_limes_held years = 20 mode = add_and_extend }
+			if = {
+				limit = { has_variable = fnr_ROM_formed }
+				fnr_ROM_change_loyalty_effect = { VALUE = 5 TT = plus_5 }
+			}
+		}
+		scope:source = {
+			add_country_modifier = { modifier = fnr_ROM_limes_guardians years = 20 mode = add_and_extend }
+			add_opinion = { target = scope:actor modifier = fnr_ROM_limes_honour }
+		}
+	}
+	ai_will_do = {
+		add = 30
+	}
+}
+
+# Hostages at Rome - one member's heir is raised at the imperial court. Every 20 years per member.
+fnr_ROM_foederati_hostages = {
+	type = internationalorganization
+	ai_tick = monthly
+	ai_tick_frequency = 12
+	automation_tick = never
+	automation_tick_frequency = 12
+	potential = {
+		scope:actor = { has_or_had_tag = ROM }
+	}
+	allow = {
+		scope:actor = {
+			gold >= 50
+		}
+	}
+	select_trigger = {
+		looking_for_a = international_organization
+		source = actor
+		target_flag = recipient
+		name = "choose_international_organization"
+		column = {
+			data = name
+		}
+		visible = {
+			this = international_organization:fnr_ROM_foederati_io
+			leader_country ?= scope:actor
+		}
+	}
+	select_trigger = {
+		looking_for_a = country
+		source = recipient
+		target_flag = source
+		name = "choose_country"
+		column = {
+			data = name
+		}
+		visible = {
+			root != scope:actor
+		}
+		enabled = {
+			NOT = { has_variable = fnr_ROM_hostages_sent }
+		}
+	}
+	effect = {
+		scope:actor = {
+			add_gold = -50
+			add_prestige = prestige_weak_bonus
+		}
+		scope:source = {
+			set_variable = { name = fnr_ROM_hostages_sent years = 20 }
+			add_opinion = { target = scope:actor modifier = fnr_ROM_hostages_at_rome }
+		}
+	}
+	ai_will_do = {
+		add = 20
+	}
+}
+
+# Romanize the Foederati - in one member, 3% of its non-Roman people take up Roman culture. Every 5 years per member.
+fnr_ROM_foederati_romanize = {
+	type = internationalorganization
+	ai_tick = monthly
+	ai_tick_frequency = 12
+	automation_tick = never
+	automation_tick_frequency = 12
+	potential = {
+		scope:actor = { has_or_had_tag = ROM }
+	}
+	allow = {
+		scope:actor = {
+			gold >= 50
+		}
+	}
+	select_trigger = {
+		looking_for_a = international_organization
+		source = actor
+		target_flag = recipient
+		name = "choose_international_organization"
+		column = {
+			data = name
+		}
+		visible = {
+			this = international_organization:fnr_ROM_foederati_io
+			leader_country ?= scope:actor
+		}
+	}
+	select_trigger = {
+		looking_for_a = country
+		source = recipient
+		target_flag = source
+		name = "choose_country"
+		column = {
+			data = name
+		}
+		visible = {
+			root != scope:actor
+		}
+		enabled = {
+			NOT = { has_variable = fnr_ROM_romanized }
+		}
+	}
+	effect = {
+		scope:actor = { add_gold = -50 }
+		scope:source = {
+			set_variable = { name = fnr_ROM_romanized years = 5 }
+			custom_tooltip = fnr_ROM_romanize_tt
+			hidden_effect = {
+				every_owned_location = {
+					every_pop = {
+						limit = {
+							owner = scope:source
+							NOT = { culture = culture:roman_culture }
+						}
+						split_pop = {
+							fraction = 0.03
+							culture = culture:roman_culture
+						}
+					}
+				}
+			}
+		}
+	}
+	ai_will_do = {
+		add = 10
+	}
+}
+
+# Incorporate into the Empire - a small member that loves Rome (150+ opinion) is peacefully absorbed. Every 20 years.
+fnr_ROM_foederati_incorporate = {
+	type = internationalorganization
+	ai_tick = monthly
+	ai_tick_frequency = 12
+	automation_tick = never
+	automation_tick_frequency = 12
+	potential = {
+		scope:actor = { has_or_had_tag = ROM }
+	}
+	allow = {
+		scope:actor = {
+			at_war = no
+			NOT = { has_variable = fnr_ROM_incorporate_cooldown }
+		}
+	}
+	select_trigger = {
+		looking_for_a = international_organization
+		source = actor
+		target_flag = recipient
+		name = "choose_international_organization"
+		column = {
+			data = name
+		}
+		visible = {
+			this = international_organization:fnr_ROM_foederati_io
+			leader_country ?= scope:actor
+		}
+	}
+	select_trigger = {
+		looking_for_a = country
+		source = recipient
+		target_flag = source
+		name = "choose_country"
+		column = {
+			data = name
+		}
+		visible = {
+			root != scope:actor
+		}
+		enabled = {
+			at_war = no
+			num_locations < 30
+			opinion = {
+				target = scope:actor
+				value >= 150
+			}
+		}
+	}
+	effect = {
+		scope:actor = {
+			set_variable = { name = fnr_ROM_incorporate_cooldown years = 20 }
+			add_stability = stability_weak_penalty
+			annex_country = { country = scope:source }
+		}
+	}
+	ai_will_do = {
+		add = 100
+	}
+}
+

@@ -1,0 +1,448 @@
+﻿##################################################
+# Formable Nations: Reworked - Ptolemaic Kingdom   #
+# Static Modifiers (Pax Romana)                    #
+##################################################
+
+	# Basileus and Pharaoh tiers (always shown)
+
+		# Crown -60 and below
+		fnr_PTLMY_crown_pharaoh = {
+			game_data = {
+				category = country
+			}
+			clergy_estate_target_satisfaction = small_permanent_target_satisfaction
+			stability_cost_efficiency = 0.10
+			monthly_legitimacy = 0.1
+			research_speed_modifier = -0.05
+			burghers_estate_target_satisfaction = -0.05
+		}
+
+		# Crown -59 to -20
+		fnr_PTLMY_crown_egyptian = {
+			game_data = {
+				category = country
+			}
+			clergy_estate_target_satisfaction = small_permanent_target_satisfaction
+			stability_cost_efficiency = 0.05
+		}
+
+		# Crown -19 to 19
+		fnr_PTLMY_crown_dual = {
+			game_data = {
+				category = country
+			}
+			monthly_legitimacy = 0.05
+			global_estate_target_satisfaction = 0.02
+		}
+
+		# Crown 20 to 59
+		fnr_PTLMY_crown_greek = {
+			game_data = {
+				category = country
+			}
+			research_speed_modifier = 0.05
+			trade_income = 0.05
+		}
+
+		# Crown 60 and above
+		fnr_PTLMY_crown_basileus = {
+			game_data = {
+				category = country
+			}
+			research_speed_modifier = 0.10
+			trade_income = 0.10
+			burghers_estate_target_satisfaction = small_permanent_target_satisfaction
+			peasants_estate_target_satisfaction = -0.05
+			monthly_rebel_growth = 0.001
+		}
+
+	# The Library of Alexandria tiers (always shown)
+
+		# Scholarship 0-24
+		fnr_PTLMY_library_tier_1 = {
+			game_data = {
+				category = country
+			}
+			research_speed_modifier = 0.01
+		}
+
+		# Scholarship 25-74
+		fnr_PTLMY_library_tier_2 = {
+			game_data = {
+				category = country
+			}
+			research_speed_modifier = 0.03
+		}
+
+		# Scholarship 75-149
+		fnr_PTLMY_library_tier_3 = {
+			game_data = {
+				category = country
+			}
+			research_speed_modifier = 0.05
+			country_cabinet_efficiency = 0.03
+		}
+
+		# Scholarship 150+
+		fnr_PTLMY_library_tier_4 = {
+			game_data = {
+				category = country
+			}
+			research_speed_modifier = 0.08
+			country_cabinet_efficiency = 0.05
+			monthly_prestige = 0.1
+		}
+
+	# The Nile (one year each)
+
+		# Nile - bountiful
+		fnr_PTLMY_nile_bountiful = {
+			game_data = {
+				category = country
+			}
+			global_monthly_food_modifier = 0.15
+			tax_income_efficiency = small_tax_income_efficiency_bonus
+			global_population_growth = 0.0005
+		}
+
+		# Nile - good
+		fnr_PTLMY_nile_good = {
+			game_data = {
+				category = country
+			}
+			global_monthly_food_modifier = 0.05
+		}
+
+		# Nile - low
+		fnr_PTLMY_nile_low = {
+			game_data = {
+				category = country
+			}
+			global_monthly_food_modifier = -0.10
+		}
+
+		# Nile - failed
+		fnr_PTLMY_nile_failed = {
+			game_data = {
+				category = country
+			}
+			global_monthly_food_modifier = -0.25
+			stability_cost_efficiency = -0.10
+			monthly_rebel_growth = 0.002
+		}
+
+		# Nile - granaries_opened
+		fnr_PTLMY_nile_granaries_opened = {
+			game_data = {
+				category = country
+			}
+			global_monthly_food_modifier = -0.05
+		}
+
+	# Origins (permanent, fnr_PTLMY.1)
+
+		# Origin - greek
+		fnr_PTLMY_origin_greek = {
+			game_data = {
+				category = country
+			}
+			research_speed_modifier = 0.05
+			trade_income = 0.05
+		}
+
+		# Origin - egyptian
+		fnr_PTLMY_origin_egyptian = {
+			game_data = {
+				category = country
+			}
+			stability_cost_efficiency = 0.05
+			monthly_legitimacy = 0.1
+		}
+
+		# Origin - bactrian
+		fnr_PTLMY_origin_bactrian = {
+			game_data = {
+				category = country
+			}
+			research_speed_modifier = 0.05
+			monthly_legitimacy = 0.05
+			global_defensive = 0.05
+		}
+
+	# Epithets of the reigning Ptolemy (until the next ruler, fnr_PTLMY.40)
+
+		# Epithet - Soter
+		fnr_PTLMY_epithet_soter = {
+			game_data = {
+				category = country
+			}
+			global_defensive = 0.10
+			land_morale_modifier = 0.05
+		}
+
+		# Epithet - Philadelphos
+		fnr_PTLMY_epithet_philadelphos = {
+			game_data = {
+				category = country
+			}
+			monthly_legitimacy = 0.15
+			monthly_prestige = 0.05
+		}
+
+		# Epithet - Euergetes
+		fnr_PTLMY_epithet_euergetes = {
+			game_data = {
+				category = country
+			}
+			stability_cost_efficiency = 0.10
+			global_population_growth = 0.0005
+		}
+
+		# Epithet - Philopator
+		fnr_PTLMY_epithet_philopator = {
+			game_data = {
+				category = country
+			}
+			monthly_prestige = 0.1
+			country_cabinet_efficiency = 0.05
+		}
+
+		# Epithet - Epiphanes
+		fnr_PTLMY_epithet_epiphanes = {
+			game_data = {
+				category = country
+			}
+			monthly_legitimacy = 0.1
+			clergy_estate_target_satisfaction = small_permanent_target_satisfaction
+		}
+
+		# Epithet - Thea Philopator
+		fnr_PTLMY_epithet_thea_philopator = {
+			game_data = {
+				category = country
+			}
+			diplomatic_reputation = 1
+			trade_income = 0.05
+			monthly_legitimacy = 0.1
+		}
+
+	# Decisions, events, milestones
+
+		# Greek Scholars at Court
+		fnr_PTLMY_greek_scholars = {
+			game_data = {
+				category = country
+			}
+			research_speed_modifier = 0.05
+		}
+
+		# A New Polis
+		fnr_PTLMY_new_polis = {
+			game_data = {
+				category = country
+			}
+			global_population_growth = 0.0005
+			trade_income = 0.05
+		}
+
+		# Ships Searched for Books
+		fnr_PTLMY_ships_searched = {
+			game_data = {
+				category = country
+			}
+			trade_income = -0.05
+		}
+
+		# The Canal of the Pharaohs
+		fnr_PTLMY_canal_of_the_pharaohs = {
+			game_data = {
+				category = country
+			}
+			trade_income = 0.10
+			trade_range_modifier = 0.10
+		}
+
+		# Co-Rulers
+		fnr_PTLMY_co_rulers = {
+			game_data = {
+				category = country
+			}
+			stability_cost_efficiency = 0.05
+			monthly_legitimacy = -0.1
+		}
+
+		# The Decree of Memphis
+		fnr_PTLMY_rosetta_decree = {
+			game_data = {
+				category = country
+			}
+			stability_cost_efficiency = 0.05
+			global_estate_target_satisfaction = 0.03
+		}
+
+		# The Greeks Purged
+		fnr_PTLMY_greek_purge = {
+			game_data = {
+				category = country
+			}
+			research_speed_modifier = -0.05
+		}
+
+		# The Ptolemaieia
+		fnr_PTLMY_ptolemaieia = {
+			game_data = {
+				category = country
+			}
+			monthly_prestige = 0.05
+			trade_income = 0.05
+		}
+
+		# Nesiotic Levy
+		fnr_PTLMY_nesiotic_levy = {
+			game_data = {
+				category = country
+			}
+			naval_morale_modifier = 0.10
+			global_sailors_modifier = 0.10
+		}
+
+		# Egyptian Grain
+		fnr_PTLMY_grain_gift = {
+			game_data = {
+				category = country
+			}
+			global_monthly_food_modifier = 0.10
+		}
+
+		# Ptolemaic Garrison
+		fnr_PTLMY_island_garrison = {
+			game_data = {
+				category = country
+			}
+			global_defensive = 0.15
+		}
+
+		# Friend and Ally of the Roman People
+		fnr_PTLMY_amicus_populi_romani = {
+			game_data = {
+				category = country
+			}
+			global_defensive = 0.10
+			diplomatic_reputation = 1
+		}
+
+		# Friendship of Egypt
+		fnr_PTLMY_egyptian_friendship = {
+			game_data = {
+				category = country
+			}
+			global_monthly_food_modifier = 0.05
+			trade_income = 0.05
+		}
+
+		# The Lagid and Roman Houses United
+		fnr_PTLMY_lagid_roman_union = {
+			game_data = {
+				category = country
+			}
+			monthly_legitimacy = 0.1
+			monthly_prestige = 0.1
+		}
+
+		# The Grain Fleet
+		fnr_PTLMY_grain_fleet = {
+			game_data = {
+				category = country
+			}
+			global_monthly_food_modifier = 0.10
+			stability_cost_efficiency = 0.05
+		}
+
+		# Euclid's Elements
+		fnr_PTLMY_elements = {
+			game_data = {
+				category = country
+			}
+			research_speed_modifier = 0.05
+		}
+
+		# The World Measured
+		fnr_PTLMY_measured_world = {
+			game_data = {
+				category = country
+			}
+			trade_range_modifier = 0.10
+			navy_maintenance_efficiency = 0.05
+		}
+
+		# The Physicians of Alexandria
+		fnr_PTLMY_anatomy = {
+			game_data = {
+				category = country
+			}
+			global_disease_resistance = 0.05
+			global_population_growth = 0.0005
+		}
+
+		# The Seventy Translators
+		fnr_PTLMY_septuagint = {
+			game_data = {
+				category = country
+			}
+			stability_cost_efficiency = 0.05
+			global_estate_target_satisfaction = 0.02
+		}
+
+		# The Engines of Heron
+		fnr_PTLMY_heron_engines = {
+			game_data = {
+				category = country
+			}
+			global_monthly_development = 0.001
+			research_speed_modifier = 0.05
+		}
+
+		# The Thebaid Crushed
+		fnr_PTLMY_native_pharaohs_crushed = {
+			game_data = {
+				category = country
+			}
+			global_max_control = 0.03
+			peasants_estate_target_satisfaction = -0.05
+		}
+
+		# The Philanthropa Decrees
+		fnr_PTLMY_philanthropa = {
+			game_data = {
+				category = country
+			}
+			peasants_estate_target_satisfaction = small_permanent_target_satisfaction
+			stability_cost_efficiency = 0.05
+		}
+
+		# The Thebaid Pacified
+		fnr_PTLMY_thebaid_pacified = {
+			game_data = {
+				category = country
+			}
+			global_max_control = 0.05
+			stability_cost_efficiency = 0.05
+		}
+
+		# The Temples Closed
+		fnr_PTLMY_temple_strike = {
+			game_data = {
+				category = country
+			}
+			monthly_legitimacy = -0.1
+		}
+
+		# Greek Settlers Flee
+		fnr_PTLMY_settlers_flee = {
+			game_data = {
+				category = country
+			}
+			trade_income = -0.05
+			global_manpower_modifier = -0.05
+		}
+

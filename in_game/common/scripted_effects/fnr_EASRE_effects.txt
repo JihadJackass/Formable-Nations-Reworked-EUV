@@ -1,4 +1,4 @@
-# Eastern Roman Empire scripted effects (Pax Romana)
+﻿# Eastern Roman Empire scripted effects (Pax Romana)
 
 # Creates the Pentarchy with root as leader (flavor_EASRE.2)
 fnr_EASRE_create_pentarchy_effect = {

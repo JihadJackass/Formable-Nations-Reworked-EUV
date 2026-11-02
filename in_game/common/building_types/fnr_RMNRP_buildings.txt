@@ -1,0 +1,133 @@
+﻿# Roman Republic Building Types
+
+# Curia - the Senate house, capital only. While it stands, Senate Authority recovers faster (yearly pulse).
+fnr_RMNRP_curia = {
+	audio_tier = 3
+	is_foreign = no
+	max_levels = 1
+	pop_type = nobles
+	forbidden_for_estates = yes
+
+	employment_size = large_noble_employment
+	category = government_category
+
+	town = yes
+	city = yes
+	megalopolis = yes
+
+	expensive = yes
+	build_time = large_capital_build_time
+
+	location_potential = {
+		counts_as_capital = yes
+	}
+
+	allow = {
+		is_capital = yes
+		country_has_no_other_copy_of_building = { type = fnr_RMNRP_curia }
+	}
+
+	country_potential = {
+		has_or_had_tag = RMNRP
+	}
+
+	remove_if = {
+		is_no_longer_capital = yes
+	}
+
+	capital_country_modifier = {
+		monthly_republican_tradition = 0.1
+		country_cabinet_efficiency = 0.05
+		stability_cost_efficiency = 0.10
+	}
+
+	unique_production_methods = {
+		fnr_RMNRP_curia_maintenance = {
+			marble = 0.05
+			books = 0.05
+			category = building_maintenance
+		}
+	}
+
+	construction_demand = early_capital_building_construction
+}
+
+# Basilica - a hall of law and commerce in any town; needs the Twelve Tables advance
+fnr_RMNRP_basilica = {
+	audio_tier = 2
+	is_foreign = no
+	max_levels = 1
+	pop_type = burghers
+
+	employment_size = aqueduct_system_employment
+	category = government_category
+
+	town = yes
+	city = yes
+	megalopolis = yes
+
+	build_time = infrastructure_build_time
+
+	country_potential = {
+		has_or_had_tag = RMNRP
+		has_advance = RMNRP_twelve_tables
+	}
+
+	unique_production_methods = {
+		fnr_RMNRP_basilica_maintenance = {
+			marble = 0.03
+			tools = 0.03
+			category = building_maintenance
+		}
+	}
+
+	construction_demand = town_building_construction
+
+	modifier = {
+		local_max_control = 0.10
+		local_monthly_prosperity = 0.05
+		local_unrest = -0.5
+	}
+}
+
+# Ludus - a gladiator school. Games calm the city, but the fighters are slaves who know how to kill.
+# Each ludus adds +1 Servile Discontent a year; unlocks the Gladiatorial Games decision.
+fnr_RMNRP_ludus = {
+	audio_tier = 2
+	is_foreign = no
+	max_levels = 1
+	pop_type = slaves
+
+	employment_size = aqueduct_system_employment
+	category = government_category
+
+	town = yes
+	city = yes
+	megalopolis = yes
+
+	build_time = infrastructure_build_time
+
+	country_potential = {
+		has_or_had_tag = RMNRP
+	}
+
+	allow = {
+		owner = { fnr_RMNRP_has_roman_slavery = yes }
+	}
+
+	unique_production_methods = {
+		fnr_RMNRP_ludus_maintenance = {
+			tools = 0.03
+			marble = 0.02
+			category = building_maintenance
+		}
+	}
+
+	construction_demand = town_building_construction
+
+	modifier = {
+		local_unrest = -1
+		local_monthly_prosperity = 0.03
+		local_slave_pop_satisfaction = -0.05
+	}
+}

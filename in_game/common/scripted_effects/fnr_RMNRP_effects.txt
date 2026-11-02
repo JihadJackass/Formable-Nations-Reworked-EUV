@@ -1,0 +1,537 @@
+﻿# Roman Republic scripted effects (Pax Romana)
+
+# Keeps one tier modifier: removes the others
+fnr_RMNRP_clear_senate_tiers_effect = {
+	if = { limit = { has_country_modifier = fnr_RMNRP_senate_sovereign } remove_country_modifier = fnr_RMNRP_senate_sovereign }
+	if = { limit = { has_country_modifier = fnr_RMNRP_senate_weakened } remove_country_modifier = fnr_RMNRP_senate_weakened }
+	if = { limit = { has_country_modifier = fnr_RMNRP_senate_disarray } remove_country_modifier = fnr_RMNRP_senate_disarray }
+	if = { limit = { has_country_modifier = fnr_RMNRP_senate_balanced } remove_country_modifier = fnr_RMNRP_senate_balanced }
+}
+
+# Shows Senate Authority as an always-visible country modifier (one of four tiers) while we are a republic.
+# Called every time Senate Authority changes, so the modifier is never out of date.
+# Hidden: the change itself is already shown by the Senate Authority tooltips.
+fnr_RMNRP_refresh_senate_tier_effect = {
+	hidden_effect = {
+		fnr_RMNRP_clear_senate_tiers_effect = yes
+		if = {
+			limit = {
+				government_type = government_type:republic
+				has_variable = fnr_RMNRP_senate_authority
+			}
+			if = {
+				limit = { var:fnr_RMNRP_senate_authority >= 75 }
+				add_country_modifier = { modifier = fnr_RMNRP_senate_sovereign years = -1 }
+			}
+			else_if = {
+				limit = { var:fnr_RMNRP_senate_authority < 25 }
+				add_country_modifier = { modifier = fnr_RMNRP_senate_disarray years = -1 }
+			}
+			else_if = {
+				limit = { var:fnr_RMNRP_senate_authority < 40 }
+				add_country_modifier = { modifier = fnr_RMNRP_senate_weakened years = -1 }
+			}
+			else = {
+				add_country_modifier = { modifier = fnr_RMNRP_senate_balanced years = -1 }
+			}
+		}
+	}
+}
+
+# Changes Senate Authority (0-100, starts at 60) and keeps it in range. Use with VALUE = amount
+fnr_RMNRP_change_senate_effect = {
+	if = {
+		limit = { NOT = { has_variable = fnr_RMNRP_senate_authority } }
+		set_variable = { name = fnr_RMNRP_senate_authority value = 60 }
+	}
+	change_variable = { name = fnr_RMNRP_senate_authority add = $VALUE$ }
+	if = {
+		limit = {
+			has_variable = fnr_RMNRP_senate_authority
+			var:fnr_RMNRP_senate_authority > 100
+		}
+		set_variable = { name = fnr_RMNRP_senate_authority value = 100 }
+	}
+	else_if = {
+		limit = {
+			has_variable = fnr_RMNRP_senate_authority
+			var:fnr_RMNRP_senate_authority < 0
+		}
+		set_variable = { name = fnr_RMNRP_senate_authority value = 0 }
+	}
+	fnr_RMNRP_refresh_senate_tier_effect = yes
+}
+
+# Pops of a saved location's whole province turn against us and join scope:fnr_RMNRP_rebel.
+# Use with LOCATION = saved scope name. Pops must be made unhappy or they drift straight back.
+fnr_RMNRP_province_joins_rebels_effect = {
+	if = {
+		limit = {
+			exists = scope:$LOCATION$
+			exists = scope:fnr_RMNRP_rebel
+		}
+		scope:$LOCATION$.province = {
+			every_location_in_province = {
+				limit = { owner = root }
+				every_pop = {
+					limit = { owner = root }
+					add_pop_satisfaction = pop_satisfaction_ultimate_penalty
+					change_pop_allegiance = scope:fnr_RMNRP_rebel
+				}
+			}
+		}
+	}
+}
+
+# A civil war: a pretender rebellion led by one of our (male) nobles, holding up to four non-capital provinces.
+# Use with NAME = rebel name key. Pretender rebels need a character at their head, like vanilla's
+# rebellious princes, or they dissolve at once.
+fnr_RMNRP_civil_war_effect = {
+	create_rebel = {
+		category = pretender
+		name = $NAME$
+		save_scope_as = fnr_RMNRP_rebel
+	}
+	if = {
+		limit = { exists = scope:fnr_RMNRP_rebel }
+		hidden_effect = {
+			set_variable = fnr_RMNRP_civil_war_brewing
+			random_character = {
+				limit = {
+					is_alive = yes
+					age_in_years >= 18
+					has_estate = estate_type:nobles_estate
+					is_female = no
+					NOT = { this = root.ruler }
+				}
+				change_character_allegiance = scope:fnr_RMNRP_rebel
+				save_scope_as = fnr_RMNRP_rebel_leader
+			}
+			if = {
+				limit = { exists = scope:fnr_RMNRP_rebel_leader }
+				set_variable = { name = fnr_RMNRP_rebel_leader value = scope:fnr_RMNRP_rebel_leader }
+			}
+			random_owned_location = {
+				limit = { is_capital = no }
+				save_scope_as = fnr_RMNRP_revolt_1
+			}
+			random_owned_location = {
+				limit = {
+					is_capital = no
+					NOT = { this.province = scope:fnr_RMNRP_revolt_1.province }
+				}
+				save_scope_as = fnr_RMNRP_revolt_2
+			}
+			random_owned_location = {
+				limit = {
+					is_capital = no
+					NOT = { this.province = scope:fnr_RMNRP_revolt_1.province }
+					NOT = { this.province = scope:fnr_RMNRP_revolt_2.province }
+				}
+				save_scope_as = fnr_RMNRP_revolt_3
+			}
+			random_owned_location = {
+				limit = {
+					is_capital = no
+					NOT = { this.province = scope:fnr_RMNRP_revolt_1.province }
+					NOT = { this.province = scope:fnr_RMNRP_revolt_2.province }
+					NOT = { this.province = scope:fnr_RMNRP_revolt_3.province }
+				}
+				save_scope_as = fnr_RMNRP_revolt_4
+			}
+			fnr_RMNRP_province_joins_rebels_effect = { LOCATION = fnr_RMNRP_revolt_1 }
+			fnr_RMNRP_province_joins_rebels_effect = { LOCATION = fnr_RMNRP_revolt_2 }
+			fnr_RMNRP_province_joins_rebels_effect = { LOCATION = fnr_RMNRP_revolt_3 }
+			fnr_RMNRP_province_joins_rebels_effect = { LOCATION = fnr_RMNRP_revolt_4 }
+			scope:fnr_RMNRP_rebel = {
+				add_rebel_progress = 1
+			}
+			add_country_modifier = { modifier = fnr_rising_imminent years = 1 mode = add_and_extend }
+		}
+	}
+}
+
+# Creates the Socii with root as leader (fnr_RMNRP_found_socii)
+fnr_RMNRP_create_socii_effect = {
+	if = {
+		limit = {
+			NOT = { exists = international_organization:fnr_RMNRP_socii_io }
+		}
+		custom_tooltip = fnr_RMNRP_socii_io_created_tt
+		hidden_effect = {
+			create_international_organization = {
+				type = international_organization_type:fnr_RMNRP_socii_io
+				add_country_to_international_organization = ROOT
+				set_leader_country = ROOT
+			}
+		}
+	}
+}
+
+# ---------- Servile Discontent (Roman Slavery) ----------
+
+fnr_RMNRP_clear_servile_tiers_effect = {
+	if = { limit = { has_country_modifier = fnr_RMNRP_servile_calm } remove_country_modifier = fnr_RMNRP_servile_calm }
+	if = { limit = { has_country_modifier = fnr_RMNRP_servile_restless } remove_country_modifier = fnr_RMNRP_servile_restless }
+	if = { limit = { has_country_modifier = fnr_RMNRP_servile_seething } remove_country_modifier = fnr_RMNRP_servile_seething }
+	if = { limit = { has_country_modifier = fnr_RMNRP_servile_brink } remove_country_modifier = fnr_RMNRP_servile_brink }
+}
+
+# Always-visible tier modifier while the Roman Slavery law is in force
+fnr_RMNRP_refresh_servile_tier_effect = {
+	hidden_effect = {
+		fnr_RMNRP_clear_servile_tiers_effect = yes
+		if = {
+			limit = {
+				fnr_RMNRP_has_roman_slavery = yes
+				has_variable = fnr_RMNRP_servile_discontent
+			}
+			if = {
+				limit = { var:fnr_RMNRP_servile_discontent >= 80 }
+				add_country_modifier = { modifier = fnr_RMNRP_servile_brink years = -1 }
+			}
+			else_if = {
+				limit = { var:fnr_RMNRP_servile_discontent >= 60 }
+				add_country_modifier = { modifier = fnr_RMNRP_servile_seething years = -1 }
+			}
+			else_if = {
+				limit = { var:fnr_RMNRP_servile_discontent >= 30 }
+				add_country_modifier = { modifier = fnr_RMNRP_servile_restless years = -1 }
+			}
+			else = {
+				add_country_modifier = { modifier = fnr_RMNRP_servile_calm years = -1 }
+			}
+		}
+	}
+}
+
+# Changes Servile Discontent (0-100, starts at 20). Use with VALUE = amount
+fnr_RMNRP_change_servile_effect = {
+	if = {
+		limit = { NOT = { has_variable = fnr_RMNRP_servile_discontent } }
+		set_variable = { name = fnr_RMNRP_servile_discontent value = 20 }
+	}
+	change_variable = { name = fnr_RMNRP_servile_discontent add = $VALUE$ }
+	if = {
+		limit = {
+			has_variable = fnr_RMNRP_servile_discontent
+			var:fnr_RMNRP_servile_discontent > 100
+		}
+		set_variable = { name = fnr_RMNRP_servile_discontent value = 100 }
+	}
+	else_if = {
+		limit = {
+			has_variable = fnr_RMNRP_servile_discontent
+			var:fnr_RMNRP_servile_discontent < 0
+		}
+		set_variable = { name = fnr_RMNRP_servile_discontent value = 0 }
+	}
+	fnr_RMNRP_refresh_servile_tier_effect = yes
+}
+
+# Yearly: policy, war captives and gladiator schools push Servile Discontent
+fnr_RMNRP_yearly_servile_effect = {
+	if = {
+		limit = { fnr_RMNRP_has_roman_slavery = yes }
+		if = {
+			limit = { NOT = { has_variable = fnr_RMNRP_servile_discontent } }
+			set_variable = { name = fnr_RMNRP_servile_discontent value = 20 }
+		}
+		if = {
+			limit = { has_policy = fnr_RMNRP_latifundia_policy }
+			fnr_RMNRP_change_servile_effect = { VALUE = 4 }
+		}
+		else_if = {
+			limit = { has_policy = fnr_RMNRP_regulated_slavery_policy }
+			fnr_RMNRP_change_servile_effect = { VALUE = 1 }
+		}
+		else_if = {
+			limit = { has_policy = fnr_RMNRP_manumission_policy }
+			fnr_RMNRP_change_servile_effect = { VALUE = -3 }
+		}
+		if = {
+			limit = { at_war = yes }
+			fnr_RMNRP_change_servile_effect = { VALUE = 1 }
+		}
+		if = {
+			limit = {
+				any_owned_location = { has_building = building_type:fnr_RMNRP_ludus }
+			}
+			every_owned_location = {
+				limit = { has_building = building_type:fnr_RMNRP_ludus }
+				root = { fnr_RMNRP_change_servile_effect = { VALUE = 1 } }
+			}
+		}
+	}
+	fnr_RMNRP_refresh_servile_tier_effect = yes
+}
+
+# The Servile War: a slave rebellion in up to two slave-holding provinces, led by a slave who
+# has taken the name of Spartacus.
+fnr_RMNRP_servile_war_effect = {
+	create_rebel = {
+		category = slave
+		name = fnr_RMNRP_servile_rebels
+		save_scope_as = fnr_RMNRP_slave_rebel
+	}
+	if = {
+		limit = { exists = scope:fnr_RMNRP_slave_rebel }
+		hidden_effect = {
+			create_character = {
+				first_name = fnr_name_spartacus
+				estate = estate_type:peasants_estate
+				adm = { 30 60 }
+				dip = { 50 80 }
+				mil = { 70 95 }
+				age = 30
+				female = no
+				save_scope_as = fnr_RMNRP_spartacus
+			}
+			if = {
+				limit = { exists = scope:fnr_RMNRP_spartacus }
+				scope:fnr_RMNRP_spartacus = {
+					change_character_allegiance = scope:fnr_RMNRP_slave_rebel
+				}
+				set_variable = { name = fnr_RMNRP_spartacus value = scope:fnr_RMNRP_spartacus }
+			}
+			random_owned_location = {
+				limit = {
+					is_capital = no
+					any_pop = { pop_type = pop_type:slaves }
+				}
+				save_scope_as = fnr_RMNRP_servile_1
+			}
+			random_owned_location = {
+				limit = {
+					any_pop = { pop_type = pop_type:slaves }
+					NOT = { this.province = scope:fnr_RMNRP_servile_1.province }
+				}
+				save_scope_as = fnr_RMNRP_servile_2
+			}
+			fnr_RMNRP_province_slaves_rise_effect = { LOCATION = fnr_RMNRP_servile_1 }
+			fnr_RMNRP_province_slaves_rise_effect = { LOCATION = fnr_RMNRP_servile_2 }
+			scope:fnr_RMNRP_slave_rebel = {
+				add_rebel_progress = 1
+			}
+			add_country_modifier = { modifier = fnr_servile_rising_imminent years = 1 mode = add_and_extend }
+		}
+	}
+}
+
+# Slave pops of a saved location's province join scope:fnr_RMNRP_slave_rebel
+fnr_RMNRP_province_slaves_rise_effect = {
+	if = {
+		limit = {
+			exists = scope:$LOCATION$
+			exists = scope:fnr_RMNRP_slave_rebel
+		}
+		scope:$LOCATION$.province = {
+			every_location_in_province = {
+				limit = { owner = root }
+				every_pop = {
+					limit = {
+						owner = root
+						pop_type = pop_type:slaves
+					}
+					add_pop_satisfaction = pop_satisfaction_ultimate_penalty
+					change_pop_allegiance = scope:fnr_RMNRP_slave_rebel
+				}
+			}
+		}
+	}
+}
+
+# ---------- Romanization ----------
+
+# Roman becomes our primary culture; the old one stays accepted (same steps as vanilla change_primary_culture)
+fnr_RMNRP_become_roman_effect = {
+	if = {
+		limit = { NOT = { culture = culture:roman_culture } }
+		culture = { save_scope_as = fnr_RMNRP_old_culture }
+		change_culture = culture:roman_culture
+		add_accepted_culture = scope:fnr_RMNRP_old_culture
+		grant_culture_bonus_advances = culture:roman_culture
+	}
+}
+
+# A quarter of the people of Rome take up Roman culture
+fnr_RMNRP_seed_rome_effect = {
+	hidden_effect = {
+		location:rome = {
+			every_pop = {
+				limit = {
+					owner = root
+					NOT = { culture = culture:roman_culture }
+				}
+				split_pop = {
+					fraction = 0.25
+					culture = culture:roman_culture
+				}
+			}
+		}
+	}
+}
+
+# Yearly: 8% of non-Roman pops in every province under Romanization become Roman.
+# Works on top of the engine's own assimilation (location_modifier in the cabinet action).
+fnr_RMNRP_yearly_romanization_effect = {
+	every_owned_location = {
+		limit = {
+			province ?= { has_variable = fnr_RMNRP_romanizing }
+		}
+		every_pop = {
+			limit = {
+				owner = root
+				NOT = { culture = culture:roman_culture }
+				NOT = { pop_type = pop_type:slaves }
+			}
+			split_pop = {
+				fraction = 0.08
+				culture = culture:roman_culture
+			}
+		}
+	}
+}
+
+# The Republic ends (fnr_RMNRP.7 A/B): a monarchy on the imperial path
+fnr_RMNRP_end_republic_effect = {
+	if = {
+		limit = { has_reform = government_reform:fnr_RMNRP_republican_restoration }
+		remove_reform = government_reform:fnr_RMNRP_republican_restoration
+	}
+	change_government_type = government_type:monarchy
+	fnr_RMNRP_clear_senate_tiers_effect = yes
+	set_variable = fnr_RMNRP_imperial_path
+}
+
+# ---------- Byzantium (One Rome) ----------
+
+# Concordia with Byzantium (0-100). Use with VALUE = amount
+fnr_RMNRP_change_concordia_effect = {
+	if = {
+		limit = { NOT = { has_variable = fnr_RMNRP_concordia } }
+		set_variable = { name = fnr_RMNRP_concordia value = 0 }
+	}
+	change_variable = { name = fnr_RMNRP_concordia add = $VALUE$ }
+	if = {
+		limit = {
+			has_variable = fnr_RMNRP_concordia
+			var:fnr_RMNRP_concordia > 100
+		}
+		set_variable = { name = fnr_RMNRP_concordia value = 100 }
+	}
+	else_if = {
+		limit = {
+			has_variable = fnr_RMNRP_concordia
+			var:fnr_RMNRP_concordia < 0
+		}
+		set_variable = { name = fnr_RMNRP_concordia value = 0 }
+	}
+}
+
+# Yearly: Byzantium in the Socii grows concordia; One Rome at 100; the Purple Inheritance
+fnr_RMNRP_yearly_byzantium_effect = {
+	if = {
+		limit = {
+			exists = c:BYZ
+			c:BYZ = { is_member_of_international_organization = international_organization:fnr_RMNRP_socii_io }
+		}
+		fnr_RMNRP_change_concordia_effect = { VALUE = 5 }
+		if = {
+			limit = {
+				fnr_RMNRP_concordia_at_least = { VALUE = 100 }
+				NOT = { has_variable = fnr_RMNRP_one_rome_offered }
+				c:BYZ = { is_subject = no }
+			}
+			set_variable = fnr_RMNRP_one_rome_offered
+			save_scope_as = fnr_RMNRP_rome
+			c:BYZ = { trigger_event_non_silently = fnr_RMNRP_byz.3 }
+		}
+	}
+	if = {
+		limit = {
+			has_variable = fnr_RMNRP_purple_claim
+			exists = c:BYZ
+			c:BYZ = { is_subject = no }
+		}
+		random_list = {
+			5 = { trigger_event_non_silently = fnr_RMNRP_byz.7 }
+			95 = { }
+		}
+	}
+}
+
+# Byzantium (scope:fnr_RMNRP_byz) joins the Roman state (scope:fnr_RMNRP_rome): annexed if small, vassal if large
+fnr_RMNRP_absorb_byzantium_effect = {
+	if = {
+		limit = { scope:fnr_RMNRP_byz = { num_locations < 40 } }
+		scope:fnr_RMNRP_rome = {
+			annex_country = { country = scope:fnr_RMNRP_byz }
+		}
+	}
+	else = {
+		scope:fnr_RMNRP_byz = {
+			make_subject_of = { target = scope:fnr_RMNRP_rome type = subject_type:vassal }
+		}
+	}
+}
+
+# Yearly upkeep
+fnr_RMNRP_yearly_upkeep_effect = {
+
+	# Senate Authority: drifts 1 a year towards 50; privileges, the Curia and a dictatorship push it
+	if = {
+		limit = { government_type = government_type:republic }
+		if = {
+			limit = { NOT = { has_variable = fnr_RMNRP_senate_authority } }
+			set_variable = { name = fnr_RMNRP_senate_authority value = 60 }
+		}
+		if = {
+			limit = { var:fnr_RMNRP_senate_authority > 50 }
+			fnr_RMNRP_change_senate_effect = { VALUE = -1 }
+		}
+		else_if = {
+			limit = { var:fnr_RMNRP_senate_authority < 50 }
+			fnr_RMNRP_change_senate_effect = { VALUE = 1 }
+		}
+		if = {
+			limit = { has_estate_privilege = estate_privilege:fnr_RMNRP_senatorial_prerogative }
+			fnr_RMNRP_change_senate_effect = { VALUE = 2 }
+		}
+		if = {
+			limit = { has_estate_privilege = estate_privilege:fnr_RMNRP_tribunicia_potestas }
+			fnr_RMNRP_change_senate_effect = { VALUE = -1 }
+		}
+		if = {
+			limit = {
+				capital ?= { has_building = building_type:fnr_RMNRP_curia }
+			}
+			fnr_RMNRP_change_senate_effect = { VALUE = 1 }
+		}
+		if = {
+			limit = { has_variable = fnr_RMNRP_dictator_active }
+			fnr_RMNRP_change_senate_effect = { VALUE = -3 }
+		}
+
+	}
+	fnr_RMNRP_refresh_senate_tier_effect = yes
+	fnr_RMNRP_yearly_servile_effect = yes
+	fnr_RMNRP_yearly_byzantium_effect = yes
+	if = {
+		limit = { has_variable = fnr_RMNRP_romanitas }
+		fnr_RMNRP_yearly_romanization_effect = yes
+	}
+
+	# Socii member count (not counting us) for the leader bonus
+	set_variable = { name = fnr_RMNRP_socii_members value = 0 }
+	if = {
+		limit = { exists = international_organization:fnr_RMNRP_socii_io }
+		every_country = {
+			limit = {
+				NOT = { has_or_had_tag = RMNRP }
+				is_member_of_international_organization = international_organization:fnr_RMNRP_socii_io
+			}
+			root = { change_variable = { name = fnr_RMNRP_socii_members add = 1 } }
+		}
+	}
+}

@@ -1,4 +1,4 @@
-# Eastern Roman Empire opinion modifiers
+﻿# Eastern Roman Empire opinion modifiers
 
 io_opinion_fnr_EASRE_pentarchy_io = {
 	value = 25

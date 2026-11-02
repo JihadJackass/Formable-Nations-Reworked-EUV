@@ -1,0 +1,45 @@
+﻿# Roman Republic hints (Pax Romana) - shown in the Hints panel
+# Explains Senate Authority while we are the Roman Republic.
+
+hint_fnr_RMNRP_senate = {
+	sort_priority = 500
+	priority = {
+		has_or_had_tag = RMNRP
+		has_variable = fnr_RMNRP_senate_authority
+	}
+	hide = {
+		NOT = {
+			has_or_had_tag = RMNRP
+			has_variable = fnr_RMNRP_senate_authority
+		}
+	}
+}
+
+hint_fnr_RMNRP_servile = {
+	sort_priority = 450
+	priority = {
+		has_or_had_tag = RMNRP
+		fnr_RMNRP_has_roman_slavery = yes
+	}
+	hide = {
+		NOT = {
+			has_or_had_tag = RMNRP
+			fnr_RMNRP_has_roman_slavery = yes
+		}
+	}
+}
+
+hint_fnr_RMNRP_byzantium = {
+	sort_priority = 400
+	priority = {
+		has_or_had_tag = RMNRP
+		exists = c:BYZ
+		c:BYZ = { is_subject = no }
+	}
+	hide = {
+		NOT = {
+			has_or_had_tag = RMNRP
+			exists = c:BYZ
+		}
+	}
+}

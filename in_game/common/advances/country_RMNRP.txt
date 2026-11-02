@@ -1,0 +1,101 @@
+﻿# Advances for the Roman Republic (Pax Romana - "Senatus Populusque Romanus")
+
+	# age_1_traditions
+
+		# Mos Maiorum - the custom of the ancestors
+		RMNRP_mos_maiorum = {
+			age = age_1_traditions
+			icon = laws
+			potential = {
+				has_or_had_tag = RMNRP
+			}
+
+			monthly_republican_tradition = 0.05
+			stability_cost_efficiency = 0.10
+
+			requires = codified_laws
+			allow_children = no
+		}
+
+		# Cursus Honorum - unlocks the Cursus Honorum reform
+		RMNRP_cursus_honorum = {
+			age = age_1_traditions
+			icon = smooth_administration
+			potential = {
+				has_or_had_tag = RMNRP
+			}
+
+			country_cabinet_efficiency = 0.05
+			global_max_control = 0.05
+
+			requires = educated_bureaucrats
+			allow_children = no
+		}
+
+	# age_2_renaissance
+
+		# The Twelve Tables - unlocks the Twelve Tables law
+		RMNRP_twelve_tables = {
+			age = age_2_renaissance
+			icon = legalism_advance
+			potential = {
+				has_or_had_tag = RMNRP
+			}
+
+			global_max_control = 0.05
+			monthly_republican_tradition = 0.05
+
+			unlock_law = fnr_RMNRP_twelve_tables_law
+
+			requires = law_making_renaissance
+			allow_children = no
+		}
+
+		# The Marian Reforms - unlocks the Republican Legionaries
+		RMNRP_marian_reforms = {
+			age = age_2_renaissance
+			icon = professional_armies_advance
+			potential = {
+				has_or_had_tag = RMNRP
+			}
+
+			discipline = 0.03
+			global_manpower_modifier = 0.10
+
+			requires = professional_armies_advance
+			allow_children = no
+		}
+
+	# age_4_reformation
+
+		# Capstone - Res Publica Aeterna (fires fnr_RMNRP.10 through the yearly pulse)
+		RMNRP_res_publica_aeterna = {
+			age = age_4_reformation
+			icon = imperial_ambitions
+			potential = {
+				NOT = { has_variable = fnr_RMNRP_imperial_path } # an empire cannot claim the eternal republic
+				has_or_had_tag = RMNRP
+			}
+			allow = {
+				government_type = government_type:republic
+				trigger_if = {
+					limit = { has_variable = fnr_RMNRP_senate_authority }
+					var:fnr_RMNRP_senate_authority >= 60
+				}
+				trigger_else = { always = no }
+				republican_tradition >= 75
+				region:italy_region = {
+					any_location_in_region = {
+						percent >= 0.8
+						owner = root
+					}
+				}
+			}
+
+			monthly_prestige = 0.1
+			monthly_republican_tradition = 0.1
+			research_speed_modifier = 0.05
+
+			requires = confessionalism_advance
+			allow_children = no
+		}

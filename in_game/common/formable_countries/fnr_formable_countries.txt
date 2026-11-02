@@ -1178,14 +1178,21 @@
 							tag_exists = PTLMY
 						}
 					}
-					tag = MAM
+					# FNR Pax Romana: any Egyptian state, the holder of Alexandria, or a Greek state with land in Egypt
+					OR = {
+						tag = MAM
+						owns = location:alexandria
+						capital ?= { region = region:egypt_region }
+						AND = {
+							culture = { has_culture_group = culture_group:greek_group }
+							any_owned_location = { region = region:egypt_region }
+						}
+					}
 				}
 				allow = {
-					OR = {
-						culture = { has_culture_group = culture_group:greek_group }
-						culture = culture:greek_culture
-						culture = culture:griko_culture
-					}
+					owns = location:alexandria
+					# Greek, or Hellenized through A Greek Court at Alexandria (fnr_PTLMY_greek_court)
+					fnr_PTLMY_is_hellenic = yes
 				}
 				name = PTLMY
 				flag = PTLMY
@@ -1205,6 +1212,7 @@
 						limit = { country_rank_level < 3 }
 						set_country_rank_effect = { rank = country_rank:rank_kingdom }
 					}
+					fnr_PTLMY_formation_effect = yes # FNR Pax Romana (fnr_PTLMY_effects.txt)
 				}
 			}
 		# Rhineland
@@ -6297,7 +6305,7 @@
 		# Roman Republic - Fantasy
 			RMNRP_f = {
 				level = 4
-				required_locations_fraction = 0.95
+				required_locations_fraction = 0.75
 				rule = plausible
 				potential = {
 					fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
@@ -6314,6 +6322,27 @@
 							tag_exists = RMNRP
 						}
 					}
+					NOT = { tag = PAP } # FNR Pax Romana: the Papacy keeps its own path
+					# FNR Pax Romana: Italian republics, any Italian power holding Rome,
+					# or any republic of proven republican virtue (75+ republican tradition) holding Rome
+					OR = {
+						AND = {
+							culture = { has_culture_group = culture_group:italian_group }
+							OR = {
+								government_type = government_type:republic
+								owns = location:rome
+							}
+						}
+						AND = {
+							government_type = government_type:republic
+							owns = location:rome
+							republican_tradition >= 75
+						}
+					}
+				}
+				allow = {
+					is_subject = no
+					owns = location:rome
 				}
 				name = RMNRP
 				flag = RMNRP
@@ -6334,9 +6363,19 @@
 					if = {
 						limit = { country_rank_level < 4 }
 						set_country_rank_effect = { rank = country_rank:rank_empire }
-					}				
+					}
+					# FNR Pax Romana: the Republic is restored
+					if = {
+						limit = { NOT = { government_type = government_type:republic } }
+						change_government_type = government_type:republic
+					}
+					change_heir_selection = heir_selection:fnr_RMNRP_consular_election
+					add_reform = government_reform:fnr_RMNRP_republican_restoration
+					custom_tooltip = fnr_RMNRP_formation_tt
+					trigger_event_non_silently = fnr_RMNRP.1
 				}
 			}	
+
 		# Sassanids - Fantasy
 			SSNID_f = {
 				level = 4

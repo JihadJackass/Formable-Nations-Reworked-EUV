@@ -1,0 +1,23 @@
+﻿#root is country
+#scope:target is the target
+
+# Restore the Roman Dioceses - the FNR fallback for Fate of the Phoenix's Restore Roman Borders.
+# Only shown without that DLC, which unlocks its own casus belli on formation.
+fnr_ROM_cb_restore_dioceses = {
+	create_visible = {
+		has_or_had_tag = ROM
+		NOT = { has_dlc = "d008_fate_of_the_phoenix" }
+	}
+	create_enabled = {
+		custom_tooltip = {
+			text = fnr_ROM_cb_restore_dioceses_valid_tt
+			scope:target = {
+				any_owned_location = {
+					fnr_ROM_in_diocese_region = yes
+				}
+			}
+		}
+	}
+	speed = 10
+	war_goal_type = fnr_ROM_restore_dioceses_wargoal
+}

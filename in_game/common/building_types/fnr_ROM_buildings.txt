@@ -1,0 +1,150 @@
+﻿# Roman Empire Building Types (Pax Romana)
+
+# Castra Legionis - a permanent legionary fortress on the frontier, outside the capital's region.
+# Needs fnr_ROM_limes. Legion Loyalty +1 a year with one, +2 with three, +3 with six.
+fnr_ROM_castra_legionis = {
+	audio_tier = 2
+	is_foreign = no
+	pop_type = soldiers
+	max_levels = 1
+
+	category = military_category
+	forbidden_for_estates = yes
+
+	employment_size = manpower_employment
+
+	town = yes
+	city = yes
+	megalopolis = yes
+
+	build_time = medium_soldier_building
+
+	country_potential = {
+		has_or_had_tag = ROM
+		has_advance = fnr_ROM_limes
+	}
+
+	allow = {
+		NOT = { region = owner.capital.region }
+	}
+
+	unique_production_methods = {
+		fnr_ROM_castra_legionis_maintenance = {
+			tools = 0.05
+			marble = 0.02
+			category = building_maintenance
+		}
+	}
+
+	construction_demand = early_soldier_building_construction
+
+	modifier = {
+		local_manpower = 0.01
+		can_recruit_regiment_in_this_location = yes
+		local_max_control = 0.05
+		local_unrest = -0.5
+	}
+}
+
+# Imperial Mint - capital only. Legion Loyalty +1 a year: the legions are paid on time.
+fnr_ROM_imperial_mint = {
+	audio_tier = 3
+	is_foreign = no
+	max_levels = 1
+	pop_type = burghers
+	forbidden_for_estates = yes
+
+	employment_size = large_noble_employment
+	category = government_category
+
+	town = yes
+	city = yes
+	megalopolis = yes
+
+	expensive = yes
+	build_time = large_capital_build_time
+
+	location_potential = {
+		counts_as_capital = yes
+	}
+
+	allow = {
+		is_capital = yes
+		country_has_no_other_copy_of_building = { type = fnr_ROM_imperial_mint }
+	}
+
+	country_potential = {
+		has_or_had_tag = ROM
+	}
+
+	remove_if = {
+		is_no_longer_capital = yes
+	}
+
+	capital_country_modifier = {
+		tax_income_efficiency = small_tax_income_efficiency_bonus
+		army_maintenance_efficiency = 0.05
+	}
+
+	unique_production_methods = {
+		fnr_ROM_imperial_mint_maintenance = {
+			tools = 0.05
+			marble = 0.03
+			category = building_maintenance
+		}
+	}
+
+	construction_demand = early_capital_building_construction
+}
+
+# The Palatium - the imperial palace, capital only
+fnr_ROM_palatium = {
+	audio_tier = 3
+	is_foreign = no
+	max_levels = 1
+	pop_type = nobles
+	forbidden_for_estates = yes
+
+	employment_size = large_noble_employment
+	category = government_category
+
+	town = yes
+	city = yes
+	megalopolis = yes
+
+	expensive = yes
+	build_time = large_capital_build_time
+
+	location_potential = {
+		counts_as_capital = yes
+	}
+
+	allow = {
+		is_capital = yes
+		country_has_no_other_copy_of_building = { type = fnr_ROM_palatium }
+	}
+
+	country_potential = {
+		has_or_had_tag = ROM
+	}
+
+	remove_if = {
+		is_no_longer_capital = yes
+	}
+
+	capital_country_modifier = {
+		monthly_legitimacy = 0.1
+		country_cabinet_efficiency = 0.05
+		global_max_control = 0.03
+	}
+
+	unique_production_methods = {
+		fnr_ROM_palatium_maintenance = {
+			marble = 0.05
+			books = 0.03
+			category = building_maintenance
+		}
+	}
+
+	construction_demand = early_capital_building_construction
+}

@@ -22,8 +22,11 @@
 			country_potential = {
 				has_or_had_tag = WESRE
 				has_advance = WESRE_foederati_integration
-				has_variable = fnr_WESRE_foederati_loyalty
-				var:fnr_WESRE_foederati_loyalty >= 30
+				trigger_if = {
+					limit = { has_variable = fnr_WESRE_foederati_loyalty }
+					var:fnr_WESRE_foederati_loyalty >= 30
+				}
+				trigger_else = { always = no }
 			}
 
 			location_potential = {
@@ -51,8 +54,11 @@
 			country_potential = {
 				has_or_had_tag = WESRE
 				has_advance = WESRE_foederati_integration
-				has_variable = fnr_WESRE_foederati_loyalty
-				var:fnr_WESRE_foederati_loyalty >= 30
+				trigger_if = {
+					limit = { has_variable = fnr_WESRE_foederati_loyalty }
+					var:fnr_WESRE_foederati_loyalty >= 30
+				}
+				trigger_else = { always = no }
 			}
 
 			location_potential = {
@@ -80,8 +86,11 @@
 			country_potential = {
 				has_or_had_tag = WESRE
 				has_advance = WESRE_foederati_integration
-				has_variable = fnr_WESRE_foederati_loyalty
-				var:fnr_WESRE_foederati_loyalty >= 30
+				trigger_if = {
+					limit = { has_variable = fnr_WESRE_foederati_loyalty }
+					var:fnr_WESRE_foederati_loyalty >= 30
+				}
+				trigger_else = { always = no }
 			}
 
 			location_potential = {
@@ -109,8 +118,11 @@
 			country_potential = {
 				has_or_had_tag = WESRE
 				has_advance = WESRE_foederati_integration
-				has_variable = fnr_WESRE_foederati_loyalty
-				var:fnr_WESRE_foederati_loyalty >= 30
+				trigger_if = {
+					limit = { has_variable = fnr_WESRE_foederati_loyalty }
+					var:fnr_WESRE_foederati_loyalty >= 30
+				}
+				trigger_else = { always = no }
 			}
 
 			location_potential = {
@@ -138,8 +150,11 @@
 			country_potential = {
 				has_or_had_tag = WESRE
 				has_advance = WESRE_foederati_integration
-				has_variable = fnr_WESRE_foederati_loyalty
-				var:fnr_WESRE_foederati_loyalty >= 30
+				trigger_if = {
+					limit = { has_variable = fnr_WESRE_foederati_loyalty }
+					var:fnr_WESRE_foederati_loyalty >= 30
+				}
+				trigger_else = { always = no }
 			}
 
 			location_potential = {
@@ -166,8 +181,11 @@
 			country_potential = {
 				has_or_had_tag = WESRE
 				has_advance = WESRE_foederati_integration
-				has_variable = fnr_WESRE_foederati_loyalty
-				var:fnr_WESRE_foederati_loyalty >= 30
+				trigger_if = {
+					limit = { has_variable = fnr_WESRE_foederati_loyalty }
+					var:fnr_WESRE_foederati_loyalty >= 30
+				}
+				trigger_else = { always = no }
 			}
 
 			location_potential = {

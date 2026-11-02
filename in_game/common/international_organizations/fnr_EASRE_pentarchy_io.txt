@@ -1,4 +1,4 @@
-# The Pentarchy - simple stabilizing IO for the Eastern Roman Empire
+﻿# The Pentarchy - simple stabilizing IO for the Eastern Roman Empire
 # Created by flavor_EASRE.2. ERE always leads. Orthodox countries may join.
 # The leader's bonus scales with how many of the five patriarchal seats it owns
 # (Rome, Constantinople, Alexandria, Antioch, Jerusalem).

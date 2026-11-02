@@ -1,0 +1,87 @@
+﻿# The Crisis of the Third Century (Roman Empire, Pax Romana)
+# Can start once the legions are near mutiny (Legion Loyalty below 20) in an Empire of 4+ dioceses.
+# Ends after at least 5 years once Legion Loyalty is back to 50 and every usurper is beaten,
+# or after 20 years whatever happens. The ending is Restitutor Orbis (fnr_ROM.13).
+
+fnr_ROM_crisis_of_the_third_century = {
+
+	image = "gfx/interface/illustrations/disaster/castilian_civil_war.dds"
+
+	monthly_spawn_chance = monthly_spawn_chance_high
+
+	fire_only_once = yes
+
+	can_start = {
+		has_or_had_tag = ROM
+		has_variable = fnr_ROM_formed
+		NOT = { has_variable = fnr_ROM_restitutor }
+		fnr_ROM_loyalty_below = { VALUE = 20 }
+		fnr_ROM_dioceses_at_least = { VALUE = 4 }
+	}
+
+	can_end = {
+		OR = {
+			had_disaster_for_years = {
+				disaster_type = scope:disaster
+				years >= 20
+			}
+			AND = {
+				had_disaster_for_years = {
+					disaster_type = scope:disaster
+					years >= 5
+				}
+				fnr_ROM_loyalty_at_least = { VALUE = 50 }
+				in_civil_war = no
+				custom_tooltip = {
+					text = fnr_ROM_usurpers_gone_tt
+					fnr_ROM_usurpers_in_field = no
+				}
+			}
+		}
+	}
+
+	modifier = {
+		monthly_legitimacy = -0.2
+		land_morale_modifier = -0.05
+		global_manpower_modifier = 0.10
+		monthly_pretender_rebel_growth = 0.002
+		stability_cost_efficiency = -0.10
+	}
+
+	on_start = {
+		set_variable = { name = fnr_ROM_crisis_months value = 0 }
+		trigger_event_non_silently = fnr_ROM.7
+	}
+
+	on_monthly = {
+		hidden_effect = {
+			if = {
+				limit = { NOT = { has_variable = fnr_ROM_crisis_months } }
+				set_variable = { name = fnr_ROM_crisis_months value = 0 }
+			}
+			change_variable = { name = fnr_ROM_crisis_months add = 1 }
+		}
+		random_list = {
+			10 = { custom_tooltip = an_event_occurs_tt }
+			90 = { custom_tooltip = no_event_occurs_tt }
+		}
+		hidden_effect = {
+			random_list = {
+				260 = { }
+				10 = { trigger_event_silently = fnr_ROM.8 }
+				10 = { trigger_event_silently = fnr_ROM.9 }
+				10 = { trigger_event_silently = fnr_ROM.10 }
+				10 = { trigger_event_silently = fnr_ROM.11 }
+				10 = { trigger_event_silently = fnr_ROM.12 }
+			}
+		}
+	}
+
+	on_end = {
+		if = {
+			limit = { has_variable = fnr_ROM_crisis_months }
+			remove_variable = fnr_ROM_crisis_months
+		}
+		trigger_event_non_silently = fnr_ROM.13
+	}
+}

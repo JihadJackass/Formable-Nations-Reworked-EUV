@@ -1,0 +1,80 @@
+﻿# The Revolt of the Thebaid (Ptolemaic Kingdom, Pax Romana)
+# Can start when Basileus and Pharaoh is 75 or more: a Macedonian court that ignores Egypt.
+# Ends after at least 5 years once the crown is below 50 and the native rebels are beaten, or after 15 years.
+
+fnr_PTLMY_revolt_of_the_thebaid = {
+
+	image = "gfx/interface/illustrations/disaster/castilian_civil_war.dds"
+
+	monthly_spawn_chance = monthly_spawn_chance_medium
+
+	can_start = {
+		has_or_had_tag = PTLMY
+		has_variable = fnr_PTLMY_formed
+		fnr_PTLMY_crown_at_least = { VALUE = 75 }
+		in_civil_war = no
+	}
+
+	can_end = {
+		OR = {
+			had_disaster_for_years = {
+				disaster_type = scope:disaster
+				years >= 15
+			}
+			AND = {
+				had_disaster_for_years = {
+					disaster_type = scope:disaster
+					years >= 5
+				}
+				fnr_PTLMY_crown_below = { VALUE = 50 }
+				in_civil_war = no
+				custom_tooltip = {
+					text = fnr_PTLMY_rebels_gone_tt
+					fnr_PTLMY_rebels_in_field = no
+				}
+			}
+		}
+	}
+
+	modifier = {
+		monthly_legitimacy = -0.1
+		tax_income_efficiency = -0.10
+		monthly_rebel_growth = 0.002
+		global_manpower_modifier = -0.10
+	}
+
+	on_start = {
+		set_variable = { name = fnr_PTLMY_revolt_months value = 0 }
+		trigger_event_non_silently = fnr_PTLMY.60
+	}
+
+	on_monthly = {
+		hidden_effect = {
+			if = {
+				limit = { NOT = { has_variable = fnr_PTLMY_revolt_months } }
+				set_variable = { name = fnr_PTLMY_revolt_months value = 0 }
+			}
+			change_variable = { name = fnr_PTLMY_revolt_months add = 1 }
+		}
+		random_list = {
+			10 = { custom_tooltip = an_event_occurs_tt }
+			90 = { custom_tooltip = no_event_occurs_tt }
+		}
+		hidden_effect = {
+			random_list = {
+				270 = { }
+				10 = { trigger_event_silently = fnr_PTLMY.61 }
+				10 = { trigger_event_silently = fnr_PTLMY.62 }
+				10 = { trigger_event_silently = fnr_PTLMY.63 }
+			}
+		}
+	}
+
+	on_end = {
+		if = {
+			limit = { has_variable = fnr_PTLMY_revolt_months }
+			remove_variable = fnr_PTLMY_revolt_months
+		}
+		trigger_event_non_silently = fnr_PTLMY.64
+	}
+}

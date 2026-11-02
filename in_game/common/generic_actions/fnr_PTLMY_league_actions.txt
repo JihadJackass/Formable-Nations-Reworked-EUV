@@ -1,0 +1,285 @@
+﻿# The League of the Islanders - actions (Pax Romana)
+# scope:actor = the Ptolemaic Kingdom, scope:recipient = the League, scope:source = the chosen member
+
+# The Ptolemaieia - peace, every 5 years: every member gains The Ptolemaieia and thinks better of us
+fnr_PTLMY_league_ptolemaieia = {
+	type = internationalorganization
+	ai_tick = monthly
+	ai_tick_frequency = 12
+	automation_tick = never
+	automation_tick_frequency = 12
+	potential = {
+		scope:actor = { has_or_had_tag = PTLMY }
+	}
+	allow = {
+		scope:actor = {
+			at_war = no
+			gold >= 100
+			NOT = { has_variable = fnr_PTLMY_ptolemaieia_cooldown }
+		}
+	}
+	select_trigger = {
+		looking_for_a = international_organization
+		source = actor
+		target_flag = recipient
+		name = "choose_international_organization"
+		column = {
+			data = name
+		}
+		visible = {
+			this = international_organization:fnr_PTLMY_nesiotic_league
+			leader_country ?= scope:actor
+		}
+	}
+	effect = {
+		scope:actor = {
+			add_gold = -100
+			add_prestige = prestige_mild_bonus
+			set_variable = { name = fnr_PTLMY_ptolemaieia_cooldown years = 5 }
+		}
+		scope:recipient = {
+			every_international_organization_member = {
+				add_country_modifier = { modifier = fnr_PTLMY_ptolemaieia years = 5 mode = add_and_extend }
+				if = {
+					limit = { NOT = { this = scope:actor } }
+					add_opinion = { target = scope:actor modifier = fnr_PTLMY_honoured_at_games }
+				}
+			}
+		}
+		custom_tooltip = fnr_PTLMY_ptolemaieia_tt
+	}
+	ai_will_do = {
+		add = 50
+	}
+}
+
+# Levy the Islands - war, every 10 years: every member gains Nesiotic Levy
+fnr_PTLMY_league_levy = {
+	type = internationalorganization
+	ai_tick = monthly
+	ai_tick_frequency = 12
+	automation_tick = never
+	automation_tick_frequency = 12
+	potential = {
+		scope:actor = { has_or_had_tag = PTLMY }
+	}
+	allow = {
+		scope:actor = {
+			at_war = yes
+			NOT = { has_variable = fnr_PTLMY_league_levy_cooldown }
+		}
+	}
+	select_trigger = {
+		looking_for_a = international_organization
+		source = actor
+		target_flag = recipient
+		name = "choose_international_organization"
+		column = {
+			data = name
+		}
+		visible = {
+			this = international_organization:fnr_PTLMY_nesiotic_league
+			leader_country ?= scope:actor
+		}
+	}
+	effect = {
+		scope:actor = {
+			set_variable = { name = fnr_PTLMY_league_levy_cooldown years = 10 }
+		}
+		scope:recipient = {
+			every_international_organization_member = {
+				add_country_modifier = { modifier = fnr_PTLMY_nesiotic_levy years = 2 mode = add_and_extend }
+			}
+		}
+		custom_tooltip = fnr_PTLMY_league_levy_tt
+	}
+	ai_will_do = {
+		add = 75
+	}
+}
+
+# Send Grain - one member gets Egyptian Grain for 5 years. Uses a granary reserve, or 100 gold.
+fnr_PTLMY_league_send_grain = {
+	type = internationalorganization
+	ai_tick = monthly
+	ai_tick_frequency = 12
+	automation_tick = never
+	automation_tick_frequency = 12
+	potential = {
+		scope:actor = { has_or_had_tag = PTLMY }
+	}
+	allow = {
+		scope:actor = {
+			OR = { gold >= 100 NOT = { fnr_PTLMY_granary_below = { VALUE = 1 } } }
+		}
+	}
+	select_trigger = {
+		looking_for_a = international_organization
+		source = actor
+		target_flag = recipient
+		name = "choose_international_organization"
+		column = {
+			data = name
+		}
+		visible = {
+			this = international_organization:fnr_PTLMY_nesiotic_league
+			leader_country ?= scope:actor
+		}
+	}
+	select_trigger = {
+		looking_for_a = country
+		source = recipient
+		target_flag = source
+		name = "choose_country"
+		column = {
+			data = name
+		}
+		visible = {
+			root != scope:actor
+		}
+		enabled = {
+			NOT = { has_variable = fnr_PTLMY_grain_sent }
+		}
+	}
+	effect = {
+		scope:actor = {
+			if = {
+				limit = { NOT = { fnr_PTLMY_granary_below = { VALUE = 1 } } }
+				change_variable = { name = fnr_PTLMY_granary add = -1 }
+				custom_tooltip = fnr_PTLMY_granary_minus_tt
+			}
+			else = {
+				add_gold = -100
+			}
+		}
+		scope:source = {
+			set_variable = { name = fnr_PTLMY_grain_sent years = 5 }
+			add_country_modifier = { modifier = fnr_PTLMY_grain_gift years = 5 mode = add_and_extend }
+			add_opinion = { target = scope:actor modifier = fnr_PTLMY_fed_by_egypt }
+		}
+	}
+	ai_will_do = {
+		add = 20
+	}
+}
+
+# Garrison the Island - one member gains a Ptolemaic Garrison for 20 years. Every 10 years.
+fnr_PTLMY_league_garrison = {
+	type = internationalorganization
+	ai_tick = monthly
+	ai_tick_frequency = 12
+	automation_tick = never
+	automation_tick_frequency = 12
+	potential = {
+		scope:actor = { has_or_had_tag = PTLMY }
+	}
+	allow = {
+		scope:actor = {
+			gold >= 75
+			NOT = { has_variable = fnr_PTLMY_garrison_cooldown }
+		}
+	}
+	select_trigger = {
+		looking_for_a = international_organization
+		source = actor
+		target_flag = recipient
+		name = "choose_international_organization"
+		column = {
+			data = name
+		}
+		visible = {
+			this = international_organization:fnr_PTLMY_nesiotic_league
+			leader_country ?= scope:actor
+		}
+	}
+	select_trigger = {
+		looking_for_a = country
+		source = recipient
+		target_flag = source
+		name = "choose_country"
+		column = {
+			data = name
+		}
+		visible = {
+			root != scope:actor
+		}
+		enabled = {
+			NOT = { has_country_modifier = fnr_PTLMY_island_garrison }
+		}
+	}
+	effect = {
+		scope:actor = {
+			add_gold = -75
+			set_variable = { name = fnr_PTLMY_garrison_cooldown years = 10 }
+		}
+		scope:source = {
+			add_country_modifier = { modifier = fnr_PTLMY_island_garrison years = 20 mode = add_and_extend }
+			add_opinion = { target = scope:actor modifier = fnr_PTLMY_protected_by_egypt }
+		}
+	}
+	ai_will_do = {
+		add = 30
+	}
+}
+
+# Incorporate - a small member that loves us (150+ opinion) is peacefully absorbed. Every 20 years.
+fnr_PTLMY_league_incorporate = {
+	type = internationalorganization
+	ai_tick = monthly
+	ai_tick_frequency = 12
+	automation_tick = never
+	automation_tick_frequency = 12
+	potential = {
+		scope:actor = { has_or_had_tag = PTLMY }
+	}
+	allow = {
+		scope:actor = {
+			at_war = no
+			NOT = { has_variable = fnr_PTLMY_incorporate_cooldown }
+		}
+	}
+	select_trigger = {
+		looking_for_a = international_organization
+		source = actor
+		target_flag = recipient
+		name = "choose_international_organization"
+		column = {
+			data = name
+		}
+		visible = {
+			this = international_organization:fnr_PTLMY_nesiotic_league
+			leader_country ?= scope:actor
+		}
+	}
+	select_trigger = {
+		looking_for_a = country
+		source = recipient
+		target_flag = source
+		name = "choose_country"
+		column = {
+			data = name
+		}
+		visible = {
+			root != scope:actor
+		}
+		enabled = {
+			at_war = no
+			num_locations < 30
+			opinion = {
+				target = scope:actor
+				value >= 150
+			}
+		}
+	}
+	effect = {
+		scope:actor = {
+			set_variable = { name = fnr_PTLMY_incorporate_cooldown years = 20 }
+			add_stability = stability_weak_penalty
+			annex_country = { country = scope:source }
+		}
+	}
+	ai_will_do = {
+		add = 100
+	}
+}
+

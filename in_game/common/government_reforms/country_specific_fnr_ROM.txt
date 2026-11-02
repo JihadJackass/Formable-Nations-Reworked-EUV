@@ -1,0 +1,84 @@
+﻿# Roman Empire Specific Government Reforms (Pax Romana)
+# The Principate and the Dominate exclude each other. The Tetrarchy needs the advance and 5 dioceses.
+
+	# The Principate - the Emperor as first citizen, ruling through the Senate. Legion Loyalty -1 a year.
+		fnr_ROM_principate = {
+			government = monarchy
+			unique = yes
+			potential = {
+				has_or_had_tag = ROM
+			}
+			allow = {
+				NOT = { has_reform = government_reform:fnr_ROM_dominate }
+			}
+			country_modifier = {
+				monthly_legitimacy = 0.1
+				stability_cost_efficiency = 0.05
+				nobles_estate_target_satisfaction = small_permanent_target_satisfaction
+			}
+			years = 2
+			block_for_rebel = yes
+		}
+
+	# The Dominate - the Emperor as lord and god, after the Crisis. Legion Loyalty +1 a year.
+		fnr_ROM_dominate = {
+			government = monarchy
+			unique = yes
+			potential = {
+				has_or_had_tag = ROM
+			}
+			allow = {
+				NOT = { has_reform = government_reform:fnr_ROM_principate }
+				OR = {
+					has_variable = fnr_ROM_restitutor
+					legitimacy >= 90
+				}
+			}
+			country_modifier = {
+				monthly_legitimacy = 0.2
+				global_max_control = 0.05
+				global_nobles_estate_power = -0.10
+			}
+			years = 2
+			block_for_rebel = yes
+		}
+
+	# The Tetrarchy - two Augusti and two Caesares share the frontiers. Legion Loyalty +2 a year,
+	# no overstretch from many dioceses, and usurpers rise far less often.
+		fnr_ROM_tetrarchy = {
+			government = monarchy
+			unique = yes
+			potential = {
+				has_or_had_tag = ROM
+			}
+			allow = {
+				has_advance = fnr_ROM_tetrarchia
+				fnr_ROM_dioceses_at_least = { VALUE = 5 }
+			}
+			country_modifier = {
+				global_max_control = 0.05
+				country_cabinet_efficiency = 0.05
+				monthly_legitimacy = -0.05
+			}
+			years = 2
+			block_for_rebel = yes
+		}
+
+	# The Senate of Generals and Scholars - the Great Republic's smaller Senate (added on formation).
+	# With Senate Authority 60+, Legion Loyalty +2 a year; below 25 Legion Loyalty, Senate Authority -2 a year.
+		fnr_ROM_senate_of_generals = {
+			government = republic
+			unique = yes
+			potential = {
+				has_or_had_tag = ROM
+				has_variable = fnr_ROM_origin_great_republic
+			}
+			country_modifier = {
+				research_speed_modifier = 0.05
+				land_morale_modifier = 0.05
+				country_cabinet_efficiency = 0.05
+				monthly_republican_tradition = 0.05
+			}
+			years = 2
+			block_for_rebel = yes
+		}

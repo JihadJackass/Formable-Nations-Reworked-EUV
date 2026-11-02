@@ -1,0 +1,286 @@
+﻿# The Socii - league actions shown in the Socii panel (Pax Romana)
+# scope:actor = the Roman leader, scope:recipient = the Socii, scope:source = the chosen member
+
+# Renew the Foedera - peace, every 5 years: every member gains Foedera Renewed, the allies think better of Rome
+fnr_RMNRP_socii_renew_foedera = {
+	type = internationalorganization
+	ai_tick = monthly
+	ai_tick_frequency = 12
+	automation_tick = never
+	automation_tick_frequency = 12
+	potential = {
+		scope:actor = { has_or_had_tag = RMNRP }
+	}
+	allow = {
+		scope:actor = {
+			at_war = no
+			gold >= 100
+			NOT = { has_variable = fnr_RMNRP_foedera_cooldown }
+		}
+	}
+	select_trigger = {
+		looking_for_a = international_organization
+		source = actor
+		target_flag = recipient
+		name = "choose_international_organization"
+		column = {
+			data = name
+		}
+		visible = {
+			this = international_organization:fnr_RMNRP_socii_io
+			leader_country ?= scope:actor
+		}
+	}
+	effect = {
+		scope:actor = {
+			add_gold = -100
+			add_prestige = prestige_mild_bonus
+			set_variable = { name = fnr_RMNRP_foedera_cooldown years = 5 }
+		}
+		scope:recipient = {
+			every_international_organization_member = {
+				add_country_modifier = { modifier = fnr_RMNRP_foedera_renewed years = 5 mode = add_and_extend }
+				if = {
+					limit = { NOT = { this = scope:actor } }
+					add_opinion = { target = scope:actor modifier = fnr_RMNRP_renewed_foedus }
+				}
+			}
+		}
+		custom_tooltip = fnr_RMNRP_renew_foedera_tt
+	}
+	ai_will_do = {
+		add = 50
+	}
+}
+
+# Levy the Socii - war, every 10 years: every member gains Socii Levied
+fnr_RMNRP_socii_levy = {
+	type = internationalorganization
+	ai_tick = monthly
+	ai_tick_frequency = 12
+	automation_tick = never
+	automation_tick_frequency = 12
+	potential = {
+		scope:actor = { has_or_had_tag = RMNRP }
+	}
+	allow = {
+		scope:actor = {
+			at_war = yes
+			NOT = { has_variable = fnr_RMNRP_levy_cooldown }
+		}
+	}
+	select_trigger = {
+		looking_for_a = international_organization
+		source = actor
+		target_flag = recipient
+		name = "choose_international_organization"
+		column = {
+			data = name
+		}
+		visible = {
+			this = international_organization:fnr_RMNRP_socii_io
+			leader_country ?= scope:actor
+		}
+	}
+	effect = {
+		scope:actor = {
+			add_prestige = prestige_weak_penalty
+			set_variable = { name = fnr_RMNRP_levy_cooldown years = 10 }
+		}
+		scope:recipient = {
+			every_international_organization_member = {
+				add_country_modifier = { modifier = fnr_RMNRP_socii_levied years = 2 mode = add_and_extend }
+			}
+		}
+		custom_tooltip = fnr_RMNRP_levy_socii_tt
+	}
+	ai_will_do = {
+		add = 75
+	}
+}
+
+# Promote Latin - in one member: 3% of its non-Latin people take up Latin (Roman) culture. 5-year cooldown per member.
+fnr_RMNRP_socii_promote_latin = {
+	type = internationalorganization
+	ai_tick = monthly
+	ai_tick_frequency = 12
+	automation_tick = never
+	automation_tick_frequency = 12
+	potential = {
+		scope:actor = { has_or_had_tag = RMNRP }
+	}
+	allow = {
+		scope:actor = { gold >= 50 }
+	}
+	select_trigger = {
+		looking_for_a = international_organization
+		source = actor
+		target_flag = recipient
+		name = "choose_international_organization"
+		column = {
+			data = name
+		}
+		visible = {
+			this = international_organization:fnr_RMNRP_socii_io
+			leader_country ?= scope:actor
+		}
+	}
+	select_trigger = {
+		looking_for_a = country
+		source = recipient
+		target_flag = source
+		name = "choose_country"
+		column = {
+			data = name
+		}
+		visible = {
+			root != scope:actor
+
+		}
+		enabled = {
+			NOT = { has_variable = fnr_RMNRP_latin_promoted }
+		}
+	}
+	effect = {
+		scope:actor = { add_gold = -50 }
+		scope:source = {
+			set_variable = { name = fnr_RMNRP_latin_promoted years = 5 }
+			custom_tooltip = fnr_RMNRP_promote_latin_tt
+			hidden_effect = {
+				every_owned_location = {
+					every_pop = {
+						limit = {
+							owner = scope:source
+							NOT = { culture = culture:roman_culture }
+						}
+						split_pop = {
+							fraction = 0.03
+							culture = culture:roman_culture
+						}
+					}
+				}
+			}
+		}
+	}
+	ai_will_do = {
+		add = 10
+	}
+}
+
+# Grant the Ius Latii - Latin Rights for one member: it loves Rome and fights harder beside it. Once per member.
+fnr_RMNRP_socii_grant_ius_latii = {
+	type = internationalorganization
+	ai_tick = monthly
+	ai_tick_frequency = 12
+	automation_tick = never
+	automation_tick_frequency = 12
+	potential = {
+		scope:actor = { has_or_had_tag = RMNRP }
+	}
+	allow = {
+		scope:actor = { gold >= 100 }
+	}
+	select_trigger = {
+		looking_for_a = international_organization
+		source = actor
+		target_flag = recipient
+		name = "choose_international_organization"
+		column = {
+			data = name
+		}
+		visible = {
+			this = international_organization:fnr_RMNRP_socii_io
+			leader_country ?= scope:actor
+		}
+	}
+	select_trigger = {
+		looking_for_a = country
+		source = recipient
+		target_flag = source
+		name = "choose_country"
+		column = {
+			data = name
+		}
+		visible = {
+			root != scope:actor
+
+		}
+		enabled = {
+			NOT = { has_country_modifier = fnr_RMNRP_ius_latii }
+		}
+	}
+	effect = {
+		scope:actor = {
+			add_gold = -100
+		}
+		scope:source = {
+			add_country_modifier = { modifier = fnr_RMNRP_ius_latii years = -1 }
+			add_opinion = { target = scope:actor modifier = fnr_RMNRP_granted_citizenship }
+		}
+	}
+	ai_will_do = {
+		add = 20
+	}
+}
+
+# Incorporate into Rome - a small member that loves Rome (150+ opinion) is peacefully absorbed. Every 20 years.
+fnr_RMNRP_socii_incorporate = {
+	type = internationalorganization
+	ai_tick = monthly
+	ai_tick_frequency = 12
+	automation_tick = never
+	automation_tick_frequency = 12
+	potential = {
+		scope:actor = { has_or_had_tag = RMNRP }
+	}
+	allow = {
+		scope:actor = {
+			at_war = no
+			NOT = { has_variable = fnr_RMNRP_incorporate_cooldown }
+		}
+	}
+	select_trigger = {
+		looking_for_a = international_organization
+		source = actor
+		target_flag = recipient
+		name = "choose_international_organization"
+		column = {
+			data = name
+		}
+		visible = {
+			this = international_organization:fnr_RMNRP_socii_io
+			leader_country ?= scope:actor
+		}
+	}
+	select_trigger = {
+		looking_for_a = country
+		source = recipient
+		target_flag = source
+		name = "choose_country"
+		column = {
+			data = name
+		}
+		visible = {
+			root != scope:actor
+
+		}
+		enabled = {
+			at_war = no
+			num_locations < 30
+			opinion = {
+				target = scope:actor
+				value >= 150
+			}
+		}
+	}
+	effect = {
+		scope:actor = {
+			set_variable = { name = fnr_RMNRP_incorporate_cooldown years = 20 }
+			add_stability = stability_weak_penalty
+			annex_country = { country = scope:source }
+		}
+	}
+	ai_will_do = {
+		add = 100
+	}
+}

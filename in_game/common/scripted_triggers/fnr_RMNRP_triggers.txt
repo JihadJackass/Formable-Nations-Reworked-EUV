@@ -1,0 +1,42 @@
+﻿# Roman Republic scripted triggers (Pax Romana)
+
+# Has any policy of the Roman Slavery law
+fnr_RMNRP_has_roman_slavery = {
+	OR = {
+		has_policy = fnr_RMNRP_latifundia_policy
+		has_policy = fnr_RMNRP_regulated_slavery_policy
+		has_policy = fnr_RMNRP_manumission_policy
+	}
+}
+
+# Owns at least one location with slave pops
+fnr_RMNRP_owns_slaves = {
+	any_owned_location = {
+		any_pop = { pop_type = pop_type:slaves }
+	}
+}
+
+# ---------- Byzantium (One Rome) ----------
+
+# The Ottomans (or the beylik leading the Rise of the Ottomans) out-muster Byzantium. Scope: Byzantium
+fnr_RMNRP_byz_threatened_by_turks = {
+	OR = {
+		AND = {
+			exists = c:TUR
+			c:TUR = { army_size > prev.army_size }
+		}
+		AND = {
+			is_situation_active = situation:rise_of_the_ottomans
+			situation:rise_of_the_ottomans.var:strongest_beylik_variable ?= { army_size > prev.army_size }
+		}
+	}
+}
+
+# Our concordia with Byzantium is at least $VALUE$. Scope: us
+fnr_RMNRP_concordia_at_least = {
+	trigger_if = {
+		limit = { has_variable = fnr_RMNRP_concordia }
+		var:fnr_RMNRP_concordia >= $VALUE$
+	}
+	trigger_else = { always = no }
+}

@@ -1,0 +1,190 @@
+﻿# The Socii - Rome's Italian allies, a simple IO for the Roman Republic
+# Founded by the fnr_RMNRP_found_socii decision. The Roman Republic (or the Empire it becomes) always leads.
+# Italian-culture countries with their capital in Italy, and any subject of the Republic, may join;
+# the Republic's subjects join automatically. Members are called into each other's defensive wars.
+# Actions: Renew the Foedera (peace) and Levy the Socii (war). The Social War event (fnr_RMNRP.9) can follow.
+
+fnr_RMNRP_socii_io = {
+	has_target = no
+	unique = yes
+	expel_members_who_are_targets_of_other_members = no
+
+	# Once Rome forms, the Socii become the Foederati (fnr_ROM_convert_socii_effect)
+	auto_disband_trigger = {
+		exists = international_organization:fnr_ROM_foederati_io
+	}
+
+	has_leader_country = yes
+	leader_type = country
+	leader_change_trigger_type = none
+
+	diplomatic_capacity_cost = {
+		add = {
+			desc = "UPKEEP_BASE_VALUE"
+			value = 1
+		}
+	}
+
+	# Leader: base package
+	leader_modifier = {
+		monthly_republican_tradition = 0.05
+		global_manpower_modifier = 0.05
+	}
+
+	# Leader: per member (not counting the Latin Empire)
+	leader_modifier = {
+		scale = {
+			value = 0
+			if = {
+				limit = { has_variable = fnr_RMNRP_socii_members }
+				add = var:fnr_RMNRP_socii_members
+			}
+			max = 8
+		}
+		global_manpower_modifier = 0.02
+		monthly_prestige = 0.02
+	}
+
+	# Other members
+	non_leader_modifier = {
+		global_defensive = 0.10
+		army_heavy_infantry_power = 0.05
+	}
+
+	join_defensive_wars_can_call = {
+		always = yes
+	}
+
+	join_defensive_wars_auto_call = {
+		always = yes
+	}
+
+	create_visible_trigger = {
+		always = no
+	}
+
+	invite_visible_trigger = {
+		has_or_had_tag = RMNRP
+	}
+
+	can_lead_trigger = {
+		has_or_had_tag = RMNRP
+	}
+
+	can_join_trigger = {
+		OR = {
+			overlord ?= { has_or_had_tag = RMNRP }
+			AND = {
+				culture = { has_culture_group = culture_group:italian_group }
+				capital ?= { region = region:italy_region }
+			}
+			# Byzantium can always be invited; it only accepts at 30+ Concordia (ai_desire_to_join)
+			has_or_had_tag = BYZ
+		}
+		NOT = { is_member_of_international_organization = international_organization:fnr_RMNRP_socii_io }
+		NOT = {
+			any_country_at_war_with = {
+				is_member_of_international_organization = international_organization:fnr_RMNRP_socii_io
+			}
+		}
+	}
+
+	can_leave_trigger = {
+		NOT = { has_or_had_tag = RMNRP }
+	}
+
+	auto_leave_trigger = {
+		NOT = { has_or_had_tag = RMNRP }
+		NOT = { overlord ?= { has_or_had_tag = RMNRP } }
+		NOT = { culture = { has_culture_group = culture_group:italian_group } }
+		NOT = { has_or_had_tag = BYZ }
+	}
+
+	# The Latin Empire's subjects join automatically
+	monthly_effect = {
+		leader_country ?= {
+			every_subject = {
+				limit = {
+					NOT = { is_member_of_international_organization = international_organization:fnr_RMNRP_socii_io }
+				}
+				save_scope_as = fnr_RMNRP_socii_joiner
+				international_organization:fnr_RMNRP_socii_io = {
+					add_country_to_international_organization = scope:fnr_RMNRP_socii_joiner
+				}
+			}
+		}
+	}
+
+	on_joined = {
+		if = {
+			limit = { NOT = { has_or_had_tag = RMNRP } }
+			international_organization:fnr_RMNRP_socii_io = {
+				leader_country ?= { save_scope_as = fnr_RMNRP_socii_leader }
+			}
+			if = {
+				limit = { exists = scope:fnr_RMNRP_socii_leader }
+				add_opinion = { target = scope:fnr_RMNRP_socii_leader modifier = fnr_RMNRP_sworn_socius }
+			}
+		}
+	}
+
+	can_declare_war = {
+		always = yes
+	}
+
+	ai_desire_to_join = {
+		add = {
+			desc = "BASE_DESIRE"
+			value = -30
+		}
+		if = {
+			limit = {
+				has_or_had_tag = BYZ
+				NOT = {
+					any_country = {
+						has_or_had_tag = RMNRP
+						fnr_RMNRP_concordia_at_least = { VALUE = 30 }
+					}
+				}
+			}
+			add = {
+				desc = "fnr_RMNRP_socii_byz_low_concordia"
+				value = -1000
+			}
+		}
+		if = {
+			limit = {
+				has_or_had_tag = BYZ
+				fnr_RMNRP_byz_threatened_by_turks = yes
+			}
+			add = {
+				desc = "fnr_RMNRP_reunion_reason_turks"
+				value = 30
+			}
+		}
+		if = {
+			limit = { at_war = yes }
+			subtract = {
+				desc = "IS_AT_WAR"
+				value = 1000
+			}
+		}
+		if = {
+			limit = { exists = scope:actor }
+			add = {
+				desc = "DIPLOREASON_OPINION"
+				value = {
+					value = "opinion(scope:actor)"
+					multiply = 0.5
+				}
+			}
+		}
+	}
+
+	ai_desire_to_allow_new_member = {
+		add = {
+			desc = "WE_WANT_THE_ORGANIZATION_TO_GROW"
+			value = 20
+		}
+	}
+}

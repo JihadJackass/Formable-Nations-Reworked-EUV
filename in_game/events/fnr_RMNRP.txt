@@ -1,0 +1,1042 @@
+﻿namespace = fnr_RMNRP
+
+# ==========================================================================
+# Pax Romana - Roman Republic: "Senatus Populusque Romanus"
+#  .1  SPQR Restored              - on formation (RMNRP_f form_effect); starts Senate Authority at 60
+#  .2  The Senate Convenes        - 1 year after .1: Optimates or Populares
+#  .3  The Consuls Take Office    - every Consular Election (heir selection succession_effect)
+#  .4  The Land Law               - 8-15 years after .1 (the Gracchi)
+#  .5  The Ambitious General      - at war with a 60+ military general (yearly pulse, 15-year cooldown)
+#  .6  Lay Down the Fasces        - dictatorship ended or expired (yearly pulse)
+#  .7  Imperator                  - 5 years after refusing to resign: crown yourself or restore the Republic
+#  .8  Crossing the Rubicon       - from .5 B, or Senate Authority below 20 (yearly pulse)
+#  .9  The Social War             - the Socii demand citizenship (yearly pulse, 2+ members)
+#  .10 Res Publica Aeterna        - capstone advance (yearly pulse)
+#  .11 Murmurs in the Ludus       - Servile Discontent 60+ (yearly pulse)
+#  .12 The New Spartacus          - Servile Discontent 80+ (yearly pulse): the Servile War
+#  .13 The End of the Servile War - 3-5 years after .12 A
+#  .14 Freedmen Prosper           - Manumission policy (yearly pulse)
+#  .15 The Roman Civil Wars       - start of the disaster (fnr_RMNRP_roman_civil_wars)
+#  .16 Proscription Lists         - disaster monthly
+#  .17 The Legions Choose Sides   - disaster monthly
+#  .18 March on Rome              - disaster monthly
+#  .20 The Tribune of the Roman People - rare (~3%/yr): a republic holding Rome may restore the Republic early
+#  .19 After the Rubicon          - disaster end, when no dictator refused to resign (else .7 fires)
+# ==========================================================================
+
+# 1 - SPQR Restored
+fnr_RMNRP.1 = {
+	type = country_event
+	title = fnr_RMNRP.1.title
+	desc = fnr_RMNRP.1.desc
+	fire_only_once = yes
+	outcome = positive
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:peasants_estate }
+		set_variable = { name = fnr_RMNRP_senate_authority value = 60 }
+		fnr_RMNRP_refresh_senate_tier_effect = yes
+		hidden_effect = {
+			trigger_event_non_silently = { id = fnr_RMNRP.2 days = 365 }
+			trigger_event_non_silently = { id = fnr_RMNRP.4 days = { 2920 5475 } }
+		}
+	}
+
+	# A - The Senate is sovereign
+	option = {
+		name = fnr_RMNRP.1.a
+		ai_chance = { factor = 50 }
+		fnr_RMNRP_change_senate_effect = { VALUE = 15 }
+		add_stability = stability_mild_bonus
+		add_estate_satisfaction = {
+			type = estate_type:nobles_estate
+			value = estate_satisfaction_mild_bonus
+		}
+		custom_tooltip = fnr_RMNRP_senate_plus_15_tt
+	}
+
+	# B - The Senate and the People
+	option = {
+		name = fnr_RMNRP.1.b
+		ai_chance = { factor = 50 }
+		add_republican_tradition = republican_tradition_mild_bonus
+		add_estate_satisfaction = {
+			type = estate_type:peasants_estate
+			value = estate_satisfaction_mild_bonus
+		}
+		add_country_modifier = { modifier = fnr_RMNRP_senate_and_people years = 20 mode = add_and_extend }
+	}
+}
+
+# 2 - The Senate Convenes
+fnr_RMNRP.2 = {
+	type = country_event
+	title = fnr_RMNRP.2.title
+	desc = fnr_RMNRP.2.desc
+	fire_only_once = yes
+	outcome = neutral
+
+	trigger = {
+		has_or_had_tag = RMNRP
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
+	}
+
+	# A - With the Optimates
+	option = {
+		name = fnr_RMNRP.2.a
+		ai_chance = { factor = 40 }
+		fnr_RMNRP_change_senate_effect = { VALUE = 10 }
+		add_estate_satisfaction = {
+			type = estate_type:nobles_estate
+			value = estate_satisfaction_mild_bonus
+		}
+		add_estate_satisfaction = {
+			type = estate_type:peasants_estate
+			value = estate_satisfaction_mild_penalty
+		}
+		add_country_modifier = { modifier = fnr_RMNRP_optimates years = 20 mode = add_and_extend }
+		custom_tooltip = fnr_RMNRP_senate_plus_10_tt
+	}
+
+	# B - With the Populares
+	option = {
+		name = fnr_RMNRP.2.b
+		ai_chance = { factor = 40 }
+		fnr_RMNRP_change_senate_effect = { VALUE = -5 }
+		add_estate_satisfaction = {
+			type = estate_type:peasants_estate
+			value = estate_satisfaction_mild_bonus
+		}
+		add_estate_satisfaction = {
+			type = estate_type:nobles_estate
+			value = estate_satisfaction_mild_penalty
+		}
+		add_country_modifier = { modifier = fnr_RMNRP_populares years = 20 mode = add_and_extend }
+		custom_tooltip = fnr_RMNRP_senate_minus_5_tt
+	}
+
+	# C - Above the factions
+	option = {
+		name = fnr_RMNRP.2.c
+		ai_chance = { factor = 20 }
+		add_stability = stability_weak_bonus
+		add_republican_tradition = republican_tradition_mild_bonus
+	}
+}
+
+# 3 - The Consuls Take Office (every election)
+fnr_RMNRP.3 = {
+	type = country_event
+	title = fnr_RMNRP.3.title
+	desc = fnr_RMNRP.3.desc
+	outcome = neutral
+
+	trigger = {
+		has_or_had_tag = RMNRP
+		government_type = government_type:republic
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:burghers_estate }
+	}
+
+	# A - Swear by the laws of the Republic
+	option = {
+		name = fnr_RMNRP.3.a
+		ai_chance = { factor = 50 }
+		fnr_RMNRP_change_senate_effect = { VALUE = 3 }
+		add_stability = stability_weak_bonus
+		custom_tooltip = fnr_RMNRP_senate_plus_3_tt
+	}
+
+	# B - Court the plebs
+	option = {
+		name = fnr_RMNRP.3.b
+		ai_chance = { factor = 30 }
+		fnr_RMNRP_change_senate_effect = { VALUE = -2 }
+		add_estate_satisfaction = {
+			type = estate_type:peasants_estate
+			value = estate_satisfaction_mild_bonus
+		}
+		custom_tooltip = fnr_RMNRP_senate_minus_2_tt
+	}
+
+	# C - A consul for war
+	option = {
+		name = fnr_RMNRP.3.c
+		trigger = { ruler ?= { mil >= 60 } }
+		ai_chance = { factor = 20 }
+		fnr_RMNRP_change_senate_effect = { VALUE = -2 }
+		add_country_modifier = { modifier = fnr_RMNRP_war_consul years = 4 mode = add_and_extend }
+		custom_tooltip = fnr_RMNRP_senate_minus_2_tt
+	}
+}
+
+# 4 - The Land Law (the Gracchi)
+fnr_RMNRP.4 = {
+	type = country_event
+	title = fnr_RMNRP.4.title
+	desc = fnr_RMNRP.4.desc
+	fire_only_once = yes
+	outcome = neutral
+
+	trigger = {
+		has_or_had_tag = RMNRP
+		government_type = government_type:republic
+	}
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:nobles_estate }
+	}
+
+	# A - Pass the land law
+	option = {
+		name = fnr_RMNRP.4.a
+		ai_chance = { factor = 50 }
+		fnr_RMNRP_change_senate_effect = { VALUE = -10 }
+		add_estate_satisfaction = {
+			type = estate_type:peasants_estate
+			value = estate_satisfaction_mild_bonus
+		}
+		add_estate_satisfaction = {
+			type = estate_type:nobles_estate
+			value = estate_satisfaction_mild_penalty
+		}
+		add_country_modifier = { modifier = fnr_RMNRP_lex_agraria years = 25 mode = add_and_extend }
+		custom_tooltip = fnr_RMNRP_senate_minus_10_tt
+	}
+
+	# B - The Senate blocks it
+	option = {
+		name = fnr_RMNRP.4.b
+		ai_chance = { factor = 50 }
+		fnr_RMNRP_change_senate_effect = { VALUE = 5 }
+		add_estate_satisfaction = {
+			type = estate_type:nobles_estate
+			value = estate_satisfaction_mild_bonus
+		}
+		add_estate_satisfaction = {
+			type = estate_type:peasants_estate
+			value = estate_satisfaction_mild_penalty
+		}
+		add_country_modifier = { modifier = fnr_RMNRP_landless_plebs years = 15 mode = add_and_extend }
+		custom_tooltip = fnr_RMNRP_senate_plus_5_tt
+	}
+}
+
+# 5 - The Ambitious General
+fnr_RMNRP.5 = {
+	type = country_event
+	title = fnr_RMNRP.5.title
+	desc = fnr_RMNRP.5.desc
+	outcome = neutral
+
+	trigger = {
+		has_or_had_tag = RMNRP
+		at_war = yes
+		government_type = government_type:republic
+		NOT = { has_variable = fnr_RMNRP_general_cooldown }
+		any_character = {
+			is_general = yes
+			is_female = no
+			mil >= 60
+		}
+	}
+
+	illustration_tags = {
+		10 = exterior
+		10 = armed
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:peasants_estate }
+		set_variable = { name = fnr_RMNRP_general_cooldown years = 15 }
+		random_character = {
+			limit = {
+				is_general = yes
+				is_female = no
+				mil >= 60
+			}
+			save_scope_as = fnr_RMNRP_general
+		}
+	}
+
+	# A - Recall him to Rome
+	option = {
+		name = fnr_RMNRP.5.a
+		ai_chance = { factor = 40 }
+		fnr_RMNRP_change_senate_effect = { VALUE = 5 }
+		add_republican_tradition = republican_tradition_mild_bonus
+		add_country_modifier = { modifier = fnr_RMNRP_general_recalled years = 3 mode = add_and_extend }
+		custom_tooltip = fnr_RMNRP_senate_plus_5_tt
+	}
+
+	# B - Let him keep his legions (30%: he crosses the Rubicon within 10 years)
+	option = {
+		name = fnr_RMNRP.5.b
+		ai_chance = { factor = 30 }
+		add_country_modifier = { modifier = fnr_RMNRP_loyal_legions years = 5 mode = add_and_extend }
+		custom_tooltip = fnr_RMNRP_rubicon_risk_tt
+		hidden_effect = {
+			random_list = {
+				70 = { }
+				30 = {
+					set_variable = { name = fnr_RMNRP_rubicon_general value = scope:fnr_RMNRP_general }
+					trigger_event_non_silently = { id = fnr_RMNRP.8 days = { 1095 3650 } }
+				}
+			}
+		}
+	}
+
+	# C - Vote him a triumph
+	option = {
+		name = fnr_RMNRP.5.c
+		ai_chance = { factor = 30 }
+		fnr_RMNRP_change_senate_effect = { VALUE = -5 }
+		add_prestige = prestige_mild_bonus
+		add_country_modifier = { modifier = fnr_RMNRP_triumph years = 10 mode = add_and_extend }
+		custom_tooltip = fnr_RMNRP_senate_minus_5_tt
+	}
+}
+
+# 6 - Lay Down the Fasces
+fnr_RMNRP.6 = {
+	type = country_event
+	title = fnr_RMNRP.6.title
+	desc = fnr_RMNRP.6.desc
+	outcome = neutral
+
+	trigger = {
+		has_or_had_tag = RMNRP
+		has_variable = fnr_RMNRP_dictator_active
+		OR = {
+			at_war = no
+			NOT = { has_country_modifier = fnr_RMNRP_dictatorship }
+		}
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:crown_estate }
+		remove_variable = fnr_RMNRP_dictator_active
+		if = {
+			limit = { has_country_modifier = fnr_RMNRP_dictatorship }
+			remove_country_modifier = fnr_RMNRP_dictatorship
+		}
+		set_variable = { name = fnr_RMNRP_dictator_cooldown years = 20 }
+	}
+
+	# A - Return to the plough, like Cincinnatus
+	option = {
+		name = fnr_RMNRP.6.a
+		ai_chance = { factor = 80 }
+		fnr_RMNRP_change_senate_effect = { VALUE = 20 }
+		add_republican_tradition = republican_tradition_mild_bonus
+		add_prestige = prestige_mild_bonus
+		add_country_modifier = { modifier = fnr_RMNRP_cincinnatus years = 20 mode = add_and_extend }
+		custom_tooltip = fnr_RMNRP_senate_plus_20_tt
+	}
+
+	# B - Keep the fasces (civil war; the road to empire)
+	option = {
+		name = fnr_RMNRP.6.b
+		ai_chance = { factor = 20 }
+		set_variable = fnr_RMNRP_refused_to_resign
+		fnr_RMNRP_change_senate_effect = { VALUE = -30 }
+		add_stability = stability_severe_penalty
+		add_country_modifier = { modifier = fnr_RMNRP_perpetual_dictator years = 10 mode = add_and_extend }
+		fnr_RMNRP_civil_war_effect = { NAME = fnr_RMNRP_republican_loyalists }
+		custom_tooltip = fnr_RMNRP_refuse_resign_tt
+		hidden_effect = {
+			trigger_event_non_silently = { id = fnr_RMNRP.7 days = 1825 }
+		}
+	}
+}
+
+# 7 - Imperator
+fnr_RMNRP.7 = {
+	type = country_event
+	title = fnr_RMNRP.7.title
+	desc = fnr_RMNRP.7.desc
+	fire_only_once = yes
+	outcome = neutral
+
+	trigger = {
+		has_or_had_tag = RMNRP
+		has_variable = fnr_RMNRP_refused_to_resign
+		government_type = government_type:republic
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+	}
+
+	# A - Imperator Caesar Augustus: take the crown and proclaim the Roman Empire at once
+	option = {
+		name = fnr_RMNRP.7.a
+		trigger = {
+			owns = location:rome
+			NOT = { has_variable = fnr_RMNRP_great_republic } # the Great Republic is already Rome
+		}
+		ai_chance = { factor = 40 }
+		fnr_RMNRP_end_republic_effect = yes
+		set_variable = fnr_RMNRP_augustus
+		add_stability = stability_severe_penalty
+		add_prestige = prestige_severe_bonus
+		add_country_modifier = { modifier = fnr_RMNRP_imperator years = 20 mode = add_and_extend }
+		custom_tooltip = fnr_RMNRP_augustus_tt
+		form_country = formable_country:ROM_BYZ_f
+	}
+
+	# B - Princeps: rule as first citizen, and build the Empire from a united Italy
+	option = {
+		name = fnr_RMNRP.7.c
+		ai_chance = { factor = 40 }
+		fnr_RMNRP_end_republic_effect = yes
+		set_variable = fnr_RMNRP_principate
+		change_country_name = fnr_RMNRP_PRINCIPATE_NAME
+		change_country_flag = fnr_RMNRP_principate_flag
+		add_prestige = prestige_mild_bonus
+		add_country_modifier = { modifier = fnr_RMNRP_principate years = 20 mode = add_and_extend }
+		custom_tooltip = fnr_RMNRP_principate_tt
+	}
+
+	# C - Restore the Republic after all
+	option = {
+		name = fnr_RMNRP.7.b
+		ai_chance = { factor = 30 }
+		remove_variable = fnr_RMNRP_refused_to_resign
+		set_variable = { name = fnr_RMNRP_senate_authority value = 40 }
+		fnr_RMNRP_refresh_senate_tier_effect = yes
+		add_stability = stability_mild_bonus
+		add_republican_tradition = republican_tradition_mild_bonus
+		custom_tooltip = fnr_RMNRP_restore_republic_tt
+	}
+}
+
+# 8 - Crossing the Rubicon
+fnr_RMNRP.8 = {
+	type = country_event
+	title = fnr_RMNRP.8.title
+	desc = fnr_RMNRP.8.desc
+	outcome = negative
+
+	trigger = {
+		has_or_had_tag = RMNRP
+		government_type = government_type:republic
+		NOT = { has_variable = fnr_RMNRP_rubicon_cooldown }
+	}
+
+	illustration_tags = {
+		10 = exterior
+		10 = armed
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:peasants_estate }
+		set_variable = { name = fnr_RMNRP_rubicon_cooldown years = 20 }
+	}
+
+	option = {
+		name = fnr_RMNRP.8.a
+		fnr_RMNRP_change_senate_effect = { VALUE = -10 }
+		add_stability = stability_mild_penalty
+		fnr_RMNRP_civil_war_effect = { NAME = fnr_RMNRP_rubicon_rebels }
+		if = {
+			limit = {
+				exists = scope:fnr_RMNRP_rebel
+				has_variable = fnr_RMNRP_rubicon_general
+				var:fnr_RMNRP_rubicon_general ?= { is_alive = yes }
+			}
+			var:fnr_RMNRP_rubicon_general = {
+				change_character_allegiance = scope:fnr_RMNRP_rebel
+			}
+			set_variable = { name = fnr_RMNRP_rebel_leader value = var:fnr_RMNRP_rubicon_general }
+		}
+		if = {
+			limit = { has_variable = fnr_RMNRP_rubicon_general }
+			remove_variable = fnr_RMNRP_rubicon_general
+		}
+		custom_tooltip = fnr_RMNRP_rubicon_tt
+	}
+}
+
+# 9 - The Social War
+fnr_RMNRP.9 = {
+	type = country_event
+	title = fnr_RMNRP.9.title
+	desc = fnr_RMNRP.9.desc
+	fire_only_once = yes
+	outcome = neutral
+
+	trigger = {
+		has_or_had_tag = RMNRP
+		exists = international_organization:fnr_RMNRP_socii_io
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:nobles_estate }
+	}
+
+	# A - Grant them citizenship
+	option = {
+		name = fnr_RMNRP.9.a
+		ai_chance = { factor = 60 }
+		fnr_RMNRP_change_senate_effect = { VALUE = -5 }
+		add_country_modifier = { modifier = fnr_RMNRP_civitas_romana years = 25 mode = add_and_extend }
+		international_organization:fnr_RMNRP_socii_io = {
+			every_international_organization_member = {
+				limit = { NOT = { has_or_had_tag = RMNRP } }
+				add_opinion = { target = root modifier = fnr_RMNRP_granted_citizenship }
+			}
+		}
+		custom_tooltip = fnr_RMNRP_senate_minus_5_tt
+	}
+
+	# B - Rome is for Romans
+	option = {
+		name = fnr_RMNRP.9.b
+		ai_chance = { factor = 40 }
+		fnr_RMNRP_change_senate_effect = { VALUE = 5 }
+		international_organization:fnr_RMNRP_socii_io = {
+			every_international_organization_member = {
+				limit = { NOT = { has_or_had_tag = RMNRP } }
+				add_opinion = { target = root modifier = fnr_RMNRP_denied_citizenship }
+			}
+		}
+		custom_tooltip = fnr_RMNRP_senate_plus_5_tt
+	}
+}
+
+# 10 - Res Publica Aeterna (capstone)
+fnr_RMNRP.10 = {
+	type = country_event
+	title = fnr_RMNRP.10.title
+	desc = fnr_RMNRP.10.desc
+	fire_only_once = yes
+	outcome = positive
+
+	trigger = {
+		has_or_had_tag = RMNRP
+		has_advance = RMNRP_res_publica_aeterna
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:peasants_estate }
+	}
+
+	option = {
+		name = fnr_RMNRP.10.a
+		add_prestige = prestige_severe_bonus
+		add_republican_tradition = republican_tradition_mild_bonus
+		fnr_RMNRP_change_senate_effect = { VALUE = 10 }
+		add_country_modifier = { modifier = fnr_RMNRP_res_publica_aeterna years = -1 }
+	}
+}
+
+# 11 - Murmurs in the Ludus
+fnr_RMNRP.11 = {
+	type = country_event
+	title = fnr_RMNRP.11.title
+	desc = fnr_RMNRP.11.desc
+	outcome = negative
+
+	trigger = {
+		has_or_had_tag = RMNRP
+		fnr_RMNRP_has_roman_slavery = yes
+		has_variable = fnr_RMNRP_servile_discontent
+		var:fnr_RMNRP_servile_discontent >= 60
+		NOT = { has_variable = fnr_RMNRP_murmurs_cooldown }
+		NOT = { has_variable = fnr_RMNRP_servile_war_active }
+	}
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:nobles_estate }
+		set_variable = { name = fnr_RMNRP_murmurs_cooldown years = 5 }
+	}
+
+	# A - Make an example of the ringleaders
+	option = {
+		name = fnr_RMNRP.11.a
+		ai_chance = { factor = 40 }
+		fnr_RMNRP_change_servile_effect = { VALUE = -15 }
+		add_stability = stability_mild_penalty
+		add_country_modifier = { modifier = fnr_RMNRP_familia_crackdown years = 5 mode = add_and_extend }
+		custom_tooltip = fnr_RMNRP_servile_minus_15_tt
+	}
+
+	# B - Ease the yoke
+	option = {
+		name = fnr_RMNRP.11.b
+		ai_chance = { factor = 40 }
+		fnr_RMNRP_change_servile_effect = { VALUE = -10 }
+		add_estate_satisfaction = {
+			type = estate_type:nobles_estate
+			value = estate_satisfaction_mild_penalty
+		}
+		custom_tooltip = fnr_RMNRP_servile_minus_10_tt
+	}
+
+	# C - Slaves always grumble
+	option = {
+		name = fnr_RMNRP.11.c
+		ai_chance = { factor = 20 }
+		fnr_RMNRP_change_servile_effect = { VALUE = 5 }
+		custom_tooltip = fnr_RMNRP_servile_plus_5_tt
+	}
+}
+
+# 12 - The New Spartacus
+fnr_RMNRP.12 = {
+	type = country_event
+	title = fnr_RMNRP.12.title
+	desc = fnr_RMNRP.12.desc
+	outcome = negative
+
+	trigger = {
+		has_or_had_tag = RMNRP
+		fnr_RMNRP_has_roman_slavery = yes
+		fnr_RMNRP_owns_slaves = yes
+		has_variable = fnr_RMNRP_servile_discontent
+		var:fnr_RMNRP_servile_discontent >= 80
+		NOT = { has_variable = fnr_RMNRP_servile_war_active }
+		NOT = { has_variable = fnr_RMNRP_servile_war_cooldown }
+	}
+
+	illustration_tags = {
+		10 = exterior
+		10 = armed
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:peasants_estate }
+		set_variable = { name = fnr_RMNRP_servile_war_cooldown years = 25 }
+	}
+
+	# A - Send the legions
+	option = {
+		name = fnr_RMNRP.12.a
+		ai_chance = { factor = 70 }
+		set_variable = fnr_RMNRP_servile_war_active
+		add_stability = stability_mild_penalty
+		fnr_RMNRP_servile_war_effect = yes
+		custom_tooltip = fnr_RMNRP_servile_war_tt
+		hidden_effect = {
+			trigger_event_non_silently = { id = fnr_RMNRP.13 days = { 1095 1825 } }
+		}
+	}
+
+	# B - Buy their freedom before blood is spilled
+	option = {
+		name = fnr_RMNRP.12.b
+		trigger = { gold >= 300 }
+		ai_chance = { factor = 30 }
+		add_gold = -300
+		fnr_RMNRP_change_servile_effect = { VALUE = -40 }
+		add_estate_satisfaction = {
+			type = estate_type:nobles_estate
+			value = estate_satisfaction_mild_penalty
+		}
+		add_republican_tradition = republican_tradition_mild_bonus
+		custom_tooltip = fnr_RMNRP_servile_minus_40_tt
+	}
+}
+
+# 13 - The End of the Servile War
+fnr_RMNRP.13 = {
+	type = country_event
+	title = fnr_RMNRP.13.title
+	desc = fnr_RMNRP.13.desc
+	outcome = neutral
+
+	trigger = {
+		has_or_had_tag = RMNRP
+		has_variable = fnr_RMNRP_servile_war_active
+	}
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:peasants_estate }
+		remove_variable = fnr_RMNRP_servile_war_active
+		if = {
+			limit = { has_variable = fnr_RMNRP_spartacus }
+			remove_variable = fnr_RMNRP_spartacus
+		}
+	}
+
+	# A - Crucify them along the Via Appia
+	option = {
+		name = fnr_RMNRP.13.a
+		ai_chance = { factor = 50 }
+		set_variable = { name = fnr_RMNRP_servile_discontent value = 10 }
+		fnr_RMNRP_refresh_servile_tier_effect = yes
+		add_prestige = prestige_mild_bonus
+		add_country_modifier = { modifier = fnr_RMNRP_via_appia years = 20 mode = add_and_extend }
+		custom_tooltip = fnr_RMNRP_servile_set_10_tt
+	}
+
+	# B - Learn the lesson of Spartacus
+	option = {
+		name = fnr_RMNRP.13.b
+		ai_chance = { factor = 50 }
+		set_variable = { name = fnr_RMNRP_servile_discontent value = 20 }
+		fnr_RMNRP_refresh_servile_tier_effect = yes
+		add_republican_tradition = republican_tradition_mild_bonus
+		add_country_modifier = { modifier = fnr_RMNRP_lessons_of_spartacus years = 20 mode = add_and_extend }
+		custom_tooltip = fnr_RMNRP_servile_set_20_tt
+	}
+}
+
+# 14 - Freedmen Prosper
+fnr_RMNRP.14 = {
+	type = country_event
+	title = fnr_RMNRP.14.title
+	desc = fnr_RMNRP.14.desc
+	outcome = positive
+
+	trigger = {
+		has_or_had_tag = RMNRP
+		has_policy = fnr_RMNRP_manumission_policy
+		NOT = { has_variable = fnr_RMNRP_freedmen_cooldown }
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:peasants_estate }
+		set_variable = { name = fnr_RMNRP_freedmen_cooldown years = 15 }
+	}
+
+	# A - Enrol them as citizens
+	option = {
+		name = fnr_RMNRP.14.a
+		ai_chance = { factor = 50 }
+		add_estate_satisfaction = {
+			type = estate_type:burghers_estate
+			value = estate_satisfaction_mild_bonus
+		}
+		add_country_modifier = { modifier = fnr_RMNRP_freedmen_citizens years = 20 mode = add_and_extend }
+	}
+
+	# B - Let them remain clients of their old masters
+	option = {
+		name = fnr_RMNRP.14.b
+		ai_chance = { factor = 50 }
+		add_estate_satisfaction = {
+			type = estate_type:nobles_estate
+			value = estate_satisfaction_mild_bonus
+		}
+		add_country_modifier = { modifier = fnr_RMNRP_freedmen_clients years = 20 mode = add_and_extend }
+	}
+}
+
+# 15 - The Roman Civil Wars
+fnr_RMNRP.15 = {
+	type = country_event
+	title = fnr_RMNRP.15.title
+	desc = fnr_RMNRP.15.desc
+	outcome = negative
+
+	trigger = { has_or_had_tag = RMNRP }
+
+	illustration_tags = {
+		10 = exterior
+		10 = armed
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:peasants_estate }
+	}
+
+	# A - Proscriptions: the enemies of the state forfeit life and property
+	option = {
+		name = fnr_RMNRP.15.a
+		ai_chance = { factor = 50 }
+		add_gold = 300
+		fnr_RMNRP_change_senate_effect = { VALUE = -10 }
+		add_estate_satisfaction = {
+			type = estate_type:nobles_estate
+			value = estate_satisfaction_mild_penalty
+		}
+		add_country_modifier = { modifier = fnr_RMNRP_proscriptions years = 10 mode = add_and_extend }
+		custom_tooltip = fnr_RMNRP_senate_minus_10_tt
+	}
+
+	# B - Clementia: pardon all who lay down their arms
+	option = {
+		name = fnr_RMNRP.15.b
+		ai_chance = { factor = 50 }
+		add_stability = stability_weak_bonus
+		add_republican_tradition = republican_tradition_mild_bonus
+		add_country_modifier = { modifier = fnr_RMNRP_clementia years = 10 mode = add_and_extend }
+	}
+}
+
+# 16 - Proscription Lists
+fnr_RMNRP.16 = {
+	type = country_event
+	title = fnr_RMNRP.16.title
+	desc = fnr_RMNRP.16.desc
+	outcome = neutral
+
+	trigger = { has_or_had_tag = RMNRP }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:burghers_estate }
+	}
+
+	# A - Seize their estates
+	option = {
+		name = fnr_RMNRP.16.a
+		ai_chance = { factor = 50 }
+		add_gold = 150
+		add_estate_satisfaction = {
+			type = estate_type:nobles_estate
+			value = estate_satisfaction_mild_penalty
+		}
+		fnr_RMNRP_change_senate_effect = { VALUE = -5 }
+		custom_tooltip = fnr_RMNRP_senate_minus_5_tt
+	}
+
+	# B - Burn the lists
+	option = {
+		name = fnr_RMNRP.16.b
+		ai_chance = { factor = 50 }
+		fnr_RMNRP_change_senate_effect = { VALUE = 5 }
+		add_estate_satisfaction = {
+			type = estate_type:nobles_estate
+			value = estate_satisfaction_weak_bonus
+		}
+		custom_tooltip = fnr_RMNRP_senate_plus_5_tt
+	}
+}
+
+# 17 - The Legions Choose Sides
+fnr_RMNRP.17 = {
+	type = country_event
+	title = fnr_RMNRP.17.title
+	desc = fnr_RMNRP.17.desc
+	outcome = neutral
+
+	trigger = { has_or_had_tag = RMNRP }
+
+	illustration_tags = {
+		10 = exterior
+		10 = armed
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:nobles_estate }
+	}
+
+	# A - Pay the donative
+	option = {
+		name = fnr_RMNRP.17.a
+		trigger = { gold >= 200 }
+		ai_chance = { factor = 60 }
+		add_gold = -200
+		add_country_modifier = { modifier = fnr_RMNRP_donative_paid years = 5 mode = add_and_extend }
+	}
+
+	# B - Appeal to their oath
+	option = {
+		name = fnr_RMNRP.17.b
+		ai_chance = { factor = 40 }
+		add_stability = stability_mild_penalty
+		add_republican_tradition = republican_tradition_mild_bonus
+	}
+}
+
+# 18 - March on Rome
+fnr_RMNRP.18 = {
+	type = country_event
+	title = fnr_RMNRP.18.title
+	desc = fnr_RMNRP.18.desc
+	outcome = negative
+
+	trigger = {
+		has_or_had_tag = RMNRP
+		owns = location:rome
+	}
+
+	illustration_tags = {
+		10 = exterior
+		10 = armed
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:nobles_estate }
+	}
+
+	# A - Garrison the city
+	option = {
+		name = fnr_RMNRP.18.a
+		trigger = { gold >= 100 }
+		ai_chance = { factor = 60 }
+		add_gold = -100
+		add_country_modifier = { modifier = fnr_RMNRP_rome_garrisoned years = 3 mode = add_and_extend }
+	}
+
+	# B - Let the Senate flee the city
+	option = {
+		name = fnr_RMNRP.18.b
+		ai_chance = { factor = 40 }
+		fnr_RMNRP_change_senate_effect = { VALUE = -10 }
+		add_prestige = prestige_mild_penalty
+		custom_tooltip = fnr_RMNRP_senate_minus_10_tt
+	}
+}
+
+# 19 - After the Rubicon (the civil war ends and no dictator has refused to resign)
+fnr_RMNRP.19 = {
+	type = country_event
+	title = fnr_RMNRP.19.title
+	desc = fnr_RMNRP.19.desc
+	outcome = neutral
+
+	trigger = {
+		has_or_had_tag = RMNRP
+		government_type = government_type:republic
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:crown_estate }
+	}
+
+	# A - Restore the Republic
+	option = {
+		name = fnr_RMNRP.19.a
+		ai_chance = { factor = 60 }
+		fnr_RMNRP_change_senate_effect = { VALUE = 15 }
+		add_republican_tradition = republican_tradition_mild_bonus
+		add_stability = stability_mild_bonus
+		custom_tooltip = fnr_RMNRP_senate_plus_15_tt
+	}
+
+	# B - Dictator for life
+	option = {
+		name = fnr_RMNRP.19.b
+		ai_chance = { factor = 40 }
+		set_variable = fnr_RMNRP_refused_to_resign
+		fnr_RMNRP_change_senate_effect = { VALUE = -20 }
+		add_country_modifier = { modifier = fnr_RMNRP_perpetual_dictator years = 10 mode = add_and_extend }
+		custom_tooltip = fnr_RMNRP_dictator_for_life_tt
+		hidden_effect = {
+			trigger_event_non_silently = { id = fnr_RMNRP.7 days = 365 }
+		}
+	}
+}
+
+# 20 - The Tribune of the Roman People (Cola di Rienzo, 1347)
+fnr_RMNRP.20 = {
+	type = country_event
+	title = fnr_RMNRP.20.title
+	desc = fnr_RMNRP.20.desc
+	outcome = positive
+
+	trigger = {
+		owns = location:rome
+		government_type = government_type:republic
+		is_subject = no
+		NOT = { tag = PAP }
+		NOT = { has_or_had_tag = RMNRP }
+		NOT = { tag_exists = RMNRP }
+		fnr_not_formation_locked = yes
+		NOT = { has_variable = fnr_RMNRP_tribune_cooldown }
+		OR = {
+			culture = { has_culture_group = culture_group:italian_group }
+			republican_tradition >= 50
+		}
+	}
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:nobles_estate }
+	}
+
+	# A - Restore the Republic now
+	option = {
+		name = fnr_RMNRP.20.a
+		ai_chance = { base = 70 }
+		add_stability = stability_mild_penalty
+		add_country_modifier = { modifier = fnr_RMNRP_fragile_republic years = 15 mode = add_and_extend }
+		custom_tooltip = fnr_RMNRP_early_formation_tt
+		form_country = formable_country:RMNRP_f
+	}
+
+	# B - The time is not yet right
+	option = {
+		name = fnr_RMNRP.20.b
+		ai_chance = { base = 30 }
+		add_republican_tradition = republican_tradition_mild_bonus
+		set_variable = { name = fnr_RMNRP_tribune_cooldown years = 25 }
+	}
+}

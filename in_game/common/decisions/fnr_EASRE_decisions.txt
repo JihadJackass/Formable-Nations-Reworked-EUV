@@ -1,4 +1,4 @@
-# Eastern Roman Empire Decisions (Pax Romana)
+﻿# Eastern Roman Empire Decisions (Pax Romana)
 
 # Restore the patriarchal see of Constantinople - permanent location upgrade; country bonus while owned (yearly pulse)
 fnr_EASRE_restore_see_constantinople = {

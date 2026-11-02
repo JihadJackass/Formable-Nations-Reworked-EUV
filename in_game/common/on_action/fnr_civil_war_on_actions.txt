@@ -1,0 +1,49 @@
+﻿# FNR - scripted civil wars get their own flags
+# Hooks into the hardcoded on_civil_war_start (root = country being rebelled against,
+# scope:target = the new rebel country, scope:rebel = the rebel group).
+
+on_civil_war_start = {
+	on_actions = {
+		fnr_on_civil_war_start
+	}
+}
+
+fnr_on_civil_war_start = {
+	effect = {
+		if = {
+			limit = { scope:rebel ?= { rebel_name_key = fnr_RMNRP_republican_loyalists } }
+			scope:target ?= {
+				change_country_flag = fnr_RMNRP_republican_loyalists_flag
+				add_country_modifier = { modifier = fnr_RMNRP_rebel_legions years = 5 }
+			}
+		}
+		else_if = {
+			limit = { scope:rebel ?= { rebel_name_key = fnr_RMNRP_rubicon_rebels } }
+			scope:target ?= {
+				change_country_flag = fnr_RMNRP_rubicon_rebels_flag
+				add_country_modifier = { modifier = fnr_RMNRP_rebel_legions years = 5 }
+			}
+		}
+		else_if = {
+			limit = { scope:rebel ?= { rebel_name_key = fnr_ROM_usurper_rebels } }
+			scope:target ?= {
+				change_country_flag = fnr_ROM_usurper_rebels_flag
+				add_country_modifier = { modifier = fnr_RMNRP_rebel_legions years = 5 }
+			}
+		}
+		else_if = {
+			limit = { scope:rebel ?= { rebel_name_key = fnr_ROM_gallic_empire } }
+			scope:target ?= {
+				change_country_flag = fnr_ROM_gallic_empire_flag
+				add_country_modifier = { modifier = fnr_RMNRP_rebel_legions years = 5 }
+			}
+		}
+		else_if = {
+			limit = { scope:rebel ?= { rebel_name_key = fnr_ROM_palmyrene_empire } }
+			scope:target ?= {
+				change_country_flag = fnr_ROM_palmyrene_empire_flag
+				add_country_modifier = { modifier = fnr_RMNRP_rebel_legions years = 5 }
+			}
+		}
+	}
+}

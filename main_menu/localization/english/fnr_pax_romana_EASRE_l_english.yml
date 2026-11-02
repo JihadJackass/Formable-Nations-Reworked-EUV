@@ -7,7 +7,7 @@
     # ADVANCES
 
       EASRE_thematic_reorganization: "Thematic Reorganization"
-      EASRE_thematic_reorganization_desc: "The old provincial system has rotted from within: governors grown fat on corruption, garrisons scattered and leaderless. The Basileus divides the empire into themes, each a self-sustaining military district under a strategos who answers to Constantinople alone. Land is granted to soldier-farmers who will defend what they till. The empire transforms from a bloated bureaucracy into a lean instrument of war."
+      EASRE_thematic_reorganization_desc: "The old provincial system has rotted from within - governors grown fat on corruption, garrisons scattered and leaderless. The Basileus divides the empire into themes, each a self-sustaining military district under a strategos who answers to Constantinople alone. Land is granted to soldier-farmers who will defend what they till. The empire transforms from a bloated bureaucracy into a lean instrument of war."
 
       EASRE_greek_fire: "Greek Fire"
       EASRE_greek_fire_desc: "The alchemists of Constantinople have perfected a weapon that burns even on water. The formula is the empire's most closely guarded secret, and those who know it are forbidden to leave the capital on pain of death. When the first enemy fleet meets the bronze siphons of a Roman dromon, the sea itself seems to catch fire.\n\nEnemy fleets suffer attrition in our home waters along the Aegean, Thracian and Black Sea coasts."
@@ -16,7 +16,7 @@
       EASRE_autocrator_court_desc: "The court of Constantinople is the most sophisticated in the world, a labyrinth of ceremony, intrigue and calculated magnificence. Foreign ambassadors are dazzled by mechanical golden lions that roar and a throne that rises toward the ceiling. Behind the spectacle lies a ruthlessly efficient diplomatic machine.\n\nOur heavy cavalry gains #G +5%#! power for every [ShowBuildingTypeName('thema_headquarters')] we own, up to #G +30%#!."
 
       EASRE_reconquest: "Reconquista Orientalis"
-      EASRE_reconquest_desc: "The theme armies are ready. The treasury is full. The generals have drawn their plans against the map of the old empire, tracing the borders that Justinian once held: Anatolia, the Levant, the ancient heartlands of Roman civilization now under foreign rule. The Basileus gives the order, and the cataphracts ride east."
+      EASRE_reconquest_desc: "The theme armies are ready. The treasury is full. The generals have drawn their plans against the map of the old empire, tracing the borders that Justinian once held - Anatolia, the Levant, the ancient heartlands of Roman civilization now under foreign rule. The Basileus gives the order, and the cataphracts ride east."
 
       EASRE_symphonia: "Symphonia of Powers"
       EASRE_symphonia_desc: "The Emperor and the Patriarch stand side by side in the Hagia Sophia, two pillars of one edifice. The Symphonia, the harmony of sacred and secular authority, becomes the foundational doctrine of the state. The Patriarch legitimizes the Emperor's rule as divinely ordained, and the Emperor protects the Orthodox faith as its earthly champion."
@@ -69,8 +69,8 @@
       flavor_EASRE.5.a: "The Guard is reborn. Welcome, axe-bearers."
       flavor_EASRE.5.b: "Rome needs no foreign swords."
       flavor_EASRE.5.c: "They may serve, once they are baptized."
-      fnr_EASRE_varangians_full_tt: "We may raise up to #Y 3#! regiments of [ShowUnitTypeName('fnr_EASRE_varangians_2')] in our capital."
-      fnr_EASRE_varangians_converted_tt: "We may raise up to #Y 2#! regiments of [ShowUnitTypeName('fnr_EASRE_varangians_2')] in our capital."
+      fnr_EASRE_varangians_full_tt: "We may raise up to #Y 3#! regiments of #Y Varangian Guard#! in our capital."
+      fnr_EASRE_varangians_converted_tt: "We may raise up to #Y 2#! regiments of #Y Varangian Guard#! in our capital."
       fnr_EASRE_varangians_declined_tt: "#R The Varangian Guard will never serve us.#!"
 
       flavor_EASRE.6: "The City of the World's Desire"
@@ -137,7 +137,7 @@
     # UNITS
 
       fnr_EASRE_cataphract_1: "Cataphracts"
-      fnr_EASRE_cataphract_1_desc: "Horse and rider clad head to hoof in mail and lamellar, the cataphract is the hammer of the Roman army: slow, costly and nearly unstoppable on open ground."
+      fnr_EASRE_cataphract_1_desc: "Horse and rider clad head to hoof in mail and lamellar, the cataphract is the hammer of the Roman army - slow, costly and nearly unstoppable on open ground."
       fnr_EASRE_cataphract_2: "Cataphracts"
       fnr_EASRE_cataphract_2_desc: "$fnr_EASRE_cataphract_1_desc$"
       fnr_EASRE_cataphract_3: "Cataphracts"

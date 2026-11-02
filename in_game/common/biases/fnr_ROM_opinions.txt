@@ -1,0 +1,41 @@
+# Roman Empire opinion modifiers (Pax Romana)
+
+io_opinion_fnr_ROM_foederati_io = {
+	value = 15
+}
+
+# Foederati - a new member's opinion of Rome
+fnr_ROM_sworn_foederatus = {
+	value = 15
+	yearly_decay = 1
+}
+
+# Renew the Foedera - each member's opinion of Rome
+fnr_ROM_renewed_foedus = {
+	value = 15
+	yearly_decay = 1
+}
+
+# Grant Roman Titles - the member's opinion of Rome
+fnr_ROM_roman_title = {
+	value = 40
+	yearly_decay = 1
+}
+
+# Settle on the Limes - the member's opinion of Rome
+fnr_ROM_limes_honour = {
+	value = 20
+	yearly_decay = 1
+}
+
+# Hostages at Rome - the member's heir was raised in Rome
+fnr_ROM_hostages_at_rome = {
+	value = 60
+	yearly_decay = 2
+}
+
+# A client kingdom's opinion of the Rome that made it
+fnr_ROM_made_by_rome = {
+	value = 50
+	yearly_decay = 1
+}

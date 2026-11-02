@@ -1,0 +1,487 @@
+﻿##################################################
+# Formable Nations: Reworked - Roman Empire        #
+# Static Modifiers (Pax Romana)                    #
+##################################################
+
+	# Legion Loyalty tiers (always shown, refreshed whenever it changes)
+
+		# Legion Loyalty 75+
+		fnr_ROM_legions_loyal = {
+			game_data = {
+				category = country
+			}
+			land_morale_modifier = 0.10
+			discipline = 0.025
+			monthly_legitimacy = 0.1
+		}
+
+		# Legion Loyalty 50-74
+		fnr_ROM_legions_steady = {
+			game_data = {
+				category = country
+			}
+			land_morale_modifier = 0.05
+		}
+
+		# Legion Loyalty 25-49
+		fnr_ROM_legions_restless = {
+			game_data = {
+				category = country
+			}
+			land_morale_modifier = -0.05
+			monthly_legitimacy = -0.05
+			monthly_pretender_rebel_growth = 0.001
+		}
+
+		# Legion Loyalty below 25
+		fnr_ROM_legions_mutinous = {
+			game_data = {
+				category = country
+			}
+			land_morale_modifier = -0.10
+			discipline = -0.025
+			monthly_legitimacy = -0.1
+			monthly_pretender_rebel_growth = 0.003
+			stability_cost_efficiency = -0.10
+		}
+
+	# Restored Dioceses tiers (always shown once a diocese is restored)
+
+		# 1-2 dioceses
+		fnr_ROM_dioceses_tier_1 = {
+			game_data = {
+				category = country
+			}
+			global_max_control = 0.02
+			monthly_prestige = 0.05
+		}
+
+		# 3-5 dioceses
+		fnr_ROM_dioceses_tier_2 = {
+			game_data = {
+				category = country
+			}
+			global_max_control = 0.04
+			monthly_prestige = 0.1
+			country_cabinet_efficiency = 0.03
+		}
+
+		# 6-8 dioceses
+		fnr_ROM_dioceses_tier_3 = {
+			game_data = {
+				category = country
+			}
+			global_max_control = 0.06
+			monthly_prestige = 0.15
+			country_cabinet_efficiency = 0.05
+			monthly_legitimacy = 0.05
+		}
+
+		# 9-10 dioceses
+		fnr_ROM_dioceses_tier_4 = {
+			game_data = {
+				category = country
+			}
+			global_max_control = 0.08
+			monthly_prestige = 0.2
+			country_cabinet_efficiency = 0.05
+			monthly_legitimacy = 0.1
+		}
+
+		# all 11 dioceses - Imperium Sine Fine
+		fnr_ROM_dioceses_tier_5 = {
+			game_data = {
+				category = country
+			}
+			global_max_control = 0.10
+			monthly_prestige = 0.25
+			country_cabinet_efficiency = 0.10
+			monthly_legitimacy = 0.15
+			diplomatic_reputation = 1
+		}
+
+	# The dioceses (permanent, one each)
+
+		# Diocese of Italia - italy_region
+		fnr_ROM_diocese_italia = {
+			game_data = {
+				category = country
+			}
+			global_max_control = 0.05
+			monthly_legitimacy = 0.1
+		}
+
+		# Diocese of Galliae - france_region
+		fnr_ROM_diocese_galliae = {
+			game_data = {
+				category = country
+			}
+			global_manpower_modifier = 0.10
+			tax_income_efficiency = small_tax_income_efficiency_bonus
+		}
+
+		# Diocese of Hispaniae - iberia_region
+		fnr_ROM_diocese_hispaniae = {
+			game_data = {
+				category = country
+			}
+			trade_income = 0.05
+			global_monthly_prosperity = 0.001
+		}
+
+		# Diocese of Britanniae - great_britain_region
+		fnr_ROM_diocese_britanniae = {
+			game_data = {
+				category = country
+			}
+			navy_maintenance_efficiency = 0.10
+			global_defensive = 0.05
+		}
+
+		# Diocese of Raetia et Noricum - south_german_region
+		fnr_ROM_diocese_raetia = {
+			game_data = {
+				category = country
+			}
+			fort_maintenance_efficiency = 0.20
+			global_defensive = 0.05
+		}
+
+		# Diocese of Illyricum - balkan_region
+		fnr_ROM_diocese_illyricum = {
+			game_data = {
+				category = country
+			}
+			land_morale_modifier = 0.05
+			global_manpower_modifier = 0.05
+		}
+
+		# Diocese of Dacia - carpathia_region
+		fnr_ROM_diocese_dacia = {
+			game_data = {
+				category = country
+			}
+			global_supply_limit_modifier = 0.10
+			army_maintenance_efficiency = 0.05
+		}
+
+		# Diocese of Asiana - anatolia_region
+		fnr_ROM_diocese_asiana = {
+			game_data = {
+				category = country
+			}
+			global_monthly_development = 0.001
+			research_speed_modifier = 0.05
+		}
+
+		# Diocese of Oriens - crescent_region
+		fnr_ROM_diocese_oriens = {
+			game_data = {
+				category = country
+			}
+			trade_income = 0.10
+		}
+
+		# Diocese of Aegyptus - egypt_region
+		fnr_ROM_diocese_aegyptus = {
+			game_data = {
+				category = country
+			}
+			global_monthly_food_modifier = 0.10
+			stability_cost_efficiency = 0.05
+		}
+
+		# Diocese of Africa - maghreb_region
+		fnr_ROM_diocese_africa = {
+			game_data = {
+				category = country
+			}
+			global_monthly_food_modifier = 0.05
+			global_population_growth = 0.0005
+		}
+
+	# Origins (permanent, fnr_ROM.1)
+
+		# New Rome - from Byzantium, the Eastern Roman Empire or Trebizond
+		fnr_ROM_origin_new_rome = {
+			game_data = {
+				category = country
+			}
+			monthly_legitimacy = 0.1
+			trade_income = 0.05
+			global_defensive = 0.05
+		}
+
+		# Renovatio Imperii - from the Western Roman Empire
+		fnr_ROM_origin_renovatio = {
+			game_data = {
+				category = country
+			}
+			monthly_legitimacy = 0.1
+			global_manpower_modifier = 0.05
+			land_morale_modifier = 0.05
+		}
+
+		# Divi Filius - the Republic's Imperator Caesar Augustus
+		fnr_ROM_origin_augustus = {
+			game_data = {
+				category = country
+			}
+			monthly_legitimacy = 0.15
+			land_morale_modifier = 0.05
+			monthly_army_tradition = 0.05
+		}
+
+		# Princeps Civitatis - the Republic became the Principate
+		fnr_ROM_origin_principate = {
+			game_data = {
+				category = country
+			}
+			stability_cost_efficiency = 0.05
+			country_cabinet_efficiency = 0.05
+			monthly_legitimacy = 0.05
+		}
+
+		# Translatio Imperii - any other restorer of Rome
+		fnr_ROM_origin_restorer = {
+			game_data = {
+				category = country
+			}
+			monthly_prestige = 0.1
+			global_integration_speed_modifier = 0.10
+		}
+
+	# Origin decisions (permanent)
+
+		# New Rome - The Two Capitals
+		fnr_ROM_two_capitals = {
+			game_data = {
+				category = country
+			}
+			global_max_control = 0.05
+			monthly_prestige = 0.1
+			trade_income = 0.05
+		}
+
+		# Renovatio - Imperium Occidentis Restitutum
+		fnr_ROM_imperium_occidentis = {
+			game_data = {
+				category = country
+			}
+			global_manpower_modifier = 0.10
+			monthly_legitimacy = 0.1
+		}
+
+		# Augustus - The Ara Pacis
+		fnr_ROM_ara_pacis = {
+			game_data = {
+				category = country
+			}
+			stability_cost_efficiency = 0.10
+			global_population_growth = 0.0005
+			global_monthly_prosperity = 0.001
+		}
+
+		# Principate - Res Gestae
+		fnr_ROM_res_gestae = {
+			game_data = {
+				category = country
+			}
+			monthly_prestige = 0.1
+			country_cabinet_efficiency = 0.05
+		}
+
+		# Restorer - Emperor of the Romans
+		fnr_ROM_recognized_emperor = {
+			game_data = {
+				category = country
+			}
+			diplomatic_reputation = 1
+			monthly_legitimacy = 0.1
+		}
+
+	# Decisions and events
+
+		# Pay a Donative - 5 years
+		fnr_ROM_donative = {
+			game_data = {
+				category = country
+			}
+			land_morale_modifier = 0.05
+			discipline = 0.01
+		}
+
+		# Hold a Triumph - 10 years
+		fnr_ROM_triumph = {
+			game_data = {
+				category = country
+			}
+			land_morale_modifier = 0.05
+			monthly_prestige = 0.1
+			monthly_army_tradition = 0.05
+		}
+
+		# fnr_ROM.5 A - 20 years
+		fnr_ROM_foederati_settled = {
+			game_data = {
+				category = country
+			}
+			global_manpower_modifier = 0.10
+			global_defensive = 0.05
+		}
+
+		# fnr_ROM.5 B - 10 years
+		fnr_ROM_limes_closed = {
+			game_data = {
+				category = country
+			}
+			global_defensive = 0.05
+			fort_maintenance_efficiency = 0.10
+		}
+
+		# fnr_ROM.6 A - 15 years
+		fnr_ROM_census_tax = {
+			game_data = {
+				category = country
+			}
+			tax_income_efficiency = small_tax_income_efficiency_bonus
+		}
+
+		# fnr_ROM.6 B - 15 years
+		fnr_ROM_census_levy = {
+			game_data = {
+				category = country
+			}
+			global_manpower_modifier = 0.10
+		}
+
+		# fnr_ROM.8 A - 10 years
+		fnr_ROM_debased_coinage = {
+			game_data = {
+				category = country
+			}
+			tax_income_efficiency = -0.05
+			stability_cost_efficiency = -0.05
+		}
+
+		# fnr_ROM.12 B - 5 years
+		fnr_ROM_limes_breached = {
+			game_data = {
+				category = country
+			}
+			global_defensive = -0.05
+			global_monthly_prosperity = -0.001
+		}
+
+		# fnr_ROM.13 - permanent: the Crisis is over
+		fnr_ROM_restitutor_orbis = {
+			game_data = {
+				category = country
+			}
+			monthly_legitimacy = 0.1
+			land_morale_modifier = 0.05
+			global_max_control = 0.05
+		}
+
+		# fnr_ROM.14 - permanent: every diocese restored
+		fnr_ROM_imperium_sine_fine_restored = {
+			game_data = {
+				category = country
+			}
+			monthly_prestige = 0.1
+			global_integration_speed_modifier = 0.15
+			subject_loyalty = 10
+		}
+
+		# fnr_ROM.15 A - 20 years
+		fnr_ROM_senate_dignity = {
+			game_data = {
+				category = country
+			}
+			nobles_estate_target_satisfaction = small_permanent_target_satisfaction
+			global_max_control = 0.03
+		}
+
+		# fnr_ROM.15 B - 20 years
+		fnr_ROM_senate_silenced = {
+			game_data = {
+				category = country
+			}
+			monthly_legitimacy = 0.1
+			stability_cost_efficiency = -0.05
+		}
+
+	# Great Republic origin and decision
+		# The Great Republic - origin (permanent)
+		fnr_ROM_origin_great_republic = {
+			game_data = {
+				category = country
+			}
+			monthly_republican_tradition = 0.05
+			research_speed_modifier = 0.05
+			land_morale_modifier = 0.05
+		}
+
+		# The Athenaeum - Great Republic decision (permanent)
+		fnr_ROM_athenaeum = {
+			game_data = {
+				category = country
+			}
+			research_speed_modifier = 0.05
+			country_cabinet_efficiency = 0.05
+		}
+
+	# The Foederati
+
+		# Renew the Foedera - members, 5 years
+		fnr_ROM_foedus_renewed = {
+			game_data = {
+				category = country
+			}
+			global_defensive = 0.05
+			land_morale_modifier = 0.05
+		}
+
+		# Levy the Foederati - members, 2 years
+		fnr_ROM_foederati_levied = {
+			game_data = {
+				category = country
+			}
+			global_manpower_modifier = 0.15
+			land_morale_modifier = 0.05
+		}
+
+		# Levy the Foederati - Rome, 2 years
+		fnr_ROM_foederati_levies = {
+			game_data = {
+				category = country
+			}
+			global_manpower_modifier = 0.10
+		}
+
+		# Grant Roman Titles - member, permanent
+		fnr_ROM_patricius = {
+			game_data = {
+				category = country
+			}
+			land_morale_modifier = 0.05
+			global_defensive = 0.05
+			monthly_prestige = 0.05
+		}
+
+		# Settle on the Limes - member, 20 years
+		fnr_ROM_limes_guardians = {
+			game_data = {
+				category = country
+			}
+			global_defensive = 0.10
+			fort_maintenance_efficiency = 0.10
+		}
+
+		# Settle on the Limes - Rome, 20 years
+		fnr_ROM_limes_held = {
+			game_data = {
+				category = country
+			}
+			global_defensive = 0.05
+		}

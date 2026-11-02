@@ -1,0 +1,195 @@
+﻿# Rome and Byzantium (Pax Romana)
+# Available to the Roman Republic and the Empire it becomes, towards Byzantium.
+
+# Embassy of Romanitas - no acceptance needed. Mutual opinion, and +10 Concordia (+15 if Byzantium is in the Socii).
+fnr_RMNRP_embassy_of_romanitas = {
+	type = diplomacy
+	category = CATEGORY_FRIENDLY_ACTIONS
+
+	potential = {
+		scope:actor = { has_or_had_tag = RMNRP }
+		exists = c:BYZ
+	}
+
+	allow = {
+		scope:actor = {
+			num_of_diplomats >= 2
+		}
+	}
+
+	cooldown = { type = fnr_RMNRP_embassy_of_romanitas years = 2 }
+
+	select_trigger = {
+		looking_for_a = country
+		target_flag = recipient
+		name = "choose_country"
+		default_sort = will
+		column = {
+			data = country_diplomacy_info
+		}
+		visible = {
+			has_or_had_tag = BYZ
+		}
+		enabled = {
+			NOT = { is_at_war_with = scope:actor }
+			NOT = { is_subject_of = scope:actor }
+		}
+	}
+
+	effect = {
+		scope:actor = {
+			add_diplomats = -2
+			add_opinion = { modifier = fnr_RMNRP_embassy_of_romanitas target = scope:recipient }
+			if = {
+				limit = {
+					scope:recipient = { is_member_of_international_organization = international_organization:fnr_RMNRP_socii_io }
+				}
+				fnr_RMNRP_change_concordia_effect = { VALUE = 15 }
+			}
+			else = {
+				fnr_RMNRP_change_concordia_effect = { VALUE = 10 }
+			}
+			custom_tooltip = fnr_RMNRP_concordia_embassy_tt
+		}
+		scope:recipient = {
+			add_opinion = { modifier = fnr_RMNRP_embassy_of_romanitas target = scope:actor }
+		}
+	}
+
+	ai_will_do = {
+		value = 50
+	}
+}
+
+# Propose the Reunion of the Romans - Byzantium becomes part of the Roman state (annexed if small, vassal if large).
+# Needs 50+ Concordia, and a larger army and income than Byzantium. Byzantium is far more willing when the
+# Turks out-muster it, when Rome out-musters the Turks, and while the Rise of the Ottomans is under way.
+# A refusal unlocks the Restore the East casus belli.
+fnr_RMNRP_propose_reunion = {
+	type = diplomacy
+	category = CATEGORY_FRIENDLY_ACTIONS
+
+	potential = {
+		scope:actor = { has_or_had_tag = RMNRP }
+		exists = c:BYZ
+	}
+
+	allow = {
+		scope:actor = {
+			num_of_diplomats >= 3
+			custom_tooltip = {
+				text = fnr_RMNRP_concordia_50_tt
+				fnr_RMNRP_concordia_at_least = { VALUE = 50 }
+			}
+		}
+	}
+
+	cooldown = { type = fnr_RMNRP_propose_reunion years = 5 }
+
+	select_trigger = {
+		looking_for_a = country
+		target_flag = recipient
+		name = "choose_country"
+		default_sort = will
+		column = {
+			data = country_diplomacy_info_military
+		}
+		visible = {
+			has_or_had_tag = BYZ
+		}
+		enabled = {
+			is_subject = no
+			NOT = { is_at_war_with = scope:actor }
+			custom_tooltip = {
+				text = fnr_RMNRP_reunion_stronger_army_tt
+				scope:actor.army_size > army_size
+			}
+			custom_tooltip = {
+				text = fnr_RMNRP_reunion_richer_tt
+				scope:actor.monthly_income_total > monthly_income_total
+			}
+		}
+	}
+
+	diplo_chance = {
+		base = -60
+		opinion = 0.3
+		trust_in_actor = 0.5
+	}
+
+	accept = {
+		add = {
+			desc = "fnr_RMNRP_reunion_reason_concordia"
+			if = {
+				limit = { scope:actor = { has_variable = fnr_RMNRP_concordia } }
+				value = scope:actor.var:fnr_RMNRP_concordia
+				multiply = 0.4
+			}
+		}
+		add = {
+			desc = "fnr_RMNRP_reunion_reason_turks"
+			if = {
+				limit = { scope:recipient = { fnr_RMNRP_byz_threatened_by_turks = yes } }
+				value = 40
+			}
+		}
+		add = {
+			desc = "fnr_RMNRP_reunion_reason_turk_war"
+			if = {
+				limit = {
+					exists = c:TUR
+					scope:recipient = { is_at_war_with = c:TUR }
+				}
+				value = 25
+			}
+		}
+		add = {
+			desc = "fnr_RMNRP_reunion_reason_rome_protects"
+			if = {
+				limit = {
+					exists = c:TUR
+					scope:actor.army_size > c:TUR.army_size
+				}
+				value = 20
+			}
+		}
+		add = {
+			desc = "fnr_RMNRP_reunion_reason_rising"
+			if = {
+				limit = { is_situation_active = situation:rise_of_the_ottomans }
+				value = 15
+			}
+		}
+		add = {
+			desc = "fnr_RMNRP_reunion_reason_faith"
+			if = {
+				limit = { NOT = { scope:recipient.religion = scope:actor.religion } }
+				value = -20
+			}
+		}
+	}
+
+	effect = {
+		scope:actor = { save_scope_as = fnr_RMNRP_rome }
+		scope:recipient = { save_scope_as = fnr_RMNRP_byz }
+		custom_tooltip = fnr_RMNRP_reunion_effect_tt
+		hidden_effect = {
+			scope:actor = { trigger_event_non_silently = fnr_RMNRP_byz.1 }
+		}
+		fnr_RMNRP_absorb_byzantium_effect = yes
+	}
+
+	reject_effect = {
+		scope:actor = {
+			set_variable = fnr_RMNRP_restore_east
+			fnr_RMNRP_change_concordia_effect = { VALUE = -20 }
+			add_opinion = { modifier = fnr_RMNRP_refused_reunion target = scope:recipient }
+			custom_tooltip = fnr_RMNRP_reunion_refused_tt
+			trigger_event_non_silently = fnr_RMNRP_byz.2
+		}
+	}
+
+	ai_will_do = {
+		value = 100
+	}
+}

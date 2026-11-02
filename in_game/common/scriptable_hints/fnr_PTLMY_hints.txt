@@ -1,0 +1,44 @@
+﻿# Ptolemaic Kingdom hints (Pax Romana)
+
+hint_fnr_PTLMY_crown = {
+	sort_priority = 500
+	priority = {
+		has_or_had_tag = PTLMY
+		has_variable = fnr_PTLMY_formed
+	}
+	hide = {
+		NOT = {
+			has_or_had_tag = PTLMY
+			has_variable = fnr_PTLMY_formed
+		}
+	}
+}
+
+hint_fnr_PTLMY_library = {
+	sort_priority = 490
+	priority = {
+		has_or_had_tag = PTLMY
+		has_variable = fnr_PTLMY_formed
+	}
+	hide = {
+		NOT = {
+			has_or_had_tag = PTLMY
+			has_variable = fnr_PTLMY_formed
+		}
+	}
+}
+
+hint_fnr_PTLMY_nile = {
+	sort_priority = 480
+	priority = {
+		has_or_had_tag = PTLMY
+		has_variable = fnr_PTLMY_formed
+	}
+	hide = {
+		NOT = {
+			has_or_had_tag = PTLMY
+			has_variable = fnr_PTLMY_formed
+		}
+	}
+}
+

@@ -658,6 +658,7 @@ flavor_WESRE.9 = {
 		scope:fnr_WESRE_rebel = {
 			add_rebel_progress = 1
 		}
+		add_country_modifier = { modifier = fnr_rising_imminent years = 1 mode = add_and_extend }
 		remove_variable = fnr_WESRE_ambitious_general
 	}
 }
@@ -694,6 +695,16 @@ flavor_WESRE.10 = {
 			name = fnr_WESRE_foederati_uprising
 			save_scope_as = fnr_WESRE_rebel
 		}
+		# Pretender rebels need a leader: a Foederati-friendly noble takes their side
+		random_character = {
+			limit = {
+				is_alive = yes
+				age_in_years >= 18
+				has_estate = estate_type:nobles_estate
+				NOT = { this = root.ruler }
+			}
+			change_character_allegiance = scope:fnr_WESRE_rebel
+		}
 		# Up to 3 Foederati settlements rise; with none, a border province does
 		if = {
 			limit = {
@@ -706,6 +717,7 @@ flavor_WESRE.10 = {
 				check_range_bounds = no
 				every_pop = {
 					limit = { owner = root }
+					add_pop_satisfaction = pop_satisfaction_ultimate_penalty
 					change_pop_allegiance = scope:fnr_WESRE_rebel
 				}
 				remove_location_modifier = fnr_WESRE_foederati_settlement
@@ -724,6 +736,7 @@ flavor_WESRE.10 = {
 		scope:fnr_WESRE_rebel = {
 			add_rebel_progress = 1
 		}
+		add_country_modifier = { modifier = fnr_rising_imminent years = 1 mode = add_and_extend }
 		set_variable = { name = fnr_WESRE_foederati_loyalty value = 45 }
 		set_variable = { name = fnr_WESRE_foederati_revolt_cooldown years = 10 }
 		custom_tooltip = fnr_WESRE_foederati_revolt_tt

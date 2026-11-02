@@ -1,0 +1,29 @@
+﻿# Roman Empire hints (Pax Romana) - shown in the Hints panel
+
+hint_fnr_ROM_legions = {
+	sort_priority = 500
+	priority = {
+		has_or_had_tag = ROM
+		has_variable = fnr_ROM_formed
+	}
+	hide = {
+		NOT = {
+			has_or_had_tag = ROM
+			has_variable = fnr_ROM_formed
+		}
+	}
+}
+
+hint_fnr_ROM_dioceses = {
+	sort_priority = 490
+	priority = {
+		has_or_had_tag = ROM
+		has_variable = fnr_ROM_formed
+	}
+	hide = {
+		NOT = {
+			has_or_had_tag = ROM
+			has_variable = fnr_ROM_formed
+		}
+	}
+}

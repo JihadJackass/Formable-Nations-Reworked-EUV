@@ -218,6 +218,15 @@ fnr_LAT.4 = {
 			name = fnr_LAT_greek_pretender_rebels
 			save_scope_as = fnr_LAT_rebel
 		}
+		# Pretender rebels need a leader: a Greek archon at court takes up the cause
+		random_character = {
+			limit = {
+				is_alive = yes
+				age_in_years >= 18
+				NOT = { this = root.ruler }
+			}
+			change_character_allegiance = scope:fnr_LAT_rebel
+		}
 		random_owned_location = {
 			limit = {
 				is_capital = no
@@ -233,6 +242,7 @@ fnr_LAT.4 = {
 						owner = root
 						religion = religion:orthodox
 					}
+					add_pop_satisfaction = pop_satisfaction_ultimate_penalty
 					change_pop_allegiance = scope:fnr_LAT_rebel
 				}
 			}
@@ -240,6 +250,7 @@ fnr_LAT.4 = {
 		scope:fnr_LAT_rebel = {
 			add_rebel_progress = 1
 		}
+		add_country_modifier = { modifier = fnr_rising_imminent years = 1 mode = add_and_extend }
 		add_country_modifier = {
 			modifier = fnr_LAT_iron_hand
 			years = 10

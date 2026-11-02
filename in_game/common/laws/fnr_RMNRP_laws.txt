@@ -1,0 +1,91 @@
+﻿# Roman Republic Laws
+# The Twelve Tables - unlocked by RMNRP_twelve_tables (unlock_law in the advance).
+
+fnr_RMNRP_twelve_tables_law = {
+	unique = yes
+	law_category = administrative
+
+	potential = {
+		has_or_had_tag = RMNRP
+	}
+
+	# Custom of the ancestors - the starting policy
+	fnr_RMNRP_mos_maiorum_policy = {
+		country_modifier = {
+			nobles_estate_target_satisfaction = small_permanent_target_satisfaction
+			monthly_republican_tradition = 0.05
+		}
+		estate_preferences = {
+			nobles_estate
+		}
+		years = 1
+	}
+
+	# The Twelve Tables - written law that binds even the consuls
+	fnr_RMNRP_twelve_tables_policy = {
+		country_modifier = {
+			global_estate_target_satisfaction = 0.03
+			global_max_control = 0.05
+			monthly_republican_tradition = 0.1
+			peasants_estate_target_satisfaction = small_permanent_target_satisfaction
+		}
+		estate_preferences = {
+			peasants_estate
+		}
+		years = 2
+	}
+}
+
+# Roman Slavery - how the Republic treats its slaves. Drives Servile Discontent (yearly upkeep),
+# which can end in a Servile War led by a slave who takes the name of Spartacus.
+fnr_RMNRP_roman_slavery_law = {
+	unique = yes
+	law_category = socioeconomic
+
+	potential = {
+		has_or_had_tag = RMNRP
+		NOT = { has_policy = slavery_outlawed }
+	}
+
+	# The Latifundia - great slave-worked estates. Rich and dangerous. Servile Discontent +4 a year.
+	fnr_RMNRP_latifundia_policy = {
+		country_modifier = {
+			global_monthly_food_modifier = 0.10
+			tax_income_efficiency = small_tax_income_efficiency_bonus
+			nobles_estate_target_satisfaction = small_permanent_target_satisfaction
+			global_slave_pop_satisfaction = -0.10
+		}
+		estate_preferences = {
+			nobles_estate
+		}
+		years = 2
+	}
+
+	# Regulated Slavery - masters answer to the praetor. Servile Discontent +1 a year.
+	fnr_RMNRP_regulated_slavery_policy = {
+		country_modifier = {
+			global_monthly_food_modifier = 0.03
+			trade_income = 0.05
+			burghers_estate_target_satisfaction = small_permanent_target_satisfaction
+		}
+		estate_preferences = {
+			burghers_estate
+		}
+		years = 1
+	}
+
+	# Manumission - the path to freedom and citizenship. Servile Discontent -3 a year.
+	fnr_RMNRP_manumission_policy = {
+		country_modifier = {
+			global_slave_pop_satisfaction = 0.10
+			global_population_growth = 0.0005
+			monthly_republican_tradition = 0.05
+			peasants_estate_target_satisfaction = small_permanent_target_satisfaction
+			nobles_estate_target_satisfaction = -0.03
+		}
+		estate_preferences = {
+			peasants_estate
+		}
+		years = 2
+	}
+}

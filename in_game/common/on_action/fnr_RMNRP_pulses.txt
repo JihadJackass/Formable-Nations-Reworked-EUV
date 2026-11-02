@@ -1,0 +1,107 @@
+﻿# Roman Republic yearly pulses (Pax Romana)
+# Gated on has_or_had_tag = RMNRP so other countries pay one cheap check.
+
+yearly_country_pulse = {
+	on_actions = {
+		fnr_RMNRP_yearly_pulse
+		fnr_RMNRP_yearly_general_pulse
+		fnr_RMNRP_yearly_rubicon_pulse
+		fnr_RMNRP_yearly_social_war_pulse
+		fnr_RMNRP_yearly_servile_pulse
+		fnr_RMNRP_yearly_freedmen_pulse
+		fnr_RMNRP_yearly_early_republic_pulse
+	}
+}
+
+# Upkeep, then condition-driven events (each has its own trigger)
+fnr_RMNRP_yearly_pulse = {
+	trigger = { has_or_had_tag = RMNRP }
+	effect = {
+		fnr_RMNRP_yearly_upkeep_effect = yes
+	}
+	events = {
+		fnr_RMNRP.6		# Lay Down the Fasces - dictatorship ended or expired
+		fnr_RMNRP.10	# Res Publica Aeterna - capstone advance
+	}
+}
+
+# The Ambitious General - at war with a 60+ military general, ~10% a year, 15-year cooldown
+fnr_RMNRP_yearly_general_pulse = {
+	trigger = {
+		has_or_had_tag = RMNRP
+		at_war = yes
+	}
+	random_events = {
+		chance_to_happen = 10
+		100 = fnr_RMNRP.5
+	}
+}
+
+# Crossing the Rubicon - Senate Authority below 20, ~10% a year
+fnr_RMNRP_yearly_rubicon_pulse = {
+	trigger = {
+		has_or_had_tag = RMNRP
+		has_variable = fnr_RMNRP_senate_authority
+		var:fnr_RMNRP_senate_authority < 20
+	}
+	random_events = {
+		chance_to_happen = 10
+		100 = fnr_RMNRP.8
+	}
+}
+
+# The Social War - the Socii demand citizenship, ~5% a year once there are 2+ members
+fnr_RMNRP_yearly_social_war_pulse = {
+	trigger = {
+		has_or_had_tag = RMNRP
+		has_variable = fnr_RMNRP_socii_members
+		var:fnr_RMNRP_socii_members >= 2
+	}
+	random_events = {
+		chance_to_happen = 5
+		100 = fnr_RMNRP.9
+	}
+}
+
+# Roman Slavery - warnings at 60+ Servile Discontent, the Servile War at 80+
+fnr_RMNRP_yearly_servile_pulse = {
+	trigger = {
+		has_or_had_tag = RMNRP
+		fnr_RMNRP_has_roman_slavery = yes
+		has_variable = fnr_RMNRP_servile_discontent
+		var:fnr_RMNRP_servile_discontent >= 60
+	}
+	random_events = {
+		chance_to_happen = 25
+		100 = fnr_RMNRP.11	# Murmurs in the Ludus (60+)
+		100 = fnr_RMNRP.12	# The New Spartacus (80+)
+	}
+}
+
+# Freedmen Prosper - flavor under the Manumission policy, ~5% a year
+fnr_RMNRP_yearly_freedmen_pulse = {
+	trigger = {
+		has_or_had_tag = RMNRP
+		has_policy = fnr_RMNRP_manumission_policy
+	}
+	random_events = {
+		chance_to_happen = 5
+		100 = fnr_RMNRP.14
+	}
+}
+
+# The Tribune of the Roman People - a republic holding Rome may restore the Roman Republic early, ~3% a year
+fnr_RMNRP_yearly_early_republic_pulse = {
+	trigger = {
+		owns = location:rome
+		government_type = government_type:republic
+		is_subject = no
+		NOT = { tag = PAP }
+		NOT = { has_or_had_tag = RMNRP }
+		NOT = { tag_exists = RMNRP }
+	}
+	random_events = {
+		chance_to_happen = 3
+		100 = fnr_RMNRP.20
+	}
+}

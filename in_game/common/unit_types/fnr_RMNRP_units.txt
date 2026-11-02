@@ -1,0 +1,214 @@
+﻿#################################################################
+# Formable Nations: Reworked - Roman Republic Unit Types        #
+#################################################################
+# Republican Legionaries - heavy infantry, needs RMNRP_marian_reforms.
+# Equites - heavy cavalry of the Equestrian Order, needs the privilege. No age-6 version.
+	# Republican Legionaries
+		fnr_RMNRP_legionaries_1 = {
+			copy_from = a_age_1_traditions_heavy_infantry
+			buildable = yes
+			upgrades_to_only = fnr_RMNRP_legionaries_2
+
+			strength_damage_done = 0.20
+			strength_damage_taken = -0.15
+			morale_damage_taken = -0.15
+
+			construction_demand = heavy_infantry_construction
+
+			country_potential = {
+				has_or_had_tag = RMNRP
+				has_advance = RMNRP_marian_reforms
+			}
+
+			gfx_tags = { sword_tag heavy_tag }
+		}
+
+		fnr_RMNRP_legionaries_2 = {
+			copy_from = a_age_2_renaissance_heavy_infantry
+			buildable = yes
+			upgrades_to_only = fnr_RMNRP_legionaries_3
+
+			strength_damage_done = 0.20
+			strength_damage_taken = -0.15
+			morale_damage_taken = -0.15
+
+			construction_demand = heavy_infantry_construction
+
+			country_potential = {
+				has_or_had_tag = RMNRP
+				has_advance = RMNRP_marian_reforms
+			}
+
+			gfx_tags = { sword_tag heavy_tag }
+		}
+
+		fnr_RMNRP_legionaries_3 = {
+			copy_from = a_age_3_discovery_heavy_infantry
+			buildable = yes
+			upgrades_to_only = fnr_RMNRP_legionaries_4
+
+			strength_damage_done = 0.20
+			strength_damage_taken = -0.15
+			morale_damage_taken = -0.15
+
+			construction_demand = heavy_infantry_construction
+
+			country_potential = {
+				has_or_had_tag = RMNRP
+				has_advance = RMNRP_marian_reforms
+			}
+
+			gfx_tags = { sword_tag heavy_tag }
+		}
+
+		fnr_RMNRP_legionaries_4 = {
+			copy_from = a_age_4_reformation_heavy_infantry
+			buildable = yes
+			upgrades_to_only = fnr_RMNRP_legionaries_5
+
+			strength_damage_done = 0.20
+			strength_damage_taken = -0.15
+			morale_damage_taken = -0.15
+
+			construction_demand = heavy_infantry_construction
+
+			country_potential = {
+				has_or_had_tag = RMNRP
+				has_advance = RMNRP_marian_reforms
+			}
+
+			gfx_tags = { sword_tag heavy_tag }
+		}
+
+		fnr_RMNRP_legionaries_5 = {
+			copy_from = a_age_5_absolutism_heavy_infantry
+			buildable = yes
+			upgrades_to_only = fnr_RMNRP_legionaries_6
+
+			strength_damage_done = 0.20
+			strength_damage_taken = -0.15
+			morale_damage_taken = -0.15
+
+			construction_demand = heavy_infantry_construction
+
+			country_potential = {
+				has_or_had_tag = RMNRP
+				has_advance = RMNRP_marian_reforms
+			}
+
+			gfx_tags = { sword_tag heavy_tag }
+		}
+
+		fnr_RMNRP_legionaries_6 = {
+			copy_from = a_age_6_revolutions_heavy_infantry
+			buildable = yes
+
+			strength_damage_done = 0.20
+			strength_damage_taken = -0.15
+			morale_damage_taken = -0.15
+
+			construction_demand = heavy_infantry_construction
+
+			country_potential = {
+				has_or_had_tag = RMNRP
+				has_advance = RMNRP_marian_reforms
+			}
+
+			gfx_tags = { sword_tag heavy_tag }
+		}
+
+	# Equites
+		fnr_RMNRP_equites_1 = {
+			copy_from = a_age_1_traditions_heavy_cavalry
+			buildable = yes
+			upgrades_to_only = fnr_RMNRP_equites_2
+
+			strength_damage_done = 0.15
+			morale_damage_taken = -0.10
+
+			construction_demand = expensive_heavy_cavalry_construction
+			maintenance_demand = expensive_heavy_cavalry_maintenance
+
+			country_potential = {
+				has_or_had_tag = RMNRP
+				has_estate_privilege = estate_privilege:fnr_RMNRP_equestrian_order
+			}
+
+			gfx_tags = { spear_tag heavy_tag }
+		}
+
+		fnr_RMNRP_equites_2 = {
+			copy_from = a_age_2_renaissance_heavy_cavalry
+			buildable = yes
+			upgrades_to_only = fnr_RMNRP_equites_3
+
+			strength_damage_done = 0.15
+			morale_damage_taken = -0.10
+
+			construction_demand = expensive_heavy_cavalry_construction
+			maintenance_demand = expensive_heavy_cavalry_maintenance
+
+			country_potential = {
+				has_or_had_tag = RMNRP
+				has_estate_privilege = estate_privilege:fnr_RMNRP_equestrian_order
+			}
+
+			gfx_tags = { spear_tag heavy_tag }
+		}
+
+		fnr_RMNRP_equites_3 = {
+			copy_from = a_age_3_discovery_heavy_cavalry
+			buildable = yes
+			upgrades_to_only = fnr_RMNRP_equites_4
+
+			strength_damage_done = 0.15
+			morale_damage_taken = -0.10
+
+			construction_demand = expensive_heavy_cavalry_construction
+			maintenance_demand = expensive_heavy_cavalry_maintenance
+
+			country_potential = {
+				has_or_had_tag = RMNRP
+				has_estate_privilege = estate_privilege:fnr_RMNRP_equestrian_order
+			}
+
+			gfx_tags = { spear_tag heavy_tag }
+		}
+
+		fnr_RMNRP_equites_4 = {
+			copy_from = a_age_4_reformation_heavy_cavalry
+			buildable = yes
+			upgrades_to_only = fnr_RMNRP_equites_5
+
+			strength_damage_done = 0.15
+			morale_damage_taken = -0.10
+
+			construction_demand = expensive_heavy_cavalry_construction
+			maintenance_demand = expensive_heavy_cavalry_maintenance
+
+			country_potential = {
+				has_or_had_tag = RMNRP
+				has_estate_privilege = estate_privilege:fnr_RMNRP_equestrian_order
+			}
+
+			gfx_tags = { spear_tag heavy_tag }
+		}
+
+		fnr_RMNRP_equites_5 = {
+			copy_from = a_age_5_absolutism_heavy_cavalry
+			buildable = yes
+
+			strength_damage_done = 0.15
+			morale_damage_taken = -0.10
+
+			construction_demand = expensive_heavy_cavalry_construction
+			maintenance_demand = expensive_heavy_cavalry_maintenance
+
+			country_potential = {
+				has_or_had_tag = RMNRP
+				has_estate_privilege = estate_privilege:fnr_RMNRP_equestrian_order
+			}
+
+			gfx_tags = { spear_tag heavy_tag }
+		}
+

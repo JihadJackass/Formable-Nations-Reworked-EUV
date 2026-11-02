@@ -1,0 +1,48 @@
+﻿# Ptolemaic Kingdom Laws (Pax Romana)
+# The Royal Economy - unlocked by PTLMY_royal_economy. Greek Tax Farmers and the Temple Economy move the crown yearly.
+
+fnr_PTLMY_royal_economy_law = {
+	unique = yes
+	law_category = socioeconomic
+
+	potential = {
+		has_or_had_tag = PTLMY
+	}
+
+	# Royal Monopolies - the King owns oil, papyrus, salt and beer
+	fnr_PTLMY_royal_monopolies_policy = {
+		country_modifier = {
+			tax_income_efficiency = small_tax_income_efficiency_bonus
+			trade_income = 0.05
+			peasants_estate_target_satisfaction = -0.05
+		}
+		estate_preferences = {
+			nobles_estate
+		}
+		years = 1
+	}
+
+	# Greek Tax Farmers - Basileus and Pharaoh +1 a year
+	fnr_PTLMY_greek_tax_farmers_policy = {
+		country_modifier = {
+			tax_income_efficiency = small_tax_income_efficiency_bonus
+			burghers_estate_target_satisfaction = small_permanent_target_satisfaction
+		}
+		estate_preferences = {
+			burghers_estate
+		}
+		years = 1
+	}
+
+	# The Temple Economy - Basileus and Pharaoh -1 a year
+	fnr_PTLMY_temple_economy_policy = {
+		country_modifier = {
+			clergy_estate_target_satisfaction = small_permanent_target_satisfaction
+			global_monthly_food_modifier = 0.05
+		}
+		estate_preferences = {
+			clergy_estate
+		}
+		years = 1
+	}
+}

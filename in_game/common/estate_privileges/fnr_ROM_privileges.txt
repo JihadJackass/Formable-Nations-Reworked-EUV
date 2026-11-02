@@ -1,0 +1,72 @@
+﻿# Roman Empire Estate Privileges (Pax Romana)
+# The Praetorian Guard and the Ordo Senatorius also move Legion Loyalty every year.
+
+	# Nobles - Ordo Senatorius: the senatorial order governs the provinces. Legion Loyalty -1 a year.
+		fnr_ROM_ordo_senatorius = {
+
+			estate = nobles_estate
+
+			potential = {
+				has_or_had_tag = ROM
+			}
+
+			country_modifier = {
+				global_nobles_estate_power = 0.10
+				nobles_estate_target_satisfaction = small_privilege_target_satisfaction
+
+				global_max_control = 0.05
+				monthly_legitimacy = 0.05
+			}
+		}
+
+	# Nobles - The Praetorian Guard: the Emperor's own soldiers. Legion Loyalty +2 a year, but they may stir.
+		fnr_ROM_praetorian_guard = {
+
+			estate = nobles_estate
+
+			potential = {
+				has_or_had_tag = ROM
+			}
+
+			country_modifier = {
+				global_nobles_estate_power = 0.05
+				nobles_estate_target_satisfaction = small_privilege_target_satisfaction
+
+				discipline = 0.025
+			}
+		}
+
+	# Clergy - Pontifex Maximus: the Emperor heads the priesthood of Rome
+		fnr_ROM_pontifex_maximus = {
+
+			estate = clergy_estate
+
+			potential = {
+				has_or_had_tag = ROM
+			}
+
+			country_modifier = {
+				global_clergy_estate_power = 0.10
+				clergy_estate_target_satisfaction = small_privilege_target_satisfaction
+
+				monthly_legitimacy = 0.1
+			}
+		}
+
+	# Peasants - The Annona Civica: free grain for the people of Rome
+		fnr_ROM_annona_civica = {
+
+			estate = peasants_estate
+
+			potential = {
+				has_or_had_tag = ROM
+			}
+
+			country_modifier = {
+				global_peasants_estate_power = 0.10
+				peasants_estate_target_satisfaction = small_privilege_target_satisfaction
+
+				global_monthly_food_modifier = 0.05
+				global_population_growth = 0.0005
+			}
+		}

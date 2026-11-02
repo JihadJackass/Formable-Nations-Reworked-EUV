@@ -1,0 +1,56 @@
+﻿# Roman Republic Estate Privileges
+# Each one also moves Senate Authority every year (yearly pulse).
+
+	# Nobles - Senatorial Prerogative: the patrician Senate governs
+		fnr_RMNRP_senatorial_prerogative = {
+
+			estate = nobles_estate
+
+			potential = {
+				has_or_had_tag = RMNRP
+			}
+
+			country_modifier = {
+				global_nobles_estate_power = 0.10
+				nobles_estate_target_satisfaction = small_privilege_target_satisfaction
+
+				stability_cost_efficiency = 0.10
+				tax_income_efficiency = small_tax_income_efficiency_bonus
+			}
+		}
+
+	# Peasants - Tribunicia Potestas: the tribunes of the plebs, with their veto
+		fnr_RMNRP_tribunicia_potestas = {
+
+			estate = peasants_estate
+
+			potential = {
+				has_or_had_tag = RMNRP
+			}
+
+			country_modifier = {
+				global_peasants_estate_power = 0.10
+				peasants_estate_target_satisfaction = small_privilege_target_satisfaction
+
+				global_population_growth = 0.0005
+				monthly_republican_tradition = 0.05
+			}
+		}
+
+	# Burghers - The Equestrian Order: the knights of Rome, tax farmers and cavalry
+		fnr_RMNRP_equestrian_order = {
+
+			estate = burghers_estate
+
+			potential = {
+				has_or_had_tag = RMNRP
+			}
+
+			country_modifier = {
+				global_burghers_estate_power = 0.10
+				burghers_estate_target_satisfaction = small_privilege_target_satisfaction
+
+				trade_income = 0.10
+				army_heavy_cavalry_power = 0.05
+			}
+		}

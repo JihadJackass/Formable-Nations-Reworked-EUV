@@ -1,0 +1,21 @@
+﻿# Restore the Roman Dioceses - cheap conquest inside the eleven diocese regions (see fnr_ROM_casus_belli.txt)
+
+fnr_ROM_restore_dioceses_wargoal = {
+	type = superiority
+	attacker = {
+		conquer_cost = 0.5
+		subjugate_cost = 0.5
+		antagonism = 0.75
+		allowed_locations = {
+			custom_tooltip = {
+				text = fnr_ROM_restore_dioceses_wargoal_locations_tt
+				fnr_ROM_in_diocese_region = yes
+			}
+		}
+	}
+	defender = {
+		conquer_cost = 1
+		subjugate_cost = 1
+	}
+	ticking_war_score = 0.25
+}

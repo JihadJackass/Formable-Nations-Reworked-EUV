@@ -1,0 +1,382 @@
+﻿##################################################
+# Formable Nations: Reworked - Roman Republic      #
+# Static Modifiers (Pax Romana)                    #
+##################################################
+
+	# Senate Authority tiers (yearly upkeep)
+
+		# Senate Authority 75+
+		fnr_RMNRP_senate_sovereign = {
+			game_data = {
+				category = country
+			}
+			stability_cost_efficiency = 0.10
+			monthly_republican_tradition = 0.05
+			country_cabinet_efficiency = 0.05
+			global_max_control = 0.05
+		}
+
+		# Senate Authority 40-74
+		fnr_RMNRP_senate_balanced = {
+			game_data = {
+				category = country
+			}
+			monthly_republican_tradition = 0.02
+		}
+
+		# Senate Authority below 40
+		fnr_RMNRP_senate_weakened = {
+			game_data = {
+				category = country
+			}
+			monthly_republican_tradition = -0.05
+			stability_cost_efficiency = -0.10
+		}
+
+		# Senate Authority below 25
+		fnr_RMNRP_senate_disarray = {
+			game_data = {
+				category = country
+			}
+			monthly_republican_tradition = -0.15
+			stability_cost_efficiency = -0.20
+			global_max_control = -0.05
+		}
+
+	# Decisions
+
+		# Appoint a Dictator - 10 years or until the war ends
+		fnr_RMNRP_dictatorship = {
+			game_data = {
+				category = country
+			}
+			global_manpower_modifier = 0.15
+			land_morale_modifier = 0.10
+			discipline = 0.05
+			monthly_republican_tradition = -0.10
+		}
+
+		# Grant Citizenship / The Social War A
+		fnr_RMNRP_civitas_romana = {
+			game_data = {
+				category = country
+			}
+			global_manpower_modifier = 0.10
+			global_max_control = 0.05
+			global_population_growth = 0.0005
+		}
+
+		# Hold a Triumph / The Ambitious General C
+		fnr_RMNRP_triumph = {
+			game_data = {
+				category = country
+			}
+			land_morale_modifier = 0.10
+			monthly_prestige = 0.1
+		}
+
+		# Renew the Foedera - members
+		fnr_RMNRP_foedera_renewed = {
+			game_data = {
+				category = country
+			}
+			global_defensive = 0.05
+			army_heavy_infantry_power = 0.05
+		}
+
+		# Levy the Socii - members
+		fnr_RMNRP_socii_levied = {
+			game_data = {
+				category = country
+			}
+			global_manpower_modifier = 0.15
+			land_morale_modifier = 0.05
+		}
+
+	# Events
+
+		# fnr_RMNRP.1 B - 20 years
+		fnr_RMNRP_senate_and_people = {
+			game_data = {
+				category = country
+			}
+			monthly_republican_tradition = 0.05
+			global_population_growth = 0.0005
+		}
+
+		# fnr_RMNRP.2 A - 20 years
+		fnr_RMNRP_optimates = {
+			game_data = {
+				category = country
+			}
+			stability_cost_efficiency = 0.10
+			tax_income_efficiency = small_tax_income_efficiency_bonus
+		}
+
+		# fnr_RMNRP.2 B - 20 years
+		fnr_RMNRP_populares = {
+			game_data = {
+				category = country
+			}
+			global_manpower_modifier = 0.10
+			global_population_growth = 0.0005
+		}
+
+		# fnr_RMNRP.3 C - one consular term
+		fnr_RMNRP_war_consul = {
+			game_data = {
+				category = country
+			}
+			land_morale_modifier = 0.05
+			discipline = 0.025
+		}
+
+		# fnr_RMNRP.4 A - 25 years
+		fnr_RMNRP_lex_agraria = {
+			game_data = {
+				category = country
+			}
+			global_manpower_modifier = 0.10
+			global_population_growth = 0.0005
+			global_monthly_food_modifier = 0.05
+		}
+
+		# fnr_RMNRP.4 B - 15 years
+		fnr_RMNRP_landless_plebs = {
+			game_data = {
+				category = country
+			}
+			global_manpower_modifier = -0.10
+			tax_income_efficiency = small_tax_income_efficiency_bonus
+		}
+
+		# fnr_RMNRP.5 A - 3 years
+		fnr_RMNRP_general_recalled = {
+			game_data = {
+				category = country
+			}
+			land_morale_modifier = -0.05
+			stability_cost_efficiency = 0.10
+		}
+
+		# fnr_RMNRP.5 B - 5 years
+		fnr_RMNRP_loyal_legions = {
+			game_data = {
+				category = country
+			}
+			land_morale_modifier = 0.10
+			discipline = 0.025
+		}
+
+		# fnr_RMNRP.6 A - 20 years
+		fnr_RMNRP_cincinnatus = {
+			game_data = {
+				category = country
+			}
+			monthly_republican_tradition = 0.10
+			monthly_prestige = 0.1
+		}
+
+		# fnr_RMNRP.6 B - 10 years
+		fnr_RMNRP_perpetual_dictator = {
+			game_data = {
+				category = country
+			}
+			global_manpower_modifier = 0.10
+			land_morale_modifier = 0.10
+			monthly_republican_tradition = -0.25
+		}
+
+		# fnr_RMNRP.7 A - 20 years
+		fnr_RMNRP_imperator = {
+			game_data = {
+				category = country
+			}
+			monthly_legitimacy = 0.2
+			land_morale_modifier = 0.10
+			monthly_prestige = 0.1
+		}
+
+		# fnr_RMNRP.10 - permanent
+		fnr_RMNRP_res_publica_aeterna = {
+			game_data = {
+				category = country
+			}
+			monthly_republican_tradition = 0.10
+			country_cabinet_efficiency = 0.05
+			global_max_control = 0.05
+			diplomatic_reputation = 1
+		}
+
+	# Roman Slavery - Servile Discontent tiers (always shown while the law is in force)
+
+		# Servile Discontent below 30
+		fnr_RMNRP_servile_calm = {
+			game_data = {
+				category = country
+			}
+			global_slave_pop_satisfaction = 0.02
+		}
+
+		# 30-59
+		fnr_RMNRP_servile_restless = {
+			game_data = {
+				category = country
+			}
+			monthly_slave_rebel_growth = 0.001
+		}
+
+		# 60-79
+		fnr_RMNRP_servile_seething = {
+			game_data = {
+				category = country
+			}
+			monthly_slave_rebel_growth = 0.003
+			stability_cost_efficiency = -0.05
+		}
+
+		# 80+
+		fnr_RMNRP_servile_brink = {
+			game_data = {
+				category = country
+			}
+			monthly_slave_rebel_growth = 0.005
+			stability_cost_efficiency = -0.10
+			global_slave_pop_satisfaction = -0.05
+		}
+
+	# Roman Slavery - decisions and events
+
+		# Crack Down on the Familia / .11 A - 5 years
+		fnr_RMNRP_familia_crackdown = {
+			game_data = {
+				category = country
+			}
+			global_slave_pop_satisfaction = -0.05
+			pop_join_rebel_threshold = 0.05
+		}
+
+		# Gladiatorial Games - 5 years
+		fnr_RMNRP_gladiatorial_games = {
+			game_data = {
+				category = country
+			}
+			monthly_prestige = 0.1
+			stability_cost_efficiency = 0.05
+		}
+
+		# .13 A - 20 years
+		fnr_RMNRP_via_appia = {
+			game_data = {
+				category = country
+			}
+			pop_join_rebel_threshold = 0.10
+			global_slave_pop_satisfaction = -0.05
+			monthly_prestige = 0.05
+		}
+
+		# .13 B - 20 years
+		fnr_RMNRP_lessons_of_spartacus = {
+			game_data = {
+				category = country
+			}
+			global_slave_pop_satisfaction = 0.05
+			monthly_republican_tradition = 0.05
+		}
+
+		# .14 A - 20 years
+		fnr_RMNRP_freedmen_citizens = {
+			game_data = {
+				category = country
+			}
+			global_population_growth = 0.0005
+			trade_income = 0.05
+		}
+
+		# .14 B - 20 years
+		fnr_RMNRP_freedmen_clients = {
+			game_data = {
+				category = country
+			}
+			tax_income_efficiency = small_tax_income_efficiency_bonus
+		}
+
+	# The Roman Civil Wars (disaster events)
+
+		# .15 A - 10 years
+		fnr_RMNRP_proscriptions = {
+			game_data = {
+				category = country
+			}
+			tax_income_efficiency = small_tax_income_efficiency_bonus
+			stability_cost_efficiency = -0.10
+		}
+
+		# .15 B - 10 years
+		fnr_RMNRP_clementia = {
+			game_data = {
+				category = country
+			}
+			pop_join_rebel_threshold = 0.05
+			monthly_republican_tradition = 0.05
+		}
+
+		# .17 A - 5 years
+		fnr_RMNRP_donative_paid = {
+			game_data = {
+				category = country
+			}
+			land_morale_modifier = 0.10
+			discipline = 0.025
+		}
+
+		# .18 A - 3 years
+		fnr_RMNRP_rome_garrisoned = {
+			game_data = {
+				category = country
+			}
+			global_defensive = 0.10
+			stability_cost_efficiency = 0.05
+		}
+
+	# The imperial path
+
+		# fnr_RMNRP.7 B - 20 years
+		fnr_RMNRP_principate = {
+			game_data = {
+				category = country
+			}
+			monthly_legitimacy = 0.2
+			stability_cost_efficiency = 0.10
+			country_cabinet_efficiency = 0.05
+		}
+
+		# Roman Empire formed from the Principate - 25 years
+		fnr_RMNRP_pax_augusta = {
+			game_data = {
+				category = country
+			}
+			stability_cost_efficiency = 0.10
+			global_max_control = 0.05
+			monthly_prestige = 0.1
+		}
+
+	# Socii - Grant the Ius Latii (on the member, permanent)
+		fnr_RMNRP_ius_latii = {
+			game_data = {
+				category = country
+			}
+			global_defensive = 0.05
+			land_morale_modifier = 0.05
+			global_population_growth = 0.0005
+		}
+
+	# fnr_RMNRP.20 A - 15 years: the Republic restored before Italy was won
+		fnr_RMNRP_fragile_republic = {
+			game_data = {
+				category = country
+			}
+			stability_cost_efficiency = -0.10
+			monthly_republican_tradition = 0.05
+			global_manpower_modifier = 0.05
+		}

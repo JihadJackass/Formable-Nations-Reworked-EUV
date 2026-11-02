@@ -1,0 +1,49 @@
+﻿# Roman Empire Laws (Pax Romana)
+# Lex de Imperio - who makes an Emperor? Unlocked by fnr_ROM_lex_de_imperio. Each policy moves
+# Legion Loyalty every year (fnr_ROM_yearly_legion_effect).
+
+fnr_ROM_lex_de_imperio_law = {
+	unique = yes
+	law_category = administrative
+
+	potential = {
+		has_or_had_tag = ROM
+		NOT = { has_variable = fnr_ROM_origin_great_republic } # the Senate makes no emperors
+	}
+
+	# Confirmed by the Senate - Legion Loyalty -1 a year
+	fnr_ROM_lex_senatus_policy = {
+		country_modifier = {
+			monthly_legitimacy = 0.05
+			nobles_estate_target_satisfaction = small_permanent_target_satisfaction
+		}
+		estate_preferences = {
+			nobles_estate
+		}
+		years = 1
+	}
+
+	# Acclaimed by the Legions - Legion Loyalty +3 a year
+	fnr_ROM_lex_exercitus_policy = {
+		country_modifier = {
+			land_morale_modifier = 0.05
+			monthly_legitimacy = -0.05
+		}
+		estate_preferences = {
+			peasants_estate
+		}
+		years = 1
+	}
+
+	# Born in the Purple - Legion Loyalty -2 a year
+	fnr_ROM_lex_dynastica_policy = {
+		country_modifier = {
+			monthly_legitimacy = 0.15
+			clergy_estate_target_satisfaction = small_permanent_target_satisfaction
+		}
+		estate_preferences = {
+			clergy_estate
+		}
+		years = 2
+	}
+}

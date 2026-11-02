@@ -1,0 +1,91 @@
+﻿# Ptolemaic Kingdom scripted triggers (Pax Romana)
+
+# The Ptolemaic Kingdom is allowed by the game rules (same check as PTLMY_f)
+fnr_PTLMY_allowed = {
+	OR = {
+		has_variable = fnr_althistory_enabled
+		has_variable = fnr_ptolemaicegypt_enabled
+	}
+	NOT = { has_variable = fnr_ptolemaicegypt_disabled }
+}
+
+# Country is Greek (or Hellenized) enough to rule as Ptolemies
+fnr_PTLMY_is_hellenic = {
+	OR = {
+		culture = { has_culture_group = culture_group:greek_group }
+		culture = culture:greek_culture
+		culture = culture:griko_culture
+		has_variable = fnr_PTLMY_hellenized
+	}
+}
+
+# Crown at least / below VALUE (false before the track starts)
+fnr_PTLMY_crown_at_least = {
+	trigger_if = {
+		limit = { has_variable = fnr_PTLMY_crown }
+		var:fnr_PTLMY_crown >= $VALUE$
+	}
+	trigger_else = { always = no }
+}
+fnr_PTLMY_crown_below = {
+	trigger_if = {
+		limit = { has_variable = fnr_PTLMY_crown }
+		var:fnr_PTLMY_crown < $VALUE$
+	}
+	trigger_else = { always = no }
+}
+
+fnr_PTLMY_scholarship_at_least = {
+	trigger_if = {
+		limit = { has_variable = fnr_PTLMY_scholarship }
+		var:fnr_PTLMY_scholarship >= $VALUE$
+	}
+	trigger_else = { always = no }
+}
+
+fnr_PTLMY_granary_below = {
+	trigger_if = {
+		limit = { has_variable = fnr_PTLMY_granary }
+		var:fnr_PTLMY_granary < $VALUE$
+	}
+	trigger_else = { always = yes }
+}
+
+# A Roman state (the Roman Republic or the Roman Empire)
+fnr_PTLMY_is_rome = {
+	OR = {
+		has_or_had_tag = RMNRP
+		has_or_had_tag = ROM
+	}
+}
+
+# Location scope: the lands of the League of the Islanders
+fnr_PTLMY_nesiotic_lands = {
+	OR = {
+		area = area:aegean_archipelago_area
+		area = area:cilicia_area
+		area = area:cyrenaica_area
+		area = area:levant_area
+	}
+}
+
+# Location scope: the lands claimed in the Syrian Wars
+fnr_PTLMY_syrian_war_lands = {
+	OR = {
+		area = area:levant_area
+		area = area:cilicia_area
+		area = area:cyrenaica_area
+		area = area:sinai_area
+		area = area:aegean_archipelago_area
+	}
+}
+
+# Country scope: one of our rebellions is still in the field
+fnr_PTLMY_rebels_in_field = {
+	any_rebel = {
+		OR = {
+			rebel_name_key = fnr_PTLMY_native_pharaohs
+			rebel_name_key = fnr_PTLMY_lagid_pretenders
+		}
+	}
+}

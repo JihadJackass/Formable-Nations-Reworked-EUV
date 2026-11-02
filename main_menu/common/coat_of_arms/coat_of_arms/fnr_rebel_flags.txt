@@ -1,0 +1,207 @@
+﻿# FNR - flags for scripted rebel countries (set by fnr_on_civil_war_start)
+
+	# Republican Loyalists (Roman Republic): the old vexillum, golden SPQR within a laurel wreath on Roman red
+	fnr_RMNRP_republican_loyalists_flag = {
+		pattern = "pattern_solid.dds"
+		color1 = hsv360 { 0 80 62 }
+		color2 = "yellow"
+		colored_emblem = {
+			texture = "ce_laurel_wreath.dds"
+			color1 = color2
+			color2 = color2
+			instance = {
+				position = { 0.5 0.5 }
+				scale = { 0.95 0.95 }
+			}
+		}
+		colored_emblem = {
+			texture = "ce_letter_s.dds"
+			color1 = color2
+			instance = {
+				position = { 0.400 0.5 }
+				scale = { 0.12 0.22 }
+			}
+		}
+		colored_emblem = {
+			texture = "ce_letter_p.dds"
+			color1 = color2
+			instance = {
+				position = { 0.467 0.5 }
+				scale = { 0.12 0.22 }
+			}
+		}
+		colored_emblem = {
+			texture = "ce_letter_q.dds"
+			color1 = color2
+			instance = {
+				position = { 0.533 0.5 }
+				scale = { 0.12 0.22 }
+			}
+		}
+		colored_emblem = {
+			texture = "ce_letter_r.dds"
+			color1 = color2
+			instance = {
+				position = { 0.600 0.5 }
+				scale = { 0.12 0.22 }
+			}
+		}
+	}
+
+	# Legions of the Rubicon (Roman Republic): the general's eagle in gold on a dark imperial crimson
+	fnr_RMNRP_rubicon_rebels_flag = {
+		pattern = "pattern_solid.dds"
+		color1 = hsv360 { 345 75 35 }
+		color2 = "yellow"
+		color3 = hsv360 { 25 70 33 }
+		colored_emblem = {
+			texture = "ce_roman_aquila.dds"
+			color1 = color2
+			color2 = color3
+			color3 = color1
+			instance = {
+				position = { 0.5 0.52 }
+				scale = { 0.8 0.8 }
+			}
+		}
+	}
+
+	# Roman Principate (fnr_RMNRP.7 B): the general's eagle in a gold laurel wreath on imperial purple
+	fnr_RMNRP_principate_flag = {
+		pattern = "pattern_solid.dds"
+		color1 = hsv360 { 285 60 38 }
+		color2 = "yellow"
+		color3 = hsv360 { 25 70 33 }
+		colored_emblem = {
+			texture = "ce_laurel_wreath.dds"
+			color1 = color2
+			color2 = color2
+			instance = {
+				position = { 0.5 0.5 }
+				scale = { 0.95 0.95 }
+			}
+		}
+		colored_emblem = {
+			texture = "ce_roman_aquila.dds"
+			color1 = color2
+			color2 = color3
+			color3 = color1
+			instance = {
+				position = { 0.5 0.5 }
+				scale = { 0.5 0.5 }
+			}
+		}
+	}
+
+	# A Usurper's Legions (Roman Empire): a silver eagle on legionary red
+	fnr_ROM_usurper_rebels_flag = {
+		pattern = "pattern_solid.dds"
+		color1 = hsv360 { 0 75 45 }
+		color2 = "white"
+		color3 = hsv360 { 0 0 55 }
+		colored_emblem = {
+			texture = "ce_roman_aquila.dds"
+			color1 = color2
+			color2 = color3
+			color3 = color1
+			instance = {
+				position = { 0.5 0.5 }
+				scale = { 0.75 0.75 }
+			}
+		}
+	}
+
+	# The Gallic Empire (Roman Empire): a gold eagle in a laurel wreath on deep Gallic green
+	fnr_ROM_gallic_empire_flag = {
+		pattern = "pattern_solid.dds"
+		color1 = hsv360 { 140 60 32 }
+		color2 = "yellow"
+		color3 = hsv360 { 25 70 33 }
+		colored_emblem = {
+			texture = "ce_laurel_wreath.dds"
+			color1 = color2
+			color2 = color2
+			instance = {
+				position = { 0.5 0.5 }
+				scale = { 0.95 0.95 }
+			}
+		}
+		colored_emblem = {
+			texture = "ce_roman_aquila.dds"
+			color1 = color2
+			color2 = color3
+			color3 = color1
+			instance = {
+				position = { 0.5 0.5 }
+				scale = { 0.5 0.5 }
+			}
+		}
+	}
+
+	# The Palmyrene Empire (Roman Empire): a gold eagle on the desert ochre of Palmyra
+	fnr_ROM_palmyrene_empire_flag = {
+		pattern = "pattern_solid.dds"
+		color1 = hsv360 { 30 70 50 }
+		color2 = "yellow"
+		color3 = hsv360 { 285 60 30 }
+		colored_emblem = {
+			texture = "ce_roman_aquila.dds"
+			color1 = color2
+			color2 = color3
+			color3 = color3
+			instance = {
+				position = { 0.5 0.52 }
+				scale = { 0.8 0.8 }
+			}
+		}
+	}
+
+	# The Great Republic (Roman Republic to Rome, fnr_ROM.1): a gold eagle over SPQR on deep senatorial purple
+	fnr_ROM_great_republic_flag = {
+		pattern = "pattern_solid.dds"
+		color1 = hsv360 { 300 65 35 }
+		color2 = "yellow"
+		color3 = hsv360 { 25 70 33 }
+		colored_emblem = {
+			texture = "ce_roman_aquila.dds"
+			color1 = color2
+			color2 = color3
+			color3 = color1
+			instance = {
+				position = { 0.5 0.36 }
+				scale = { 0.5 0.5 }
+			}
+		}
+		colored_emblem = {
+			texture = "ce_letter_s.dds"
+			color1 = color2
+			instance = {
+				position = { 0.400 0.72 }
+				scale = { 0.12 0.22 }
+			}
+		}
+		colored_emblem = {
+			texture = "ce_letter_p.dds"
+			color1 = color2
+			instance = {
+				position = { 0.467 0.72 }
+				scale = { 0.12 0.22 }
+			}
+		}
+		colored_emblem = {
+			texture = "ce_letter_q.dds"
+			color1 = color2
+			instance = {
+				position = { 0.533 0.72 }
+				scale = { 0.12 0.22 }
+			}
+		}
+		colored_emblem = {
+			texture = "ce_letter_r.dds"
+			color1 = color2
+			instance = {
+				position = { 0.600 0.72 }
+				scale = { 0.12 0.22 }
+			}
+		}
+	}

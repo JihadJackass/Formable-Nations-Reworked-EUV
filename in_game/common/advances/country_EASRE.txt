@@ -1,4 +1,4 @@
-# Advances for Eastern Roman Empire (Pax Romana)
+﻿# Advances for Eastern Roman Empire (Pax Romana)
 # Path gates: fnr_EASRE_path_orthodoxy (Path A) / fnr_EASRE_path_hellenistic (Path B), set by flavor_EASRE.2
 # Path is checked in allow, not potential, because advance visibility is not re-evaluated after an age starts.
 

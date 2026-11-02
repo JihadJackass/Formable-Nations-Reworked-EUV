@@ -1,4 +1,4 @@
-# Eastern Roman Empire yearly pulses (Pax Romana)
+﻿# Eastern Roman Empire yearly pulses (Pax Romana)
 # Every child on_action is gated on tag = EASRE so other countries pay one cheap check.
 
 yearly_country_pulse = {

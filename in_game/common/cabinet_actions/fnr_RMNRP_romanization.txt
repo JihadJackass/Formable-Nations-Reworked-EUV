@@ -1,0 +1,148 @@
+﻿# Romanization (Roman Republic) - assimilate pops into the vanilla Roman culture.
+# Same machinery as vanilla promote_culture (the promoting_culture province variable), with the
+# target fixed to culture:roman_culture and a stronger assimilation bonus. The province also gets
+# fnr_RMNRP_romanizing, and the yearly upkeep converts 8% of its non-Roman pops directly.
+# Unlocked by the Restore Romanitas decision, which makes Roman an accepted culture.
+
+fnr_RMNRP_romanization = {
+	ability = dip
+
+	allow_multiple = yes
+
+	potential = {
+		has_or_had_tag = RMNRP
+		has_variable = fnr_RMNRP_romanitas
+		num_locations > 0
+	}
+
+	allow = {
+		culture:roman_culture = { is_primary_or_accepted_in = root }
+	}
+
+	select_trigger = {
+		looking_for_a = culture
+		target_flag = target
+		source_ai_override = actor
+		source_flags_ai_override = include_any_present
+		name = "promote_culture_select_culture"
+		none_available_msg_key = "promote_culture_no_culture"
+		column = {
+			data = name
+		}
+		column = {
+			data = culture_percentage_in_country
+		}
+		default_sort = culture_percentage_in_country
+		visible = {
+			root = culture:roman_culture
+		}
+	}
+
+	select_trigger = {
+		looking_for_a = province
+		source = actor
+		target_flag = target_1
+		name = "fnr_RMNRP_romanization_select_province"
+		none_available_msg_key = "promote_culture_no_provinces"
+		column = {
+			data = name
+		}
+		column = {
+			data = province_culture_percentage
+		}
+		column = {
+			data = population
+		}
+		default_sort = province_culture_percentage
+		visible = {
+			any_location_in_province = {
+				OR = {
+					NOT = { dominant_culture = scope:target }
+					local_cultural_unity < 0.95
+				}
+			}
+			OR = {
+				"culture_percentage(scope:target)" < 0.95
+				any_location_in_province = { NOT = { dominant_culture = scope:target } }
+			}
+			NOT = { cabinet_already_performing_same_task_on_target = { cabinet_action = fnr_RMNRP_romanization interaction_target = target_1 } }
+			NOT = { cabinet_already_performing_same_task_on_target = { cabinet_action = promote_culture interaction_target = target_1 } }
+		}
+		map_color = {
+			lerp = {
+				min_color = define:NMapColors|MAP_COLOR_LOW
+				max_color = define:NMapColors|MAP_COLOR_HIGH
+				factor = "province.culture_percentage(culture:roman_culture)"
+			}
+		}
+	}
+
+	is_finished = {
+		custom_tooltip = {
+			text = fnr_RMNRP_romanization_finished_tt
+			scope:target_1 = {
+				OR = {
+					"culture_percentage(scope:target)" >= 1.0
+					AND = {
+						"culture_percentage(scope:target)" >= 0.95
+						"province_pop_type_population(pop_type:tribesmen)" > 0
+						NOT = {
+							any_location_in_province = {
+								NOT = { dominant_culture = scope:target }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	on_activate = {
+		if = {
+			limit = { exists = scope:target_1 }
+			scope:target_1 = {
+				set_variable = {
+					name = promoting_culture
+					value = scope:target
+				}
+				set_variable = fnr_RMNRP_romanizing
+			}
+		}
+	}
+
+	on_deactivate = {
+		if = {
+			limit = { exists = scope:target_1 }
+			scope:target_1 = {
+				remove_variable = promoting_culture
+				if = {
+					limit = { has_variable = fnr_RMNRP_romanizing }
+					remove_variable = fnr_RMNRP_romanizing
+				}
+			}
+		}
+	}
+
+	location_modifier = {
+		local_pop_assimilation_speed = 0.06
+		local_monthly_prosperity = 0.02
+	}
+
+	progress = {
+		scope:target_1 = {
+			value = "culture_percentage(scope:target)"
+		}
+	}
+
+	map_marker = {
+		show_for_owner = yes
+	}
+
+	ai_will_do = {
+		value = 2
+		multiply = {
+			value = 1
+			subtract = "scope:target_1.culture_percentage(scope:target)"
+		}
+	}
+}

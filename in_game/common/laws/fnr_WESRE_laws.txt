@@ -7,7 +7,6 @@
 fnr_WESRE_foederati_law = {
 	unique = yes
 	law_category = administrative
-	law_country_group = WESRE
 
 	# Unlocked by WESRE_foederati_integration (unlock_law); the advance itself gates visibility
 	potential = {

@@ -1,0 +1,12 @@
+﻿l_english:
+
+  ###########################################################
+  # Scripted risings                                        #
+  ###########################################################
+
+      STATIC_MODIFIER_NAME_fnr_rising_imminent: "Rising Imminent"
+      STATIC_MODIFIER_DESC_fnr_rising_imminent: "Armed men are gathering in the provinces. The rebels will soon take the field."
+      STATIC_MODIFIER_NAME_fnr_servile_rising_imminent: "Slave Revolt Imminent"
+      STATIC_MODIFIER_DESC_fnr_servile_rising_imminent: "The slaves have armed themselves and found a leader. The revolt will soon break out."
+      STATIC_MODIFIER_NAME_fnr_RMNRP_rebel_legions: "Rebel Legions"
+      STATIC_MODIFIER_DESC_fnr_RMNRP_rebel_legions: "These rebels are Roman legionaries and veterans, not a peasant mob."

@@ -1,0 +1,1285 @@
+﻿# Roman Empire Decisions (Pax Romana)
+# The Imperial Dioceses (one per Roman region), the legions, and one decision per origin.
+
+# Restore the Diocese of Italia - 60% of italy_region
+fnr_ROM_restore_diocese_italia = {
+	decision_category = country_specific_decisions
+
+	tags = { ROM }
+
+	potential = {
+		has_or_had_tag = ROM
+		NOT = { has_variable = fnr_ROM_diocese_italia }
+	}
+
+	allow = {
+		region:italy_region = {
+			any_location_in_region = {
+				percent >= 0.6
+				owner = root
+			}
+		}
+	}
+
+	ai_will_do = { value = 100 }
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_ROM_restore_diocese_italia.a
+		ai_chance = { value = 100 }
+		effect = {
+			fnr_ROM_restore_diocese_effect = { KEY = italia }
+		}
+	}
+}
+
+# Restore the Diocese of Galliae - 60% of france_region
+fnr_ROM_restore_diocese_galliae = {
+	decision_category = country_specific_decisions
+
+	tags = { ROM }
+
+	potential = {
+		has_or_had_tag = ROM
+		NOT = { has_variable = fnr_ROM_diocese_galliae }
+	}
+
+	allow = {
+		region:france_region = {
+			any_location_in_region = {
+				percent >= 0.6
+				owner = root
+			}
+		}
+	}
+
+	ai_will_do = { value = 100 }
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_ROM_restore_diocese_galliae.a
+		ai_chance = { value = 100 }
+		effect = {
+			fnr_ROM_restore_diocese_effect = { KEY = galliae }
+		}
+	}
+}
+
+# Restore the Diocese of Hispaniae - 60% of iberia_region
+fnr_ROM_restore_diocese_hispaniae = {
+	decision_category = country_specific_decisions
+
+	tags = { ROM }
+
+	potential = {
+		has_or_had_tag = ROM
+		NOT = { has_variable = fnr_ROM_diocese_hispaniae }
+	}
+
+	allow = {
+		region:iberia_region = {
+			any_location_in_region = {
+				percent >= 0.6
+				owner = root
+			}
+		}
+	}
+
+	ai_will_do = { value = 100 }
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_ROM_restore_diocese_hispaniae.a
+		ai_chance = { value = 100 }
+		effect = {
+			fnr_ROM_restore_diocese_effect = { KEY = hispaniae }
+		}
+	}
+}
+
+# Restore the Diocese of Britanniae - 60% of great_britain_region
+fnr_ROM_restore_diocese_britanniae = {
+	decision_category = country_specific_decisions
+
+	tags = { ROM }
+
+	potential = {
+		has_or_had_tag = ROM
+		NOT = { has_variable = fnr_ROM_diocese_britanniae }
+	}
+
+	allow = {
+		region:great_britain_region = {
+			any_location_in_region = {
+				percent >= 0.6
+				owner = root
+			}
+		}
+	}
+
+	ai_will_do = { value = 100 }
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_ROM_restore_diocese_britanniae.a
+		ai_chance = { value = 100 }
+		effect = {
+			fnr_ROM_restore_diocese_effect = { KEY = britanniae }
+		}
+	}
+}
+
+# Restore the Diocese of Raetia et Noricum - 60% of south_german_region
+fnr_ROM_restore_diocese_raetia = {
+	decision_category = country_specific_decisions
+
+	tags = { ROM }
+
+	potential = {
+		has_or_had_tag = ROM
+		NOT = { has_variable = fnr_ROM_diocese_raetia }
+	}
+
+	allow = {
+		region:south_german_region = {
+			any_location_in_region = {
+				percent >= 0.6
+				owner = root
+			}
+		}
+	}
+
+	ai_will_do = { value = 100 }
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_ROM_restore_diocese_raetia.a
+		ai_chance = { value = 100 }
+		effect = {
+			fnr_ROM_restore_diocese_effect = { KEY = raetia }
+		}
+	}
+}
+
+# Restore the Diocese of Illyricum - 60% of balkan_region
+fnr_ROM_restore_diocese_illyricum = {
+	decision_category = country_specific_decisions
+
+	tags = { ROM }
+
+	potential = {
+		has_or_had_tag = ROM
+		NOT = { has_variable = fnr_ROM_diocese_illyricum }
+	}
+
+	allow = {
+		region:balkan_region = {
+			any_location_in_region = {
+				percent >= 0.6
+				owner = root
+			}
+		}
+	}
+
+	ai_will_do = { value = 100 }
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_ROM_restore_diocese_illyricum.a
+		ai_chance = { value = 100 }
+		effect = {
+			fnr_ROM_restore_diocese_effect = { KEY = illyricum }
+		}
+	}
+}
+
+# Restore the Diocese of Dacia - 60% of carpathia_region
+fnr_ROM_restore_diocese_dacia = {
+	decision_category = country_specific_decisions
+
+	tags = { ROM }
+
+	potential = {
+		has_or_had_tag = ROM
+		NOT = { has_variable = fnr_ROM_diocese_dacia }
+	}
+
+	allow = {
+		region:carpathia_region = {
+			any_location_in_region = {
+				percent >= 0.6
+				owner = root
+			}
+		}
+	}
+
+	ai_will_do = { value = 100 }
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_ROM_restore_diocese_dacia.a
+		ai_chance = { value = 100 }
+		effect = {
+			fnr_ROM_restore_diocese_effect = { KEY = dacia }
+		}
+	}
+}
+
+# Restore the Diocese of Asiana - 60% of anatolia_region
+fnr_ROM_restore_diocese_asiana = {
+	decision_category = country_specific_decisions
+
+	tags = { ROM }
+
+	potential = {
+		has_or_had_tag = ROM
+		NOT = { has_variable = fnr_ROM_diocese_asiana }
+	}
+
+	allow = {
+		region:anatolia_region = {
+			any_location_in_region = {
+				percent >= 0.6
+				owner = root
+			}
+		}
+	}
+
+	ai_will_do = { value = 100 }
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_ROM_restore_diocese_asiana.a
+		ai_chance = { value = 100 }
+		effect = {
+			fnr_ROM_restore_diocese_effect = { KEY = asiana }
+		}
+	}
+}
+
+# Restore the Diocese of Oriens - 60% of crescent_region
+fnr_ROM_restore_diocese_oriens = {
+	decision_category = country_specific_decisions
+
+	tags = { ROM }
+
+	potential = {
+		has_or_had_tag = ROM
+		NOT = { has_variable = fnr_ROM_diocese_oriens }
+	}
+
+	allow = {
+		region:crescent_region = {
+			any_location_in_region = {
+				percent >= 0.6
+				owner = root
+			}
+		}
+	}
+
+	ai_will_do = { value = 100 }
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_ROM_restore_diocese_oriens.a
+		ai_chance = { value = 100 }
+		effect = {
+			fnr_ROM_restore_diocese_effect = { KEY = oriens }
+		}
+	}
+}
+
+# Restore the Diocese of Aegyptus - 60% of egypt_region
+fnr_ROM_restore_diocese_aegyptus = {
+	decision_category = country_specific_decisions
+
+	tags = { ROM }
+
+	potential = {
+		has_or_had_tag = ROM
+		NOT = { has_variable = fnr_ROM_diocese_aegyptus }
+	}
+
+	allow = {
+		region:egypt_region = {
+			any_location_in_region = {
+				percent >= 0.6
+				owner = root
+			}
+		}
+	}
+
+	ai_will_do = { value = 100 }
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_ROM_restore_diocese_aegyptus.a
+		ai_chance = { value = 100 }
+		effect = {
+			fnr_ROM_restore_diocese_effect = { KEY = aegyptus }
+		}
+	}
+}
+
+# Restore the Diocese of Africa - 60% of maghreb_region
+fnr_ROM_restore_diocese_africa = {
+	decision_category = country_specific_decisions
+
+	tags = { ROM }
+
+	potential = {
+		has_or_had_tag = ROM
+		NOT = { has_variable = fnr_ROM_diocese_africa }
+	}
+
+	allow = {
+		region:maghreb_region = {
+			any_location_in_region = {
+				percent >= 0.6
+				owner = root
+			}
+		}
+	}
+
+	ai_will_do = { value = 100 }
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_ROM_restore_diocese_africa.a
+		ai_chance = { value = 100 }
+		effect = {
+			fnr_ROM_restore_diocese_effect = { KEY = africa }
+		}
+	}
+}
+
+# ==================== The legions ====================
+
+# Pay a Donative - gold for the legions, every 5 years
+fnr_ROM_pay_donative = {
+	decision_category = country_specific_decisions
+
+	tags = { ROM }
+
+	potential = {
+		has_or_had_tag = ROM
+	}
+
+	allow = {
+		gold >= 250
+		NOT = { has_variable = fnr_ROM_donative_cooldown }
+	}
+
+	ai_will_do = { value = 100 }
+
+	illustration_tags = {
+		10 = exterior
+		10 = armed
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:peasants_estate }
+	}
+
+	option = {
+		name = fnr_ROM_pay_donative.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -250
+			fnr_ROM_change_loyalty_effect = { VALUE = 15 TT = plus_15 }
+			add_country_modifier = { modifier = fnr_ROM_donative years = 5 mode = add_and_extend }
+			set_variable = { name = fnr_ROM_donative_cooldown years = 5 }
+		}
+	}
+}
+
+# Hold a Triumph - every 10 years, in peace
+fnr_ROM_hold_triumph = {
+	decision_category = country_specific_decisions
+
+	tags = { ROM }
+
+	potential = {
+		has_or_had_tag = ROM
+		NOT = { has_or_had_tag = RMNRP } # the Republic's own Triumph carries over
+	}
+
+	allow = {
+		at_war = no
+		gold >= 150
+		NOT = { has_variable = fnr_ROM_triumph_cooldown }
+	}
+
+	ai_will_do = { value = 100 }
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_ROM_hold_triumph.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -150
+			add_prestige = prestige_severe_bonus
+			fnr_ROM_change_loyalty_effect = { VALUE = 10 TT = plus_10 }
+			add_country_modifier = { modifier = fnr_ROM_triumph years = 10 mode = add_and_extend }
+			set_variable = { name = fnr_ROM_triumph_cooldown years = 10 }
+		}
+	}
+}
+
+# ==================== Origins (one each, once) ====================
+
+# New Rome - The Two Capitals
+fnr_ROM_two_capitals_decision = {
+	decision_category = country_specific_decisions
+
+	tags = { ROM }
+
+	potential = {
+		has_or_had_tag = ROM
+		has_variable = fnr_ROM_origin_new_rome
+		NOT = { has_variable = fnr_ROM_origin_decision_done }
+	}
+
+	allow = {
+		owns = location:rome
+		owns = location:constantinople
+		fnr_ROM_dioceses_at_least = { VALUE = 3 }
+	}
+
+	ai_will_do = { value = 100 }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:clergy_estate }
+	}
+
+	option = {
+		name = fnr_ROM_two_capitals_decision.a
+		ai_chance = { value = 100 }
+		effect = {
+			set_variable = fnr_ROM_origin_decision_done
+			add_country_modifier = { modifier = fnr_ROM_two_capitals years = -1 }
+			add_prestige = prestige_severe_bonus
+			fnr_ROM_change_loyalty_effect = { VALUE = 10 TT = plus_10 }
+		}
+	}
+}
+
+# Renovatio - Imperium Occidentis Restitutum
+fnr_ROM_imperium_occidentis_decision = {
+	decision_category = country_specific_decisions
+
+	tags = { ROM }
+
+	potential = {
+		has_or_had_tag = ROM
+		has_variable = fnr_ROM_origin_renovatio
+		NOT = { has_variable = fnr_ROM_origin_decision_done }
+	}
+
+	allow = {
+		has_variable = fnr_ROM_diocese_italia
+		has_variable = fnr_ROM_diocese_galliae
+		has_variable = fnr_ROM_diocese_hispaniae
+	}
+
+	ai_will_do = { value = 100 }
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:clergy_estate }
+	}
+
+	option = {
+		name = fnr_ROM_imperium_occidentis_decision.a
+		ai_chance = { value = 100 }
+		effect = {
+			set_variable = fnr_ROM_origin_decision_done
+			add_country_modifier = { modifier = fnr_ROM_imperium_occidentis years = -1 }
+			add_legitimacy = legitimacy_severe_bonus
+			fnr_ROM_change_loyalty_effect = { VALUE = 10 TT = plus_10 }
+		}
+	}
+}
+
+# Augustus - The Ara Pacis
+fnr_ROM_ara_pacis_decision = {
+	decision_category = country_specific_decisions
+
+	tags = { ROM }
+
+	potential = {
+		has_or_had_tag = ROM
+		has_variable = fnr_ROM_origin_augustus
+		NOT = { has_variable = fnr_ROM_origin_decision_done }
+	}
+
+	allow = {
+		at_war = no
+		gold >= 300
+		fnr_ROM_dioceses_at_least = { VALUE = 2 }
+	}
+
+	ai_will_do = { value = 100 }
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:clergy_estate }
+	}
+
+	option = {
+		name = fnr_ROM_ara_pacis_decision.a
+		ai_chance = { value = 100 }
+		effect = {
+			set_variable = fnr_ROM_origin_decision_done
+			add_gold = -300
+			add_country_modifier = { modifier = fnr_ROM_ara_pacis years = -1 }
+			add_stability = stability_mild_bonus
+			add_prestige = prestige_mild_bonus
+		}
+	}
+}
+
+# Principate - Res Gestae
+fnr_ROM_res_gestae_decision = {
+	decision_category = country_specific_decisions
+
+	tags = { ROM }
+
+	potential = {
+		has_or_had_tag = ROM
+		has_variable = fnr_ROM_origin_principate
+		NOT = { has_variable = fnr_ROM_origin_decision_done }
+	}
+
+	allow = {
+		fnr_ROM_dioceses_at_least = { VALUE = 5 }
+		legitimacy >= 60
+	}
+
+	ai_will_do = { value = 100 }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_ROM_res_gestae_decision.a
+		ai_chance = { value = 100 }
+		effect = {
+			set_variable = fnr_ROM_origin_decision_done
+			add_country_modifier = { modifier = fnr_ROM_res_gestae years = -1 }
+			add_prestige = prestige_severe_bonus
+			add_estate_satisfaction = { type = estate_type:nobles_estate value = estate_satisfaction_mild_bonus }
+		}
+	}
+}
+
+# Restorer - Emperor of the Romans
+fnr_ROM_emperor_of_the_romans_decision = {
+	decision_category = country_specific_decisions
+
+	tags = { ROM }
+
+	potential = {
+		has_or_had_tag = ROM
+		has_variable = fnr_ROM_origin_restorer
+		NOT = { has_variable = fnr_ROM_origin_decision_done }
+	}
+
+	allow = {
+		legitimacy >= 80
+		fnr_ROM_dioceses_at_least = { VALUE = 3 }
+	}
+
+	ai_will_do = { value = 100 }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:clergy_estate }
+	}
+
+	option = {
+		name = fnr_ROM_emperor_of_the_romans_decision.a
+		ai_chance = { value = 100 }
+		effect = {
+			set_variable = fnr_ROM_origin_decision_done
+			add_country_modifier = { modifier = fnr_ROM_recognized_emperor years = -1 }
+			add_prestige = prestige_severe_bonus
+			fnr_ROM_change_loyalty_effect = { VALUE = 5 TT = plus_5 }
+		}
+	}
+}
+
+# Great Republic - The Athenaeum
+fnr_ROM_athenaeum_decision = {
+	decision_category = country_specific_decisions
+
+	tags = { ROM }
+
+	potential = {
+		has_or_had_tag = ROM
+		has_variable = fnr_ROM_origin_great_republic
+		NOT = { has_variable = fnr_ROM_origin_decision_done }
+	}
+
+	allow = {
+		gold >= 300
+		fnr_ROM_dioceses_at_least = { VALUE = 4 }
+		trigger_if = {
+			limit = { has_variable = fnr_RMNRP_senate_authority }
+			var:fnr_RMNRP_senate_authority >= 60
+		}
+		trigger_else = { always = no }
+	}
+
+	ai_will_do = { value = 100 }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_ROM_athenaeum_decision.a
+		ai_chance = { value = 100 }
+		effect = {
+			set_variable = fnr_ROM_origin_decision_done
+			add_gold = -300
+			add_country_modifier = { modifier = fnr_ROM_athenaeum years = -1 }
+			add_prestige = prestige_mild_bonus
+			fnr_ROM_change_loyalty_effect = { VALUE = 5 TT = plus_5 }
+		}
+	}
+}
+
+# ==================== Client kingdoms (one each) ====================
+# Each carves a vassal kingdom out of our lands in its historical areas; it joins the Foederati.
+
+# Establish the client kingdom of Regnum Armeniae
+fnr_ROM_client_armenia = {
+	decision_category = country_specific_decisions
+
+	tags = { ROM }
+
+	potential = {
+		has_or_had_tag = ROM
+		NOT = { has_variable = fnr_ROM_client_armenia }
+		any_owned_location = {
+			fnr_ROM_client_area_armenia = yes
+		}
+	}
+
+	allow = {
+		at_war = no
+		gold >= 100
+		custom_tooltip = {
+			text = fnr_ROM_client_enough_land_tt
+			any_owned_location = {
+				count >= 3
+				is_capital = no
+				fnr_ROM_client_area_armenia = yes
+			}
+		}
+		custom_tooltip = {
+			text = fnr_ROM_client_not_capital_tt
+			capital = { fnr_ROM_client_area_armenia = no }
+		}
+	}
+
+	ai_will_do = { value = 0 }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_ROM_client_armenia.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -100
+			fnr_ROM_create_client_effect = { KEY = armenia }
+		}
+	}
+}
+
+# Establish the client kingdom of Regnum Hiberiae
+fnr_ROM_client_hiberia = {
+	decision_category = country_specific_decisions
+
+	tags = { ROM }
+
+	potential = {
+		has_or_had_tag = ROM
+		NOT = { has_variable = fnr_ROM_client_hiberia }
+		any_owned_location = {
+			fnr_ROM_client_area_hiberia = yes
+		}
+	}
+
+	allow = {
+		at_war = no
+		gold >= 100
+		custom_tooltip = {
+			text = fnr_ROM_client_enough_land_tt
+			any_owned_location = {
+				count >= 3
+				is_capital = no
+				fnr_ROM_client_area_hiberia = yes
+			}
+		}
+		custom_tooltip = {
+			text = fnr_ROM_client_not_capital_tt
+			capital = { fnr_ROM_client_area_hiberia = no }
+		}
+	}
+
+	ai_will_do = { value = 0 }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_ROM_client_hiberia.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -100
+			fnr_ROM_create_client_effect = { KEY = hiberia }
+		}
+	}
+}
+
+# Establish the client kingdom of Regnum Bosporanum
+fnr_ROM_client_bosporus = {
+	decision_category = country_specific_decisions
+
+	tags = { ROM }
+
+	potential = {
+		has_or_had_tag = ROM
+		NOT = { has_variable = fnr_ROM_client_bosporus }
+		any_owned_location = {
+			fnr_ROM_client_area_bosporus = yes
+		}
+	}
+
+	allow = {
+		at_war = no
+		gold >= 100
+		custom_tooltip = {
+			text = fnr_ROM_client_enough_land_tt
+			any_owned_location = {
+				count >= 3
+				is_capital = no
+				fnr_ROM_client_area_bosporus = yes
+			}
+		}
+		custom_tooltip = {
+			text = fnr_ROM_client_not_capital_tt
+			capital = { fnr_ROM_client_area_bosporus = no }
+		}
+	}
+
+	ai_will_do = { value = 0 }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_ROM_client_bosporus.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -100
+			fnr_ROM_create_client_effect = { KEY = bosporus }
+		}
+	}
+}
+
+# Establish the client kingdom of Regnum Cappadociae
+fnr_ROM_client_cappadocia = {
+	decision_category = country_specific_decisions
+
+	tags = { ROM }
+
+	potential = {
+		has_or_had_tag = ROM
+		NOT = { has_variable = fnr_ROM_client_cappadocia }
+		any_owned_location = {
+			fnr_ROM_client_area_cappadocia = yes
+		}
+	}
+
+	allow = {
+		at_war = no
+		gold >= 100
+		custom_tooltip = {
+			text = fnr_ROM_client_enough_land_tt
+			any_owned_location = {
+				count >= 3
+				is_capital = no
+				fnr_ROM_client_area_cappadocia = yes
+			}
+		}
+		custom_tooltip = {
+			text = fnr_ROM_client_not_capital_tt
+			capital = { fnr_ROM_client_area_cappadocia = no }
+		}
+	}
+
+	ai_will_do = { value = 0 }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_ROM_client_cappadocia.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -100
+			fnr_ROM_create_client_effect = { KEY = cappadocia }
+		}
+	}
+}
+
+# Establish the client kingdom of Regnum Thraciae
+fnr_ROM_client_thracia = {
+	decision_category = country_specific_decisions
+
+	tags = { ROM }
+
+	potential = {
+		has_or_had_tag = ROM
+		NOT = { has_variable = fnr_ROM_client_thracia }
+		any_owned_location = {
+			fnr_ROM_client_area_thracia = yes
+		}
+	}
+
+	allow = {
+		at_war = no
+		gold >= 100
+		custom_tooltip = {
+			text = fnr_ROM_client_enough_land_tt
+			any_owned_location = {
+				count >= 3
+				is_capital = no
+				fnr_ROM_client_area_thracia = yes
+			}
+		}
+		custom_tooltip = {
+			text = fnr_ROM_client_not_capital_tt
+			capital = { fnr_ROM_client_area_thracia = no }
+		}
+	}
+
+	ai_will_do = { value = 0 }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_ROM_client_thracia.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -100
+			fnr_ROM_create_client_effect = { KEY = thracia }
+		}
+	}
+}
+
+# Establish the client kingdom of Regnum Iudaeae
+fnr_ROM_client_iudaea = {
+	decision_category = country_specific_decisions
+
+	tags = { ROM }
+
+	potential = {
+		has_or_had_tag = ROM
+		NOT = { has_variable = fnr_ROM_client_iudaea }
+		any_owned_location = {
+			fnr_ROM_client_area_iudaea = yes
+		}
+	}
+
+	allow = {
+		at_war = no
+		gold >= 100
+		custom_tooltip = {
+			text = fnr_ROM_client_enough_land_tt
+			any_owned_location = {
+				count >= 3
+				is_capital = no
+				fnr_ROM_client_area_iudaea = yes
+			}
+		}
+		custom_tooltip = {
+			text = fnr_ROM_client_not_capital_tt
+			capital = { fnr_ROM_client_area_iudaea = no }
+		}
+	}
+
+	ai_will_do = { value = 0 }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_ROM_client_iudaea.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -100
+			fnr_ROM_create_client_effect = { KEY = iudaea }
+		}
+	}
+}
+
+# Establish the client kingdom of Regnum Numidiae
+fnr_ROM_client_numidia = {
+	decision_category = country_specific_decisions
+
+	tags = { ROM }
+
+	potential = {
+		has_or_had_tag = ROM
+		NOT = { has_variable = fnr_ROM_client_numidia }
+		any_owned_location = {
+			fnr_ROM_client_area_numidia = yes
+		}
+	}
+
+	allow = {
+		at_war = no
+		gold >= 100
+		custom_tooltip = {
+			text = fnr_ROM_client_enough_land_tt
+			any_owned_location = {
+				count >= 3
+				is_capital = no
+				fnr_ROM_client_area_numidia = yes
+			}
+		}
+		custom_tooltip = {
+			text = fnr_ROM_client_not_capital_tt
+			capital = { fnr_ROM_client_area_numidia = no }
+		}
+	}
+
+	ai_will_do = { value = 0 }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_ROM_client_numidia.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -100
+			fnr_ROM_create_client_effect = { KEY = numidia }
+		}
+	}
+}
+
+# Establish the client kingdom of Regnum Mauretaniae
+fnr_ROM_client_mauretania = {
+	decision_category = country_specific_decisions
+
+	tags = { ROM }
+
+	potential = {
+		has_or_had_tag = ROM
+		NOT = { has_variable = fnr_ROM_client_mauretania }
+		any_owned_location = {
+			fnr_ROM_client_area_mauretania = yes
+		}
+	}
+
+	allow = {
+		at_war = no
+		gold >= 100
+		custom_tooltip = {
+			text = fnr_ROM_client_enough_land_tt
+			any_owned_location = {
+				count >= 3
+				is_capital = no
+				fnr_ROM_client_area_mauretania = yes
+			}
+		}
+		custom_tooltip = {
+			text = fnr_ROM_client_not_capital_tt
+			capital = { fnr_ROM_client_area_mauretania = no }
+		}
+	}
+
+	ai_will_do = { value = 0 }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_ROM_client_mauretania.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -100
+			fnr_ROM_create_client_effect = { KEY = mauretania }
+		}
+	}
+}
+
+# Establish the client kingdom of Regnum Brigantum
+fnr_ROM_client_brigantia = {
+	decision_category = country_specific_decisions
+
+	tags = { ROM }
+
+	potential = {
+		has_or_had_tag = ROM
+		NOT = { has_variable = fnr_ROM_client_brigantia }
+		any_owned_location = {
+			fnr_ROM_client_area_brigantia = yes
+		}
+	}
+
+	allow = {
+		at_war = no
+		gold >= 100
+		custom_tooltip = {
+			text = fnr_ROM_client_enough_land_tt
+			any_owned_location = {
+				count >= 3
+				is_capital = no
+				fnr_ROM_client_area_brigantia = yes
+			}
+		}
+		custom_tooltip = {
+			text = fnr_ROM_client_not_capital_tt
+			capital = { fnr_ROM_client_area_brigantia = no }
+		}
+	}
+
+	ai_will_do = { value = 0 }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_ROM_client_brigantia.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -100
+			fnr_ROM_create_client_effect = { KEY = brigantia }
+		}
+	}
+}
+
+# Found the Foederati - for a Rome without the Republic's Socii (which converts on its own)
+fnr_ROM_found_foederati = {
+	decision_category = country_specific_decisions
+
+	tags = { ROM }
+
+	potential = {
+		has_or_had_tag = ROM
+		NOT = { exists = international_organization:fnr_ROM_foederati_io }
+		NOT = { exists = international_organization:fnr_RMNRP_socii_io }
+	}
+
+	allow = {
+		at_war = no
+		gold >= 200
+	}
+
+	ai_will_do = { value = 100 }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_ROM_found_foederati.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -200
+			fnr_ROM_create_foederati_effect = yes
+			add_prestige = prestige_mild_bonus
+		}
+	}
+}

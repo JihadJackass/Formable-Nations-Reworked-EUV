@@ -1,0 +1,100 @@
+﻿# The Roman Civil Wars (Roman Republic, Pax Romana)
+# Starts within a month of a Roman civil war breaking out (the dictator refusing to lay down the
+# fasces, fnr_RMNRP.6 B, or a general Crossing the Rubicon, fnr_RMNRP.8). Both set
+# fnr_RMNRP_civil_war_brewing through fnr_RMNRP_civil_war_effect.
+# Ends after at least a year once our civil-war rebels are gone, or at once if the Republic falls.
+# The ending leads to the Imperator choice (fnr_RMNRP.7) or the Rubicon ending (fnr_RMNRP.19).
+
+fnr_RMNRP_roman_civil_wars = {
+
+	image = "gfx/interface/illustrations/disaster/castilian_civil_war.dds"
+
+	monthly_spawn_chance = monthly_spawn_chance_ultimate_high
+
+	can_start = {
+		has_or_had_tag = RMNRP
+		has_variable = fnr_RMNRP_civil_war_brewing
+	}
+
+	can_end = {
+		OR = {
+			NOT = { government_type = government_type:republic }
+			AND = {
+				had_disaster_for_years = {
+					disaster_type = scope:disaster
+					years >= 1
+				}
+				in_civil_war = no
+				custom_tooltip = {
+					text = fnr_RMNRP_civil_war_rebels_gone_tt
+					NOT = {
+						any_rebel = {
+							OR = {
+								rebel_name_key = fnr_RMNRP_republican_loyalists
+								rebel_name_key = fnr_RMNRP_rubicon_rebels
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	modifier = {
+		global_manpower_modifier = 0.10
+		land_morale_modifier = 0.05
+		monthly_republican_tradition = -0.20
+		stability_cost_efficiency = -0.10
+		monthly_war_exhaustion = 0.05
+	}
+
+	on_start = {
+		remove_variable = fnr_RMNRP_civil_war_brewing
+		set_variable = { name = fnr_RMNRP_civil_war_months value = 0 }
+		trigger_event_non_silently = fnr_RMNRP.15
+	}
+
+	on_monthly = {
+		hidden_effect = {
+			if = {
+				limit = { NOT = { has_variable = fnr_RMNRP_civil_war_months } }
+				set_variable = { name = fnr_RMNRP_civil_war_months value = 0 }
+			}
+			change_variable = { name = fnr_RMNRP_civil_war_months add = 1 }
+		}
+		random_list = {
+			10 = { custom_tooltip = an_event_occurs_tt }
+			90 = { custom_tooltip = no_event_occurs_tt }
+		}
+		hidden_effect = {
+			random_list = {
+				270 = { }
+				10 = { trigger_event_silently = fnr_RMNRP.16 }
+				10 = { trigger_event_silently = fnr_RMNRP.17 }
+				10 = { trigger_event_silently = fnr_RMNRP.18 }
+			}
+		}
+	}
+
+	on_end = {
+		if = {
+			limit = { has_variable = fnr_RMNRP_civil_war_months }
+			remove_variable = fnr_RMNRP_civil_war_months
+		}
+		if = {
+			limit = { has_variable = fnr_RMNRP_rebel_leader }
+			remove_variable = fnr_RMNRP_rebel_leader
+		}
+		if = {
+			limit = {
+				has_variable = fnr_RMNRP_refused_to_resign
+				government_type = government_type:republic
+			}
+			trigger_event_non_silently = fnr_RMNRP.7
+		}
+		else_if = {
+			limit = { government_type = government_type:republic }
+			trigger_event_non_silently = fnr_RMNRP.19
+		}
+	}
+}

@@ -1,0 +1,129 @@
+﻿# Advances for the Ptolemaic Kingdom (Pax Romana)
+
+		PTLMY_ptolemaic_administration = {
+			age = age_1_traditions
+			icon = smooth_administration
+			potential = {
+				has_or_had_tag = PTLMY
+			}
+
+			global_max_control = 0.05
+			tax_income_efficiency = small_tax_income_efficiency_bonus
+
+			requires = codified_laws
+			allow_children = no
+		}
+
+		PTLMY_royal_economy = {
+			age = age_1_traditions
+			icon = gel_healthy_economy
+			potential = {
+				has_or_had_tag = PTLMY
+			}
+
+			monthly_legitimacy = 0.05
+
+			unlock_law = fnr_PTLMY_royal_economy_law
+
+			requires = distribution_of_power_advance
+			allow_children = no
+		}
+
+		PTLMY_mouseion = {
+			age = age_2_renaissance
+			icon = patron_of_art
+			potential = {
+				has_or_had_tag = PTLMY
+			}
+
+			research_speed_modifier = 0.05
+
+			requires = patron_of_art
+			allow_children = no
+		}
+
+		PTLMY_phalanx = {
+			age = age_2_renaissance
+			icon = professional_armies_advance
+			potential = {
+				has_or_had_tag = PTLMY
+			}
+
+			land_morale_modifier = 0.05
+			army_heavy_infantry_power = 0.05
+
+			requires = professional_armies_advance
+			allow_children = no
+		}
+
+		PTLMY_pharos = {
+			age = age_2_renaissance
+			icon = teu_crusader_discipline
+			potential = {
+				has_or_had_tag = PTLMY
+			}
+
+			navy_maintenance_efficiency = 0.05
+			trade_income = 0.05
+
+			requires = maritime_advance_age_2
+			allow_children = no
+		}
+
+		PTLMY_nilometers = {
+			age = age_2_renaissance
+			icon = gel_healthy_economy
+			potential = {
+				has_or_had_tag = PTLMY
+			}
+
+			global_monthly_food_modifier = 0.05
+
+			requires = pound_lock_canals_advance
+			allow_children = no
+		}
+
+		PTLMY_great_library = {
+			age = age_3_discovery
+			icon = legalism_advance
+			potential = {
+				has_or_had_tag = PTLMY
+			}
+
+			research_speed_modifier = 0.05
+			country_cabinet_efficiency = 0.03
+
+			requires = printing_press_advance
+			allow_children = no
+		}
+
+		PTLMY_ruler_cult = {
+			age = age_4_reformation
+			icon = crown_power_advance_renaissance
+			potential = {
+				has_or_had_tag = PTLMY
+			}
+
+			monthly_legitimacy = 0.1
+
+			requires = confessionalism_advance
+			allow_children = no
+		}
+
+		PTLMY_light_of_alexandria = {
+			age = age_5_absolutism
+			icon = imperial_ambitions
+			potential = {
+				has_or_had_tag = PTLMY
+			}
+			allow = {
+				fnr_PTLMY_scholarship_at_least = { VALUE = 150 }
+			}
+
+			research_speed_modifier = 0.10
+			monthly_prestige = 0.1
+
+			requires = absolutist_court
+			allow_children = no
+		}
+

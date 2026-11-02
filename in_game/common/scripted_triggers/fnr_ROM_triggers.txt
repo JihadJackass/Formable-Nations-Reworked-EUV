@@ -1,0 +1,121 @@
+﻿# Roman Empire scripted triggers (Pax Romana)
+
+# Location scope: the location lies in one of the eleven diocese regions
+fnr_ROM_in_diocese_region = {
+	OR = {
+		region = region:italy_region
+		region = region:france_region
+		region = region:iberia_region
+		region = region:great_britain_region
+		region = region:south_german_region
+		region = region:balkan_region
+		region = region:carpathia_region
+		region = region:anatolia_region
+		region = region:crescent_region
+		region = region:egypt_region
+		region = region:maghreb_region
+	}
+}
+
+# Country scope: Legion Loyalty is at least VALUE (false if the track has not started)
+fnr_ROM_loyalty_at_least = {
+	trigger_if = {
+		limit = { has_variable = fnr_ROM_legion_loyalty }
+		var:fnr_ROM_legion_loyalty >= $VALUE$
+	}
+	trigger_else = { always = no }
+}
+
+# Country scope: Legion Loyalty is below VALUE (false if the track has not started)
+fnr_ROM_loyalty_below = {
+	trigger_if = {
+		limit = { has_variable = fnr_ROM_legion_loyalty }
+		var:fnr_ROM_legion_loyalty < $VALUE$
+	}
+	trigger_else = { always = no }
+}
+
+# Country scope: at least VALUE dioceses restored
+fnr_ROM_dioceses_at_least = {
+	trigger_if = {
+		limit = { has_variable = fnr_ROM_dioceses }
+		var:fnr_ROM_dioceses >= $VALUE$
+	}
+	trigger_else = { always = no }
+}
+
+# Country scope: the Empire has a Tetrarchy (halves the usurper risk, no overstretch)
+fnr_ROM_has_tetrarchy = {
+	has_reform = government_reform:fnr_ROM_tetrarchy
+}
+
+# Country scope: a usurper or secession rebellion of ours is still in the field
+fnr_ROM_usurpers_in_field = {
+	any_rebel = {
+		OR = {
+			rebel_name_key = fnr_ROM_usurper_rebels
+			rebel_name_key = fnr_ROM_gallic_empire
+			rebel_name_key = fnr_ROM_palmyrene_empire
+		}
+	}
+}
+
+# ---------- Client kingdoms (location scope): the lands of each client kingdom ----------
+
+fnr_ROM_client_area_armenia = {
+	OR = {
+		area = area:armenia_area
+		area = area:armenian_highlands_area
+	}
+}
+
+fnr_ROM_client_area_hiberia = {
+	OR = {
+		area = area:georgia_area
+	}
+}
+
+fnr_ROM_client_area_bosporus = {
+	OR = {
+		area = area:crimea_area
+	}
+}
+
+fnr_ROM_client_area_cappadocia = {
+	OR = {
+		area = area:cappadocia_area
+	}
+}
+
+fnr_ROM_client_area_thracia = {
+	OR = {
+		area = area:thrace_area
+		area = area:bulgaria_area
+	}
+	NOT = { this = location:constantinople }
+}
+
+fnr_ROM_client_area_iudaea = {
+	OR = {
+		area = area:levant_area
+	}
+}
+
+fnr_ROM_client_area_numidia = {
+	OR = {
+		area = area:algiers_area
+	}
+}
+
+fnr_ROM_client_area_mauretania = {
+	OR = {
+		area = area:morocco_area
+		area = area:sus_area
+	}
+}
+
+fnr_ROM_client_area_brigantia = {
+	OR = {
+		area = area:northumbria_area
+	}
+}

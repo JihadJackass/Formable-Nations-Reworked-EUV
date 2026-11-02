@@ -1,0 +1,160 @@
+# The Roman Civil Wars (fnr_RMNRP_roman_civil_wars) - based on vanilla english_civil_war.gui.
+# Left: our ruler. Right: the rebel leader stored in fnr_RMNRP_rebel_leader.
+disaster_panel = {
+
+	##################################### TOP HEADER #####################################
+
+	
+
+	##################################### MAIN IMAGE #####################################
+	
+	blockoverride "main_image"{
+		two_characters_header = {
+			blockoverride "FirstCharacterContext" {
+				datacontext = "[DisasterView.GetDisaster.GetOwner.GetGovernment.GetRulerOrRegent]"
+			}
+			blockoverride "SecondCharacterContext" {
+				datacontext = "[DisasterView.GetDisaster.GetOwner.MakeScope.GetVariable('fnr_RMNRP_rebel_leader').GetCharacter]"
+			}
+			blockoverride "SecondCharacterRole" {
+				country_character = {
+					blockoverride "country_header_orientation" {
+						righttoleft = yes
+					}
+					blockoverride "country_government_character_labels_align" {
+						align = right|nobaseline
+					}
+					blockoverride "character_name_maximumsize" {
+						maximumsize = { 200 -1 }
+					}
+					blockoverride "character_name_text"{
+						text = "[DisasterView.GetDisaster.GetOwner.MakeScope.GetVariable('fnr_RMNRP_rebel_leader').GetCharacter.GetShortNameWithNoTooltip]"
+					}
+
+					blockoverride "character_title" {
+						visible = "[Character.HasNickName]"
+						text = "[Character.GetNickname]"
+					}
+				}
+			}
+			# blockoverride "history_button_anchor" { visible = no }
+			blockoverride "first_character_portrait_anchor" { parentanchor = bottom|left }
+			blockoverride "second_character_portrait_anchor" { parentanchor = bottom|right }
+			blockoverride "character_religion_visibility" { visible = no }
+			blockoverride "character_name_maximumsize" { maximumsize = { 270 -1 } }
+			blockoverride "country_header_extra" {
+				hbox = {
+					layoutpolicy_horizontal = expanding
+					layoutpolicy_vertical = expanding
+					margin = { 10 10 }
+					spacing = 8
+					expand = {}
+				}
+			}
+		}
+	}
+
+	##################################### TAB NAME #####################################
+
+	blockoverride "disaster_secondary_tab" {
+		margin_top = 10
+		spacing = 5
+		disaster_card_expandable = {
+			blockoverride "header_button_onclick" {
+				onclick = "[LateralView.Vars.Toggle( 'requirements_toggled' )]"
+			}
+			blockoverride "header_text" {
+				text = "END_REQUIREMENTS"
+			}
+			blockoverride "header_icon" {
+				texture = "gfx/interface/icons/disasters/end_requirements_green.dds"
+			}
+			blockoverride "bottom_content" {
+				TooltipRequirementsList = {
+					textcontext = "[DisasterView.GetDisaster.GetType.GetEndConditions]"
+				}
+			}
+			blockoverride "bottom_content_onclick" {
+				visible = "[LateralView.Vars.Exists( 'requirements_toggled' )]"
+			}
+			blockoverride "icon_replace_visible_yes" {
+				visible = "[LateralView.Vars.Exists( 'requirements_toggled' )]"
+			}
+			blockoverride "icon_replace_visible_not" {
+				visible = "[Not(LateralView.Vars.Exists( 'requirements_toggled' ))]"
+			}
+		}
+	}
+
+	##################################### SUBHEADER #####################################
+
+	blockoverride "disaster_main_content_subheader"{}
+
+	##################################### MAIN CONTENT #####################################
+
+	
+	blockoverride "main_content" {
+		vbox = {
+			layoutpolicy_horizontal = expanding
+			spacing = 5
+
+			# Senate Authority
+			horizontal_scroll_card = {
+				blockoverride "card_visible" {}
+				blockoverride "text_top" {
+					text = "fnr_RMNRP_panel_senate_title"
+					default_format = "#yellow_titles"
+				}
+				blockoverride "text_bottom" {
+					text = "fnr_RMNRP_panel_senate_desc"
+				}
+				blockoverride "number_right" {
+					expand = {}
+					text_single = {
+						layoutpolicy_horizontal = expanding
+						size = { -1 30 }
+						autoresize = no
+						align = center|nobaseline
+						text = "[DisasterView.GetDisaster.GetOwner.MakeScope.GetVariable('fnr_RMNRP_senate_authority').GetValue|0] / 100"
+					}
+					progressbar = {
+						size = { 100 10 }
+						using = morale_progressbar_bar
+						value = "[FixedPointToFloat(DisasterView.GetDisaster.GetOwner.MakeScope.GetVariable('fnr_RMNRP_senate_authority').GetValue)]"
+					}
+					expand = {}
+				}
+				blockoverride "number_right_2" {}
+			}
+
+			# The civil war itself
+			horizontal_scroll_card = {
+				blockoverride "card_visible" {}
+				blockoverride "text_top" {
+					text = "fnr_RMNRP_panel_war_title"
+					default_format = "#yellow_titles"
+				}
+				blockoverride "text_bottom" {
+					text = "fnr_RMNRP_panel_war_desc"
+				}
+				blockoverride "number_right" {
+					expand = {}
+					text_single = {
+						layoutpolicy_horizontal = expanding
+						size = { -1 30 }
+						autoresize = no
+						align = center|nobaseline
+						text = "fnr_RMNRP_panel_months_value"
+					}
+					progressbar = {
+						size = { 100 10 }
+						using = morale_progressbar_bar
+						value = "[Multiply_float(FixedPointToFloat(DisasterView.GetDisaster.GetOwner.MakeScope.GetVariable('fnr_RMNRP_civil_war_months').GetValue), '(float)8.33')]"
+					}
+					expand = {}
+				}
+				blockoverride "number_right_2" {}
+			}
+		}
+	}
+}

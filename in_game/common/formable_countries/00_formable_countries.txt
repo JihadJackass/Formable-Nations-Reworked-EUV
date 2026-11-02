@@ -2313,6 +2313,8 @@ ROM_f = {
 			limit = { has_dlc = "d008_fate_of_the_phoenix" }
 			unlock_casus_belli_effect = { type = cb_restore_roman_borders }
 		}
+		# FNR Pax Romana: the Roman Empire - origin, Legion Loyalty, Dioceses (fnr_ROM_effects.txt)
+		fnr_ROM_formation_effect = yes
 	}
 }
 
@@ -2339,7 +2341,23 @@ ROM_BYZ_f = {
 
 	allow = {
 		owns = location:rome
-		owns = location:constantinople
+		# FNR Pax Romana: a Roman Republic that took the imperial path (fnr_RMNRP.7) needs Italy, not Constantinople
+		OR = {
+			owns = location:constantinople
+			has_variable = fnr_RMNRP_augustus
+			AND = {
+				OR = {
+					has_variable = fnr_RMNRP_imperial_path
+					has_variable = fnr_RMNRP_great_republic # FNR Pax Romana: the Great Republic
+				}
+				region:italy_region = {
+					any_location_in_region = {
+						percent >= 0.8
+						owner = root
+					}
+				}
+			}
+		}
 		country_rank = country_rank:rank_empire
 
 		OR = {
@@ -2358,6 +2376,12 @@ ROM_BYZ_f = {
 		italy_region
 	}
 	form_effect = {
+		# FNR Pax Romana: the Principate becomes the Empire
+		if = {
+			limit = { has_variable = fnr_RMNRP_principate }
+			add_country_modifier = { modifier = fnr_RMNRP_pax_augusta years = 25 mode = add_and_extend }
+			custom_tooltip = fnr_RMNRP_pax_augusta_tt
+		}
 		if = {
 			limit = { NOT = { capital = location:rome } }
 			move_capital_event_effect = {
@@ -2379,6 +2403,8 @@ ROM_BYZ_f = {
 			limit = { has_dlc = "d008_fate_of_the_phoenix" }
 			unlock_casus_belli_effect = { type = cb_restore_roman_borders }
 		}
+		# FNR Pax Romana: the Roman Empire - origin, Legion Loyalty, Dioceses (fnr_ROM_effects.txt)
+		fnr_ROM_formation_effect = yes
 	}
 }
 

@@ -1,4 +1,4 @@
-namespace = flavor_EASRE
+﻿namespace = flavor_EASRE
 
 # ==========================================================================
 # Pax Romana - Eastern Roman Empire: "Justinian's Shadow"

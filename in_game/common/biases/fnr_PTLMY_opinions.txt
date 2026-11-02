@@ -1,0 +1,53 @@
+﻿# Ptolemaic Kingdom opinion modifiers (Pax Romana)
+
+io_opinion_fnr_PTLMY_nesiotic_league = {
+	value = 15
+}
+
+# Sworn to the League
+fnr_PTLMY_sworn_islander = {
+	value = 15
+	yearly_decay = 1
+}
+
+# Honoured at the Ptolemaieia
+fnr_PTLMY_honoured_at_games = {
+	value = 15
+	yearly_decay = 1
+}
+
+# Fed by Egyptian Grain
+fnr_PTLMY_fed_by_egypt = {
+	value = 30
+	yearly_decay = 1
+}
+
+# Protected by Ptolemaic Soldiers
+fnr_PTLMY_protected_by_egypt = {
+	value = 20
+	yearly_decay = 1
+}
+
+# Friend and Ally of the Roman People
+fnr_PTLMY_roman_amicitia = {
+	value = 40
+	yearly_decay = 1
+}
+
+# Joined by Marriage
+fnr_PTLMY_lagid_marriage = {
+	value = 60
+	yearly_decay = 1
+}
+
+# Sent the Grain Fleet
+fnr_PTLMY_grain_for_rome = {
+	value = 20
+	yearly_decay = 1
+}
+
+# Refused Rome
+fnr_PTLMY_refused_rome = {
+	value = -25
+	yearly_decay = 1
+}

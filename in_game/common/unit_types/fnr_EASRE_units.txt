@@ -1,4 +1,4 @@
-#################################################################
+﻿#################################################################
 # Formable Nations: Reworked - Eastern Roman Empire Unit Types #
 #################################################################
 # These are FNR fallbacks for content that vanilla only gives to Byzantium or to

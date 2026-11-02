@@ -25,12 +25,16 @@ fnr_WESRE_cede_border_province_effect = {
 # Pops of a location's whole province join scope:fnr_WESRE_rebel. Use with LOCATION = saved scope name
 fnr_WESRE_province_joins_rebels_effect = {
 	if = {
-		limit = { exists = scope:$LOCATION$ }
+		limit = {
+			exists = scope:$LOCATION$
+			exists = scope:fnr_WESRE_rebel
+		}
 		scope:$LOCATION$.province = {
 			every_location_in_province = {
 				limit = { owner = root }
 				every_pop = {
 					limit = { owner = root }
+					add_pop_satisfaction = pop_satisfaction_ultimate_penalty
 					change_pop_allegiance = scope:fnr_WESRE_rebel
 				}
 			}

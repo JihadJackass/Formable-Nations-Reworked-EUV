@@ -1,0 +1,25 @@
+﻿#root is country
+#scope:target is the target
+
+# Restore the East - unlocked when Byzantium refuses the Reunion, or for any Rome on the imperial path.
+fnr_RMNRP_cb_restore_the_east = {
+	create_visible = {
+		has_or_had_tag = RMNRP
+		OR = {
+			has_variable = fnr_RMNRP_restore_east
+			has_variable = fnr_RMNRP_imperial_path
+		}
+	}
+	create_enabled = {
+		scope:target = {
+			any_owned_location = {
+				OR = {
+					region = region:balkan_region
+					region = region:anatolia_region
+				}
+			}
+		}
+	}
+	speed = 10
+	war_goal_type = fnr_RMNRP_restore_the_east_wargoal
+}

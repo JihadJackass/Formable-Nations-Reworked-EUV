@@ -1,0 +1,193 @@
+﻿# Ptolemaic Kingdom Unit Types (Pax Romana)
+# Phalangites - heavy infantry, needs PTLMY_phalanx. Machimoi - light infantry, needs the Machimoi privilege.
+
+		fnr_PTLMY_phalangites_1 = {
+			copy_from = a_age_1_traditions_heavy_infantry
+			buildable = yes
+			upgrades_to_only = fnr_PTLMY_phalangites_2
+
+			strength_damage_taken = -0.20
+			morale_damage_taken = -0.10
+
+			construction_demand = heavy_infantry_construction
+
+			country_potential = {
+				has_or_had_tag = PTLMY
+				has_advance = PTLMY_phalanx
+			}
+
+			gfx_tags = { spear_tag heavy_tag }
+		}
+
+		fnr_PTLMY_phalangites_2 = {
+			copy_from = a_age_2_renaissance_heavy_infantry
+			buildable = yes
+			upgrades_to_only = fnr_PTLMY_phalangites_3
+
+			strength_damage_taken = -0.20
+			morale_damage_taken = -0.10
+
+			construction_demand = heavy_infantry_construction
+
+			country_potential = {
+				has_or_had_tag = PTLMY
+				has_advance = PTLMY_phalanx
+			}
+
+			gfx_tags = { spear_tag heavy_tag }
+		}
+
+		fnr_PTLMY_phalangites_3 = {
+			copy_from = a_age_3_discovery_heavy_infantry
+			buildable = yes
+			upgrades_to_only = fnr_PTLMY_phalangites_4
+
+			strength_damage_taken = -0.20
+			morale_damage_taken = -0.10
+
+			construction_demand = heavy_infantry_construction
+
+			country_potential = {
+				has_or_had_tag = PTLMY
+				has_advance = PTLMY_phalanx
+			}
+
+			gfx_tags = { spear_tag heavy_tag }
+		}
+
+		fnr_PTLMY_phalangites_4 = {
+			copy_from = a_age_4_reformation_heavy_infantry
+			buildable = yes
+			upgrades_to_only = fnr_PTLMY_phalangites_5
+
+			strength_damage_taken = -0.20
+			morale_damage_taken = -0.10
+
+			construction_demand = heavy_infantry_construction
+
+			country_potential = {
+				has_or_had_tag = PTLMY
+				has_advance = PTLMY_phalanx
+			}
+
+			gfx_tags = { spear_tag heavy_tag }
+		}
+
+		fnr_PTLMY_phalangites_5 = {
+			copy_from = a_age_5_absolutism_heavy_infantry
+			buildable = yes
+			upgrades_to_only = fnr_PTLMY_phalangites_6
+
+			strength_damage_taken = -0.20
+			morale_damage_taken = -0.10
+
+			construction_demand = heavy_infantry_construction
+
+			country_potential = {
+				has_or_had_tag = PTLMY
+				has_advance = PTLMY_phalanx
+			}
+
+			gfx_tags = { spear_tag heavy_tag }
+		}
+
+		fnr_PTLMY_phalangites_6 = {
+			copy_from = a_age_6_revolutions_heavy_infantry
+			buildable = yes
+
+			strength_damage_taken = -0.20
+			morale_damage_taken = -0.10
+
+			construction_demand = heavy_infantry_construction
+
+			country_potential = {
+				has_or_had_tag = PTLMY
+				has_advance = PTLMY_phalanx
+			}
+
+			gfx_tags = { spear_tag heavy_tag }
+		}
+
+		fnr_PTLMY_machimoi_1 = {
+			copy_from = a_age_1_traditions_light_infantry
+			buildable = yes
+			upgrades_to_only = fnr_PTLMY_machimoi_2
+
+			strength_damage_done = 0.10
+			morale_damage_taken = -0.10
+
+			country_potential = {
+				has_or_had_tag = PTLMY
+				has_estate_privilege = estate_privilege:fnr_PTLMY_machimoi
+			}
+		}
+
+		fnr_PTLMY_machimoi_2 = {
+			copy_from = a_age_2_renaissance_light_infantry
+			buildable = yes
+			upgrades_to_only = fnr_PTLMY_machimoi_3
+
+			strength_damage_done = 0.10
+			morale_damage_taken = -0.10
+
+			country_potential = {
+				has_or_had_tag = PTLMY
+				has_estate_privilege = estate_privilege:fnr_PTLMY_machimoi
+			}
+		}
+
+		fnr_PTLMY_machimoi_3 = {
+			copy_from = a_age_3_discovery_light_infantry
+			buildable = yes
+			upgrades_to_only = fnr_PTLMY_machimoi_4
+
+			strength_damage_done = 0.10
+			morale_damage_taken = -0.10
+
+			country_potential = {
+				has_or_had_tag = PTLMY
+				has_estate_privilege = estate_privilege:fnr_PTLMY_machimoi
+			}
+		}
+
+		fnr_PTLMY_machimoi_4 = {
+			copy_from = a_age_4_reformation_light_infantry
+			buildable = yes
+			upgrades_to_only = fnr_PTLMY_machimoi_5
+
+			strength_damage_done = 0.10
+			morale_damage_taken = -0.10
+
+			country_potential = {
+				has_or_had_tag = PTLMY
+				has_estate_privilege = estate_privilege:fnr_PTLMY_machimoi
+			}
+		}
+
+		fnr_PTLMY_machimoi_5 = {
+			copy_from = a_age_5_absolutism_light_infantry
+			buildable = yes
+			upgrades_to_only = fnr_PTLMY_machimoi_6
+
+			strength_damage_done = 0.10
+			morale_damage_taken = -0.10
+
+			country_potential = {
+				has_or_had_tag = PTLMY
+				has_estate_privilege = estate_privilege:fnr_PTLMY_machimoi
+			}
+		}
+
+		fnr_PTLMY_machimoi_6 = {
+			copy_from = a_age_6_revolutions_light_infantry
+			buildable = yes
+
+			strength_damage_done = 0.10
+			morale_damage_taken = -0.10
+
+			country_potential = {
+				has_or_had_tag = PTLMY
+				has_estate_privilege = estate_privilege:fnr_PTLMY_machimoi
+			}
+		}
+

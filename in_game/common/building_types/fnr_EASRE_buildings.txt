@@ -1,4 +1,4 @@
-# Eastern Roman Empire Building Types
+﻿# Eastern Roman Empire Building Types
 # Theme Garrison and Theodosian Walls from the content map use the vanilla buildings instead:
 #   - Thema Headquarters: opened to every ERE by EASRE_thematic_reorganization (allow_thema_headquarters)
 #   - Theodosian Walls:   vanilla unique building; ERE upgrades it with the fnr_EASRE_restore_theodosian_walls decision

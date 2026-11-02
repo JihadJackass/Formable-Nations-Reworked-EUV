@@ -1,0 +1,86 @@
+﻿# Roman Republic - Consular Election
+# Two consuls in name, one ruler in game: an elected term of 4 years, candidates from the nobles
+# (patricians) and burghers (equites), weighted towards military and administrative skill.
+# Re-election of the sitting consul is not allowed (ignore_ruler). Each election fires fnr_RMNRP.3.
+
+fnr_RMNRP_consular_election = {
+	use_election = yes
+	term_duration = 48 # in months
+	max_possible_candidates = 4
+	ignore_ruler = yes
+
+	allowed_estates = { nobles_estate burghers_estate }
+
+	potential = {
+		has_or_had_tag = RMNRP
+		government_type = government_type:republic
+	}
+
+	locked = {
+		has_reform = government_reform:fnr_RMNRP_republican_restoration
+	}
+
+	allowed = {}
+
+	heir_is_allowed = {
+	}
+
+	succession_effect = {
+		trigger_event_non_silently = { id = fnr_RMNRP.3 days = 1 }
+	}
+
+	calc = {
+		if = {
+			limit = {
+				exists = root
+			}
+			add = {
+				desc = "HEIR_SELECTION_ADM_DESC"
+				value = root.adm
+				multiply = 1.5
+			}
+			add = {
+				desc = "HEIR_SELECTION_DIP_DESC"
+				value = root.dip
+			}
+			add = {
+				desc = "HEIR_SELECTION_MIL_DESC"
+				value = root.mil
+				multiply = 1.5
+			}
+			add = {
+				desc = "HEIR_SELECTION_OLDER_HEIR_DESC"
+				value = character_age
+			}
+			if = {
+				limit = { modifier:blocked_from_being_ruler = yes }
+				add = {
+					desc = "HEIR_SELECTION_IS_UNSUITED_TO_RULE_DESC"
+					value = -1000
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				not = { exists = root }
+			}
+			add = {
+				desc = "HEIR_SELECTION_ADM_DESC"
+				value = 1.5
+			}
+			add = {
+				desc = "HEIR_SELECTION_DIP_DESC"
+				value = 1
+			}
+			add = {
+				desc = "HEIR_SELECTION_MIL_DESC"
+				value = 1.5
+			}
+			add = {
+				desc = "HEIR_SELECTION_OLDER_HEIR_DESC"
+				value = 1
+			}
+		}
+	}
+}

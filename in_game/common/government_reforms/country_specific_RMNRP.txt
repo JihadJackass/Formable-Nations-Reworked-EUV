@@ -1,0 +1,36 @@
+﻿# Roman Republic Specific Government Reforms
+
+	# Republican Restoration - added on formation; locks the Consular Election
+		fnr_RMNRP_republican_restoration = {
+			unique = yes
+			potential = {
+				has_or_had_tag = RMNRP
+				government_type = government_type:republic
+			}
+			country_modifier = {
+				monthly_republican_tradition = 0.1
+				research_speed_modifier = 0.05
+				global_estate_target_satisfaction = 0.03
+			}
+			years = 2
+			block_for_rebel = yes
+		}
+
+	# Cursus Honorum - unlocked by RMNRP_cursus_honorum: the ladder of offices
+		fnr_RMNRP_cursus_honorum = {
+			unique = yes
+			potential = {
+				has_or_had_tag = RMNRP
+				government_type = government_type:republic
+			}
+			allow = {
+				has_advance = RMNRP_cursus_honorum
+			}
+			country_modifier = {
+				country_cabinet_efficiency = 0.10
+				global_max_control = 0.05
+				monthly_republican_tradition = 0.05
+			}
+			years = 2
+			block_for_rebel = yes
+		}

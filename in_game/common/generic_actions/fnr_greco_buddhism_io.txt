@@ -778,11 +778,19 @@
 				international_organization_type = international_organization_type:fnr_bactria_synod_io
 			}
 			enabled = {
-				#always = no
+				# FNR Pax Romana: needs Alexandria, and no Ptolemaic Kingdom yet
+				scope:actor = {
+					owns = location:alexandria
+					NOT = { tag_exists = PTLMY }
+					fnr_PTLMY_allowed = yes
+				}
 			}
 		}
 
 		effect = {
+			scope:actor = {
+				trigger_event_non_silently = fnr_PTLMY.2
+			}
 		}
 		
 		ai_will_do = {

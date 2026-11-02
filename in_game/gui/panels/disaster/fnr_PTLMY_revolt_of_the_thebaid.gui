@@ -1,0 +1,115 @@
+# The Revolt of the Thebaid (fnr_PTLMY_revolt_of_the_thebaid) - based on vanilla decline_of_empire.gui.
+# Two stacked cards: Basileus and Pharaoh, months of revolt.
+disaster_panel = {
+
+	##################################### TOP HEADER #####################################
+
+
+
+	##################################### MAIN IMAGE #####################################
+
+
+	##################################### TAB NAME #####################################
+
+	blockoverride "disaster_secondary_tab" {
+		margin_top = 10
+		spacing = 5
+		disaster_card_expandable = {
+			blockoverride "header_button_onclick" {
+				onclick = "[LateralView.Vars.Toggle( 'requirements_toggled' )]"
+			}
+			blockoverride "header_text" {
+				text = "END_REQUIREMENTS"
+			}
+			blockoverride "header_icon" {
+				texture = "gfx/interface/icons/disasters/end_requirements_green.dds"
+			}
+			blockoverride "bottom_content" {
+				TooltipRequirementsList = {
+					textcontext = "[DisasterView.GetDisaster.GetType.GetEndConditions]"
+				}
+			}
+			blockoverride "bottom_content_onclick" {
+				visible = "[LateralView.Vars.Exists( 'requirements_toggled' )]"
+			}
+			blockoverride "icon_replace_visible_yes" {
+				visible = "[LateralView.Vars.Exists( 'requirements_toggled' )]"
+			}
+			blockoverride "icon_replace_visible_not" {
+				visible = "[Not(LateralView.Vars.Exists( 'requirements_toggled' ))]"
+			}
+		}
+	}
+
+	##################################### SUBHEADER #####################################
+
+	blockoverride "disaster_main_content_subheader"{}
+
+	##################################### MAIN CONTENT #####################################
+
+
+	blockoverride "main_content" {
+		vbox = {
+			layoutpolicy_horizontal = expanding
+			spacing = 5
+
+			# Basileus and Pharaoh
+			horizontal_scroll_card = {
+				blockoverride "card_visible" {}
+				blockoverride "text_top" {
+					text = "fnr_PTLMY_panel_crown_title"
+					default_format = "#yellow_titles"
+				}
+				blockoverride "text_bottom" {
+					text = "fnr_PTLMY_panel_crown_desc"
+				}
+				blockoverride "number_right" {
+					expand = {}
+					text_single = {
+						layoutpolicy_horizontal = expanding
+						size = { -1 30 }
+						autoresize = no
+						align = center|nobaseline
+						text = "[DisasterView.GetDisaster.GetOwner.MakeScope.GetVariable('fnr_PTLMY_crown').GetValue|0]"
+					}
+					progressbar = {
+						size = { 100 10 }
+						using = morale_progressbar_bar
+						value = "[FixedPointToFloat(DisasterView.GetDisaster.GetOwner.MakeScope.GetVariable('fnr_PTLMY_crown').GetValue)]"
+					}
+					expand = {}
+				}
+				blockoverride "number_right_2" {}
+			}
+
+			# The revolt
+			horizontal_scroll_card = {
+				blockoverride "card_visible" {}
+				blockoverride "text_top" {
+					text = "fnr_PTLMY_panel_revolt_title"
+					default_format = "#yellow_titles"
+				}
+				blockoverride "text_bottom" {
+					text = "fnr_PTLMY_panel_revolt_desc"
+				}
+				blockoverride "number_right" {
+					expand = {}
+					text_single = {
+						layoutpolicy_horizontal = expanding
+						size = { -1 30 }
+						autoresize = no
+						align = center|nobaseline
+						text = "fnr_PTLMY_panel_months_value"
+					}
+					progressbar = {
+						size = { 100 10 }
+						using = morale_progressbar_bar
+						value = "[Multiply_float(FixedPointToFloat(DisasterView.GetDisaster.GetOwner.MakeScope.GetVariable('fnr_PTLMY_revolt_months').GetValue), '(float)1.667')]"
+					}
+					expand = {}
+				}
+				blockoverride "number_right_2" {}
+			}
+		}
+	}
+}

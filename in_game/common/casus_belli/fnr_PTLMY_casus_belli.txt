@@ -1,0 +1,21 @@
+﻿#root is country
+#scope:target is the target
+
+# The Syrian Wars - the Ptolemies' claim on Coele-Syria, Cyprus, Cyrenaica and the islands
+fnr_PTLMY_cb_syrian_wars = {
+	create_visible = {
+		has_or_had_tag = PTLMY
+	}
+	create_enabled = {
+		custom_tooltip = {
+			text = fnr_PTLMY_cb_syrian_wars_valid_tt
+			scope:target = {
+				any_owned_location = {
+					fnr_PTLMY_syrian_war_lands = yes
+				}
+			}
+		}
+	}
+	speed = 10
+	war_goal_type = fnr_PTLMY_syrian_wars_wargoal
+}

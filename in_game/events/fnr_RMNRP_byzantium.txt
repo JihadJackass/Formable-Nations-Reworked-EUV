@@ -1,0 +1,254 @@
+﻿namespace = fnr_RMNRP_byz
+
+# ==========================================================================
+# Pax Romana - Rome and Byzantium: "One Rome"
+#  .1  The Romans Reunited        - to Rome: the Reunion was accepted (interaction fnr_RMNRP_propose_reunion)
+#  .2  Constantinople Refuses     - to Rome: the Reunion was refused
+#  .3  One Rome                   - to Byzantium: Concordia 100 while in the Socii (yearly upkeep)
+#  .4  One Rome Accepted          - to Rome
+#  .5  The Porphyrogenita         - to Byzantium: marriage offer (decision fnr_RMNRP_wed_the_porphyrogenita)
+#  .6  A Purple Marriage          - to Rome: the marriage was accepted
+#  .7  The Purple Inheritance     - to Rome: ~5% a year with the claim
+# ==========================================================================
+
+# 1 - The Romans Reunited
+fnr_RMNRP_byz.1 = {
+	type = country_event
+	title = fnr_RMNRP_byz.1.title
+	desc = fnr_RMNRP_byz.1.desc
+	outcome = positive
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_RMNRP_byz.1.a
+		add_prestige = prestige_severe_bonus
+		add_legitimacy = legitimacy_mild_bonus
+	}
+}
+
+# 2 - Constantinople Refuses
+fnr_RMNRP_byz.2 = {
+	type = country_event
+	title = fnr_RMNRP_byz.2.title
+	desc = fnr_RMNRP_byz.2.desc
+	outcome = negative
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:clergy_estate }
+	}
+
+	# A - Then the legions will decide
+	option = {
+		name = fnr_RMNRP_byz.2.a
+		ai_chance = { base = 60 }
+		add_prestige = prestige_mild_bonus
+		custom_tooltip = fnr_RMNRP_restore_east_tt
+	}
+
+	# B - Patience; Rome was not built in a day
+	option = {
+		name = fnr_RMNRP_byz.2.b
+		ai_chance = { base = 40 }
+		fnr_RMNRP_change_concordia_effect = { VALUE = 10 }
+		custom_tooltip = fnr_RMNRP_concordia_plus_10_tt
+	}
+}
+
+# 3 - One Rome (to Byzantium)
+fnr_RMNRP_byz.3 = {
+	type = country_event
+	title = fnr_RMNRP_byz.3.title
+	desc = fnr_RMNRP_byz.3.desc
+	outcome = neutral
+
+	trigger = {
+		exists = scope:fnr_RMNRP_rome
+		is_subject = no
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:crown_estate }
+		save_scope_as = fnr_RMNRP_byz
+	}
+
+	# A - One Rome, one people
+	option = {
+		name = fnr_RMNRP_byz.3.a
+		ai_chance = {
+			base = 40
+			modifier = {
+				add = 40
+				fnr_RMNRP_byz_threatened_by_turks = yes
+			}
+			modifier = {
+				add = 20
+				is_situation_active = situation:rise_of_the_ottomans
+			}
+		}
+		custom_tooltip = fnr_RMNRP_one_rome_accept_tt
+		hidden_effect = {
+			scope:fnr_RMNRP_rome = { trigger_event_non_silently = fnr_RMNRP_byz.4 }
+		}
+		fnr_RMNRP_absorb_byzantium_effect = yes
+	}
+
+	# B - Constantinople bows to no one
+	option = {
+		name = fnr_RMNRP_byz.3.b
+		ai_chance = { base = 60 }
+		add_prestige = prestige_mild_bonus
+		scope:fnr_RMNRP_rome = {
+			fnr_RMNRP_change_concordia_effect = { VALUE = -30 }
+		}
+		custom_tooltip = fnr_RMNRP_one_rome_refuse_tt
+	}
+}
+
+# 4 - One Rome Accepted (to Rome)
+fnr_RMNRP_byz.4 = {
+	type = country_event
+	title = fnr_RMNRP_byz.4.title
+	desc = fnr_RMNRP_byz.4.desc
+	outcome = positive
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_RMNRP_byz.4.a
+		add_prestige = prestige_severe_bonus
+		add_stability = stability_mild_bonus
+	}
+}
+
+# 5 - The Porphyrogenita (to Byzantium)
+fnr_RMNRP_byz.5 = {
+	type = country_event
+	title = fnr_RMNRP_byz.5.title
+	desc = fnr_RMNRP_byz.5.desc
+	outcome = neutral
+
+	trigger = {
+		exists = scope:fnr_RMNRP_rome
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:clergy_estate }
+	}
+
+	# A - A purple-born bride for the Emperor of the West
+	option = {
+		name = fnr_RMNRP_byz.5.a
+		ai_chance = {
+			base = 40
+			modifier = {
+				add = 40
+				fnr_RMNRP_byz_threatened_by_turks = yes
+			}
+		}
+		add_gold = 150
+		add_opinion = { modifier = fnr_RMNRP_purple_marriage target = scope:fnr_RMNRP_rome }
+		scope:fnr_RMNRP_rome = {
+			set_variable = fnr_RMNRP_purple_claim
+			add_opinion = { modifier = fnr_RMNRP_purple_marriage target = root }
+			trigger_event_non_silently = fnr_RMNRP_byz.6
+		}
+		custom_tooltip = fnr_RMNRP_marriage_accept_tt
+	}
+
+	# B - A porphyrogenita does not marry a barbarian usurper
+	option = {
+		name = fnr_RMNRP_byz.5.b
+		ai_chance = { base = 50 }
+		scope:fnr_RMNRP_rome = {
+			fnr_RMNRP_change_concordia_effect = { VALUE = -10 }
+		}
+	}
+}
+
+# 6 - A Purple Marriage (to Rome)
+fnr_RMNRP_byz.6 = {
+	type = country_event
+	title = fnr_RMNRP_byz.6.title
+	desc = fnr_RMNRP_byz.6.desc
+	outcome = positive
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:clergy_estate }
+	}
+
+	option = {
+		name = fnr_RMNRP_byz.6.a
+		add_legitimacy = legitimacy_mild_bonus
+		add_prestige = prestige_mild_bonus
+		custom_tooltip = fnr_RMNRP_purple_claim_tt
+	}
+}
+
+# 7 - The Purple Inheritance (to Rome)
+fnr_RMNRP_byz.7 = {
+	type = country_event
+	title = fnr_RMNRP_byz.7.title
+	desc = fnr_RMNRP_byz.7.desc
+	fire_only_once = yes
+	outcome = positive
+
+	trigger = {
+		has_variable = fnr_RMNRP_purple_claim
+		exists = c:BYZ
+		c:BYZ = { is_subject = no }
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+		save_scope_as = fnr_RMNRP_rome
+		c:BYZ = { save_scope_as = fnr_RMNRP_byz }
+	}
+
+	option = {
+		name = fnr_RMNRP_byz.7.a
+		remove_variable = fnr_RMNRP_purple_claim
+		add_prestige = prestige_severe_bonus
+		custom_tooltip = fnr_RMNRP_purple_inheritance_tt
+		fnr_RMNRP_absorb_byzantium_effect = yes
+	}
+}

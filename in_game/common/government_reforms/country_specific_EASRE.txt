@@ -1,4 +1,4 @@
-# Eastern Roman Empire Specific Government Reforms
+﻿# Eastern Roman Empire Specific Government Reforms
 # Unlocked by the path chosen in flavor_EASRE.2 (variables fnr_EASRE_path_orthodoxy / fnr_EASRE_path_hellenistic)
 
 	# Path A - Basileus Autokrator (unlocks the Anathematize decision)

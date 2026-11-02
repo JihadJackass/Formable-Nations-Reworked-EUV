@@ -1,0 +1,44 @@
+﻿# Roman Republic opinion modifiers
+
+io_opinion_fnr_RMNRP_socii_io = {
+	value = 15
+}
+
+# Socii - a new member's opinion of the Republic
+fnr_RMNRP_sworn_socius = {
+	value = 15
+	yearly_decay = 1
+}
+
+# Renew the Foedera - each member's opinion of the Republic
+fnr_RMNRP_renewed_foedus = {
+	value = 15
+	yearly_decay = 1
+}
+
+# fnr_RMNRP.9 - the Socii's opinion of the Republic
+fnr_RMNRP_granted_citizenship = {
+	value = 40
+	yearly_decay = 1
+}
+
+fnr_RMNRP_denied_citizenship = {
+	value = -40
+	yearly_decay = 1
+}
+
+# Byzantium (One Rome)
+fnr_RMNRP_embassy_of_romanitas = {
+	value = 25
+	yearly_decay = 1
+}
+
+fnr_RMNRP_refused_reunion = {
+	value = -30
+	yearly_decay = 1
+}
+
+fnr_RMNRP_purple_marriage = {
+	value = 40
+	yearly_decay = 1
+}

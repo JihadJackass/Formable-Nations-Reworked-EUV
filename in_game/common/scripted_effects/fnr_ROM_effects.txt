@@ -1,0 +1,601 @@
+﻿# Roman Empire scripted effects (Pax Romana)
+
+# ---------- Legion Loyalty (0-100) ----------
+
+fnr_ROM_clear_legion_tiers_effect = {
+	if = { limit = { has_country_modifier = fnr_ROM_legions_loyal } remove_country_modifier = fnr_ROM_legions_loyal }
+	if = { limit = { has_country_modifier = fnr_ROM_legions_steady } remove_country_modifier = fnr_ROM_legions_steady }
+	if = { limit = { has_country_modifier = fnr_ROM_legions_restless } remove_country_modifier = fnr_ROM_legions_restless }
+	if = { limit = { has_country_modifier = fnr_ROM_legions_mutinous } remove_country_modifier = fnr_ROM_legions_mutinous }
+}
+
+# Shows Legion Loyalty as an always-visible country modifier (one of four tiers). Hidden.
+fnr_ROM_refresh_legion_tier_effect = {
+	hidden_effect = {
+		fnr_ROM_clear_legion_tiers_effect = yes
+		if = {
+			limit = { has_variable = fnr_ROM_legion_loyalty }
+			if = {
+				limit = { var:fnr_ROM_legion_loyalty >= 75 }
+				add_country_modifier = { modifier = fnr_ROM_legions_loyal years = -1 }
+			}
+			else_if = {
+				limit = { var:fnr_ROM_legion_loyalty >= 50 }
+				add_country_modifier = { modifier = fnr_ROM_legions_steady years = -1 }
+			}
+			else_if = {
+				limit = { var:fnr_ROM_legion_loyalty >= 25 }
+				add_country_modifier = { modifier = fnr_ROM_legions_restless years = -1 }
+			}
+			else = {
+				add_country_modifier = { modifier = fnr_ROM_legions_mutinous years = -1 }
+			}
+		}
+	}
+}
+
+# Silent change, kept in range. Used by the yearly upkeep. Use with VALUE = amount
+fnr_ROM_shift_loyalty_effect = {
+	hidden_effect = {
+		if = {
+			limit = { NOT = { has_variable = fnr_ROM_legion_loyalty } }
+			set_variable = { name = fnr_ROM_legion_loyalty value = 60 }
+		}
+		change_variable = { name = fnr_ROM_legion_loyalty add = $VALUE$ }
+		if = {
+			limit = { var:fnr_ROM_legion_loyalty > 100 }
+			set_variable = { name = fnr_ROM_legion_loyalty value = 100 }
+		}
+		else_if = {
+			limit = { var:fnr_ROM_legion_loyalty < 0 }
+			set_variable = { name = fnr_ROM_legion_loyalty value = 0 }
+		}
+	}
+}
+
+# Visible change: shows one clean tooltip line, then refreshes the tier.
+# Use with VALUE = amount and TT = plus_5 / minus_10 etc. (fnr_ROM_loyalty_<TT>_tt)
+fnr_ROM_change_loyalty_effect = {
+	custom_tooltip = fnr_ROM_loyalty_$TT$_tt
+	fnr_ROM_shift_loyalty_effect = { VALUE = $VALUE$ }
+	fnr_ROM_refresh_legion_tier_effect = yes
+}
+
+# Sets Legion Loyalty outright (origins, the end of the Crisis). Use with VALUE
+fnr_ROM_set_loyalty_effect = {
+	hidden_effect = {
+		set_variable = { name = fnr_ROM_legion_loyalty value = $VALUE$ }
+	}
+	fnr_ROM_refresh_legion_tier_effect = yes
+}
+
+# Yearly: what the legions think of their Emperor
+fnr_ROM_yearly_legion_effect = {
+	if = {
+		limit = { NOT = { has_variable = fnr_ROM_legion_loyalty } }
+		fnr_ROM_set_loyalty_effect = { VALUE = 60 }
+	}
+	# Drift 1 a year towards 50
+	if = {
+		limit = { var:fnr_ROM_legion_loyalty > 50 }
+		fnr_ROM_shift_loyalty_effect = { VALUE = -1 }
+	}
+	else_if = {
+		limit = { var:fnr_ROM_legion_loyalty < 50 }
+		fnr_ROM_shift_loyalty_effect = { VALUE = 1 }
+	}
+	# Long, exhausting wars
+	if = {
+		limit = { war_exhaustion >= 5 }
+		fnr_ROM_shift_loyalty_effect = { VALUE = -3 }
+	}
+	# The Emperor's standing
+	if = {
+		limit = { legitimacy < 40 }
+		fnr_ROM_shift_loyalty_effect = { VALUE = -3 }
+	}
+	else_if = {
+		limit = { legitimacy >= 80 }
+		fnr_ROM_shift_loyalty_effect = { VALUE = 1 }
+	}
+	# Victories and veteran legions
+	if = {
+		limit = { army_tradition >= 50 }
+		fnr_ROM_shift_loyalty_effect = { VALUE = 2 }
+	}
+	# Unpaid legions
+	if = {
+		limit = { gold < 0 }
+		fnr_ROM_shift_loyalty_effect = { VALUE = -5 }
+	}
+	# Castra Legionis: +1, +2 with 3, +3 with 6
+	if = {
+		limit = { any_owned_location = { has_building = building_type:fnr_ROM_castra_legionis } }
+		fnr_ROM_shift_loyalty_effect = { VALUE = 1 }
+	}
+	if = {
+		limit = {
+			any_owned_location = {
+				count >= 3
+				has_building = building_type:fnr_ROM_castra_legionis
+			}
+		}
+		fnr_ROM_shift_loyalty_effect = { VALUE = 1 }
+	}
+	if = {
+		limit = {
+			any_owned_location = {
+				count >= 6
+				has_building = building_type:fnr_ROM_castra_legionis
+			}
+		}
+		fnr_ROM_shift_loyalty_effect = { VALUE = 1 }
+	}
+	# The Imperial Mint pays the legions on time
+	if = {
+		limit = { any_owned_location = { has_building = building_type:fnr_ROM_imperial_mint } }
+		fnr_ROM_shift_loyalty_effect = { VALUE = 1 }
+	}
+	# Privileges
+	if = {
+		limit = { has_estate_privilege = estate_privilege:fnr_ROM_praetorian_guard }
+		fnr_ROM_shift_loyalty_effect = { VALUE = 2 }
+	}
+	if = {
+		limit = { has_estate_privilege = estate_privilege:fnr_ROM_ordo_senatorius }
+		fnr_ROM_shift_loyalty_effect = { VALUE = -1 }
+	}
+	# Lex de Imperio
+	if = {
+		limit = { has_policy = fnr_ROM_lex_exercitus_policy }
+		fnr_ROM_shift_loyalty_effect = { VALUE = 3 }
+	}
+	else_if = {
+		limit = { has_policy = fnr_ROM_lex_senatus_policy }
+		fnr_ROM_shift_loyalty_effect = { VALUE = -1 }
+	}
+	else_if = {
+		limit = { has_policy = fnr_ROM_lex_dynastica_policy }
+		fnr_ROM_shift_loyalty_effect = { VALUE = -2 }
+	}
+	# Reforms
+	if = {
+		limit = { fnr_ROM_has_tetrarchy = yes }
+		fnr_ROM_shift_loyalty_effect = { VALUE = 2 }
+	}
+	if = {
+		limit = { has_reform = government_reform:fnr_ROM_principate }
+		fnr_ROM_shift_loyalty_effect = { VALUE = -1 }
+	}
+	if = {
+		limit = { has_reform = government_reform:fnr_ROM_dominate }
+		fnr_ROM_shift_loyalty_effect = { VALUE = 1 }
+	}
+	# The Great Republic: generals sit in the Senate. A strong Senate keeps the legions loyal;
+	# mutinous legions tear the Senate apart.
+	if = {
+		limit = { has_reform = government_reform:fnr_ROM_senate_of_generals }
+		if = {
+			limit = {
+				has_variable = fnr_RMNRP_senate_authority
+				var:fnr_RMNRP_senate_authority >= 60
+			}
+			fnr_ROM_shift_loyalty_effect = { VALUE = 2 }
+		}
+		if = {
+			limit = { var:fnr_ROM_legion_loyalty < 25 }
+			fnr_RMNRP_change_senate_effect = { VALUE = -2 }
+		}
+	}
+	# Overstretch: too many frontiers for one Emperor (the Tetrarchy solves it)
+	if = {
+		limit = {
+			fnr_ROM_has_tetrarchy = no
+			fnr_ROM_dioceses_at_least = { VALUE = 6 }
+		}
+		fnr_ROM_shift_loyalty_effect = { VALUE = -2 }
+	}
+	if = {
+		limit = {
+			fnr_ROM_has_tetrarchy = no
+			fnr_ROM_dioceses_at_least = { VALUE = 9 }
+		}
+		fnr_ROM_shift_loyalty_effect = { VALUE = -2 }
+	}
+	fnr_ROM_refresh_legion_tier_effect = yes
+}
+
+# ---------- The Dioceses ----------
+
+fnr_ROM_clear_diocese_tiers_effect = {
+	if = { limit = { has_country_modifier = fnr_ROM_dioceses_tier_1 } remove_country_modifier = fnr_ROM_dioceses_tier_1 }
+	if = { limit = { has_country_modifier = fnr_ROM_dioceses_tier_2 } remove_country_modifier = fnr_ROM_dioceses_tier_2 }
+	if = { limit = { has_country_modifier = fnr_ROM_dioceses_tier_3 } remove_country_modifier = fnr_ROM_dioceses_tier_3 }
+	if = { limit = { has_country_modifier = fnr_ROM_dioceses_tier_4 } remove_country_modifier = fnr_ROM_dioceses_tier_4 }
+	if = { limit = { has_country_modifier = fnr_ROM_dioceses_tier_5 } remove_country_modifier = fnr_ROM_dioceses_tier_5 }
+}
+
+fnr_ROM_refresh_diocese_tier_effect = {
+	hidden_effect = {
+		fnr_ROM_clear_diocese_tiers_effect = yes
+		if = {
+			limit = { has_variable = fnr_ROM_dioceses }
+			if = {
+				limit = { var:fnr_ROM_dioceses >= 11 }
+				add_country_modifier = { modifier = fnr_ROM_dioceses_tier_5 years = -1 }
+			}
+			else_if = {
+				limit = { var:fnr_ROM_dioceses >= 9 }
+				add_country_modifier = { modifier = fnr_ROM_dioceses_tier_4 years = -1 }
+			}
+			else_if = {
+				limit = { var:fnr_ROM_dioceses >= 6 }
+				add_country_modifier = { modifier = fnr_ROM_dioceses_tier_3 years = -1 }
+			}
+			else_if = {
+				limit = { var:fnr_ROM_dioceses >= 3 }
+				add_country_modifier = { modifier = fnr_ROM_dioceses_tier_2 years = -1 }
+			}
+			else_if = {
+				limit = { var:fnr_ROM_dioceses >= 1 }
+				add_country_modifier = { modifier = fnr_ROM_dioceses_tier_1 years = -1 }
+			}
+		}
+	}
+}
+
+# Restores one diocese. Use with KEY = italia, galliae, ...
+fnr_ROM_restore_diocese_effect = {
+	set_variable = fnr_ROM_diocese_$KEY$
+	add_country_modifier = { modifier = fnr_ROM_diocese_$KEY$ years = -1 }
+	hidden_effect = {
+		if = {
+			limit = { NOT = { has_variable = fnr_ROM_dioceses } }
+			set_variable = { name = fnr_ROM_dioceses value = 0 }
+		}
+		change_variable = { name = fnr_ROM_dioceses add = 1 }
+	}
+	custom_tooltip = fnr_ROM_diocese_counter_tt
+	fnr_ROM_refresh_diocese_tier_effect = yes
+	add_prestige = prestige_mild_bonus
+	add_legitimacy = legitimacy_weak_bonus
+	fnr_ROM_change_loyalty_effect = { VALUE = 5 TT = plus_5 }
+	if = {
+		limit = { fnr_ROM_dioceses_at_least = { VALUE = 11 } }
+		trigger_event_non_silently = fnr_ROM.14
+	}
+}
+
+# ---------- Origins ----------
+
+# Called from the ROM_f and ROM_BYZ_f form_effects. Works out where this Rome came from,
+# sets the starting Legion Loyalty and fires the opening event. Only the first formation counts.
+fnr_ROM_formation_effect = {
+	if = {
+		limit = { NOT = { has_variable = fnr_ROM_formed } }
+		hidden_effect = {
+			set_variable = fnr_ROM_formed
+			if = {
+				limit = { has_variable = fnr_RMNRP_great_republic }
+				set_variable = fnr_ROM_origin_great_republic
+				set_variable = { name = fnr_ROM_legion_loyalty value = 60 }
+			}
+			else_if = {
+				limit = { has_variable = fnr_RMNRP_augustus }
+				set_variable = fnr_ROM_origin_augustus
+				set_variable = { name = fnr_ROM_legion_loyalty value = 70 }
+			}
+			else_if = {
+				limit = { has_or_had_tag = RMNRP }
+				set_variable = fnr_ROM_origin_principate
+				set_variable = { name = fnr_ROM_legion_loyalty value = 65 }
+			}
+			else_if = {
+				limit = { has_or_had_tag = WESRE }
+				set_variable = fnr_ROM_origin_renovatio
+				set_variable = { name = fnr_ROM_legion_loyalty value = 60 }
+			}
+			else_if = {
+				limit = {
+					OR = {
+						has_or_had_tag = BYZ
+						has_or_had_tag = EASRE
+						has_or_had_tag = TRE
+					}
+				}
+				set_variable = fnr_ROM_origin_new_rome
+				set_variable = { name = fnr_ROM_legion_loyalty value = 55 }
+			}
+			else = {
+				set_variable = fnr_ROM_origin_restorer
+				set_variable = { name = fnr_ROM_legion_loyalty value = 50 }
+			}
+			set_variable = { name = fnr_ROM_dioceses value = 0 }
+		}
+		fnr_ROM_refresh_legion_tier_effect = yes
+		custom_tooltip = fnr_ROM_formation_tt
+		if = {
+			limit = { has_variable = fnr_ROM_origin_great_republic }
+			add_reform = government_reform:fnr_ROM_senate_of_generals
+		}
+		trigger_event_non_silently = fnr_ROM.1
+	}
+}
+
+# ---------- Usurpers ----------
+
+# Pops of a saved location's whole province turn against us and join scope:fnr_ROM_rebel. Use with LOCATION
+fnr_ROM_province_joins_rebels_effect = {
+	if = {
+		limit = {
+			exists = scope:$LOCATION$
+			exists = scope:fnr_ROM_rebel
+		}
+		scope:$LOCATION$.province = {
+			every_location_in_province = {
+				limit = { owner = root }
+				every_pop = {
+					limit = { owner = root }
+					add_pop_satisfaction = pop_satisfaction_ultimate_penalty
+					change_pop_allegiance = scope:fnr_ROM_rebel
+				}
+			}
+		}
+	}
+}
+
+# Picks the heart of a usurpation: a non-capital location outside the capital's region (a far diocese)
+fnr_ROM_pick_far_location_effect = {
+	random_owned_location = {
+		limit = {
+			is_capital = no
+			NOT = { region = root.capital.region }
+		}
+		save_scope_as = fnr_ROM_revolt_1
+	}
+	if = {
+		limit = { NOT = { exists = scope:fnr_ROM_revolt_1 } }
+		random_owned_location = {
+			limit = { is_capital = no }
+			save_scope_as = fnr_ROM_revolt_1
+		}
+	}
+}
+
+# Picks the heart of a secession in one region, or a far diocese if we hold too little there. Use with REGION
+fnr_ROM_pick_region_location_effect = {
+	if = {
+		limit = {
+			any_owned_location = {
+				count >= 2
+				is_capital = no
+				region = region:$REGION$
+			}
+		}
+		random_owned_location = {
+			limit = {
+				is_capital = no
+				region = region:$REGION$
+			}
+			save_scope_as = fnr_ROM_revolt_1
+		}
+	}
+	else = {
+		fnr_ROM_pick_far_location_effect = yes
+	}
+}
+
+# A usurper rebellion led by a male noble, in up to four provinces around scope:fnr_ROM_revolt_1
+# (picked first with one of the pick effects above). Use with NAME = rebel name key.
+fnr_ROM_raise_usurper_effect = {
+	if = {
+		limit = { exists = scope:fnr_ROM_revolt_1 }
+		create_rebel = {
+			category = pretender
+			name = $NAME$
+			save_scope_as = fnr_ROM_rebel
+		}
+	}
+	if = {
+		limit = { exists = scope:fnr_ROM_rebel }
+		hidden_effect = {
+			set_variable = fnr_ROM_usurper_active
+			random_character = {
+				limit = {
+					is_alive = yes
+					age_in_years >= 25
+					has_estate = estate_type:nobles_estate
+					is_female = no
+					NOT = { this = root.ruler }
+				}
+				change_character_allegiance = scope:fnr_ROM_rebel
+				save_scope_as = fnr_ROM_usurper_leader
+			}
+			if = {
+				limit = { exists = scope:fnr_ROM_usurper_leader }
+				set_variable = { name = fnr_ROM_usurper_leader value = scope:fnr_ROM_usurper_leader }
+			}
+			random_owned_location = {
+				limit = {
+					is_capital = no
+					region = scope:fnr_ROM_revolt_1.region
+					NOT = { this.province = scope:fnr_ROM_revolt_1.province }
+				}
+				save_scope_as = fnr_ROM_revolt_2
+			}
+			random_owned_location = {
+				limit = {
+					is_capital = no
+					region = scope:fnr_ROM_revolt_1.region
+					NOT = { this.province = scope:fnr_ROM_revolt_1.province }
+					NOT = { this.province = scope:fnr_ROM_revolt_2.province }
+				}
+				save_scope_as = fnr_ROM_revolt_3
+			}
+			random_owned_location = {
+				limit = {
+					is_capital = no
+					region = scope:fnr_ROM_revolt_1.region
+					NOT = { this.province = scope:fnr_ROM_revolt_1.province }
+					NOT = { this.province = scope:fnr_ROM_revolt_2.province }
+					NOT = { this.province = scope:fnr_ROM_revolt_3.province }
+				}
+				save_scope_as = fnr_ROM_revolt_4
+			}
+			fnr_ROM_province_joins_rebels_effect = { LOCATION = fnr_ROM_revolt_1 }
+			fnr_ROM_province_joins_rebels_effect = { LOCATION = fnr_ROM_revolt_2 }
+			fnr_ROM_province_joins_rebels_effect = { LOCATION = fnr_ROM_revolt_3 }
+			fnr_ROM_province_joins_rebels_effect = { LOCATION = fnr_ROM_revolt_4 }
+			scope:fnr_ROM_rebel = {
+				add_rebel_progress = 1
+			}
+			add_country_modifier = { modifier = fnr_rising_imminent years = 1 mode = add_and_extend }
+		}
+	}
+}
+
+# ---------- Upkeep ----------
+
+fnr_ROM_yearly_upkeep_effect = {
+	fnr_ROM_yearly_legion_effect = yes
+	fnr_ROM_count_foederati_effect = yes
+	# Keep the diocese tier in step (a reload or a lost save never leaves it stale)
+	fnr_ROM_refresh_diocese_tier_effect = yes
+}
+
+# The Great Republic picks its name (fnr_ROM.1). Use with NAME = country name key
+fnr_ROM_great_republic_name_effect = {
+	change_country_name = $NAME$
+	fnr_ROM_great_republic_proclaimed_effect = yes
+}
+
+# The Great Republic's flag, tradition and Senate (with or without a new name)
+fnr_ROM_great_republic_proclaimed_effect = {
+	change_country_flag = fnr_ROM_great_republic_flag
+	add_republican_tradition = republican_tradition_mild_bonus
+	fnr_RMNRP_change_senate_effect = { VALUE = 5 }
+	custom_tooltip = fnr_RMNRP_senate_plus_5_tt
+}
+
+# ---------- The Foederati ----------
+
+# Creates the Foederati with root as leader
+fnr_ROM_create_foederati_effect = {
+	if = {
+		limit = { NOT = { exists = international_organization:fnr_ROM_foederati_io } }
+		custom_tooltip = fnr_ROM_foederati_created_tt
+		hidden_effect = {
+			create_international_organization = {
+				type = international_organization_type:fnr_ROM_foederati_io
+				add_country_to_international_organization = ROOT
+				set_leader_country = ROOT
+			}
+		}
+	}
+}
+
+# The Republic's Socii become the Foederati (fnr_ROM.1): every member moves over, then the Socii disbands
+fnr_ROM_convert_socii_effect = {
+	if = {
+		limit = {
+			exists = international_organization:fnr_RMNRP_socii_io
+			international_organization:fnr_RMNRP_socii_io = { leader_country ?= root }
+		}
+		custom_tooltip = fnr_ROM_socii_converted_tt
+		hidden_effect = {
+			fnr_ROM_create_foederati_effect = yes
+			international_organization:fnr_RMNRP_socii_io = {
+				every_international_organization_member = {
+					limit = { NOT = { this = root } }
+					set_variable = fnr_ROM_former_socius
+					save_scope_as = fnr_ROM_socius
+					international_organization:fnr_ROM_foederati_io = {
+						add_country_to_international_organization = scope:fnr_ROM_socius
+					}
+				}
+			}
+			international_organization:fnr_RMNRP_socii_io = {
+				every_international_organization_member = {
+					limit = { NOT = { this = root } }
+					save_scope_as = fnr_ROM_socius_leaving
+					international_organization:fnr_RMNRP_socii_io = {
+						remove_country_from_international_organization = scope:fnr_ROM_socius_leaving
+					}
+				}
+				remove_country_from_international_organization = root
+			}
+		}
+	}
+}
+
+# Yearly: member count (not counting us) for the leader bonus
+fnr_ROM_count_foederati_effect = {
+	set_variable = { name = fnr_ROM_foederati_members value = 0 }
+	if = {
+		limit = { exists = international_organization:fnr_ROM_foederati_io }
+		every_country = {
+			limit = {
+				NOT = { this = root }
+				is_member_of_international_organization = international_organization:fnr_ROM_foederati_io
+			}
+			root = { change_variable = { name = fnr_ROM_foederati_members add = 1 } }
+		}
+	}
+}
+
+# ---------- Client kingdoms ----------
+
+# Carves the client kingdom KEY out of our non-capital lands in its areas (fnr_ROM_client_area_KEY):
+# a new kingdom, named for KEY, our vassal and a member of the Foederati.
+fnr_ROM_create_client_effect = {
+	set_variable = fnr_ROM_client_$KEY$
+	add_prestige = prestige_mild_bonus
+	custom_tooltip = fnr_ROM_client_$KEY$_tt
+	hidden_effect = {
+		random_owned_location = {
+			limit = {
+				is_capital = no
+				fnr_ROM_client_area_$KEY$ = yes
+			}
+			save_scope_as = fnr_ROM_client_seat
+		}
+		if = {
+			limit = { exists = scope:fnr_ROM_client_seat }
+			scope:fnr_ROM_client_seat = {
+				create_country_from_location = {
+					save_scope_as = fnr_ROM_client
+					set_country_rank = country_rank:rank_kingdom
+				}
+			}
+		}
+		if = {
+			limit = { exists = scope:fnr_ROM_client }
+			every_owned_location = {
+				limit = {
+					is_capital = no
+					fnr_ROM_client_area_$KEY$ = yes
+				}
+				change_location_owner = scope:fnr_ROM_client
+				change_integration_level = core
+			}
+			scope:fnr_ROM_client = {
+				change_country_name = fnr_ROM_CLIENT_$KEY$
+				create_character = {
+					save_scope_as = fnr_ROM_client_ruler
+				}
+				set_new_ruler = scope:fnr_ROM_client_ruler
+				make_subject_of = {
+					target = root
+					type = subject_type:vassal
+				}
+				add_opinion = { target = root modifier = fnr_ROM_made_by_rome }
+			}
+			if = {
+				limit = { exists = international_organization:fnr_ROM_foederati_io }
+				international_organization:fnr_ROM_foederati_io = {
+					add_country_to_international_organization = scope:fnr_ROM_client
+				}
+			}
+		}
+	}
+}

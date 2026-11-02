@@ -1,0 +1,55 @@
+﻿# Ptolemaic Kingdom Government Reforms (Pax Romana)
+# Pharaonic Kingship and Hellenistic Basileia exclude each other.
+
+		fnr_PTLMY_pharaonic_kingship = {
+			government = monarchy
+			unique = yes
+			potential = {
+				has_or_had_tag = PTLMY
+			}
+			allow = {
+				NOT = { has_reform = government_reform:fnr_PTLMY_hellenistic_basileia }
+			}
+			country_modifier = {
+				monthly_legitimacy = 0.1
+				clergy_estate_target_satisfaction = small_permanent_target_satisfaction
+				stability_cost_efficiency = 0.05
+			}
+			years = 2
+			block_for_rebel = yes
+		}
+
+		fnr_PTLMY_hellenistic_basileia = {
+			government = monarchy
+			unique = yes
+			potential = {
+				has_or_had_tag = PTLMY
+			}
+			allow = {
+				NOT = { has_reform = government_reform:fnr_PTLMY_pharaonic_kingship }
+			}
+			country_modifier = {
+				research_speed_modifier = 0.05
+				burghers_estate_target_satisfaction = small_permanent_target_satisfaction
+				land_morale_modifier = 0.05
+			}
+			years = 2
+			block_for_rebel = yes
+		}
+
+		fnr_PTLMY_theoi_adelphoi = {
+			government = monarchy
+			unique = yes
+			potential = {
+				has_or_had_tag = PTLMY
+			}
+			allow = {
+				has_advance = PTLMY_ruler_cult
+			}
+			country_modifier = {
+				monthly_legitimacy = 0.15
+				monthly_prestige = 0.05
+			}
+			years = 2
+			block_for_rebel = yes
+		}

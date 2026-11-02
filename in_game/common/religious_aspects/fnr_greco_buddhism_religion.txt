@@ -17,7 +17,7 @@
 		}
 
 		modifier = {
-			monthly_rebel_growth = -0.10 # FNR: was rebel_monthly_progress (rebel-only modifier)
+			monthly_rebel_growth = -0.01 # FNR: -1% a month (vanilla scale: 0.001 = 0.1%); was rebel_monthly_progress
 			army_light_cavalry_power = 0.075
 			pop_leave_rebels_threshold = -0.05
 			monthly_religious_influence = 0.025

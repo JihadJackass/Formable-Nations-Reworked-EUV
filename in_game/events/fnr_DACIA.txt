@@ -135,7 +135,7 @@ fnr_DACIA.2 = {
 fnr_DACIA.3 = {
 	type = country_event
 	title = fnr_DACIA.3.title
-	desc = fnr_DACIA.3.desc
+	desc = fnr_DACIA.3.d
 	fire_only_once = yes
 	outcome = positive
 
