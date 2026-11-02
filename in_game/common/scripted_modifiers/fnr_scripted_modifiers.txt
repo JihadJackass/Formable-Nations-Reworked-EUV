@@ -2,20 +2,6 @@
 # Formable Nations: Reworked Scripted Modifiers #
 #################################################
 
-# Great Moravia
-fnr_GMORV_family_in_cabinet_bonus = {
-    potential = {
-        has_heir_selection = heir_selection:moravian_meritocratic_succession  # Your succession law
-    }
-    
-    trigger = {
-		any_in_cabinet = {
-			dynasty = root.ruler.dynasty
-		}
-    }
-    
-    modifier = {
-        global_crown_estate_power = 0.05
-    }
-}
-
+# Scripted modifiers only hold AI/random weights in EU5 (see the vanilla scripted_modifiers.info).
+# The Great Moravian cabinet bonus moved to a static modifier (fnr_GMORV_family_in_cabinet_bonus,
+# static_modifiers/fnr_static_modifiers.txt), refreshed monthly by on_action/fnr_GMORV_pulses.txt.

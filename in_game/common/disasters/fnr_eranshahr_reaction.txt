@@ -74,13 +74,17 @@
 	on_end = {
 		set_variable = had_disaster_zoroastrian_reaction_variable
 		remove_variable = fnr_zoroastrian_restored_muslim_reaction
-		remove_variable = target_religious_unity_variable
+		# Compare first, then clear the target (it was cleared before the check, so the victory never fired)
 		if = {
-			limit = { religious_unity >= var:target_religious_unity_variable }
+			limit = {
+				has_variable = target_religious_unity_variable
+				religious_unity >= var:target_religious_unity_variable
+			}
 			trigger_event_non_silently = flavor_ERSHR.10	# Suppressed / converted: victory
 		}
 		else = {
 			trigger_event_non_silently = flavor_ERSHR.11	# Forced to relent / tolerance
 		}
+		remove_variable = target_religious_unity_variable
 	}
 }

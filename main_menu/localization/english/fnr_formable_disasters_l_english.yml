@@ -17,8 +17,13 @@
       an_event_occurs_tt: "An event may occur"
       no_event_occurs_tt: "No event occurs this month"
 
+    # Rhineland
+
+      fnr_RHLND_fracturing_confederation: "The Fracturing of the Confederation"
+      fnr_RHLND_fracturing_confederation_desc: "The Rheinkonföderation is a loose coalition of counts, free cities and prince-bishops, and with the realm in turmoil its members have begun to go their own way. Unless we restore order, or reform the confederation into a true state, the Rhineland may break apart again."
+
     # Belgium
 
       fnr_BLGUM_belgian_revolution: "The Belgian Revolution"
-      fnr_BLGUM_belgian_revolution_desc: "TODO"
+      fnr_BLGUM_belgian_revolution_desc: "The Catholic south of the Low Countries has risen against our rule. Patriots hold the streets of Brussels, the clergy bless their cause, and foreign powers watch with interest. If we cannot restore order, the south will break away as a kingdom of its own.\n\n$fnr_BLGUM_independence_current$"
 

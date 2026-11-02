@@ -21,13 +21,13 @@ fnr_LAT_release_fief_effect = {
 			save_scope_as = fnr_LAT_seat
 		}
 	}
-	scope:fnr_LAT_seat = {
+	scope:fnr_LAT_seat ?= {
 		create_country_from_location = {
 			save_scope_as = fnr_LAT_new_fief
 			set_country_rank = country_rank:rank_duchy
 		}
 	}
-	scope:fnr_LAT_new_fief = {
+	scope:fnr_LAT_new_fief ?= {
 		set_variable = fnr_LAT_frankish_fief
 		set_variable = fnr_formation_locked
 		make_subject_of = {

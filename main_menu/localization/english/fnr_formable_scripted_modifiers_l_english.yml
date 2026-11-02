@@ -5,7 +5,8 @@
   #################################################
 
   # Great Moravia
-  fnr_GMORV_family_in_cabinet_bonus: "Great Moravian Nobility Power Bonus"   # TODO POST 2.5.0: make work
+  STATIC_MODIFIER_NAME_fnr_GMORV_family_in_cabinet_bonus: "Family in the Cabinet"
+  STATIC_MODIFIER_DESC_fnr_GMORV_family_in_cabinet_bonus: "A kinsman of the ruling house sits in the royal council. Under the meritocratic succession of Great Moravia the crown is not handed down by blood alone, but a family that keeps its members close to power keeps its claim strong."
 
   # ERANSHAR
   STATIC_MODIFIER_NAME_fnr_ERSHR_vigilant_against_agitators: "Agitator Vigilance"

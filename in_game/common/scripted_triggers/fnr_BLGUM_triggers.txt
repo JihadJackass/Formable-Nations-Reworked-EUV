@@ -1,0 +1,68 @@
+﻿# Belgian Revolution scripted triggers
+
+# Location scope: the lands of the future Belgium (Flanders, Brabant, Antwerp, Loon, Hainaut, Liege, Namur and Belgian Luxembourg)
+fnr_BLGUM_is_belgian_location = {
+	OR = {
+		this = location:ghent
+		this = location:aalst
+		this = location:kortriik
+		this = location:oudenaarde
+		this = location:sint_niklaas
+		this = location:tournai
+		this = location:bruges
+		this = location:ostend
+		this = location:veurne
+		this = location:ypres
+		this = location:brussels
+		this = location:leuven
+		this = location:nivelles
+		this = location:antwerp
+		this = location:turnhout
+		this = location:mechelen
+		this = location:borgloon
+		this = location:hasselt
+		this = location:bree
+		this = location:mons
+		this = location:ath
+		this = location:chimay
+		this = location:enghien
+		this = location:liege
+		this = location:limbourg
+		this = location:st_vith
+		this = location:stavelot
+		this = location:namur
+		this = location:dinant
+		this = location:orchimont
+		this = location:walcourt
+		this = location:bastogne
+		this = location:bouillon
+		this = location:la_roche
+		this = location:neufchateau_luxembourg
+	}
+}
+
+# Country scope: a foreign crown holds a large part of the Belgian lands
+fnr_BLGUM_rules_the_south = {
+	NOT = { tag = BLGUM }
+	any_owned_location = {
+		fnr_BLGUM_is_belgian_location = yes
+		count >= 12
+	}
+	capital ?= { fnr_BLGUM_is_belgian_location = no }
+}
+
+# Independence at least / below VALUE (false before the disaster starts)
+fnr_BLGUM_independence_at_least = {
+	trigger_if = {
+		limit = { has_variable = fnr_BLGUM_independence }
+		var:fnr_BLGUM_independence >= $VALUE$
+	}
+	trigger_else = { always = no }
+}
+fnr_BLGUM_independence_below = {
+	trigger_if = {
+		limit = { has_variable = fnr_BLGUM_independence }
+		var:fnr_BLGUM_independence < $VALUE$
+	}
+	trigger_else = { always = no }
+}

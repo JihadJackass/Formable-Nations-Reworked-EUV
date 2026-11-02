@@ -1,56 +1,100 @@
-﻿fnr_BLGUM_belgian_revolution = {
+﻿# The Belgian Revolution
+# Strikes a foreign crown that rules the southern Netherlands (fnr_BLGUM_rules_the_south) from the Age of Absolutism on,
+# when it is not Catholic or its stability is below 0. Belgian Independence (fnr_BLGUM_independence, 0-100) grows
+# every month, faster under a non-Catholic crown. At 100 the south breaks away as the Kingdom of Belgium.
+# Ends when Belgium is free, when we hold none of the south, after 3 years with Independence back to 0, or after 25 years.
+
+fnr_BLGUM_belgian_revolution = {
 
 	image = "gfx/interface/illustrations/disaster/religious_turmoil.dds"
 
 	monthly_spawn_chance = monthly_spawn_chance_high
 
+	fire_only_once = yes
+
 	can_start = {
-		has_any_active_disaster = no
 		is_subject = no
+		NOT = { exists = c:BLGUM }
+		current_age_or_later = { age = age_5_absolutism }
+		fnr_BLGUM_rules_the_south = yes
 		OR = {
-			religion = religion:catholic
-			religion = religion:lutheran
+			NOT = { religion = religion:catholic }
+			stability < 0
 		}
-		religious_unity < 0.35
 	}
 
 	can_end = {
-		religious_unity > 0.40
+		OR = {
+			exists = c:BLGUM
+			NOT = {
+				any_owned_location = { fnr_BLGUM_is_belgian_location = yes }
+			}
+			had_disaster_for_years = {
+				disaster_type = scope:disaster
+				years >= 25
+			}
+			AND = {
+				had_disaster_for_years = {
+					disaster_type = scope:disaster
+					years >= 3
+				}
+				custom_tooltip = {
+					text = fnr_BLGUM_independence_crushed_tt
+					fnr_BLGUM_independence_below = { VALUE = 1 }
+				}
+			}
+		}
 	}
 
 	modifier = {
-		clergy_estate_target_satisfaction = huge_permanent_target_satisfaction_penalty
-		monthly_war_exhaustion = 0.10
-		tolerance_heretic = -2
+		clergy_estate_target_satisfaction = -0.10
+		monthly_war_exhaustion = 0.05
+		global_estate_target_satisfaction = -0.05
 	}
 
 	on_start = {
-		set_variable = {
-			name = target_religious_unity_variable
-			value = {
-				add = religious_unity
-				add = 0.2
-				min = 0.55
-				max = 0.85
-			}
-		}
-		#trigger_event_non_silently = flavor_ERSHR.1
+		set_variable = { name = fnr_BLGUM_independence value = 20 }
+		trigger_event_non_silently = flavor_BLGUM.1
 	}
 
 	on_monthly = {
-		show_as_tooltip = {
-			random_list = {
-				94 = { custom_tooltip = no_event_occurs_tt }
-				6 = { custom_tooltip = an_event_occurs_tt }
+		hidden_effect = {
+			fnr_BLGUM_shift_independence_effect = { VALUE = 1 }
+			if = {
+				limit = { NOT = { religion = religion:catholic } }
+				fnr_BLGUM_shift_independence_effect = { VALUE = 1 }
 			}
+			if = {
+				limit = {
+					fnr_BLGUM_independence_at_least = { VALUE = 100 }
+					NOT = { exists = c:BLGUM }
+				}
+				fnr_BLGUM_independence_effect = yes
+				trigger_event_non_silently = flavor_BLGUM.5
+			}
+		}
+		random_list = {
+			8 = { custom_tooltip = an_event_occurs_tt }
+			92 = { custom_tooltip = no_event_occurs_tt }
 		}
 		hidden_effect = {
 			random_list = {
-				940 = { }
+				276 = { }
+				8 = { trigger_event_silently = flavor_BLGUM.2 }
+				8 = { trigger_event_silently = flavor_BLGUM.3 }
+				8 = { trigger_event_silently = flavor_BLGUM.4 }
 			}
 		}
 	}
 
 	on_end = {
+		if = {
+			limit = { NOT = { exists = c:BLGUM } }
+			trigger_event_non_silently = flavor_BLGUM.6
+		}
+		if = {
+			limit = { has_variable = fnr_BLGUM_independence }
+			remove_variable = fnr_BLGUM_independence
+		}
 	}
 }

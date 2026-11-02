@@ -1,0 +1,67 @@
+﻿# The Fracturing of the Confederation (Rhineland)
+# The Rheinkonföderation is a loose coalition until 'The Path Forward' (flavor_RHLND.1) settles its government.
+# If stability falls to -75 before then, the member states start to pull away.
+# Ends after 3 years once stability is back to 0, when the confederation is reformed by 'The Path Forward',
+# or after 20 years whatever happens. The ending is flavor_RHLND.10.
+
+fnr_RHLND_fracturing_confederation = {
+
+	image = "gfx/interface/illustrations/disaster/castilian_civil_war.dds"
+
+	monthly_spawn_chance = monthly_spawn_chance_high
+
+	fire_only_once = yes
+
+	can_start = {
+		tag = RHLND
+		has_reform = government_reform:fnr_GSCTL_rheinkonfoderation
+		stability <= -75
+	}
+
+	can_end = {
+		OR = {
+			NOT = { has_reform = government_reform:fnr_GSCTL_rheinkonfoderation }
+			had_disaster_for_years = {
+				disaster_type = scope:disaster
+				years >= 20
+			}
+			AND = {
+				had_disaster_for_years = {
+					disaster_type = scope:disaster
+					years >= 3
+				}
+				stability >= 0
+			}
+		}
+	}
+
+	modifier = {
+		global_crown_estate_power = -0.15
+		global_estate_target_satisfaction = -0.05
+		land_morale_modifier = -0.05
+		monthly_war_exhaustion = 0.05
+	}
+
+	on_start = {
+		trigger_event_non_silently = flavor_RHLND.6
+	}
+
+	on_monthly = {
+		random_list = {
+			10 = { custom_tooltip = an_event_occurs_tt }
+			90 = { custom_tooltip = no_event_occurs_tt }
+		}
+		hidden_effect = {
+			random_list = {
+				270 = { }
+				12 = { trigger_event_silently = flavor_RHLND.7 }	# a member state seeks to leave
+				9 = { trigger_event_silently = flavor_RHLND.8 }		# the princes quarrel
+				9 = { trigger_event_silently = flavor_RHLND.9 }		# the prince-bishops defy us
+			}
+		}
+	}
+
+	on_end = {
+		trigger_event_non_silently = flavor_RHLND.10
+	}
+}

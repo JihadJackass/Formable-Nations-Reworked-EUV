@@ -1315,18 +1315,13 @@ LAT_f = {
 	rule = plausible
 	potential = {
 		fnr_not_formation_locked = yes # FNR: released vassals cannot form other nations (fnr_formation_lock_triggers.txt)
-		AND = { # FNR: Vanilla Formables toggle + its own toggle (Formable Nations settings)
+		AND = { # FNR: non-historical formables toggle + its own toggle (Formable Nations settings)
 			OR = {
-				NOT = { has_variable = fnr_vanilla_formables_disabled }
+				has_variable = fnr_nonhistorical_enabled
 				has_variable = fnr_vanilla_lat_enabled
 			}
 			NOT = { has_variable = fnr_vanilla_lat_disabled }
 		}
-		OR = {
-			has_variable = fnr_nonhistorical_enabled
-			has_variable = fnr_latinempire_enabled
-		}
-		NOT = { has_variable = fnr_latinempire_disabled }
 		NOT = { tag = LAT }
 		NOT = { country_exists = c:LAT }
 		NOT = { has_variable = lat_reduced_requirements_to_form }

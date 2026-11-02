@@ -109,13 +109,13 @@
 
       # Rhineland
       RHLND_lingering_crusader_spirit: "Lingering Crusader Spirit"
-      RHLND_lingering_crusader_spirit_desc: "TODO"
+      RHLND_lingering_crusader_spirit_desc: "Knights of the Rhine marched east on every crusade, and the memory of those campaigns still shapes how our lords raise and drill their men. Light, mobile companies that once screened the great hosts on the road to Jerusalem now guard the river valleys at home."
 
       RHLND_rhenish_connectivity: "Rhenish Connectivity"
-      RHLND_rhenish_connectivity_desc: "TODO"
+      RHLND_rhenish_connectivity_desc: "From the Alpine passes to the North Sea, the Rhine carries more goods than any other river in Europe. Shared tolls, common weights and new presses printing bills of lading let our merchants reach markets that our fathers only heard of."
 
       RHLND_commercial_ambitions: "Commercial Ambitions"
-      RHLND_commercial_ambitions_desc: "TODO"
+      RHLND_commercial_ambitions_desc: "Our cities have always lived by trade, and the merchants of Cologne, Mainz and Strasbourg now look beyond the river. Roads and staging posts tie the furthest corners of the realm to its markets, so that every town can share in the wealth of the Rhine."
 
       # Austrian Empire
       AUSEM_habsburg_empire: "Habsburg Empire" 

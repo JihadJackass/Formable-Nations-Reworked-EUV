@@ -6790,7 +6790,7 @@
 					}
 					custom_tooltip = {
 						text = fnr_add_japanese_clans_to_io_tt
-						scope:fnr_geacps = {
+						scope:fnr_geacps ?= {
 							every_country = {
 								limit = {
 									NOT = { this = ROOT }
@@ -9051,9 +9051,6 @@
 					is_hegemon = yes
 					capital = location:constantinople
 
-					trigger_if = {
-						tag = BYZ
-					}
 					OR = {
 						religion.group = religion_group:christian
 						religion = religion:hellenism_religion

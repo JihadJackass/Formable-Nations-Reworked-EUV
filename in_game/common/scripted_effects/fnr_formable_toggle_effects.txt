@@ -3628,7 +3628,7 @@ fnr_count_vanilla_formables_effect = {
 				has_variable = fnr_vanilla_lat_enabled
 				AND = {
 					NOT = { has_variable = fnr_vanilla_lat_disabled }
-					NOT = { has_variable = fnr_vanilla_formables_disabled }
+					has_variable = fnr_nonhistorical_enabled
 				}
 			}
 		}
@@ -8010,11 +8010,11 @@ fnr_count_formables_by_category_effect = {
 				has_variable = fnr_vanilla_lat_enabled
 				AND = {
 					NOT = { has_variable = fnr_vanilla_lat_disabled }
-					NOT = { has_variable = fnr_vanilla_formables_disabled }
+					has_variable = fnr_nonhistorical_enabled
 				}
 			}
 		}
-		change_variable = { name = fnr_active_cat_vanilla add = 1 }
+		change_variable = { name = fnr_active_cat_nonhistorical add = 1 }
 	}
 	if = {
 		limit = {

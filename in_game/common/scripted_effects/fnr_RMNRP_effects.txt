@@ -143,7 +143,7 @@ fnr_RMNRP_civil_war_effect = {
 			fnr_RMNRP_province_joins_rebels_effect = { LOCATION = fnr_RMNRP_revolt_2 }
 			fnr_RMNRP_province_joins_rebels_effect = { LOCATION = fnr_RMNRP_revolt_3 }
 			fnr_RMNRP_province_joins_rebels_effect = { LOCATION = fnr_RMNRP_revolt_4 }
-			scope:fnr_RMNRP_rebel = {
+			scope:fnr_RMNRP_rebel ?= {
 				add_rebel_progress = 1
 			}
 			add_country_modifier = { modifier = fnr_rising_imminent years = 1 mode = add_and_extend }
@@ -289,7 +289,7 @@ fnr_RMNRP_servile_war_effect = {
 			}
 			if = {
 				limit = { exists = scope:fnr_RMNRP_spartacus }
-				scope:fnr_RMNRP_spartacus = {
+				scope:fnr_RMNRP_spartacus ?= {
 					change_character_allegiance = scope:fnr_RMNRP_slave_rebel
 				}
 				set_variable = { name = fnr_RMNRP_spartacus value = scope:fnr_RMNRP_spartacus }
@@ -310,7 +310,7 @@ fnr_RMNRP_servile_war_effect = {
 			}
 			fnr_RMNRP_province_slaves_rise_effect = { LOCATION = fnr_RMNRP_servile_1 }
 			fnr_RMNRP_province_slaves_rise_effect = { LOCATION = fnr_RMNRP_servile_2 }
-			scope:fnr_RMNRP_slave_rebel = {
+			scope:fnr_RMNRP_slave_rebel ?= {
 				add_rebel_progress = 1
 			}
 			add_country_modifier = { modifier = fnr_servile_rising_imminent years = 1 mode = add_and_extend }
@@ -464,13 +464,13 @@ fnr_RMNRP_yearly_byzantium_effect = {
 # Byzantium (scope:fnr_RMNRP_byz) joins the Roman state (scope:fnr_RMNRP_rome): annexed if small, vassal if large
 fnr_RMNRP_absorb_byzantium_effect = {
 	if = {
-		limit = { scope:fnr_RMNRP_byz = { num_locations < 40 } }
-		scope:fnr_RMNRP_rome = {
+		limit = { scope:fnr_RMNRP_byz ?= { num_locations < 40 } }
+		scope:fnr_RMNRP_rome ?= {
 			annex_country = { country = scope:fnr_RMNRP_byz }
 		}
 	}
 	else = {
-		scope:fnr_RMNRP_byz = {
+		scope:fnr_RMNRP_byz ?= {
 			make_subject_of = { target = scope:fnr_RMNRP_rome type = subject_type:vassal }
 		}
 	}
@@ -487,11 +487,11 @@ fnr_RMNRP_yearly_upkeep_effect = {
 			set_variable = { name = fnr_RMNRP_senate_authority value = 60 }
 		}
 		if = {
-			limit = { var:fnr_RMNRP_senate_authority > 50 }
+			limit = { trigger_if = { limit = { has_variable = fnr_RMNRP_senate_authority } var:fnr_RMNRP_senate_authority > 50 } trigger_else = { always = no } }
 			fnr_RMNRP_change_senate_effect = { VALUE = -1 }
 		}
 		else_if = {
-			limit = { var:fnr_RMNRP_senate_authority < 50 }
+			limit = { trigger_if = { limit = { has_variable = fnr_RMNRP_senate_authority } var:fnr_RMNRP_senate_authority < 50 } trigger_else = { always = no } }
 			fnr_RMNRP_change_senate_effect = { VALUE = 1 }
 		}
 		if = {

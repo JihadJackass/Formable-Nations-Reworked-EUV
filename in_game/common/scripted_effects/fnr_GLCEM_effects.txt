@@ -16,13 +16,13 @@ fnr_GLCEM_release_tarraconensis_effect = {
 			save_scope_as = fnr_GLCEM_seat
 		}
 	}
-	scope:fnr_GLCEM_seat = {
+	scope:fnr_GLCEM_seat ?= {
 		create_country_from_location = {
 			save_scope_as = fnr_GLCEM_new_vassal
 			set_country_rank = country_rank:rank_kingdom
 		}
 	}
-	scope:fnr_GLCEM_new_vassal = {
+	scope:fnr_GLCEM_new_vassal ?= {
 		form_country = formable_country:TRCNS_f
 		change_country_color = map_TRCNS
 		set_variable = fnr_formation_locked
@@ -58,13 +58,13 @@ fnr_GLCEM_release_britannia_effect = {
 			save_scope_as = fnr_GLCEM_seat
 		}
 	}
-	scope:fnr_GLCEM_seat = {
+	scope:fnr_GLCEM_seat ?= {
 		create_country_from_location = {
 			save_scope_as = fnr_GLCEM_new_vassal
 			set_country_rank = country_rank:rank_kingdom
 		}
 	}
-	scope:fnr_GLCEM_new_vassal = {
+	scope:fnr_GLCEM_new_vassal ?= {
 		form_country = formable_country:BRTNA_f
 		change_country_color = map_BRTNA
 		set_variable = fnr_formation_locked

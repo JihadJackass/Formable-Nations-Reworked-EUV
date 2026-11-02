@@ -480,7 +480,7 @@ fnr_RMNRP.8 = {
 				has_variable = fnr_RMNRP_rubicon_general
 				var:fnr_RMNRP_rubicon_general ?= { is_alive = yes }
 			}
-			var:fnr_RMNRP_rubicon_general = {
+			var:fnr_RMNRP_rubicon_general ?= {
 				change_character_allegiance = scope:fnr_RMNRP_rebel
 			}
 			set_variable = { name = fnr_RMNRP_rebel_leader value = var:fnr_RMNRP_rubicon_general }

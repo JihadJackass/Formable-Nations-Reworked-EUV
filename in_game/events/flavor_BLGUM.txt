@@ -1,84 +1,178 @@
 ﻿namespace = flavor_BLGUM
 
-# ============================================================
-# 1 — Start event
-# Conflict in the Low Countries
-# ============================================================
-flavor_BLGUM.1 = { 
+# The Belgian Revolution (disaster fnr_BLGUM_belgian_revolution)
+# Belgian Independence: fnr_BLGUM_independence, 0-100 (scripted_effects/fnr_BLGUM_effects.txt)
+
+# 1 - Start: Conflict in the Low Countries
+flavor_BLGUM.1 = {
 	type = country_event
 	title = flavor_BLGUM.1.title
 	desc = flavor_BLGUM.1.desc
-	fire_only_once = yes
 	outcome = negative
-	picture = "gfx/interface/illustrations/disaster/religious_turmoil.dds"
+
+	trigger = { always = yes }
+
+	illustration_tags = {
+		10 = exterior
+		10 = armed
+	}
 
 	immediate = {
-		# The world reacts to a Zoroastrian crown ruling Muslim subjects
-		every_owned_location = {
-			limit = { NOT = { is_capital = yes } }
-			change_control = -10
-			every_pop = {
-				limit = { NOT = { religion = religion:zoroastrian } }
-				add_pop_satisfaction = -0.1
-			}
-		}
+		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:clergy_estate }
 	}
 
 	option = {
 		name = flavor_BLGUM.1.a
-		add_stability = -1
-		add_war_exhaustion = 5
-	}
-	
-	trigger = {
-		AND = {
-			OR = {
-				culture = culture:walloon
-				culture = culture:low_franconian
-			}
-			OR = {
-				tag = FRI
-				tag = HOL
-				tag = BRB
-				tag = FLA
-				tag = FIESL
-				tag = NED
-			}
-		}
-		OR = {
-			AND = {
-				own_entire_area = area:flanders_area
-				own_entire_area = area:wallonia_area
-				own_entire_area = area:brabant_area
-				own_entire_area = area:holland_area
-				own_entire_area = area:friesland_area
-			}
-			any_subject_or_below = {
-				num_locations > 5
-				OR = {
-					OR = {
-						tag = FRI
-						tag = HOL
-						tag = BRB
-						tag = FLA
-					}
-					OR = {
-						culture = culture:walloon
-						culture = culture:low_franconian
-					}
-				}
-			}
-		}
-	}
-
-	dynamic_historical_event = {
-		tag = FRI
-		tag = HOL
-		tag = BRB
-		tag = FLA
-		from = 1500.1.1
-		to = 1837.1.1
-		monthly_chance = 2
+		ai_chance = { factor = 100 }
+		custom_tooltip = fnr_BLGUM_revolution_tt
 	}
 }
 
+# 2 - Riots in Brussels
+flavor_BLGUM.2 = {
+	type = country_event
+	title = flavor_BLGUM.2.title
+	desc = flavor_BLGUM.2.desc
+	outcome = negative
+
+	trigger = { fnr_BLGUM_rules_the_south = yes }
+
+	illustration_tags = {
+		10 = exterior
+		10 = armed
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:burghers_estate }
+	}
+
+	option = {
+		name = flavor_BLGUM.2.a
+		ai_chance = { factor = 60 }
+		add_stability = stability_mild_penalty
+		fnr_BLGUM_change_independence_effect = { VALUE = -10 TT = minus_10 }
+	}
+
+	option = {
+		name = flavor_BLGUM.2.b
+		ai_chance = { factor = 40 }
+		fnr_BLGUM_change_independence_effect = { VALUE = 10 TT = plus_10 }
+	}
+}
+
+# 3 - The Catholic clergy preach resistance
+flavor_BLGUM.3 = {
+	type = country_event
+	title = flavor_BLGUM.3.title
+	desc = flavor_BLGUM.3.desc
+	outcome = negative
+
+	trigger = { fnr_BLGUM_rules_the_south = yes }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:crown_estate }
+	}
+
+	option = {
+		name = flavor_BLGUM.3.a
+		ai_chance = { factor = 50 }
+		add_estate_satisfaction = { type = estate_type:clergy_estate value = estate_satisfaction_mild_bonus }
+		add_stability = stability_weak_penalty
+		fnr_BLGUM_change_independence_effect = { VALUE = -10 TT = minus_10 }
+	}
+
+	option = {
+		name = flavor_BLGUM.3.b
+		ai_chance = { factor = 50 }
+		fnr_BLGUM_change_independence_effect = { VALUE = 10 TT = plus_10 }
+	}
+}
+
+# 4 - Foreign sympathies
+flavor_BLGUM.4 = {
+	type = country_event
+	title = flavor_BLGUM.4.title
+	desc = flavor_BLGUM.4.desc
+	outcome = negative
+
+	trigger = { fnr_BLGUM_rules_the_south = yes }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = flavor_BLGUM.4.a
+		ai_chance = { factor = 50 }
+		add_prestige = prestige_weak_penalty
+		fnr_BLGUM_change_independence_effect = { VALUE = 5 TT = plus_5 }
+	}
+
+	option = {
+		name = flavor_BLGUM.4.b
+		ai_chance = { factor = 50 }
+		add_stability = stability_weak_penalty
+		fnr_BLGUM_change_independence_effect = { VALUE = -5 TT = minus_5 }
+	}
+}
+
+# 5 - Belgium declares independence
+flavor_BLGUM.5 = {
+	type = country_event
+	title = flavor_BLGUM.5.title
+	desc = flavor_BLGUM.5.desc
+	outcome = negative
+
+	trigger = { always = yes }
+
+	illustration_tags = {
+		10 = exterior
+		10 = armed
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:crown_estate }
+	}
+
+	option = {
+		name = flavor_BLGUM.5.a
+		ai_chance = { factor = 100 }
+		add_prestige = prestige_weak_penalty
+	}
+}
+
+# 6 - The south is pacified
+flavor_BLGUM.6 = {
+	type = country_event
+	title = flavor_BLGUM.6.title
+	desc = flavor_BLGUM.6.desc
+	outcome = positive
+
+	trigger = { always = yes }
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:burghers_estate }
+	}
+
+	option = {
+		name = flavor_BLGUM.6.a
+		ai_chance = { factor = 100 }
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_weak_bonus
+	}
+}

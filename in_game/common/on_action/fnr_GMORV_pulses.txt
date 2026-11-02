@@ -1,0 +1,43 @@
+﻿# Great Moravia monthly pulse
+# Family in the Cabinet: while the Moravian meritocratic succession is in force, a member of the
+# ruling dynasty in the cabinet strengthens the crown (fnr_GMORV_family_in_cabinet_bonus)
+
+monthly_country_pulse = {
+	on_actions = {
+		fnr_GMORV_monthly_pulse
+	}
+}
+
+fnr_GMORV_monthly_pulse = {
+	trigger = {
+		OR = {
+			succession_law = heir_selection:moravian_meritocratic_succession
+			has_country_modifier = fnr_GMORV_family_in_cabinet_bonus
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				succession_law = heir_selection:moravian_meritocratic_succession
+				has_ruler = yes
+				ruler = {
+					has_dynasty = yes
+					dynasty ?= { save_temporary_scope_as = fnr_GMORV_ruling_dynasty }
+				}
+				exists = scope:fnr_GMORV_ruling_dynasty
+				any_cabinet_character = {
+					has_dynasty = yes
+					dynasty ?= scope:fnr_GMORV_ruling_dynasty
+				}
+			}
+			if = {
+				limit = { NOT = { has_country_modifier = fnr_GMORV_family_in_cabinet_bonus } }
+				add_country_modifier = { modifier = fnr_GMORV_family_in_cabinet_bonus years = -1 }
+			}
+		}
+		else_if = {
+			limit = { has_country_modifier = fnr_GMORV_family_in_cabinet_bonus }
+			remove_country_modifier = fnr_GMORV_family_in_cabinet_bonus
+		}
+	}
+}

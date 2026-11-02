@@ -1,0 +1,75 @@
+﻿# Belgian Revolution scripted effects
+
+# Silent change to Belgian Independence (0-100). Use with VALUE
+fnr_BLGUM_shift_independence_effect = {
+	hidden_effect = {
+		if = {
+			limit = { NOT = { has_variable = fnr_BLGUM_independence } }
+			set_variable = { name = fnr_BLGUM_independence value = 0 }
+		}
+		change_variable = { name = fnr_BLGUM_independence add = $VALUE$ }
+		if = {
+			limit = { fnr_BLGUM_independence_at_least = { VALUE = 101 } }
+			set_variable = { name = fnr_BLGUM_independence value = 100 }
+		}
+		if = {
+			limit = { fnr_BLGUM_independence_below = { VALUE = 0 } }
+			set_variable = { name = fnr_BLGUM_independence value = 0 }
+		}
+	}
+}
+
+# Visible change with one tooltip line (fnr_BLGUM_independence_<TT>_tt). Use with VALUE and TT
+fnr_BLGUM_change_independence_effect = {
+	custom_tooltip = fnr_BLGUM_independence_$TT$_tt
+	fnr_BLGUM_shift_independence_effect = { VALUE = $VALUE$ }
+}
+
+# Belgium breaks away: the Belgian lands we hold (not our capital) become the Kingdom of Belgium
+fnr_BLGUM_independence_effect = {
+	if = {
+		limit = {
+			owns = location:brussels
+			NOT = { capital = location:brussels }
+		}
+		location:brussels = { save_scope_as = fnr_BLGUM_seat }
+	}
+	else = {
+		random_owned_location = {
+			limit = {
+				fnr_BLGUM_is_belgian_location = yes
+				is_capital = no
+			}
+			save_scope_as = fnr_BLGUM_seat
+		}
+	}
+	scope:fnr_BLGUM_seat ?= {
+		create_country_from_location = {
+			save_scope_as = fnr_BLGUM_new_belgium
+			set_country_rank = country_rank:rank_kingdom
+		}
+	}
+	if = {
+		limit = { exists = scope:fnr_BLGUM_new_belgium }
+		every_owned_location = {
+			limit = {
+				fnr_BLGUM_is_belgian_location = yes
+				is_capital = no
+			}
+			change_location_owner = scope:fnr_BLGUM_new_belgium
+			change_integration_level = core
+		}
+		scope:fnr_BLGUM_new_belgium ?= {
+			form_country = formable_country:BLGUM_f
+			change_country_color = map_BLGUM
+			change_religion = religion:catholic
+			create_character = {
+				save_scope_as = fnr_BLGUM_new_king
+				religion = religion:catholic
+				culture = culture:walloon
+			}
+			set_new_ruler = scope:fnr_BLGUM_new_king
+			add_stability = 25
+		}
+	}
+}

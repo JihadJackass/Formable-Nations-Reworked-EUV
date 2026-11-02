@@ -105,7 +105,7 @@ fnr_RMNRP_byz.3 = {
 		}
 		custom_tooltip = fnr_RMNRP_one_rome_accept_tt
 		hidden_effect = {
-			scope:fnr_RMNRP_rome = { trigger_event_non_silently = fnr_RMNRP_byz.4 }
+			scope:fnr_RMNRP_rome ?= { trigger_event_non_silently = fnr_RMNRP_byz.4 }
 		}
 		fnr_RMNRP_absorb_byzantium_effect = yes
 	}
@@ -115,7 +115,7 @@ fnr_RMNRP_byz.3 = {
 		name = fnr_RMNRP_byz.3.b
 		ai_chance = { base = 60 }
 		add_prestige = prestige_mild_bonus
-		scope:fnr_RMNRP_rome = {
+		scope:fnr_RMNRP_rome ?= {
 			fnr_RMNRP_change_concordia_effect = { VALUE = -30 }
 		}
 		custom_tooltip = fnr_RMNRP_one_rome_refuse_tt
@@ -177,7 +177,7 @@ fnr_RMNRP_byz.5 = {
 		}
 		add_gold = 150
 		add_opinion = { modifier = fnr_RMNRP_purple_marriage target = scope:fnr_RMNRP_rome }
-		scope:fnr_RMNRP_rome = {
+		scope:fnr_RMNRP_rome ?= {
 			set_variable = fnr_RMNRP_purple_claim
 			add_opinion = { modifier = fnr_RMNRP_purple_marriage target = root }
 			trigger_event_non_silently = fnr_RMNRP_byz.6
@@ -189,7 +189,7 @@ fnr_RMNRP_byz.5 = {
 	option = {
 		name = fnr_RMNRP_byz.5.b
 		ai_chance = { base = 50 }
-		scope:fnr_RMNRP_rome = {
+		scope:fnr_RMNRP_rome ?= {
 			fnr_RMNRP_change_concordia_effect = { VALUE = -10 }
 		}
 	}

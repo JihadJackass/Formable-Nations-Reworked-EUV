@@ -172,4 +172,13 @@
 			
 			monthly_towards_decentralization = 0.05
 		}
-	
+
+	# Great Moravia
+		# A member of the ruling dynasty sits in the cabinet (Moravian meritocratic succession)
+		# Refreshed monthly by on_action/fnr_GMORV_pulses.txt
+		fnr_GMORV_family_in_cabinet_bonus = {
+			game_data = {
+				category = country
+			}
+			global_crown_estate_power = 0.05
+		}

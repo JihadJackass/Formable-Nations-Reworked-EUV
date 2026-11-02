@@ -50,7 +50,7 @@ fnr_LAT_partition_achaea = {
 			custom_tooltip = fnr_LAT_fief_lock_tt
 			hidden_effect = {
 				fnr_LAT_release_fief_effect = { FIEF = achaea SEAT = andravida }
-				scope:fnr_LAT_new_fief = {
+				scope:fnr_LAT_new_fief ?= {
 					change_country_name = fnr_LAT_ACHAEA_NAME
 					change_country_color = map_fnr_LAT_achaea
 				}
@@ -112,7 +112,7 @@ fnr_LAT_partition_athens = {
 			custom_tooltip = fnr_LAT_fief_lock_tt
 			hidden_effect = {
 				fnr_LAT_release_fief_effect = { FIEF = athens SEAT = athens }
-				scope:fnr_LAT_new_fief = {
+				scope:fnr_LAT_new_fief ?= {
 					change_country_name = fnr_LAT_ATHENS_NAME
 					change_country_color = map_fnr_LAT_athens
 				}
@@ -174,7 +174,7 @@ fnr_LAT_partition_thessalonica = {
 			custom_tooltip = fnr_LAT_fief_lock_tt
 			hidden_effect = {
 				fnr_LAT_release_fief_effect = { FIEF = thessalonica SEAT = thessaloniki }
-				scope:fnr_LAT_new_fief = {
+				scope:fnr_LAT_new_fief ?= {
 					form_country = formable_country:THE_f
 					change_country_color = map_THE
 				}

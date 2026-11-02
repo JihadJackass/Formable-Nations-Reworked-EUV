@@ -39,14 +39,11 @@ INJECT:recruitment_law = {
 		allow = {
 			tag = RHLND
 			current_age_or_later = { age = age_5_absolutism }
-			trigger_if = {
-				custom_tooltip = {
-					text = fnr_has_die_wacht_am_rhein_10years
-					AND = {
-						has_variable = fnr_has_die_wacht_am_rhein_10years_HAS_MET
-						NOT = { has_variable = fnr_has_die_wacht_am_rhein_10years_NOT_MET }
-					}
-				}
+			custom_tooltip = {
+				text = fnr_has_die_wacht_am_rhein_10years
+				has_reform = government_reform:fnr_GSCTL_die_wacht_am_rhein
+				has_variable = fnr_has_die_wacht_am_rhein_10years_HAS_MET
+				NOT = { has_variable = fnr_has_die_wacht_am_rhein_10years_NOT_MET }
 			}
 		}
 		country_modifier = {

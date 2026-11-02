@@ -121,7 +121,7 @@ fnr_PTLMY.2 = {
 			change_location_owner = scope:fnr_PTLMY_new_egypt
 			change_integration_level = core
 		}
-		scope:fnr_PTLMY_new_egypt = {
+		scope:fnr_PTLMY_new_egypt ?= {
 			set_variable = fnr_PTLMY_origin_bactrian
 			form_country = formable_country:PTLMY_f
 			change_country_color = map_PTLMY

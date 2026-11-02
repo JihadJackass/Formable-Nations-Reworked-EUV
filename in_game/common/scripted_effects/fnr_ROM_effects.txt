@@ -43,11 +43,11 @@ fnr_ROM_shift_loyalty_effect = {
 		}
 		change_variable = { name = fnr_ROM_legion_loyalty add = $VALUE$ }
 		if = {
-			limit = { var:fnr_ROM_legion_loyalty > 100 }
+			limit = { trigger_if = { limit = { has_variable = fnr_ROM_legion_loyalty } var:fnr_ROM_legion_loyalty > 100 } trigger_else = { always = no } }
 			set_variable = { name = fnr_ROM_legion_loyalty value = 100 }
 		}
 		else_if = {
-			limit = { var:fnr_ROM_legion_loyalty < 0 }
+			limit = { trigger_if = { limit = { has_variable = fnr_ROM_legion_loyalty } var:fnr_ROM_legion_loyalty < 0 } trigger_else = { always = no } }
 			set_variable = { name = fnr_ROM_legion_loyalty value = 0 }
 		}
 	}
@@ -77,11 +77,11 @@ fnr_ROM_yearly_legion_effect = {
 	}
 	# Drift 1 a year towards 50
 	if = {
-		limit = { var:fnr_ROM_legion_loyalty > 50 }
+		limit = { trigger_if = { limit = { has_variable = fnr_ROM_legion_loyalty } var:fnr_ROM_legion_loyalty > 50 } trigger_else = { always = no } }
 		fnr_ROM_shift_loyalty_effect = { VALUE = -1 }
 	}
 	else_if = {
-		limit = { var:fnr_ROM_legion_loyalty < 50 }
+		limit = { trigger_if = { limit = { has_variable = fnr_ROM_legion_loyalty } var:fnr_ROM_legion_loyalty < 50 } trigger_else = { always = no } }
 		fnr_ROM_shift_loyalty_effect = { VALUE = 1 }
 	}
 	# Long, exhausting wars
@@ -183,7 +183,7 @@ fnr_ROM_yearly_legion_effect = {
 			fnr_ROM_shift_loyalty_effect = { VALUE = 2 }
 		}
 		if = {
-			limit = { var:fnr_ROM_legion_loyalty < 25 }
+			limit = { trigger_if = { limit = { has_variable = fnr_ROM_legion_loyalty } var:fnr_ROM_legion_loyalty < 25 } trigger_else = { always = no } }
 			fnr_RMNRP_change_senate_effect = { VALUE = -2 }
 		}
 	}
@@ -446,7 +446,7 @@ fnr_ROM_raise_usurper_effect = {
 			fnr_ROM_province_joins_rebels_effect = { LOCATION = fnr_ROM_revolt_2 }
 			fnr_ROM_province_joins_rebels_effect = { LOCATION = fnr_ROM_revolt_3 }
 			fnr_ROM_province_joins_rebels_effect = { LOCATION = fnr_ROM_revolt_4 }
-			scope:fnr_ROM_rebel = {
+			scope:fnr_ROM_rebel ?= {
 				add_rebel_progress = 1
 			}
 			add_country_modifier = { modifier = fnr_rising_imminent years = 1 mode = add_and_extend }
@@ -561,7 +561,7 @@ fnr_ROM_create_client_effect = {
 		}
 		if = {
 			limit = { exists = scope:fnr_ROM_client_seat }
-			scope:fnr_ROM_client_seat = {
+			scope:fnr_ROM_client_seat ?= {
 				create_country_from_location = {
 					save_scope_as = fnr_ROM_client
 					set_country_rank = country_rank:rank_kingdom
@@ -578,7 +578,7 @@ fnr_ROM_create_client_effect = {
 				change_location_owner = scope:fnr_ROM_client
 				change_integration_level = core
 			}
-			scope:fnr_ROM_client = {
+			scope:fnr_ROM_client ?= {
 				change_country_name = fnr_ROM_CLIENT_$KEY$
 				create_character = {
 					save_scope_as = fnr_ROM_client_ruler

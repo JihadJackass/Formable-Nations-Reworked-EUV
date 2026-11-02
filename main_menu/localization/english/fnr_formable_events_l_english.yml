@@ -11,8 +11,38 @@
       flavor_BLGUM.1: "Conflict in the Low Countries"
       flavor_BLGUM.1.entry: "Conflict in the Low Countries"
       flavor_BLGUM.1.title: "Conflict in the Low Countries"
-      flavor_BLGUM.1.desc: "Beneath the surface of the Low Countries, an old fault line runs deep: a Catholic, French and Flemish-speaking south bound uneasily to a Protestant Dutch north, sharing a crown but little else. Grievances over language, faith, and representation simmer in Wallonia and Flanders alike, and each slight from the north, real or imagined, is remembered and repeated. It is not yet open rebellion, but the mood in the southern provinces grows harder to ignore, and those who watch these things closely wonder how much longer the union can hold before it breaks, as such unions so often do."
+      flavor_BLGUM.1.desc: "Beneath the surface of the Low Countries an old fault line runs deep. The Catholic, French and Flemish-speaking south is bound uneasily to a crown that rules it from afar and shares little of its faith or tongue. Grievances over language, religion and representation simmer in Wallonia and Flanders alike, and every slight is remembered and repeated. The mood in Brussels has turned to open defiance, and those who watch these things closely wonder how much longer the union can hold."
       flavor_BLGUM.1.a: "This remains a concern."
+      fnr_BLGUM_revolution_tt: "#T The Belgian Revolution#!\n#Y Belgian Independence#! starts at #Y 20#! and grows by #Y 1#! every month, or #Y 2#! while our state religion is not Catholic. At #Y 100#! the Belgian lands we hold break away as the #Y Kingdom of Belgium#!.\nThe revolution fails if Independence falls back to #Y 0#! after at least #Y 3#! years, and ends on its own after #Y 25#! years."
+      fnr_BLGUM_independence_crushed_tt: "#Y Belgian Independence#! has fallen to #Y 0#!"
+      fnr_BLGUM_independence_plus_10_tt: "#Y Belgian Independence#! #R +10#!"
+      fnr_BLGUM_independence_minus_10_tt: "#Y Belgian Independence#! #G -10#!"
+      fnr_BLGUM_independence_plus_5_tt: "#Y Belgian Independence#! #R +5#!"
+      fnr_BLGUM_independence_minus_5_tt: "#Y Belgian Independence#! #G -5#!"
+      fnr_BLGUM_independence_current: "#Y Belgian Independence#! is at #Y [GetPlayer.MakeScope.GetVariable('fnr_BLGUM_independence').GetValue|0]#! of #Y 100#!."
+
+      flavor_BLGUM.2.title: "Riots in Brussels"
+      flavor_BLGUM.2.desc: "A performance at the opera house ended with the audience pouring into the streets singing of liberty. By nightfall the crowds had sacked the house of the justice minister and raised the colours of Brabant over the town hall. Our garrison waits for orders.\n\n$fnr_BLGUM_independence_current$"
+      flavor_BLGUM.2.a: "Send in the troops."
+      flavor_BLGUM.2.b: "Let the crowds tire themselves out."
+
+      flavor_BLGUM.3.title: "The Clergy Preach Resistance"
+      flavor_BLGUM.3.desc: "From the pulpits of Mechelen and Liege, Catholic priests tell their flocks that our laws are an attack on their faith and their schools. The bishops ask for guarantees for the Church in the south, and the faithful are listening.\n\n$fnr_BLGUM_independence_current$"
+      flavor_BLGUM.3.a: "Grant the Church its guarantees."
+      flavor_BLGUM.3.b: "The Church will obey the law like everyone else."
+
+      flavor_BLGUM.4.title: "Foreign Sympathies"
+      flavor_BLGUM.4.desc: "Newspapers in Paris and London print glowing accounts of the southern patriots, and volunteers and money cross the border every week. Foreign courts make it known that they would not object to a free Belgium.\n\n$fnr_BLGUM_independence_current$"
+      flavor_BLGUM.4.a: "Protest, and nothing more."
+      flavor_BLGUM.4.b: "Close the border."
+
+      flavor_BLGUM.5.title: "Belgium Declares Independence"
+      flavor_BLGUM.5.desc: "The provisional government in Brussels has declared the southern provinces a free and independent kingdom. Our authority in the south has collapsed, and a new crown now sits in Brussels."
+      flavor_BLGUM.5.a: "So be it."
+
+      flavor_BLGUM.6.title: "The South Is Pacified"
+      flavor_BLGUM.6.desc: "The barricades have come down and the patriots have gone home or gone into exile. The south remains ours, and the talk in its taverns has turned back to trade and harvests. For now, the union holds."
+      flavor_BLGUM.6.a: "The union holds."
 
     #############
     # Prittania #
@@ -213,9 +243,36 @@
       # State of the Confederation
 
         flavor_RHLND.5.title: "State of the Confederation"
-        flavor_RHLND.5.desc: "The Rhineland has long been a patchwork of bishoprics, free cities, and petty lordships, proud of their autonomy yet bound by geography and commerce. Our unification under the banner of the United Countries preserves this tradition of local sovereignty, each constituent maintaining its ancient privileges. Yet this very fragmentation weakens us. Foreign powers view us not as a unified duchy but as quarreling neighbors held together by treaty. Our ambassadors lack the authority of a true prince, our armies struggle with divided command, and territorial expansion is complicated by the need for consensus among the member states. Some now argue we must choose: embrace centralization under a ducal crown and claim our place among Europe's principalities, or accept our limitations and preserve the freedoms that make the Rhineland unique. Either path demands sacrifice."
+        flavor_RHLND.5.desc: "The Rhineland has long been a patchwork of bishoprics, free cities, and petty lordships, proud of their autonomy yet bound by geography and commerce. Our unification under the banner of the United Counties preserves this tradition of local sovereignty, each constituent maintaining its ancient privileges. Yet this very fragmentation weakens us. Foreign powers view us not as a unified duchy but as quarreling neighbors held together by treaty. Our ambassadors lack the authority of a true prince, our armies struggle with divided command, and territorial expansion is complicated by the need for consensus among the member states. Some now argue we must choose: embrace centralization under a ducal crown and claim our place among Europe's principalities, or accept our limitations and preserve the freedoms that make the Rhineland unique. Either path demands sacrifice."
         flavor_RHLND.5.a: "Remain as the United Counties of Rhineland."
         flavor_RHLND.5.b: "Give me the title of Duke!"
+
+      # The Fracturing of the Confederation
+
+        flavor_RHLND.6.title: "The Confederation Fractures"
+        flavor_RHLND.6.desc: "The Rheinkonföderation was always more a promise than a state, and that promise is breaking. Free cities refuse their levies, prince-bishops quarrel with counts over tolls on the river, and envoys from Paris and Vienna are welcomed in every court but ours. Unless order is restored, the member states will go their own way, one by one."
+        flavor_RHLND.6.a: "We must hold together."
+        fnr_RHLND_fracturing_tt: "#T The Fracturing of the Confederation#!\nMember states may try to leave, and the princes and prince-bishops will test our authority. It ends after at least #Y 3#! years once [stability|e] is back to #Y 0#!, when 'The Path Forward' reforms the confederation, or after #Y 20#! years whatever happens."
+
+        flavor_RHLND.7.title: "A Member State Seeks to Leave"
+        flavor_RHLND.7.desc: "The lords of [SCOPE.sLocation('fnr_RHLND_seceding').GetName] have sent their delegates home from the diet. They declare that the confederation has failed to protect them and that they owe it nothing more. We can let them go and spare ourselves the bloodshed, or send our soldiers to remind them of their oaths."
+        flavor_RHLND.7.a: "Let them go."
+        flavor_RHLND.7.a.tt: "[SCOPE.sLocation('fnr_RHLND_seceding').GetName] and the rest of its province leave the confederation and become an independent country."
+        flavor_RHLND.7.b: "Hold them by force."
+
+        flavor_RHLND.8.title: "The Princes Quarrel"
+        flavor_RHLND.8.desc: "Two of our princes have come to blows over a river toll that both claim by ancient right. Each demands that the diet rule in his favour, and each threatens to withdraw his men if it does not."
+        flavor_RHLND.8.a: "Confirm their old rights."
+        flavor_RHLND.8.b: "The diet takes no side."
+
+        flavor_RHLND.9.title: "The Prince-Bishops Defy Us"
+        flavor_RHLND.9.desc: "The prince-bishops of the Rhine answer to Rome before they answer to the diet, and they have chosen this moment to remind us. Their courts refuse our decrees and their pulpits speak against our taxes."
+        flavor_RHLND.9.a: "Yield to the bishops."
+        flavor_RHLND.9.b: "Stand firm."
+
+        flavor_RHLND.10.title: "The Confederation Holds"
+        flavor_RHLND.10.desc: "The worst has passed. The member states that remain have sent their delegates back to the diet, the river tolls flow to the treasury once more, and foreign envoys again ask for an audience with us rather than with our princes."
+        flavor_RHLND.10.a: "The Rhine is one."
 
     ##############################
     # North German Confederation #

@@ -1,11 +1,15 @@
 ﻿RHLND = {
 	type = country
 
-	text = { # United Counties
+	text = { # United Duchies
 		localization_key = RHLND_ducal
 		trigger = {
 			country_rank = country_rank:rank_duchy
 			coa_monarchy_trigger = yes
+			NOT = {	# same as fnr_uses_static_name, so the name is never built into 'Duchy of United Duchies'
+				current_age = age_5_absolutism
+				current_age = age_6_revolutions
+			}
 			OR = {
 				has_policy = feudal_administration
 				has_policy = autonomous_councils
@@ -16,11 +20,15 @@
 			}
 		}
 	}
-	text = { # United Duchies
+	text = { # United Counties
 		localization_key = RHLND_comital
 		trigger = {
 			country_rank = country_rank:rank_county
 			coa_monarchy_trigger = yes
+			NOT = {	# same as fnr_uses_static_name, so the name is never built into 'Duchy of United Duchies'
+				current_age = age_5_absolutism
+				current_age = age_6_revolutions
+			}
 			OR = {
 				has_policy = feudal_administration
 				has_policy = autonomous_councils

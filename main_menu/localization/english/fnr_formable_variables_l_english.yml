@@ -957,3 +957,7 @@
       fnr_active_cat_meme: "Enabled Meme Formables"
       fnr_active_cat_us_states: "Enabled North American Formables"
       fnr_active_cat_vanilla: "Enabled Vanilla Formables"
+
+    # Rhineland
+      fnr_RHLND_war_months: "Months at War since the Age of Absolutism"
+      fnr_BLGUM_independence: "Belgian Independence"

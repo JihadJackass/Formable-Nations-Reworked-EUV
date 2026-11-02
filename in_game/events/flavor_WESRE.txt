@@ -145,7 +145,7 @@ flavor_WESRE.2 = {
 		fnr_WESRE_cede_border_province_effect = yes
 		add_prestige = prestige_mild_penalty
 		add_stability = stability_weak_bonus
-		scope:fnr_WESRE_barbarian = {
+		scope:fnr_WESRE_barbarian ?= {
 			add_opinion = { target = root modifier = fnr_WESRE_paid_off }
 		}
 	}
@@ -210,7 +210,7 @@ flavor_WESRE.2 = {
 		add_gold = -500
 		random_list = {
 			70 = {
-				scope:fnr_WESRE_barbarian = {
+				scope:fnr_WESRE_barbarian ?= {
 					add_opinion = { target = root modifier = fnr_WESRE_paid_off }
 				}
 				custom_tooltip = fnr_WESRE_bribe_works_tt
@@ -627,7 +627,7 @@ flavor_WESRE.9 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:peasants_estate }
-		var:fnr_WESRE_ambitious_general = { save_scope_as = fnr_WESRE_general }
+		var:fnr_WESRE_ambitious_general ?= { save_scope_as = fnr_WESRE_general }
 	}
 
 	option = {
@@ -639,7 +639,7 @@ flavor_WESRE.9 = {
 			name = fnr_WESRE_usurper_rebels
 			save_scope_as = fnr_WESRE_rebel
 		}
-		scope:fnr_WESRE_general = {
+		scope:fnr_WESRE_general ?= {
 			change_character_allegiance = scope:fnr_WESRE_rebel
 		}
 		random_owned_location = {
@@ -655,7 +655,7 @@ flavor_WESRE.9 = {
 		}
 		fnr_WESRE_province_joins_rebels_effect = { LOCATION = fnr_WESRE_revolt_1 }
 		fnr_WESRE_province_joins_rebels_effect = { LOCATION = fnr_WESRE_revolt_2 }
-		scope:fnr_WESRE_rebel = {
+		scope:fnr_WESRE_rebel ?= {
 			add_rebel_progress = 1
 		}
 		add_country_modifier = { modifier = fnr_rising_imminent years = 1 mode = add_and_extend }
@@ -733,7 +733,7 @@ flavor_WESRE.10 = {
 			}
 			fnr_WESRE_province_joins_rebels_effect = { LOCATION = fnr_WESRE_revolt_1 }
 		}
-		scope:fnr_WESRE_rebel = {
+		scope:fnr_WESRE_rebel ?= {
 			add_rebel_progress = 1
 		}
 		add_country_modifier = { modifier = fnr_rising_imminent years = 1 mode = add_and_extend }

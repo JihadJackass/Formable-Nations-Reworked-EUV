@@ -40,7 +40,6 @@ window = {
 
 		text_single = {
 			text = "fnr_toggle_window_title"
-			using = header_font
 		}
 		text_multi = {
 			layoutpolicy_horizontal = expanding
@@ -10505,7 +10504,6 @@ window = {
 						margin_top = 15
 						visible = "[Or(Not(GetVariableSystem.Exists('fnr_filter_cat')), GetVariableSystem.HasValue('fnr_filter_cat', 'vanilla'))]"
 						text = "fnr_toggle_vanilla_header"
-						using = header_font
 					}
 
 					# Vanilla Rank I Formables
@@ -14648,7 +14646,7 @@ window = {
 					vbox = {
 						layoutpolicy_horizontal = expanding
 						spacing = 3
-						visible = "[And(Or(Not(GetVariableSystem.Exists('fnr_filter_letter')), Or(Or(Or(Or(Or(GetVariableSystem.HasValue('fnr_filter_letter', 'A'), GetVariableSystem.HasValue('fnr_filter_letter', 'B')), Or(GetVariableSystem.HasValue('fnr_filter_letter', 'C'), GetVariableSystem.HasValue('fnr_filter_letter', 'D'))), Or(Or(GetVariableSystem.HasValue('fnr_filter_letter', 'E'), GetVariableSystem.HasValue('fnr_filter_letter', 'F')), Or(GetVariableSystem.HasValue('fnr_filter_letter', 'G'), GetVariableSystem.HasValue('fnr_filter_letter', 'H')))), Or(Or(Or(GetVariableSystem.HasValue('fnr_filter_letter', 'J'), GetVariableSystem.HasValue('fnr_filter_letter', 'K')), Or(GetVariableSystem.HasValue('fnr_filter_letter', 'L'), GetVariableSystem.HasValue('fnr_filter_letter', 'M'))), Or(Or(GetVariableSystem.HasValue('fnr_filter_letter', 'N'), GetVariableSystem.HasValue('fnr_filter_letter', 'O')), Or(GetVariableSystem.HasValue('fnr_filter_letter', 'P'), GetVariableSystem.HasValue('fnr_filter_letter', 'R'))))), Or(Or(GetVariableSystem.HasValue('fnr_filter_letter', 'S'), GetVariableSystem.HasValue('fnr_filter_letter', 'T')), GetVariableSystem.HasValue('fnr_filter_letter', 'Y')))), Or(Not(GetVariableSystem.Exists('fnr_filter_cat')), Or(GetVariableSystem.HasValue('fnr_filter_cat', 'historical'), GetVariableSystem.HasValue('fnr_filter_cat', 'vanilla'))))]"
+						visible = "[And(Or(Not(GetVariableSystem.Exists('fnr_filter_letter')), Or(Or(Or(Or(Or(GetVariableSystem.HasValue('fnr_filter_letter', 'A'), GetVariableSystem.HasValue('fnr_filter_letter', 'B')), Or(GetVariableSystem.HasValue('fnr_filter_letter', 'C'), GetVariableSystem.HasValue('fnr_filter_letter', 'D'))), Or(Or(GetVariableSystem.HasValue('fnr_filter_letter', 'E'), GetVariableSystem.HasValue('fnr_filter_letter', 'F')), Or(GetVariableSystem.HasValue('fnr_filter_letter', 'G'), GetVariableSystem.HasValue('fnr_filter_letter', 'H')))), Or(Or(Or(GetVariableSystem.HasValue('fnr_filter_letter', 'J'), GetVariableSystem.HasValue('fnr_filter_letter', 'K')), Or(GetVariableSystem.HasValue('fnr_filter_letter', 'L'), GetVariableSystem.HasValue('fnr_filter_letter', 'M'))), Or(Or(GetVariableSystem.HasValue('fnr_filter_letter', 'N'), GetVariableSystem.HasValue('fnr_filter_letter', 'O')), Or(GetVariableSystem.HasValue('fnr_filter_letter', 'P'), GetVariableSystem.HasValue('fnr_filter_letter', 'R'))))), Or(Or(GetVariableSystem.HasValue('fnr_filter_letter', 'S'), GetVariableSystem.HasValue('fnr_filter_letter', 'T')), GetVariableSystem.HasValue('fnr_filter_letter', 'Y')))), Or(Not(GetVariableSystem.Exists('fnr_filter_cat')), Or(Or(GetVariableSystem.HasValue('fnr_filter_cat', 'historical'), GetVariableSystem.HasValue('fnr_filter_cat', 'vanilla')), GetVariableSystem.HasValue('fnr_filter_cat', 'nonhistorical'))))]"
 
 						button_main_tab_alt = {
 							using = layoutpolicy_expanding
@@ -15728,7 +15726,7 @@ window = {
 								hbox = {
 									layoutpolicy_horizontal = expanding
 									spacing = 10
-									visible = "[And(Or(Not(GetVariableSystem.Exists('fnr_filter_letter')), GetVariableSystem.HasValue('fnr_filter_letter', 'L')), Or(Not(GetVariableSystem.Exists('fnr_filter_cat')), GetVariableSystem.HasValue('fnr_filter_cat', 'vanilla')))]"
+									visible = "[And(Or(Not(GetVariableSystem.Exists('fnr_filter_letter')), GetVariableSystem.HasValue('fnr_filter_letter', 'L')), Or(Not(GetVariableSystem.Exists('fnr_filter_cat')), GetVariableSystem.HasValue('fnr_filter_cat', 'nonhistorical')))]"
 									button_regular = {
 										size = { 330 30 }
 										raw_text = "Latin Empire"
@@ -15740,7 +15738,7 @@ window = {
 										size = { 130 30 }
 										autoresize = no
 										align = left|nobaseline
-										raw_text = "Vanilla"
+										raw_text = "Non-Historical"
 									}
 									text_single = {
 										size = { 160 30 }
@@ -15760,14 +15758,14 @@ window = {
 										size = { 160 30 }
 										autoresize = no
 										align = left|nobaseline
-										visible = "[And(Not(GetPlayer.HasVariable('fnr_vanilla_lat_enabled')), And(Not(GetPlayer.HasVariable('fnr_vanilla_lat_disabled')), Not(GetPlayer.HasVariable('fnr_vanilla_formables_disabled'))))]"
+										visible = "[And(Not(GetPlayer.HasVariable('fnr_vanilla_lat_enabled')), And(Not(GetPlayer.HasVariable('fnr_vanilla_lat_disabled')), GetPlayer.HasVariable('fnr_nonhistorical_enabled')))]"
 										text = "fnr_toggle_state_default_on"
 									}
 									text_single = {
 										size = { 160 30 }
 										autoresize = no
 										align = left|nobaseline
-										visible = "[And(Not(GetPlayer.HasVariable('fnr_vanilla_lat_enabled')), And(Not(GetPlayer.HasVariable('fnr_vanilla_lat_disabled')), Not(Not(GetPlayer.HasVariable('fnr_vanilla_formables_disabled')))))]"
+										visible = "[And(Not(GetPlayer.HasVariable('fnr_vanilla_lat_enabled')), And(Not(GetPlayer.HasVariable('fnr_vanilla_lat_disabled')), Not(GetPlayer.HasVariable('fnr_nonhistorical_enabled'))))]"
 										text = "fnr_toggle_state_default_off"
 									}
 									expand = {}

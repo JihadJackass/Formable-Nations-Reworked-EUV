@@ -18,7 +18,7 @@ fnr_event_actions = {
         # Netherlands
         flavor_DUTCH.1
         # Great Moravia
-        flavor_GMORV.1
+        # flavor_GMORV.1 fires from the Great Moravia formation instead
         flavor_GMORV.2
         flavor_GMORV.3
     }

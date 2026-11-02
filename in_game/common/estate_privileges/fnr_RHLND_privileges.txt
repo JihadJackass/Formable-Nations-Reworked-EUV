@@ -52,6 +52,7 @@
 					has_or_had_tag = RHLND
 				}
 				current_age_or_later = { age = age_3_discovery }
+				total_population > 1500	# same as 'Sourcing Innovative Investments' (flavor_RHLND.3)
 			}
 			
 			country_modifier = {
@@ -120,6 +121,7 @@
 					tag = RHLND
 					has_or_had_tag = RHLND
 				}
+				NOT = { has_estate_privilege = estate_privilege:fnr_RHLND_cooperative_nobles }
 			}
 			
 			country_modifier = {
@@ -154,6 +156,8 @@
 					tag = RHLND
 					has_or_had_tag = RHLND
 				}
+				# Replaces the Squabbles through 'The Path Forward', which cannot be revoked by hand
+				NOT = { has_estate_privilege = estate_privilege:fnr_RHLND_squabbles_of_the_nobility }
 			}
 			
 			country_modifier = {
@@ -188,7 +192,9 @@
 					tag = RHLND
 					has_or_had_tag = RHLND
 				}
+				# Once replaced (event) or revoked by hand it cannot be enacted again
 				NOT = { has_variable = fnr_high_church_influence_removed }
+				NOT = { has_variable = fnr_high_church_influence_HAS_removed }
 			}
 			
 			country_modifier = {
@@ -204,11 +210,15 @@
 			}
 
 			on_deactivate = {
-				# Check that the Church Solutions event has not fired
-				set_variable = fnr_high_church_influence_HAS_removed
 				remove_variable = fnr_high_church_influence_NOT_removed
-				revoke_estate_privilege = estate_privilege:fnr_RHLND_high_church_influence
-				grant_estate_privilege = estate_privilege:fnr_RHLND_pillar_that_is_the_church
+				# Revoked by hand (the 'Pillar of Society and Religion' event sets fnr_high_church_influence_removed first):
+				# the clergy are angered and there is no peaceful replacement
+				if = {
+					limit = { NOT = { has_variable = fnr_high_church_influence_removed } }
+					set_variable = fnr_high_church_influence_HAS_removed
+					add_estate_satisfaction = { type = estate_type:clergy_estate value = estate_satisfaction_severe_penalty }
+					add_stability = stability_mild_penalty
+				}
 			}
 			
 			can_revoke = {
@@ -216,7 +226,7 @@
 				AND = {
 					any_estate = {
 						estate_type = estate_type:clergy_estate
-						power < 0.15
+						power < 0.10
 					}
 					state_religion_clergy < 0.10
 				}

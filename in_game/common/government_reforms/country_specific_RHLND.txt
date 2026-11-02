@@ -137,7 +137,11 @@
 			unique = yes
 			potential = {
 				tag = RHLND
-				# Unlocked via flavor_RHLND.2 event
+				# Unlocked by 'Learning from our experience' (flavor_RHLND.2)
+				OR = {
+					has_variable = fnr_has_die_wacht_am_rhein_10years_HAS_MET
+					has_reform = government_reform:fnr_GSCTL_die_wacht_am_rhein
+				}
 			}
 			allow = {
 				tag = RHLND
@@ -160,7 +164,7 @@
 			locked = {
 				is_locked_mechanic = {
 					mechanic = government_reform
-					type = fnr_GSCTL_rhenish_commerce_diplomatic_network
+					type = fnr_GSCTL_die_wacht_am_rhein
 				}
 			}			
 			block_for_rebel = yes
@@ -193,7 +197,7 @@
 			locked = {
 				is_locked_mechanic = {
 					mechanic = government_reform
-					type = fnr_GSCTL_rhenish_commerce_diplomatic_network
+					type = fnr_GSCTL_rhenish_manufacturing
 				}
 			}			
 			block_for_rebel = yes

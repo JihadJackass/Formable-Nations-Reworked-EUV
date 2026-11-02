@@ -47,11 +47,11 @@ fnr_PTLMY_shift_crown_effect = {
 		}
 		change_variable = { name = fnr_PTLMY_crown add = $VALUE$ }
 		if = {
-			limit = { var:fnr_PTLMY_crown > 100 }
+			limit = { trigger_if = { limit = { has_variable = fnr_PTLMY_crown } var:fnr_PTLMY_crown > 100 } trigger_else = { always = no } }
 			set_variable = { name = fnr_PTLMY_crown value = 100 }
 		}
 		if = {
-			limit = { var:fnr_PTLMY_crown < -100 }
+			limit = { trigger_if = { limit = { has_variable = fnr_PTLMY_crown } var:fnr_PTLMY_crown < -100 } trigger_else = { always = no } }
 			set_variable = { name = fnr_PTLMY_crown value = -100 }
 		}
 	}
@@ -106,7 +106,7 @@ fnr_PTLMY_shift_scholarship_effect = {
 		}
 		change_variable = { name = fnr_PTLMY_scholarship add = $VALUE$ }
 		if = {
-			limit = { var:fnr_PTLMY_scholarship < 0 }
+			limit = { trigger_if = { limit = { has_variable = fnr_PTLMY_scholarship } var:fnr_PTLMY_scholarship < 0 } trigger_else = { always = no } }
 			set_variable = { name = fnr_PTLMY_scholarship value = 0 }
 		}
 	}
@@ -173,11 +173,11 @@ fnr_PTLMY_yearly_crown_effect = {
 	}
 	# Drift 1 a year towards the Double Crown
 	if = {
-		limit = { var:fnr_PTLMY_crown > 0 }
+		limit = { trigger_if = { limit = { has_variable = fnr_PTLMY_crown } var:fnr_PTLMY_crown > 0 } trigger_else = { always = no } }
 		fnr_PTLMY_shift_crown_effect = { VALUE = -1 }
 	}
 	else_if = {
-		limit = { var:fnr_PTLMY_crown < 0 }
+		limit = { trigger_if = { limit = { has_variable = fnr_PTLMY_crown } var:fnr_PTLMY_crown < 0 } trigger_else = { always = no } }
 		fnr_PTLMY_shift_crown_effect = { VALUE = 1 }
 	}
 	# The seat of the court
@@ -484,7 +484,7 @@ fnr_PTLMY_rebellion_effect = {
 			fnr_PTLMY_province_joins_rebels_effect = { LOCATION = fnr_PTLMY_revolt_2 }
 			fnr_PTLMY_province_joins_rebels_effect = { LOCATION = fnr_PTLMY_revolt_3 }
 			fnr_PTLMY_province_joins_rebels_effect = { LOCATION = fnr_PTLMY_revolt_4 }
-			scope:fnr_PTLMY_rebel = { add_rebel_progress = 1 }
+			scope:fnr_PTLMY_rebel ?= { add_rebel_progress = 1 }
 			add_country_modifier = { modifier = fnr_rising_imminent years = 1 mode = add_and_extend }
 		}
 	}

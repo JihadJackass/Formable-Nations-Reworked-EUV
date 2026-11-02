@@ -50,11 +50,11 @@ fnr_WESRE_change_foederati_loyalty_effect = {
 	}
 	change_variable = { name = fnr_WESRE_foederati_loyalty add = $VALUE$ }
 	if = {
-		limit = { var:fnr_WESRE_foederati_loyalty > 100 }
+		limit = { trigger_if = { limit = { has_variable = fnr_WESRE_foederati_loyalty } var:fnr_WESRE_foederati_loyalty > 100 } trigger_else = { always = no } }
 		set_variable = { name = fnr_WESRE_foederati_loyalty value = 100 }
 	}
 	else_if = {
-		limit = { var:fnr_WESRE_foederati_loyalty < 0 }
+		limit = { trigger_if = { limit = { has_variable = fnr_WESRE_foederati_loyalty } var:fnr_WESRE_foederati_loyalty < 0 } trigger_else = { always = no } }
 		set_variable = { name = fnr_WESRE_foederati_loyalty value = 0 }
 	}
 }
@@ -111,7 +111,7 @@ fnr_WESRE_yearly_upkeep_effect = {
 		# Devoted: 80+ with the privilege
 		if = {
 			limit = {
-				var:fnr_WESRE_foederati_loyalty > 80
+				trigger_if = { limit = { has_variable = fnr_WESRE_foederati_loyalty } var:fnr_WESRE_foederati_loyalty > 80 } trigger_else = { always = no }
 				has_estate_privilege = estate_privilege:fnr_WESRE_foederati_chiefs
 			}
 			if = {
@@ -126,7 +126,7 @@ fnr_WESRE_yearly_upkeep_effect = {
 
 		# Restless: below 40 (warning before the revolt at 30)
 		if = {
-			limit = { var:fnr_WESRE_foederati_loyalty < 40 }
+			limit = { trigger_if = { limit = { has_variable = fnr_WESRE_foederati_loyalty } var:fnr_WESRE_foederati_loyalty < 40 } trigger_else = { always = no } }
 			if = {
 				limit = { NOT = { has_country_modifier = fnr_WESRE_foederati_restless } }
 				add_country_modifier = { modifier = fnr_WESRE_foederati_restless years = -1 }
