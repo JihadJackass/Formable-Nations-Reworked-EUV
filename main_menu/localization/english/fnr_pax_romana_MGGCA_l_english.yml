@@ -1,0 +1,167 @@
+﻿l_english:
+
+  ###########################################################
+  # Pax Romana - Magna Graecia                              #
+  ###########################################################
+
+    # The Hellenic Revival
+
+      fnr_MGGCA_revival_tt: "#T The Hellenic Revival#!\nFour stages, each taken by decision once the last one is #Y 10#! years behind us. Every stage gives Greek bonuses, but makes #Y Italian Discontent#! likelier. Favouring the Greeks brings #R Italian Resentment#!, while favouring the Italians pushes the next stage back #Y 5#! years.\n\n$fnr_MGGCA_stage_current$"
+      fnr_MGGCA_stage_current: "#Y Hellenic Revival#! stage #Y [GetPlayer.MakeScope.GetVariable('fnr_MGGCA_stage').GetValue|0]#! of #Y 4#!."
+      fnr_MGGCA_can_revive_tt: "Is #Y Magna Graecia#!, or a southern Italian state that is Greek or Griko, is #Y Naples#!, or rules Greek-speaking land in Salento or Calabria, while #Y Magna Graecia#! does not exist and its formable is enabled"
+      fnr_MGGCA_stage_at_least_1_tt: "Has reached stage #Y 1#! of the #Y Hellenic Revival#!"
+      fnr_MGGCA_stage_at_least_2_tt: "Has reached stage #Y 2#! of the #Y Hellenic Revival#!"
+      fnr_MGGCA_stage_at_least_3_tt: "Has reached stage #Y 3#! of the #Y Hellenic Revival#!"
+      fnr_MGGCA_stage_at_least_4_tt: "Has reached stage #Y 4#! of the #Y Hellenic Revival#!"
+      fnr_MGGCA_stage_ready_tt: "At least #Y 10#! years have passed since the last stage of the #Y Hellenic Revival#!, and no Italian concession has delayed it"
+      fnr_MGGCA_delay_tt: "The next stage of the #Y Hellenic Revival#! is delayed by #R 5#! years"
+      fnr_MGGCA_hasten_tt: "The next stage of the #Y Hellenic Revival#! can be taken #G now#!"
+      fnr_MGGCA_stage_1_tt: "We reach stage #Y 1#! of the #Y Hellenic Revival#!. Other southern Italian states that rule Greek-speaking land can form #Y Magna Graecia#! at stage #Y 2#!."
+      fnr_MGGCA_stage_2_tt: "We reach stage #Y 2#! of the #Y Hellenic Revival#! and accept the #Y Griko#! culture."
+      fnr_MGGCA_stage_3_tt: "We reach stage #Y 3#! of the #Y Hellenic Revival#!. A tenth of the people of Salento and Calabria take up the #Y Griko#! culture."
+      fnr_MGGCA_stage_4_tt: "We reach #Y Megale Hellas#!, the last stage of the #Y Hellenic Revival#!. Another tenth of the people of Salento and Calabria take up the #Y Griko#! culture, and #Y Griko#! may become our own culture."
+      fnr_MGGCA_form_stage_2_tt: "Has reached stage #Y 2#! of the #Y Hellenic Revival#!"
+      fnr_MGGCA_form_stage_3_tt: "#Y Naples#! must go further: stage #Y 3#! of the #Y Hellenic Revival#!, at least #Y 25#! [stability|e], no #Y Italian Resentment#!, and #Y 3#! #Y Basilian Monasteries#!"
+      fnr_MGGCA_ptolemy_scholarship_tt: "The #Y Library of Alexandria#! gains #G 5#! scholarship."
+
+      fnr_MGGCA_philhellenes.title: "Philhellenes at Court"
+      fnr_MGGCA_philhellenes.desc: "In Salento and the hills of Calabria the old people still speak Greek, and the monks of St Basil still pray in it. Let scholars who know the ancient tongue come to our court, and let our children learn what Taras and Croton once were.\n\n$fnr_MGGCA_stage_current$"
+      fnr_MGGCA_philhellenes.a: "Open the court to them."
+      fnr_MGGCA_greek_schools.title: "The Greek Schools"
+      fnr_MGGCA_greek_schools.desc: "The Greek villages of Salento have kept their language for two thousand years with no help from any king. Schools in Lecce and Taranto, paid from our treasury, will teach Greek letters to Griko and Italian children alike.\n\n$fnr_MGGCA_stage_current$"
+      fnr_MGGCA_greek_schools.a: "Let them learn Greek."
+      fnr_MGGCA_revival_of_the_italiotes.title: "Revival of the Italiotes"
+      fnr_MGGCA_revival_of_the_italiotes.desc: "Taras, Croton and Rhegion were Greek cities when Rome was a village. With the monasteries flourishing and Greek heard again in the markets, the people of the south are beginning to call themselves Italiotes, as their ancestors did.\n\n$fnr_MGGCA_stage_current$"
+      fnr_MGGCA_revival_of_the_italiotes.a: "We are Italiotes."
+      fnr_MGGCA_megale_hellas.title: "Megale Hellas"
+      fnr_MGGCA_megale_hellas.desc: "From Syracuse to Taranto and Naples, the cities of Great Greece are ours again. Let it be proclaimed that this is Megale Hellas, the Greater Greece of old, reborn in the west.\n\n$fnr_MGGCA_stage_current$"
+      fnr_MGGCA_megale_hellas.a: "Greater Greece is reborn."
+      fnr_MGGCA_adopt_griko.title: "The Tongue of the Italiotes"
+      fnr_MGGCA_adopt_griko.desc: "The court speaks Greek, the schools teach it and half the realm prays in it. It is time the crown itself became Griko."
+      fnr_MGGCA_adopt_griko.a: "We are Griko."
+      fnr_MGGCA_concord.title: "The Concord of the Two Peoples"
+      fnr_MGGCA_concord.desc: "Greeks and Italians have shared these shores for longer than anyone can remember. A great feast, gifts to the barons and new charters for the Italian towns will remind both peoples that they live under one crown."
+      fnr_MGGCA_concord.a: "One crown, two peoples."
+
+    # Events
+
+      fnr_MGGCA.1.title: "Magna Graecia"
+      fnr_MGGCA.1.desc: "The Romans called it Magna Graecia, Great Greece, the coast where Greek colonists built Taras, Croton, Sybaris and Syracuse. Today the name is ours. The south of Italy and Sicily are joined under one crown that remembers what they once were."
+      fnr_MGGCA.1.a: "Great Greece endures."
+      fnr_MGGCA.2.title: "Philhellenes at Court"
+      fnr_MGGCA.2.desc: "Greek scholars from Constantinople and the islands have joined the court. Our nobles complain that dinner conversation now requires a translator."
+      fnr_MGGCA.2.a: "They will learn."
+      fnr_MGGCA.3.title: "The Greek Schools"
+      fnr_MGGCA.3.desc: "The first Greek schools have opened in Lecce and Taranto. The Basilian monks provide the teachers, and Griko families, long ignored, send their children with pride."
+      fnr_MGGCA.3.a: "A good beginning."
+      fnr_MGGCA.4.title: "Revival of the Italiotes"
+      fnr_MGGCA.4.desc: "Greek is heard again in the markets of Calabria, and Italian families in the south have begun to take Greek names. The Italians of Naples are less pleased."
+      fnr_MGGCA.4.a: "The old cities wake."
+      fnr_MGGCA.5.title: "Megale Hellas"
+      fnr_MGGCA.5.desc: "Heralds have proclaimed Megale Hellas in Syracuse, Taranto and Naples. Scholars across the Greek world write to congratulate us, and the Pope writes to ask what exactly we mean by it."
+      fnr_MGGCA.5.a: "Greater Greece is reborn."
+
+      fnr_MGGCA.10.title: "The Barons Object"
+      fnr_MGGCA.10.desc: "The Italian barons of the south say the crown has forgotten who holds its castles. They want Greek scholars out of the council and Italian lords back in it.\n\n$fnr_MGGCA_stage_current$"
+      fnr_MGGCA.10.a: "The council stays as it is."
+      fnr_MGGCA.10.b: "Give the barons their seats."
+      fnr_MGGCA.11.title: "Latin Bishops Protest"
+      fnr_MGGCA.11.desc: "The Latin bishops of the south complain to Rome that Greek-rite monks are taking their parishes and their tithes, and that the crown is doing nothing to stop it.\n\n$fnr_MGGCA_stage_current$"
+      fnr_MGGCA.11.a: "The monks stay."
+      fnr_MGGCA.11.b: "Return the parishes to the bishops."
+      fnr_MGGCA.12.title: "The Merchants of Naples Complain"
+      fnr_MGGCA.12.desc: "The great merchant houses of Naples say Greek traders from the Ionian and the Levant now get the best contracts, and that Italian money built this kingdom.\n\n$fnr_MGGCA_stage_current$"
+      fnr_MGGCA.12.a: "The best offer wins."
+      fnr_MGGCA.12.b: "Favour the houses of Naples."
+      fnr_MGGCA.13.title: "A Riot in the Italian Quarter"
+      fnr_MGGCA.13.desc: "A quarrel between Greek and Italian sailors on the docks has become a riot. Shops are burning, and both sides say the guard took the other's part.\n\n$fnr_MGGCA_stage_current$"
+      fnr_MGGCA.13.a: "Punish the rioters."
+      fnr_MGGCA.13.b: "Pay for the Italian shops."
+      fnr_MGGCA.14.title: "The Language of the Court"
+      fnr_MGGCA.14.desc: "A new decree has been written in Greek alone, and half the lords who must obey it cannot read it. They ask for Italian to be restored as the language of government.\n\n$fnr_MGGCA_stage_current$"
+      fnr_MGGCA.14.a: "Greek it remains."
+      fnr_MGGCA.14.b: "Write it in both."
+      fnr_MGGCA.15.title: "Italian Poets Mock the Revival"
+      fnr_MGGCA.15.desc: "A play in Naples shows our court as a crowd of fools in togas, quoting Homer badly and starving the Italian poor. It is the most popular play of the season.\n\n$fnr_MGGCA_stage_current$"
+      fnr_MGGCA.15.a: "Close the theatre."
+      fnr_MGGCA.15.b: "Laugh along, and fund Italian poets too."
+
+      fnr_MGGCA.20.title: "The Shadow of Rome"
+      fnr_MGGCA.20.desc: "Rome has risen again, and its envoys remind us that the Greek cities of the south once fought Rome and lost. They offer friendship. They do not say what happens if we refuse."
+      fnr_MGGCA.20.a: "Seek Roman friendship."
+      fnr_MGGCA.20.b: "Taras did not bow, and neither will we."
+      fnr_MGGCA.21.title: "A Pyrrhic Victory"
+      fnr_MGGCA.21.desc: "Our army has held the Romans, as Pyrrhus once did, but at a terrible cost. Another victory like this one and we will have no army left."
+      fnr_MGGCA.21.a: "We fight on."
+      fnr_MGGCA.22.title: "The Catepan's Envoy"
+      fnr_MGGCA.22.desc: "An envoy from Constantinople reminds us that southern Italy was once the Catepanate of Italy, ruled from the Golden Horn. The Emperor offers his patronage to the Greeks of the west: scholars, icons and monks for the revival."
+      fnr_MGGCA.22.a: "Accept the Emperor's patronage."
+      fnr_MGGCA.22.b: "We are no one's province."
+      fnr_MGGCA.23.title: "Scholars from Alexandria"
+      fnr_MGGCA.23.desc: "The Ptolemaic court has heard of our revival and sends scholars from the Library of Alexandria, asking only for copies of the Greek books kept in our monasteries in return."
+      fnr_MGGCA.23.a: "Welcome them, and share the books."
+      fnr_MGGCA.23.b: "We need no help from Egypt."
+
+    # Static modifiers
+
+      STATIC_MODIFIER_NAME_fnr_MGGCA_stage_1: "Philhellenes at Court"
+      STATIC_MODIFIER_DESC_fnr_MGGCA_stage_1: "Greek scholars sit at our court.\n\n$fnr_MGGCA_stage_current$"
+      STATIC_MODIFIER_NAME_fnr_MGGCA_stage_2: "The Greek Schools"
+      STATIC_MODIFIER_DESC_fnr_MGGCA_stage_2: "Greek is taught in the schools of the south.\n\n$fnr_MGGCA_stage_current$"
+      STATIC_MODIFIER_NAME_fnr_MGGCA_stage_3: "Revival of the Italiotes"
+      STATIC_MODIFIER_DESC_fnr_MGGCA_stage_3: "The people of the south call themselves Italiotes once more.\n\n$fnr_MGGCA_stage_current$"
+      STATIC_MODIFIER_NAME_fnr_MGGCA_stage_4: "Megale Hellas"
+      STATIC_MODIFIER_DESC_fnr_MGGCA_stage_4: "Greater Greece is reborn in the west.\n\n$fnr_MGGCA_stage_current$"
+      STATIC_MODIFIER_NAME_fnr_MGGCA_italian_resentment: "Italian Resentment"
+      STATIC_MODIFIER_DESC_fnr_MGGCA_italian_resentment: "The Italians of the realm feel the crown has forgotten them. The Concord of the Two Peoples can end it."
+      STATIC_MODIFIER_NAME_fnr_MGGCA_friend_of_rome: "Friend of Rome"
+      STATIC_MODIFIER_DESC_fnr_MGGCA_friend_of_rome: "We have sought the friendship of Rome, and Roman merchants are welcome in our ports."
+      STATIC_MODIFIER_NAME_fnr_MGGCA_defiance_of_rome: "Defiance of Rome"
+      STATIC_MODIFIER_DESC_fnr_MGGCA_defiance_of_rome: "Like Taras before us, we refuse to bow to Rome."
+      STATIC_MODIFIER_NAME_fnr_MGGCA_pyrrhic_victory: "A Pyrrhic Victory"
+      STATIC_MODIFIER_DESC_fnr_MGGCA_pyrrhic_victory: "Our soldiers have beaten the Romans, but at a terrible cost."
+      STATIC_MODIFIER_NAME_fnr_MGGCA_byzantine_patronage: "Byzantine Patronage"
+      STATIC_MODIFIER_DESC_fnr_MGGCA_byzantine_patronage: "The Emperor in Constantinople sends scholars, icons and monks to the Greeks of the west."
+      STATIC_MODIFIER_NAME_fnr_MGGCA_alexandrian_scholars: "Scholars from Alexandria"
+      STATIC_MODIFIER_DESC_fnr_MGGCA_alexandrian_scholars: "Scholars from the Library of Alexandria teach at our court."
+
+    # Advances
+
+      MGGCA_italiote_heritage: "Italiote Heritage"
+      MGGCA_italiote_heritage_desc: "The laws of Zaleucus of Locri and Charondas of Catania were the first written laws of the Greek west. Our jurists study them still."
+      MGGCA_greek_rite: "The Greek Rite"
+      MGGCA_greek_rite_desc: "The Basilian monasteries of Calabria and Sicily have kept Greek books and Greek learning alive through every conquest."
+      MGGCA_hoplite_tradition: "The Hoplite Tradition"
+      MGGCA_hoplite_tradition_desc: "Taras hired kings to fight for it and Syracuse broke the Athenian fleet. Our soldiers drill in the close order of their ancestors."
+      MGGCA_ports_of_the_ionian: "Ports of the Ionian"
+      MGGCA_ports_of_the_ionian_desc: "Taranto, Brindisi and Messina look east across the Ionian Sea, to Greece and the Levant."
+      MGGCA_greek_presses: "The Greek Presses"
+      MGGCA_greek_presses_desc: "Printers in Naples and Messina publish Greek grammars and classics for scholars across Europe."
+      MGGCA_italiote_koinon: "The Italiote Koinon"
+      MGGCA_italiote_koinon_desc: "Like the old league of the Italiote cities, our towns meet in a common council to settle their quarrels."
+      MGGCA_court_of_megale_hellas: "The Court of Megale Hellas"
+      MGGCA_court_of_megale_hellas_desc: "Our court is the meeting place of the Greek world in the west, rivalled only by Constantinople and Alexandria."
+
+    # Government reforms
+
+      fnr_MGGCA_italiote_koinon: "The Italiote Koinon"
+      fnr_MGGCA_italiote_koinon_desc: "The cities of the south govern their own affairs and send delegates to a common council, as the Italiote League once did."
+      fnr_MGGCA_basileia_of_the_west: "Basileia of the West"
+      fnr_MGGCA_basileia_of_the_west_desc: "The King rules as a Hellenistic basileus, heir to Dionysius of Syracuse and Pyrrhus of Epirus. Needs stage 3 of the Hellenic Revival."
+
+    # Estate privileges
+
+      fnr_MGGCA_basilian_monks: "The Basilian Monks"
+      fnr_MGGCA_basilian_monks_desc: "The Greek-rite monks of St Basil keep their lands and their own abbots, and teach in our Greek schools."
+      fnr_MGGCA_italiote_merchants: "The Italiote Merchants"
+      fnr_MGGCA_italiote_merchants_desc: "The Greek merchants of the south trade across the Ionian with the crown's protection."
+
+    # Buildings
+
+      fnr_MGGCA_basilian_monastery: "Basilian Monastery"
+      fnr_MGGCA_basilian_monastery_desc: "A Greek-rite monastery of the monks of St Basil, keeping Greek books and teaching Greek letters. Southern Italy and Sicily only. Stages 3 and 4 of the Hellenic Revival need several."
+
+    # Hints
+
+      hint_fnr_MGGCA_revival: "The Hellenic Revival"
+      hint_fnr_MGGCA_revival_hint_text: "$fnr_MGGCA_revival_tt$\n\n@hint! #T The stages#!\n1 #Y Philhellenes at Court#! (100 gold)\n2 #Y The Greek Schools#! (own Lecce and Taranto, 200 gold, accept Griko)\n3 #Y Revival of the Italiotes#! (own Taranto, Crotone and Reggio, 2 Basilian Monasteries, 300 gold)\n4 #Y Megale Hellas#! (Magna Graecia only, own Syracuse, Taranto and Naples, 4 Basilian Monasteries, 400 gold)\n\n@hint! #T Forming Magna Graecia#!\nGreek and Griko states can form it at once. Other southern Italian states that rule Greek-speaking land in Salento or Calabria need stage 2. #Y Naples#! needs stage 3, 25 stability, no Italian Resentment and 3 Basilian Monasteries.\n\n@hint! #T Calming the Italians#!\n#Y The Concord of the Two Peoples#! ends Italian Resentment once every 10 years."

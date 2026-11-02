@@ -1,0 +1,17 @@
+﻿# Trebizond Estate Privileges (Pax Romana)
+
+		# Archons of the Pontic Passes - Peril -2 a year
+		fnr_TRE_archons_of_the_passes = {
+
+			estate = nobles_estate
+
+			potential = {
+				has_or_had_tag = TRE
+			}
+
+			country_modifier = {
+				global_nobles_estate_power = 0.10
+				nobles_estate_target_satisfaction = small_privilege_target_satisfaction
+				global_defensive = 0.05
+			}
+		}

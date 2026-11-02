@@ -1,0 +1,39 @@
+﻿# Magna Graecia Building Types (Pax Romana)
+
+# Basilian Monastery - Greek-rite monastery in southern Italy and Sicily. Needed for stages 3 and 4 of the Hellenic Revival.
+fnr_MGGCA_basilian_monastery = {
+	audio_tier = 1
+	is_foreign = no
+	max_levels = 1
+	pop_type = clergy
+
+	category = religious_category
+	employment_size = religious_building_employment
+
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+
+	build_time = religious_building_time
+
+	country_potential = {
+		fnr_MGGCA_can_revive = yes
+		fnr_MGGCA_stage_at_least = { VALUE = 1 }
+	}
+
+	allow = {
+		fnr_MGGCA_is_south_italy = yes
+	}
+
+	possible_production_methods = {
+		monastery_maintenance
+	}
+
+	construction_demand = town_building_construction
+
+	modifier = {
+		local_clergy_max_literacy = 5
+		local_unrest = -0.25
+	}
+}

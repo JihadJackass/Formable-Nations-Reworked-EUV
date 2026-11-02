@@ -1,0 +1,517 @@
+﻿namespace = fnr_MGGCA
+
+# Magna Graecia events (Pax Romana)
+# .1 formation | .2-.5 stages of the Hellenic Revival | .10-.15 Italian Discontent | .20-.23 Rome, Byzantium, the Ptolemies
+
+# 1 - Formation
+fnr_MGGCA.1 = {
+	type = country_event
+	title = fnr_MGGCA.1.title
+	desc = fnr_MGGCA.1.desc
+	outcome = positive
+
+	trigger = {
+		always = yes
+	}
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:burghers_estate }
+	}
+
+	option = {
+		name = fnr_MGGCA.1.a
+		ai_chance = { factor = 100 }
+		custom_tooltip = fnr_MGGCA_revival_tt
+	}
+}
+
+# 2 - Stage 1 - Philhellenes at Court
+fnr_MGGCA.2 = {
+	type = country_event
+	title = fnr_MGGCA.2.title
+	desc = fnr_MGGCA.2.desc
+	outcome = positive
+
+	trigger = {
+		always = yes
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:clergy_estate }
+	}
+
+	option = {
+		name = fnr_MGGCA.2.a
+		ai_chance = { factor = 100 }
+		add_prestige = prestige_weak_bonus
+	}
+}
+
+# 3 - Stage 2 - The Greek Schools
+fnr_MGGCA.3 = {
+	type = country_event
+	title = fnr_MGGCA.3.title
+	desc = fnr_MGGCA.3.desc
+	outcome = positive
+
+	trigger = {
+		always = yes
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:clergy_estate }
+	}
+
+	option = {
+		name = fnr_MGGCA.3.a
+		ai_chance = { factor = 100 }
+		add_prestige = prestige_weak_bonus
+	}
+}
+
+# 4 - Stage 3 - Revival of the Italiotes
+fnr_MGGCA.4 = {
+	type = country_event
+	title = fnr_MGGCA.4.title
+	desc = fnr_MGGCA.4.desc
+	outcome = positive
+
+	trigger = {
+		always = yes
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:clergy_estate }
+	}
+
+	option = {
+		name = fnr_MGGCA.4.a
+		ai_chance = { factor = 100 }
+		add_prestige = prestige_weak_bonus
+	}
+}
+
+# 5 - Stage 4 - Megale Hellas
+fnr_MGGCA.5 = {
+	type = country_event
+	title = fnr_MGGCA.5.title
+	desc = fnr_MGGCA.5.desc
+	outcome = positive
+
+	trigger = {
+		always = yes
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:clergy_estate }
+	}
+
+	option = {
+		name = fnr_MGGCA.5.a
+		ai_chance = { factor = 100 }
+		add_prestige = prestige_weak_bonus
+	}
+}
+
+
+# ---------- Italian Discontent (yearly, likelier at each stage) ----------
+
+# 10 - The barons object
+fnr_MGGCA.10 = {
+	type = country_event
+	title = fnr_MGGCA.10.title
+	desc = fnr_MGGCA.10.desc
+	outcome = negative
+
+	trigger = {
+		fnr_MGGCA_can_revive = yes
+		fnr_MGGCA_stage_at_least = { VALUE = 1 }
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:crown_estate }
+	}
+
+	option = {
+		name = fnr_MGGCA.10.a
+		ai_chance = { factor = 40 }
+		add_estate_satisfaction = { type = estate_type:nobles_estate value = estate_satisfaction_mild_penalty }
+		fnr_MGGCA_resentment_effect = yes
+	}
+
+	option = {
+		name = fnr_MGGCA.10.b
+		ai_chance = { factor = 60 }
+		add_estate_satisfaction = { type = estate_type:nobles_estate value = estate_satisfaction_mild_bonus }
+		fnr_MGGCA_delay_effect = yes
+	}
+}
+
+# 11 - Latin bishops protest
+fnr_MGGCA.11 = {
+	type = country_event
+	title = fnr_MGGCA.11.title
+	desc = fnr_MGGCA.11.desc
+	outcome = negative
+
+	trigger = {
+		fnr_MGGCA_can_revive = yes
+		fnr_MGGCA_stage_at_least = { VALUE = 1 }
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:crown_estate }
+	}
+
+	option = {
+		name = fnr_MGGCA.11.a
+		ai_chance = { factor = 40 }
+		add_estate_satisfaction = { type = estate_type:clergy_estate value = estate_satisfaction_mild_penalty }
+		fnr_MGGCA_resentment_effect = yes
+	}
+
+	option = {
+		name = fnr_MGGCA.11.b
+		ai_chance = { factor = 60 }
+		add_estate_satisfaction = { type = estate_type:clergy_estate value = estate_satisfaction_mild_bonus }
+		fnr_MGGCA_delay_effect = yes
+	}
+}
+
+# 12 - The merchants of Naples complain
+fnr_MGGCA.12 = {
+	type = country_event
+	title = fnr_MGGCA.12.title
+	desc = fnr_MGGCA.12.desc
+	outcome = negative
+
+	trigger = {
+		fnr_MGGCA_can_revive = yes
+		fnr_MGGCA_stage_at_least = { VALUE = 1 }
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:crown_estate }
+	}
+
+	option = {
+		name = fnr_MGGCA.12.a
+		ai_chance = { factor = 40 }
+		add_estate_satisfaction = { type = estate_type:burghers_estate value = estate_satisfaction_mild_penalty }
+		fnr_MGGCA_resentment_effect = yes
+	}
+
+	option = {
+		name = fnr_MGGCA.12.b
+		ai_chance = { factor = 60 }
+		add_estate_satisfaction = { type = estate_type:burghers_estate value = estate_satisfaction_mild_bonus }
+		fnr_MGGCA_delay_effect = yes
+	}
+}
+
+# 13 - A riot in the Italian quarter
+fnr_MGGCA.13 = {
+	type = country_event
+	title = fnr_MGGCA.13.title
+	desc = fnr_MGGCA.13.desc
+	outcome = negative
+
+	trigger = {
+		fnr_MGGCA_can_revive = yes
+		fnr_MGGCA_stage_at_least = { VALUE = 1 }
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:burghers_estate }
+	}
+
+	option = {
+		name = fnr_MGGCA.13.a
+		ai_chance = { factor = 40 }
+		add_stability = stability_weak_penalty
+		fnr_MGGCA_resentment_effect = yes
+	}
+
+	option = {
+		name = fnr_MGGCA.13.b
+		ai_chance = { factor = 60 }
+		add_stability = stability_weak_bonus
+		fnr_MGGCA_delay_effect = yes
+	}
+}
+
+# 14 - The language of the court
+fnr_MGGCA.14 = {
+	type = country_event
+	title = fnr_MGGCA.14.title
+	desc = fnr_MGGCA.14.desc
+	outcome = negative
+
+	trigger = {
+		fnr_MGGCA_can_revive = yes
+		fnr_MGGCA_stage_at_least = { VALUE = 1 }
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:burghers_estate }
+	}
+
+	option = {
+		name = fnr_MGGCA.14.a
+		ai_chance = { factor = 40 }
+		add_estate_satisfaction = { type = estate_type:nobles_estate value = estate_satisfaction_mild_penalty }
+		fnr_MGGCA_resentment_effect = yes
+	}
+
+	option = {
+		name = fnr_MGGCA.14.b
+		ai_chance = { factor = 60 }
+		add_estate_satisfaction = { type = estate_type:nobles_estate value = estate_satisfaction_mild_bonus }
+		fnr_MGGCA_delay_effect = yes
+	}
+}
+
+# 15 - Italian poets mock the revival
+fnr_MGGCA.15 = {
+	type = country_event
+	title = fnr_MGGCA.15.title
+	desc = fnr_MGGCA.15.desc
+	outcome = negative
+
+	trigger = {
+		fnr_MGGCA_can_revive = yes
+		fnr_MGGCA_stage_at_least = { VALUE = 1 }
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_MGGCA.15.a
+		ai_chance = { factor = 40 }
+		add_estate_satisfaction = { type = estate_type:burghers_estate value = estate_satisfaction_mild_penalty }
+		fnr_MGGCA_resentment_effect = yes
+	}
+
+	option = {
+		name = fnr_MGGCA.15.b
+		ai_chance = { factor = 60 }
+		add_estate_satisfaction = { type = estate_type:burghers_estate value = estate_satisfaction_mild_bonus }
+		fnr_MGGCA_delay_effect = yes
+	}
+}
+
+
+# ---------- Rome, Byzantium and the Ptolemies ----------
+
+# 20 - The Shadow of Rome (once)
+fnr_MGGCA.20 = {
+	type = country_event
+	title = fnr_MGGCA.20.title
+	desc = fnr_MGGCA.20.desc
+	outcome = neutral
+	fire_only_once = yes
+
+	trigger = {
+		has_or_had_tag = MGGCA
+		OR = {
+			exists = c:ROM
+			exists = c:RMNRP
+		}
+		NOT = { has_country_modifier = fnr_MGGCA_friend_of_rome }
+		NOT = { has_country_modifier = fnr_MGGCA_defiance_of_rome }
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_MGGCA.20.a
+		ai_chance = { factor = 60 }
+		add_country_modifier = { modifier = fnr_MGGCA_friend_of_rome years = 25 }
+	}
+
+	option = {
+		name = fnr_MGGCA.20.b
+		ai_chance = { factor = 40 }
+		add_country_modifier = { modifier = fnr_MGGCA_defiance_of_rome years = 25 }
+		add_prestige = prestige_weak_bonus
+	}
+}
+
+# 21 - A Pyrrhic Victory (at war with Rome)
+fnr_MGGCA.21 = {
+	type = country_event
+	title = fnr_MGGCA.21.title
+	desc = fnr_MGGCA.21.desc
+	outcome = neutral
+
+	trigger = {
+		has_or_had_tag = MGGCA
+		OR = {
+			AND = { exists = c:ROM is_at_war_with = c:ROM }
+			AND = { exists = c:RMNRP is_at_war_with = c:RMNRP }
+		}
+		NOT = { has_country_modifier = fnr_MGGCA_pyrrhic_victory }
+	}
+
+	illustration_tags = {
+		10 = exterior
+		10 = armed
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_MGGCA.21.a
+		ai_chance = { factor = 100 }
+		add_country_modifier = { modifier = fnr_MGGCA_pyrrhic_victory years = 5 }
+		add_stability = stability_weak_penalty
+	}
+}
+
+# 22 - The Catepan's Envoy (Byzantium or the Eastern Roman Empire, once)
+fnr_MGGCA.22 = {
+	type = country_event
+	title = fnr_MGGCA.22.title
+	desc = fnr_MGGCA.22.desc
+	outcome = neutral
+	fire_only_once = yes
+
+	trigger = {
+		fnr_MGGCA_can_revive = yes
+		fnr_MGGCA_stage_at_least = { VALUE = 1 }
+		OR = {
+			exists = c:EASRE
+			exists = c:BYZ
+		}
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:crown_estate }
+	}
+
+	option = {
+		name = fnr_MGGCA.22.a
+		ai_chance = { factor = 60 }
+		add_country_modifier = { modifier = fnr_MGGCA_byzantine_patronage years = 25 }
+		fnr_MGGCA_hasten_effect = yes
+		add_estate_satisfaction = { type = estate_type:nobles_estate value = estate_satisfaction_weak_penalty }
+	}
+
+	option = {
+		name = fnr_MGGCA.22.b
+		ai_chance = { factor = 40 }
+		add_prestige = prestige_weak_bonus
+	}
+}
+
+# 23 - Scholars from Alexandria (the Ptolemaic Kingdom, once)
+fnr_MGGCA.23 = {
+	type = country_event
+	title = fnr_MGGCA.23.title
+	desc = fnr_MGGCA.23.desc
+	outcome = positive
+	fire_only_once = yes
+
+	trigger = {
+		fnr_MGGCA_can_revive = yes
+		fnr_MGGCA_stage_at_least = { VALUE = 1 }
+		exists = c:PTLMY
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:clergy_estate }
+	}
+
+	option = {
+		name = fnr_MGGCA.23.a
+		ai_chance = { factor = 70 }
+		add_country_modifier = { modifier = fnr_MGGCA_alexandrian_scholars years = 20 }
+		fnr_MGGCA_hasten_effect = yes
+		custom_tooltip = fnr_MGGCA_ptolemy_scholarship_tt
+		hidden_effect = {
+			c:PTLMY ?= { fnr_PTLMY_shift_scholarship_effect = { VALUE = 5 } }
+		}
+	}
+
+	option = {
+		name = fnr_MGGCA.23.b
+		ai_chance = { factor = 30 }
+		add_prestige = prestige_weak_bonus
+	}
+}

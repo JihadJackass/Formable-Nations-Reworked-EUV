@@ -961,3 +961,20 @@
     # Rhineland
       fnr_RHLND_war_months: "Months at War since the Age of Absolutism"
       fnr_BLGUM_independence: "Belgian Independence"
+
+    # Magna Graecia
+      fnr_MGGCA_stage: "Hellenic Revival Stage"
+      fnr_MGGCA_stage_wait: "Waiting for the Next Stage of the Hellenic Revival"
+      fnr_MGGCA_delayed: "Hellenic Revival Delayed by Italian Concessions"
+      fnr_MGGCA_concord: "Recently Held the Concord of the Two Peoples"
+      fnr_MGGCA_formed: "Formed Magna Graecia"
+
+    # Trebizond (Pax Romana)
+      fnr_TRE_setup: "Trebizond Content Set Up"
+      fnr_TRE_peril: "Peril"
+      fnr_TRE_pacts: "Komnenian Marriage Pacts"
+      fnr_TRE_bride_of_trebizond: "Married a Komnenian Princess"
+      fnr_TRE_passes_fortified: "Fortified the Pontic Passes"
+      fnr_TRE_emperor_of_romans: "Proclaimed Emperor of the Romans"
+      fnr_TRE_inheritance: "Claimed the Inheritance of Constantinople"
+      fnr_TRE_siege_cooldown: "The Sultan's Army Recently Came Before Trebizond"

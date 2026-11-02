@@ -1,0 +1,436 @@
+﻿namespace = fnr_TRE
+
+# Trebizond events (Pax Romana)
+# .1 introduction | .2-.3 Peril | .4-.5 marriage pacts | .6-.7 the Silk Road | .8 Byzantium | .9-.10 Empire in Exile | .11 Pontus
+
+# 1 - The Empire of Trebizond (first year)
+fnr_TRE.1 = {
+	type = country_event
+	title = fnr_TRE.1.title
+	desc = fnr_TRE.1.desc
+	outcome = positive
+
+	trigger = {
+		fnr_TRE_is_komnenian = yes
+	}
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_TRE.1.a
+		ai_chance = { factor = 100 }
+		custom_tooltip = fnr_TRE_systems_tt
+	}
+}
+
+# 2 - Turkmen Raid (Peril 50+)
+fnr_TRE.2 = {
+	type = country_event
+	title = fnr_TRE.2.title
+	desc = fnr_TRE.2.desc
+	outcome = negative
+
+	trigger = {
+		fnr_TRE_is_komnenian = yes
+		fnr_TRE_peril_at_least = { VALUE = 50 }
+	}
+
+	illustration_tags = {
+		10 = exterior
+		10 = armed
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:peasants_estate }
+	}
+
+	# Ride out to meet them
+	option = {
+		name = fnr_TRE.2.a
+		ai_chance = { factor = 40 }
+		add_manpower = -0.5
+		add_army_tradition = army_tradition_weak_bonus
+		fnr_TRE_change_peril_effect = { VALUE = -5 TT = minus_5 }
+	}
+
+	# Buy them off
+	option = {
+		name = fnr_TRE.2.b
+		ai_chance = { factor = 40 }
+		trigger = { gold >= 50 }
+		add_gold = -50
+	}
+
+	# Shelter behind the walls
+	option = {
+		name = fnr_TRE.2.c
+		ai_chance = { factor = 20 }
+		add_country_modifier = { modifier = fnr_TRE_raid_damage years = 3 }
+		fnr_TRE_change_peril_effect = { VALUE = 5 TT = plus_5 }
+	}
+}
+
+# 3 - The Sultan's Army Before Trebizond (Peril 80+)
+fnr_TRE.3 = {
+	type = country_event
+	title = fnr_TRE.3.title
+	desc = fnr_TRE.3.desc
+	outcome = negative
+
+	trigger = {
+		fnr_TRE_is_komnenian = yes
+		fnr_TRE_peril_at_least = { VALUE = 80 }
+		any_neighbor_country = { fnr_TRE_is_turkish = yes }
+	}
+
+	illustration_tags = {
+		10 = exterior
+		10 = armed
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+		set_variable = { name = fnr_TRE_siege_cooldown years = 10 }
+		random_neighbor_country = {
+			limit = { fnr_TRE_is_turkish = yes }
+			save_scope_as = fnr_TRE_sultan
+		}
+	}
+
+	# Pay what he asks
+	option = {
+		name = fnr_TRE.3.a
+		ai_chance = { factor = 40 }
+		trigger = { gold >= 250 }
+		add_gold = -250
+		add_prestige = prestige_mild_penalty
+		fnr_TRE_change_peril_effect = { VALUE = -25 TT = minus_25 }
+	}
+
+	# Defy him from the walls
+	option = {
+		name = fnr_TRE.3.b
+		ai_chance = { factor = 30 }
+		add_stability = stability_weak_penalty
+		add_country_modifier = { modifier = fnr_TRE_defiance years = 10 }
+		fnr_TRE_change_peril_effect = { VALUE = -10 TT = minus_10 }
+	}
+
+	# Offer him a Komnenian bride
+	option = {
+		name = fnr_TRE.3.c
+		ai_chance = { factor = 30 }
+		trigger = {
+			fnr_TRE_pacts_below = { VALUE = 3 }
+			scope:fnr_TRE_sultan ?= { NOT = { has_variable = fnr_TRE_bride_of_trebizond } }
+		}
+		add_prestige = prestige_weak_penalty
+		scope:fnr_TRE_sultan ?= {
+			set_variable = { name = fnr_TRE_bride_of_trebizond years = 30 }
+			add_opinion = { modifier = fnr_TRE_komnenian_kin target = root }
+		}
+		scope:fnr_TRE_sultan ?= {
+			root = { add_opinion = { modifier = fnr_TRE_komnenian_kin target = prev } }
+		}
+		custom_tooltip = fnr_TRE_bride_pact_tt
+		fnr_TRE_change_peril_effect = { VALUE = -25 TT = minus_25 }
+		fnr_TRE_count_pacts_effect = yes
+	}
+}
+
+# 4 - A Broken Pact (a marriage partner is at war with us)
+fnr_TRE.4 = {
+	type = country_event
+	title = fnr_TRE.4.title
+	desc = fnr_TRE.4.desc
+	outcome = negative
+
+	trigger = {
+		fnr_TRE_is_komnenian = yes
+		any_country = {
+			has_variable = fnr_TRE_bride_of_trebizond
+			is_at_war_with = root
+		}
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = angry
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+		every_country = {
+			limit = {
+				has_variable = fnr_TRE_bride_of_trebizond
+				is_at_war_with = root
+			}
+			remove_variable = fnr_TRE_bride_of_trebizond
+			root = { add_opinion = { modifier = fnr_TRE_broken_pact target = prev } }
+		}
+		fnr_TRE_count_pacts_effect = yes
+	}
+
+	option = {
+		name = fnr_TRE.4.a
+		ai_chance = { factor = 100 }
+		add_prestige = prestige_mild_penalty
+		fnr_TRE_change_peril_effect = { VALUE = 10 TT = plus_10 }
+	}
+}
+
+# 5 - The Orthodox Bulwark (a bride for Georgia)
+fnr_TRE.5 = {
+	type = country_event
+	title = fnr_TRE.5.title
+	desc = fnr_TRE.5.desc
+	outcome = positive
+
+	trigger = {
+		exists = scope:fnr_TRE_georgia
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = happy
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:clergy_estate }
+	}
+
+	option = {
+		name = fnr_TRE.5.a
+		ai_chance = { factor = 100 }
+		add_country_modifier = { modifier = fnr_TRE_orthodox_bulwark years = 25 }
+		add_opinion = { modifier = fnr_TRE_orthodox_bulwark_opinion target = scope:fnr_TRE_georgia }
+		scope:fnr_TRE_georgia = {
+			add_country_modifier = { modifier = fnr_TRE_orthodox_bulwark years = 25 }
+			add_opinion = { modifier = fnr_TRE_orthodox_bulwark_opinion target = root }
+		}
+	}
+}
+
+# 6 - Venetians and Genoese Come to Blows
+fnr_TRE.6 = {
+	type = country_event
+	title = fnr_TRE.6.title
+	desc = fnr_TRE.6.desc
+	outcome = neutral
+
+	trigger = {
+		fnr_TRE_is_komnenian = yes
+		owns = location:trebizond
+		NOT = { has_country_modifier = fnr_TRE_quarrel_venice }
+		NOT = { has_country_modifier = fnr_TRE_quarrel_genoa }
+	}
+
+	illustration_tags = {
+		10 = exterior
+		10 = angry
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate }
+	}
+
+	option = {
+		name = fnr_TRE.6.a
+		ai_chance = { factor = 35 }
+		add_country_modifier = { modifier = fnr_TRE_quarrel_venice years = 10 }
+	}
+
+	option = {
+		name = fnr_TRE.6.b
+		ai_chance = { factor = 35 }
+		add_country_modifier = { modifier = fnr_TRE_quarrel_genoa years = 10 }
+	}
+
+	option = {
+		name = fnr_TRE.6.c
+		ai_chance = { factor = 30 }
+		add_estate_satisfaction = { type = estate_type:burghers_estate value = estate_satisfaction_mild_bonus }
+	}
+}
+
+# 7 - A Caravan from Tabriz
+fnr_TRE.7 = {
+	type = country_event
+	title = fnr_TRE.7.title
+	desc = fnr_TRE.7.desc
+	outcome = positive
+
+	trigger = {
+		fnr_TRE_is_komnenian = yes
+		has_country_modifier = fnr_TRE_tabriz_caravans
+	}
+
+	illustration_tags = {
+		10 = exterior
+		10 = happy
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:crown_estate }
+	}
+
+	option = {
+		name = fnr_TRE.7.a
+		ai_chance = { factor = 60 }
+		add_gold = 75
+	}
+
+	option = {
+		name = fnr_TRE.7.b
+		ai_chance = { factor = 40 }
+		add_prestige = prestige_mild_bonus
+	}
+}
+
+# 8 - The Two Emperors (Byzantium or the Eastern Roman Empire)
+fnr_TRE.8 = {
+	type = country_event
+	title = fnr_TRE.8.title
+	desc = fnr_TRE.8.desc
+	outcome = neutral
+	fire_only_once = yes
+
+	trigger = {
+		fnr_TRE_is_komnenian = yes
+		NOT = { fnr_TRE_is_byzantium = yes }
+		any_country = { fnr_TRE_is_byzantium = yes }
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:clergy_estate }
+		random_country = {
+			limit = { fnr_TRE_is_byzantium = yes }
+			save_scope_as = fnr_TRE_byzantium
+		}
+	}
+
+	# We are the true Emperors
+	option = {
+		name = fnr_TRE.8.a
+		ai_chance = { factor = 50 }
+		add_country_modifier = { modifier = fnr_TRE_rival_emperors years = 25 }
+		scope:fnr_TRE_byzantium ?= {
+			add_opinion = { modifier = fnr_TRE_rival_emperor target = root }
+		}
+	}
+
+	# One family, two thrones
+	option = {
+		name = fnr_TRE.8.b
+		ai_chance = { factor = 50 }
+		add_country_modifier = { modifier = fnr_TRE_komnenian_reconciliation years = 25 }
+		scope:fnr_TRE_byzantium ?= {
+			add_opinion = { modifier = fnr_TRE_komnenian_kinship target = root }
+		}
+		scope:fnr_TRE_byzantium ?= {
+			root = { add_opinion = { modifier = fnr_TRE_komnenian_kinship target = prev } }
+		}
+	}
+}
+
+# 9 - Emperor of the Romans (decision)
+fnr_TRE.9 = {
+	type = country_event
+	title = fnr_TRE.9.title
+	desc = fnr_TRE.9.desc
+	outcome = positive
+
+	trigger = {
+		always = yes
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = happy
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:clergy_estate }
+	}
+
+	option = {
+		name = fnr_TRE.9.a
+		ai_chance = { factor = 100 }
+		add_legitimacy = legitimacy_mild_bonus
+		custom_tooltip = fnr_TRE_rome_path_tt
+	}
+}
+
+# 10 - The Inheritance of Constantinople (FNR version, without Fate of the Phoenix)
+fnr_TRE.10 = {
+	type = country_event
+	title = fnr_TRE.10.title
+	desc = fnr_TRE.10.desc
+	outcome = positive
+	fire_only_once = yes
+
+	trigger = {
+		fnr_TRE_is_komnenian = yes
+		NOT = { has_dlc = "d008_fate_of_the_phoenix" }
+		NOT = { has_variable = fnr_TRE_inheritance }
+		owns = location:constantinople
+	}
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:clergy_estate }
+	}
+
+	option = {
+		name = fnr_TRE.10.a
+		ai_chance = { factor = 100 }
+		set_variable = fnr_TRE_inheritance
+		add_legitimacy = legitimacy_mild_bonus
+		custom_tooltip = fnr_TRE_inheritance_tt
+	}
+}
+
+# 11 - Heir of Mithridates (Trebizond becomes Pontus)
+fnr_TRE.11 = {
+	type = country_event
+	title = fnr_TRE.11.title
+	desc = fnr_TRE.11.desc
+	outcome = positive
+	fire_only_once = yes
+
+	trigger = {
+		has_or_had_tag = TRE
+		tag = PONTU
+	}
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_TRE.11.a
+		ai_chance = { factor = 100 }
+		add_country_modifier = { modifier = fnr_TRE_mithridatic_heir years = -1 }
+	}
+}

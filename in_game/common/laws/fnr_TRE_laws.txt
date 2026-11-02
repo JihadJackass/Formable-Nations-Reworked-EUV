@@ -1,0 +1,48 @@
+﻿# Trebizond Laws (Pax Romana)
+# The Latin Quarters - Venice and Genoa both keep quarters in Trebizond. Who gets the favour?
+
+fnr_TRE_latin_quarters_law = {
+	unique = yes
+	law_category = socioeconomic
+
+	potential = {
+		has_or_had_tag = TRE
+	}
+
+	# Favour Venice - the Venetian bailo gets the better quay
+	fnr_TRE_favour_venice_policy = {
+		country_modifier = {
+			trade_income = 0.10
+			burghers_estate_target_satisfaction = -0.03
+		}
+		estate_preferences = {
+			nobles_estate
+		}
+		years = 1
+	}
+
+	# Favour Genoa - the Genoese of Leontokastron get the better quay
+	fnr_TRE_favour_genoa_policy = {
+		country_modifier = {
+			trade_income = 0.05
+			navy_maintenance_efficiency = 0.10
+			burghers_estate_target_satisfaction = -0.03
+		}
+		estate_preferences = {
+			nobles_estate
+		}
+		years = 1
+	}
+
+	# Native Merchants - the Aspron stays at home
+	fnr_TRE_native_merchants_policy = {
+		country_modifier = {
+			tax_income_efficiency = small_tax_income_efficiency_bonus
+			burghers_estate_target_satisfaction = small_permanent_target_satisfaction
+		}
+		estate_preferences = {
+			burghers_estate
+		}
+		years = 1
+	}
+}

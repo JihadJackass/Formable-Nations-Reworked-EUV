@@ -1,0 +1,18 @@
+﻿# Trebizond Government Reforms (Pax Romana)
+
+		# FNR version of the Inheritance of Constantinople (fnr_TRE.10), for players without Fate of the Phoenix
+		fnr_TRE_komnenian_restoration = {
+			government = monarchy
+			unique = yes
+			potential = {
+				has_or_had_tag = TRE
+				has_variable = fnr_TRE_inheritance
+			}
+			country_modifier = {
+				monthly_legitimacy = 0.1
+				global_max_control = 0.05
+				country_cabinet_efficiency = 0.05
+			}
+			years = 2
+			block_for_rebel = yes
+		}

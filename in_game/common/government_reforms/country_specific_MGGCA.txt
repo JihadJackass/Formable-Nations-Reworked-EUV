@@ -1,0 +1,38 @@
+﻿# Magna Graecia Government Reforms (Pax Romana)
+# The Italiote Koinon and the Basileia of the West exclude each other.
+
+		fnr_MGGCA_italiote_koinon = {
+			unique = yes
+			potential = {
+				has_or_had_tag = MGGCA
+			}
+			allow = {
+				NOT = { has_reform = government_reform:fnr_MGGCA_basileia_of_the_west }
+			}
+			country_modifier = {
+				burghers_estate_target_satisfaction = small_permanent_target_satisfaction
+				trade_income = 0.05
+				country_cabinet_efficiency = 0.05
+			}
+			years = 2
+			block_for_rebel = yes
+		}
+
+		fnr_MGGCA_basileia_of_the_west = {
+			government = monarchy
+			unique = yes
+			potential = {
+				has_or_had_tag = MGGCA
+			}
+			allow = {
+				NOT = { has_reform = government_reform:fnr_MGGCA_italiote_koinon }
+				fnr_MGGCA_stage_at_least = { VALUE = 3 }
+			}
+			country_modifier = {
+				monthly_legitimacy = 0.1
+				land_morale_modifier = 0.05
+				nobles_estate_target_satisfaction = small_permanent_target_satisfaction
+			}
+			years = 2
+			block_for_rebel = yes
+		}

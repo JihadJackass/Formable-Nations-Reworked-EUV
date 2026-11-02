@@ -1,0 +1,99 @@
+﻿# Trebizond yearly pulses (Pax Romana)
+
+yearly_country_pulse = {
+	on_actions = {
+		fnr_TRE_yearly_pulse
+		fnr_TRE_raid_pulse
+		fnr_TRE_siege_pulse
+		fnr_TRE_broken_pact_pulse
+		fnr_TRE_trade_pulse
+		fnr_TRE_foreign_pulse
+		fnr_TRE_inheritance_pulse
+	}
+}
+
+# Upkeep: setup, Peril, pacts, the passes, the Tabriz caravans, Pontus
+fnr_TRE_yearly_pulse = {
+	trigger = {
+		fnr_TRE_is_komnenian = yes
+	}
+	effect = {
+		fnr_TRE_yearly_effect = yes
+	}
+}
+
+# Turkmen raids - Peril 50+, about 20% a year
+fnr_TRE_raid_pulse = {
+	trigger = {
+		fnr_TRE_is_komnenian = yes
+		fnr_TRE_peril_at_least = { VALUE = 50 }
+	}
+	random_events = {
+		chance_to_happen = 20
+		100 = fnr_TRE.2
+	}
+}
+
+# The Sultan's army - Peril 80+, about 20% a year, 10-year cooldown
+fnr_TRE_siege_pulse = {
+	trigger = {
+		fnr_TRE_is_komnenian = yes
+		fnr_TRE_peril_at_least = { VALUE = 80 }
+		NOT = { has_variable = fnr_TRE_siege_cooldown }
+	}
+	random_events = {
+		chance_to_happen = 20
+		100 = fnr_TRE.3
+	}
+}
+
+# A marriage partner is at war with us
+fnr_TRE_broken_pact_pulse = {
+	trigger = {
+		fnr_TRE_is_komnenian = yes
+		any_country = {
+			has_variable = fnr_TRE_bride_of_trebizond
+			is_at_war_with = root
+		}
+	}
+	events = {
+		fnr_TRE.4
+	}
+}
+
+# The Latin Quarters and the caravans - about 10% a year
+fnr_TRE_trade_pulse = {
+	trigger = {
+		fnr_TRE_is_komnenian = yes
+	}
+	random_events = {
+		chance_to_happen = 10
+		100 = fnr_TRE.6
+		100 = fnr_TRE.7
+	}
+}
+
+# Byzantium - about 10% a year
+fnr_TRE_foreign_pulse = {
+	trigger = {
+		fnr_TRE_is_komnenian = yes
+		is_subject = no
+	}
+	random_events = {
+		chance_to_happen = 10
+		100 = fnr_TRE.8
+	}
+}
+
+# The Inheritance of Constantinople (FNR version for players without Fate of the Phoenix)
+fnr_TRE_inheritance_pulse = {
+	trigger = {
+		fnr_TRE_is_komnenian = yes
+		NOT = { has_dlc = "d008_fate_of_the_phoenix" }
+		NOT = { has_variable = fnr_TRE_inheritance }
+		owns = location:constantinople
+	}
+	events = {
+		fnr_TRE.10
+	}
+}

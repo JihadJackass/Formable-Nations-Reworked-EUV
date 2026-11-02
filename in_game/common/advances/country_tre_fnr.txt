@@ -1,0 +1,91 @@
+﻿# FNR advances for Trebizond (Pax Romana)
+# Named country_tre_fnr.txt so it loads after vanilla country_tre.txt (the requires point at vanilla advances).
+# Added alongside vanilla's tre_ advances (country_tre.txt).
+
+		TRE_fnr_daughters_of_the_komnenoi = {
+			age = age_1_traditions
+			icon = tre_komnenoi_princesses
+			potential = {
+				has_or_had_tag = TRE
+			}
+
+			monthly_prestige = 0.1
+			diplomatic_reputation = 1
+
+			requires = tre_komnenos_legacy
+			allow_children = no
+		}
+
+		TRE_fnr_wardens_of_the_passes = {
+			age = age_1_traditions
+			icon = tre_pontic_mountains
+			potential = {
+				has_or_had_tag = TRE
+			}
+
+			global_defensive = 0.05
+			land_morale_modifier = 0.05
+
+			requires = tre_pontic_trail_mastery
+			allow_children = no
+		}
+
+		# FNR version of Empire in Exile, for players without Fate of the Phoenix
+		# (vanilla's gives a bureaucracy slot, which needs the DLC)
+		TRE_fnr_empire_in_exile = {
+			age = age_1_traditions
+			icon = library_advance
+			potential = {
+				NOT = { has_dlc = "d008_fate_of_the_phoenix" }
+				has_or_had_tag = TRE
+				NOT = { has_or_had_tag = BYZ }
+			}
+
+			monthly_legitimacy = 0.05
+			country_cabinet_efficiency = 0.05
+
+			requires = tre_komnenos_legacy
+			allow_children = no
+		}
+
+		TRE_fnr_the_aspron = {
+			age = age_2_renaissance
+			icon = tre_terminus_of_the_silk_road
+			potential = {
+				has_or_had_tag = TRE
+			}
+
+			tax_income_efficiency = small_tax_income_efficiency_bonus
+			trade_income = 0.05
+
+			requires = tre_strategic_marriages
+			allow_children = no
+		}
+
+		TRE_fnr_caravans_of_tabriz = {
+			age = age_3_discovery
+			icon = tre_terminus_of_the_silk_road
+			potential = {
+				has_or_had_tag = TRE
+			}
+
+			global_merchant_power = 0.1
+			trade_range_modifier = 0.05
+
+			requires = tre_greek_stronghold
+			allow_children = no
+		}
+
+		TRE_fnr_megas_komnenos = {
+			age = age_3_discovery
+			icon = tre_byzantine_birthright
+			potential = {
+				has_or_had_tag = TRE
+			}
+
+			monthly_legitimacy = 0.1
+			monthly_prestige = 0.1
+
+			requires = tre_byzantine_birthright
+			allow_children = no
+		}

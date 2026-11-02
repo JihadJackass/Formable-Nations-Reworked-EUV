@@ -1433,7 +1433,8 @@
 					}
 				}
 			}
-		# Magna Graecia (Greek Naples)
+		# Magna Graecia (Pax Romana) - Greek and Griko states form it directly; other southern Italian states
+		# need stage 2 of the Hellenic Revival, Naples stage 3 and more (fnr_MGGCA_decisions.txt)
 			MGGCA_f = {
 				level = 3
 				required_locations_fraction = 0.80
@@ -1446,19 +1447,38 @@
 							has_variable = fnr_magnagraecia_enabled
 						}
 						NOT = { has_variable = fnr_magnagraecia_disabled }
-					}  
-					NOT = { 
+					}
+					NOT = {
 						OR = {
-							tag = SWBIA
-							tag_exists = SWBIA
+							tag = MGGCA
+							tag_exists = MGGCA
 						}
+					}
+					OR = {
+						fnr_MGGCA_is_greek = yes
+						fnr_MGGCA_italian_claimant = yes
 					}
 				}
 				allow = {
 					OR = {
-						culture = { has_culture_group = culture_group:greek_group }
-						culture = culture:greek_culture
-						culture = culture:griko_culture
+						fnr_MGGCA_is_greek = yes
+						AND = {
+							NOT = { has_or_had_tag = NAP }
+							custom_tooltip = {
+								text = fnr_MGGCA_form_stage_2_tt
+								fnr_MGGCA_stage_at_least = { VALUE = 2 }
+							}
+						}
+						AND = {
+							has_or_had_tag = NAP
+							custom_tooltip = {
+								text = fnr_MGGCA_form_stage_3_tt
+								fnr_MGGCA_stage_at_least = { VALUE = 3 }
+							}
+							stability >= 25
+							NOT = { has_country_modifier = fnr_MGGCA_italian_resentment }
+							fnr_MGGCA_monasteries_at_least = { VALUE = 3 }
+						}
 					}
 				}
 				name = MGGCA
@@ -1480,6 +1500,8 @@
 						limit = { country_rank_level < 3 }
 						set_country_rank_effect = { rank = country_rank:rank_kingdom }
 					}
+					fnr_MGGCA_formation_effect = yes
+					trigger_event_non_silently = fnr_MGGCA.1
 				}
 			}
 		# Swabia (Kingdom - exists in base game as tier 2)

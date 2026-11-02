@@ -1,0 +1,191 @@
+﻿# Trebizond Decisions (Pax Romana)
+
+# ==================== Peril ====================
+
+# Pay Tribute to the Sultan - Peril -15, and -3 a year while the tribute lasts (10 years)
+fnr_TRE_pay_tribute = {
+	decision_category = country_specific_decisions
+
+	tags = { TRE PONTU }
+
+	potential = {
+		fnr_TRE_is_komnenian = yes
+		fnr_TRE_peril_at_least = { VALUE = 25 }
+	}
+
+	allow = {
+		NOT = { has_country_modifier = fnr_TRE_tributary }
+		gold >= 150
+	}
+
+	ai_will_do = { value = 20 }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_TRE_pay_tribute.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -150
+			add_prestige = prestige_mild_penalty
+			add_country_modifier = { modifier = fnr_TRE_tributary years = 10 }
+			fnr_TRE_change_peril_effect = { VALUE = -15 TT = minus_15 }
+		}
+	}
+}
+
+# Fortify the Pontic Passes - once; a bonus while we hold Gumushane
+fnr_TRE_fortify_passes = {
+	decision_category = country_specific_decisions
+
+	tags = { TRE PONTU }
+
+	potential = {
+		fnr_TRE_is_komnenian = yes
+		NOT = { has_variable = fnr_TRE_passes_fortified }
+	}
+
+	allow = {
+		owns = location:gumushane
+		owns = location:trebizond
+		gold >= 200
+	}
+
+	ai_will_do = { value = 20 }
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:crown_estate }
+	}
+
+	option = {
+		name = fnr_TRE_fortify_passes.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -200
+			set_variable = fnr_TRE_passes_fortified
+			add_country_modifier = { modifier = fnr_TRE_pontic_passes years = -1 }
+			fnr_TRE_change_peril_effect = { VALUE = -5 TT = minus_5 }
+			custom_tooltip = fnr_TRE_passes_tt
+		}
+	}
+}
+
+# ==================== The Silk Road ====================
+
+# Send an Embassy to Tabriz - the owner of Tabriz likes us, the caravans run richer for 10 years
+fnr_TRE_embassy_to_tabriz = {
+	decision_category = country_specific_decisions
+
+	tags = { TRE PONTU }
+
+	potential = {
+		fnr_TRE_is_komnenian = yes
+		location:tabriz = {
+			owner ?= { NOT = { this = root } }
+		}
+	}
+
+	allow = {
+		NOT = { has_country_modifier = fnr_TRE_rich_caravans }
+		location:tabriz = {
+			owner ?= { NOT = { is_at_war_with = root } }
+		}
+		gold >= 100
+	}
+
+	ai_will_do = { value = 20 }
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:crown_estate }
+	}
+
+	option = {
+		name = fnr_TRE_embassy_to_tabriz.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -100
+			add_country_modifier = { modifier = fnr_TRE_rich_caravans years = 10 }
+			location:tabriz = {
+				owner ?= {
+					add_opinion = { modifier = fnr_TRE_embassy_from_trebizond target = root }
+				}
+			}
+		}
+	}
+}
+
+# ==================== Empire in Exile ====================
+
+# Megas Komnenos, Emperor of the Romans
+fnr_TRE_emperor_of_the_romans = {
+	decision_category = country_specific_decisions
+
+	tags = { TRE PONTU }
+
+	potential = {
+		fnr_TRE_is_komnenian = yes
+		NOT = { has_variable = fnr_TRE_emperor_of_romans }
+	}
+
+	allow = {
+		is_subject = no
+		owns = location:trebizond
+		custom_tooltip = {
+			text = fnr_TRE_emperor_claim_tt
+			OR = {
+				owns = location:constantinople
+				AND = {
+					NOT = { country_exists = c:BYZ }
+					NOT = { country_exists = c:EASRE }
+					any_owned_location = { count >= 40 }
+				}
+			}
+		}
+		stability >= 25
+		gold >= 300
+	}
+
+	ai_will_do = { value = 50 }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:clergy_estate }
+	}
+
+	option = {
+		name = fnr_TRE_emperor_of_the_romans.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -300
+			set_variable = fnr_TRE_emperor_of_romans
+			if = {
+				limit = { country_rank_level < 4 }
+				set_country_rank_effect = { rank = country_rank:rank_empire }
+			}
+			add_country_modifier = { modifier = fnr_TRE_emperor_of_the_romans years = -1 }
+			custom_tooltip = fnr_TRE_emperor_tt
+			trigger_event_non_silently = fnr_TRE.9
+		}
+	}
+}

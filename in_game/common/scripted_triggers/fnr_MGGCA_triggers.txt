@@ -1,0 +1,116 @@
+﻿# Magna Graecia scripted triggers (Pax Romana)
+
+# Magna Graecia is allowed by the game rules (same check as MGGCA_f)
+fnr_MGGCA_allowed = {
+	OR = {
+		has_variable = fnr_althistory_enabled
+		has_variable = fnr_magnagraecia_enabled
+	}
+	NOT = { has_variable = fnr_magnagraecia_disabled }
+}
+
+# Country is Greek or Griko
+fnr_MGGCA_is_greek = {
+	OR = {
+		culture = { has_culture_group = culture_group:greek_group }
+		culture = culture:greek_culture
+		culture = culture:griko_culture
+	}
+}
+
+# Location scope: southern Italy and Sicily
+fnr_MGGCA_is_south_italy = {
+	OR = {
+		area = area:sicily_area
+		area = area:basilicata_area
+		area = area:apulia_area
+		area = area:campania_area
+	}
+}
+
+# Location scope: the Griko lands of Salento and Calabria
+fnr_MGGCA_is_griko_land = {
+	OR = {
+		this = location:lecce
+		this = location:brindisi
+		this = location:francavilla
+		this = location:gallipoliita
+		this = location:martinafr
+		this = location:taranto
+		this = location:catanzaro
+		this = location:cotrone
+		this = location:gerace
+		this = location:monteleone
+		this = location:nicastro
+		this = location:palmi
+		this = location:reggiocal
+	}
+}
+
+# Country scope: a southern Italian state with a stake in the Greeks of Italy
+# (Greek or Griko itself, Naples, or the ruler of Greek-speaking land in Salento or Calabria)
+fnr_MGGCA_italian_claimant = {
+	capital ?= { fnr_MGGCA_is_south_italy = yes }
+	OR = {
+		fnr_MGGCA_is_greek = yes
+		has_or_had_tag = NAP
+		owns = location:lecce
+		owns = location:brindisi
+		owns = location:francavilla
+		owns = location:gallipoliita
+		owns = location:martinafr
+		owns = location:taranto
+		owns = location:catanzaro
+		owns = location:cotrone
+		owns = location:gerace
+		owns = location:monteleone
+		owns = location:nicastro
+		owns = location:palmi
+		owns = location:reggiocal
+	}
+}
+
+# Country scope: may climb the Hellenic Revival (Magna Graecia itself, or a southern Italian claimant before it exists)
+fnr_MGGCA_can_revive = {
+	custom_tooltip = {
+		text = fnr_MGGCA_can_revive_tt
+		OR = {
+			has_or_had_tag = MGGCA
+			AND = {
+				fnr_MGGCA_allowed = yes
+				NOT = { tag_exists = MGGCA }
+				fnr_MGGCA_italian_claimant = yes
+			}
+		}
+	}
+}
+
+# Hellenic Revival stage at least VALUE (0 before the first stage)
+# (wrapped in a custom tooltip: trigger_if can't be shown where there is no country to evaluate, like building tooltips)
+fnr_MGGCA_stage_at_least = {
+	custom_tooltip = {
+		text = fnr_MGGCA_stage_at_least_$VALUE$_tt
+		trigger_if = {
+			limit = { has_variable = fnr_MGGCA_stage }
+			var:fnr_MGGCA_stage >= $VALUE$
+		}
+		trigger_else = { always = no }
+	}
+}
+
+# The next stage may be taken (the wait since the last stage, and any delay, has run out)
+fnr_MGGCA_stage_ready = {
+	custom_tooltip = {
+		text = fnr_MGGCA_stage_ready_tt
+		NOT = { has_variable = fnr_MGGCA_stage_wait }
+		NOT = { has_variable = fnr_MGGCA_delayed }
+	}
+}
+
+# Number of Basilian Monasteries at least VALUE
+fnr_MGGCA_monasteries_at_least = {
+	any_owned_location = {
+		has_building_with_at_least_one_level = fnr_MGGCA_basilian_monastery
+		count >= $VALUE$
+	}
+}

@@ -1,0 +1,12 @@
+﻿# Trebizond hints (Pax Romana)
+
+hint_fnr_TRE_peril = {
+	sort_priority = 500
+	priority = {
+		fnr_TRE_is_komnenian = yes
+		fnr_TRE_peril_at_least = { VALUE = 50 }
+	}
+	hide = {
+		NOT = { fnr_TRE_is_komnenian = yes }
+	}
+}

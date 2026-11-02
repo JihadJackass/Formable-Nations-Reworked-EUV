@@ -1,0 +1,158 @@
+﻿##################################################
+# Formable Nations: Reworked - Trebizond           #
+# Static Modifiers (Pax Romana)                    #
+##################################################
+
+		# Peril tiers (always one shown)
+		fnr_TRE_peril_secure = {
+			game_data = {
+				category = country
+			}
+			trade_income = 0.05
+			monthly_prestige = 0.05
+		}
+
+		fnr_TRE_peril_watchful = {
+			game_data = {
+				category = country
+			}
+			global_defensive = 0.05
+		}
+
+		fnr_TRE_peril_threatened = {
+			game_data = {
+				category = country
+			}
+			global_defensive = 0.10
+			trade_income = -0.05
+			global_estate_target_satisfaction = -0.03
+		}
+
+		fnr_TRE_peril_dire = {
+			game_data = {
+				category = country
+			}
+			global_defensive = 0.15
+			land_morale_modifier = 0.05
+			trade_income = -0.10
+			global_estate_target_satisfaction = -0.05
+			stability_cost_efficiency = -0.10
+		}
+
+		# Decisions
+		fnr_TRE_tributary = {
+			game_data = {
+				category = country
+			}
+			monthly_prestige = -0.1
+			tax_income_efficiency = -0.05
+		}
+
+		fnr_TRE_pontic_passes = {
+			game_data = {
+				category = country
+			}
+			global_defensive = 0.10
+			land_morale_modifier = 0.03
+		}
+
+		fnr_TRE_rich_caravans = {
+			game_data = {
+				category = country
+			}
+			trade_income = 0.05
+			global_merchant_power = 0.05
+		}
+
+		fnr_TRE_emperor_of_the_romans = {
+			game_data = {
+				category = country
+			}
+			monthly_legitimacy = 0.1
+			monthly_prestige = 0.25
+			diplomatic_reputation = 1
+		}
+
+		# The Silk Road
+		fnr_TRE_tabriz_caravans = {
+			game_data = {
+				category = country
+			}
+			trade_income = 0.05
+			tax_income_efficiency = 0.03
+		}
+
+		# Events
+		fnr_TRE_raid_damage = {
+			game_data = {
+				category = country
+			}
+			tax_income_efficiency = -0.05
+			global_population_growth = -0.05
+		}
+
+		fnr_TRE_defiance = {
+			game_data = {
+				category = country
+			}
+			land_morale_modifier = 0.10
+			global_manpower_modifier = 0.10
+		}
+
+		fnr_TRE_orthodox_bulwark = {
+			game_data = {
+				category = country
+			}
+			global_defensive = 0.05
+			land_morale_modifier = 0.05
+		}
+
+		fnr_TRE_rival_emperors = {
+			game_data = {
+				category = country
+			}
+			monthly_legitimacy = 0.05
+			monthly_prestige = 0.1
+			diplomatic_reputation = -1
+		}
+
+		fnr_TRE_komnenian_reconciliation = {
+			game_data = {
+				category = country
+			}
+			diplomatic_reputation = 1
+			monthly_prestige = 0.05
+		}
+
+		fnr_TRE_quarrel_venice = {
+			game_data = {
+				category = country
+			}
+			trade_income = 0.05
+		}
+
+		fnr_TRE_quarrel_genoa = {
+			game_data = {
+				category = country
+			}
+			navy_maintenance_efficiency = 0.10
+		}
+
+		fnr_TRE_mithridatic_heir = {
+			game_data = {
+				category = country
+			}
+			monthly_legitimacy = 0.05
+			land_morale_modifier = 0.05
+			trade_income = 0.05
+		}
+
+		# Roman Empire formed by a Komnenian realm (fnr_ROM_formation_effect)
+		fnr_ROM_komnenian_dynasty = {
+			game_data = {
+				category = country
+			}
+			monthly_legitimacy = 0.1
+			diplomatic_reputation = 1
+			trade_income = 0.05
+		}

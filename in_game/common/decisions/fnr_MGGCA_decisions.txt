@@ -1,0 +1,250 @@
+﻿# Magna Graecia Decisions (Pax Romana)
+
+# ==================== The Hellenic Revival ====================
+
+# Stage 1 - Philhellenes at Court
+fnr_MGGCA_philhellenes = {
+	decision_category = country_specific_decisions
+
+	potential = {
+		fnr_MGGCA_can_revive = yes
+		NOT = { fnr_MGGCA_stage_at_least = { VALUE = 1 } }
+	}
+
+	allow = {
+		gold >= 100
+		stability >= 0
+	}
+
+	ai_will_do = { value = 5 }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:crown_estate }
+	}
+
+	option = {
+		name = fnr_MGGCA_philhellenes.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -100
+			fnr_MGGCA_set_stage_effect = { VALUE = 1 }
+			custom_tooltip = fnr_MGGCA_stage_1_tt
+			trigger_event_non_silently = fnr_MGGCA.2
+		}
+	}
+}
+
+# Stage 2 - The Greek Schools
+fnr_MGGCA_greek_schools = {
+	decision_category = country_specific_decisions
+
+	potential = {
+		fnr_MGGCA_can_revive = yes
+		fnr_MGGCA_stage_at_least = { VALUE = 1 }
+		NOT = { fnr_MGGCA_stage_at_least = { VALUE = 2 } }
+	}
+
+	allow = {
+		fnr_MGGCA_stage_ready = yes
+		owns = location:lecce
+		owns = location:taranto
+		gold >= 200
+	}
+
+	ai_will_do = { value = 5 }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:burghers_estate }
+	}
+
+	option = {
+		name = fnr_MGGCA_greek_schools.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -200
+			fnr_MGGCA_set_stage_effect = { VALUE = 2 }
+			if = {
+				limit = { NOT = { has_accepted_culture = culture:griko_culture } NOT = { culture = culture:griko_culture } }
+				add_accepted_culture = culture:griko_culture
+			}
+			custom_tooltip = fnr_MGGCA_stage_2_tt
+			trigger_event_non_silently = fnr_MGGCA.3
+		}
+	}
+}
+
+# Stage 3 - Revival of the Italiotes
+fnr_MGGCA_revival_of_the_italiotes = {
+	decision_category = country_specific_decisions
+
+	potential = {
+		fnr_MGGCA_can_revive = yes
+		fnr_MGGCA_stage_at_least = { VALUE = 2 }
+		NOT = { fnr_MGGCA_stage_at_least = { VALUE = 3 } }
+	}
+
+	allow = {
+		fnr_MGGCA_stage_ready = yes
+		owns = location:taranto
+		owns = location:cotrone
+		owns = location:reggiocal
+		fnr_MGGCA_monasteries_at_least = { VALUE = 2 }
+		gold >= 300
+	}
+
+	ai_will_do = { value = 5 }
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:peasants_estate }
+	}
+
+	option = {
+		name = fnr_MGGCA_revival_of_the_italiotes.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -300
+			fnr_MGGCA_set_stage_effect = { VALUE = 3 }
+			fnr_MGGCA_seed_griko_effect = yes
+			custom_tooltip = fnr_MGGCA_stage_3_tt
+			trigger_event_non_silently = fnr_MGGCA.4
+		}
+	}
+}
+
+# Stage 4 - Megale Hellas (Magna Graecia only)
+fnr_MGGCA_megale_hellas = {
+	decision_category = country_specific_decisions
+
+	potential = {
+		has_or_had_tag = MGGCA
+		fnr_MGGCA_stage_at_least = { VALUE = 3 }
+		NOT = { fnr_MGGCA_stage_at_least = { VALUE = 4 } }
+	}
+
+	allow = {
+		fnr_MGGCA_stage_ready = yes
+		owns = location:syracuse
+		owns = location:taranto
+		owns = location:naples
+		fnr_MGGCA_monasteries_at_least = { VALUE = 4 }
+		gold >= 400
+	}
+
+	ai_will_do = { value = 5 }
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:burghers_estate }
+	}
+
+	option = {
+		name = fnr_MGGCA_megale_hellas.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -400
+			fnr_MGGCA_set_stage_effect = { VALUE = 4 }
+			fnr_MGGCA_seed_griko_effect = yes
+			add_prestige = prestige_mild_bonus
+			custom_tooltip = fnr_MGGCA_stage_4_tt
+			trigger_event_non_silently = fnr_MGGCA.5
+		}
+	}
+}
+
+# Megale Hellas - Griko becomes our culture
+fnr_MGGCA_adopt_griko = {
+	decision_category = country_specific_decisions
+
+	potential = {
+		has_or_had_tag = MGGCA
+		fnr_MGGCA_stage_at_least = { VALUE = 4 }
+		NOT = { culture = culture:griko_culture }
+	}
+
+	allow = {
+		stability >= 10
+		NOT = { has_country_modifier = fnr_MGGCA_italian_resentment }
+	}
+
+	ai_will_do = { value = 2 }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_MGGCA_adopt_griko.a
+		ai_chance = { value = 100 }
+		effect = {
+			fnr_MGGCA_become_griko_effect = yes
+			add_stability = stability_mild_penalty
+			add_estate_satisfaction = { type = estate_type:nobles_estate value = estate_satisfaction_mild_penalty }
+		}
+	}
+}
+
+# The Concord of the Two Peoples (every 10 years)
+fnr_MGGCA_concord = {
+	decision_category = country_specific_decisions
+
+	potential = {
+		fnr_MGGCA_can_revive = yes
+		fnr_MGGCA_stage_at_least = { VALUE = 1 }
+	}
+
+	allow = {
+		gold >= 150
+		NOT = { has_variable = fnr_MGGCA_concord }
+	}
+
+	ai_will_do = { value = 10 }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:burghers_estate }
+	}
+
+	option = {
+		name = fnr_MGGCA_concord.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -150
+			set_variable = { name = fnr_MGGCA_concord years = 10 }
+			if = {
+				limit = { has_country_modifier = fnr_MGGCA_italian_resentment }
+				remove_country_modifier = fnr_MGGCA_italian_resentment
+			}
+			add_estate_satisfaction = { type = estate_type:nobles_estate value = estate_satisfaction_mild_bonus }
+			add_estate_satisfaction = { type = estate_type:burghers_estate value = estate_satisfaction_mild_bonus }
+			add_stability = stability_weak_bonus
+		}
+	}
+}

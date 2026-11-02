@@ -1,0 +1,102 @@
+﻿# Magna Graecia scripted effects (Pax Romana)
+
+# ---------- The Hellenic Revival (fnr_MGGCA_stage, 0-4) ----------
+
+fnr_MGGCA_clear_stage_modifiers_effect = {
+	if = { limit = { has_country_modifier = fnr_MGGCA_stage_1 } remove_country_modifier = fnr_MGGCA_stage_1 }
+	if = { limit = { has_country_modifier = fnr_MGGCA_stage_2 } remove_country_modifier = fnr_MGGCA_stage_2 }
+	if = { limit = { has_country_modifier = fnr_MGGCA_stage_3 } remove_country_modifier = fnr_MGGCA_stage_3 }
+	if = { limit = { has_country_modifier = fnr_MGGCA_stage_4 } remove_country_modifier = fnr_MGGCA_stage_4 }
+}
+
+# Reach stage VALUE: swap the stage modifier and start the 10-year wait for the next one
+fnr_MGGCA_set_stage_effect = {
+	set_variable = { name = fnr_MGGCA_stage value = $VALUE$ }
+	set_variable = { name = fnr_MGGCA_stage_wait years = 10 }
+	hidden_effect = {
+		fnr_MGGCA_clear_stage_modifiers_effect = yes
+		add_country_modifier = { modifier = fnr_MGGCA_stage_$VALUE$ years = -1 }
+	}
+}
+
+# Favouring the Italians: the next stage is pushed back 5 years
+fnr_MGGCA_delay_effect = {
+	custom_tooltip = fnr_MGGCA_delay_tt
+	hidden_effect = {
+		set_variable = { name = fnr_MGGCA_delayed years = 5 }
+	}
+}
+
+# Favouring the Greeks: Italian Resentment for 5 years (stacks in length)
+fnr_MGGCA_resentment_effect = {
+	add_country_modifier = { modifier = fnr_MGGCA_italian_resentment years = 5 mode = add_and_extend }
+}
+
+# A foreign helper speeds the revival: the wait for the next stage ends now
+fnr_MGGCA_hasten_effect = {
+	custom_tooltip = fnr_MGGCA_hasten_tt
+	hidden_effect = {
+		if = {
+			limit = { has_variable = fnr_MGGCA_stage_wait }
+			remove_variable = fnr_MGGCA_stage_wait
+		}
+	}
+}
+
+# A tenth of the non-Griko people of Salento and Calabria take up Griko
+fnr_MGGCA_seed_griko_effect = {
+	hidden_effect = {
+		every_owned_location = {
+			limit = { fnr_MGGCA_is_griko_land = yes }
+			every_pop = {
+				limit = {
+					owner = root
+					NOT = { culture = culture:griko_culture }
+					NOT = { pop_type = pop_type:slaves }
+				}
+				split_pop = {
+					fraction = 0.10
+					culture = culture:griko_culture
+				}
+			}
+		}
+	}
+}
+
+# Megale Hellas: Griko becomes our culture, the old one stays accepted
+fnr_MGGCA_become_griko_effect = {
+	if = {
+		limit = { NOT = { culture = culture:griko_culture } }
+		culture = { save_scope_as = fnr_MGGCA_old_culture }
+		change_culture = culture:griko_culture
+		add_accepted_culture = scope:fnr_MGGCA_old_culture
+		grant_culture_bonus_advances = culture:griko_culture
+	}
+}
+
+# ---------- Formation ----------
+
+fnr_MGGCA_formation_effect = {
+	if = {
+		limit = { NOT = { has_variable = fnr_MGGCA_formed } }
+		hidden_effect = {
+			set_variable = fnr_MGGCA_formed
+			if = {
+				limit = { NOT = { has_variable = fnr_MGGCA_stage } }
+				set_variable = { name = fnr_MGGCA_stage value = 0 }
+			}
+		}
+		# Greek and Griko founders begin at The Greek Schools
+		if = {
+			limit = {
+				fnr_MGGCA_is_greek = yes
+				NOT = { fnr_MGGCA_stage_at_least = { VALUE = 2 } }
+			}
+			fnr_MGGCA_set_stage_effect = { VALUE = 2 }
+		}
+		if = {
+			limit = { NOT = { has_accepted_culture = culture:griko_culture } NOT = { culture = culture:griko_culture } }
+			add_accepted_culture = culture:griko_culture
+		}
+	}
+}

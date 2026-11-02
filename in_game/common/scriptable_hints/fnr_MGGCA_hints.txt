@@ -1,0 +1,14 @@
+﻿# Magna Graecia hints (Pax Romana)
+# Shown to Magna Graecia, Naples, Greek states in southern Italy and rulers of Griko lands,
+# highlighted until the first stage is taken.
+
+hint_fnr_MGGCA_revival = {
+	sort_priority = 500
+	priority = {
+		fnr_MGGCA_can_revive = yes
+		NOT = { fnr_MGGCA_stage_at_least = { VALUE = 1 } }
+	}
+	hide = {
+		NOT = { fnr_MGGCA_can_revive = yes }
+	}
+}

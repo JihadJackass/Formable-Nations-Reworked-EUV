@@ -305,6 +305,11 @@ fnr_ROM_formation_effect = {
 				}
 				set_variable = fnr_ROM_origin_new_rome
 				set_variable = { name = fnr_ROM_legion_loyalty value = 55 }
+				# FNR Pax Romana: a Komnenian Rome (formed by Trebizond, or by Pontus that was once Trebizond)
+				if = {
+					limit = { has_or_had_tag = TRE }
+					add_country_modifier = { modifier = fnr_ROM_komnenian_dynasty years = -1 }
+				}
 			}
 			else = {
 				set_variable = fnr_ROM_origin_restorer

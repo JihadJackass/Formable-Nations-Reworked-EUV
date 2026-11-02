@@ -1,0 +1,192 @@
+﻿l_english:
+
+  ###########################################################
+  # Pax Romana - Trebizond                                  #
+  ###########################################################
+
+    # Peril
+
+      fnr_TRE_peril_current: "#Y Peril#! is currently #Y [GetPlayer.MakeScope.GetVariable('fnr_TRE_peril').GetValue|0]#! / 100"
+      fnr_TRE_peril_explained: "#T Peril#! measures how close the Turks are to our gates, from 0 to 100.\n- #R Rises#! each year while a Turkish neighbour fields a larger army than ours (#R +4#!), while we border the Ottomans (#R +2#!) and while we are at war (#R +4#!)\n- #G Falls#! by #G 2#! a year with no stronger Turkish neighbour, #G 2#! a year for each marriage pact, #G 3#! a year with the Pontic Passes fortified, #G 3#! a year while we pay tribute, and #G 2#! a year with the Archons of the Pontic Passes\n- At #Y 50#! Turkmen raids begin, and at #Y 80#! the Sultan's army may march on Trebizond"
+      fnr_TRE_peril_minus_5_tt: "#Y Peril#! #G -5#!"
+      fnr_TRE_peril_minus_10_tt: "#Y Peril#! #G -10#!"
+      fnr_TRE_peril_minus_15_tt: "#Y Peril#! #G -15#!, and #G -3#! a year while the tribute lasts"
+      fnr_TRE_peril_minus_25_tt: "#Y Peril#! #G -25#!"
+      fnr_TRE_peril_plus_5_tt: "#Y Peril#! #R +5#!"
+      fnr_TRE_peril_plus_10_tt: "#Y Peril#! #R +10#!"
+      fnr_TRE_pacts_below_3_tt: "Has fewer than #Y 3#! Komnenian marriage pacts"
+      fnr_TRE_bride_pact_tt: "A #Y Komnenian marriage pact#! lowers #Y Peril#! by #G 2#! every year for #Y 30#! years, until the pact is broken by war."
+      fnr_TRE_passes_tt: "While we hold #Y Gumushane#!, #Y Peril#! falls by #G 3#! every year."
+      fnr_TRE_systems_tt: "#T Trebizond#!\n- #Y Peril#! measures the Turkish threat. Marriages, forts and tribute keep it down.\n- The #Y Offer a Komnenian Bride#! diplomatic action makes up to #Y 3#! marriage pacts.\n- The #Y Latin Quarters#! law decides who gets the trade of Trebizond, and the #Y Tabriz caravans#! pay while Tabriz is at peace with us.\n- #Y Emperor of the Romans#! can be claimed once Byzantium falls or Constantinople is ours."
+
+    # Decisions
+
+      fnr_TRE_pay_tribute.title: "Pay Tribute to the Sultan"
+      fnr_TRE_pay_tribute.desc: "Gold buys what walls cannot. A yearly payment to the Turkish lords will keep their horsemen on their own side of the mountains, for a while.\n\n$fnr_TRE_peril_current$"
+      fnr_TRE_pay_tribute.a: "Send the gold."
+      fnr_TRE_fortify_passes.title: "Fortify the Pontic Passes"
+      fnr_TRE_fortify_passes.desc: "Every army that has come for Trebizond has come over the Zigana pass. Towers at Gumushane and garrisons in the high valleys will make every crossing a battle.\n\n$fnr_TRE_peril_current$"
+      fnr_TRE_fortify_passes.a: "Hold the passes."
+      fnr_TRE_embassy_to_tabriz.title: "Send an Embassy to Tabriz"
+      fnr_TRE_embassy_to_tabriz.desc: "The caravans that make Trebizond rich start in Tabriz. Gifts to its ruler will keep the road open and the camels coming."
+      fnr_TRE_embassy_to_tabriz.a: "Keep the road open."
+      fnr_TRE_emperor_claim_tt: "Owns #Y Constantinople#!, or neither #Y Byzantium#! nor the #Y Eastern Roman Empire#! exists and we own at least #Y 40#! locations"
+      fnr_TRE_emperor_of_the_romans.title: "Megas Komnenos, Emperor of the Romans"
+      fnr_TRE_emperor_of_the_romans.desc: "Alexios Komnenos fled Constantinople in 1204 and founded our Empire on the shores of the Black Sea. For more than a century the Grand Komnenoi have been emperors in exile. The time has come to claim the whole inheritance."
+      fnr_TRE_emperor_of_the_romans.a: "We are the Emperors of the Romans."
+      fnr_TRE_emperor_tt: "We become an #Y Empire#! and gain #Y Emperor of the Romans#!. With #Y Rome#! and #Y Constantinople#! we may restore the #Y Roman Empire#!, which keeps a #Y Komnenian Dynasty#! bonus."
+
+    # Diplomatic action - Offer a Komnenian Bride
+
+      fnr_TRE_offer_bride: "Offer a Komnenian Bride"
+      dip_fnr_TRE_offer_bride_CATEGORY: "CATEGORY_FRIENDLY_ACTIONS"
+      fnr_TRE_offer_bride_act: "Offer a Komnenian princess to the ruler of [SCOPE.sCountry('recipient').GetName]."
+      fnr_TRE_offer_bride_desc: "The princesses of the Grand Komnenoi were famous for their beauty, and Trebizond married them to Turkmen khans, Georgian kings and Byzantine emperors alike. Each marriage bought years of peace.\n\nCosts #Y 100#! gold and #Y 2#! diplomats. We may hold up to #Y 3#! marriage pacts. A pact with #Y Georgia#! also forms the #Y Orthodox Bulwark#!.\n\n$fnr_TRE_peril_current$"
+      fnr_TRE_offer_bride_effect_text: "[SCOPE.sCountry('recipient').GetName] accepts a Komnenian bride from [SCOPE.sCountry('actor').GetName]."
+      fnr_TRE_offer_bride_effect_text_past: "[SCOPE.sCountry('recipient').GetName] accepted a Komnenian bride from [SCOPE.sCountry('actor').GetName]."
+      fnr_TRE_offer_bride_reject_effect_text: "[SCOPE.sCountry('recipient').GetName] refuses the Komnenian bride."
+      fnr_TRE_offer_bride_reject_effect_text_past: "[SCOPE.sCountry('recipient').GetName] refused the Komnenian bride."
+      PROPOSE_fnr_TRE_offer_bride: "Offer a Komnenian bride to $RECIPIENT$?\n$INFO$."
+      INCOMING_OFFER_fnr_TRE_offer_bride: "$ACTOR$ offer us a princess of the Grand Komnenoi in marriage. Do we accept?\n\n$INFO$"
+      INCOMING_OFFER_TITLE_fnr_TRE_offer_bride: "$fnr_TRE_offer_bride$"
+      fnr_TRE_bride_reason_prestige: "A princess of the Grand Komnenoi"
+      fnr_TRE_bride_reason_georgia: "Old ties between Georgia and Trebizond"
+      fnr_TRE_bride_reason_neighbour: "Neighbours"
+
+    # Opinions
+
+      fnr_TRE_komnenian_kin: "Komnenian marriage"
+      fnr_TRE_broken_pact: "Broke a marriage pact"
+      fnr_TRE_orthodox_bulwark_opinion: "Orthodox Bulwark"
+      fnr_TRE_rival_emperor: "Rival Emperor of the Romans"
+      fnr_TRE_komnenian_kinship: "Komnenian kinship"
+      fnr_TRE_embassy_from_trebizond: "Embassy from Trebizond"
+
+    # Static modifiers
+
+      STATIC_MODIFIER_NAME_fnr_TRE_peril_secure: "Peril - Secure"
+      STATIC_MODIFIER_DESC_fnr_TRE_peril_secure: "The Turks are quiet and the caravans come in safely.\n\n$fnr_TRE_peril_current$\n\n$fnr_TRE_peril_explained$"
+      STATIC_MODIFIER_NAME_fnr_TRE_peril_watchful: "Peril - Watchful"
+      STATIC_MODIFIER_DESC_fnr_TRE_peril_watchful: "The garrisons watch the passes, and so far nothing has come over them.\n\n$fnr_TRE_peril_current$\n\n$fnr_TRE_peril_explained$"
+      STATIC_MODIFIER_NAME_fnr_TRE_peril_threatened: "Peril - Threatened"
+      STATIC_MODIFIER_DESC_fnr_TRE_peril_threatened: "Turkmen raiders cross the mountains, and the merchants grow nervous.\n\n$fnr_TRE_peril_current$\n\n$fnr_TRE_peril_explained$"
+      STATIC_MODIFIER_NAME_fnr_TRE_peril_dire: "Peril - Dire"
+      STATIC_MODIFIER_DESC_fnr_TRE_peril_dire: "The Sultan's armies gather on our borders. Every man who can hold a spear is on the walls.\n\n$fnr_TRE_peril_current$\n\n$fnr_TRE_peril_explained$"
+      STATIC_MODIFIER_NAME_fnr_TRE_tributary: "Tributary of the Sultan"
+      STATIC_MODIFIER_DESC_fnr_TRE_tributary: "We pay the Turks to stay away. It is humiliating, and it works. #Y Peril#! falls by #G 3#! a year."
+      STATIC_MODIFIER_NAME_fnr_TRE_pontic_passes: "The Pontic Passes"
+      STATIC_MODIFIER_DESC_fnr_TRE_pontic_passes: "Towers and garrisons hold every crossing of the Pontic mountains. #Y Peril#! falls by #G 3#! a year while we hold Gumushane."
+      STATIC_MODIFIER_NAME_fnr_TRE_rich_caravans: "Embassy to Tabriz"
+      STATIC_MODIFIER_DESC_fnr_TRE_rich_caravans: "Our gifts have opened the road to Tabriz wider than ever."
+      STATIC_MODIFIER_NAME_fnr_TRE_emperor_of_the_romans: "Emperor of the Romans"
+      STATIC_MODIFIER_DESC_fnr_TRE_emperor_of_the_romans: "The Grand Komnenos claims the whole inheritance of Rome."
+      STATIC_MODIFIER_NAME_fnr_TRE_tabriz_caravans: "The Tabriz Caravans"
+      STATIC_MODIFIER_DESC_fnr_TRE_tabriz_caravans: "Silk, spices and dyes come over the mountains from Tabriz to the quays of Trebizond. The caravans run while the ruler of Tabriz is at peace with us."
+      STATIC_MODIFIER_NAME_fnr_TRE_raid_damage: "Raided Countryside"
+      STATIC_MODIFIER_DESC_fnr_TRE_raid_damage: "Turkmen raiders burned villages while we sheltered behind the walls."
+      STATIC_MODIFIER_NAME_fnr_TRE_defiance: "Defiance of the Sultan"
+      STATIC_MODIFIER_DESC_fnr_TRE_defiance: "We told the Sultan to come and take Trebizond if he could. The whole realm is ready to make him pay for it."
+      STATIC_MODIFIER_NAME_fnr_TRE_orthodox_bulwark: "Orthodox Bulwark"
+      STATIC_MODIFIER_DESC_fnr_TRE_orthodox_bulwark: "Trebizond and Georgia stand together, two Orthodox crowns among the Turks."
+      STATIC_MODIFIER_NAME_fnr_TRE_rival_emperors: "Rival Emperors"
+      STATIC_MODIFIER_DESC_fnr_TRE_rival_emperors: "We do not recognise the emperor in Constantinople. The Grand Komnenoi are the true heirs of Rome."
+      STATIC_MODIFIER_NAME_fnr_TRE_komnenian_reconciliation: "One Family, Two Thrones"
+      STATIC_MODIFIER_DESC_fnr_TRE_komnenian_reconciliation: "Trebizond and Constantinople have put the old quarrel aside."
+      STATIC_MODIFIER_NAME_fnr_TRE_quarrel_venice: "Venetian Favour"
+      STATIC_MODIFIER_DESC_fnr_TRE_quarrel_venice: "We took the side of the Venetians in their quarrel with Genoa."
+      STATIC_MODIFIER_NAME_fnr_TRE_quarrel_genoa: "Genoese Favour"
+      STATIC_MODIFIER_DESC_fnr_TRE_quarrel_genoa: "We took the side of the Genoese in their quarrel with Venice."
+      STATIC_MODIFIER_NAME_fnr_TRE_mithridatic_heir: "Heir of Mithridates"
+      STATIC_MODIFIER_DESC_fnr_TRE_mithridatic_heir: "The Grand Komnenoi now rule the old kingdom of Pontus, and claim the legacy of Mithridates as their own."
+      STATIC_MODIFIER_NAME_fnr_ROM_komnenian_dynasty: "Komnenian Dynasty"
+      STATIC_MODIFIER_DESC_fnr_ROM_komnenian_dynasty: "The house that held Trebizond for two and a half centuries now rules the whole Roman Empire."
+
+    # Advances
+
+      TRE_fnr_daughters_of_the_komnenoi: "Daughters of the Komnenoi"
+      TRE_fnr_daughters_of_the_komnenoi_desc: "A Komnenian princess is worth an army. Our daughters marry khans and kings, and their husbands keep the peace."
+      TRE_fnr_wardens_of_the_passes: "Wardens of the Passes"
+      TRE_fnr_wardens_of_the_passes_desc: "The mountain lords who hold the passes are our first and best defence."
+      TRE_fnr_empire_in_exile: "Empire in Exile"
+      TRE_fnr_empire_in_exile_desc: "Trebizond was founded by Komnenoi who fled Constantinople. Its court keeps every title and ceremony of the old Empire."
+      TRE_fnr_the_aspron: "The Aspron"
+      TRE_fnr_the_aspron_desc: "The silver aspron of Trebizond is trusted from Tabriz to Kaffa."
+      TRE_fnr_caravans_of_tabriz: "Caravans of Tabriz"
+      TRE_fnr_caravans_of_tabriz_desc: "Our factors live in Tabriz and our warehouses line the road from Erzurum to the sea."
+      TRE_fnr_megas_komnenos: "Megas Komnenos"
+      TRE_fnr_megas_komnenos_desc: "The Grand Komnenos is emperor of the Romans in all but Constantinople."
+
+    # Law
+
+      fnr_TRE_latin_quarters_law: "The Latin Quarters"
+      fnr_TRE_latin_quarters_law_desc: "Venice and Genoa both keep quarters, quays and consuls in Trebizond. Which of them gets our favour, if either?"
+      fnr_TRE_favour_venice_policy: "Favour Venice"
+      fnr_TRE_favour_venice_policy_desc: "The Venetian bailo gets the better quay and the lower tolls."
+      fnr_TRE_favour_genoa_policy: "Favour Genoa"
+      fnr_TRE_favour_genoa_policy_desc: "The Genoese of Leontokastron get the better quay and help with our galleys."
+      fnr_TRE_native_merchants_policy: "Native Merchants"
+      fnr_TRE_native_merchants_policy_desc: "The trade of Trebizond is for the people of Trebizond, and the aspron stays at home."
+
+    # Privilege
+
+      fnr_TRE_archons_of_the_passes: "Archons of the Pontic Passes"
+      fnr_TRE_archons_of_the_passes_desc: "The mountain lords of Chaldia hold the passes in our name, and are paid for it in land and freedom. While granted, #Y Peril#! falls by #G 2#! a year."
+
+    # Reform
+
+      fnr_TRE_komnenian_restoration: "Komnenian Restoration"
+      fnr_TRE_komnenian_restoration_desc: "With Constantinople ours, the Grand Komnenoi restore the court, the titles and the offices of the old Empire."
+
+    # Events
+
+      fnr_TRE.1.title: "The Empire of Trebizond"
+      fnr_TRE.1.desc: "In 1204, as the Crusaders sacked Constantinople, the grandsons of Emperor Andronikos Komnenos founded an Empire on the shores of the Black Sea. Trebizond has survived ever since, rich from the caravans of Tabriz and protected by mountains, marriages and gold. The Turks are many and we are few, but the Grand Komnenoi have never relied on their armies alone."
+      fnr_TRE.1.a: "Trebizond endures."
+      fnr_TRE.2.title: "Turkmen Raid"
+      fnr_TRE.2.desc: "Turkmen horsemen have come over the mountains and are burning the villages of the upper valleys.\n\n$fnr_TRE_peril_current$"
+      fnr_TRE.2.a: "Ride out and meet them."
+      fnr_TRE.2.b: "Pay them to leave."
+      fnr_TRE.2.c: "Shelter behind the walls."
+      fnr_TRE.3.title: "The Sultan's Army Before Trebizond"
+      fnr_TRE.3.desc: "The Turkish host has crossed the passes and camped below the walls of Trebizond. The Sultan's envoy says his master will leave if we give him reason to.\n\n$fnr_TRE_peril_current$"
+      fnr_TRE.3.a: "Give him gold."
+      fnr_TRE.3.b: "Let him try the walls."
+      fnr_TRE.3.c: "Give him a Komnenian bride."
+      fnr_TRE.4.title: "A Broken Pact"
+      fnr_TRE.4.desc: "A ruler who married a Komnenian princess has made war on us. Marriage, it seems, buys only so much."
+      fnr_TRE.4.a: "We will remember this."
+      fnr_TRE.5.title: "The Orthodox Bulwark"
+      fnr_TRE.5.desc: "Our princess has arrived at the court of [SCOPE.sCountry('fnr_TRE_georgia').GetName]. Georgia and Trebizond, the last Orthodox crowns among the Turks, have sworn to stand together."
+      fnr_TRE.5.a: "Two crowns, one faith."
+      fnr_TRE.6.title: "Venetians and Genoese Come to Blows"
+      fnr_TRE.6.desc: "A brawl between Venetian and Genoese sailors on the quays has become a street battle. Both consuls demand that we punish the other side."
+      fnr_TRE.6.a: "Side with Venice."
+      fnr_TRE.6.b: "Side with Genoa."
+      fnr_TRE.6.c: "Fine them both, and keep the profits."
+      fnr_TRE.7.title: "A Caravan from Tabriz"
+      fnr_TRE.7.desc: "The largest caravan in years has come down from Tabriz. The customs house cannot count the bales fast enough."
+      fnr_TRE.7.a: "Count the customs."
+      fnr_TRE.7.b: "Send the finest silk to the palace."
+      fnr_TRE.8.title: "The Two Emperors"
+      fnr_TRE.8.desc: "An embassy has come from [SCOPE.sCountry('fnr_TRE_byzantium').GetName]. Its emperor calls himself Emperor of the Romans, as our Grand Komnenos does. One of these titles, the envoys suggest, should be dropped."
+      fnr_TRE.8.a: "We are the true Emperors."
+      fnr_TRE.8.b: "One family, two thrones."
+      fnr_TRE.9.title: "Emperor of the Romans"
+      fnr_TRE.9.desc: "In the Chrysokephalos, the cathedral of the golden head, the Grand Komnenos has been crowned Emperor of the Romans. The court of Trebizond is now the court of Rome."
+      fnr_TRE.9.a: "The exile is over."
+      fnr_TRE_rome_path_tt: "With #Y Rome#! and #Y Constantinople#! we may form the #Y Roman Empire#!, keeping the #Y Komnenian Dynasty#! bonus."
+      fnr_TRE.10.title: "The Inheritance of Constantinople"
+      fnr_TRE.10.desc: "Constantinople is ours. The Grand Komnenoi have come home to the city their ancestors fled, and its court, offices and ceremonies are ours to restore."
+      fnr_TRE.10.a: "Restore the court."
+      fnr_TRE_inheritance_tt: "Unlocks the #Y Komnenian Restoration#! government reform."
+      fnr_TRE.11.title: "Heir of Mithridates"
+      fnr_TRE.11.desc: "Trebizond has become Pontus. The Grand Komnenoi now rule the kingdom of Mithridates, and the old stories of the Poison King are told again at court."
+      fnr_TRE.11.a: "Pontus and Trebizond are one."
+
+    # Hint
+
+      hint_fnr_TRE_peril: "Peril"
+      hint_fnr_TRE_peril_hint_text: "$fnr_TRE_peril_current$\n\n$fnr_TRE_peril_explained$\n\n@hint! #T Keeping the Turks away#!\n- #Y Offer a Komnenian Bride#! (diplomatic action) makes up to #Y 3#! marriage pacts\n- #Y Fortify the Pontic Passes#! and the #Y Archons of the Pontic Passes#! privilege\n- #Y Pay Tribute to the Sultan#! when the danger is greatest"
+      hint_fnr_TRE_peril_diplomatic: "$hint_advisor_salute_diplomatic$"
+      hint_fnr_TRE_peril_administrative: "$hint_advisor_salute_administrative$"
+      hint_fnr_TRE_peril_military: "$hint_advisor_salute_military$"

@@ -1,0 +1,35 @@
+﻿# Trebizond opinion modifiers (Pax Romana)
+
+# Offer a Komnenian Bride - both sides
+fnr_TRE_komnenian_kin = {
+	value = 40
+	yearly_decay = 1
+}
+
+# A marriage partner made war on us
+fnr_TRE_broken_pact = {
+	value = -50
+	yearly_decay = 2
+}
+
+# fnr_TRE.5 Orthodox Bulwark - Georgia and Trebizond
+fnr_TRE_orthodox_bulwark_opinion = {
+	value = 30
+	yearly_decay = 1
+}
+
+# fnr_TRE.8 - the Two Emperors
+fnr_TRE_rival_emperor = {
+	value = -40
+	yearly_decay = 1
+}
+fnr_TRE_komnenian_kinship = {
+	value = 30
+	yearly_decay = 1
+}
+
+# Embassy to Tabriz - the owner of Tabriz
+fnr_TRE_embassy_from_trebizond = {
+	value = 25
+	yearly_decay = 1
+}

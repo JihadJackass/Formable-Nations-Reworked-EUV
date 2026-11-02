@@ -1,0 +1,95 @@
+﻿# Trebizond diplomatic actions (Pax Romana)
+
+# Offer a Komnenian Bride - a marriage pact with a Turkmen, Muslim-Turkic or Christian neighbour.
+# Up to 3 pacts. Each one lowers Peril every year; a pact with Georgia also brings the Orthodox Bulwark.
+fnr_TRE_offer_bride = {
+	type = diplomacy
+	category = CATEGORY_FRIENDLY_ACTIONS
+
+	potential = {
+		scope:actor = { fnr_TRE_is_komnenian = yes }
+	}
+
+	allow = {
+		scope:actor = {
+			num_of_diplomats >= 2
+			gold >= 100
+			fnr_TRE_pacts_below = { VALUE = 3 }
+		}
+	}
+
+	cooldown = { type = fnr_TRE_offer_bride years = 3 }
+
+	select_trigger = {
+		looking_for_a = country
+		target_flag = recipient
+		name = "choose_country"
+		default_sort = will
+		column = {
+			data = country_diplomacy_info
+		}
+		visible = {
+			fnr_TRE_bride_candidate = yes
+			NOT = { this = scope:actor }
+			NOT = { has_variable = fnr_TRE_bride_of_trebizond }
+		}
+		enabled = {
+			NOT = { is_at_war_with = scope:actor }
+			NOT = { is_subject_of = scope:actor }
+		}
+	}
+
+	diplo_chance = {
+		base = 0
+		opinion = 0.5
+		trust_in_actor = 0.5
+	}
+
+	accept = {
+		add = {
+			desc = "fnr_TRE_bride_reason_prestige"
+			value = 20
+		}
+		add = {
+			desc = "fnr_TRE_bride_reason_georgia"
+			if = {
+				limit = { scope:recipient = { fnr_TRE_is_georgia = yes } }
+				value = 20
+			}
+		}
+		add = {
+			desc = "fnr_TRE_bride_reason_neighbour"
+			if = {
+				limit = { scope:recipient = { any_neighbor_country = { this = scope:actor } } }
+				value = 10
+			}
+		}
+	}
+
+	effect = {
+		scope:actor = {
+			add_diplomats = -2
+			add_gold = -100
+			add_prestige = prestige_weak_bonus
+			add_opinion = { modifier = fnr_TRE_komnenian_kin target = scope:recipient }
+			fnr_TRE_change_peril_effect = { VALUE = -10 TT = minus_10 }
+			custom_tooltip = fnr_TRE_bride_pact_tt
+		}
+		scope:recipient = {
+			set_variable = { name = fnr_TRE_bride_of_trebizond years = 30 }
+			add_opinion = { modifier = fnr_TRE_komnenian_kin target = scope:actor }
+		}
+		hidden_effect = {
+			scope:actor = { fnr_TRE_count_pacts_effect = yes }
+			if = {
+				limit = { scope:recipient = { fnr_TRE_is_georgia = yes } }
+				scope:recipient = { save_scope_as = fnr_TRE_georgia }
+				scope:actor = { trigger_event_non_silently = fnr_TRE.5 }
+			}
+		}
+	}
+
+	ai_will_do = {
+		value = 50
+	}
+}

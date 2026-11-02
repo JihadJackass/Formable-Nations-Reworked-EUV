@@ -453,7 +453,7 @@ colors = {
 		# Yugoslavia
 		map_YGOSL = rgb { 86 85 123 }
 		# Burgundy
-		map_arpitan = rgb { 102 0 3 }
+		map_BGP = rgb { 102 0 3 } # FNR: own key, so the vanilla Arpitan culture colour is left alone
 	# END FORMABLE NATION COLORS
 }
 

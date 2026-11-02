@@ -1,0 +1,32 @@
+﻿# Magna Graecia Estate Privileges (Pax Romana)
+
+		fnr_MGGCA_basilian_monks = {
+
+			estate = clergy_estate
+
+			potential = {
+				fnr_MGGCA_can_revive = yes
+				fnr_MGGCA_stage_at_least = { VALUE = 1 }
+			}
+
+			country_modifier = {
+				global_clergy_estate_power = 0.10
+				clergy_estate_target_satisfaction = small_privilege_target_satisfaction
+				research_speed_modifier = 0.03
+			}
+		}
+
+		fnr_MGGCA_italiote_merchants = {
+
+			estate = burghers_estate
+
+			potential = {
+				has_or_had_tag = MGGCA
+			}
+
+			country_modifier = {
+				burghers_estate_target_satisfaction = small_privilege_target_satisfaction
+				trade_income = 0.05
+				trade_range_modifier = 0.05
+			}
+		}

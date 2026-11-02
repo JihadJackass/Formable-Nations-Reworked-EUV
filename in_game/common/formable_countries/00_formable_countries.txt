@@ -3129,7 +3129,7 @@ BGP_f = {
 	flag = BGP
 	adjective = BGP_ADJ
 	tag = BGP
-	color = map_arpitan
+	color = map_BGP # FNR: was map_arpitan
 	areas = {
 		provence_area
 		savoy_area

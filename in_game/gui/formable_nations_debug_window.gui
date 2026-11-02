@@ -102,33 +102,46 @@ window = {
 							layoutpolicy_horizontal = expanding
 							spacing = 6
 							text_single = {
-								size = { 100 32 }
+								size = { 90 32 }
+								autoresize = no
 								align = right|nobaseline
 								text = "fnr_settings_row_timeline"
 							}
 							button_regular = { # Historical
-								size = { 200 32 }
+								size = { 206 32 }
+								autoresize = no
+								minimumsize = { 206 32 }
+								maximumsize = { 206 32 }
 								text = "[SelectLocalization(GetPlayer.HasVariable('fnr_historical_enabled'), 'fnr_cat_historical_on', 'fnr_cat_historical_off')]"
 								tooltip = "[SelectLocalization(GetPlayer.HasVariable('fnr_historical_enabled'), 'fnr_historical_tooltip_on', 'fnr_historical_tooltip_off')]"
 								onclick = "[GetScriptedGui('FormableNationReworked_toggle_historical_formables').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								onclick = "[GetScriptedGui('FormableNationReworked_count_active').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 							}
 							button_regular = { # Non-Historical
-								size = { 200 32 }
+								size = { 206 32 }
+								autoresize = no
+								minimumsize = { 206 32 }
+								maximumsize = { 206 32 }
 								text = "[SelectLocalization(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), 'fnr_cat_nonhistorical_on', 'fnr_cat_nonhistorical_off')]"
 								tooltip = "[SelectLocalization(GetPlayer.HasVariable('fnr_nonhistorical_enabled'), 'fnr_nonhistorical_tooltip_on', 'fnr_nonhistorical_tooltip_off')]"
 								onclick = "[GetScriptedGui('FormableNationReworked_toggle_nonhistorical_formables').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								onclick = "[GetScriptedGui('FormableNationReworked_count_active').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 							}
 							button_regular = { # Alt-History
-								size = { 200 32 }
+								size = { 206 32 }
+								autoresize = no
+								minimumsize = { 206 32 }
+								maximumsize = { 206 32 }
 								text = "[SelectLocalization(GetPlayer.HasVariable('fnr_althistory_enabled'), 'fnr_cat_althistory_on', 'fnr_cat_althistory_off')]"
 								tooltip = "[SelectLocalization(GetPlayer.HasVariable('fnr_althistory_enabled'), 'fnr_althistorical_tooltip_on', 'fnr_althistorical_tooltip_off')]"
 								onclick = "[GetScriptedGui('FormableNationReworked_toggle_althistory_formables').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								onclick = "[GetScriptedGui('FormableNationReworked_count_active').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 							}
 							button_regular = { # Modern
-								size = { 200 32 }
+								size = { 206 32 }
+								autoresize = no
+								minimumsize = { 206 32 }
+								maximumsize = { 206 32 }
 								text = "[SelectLocalization(GetPlayer.HasVariable('fnr_modern_enabled'), 'fnr_cat_modern_on', 'fnr_cat_modern_off')]"
 								tooltip = "[SelectLocalization(GetPlayer.HasVariable('fnr_modern_enabled'), 'fnr_modern_tooltip_on', 'fnr_modern_tooltip_off')]"
 								onclick = "[GetScriptedGui('FormableNationReworked_toggle_modern_formables').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
@@ -140,33 +153,46 @@ window = {
 							layoutpolicy_horizontal = expanding
 							spacing = 6
 							text_single = {
-								size = { 100 32 }
+								size = { 90 32 }
+								autoresize = no
 								align = right|nobaseline
 								text = "fnr_settings_row_special"
 							}
 							button_regular = { # Controversial
-								size = { 200 32 }
+								size = { 206 32 }
+								autoresize = no
+								minimumsize = { 206 32 }
+								maximumsize = { 206 32 }
 								text = "[SelectLocalization(GetPlayer.HasVariable('fnr_controversial_enabled'), 'fnr_cat_controversial_on', 'fnr_cat_controversial_off')]"
 								tooltip = "[SelectLocalization(GetPlayer.HasVariable('fnr_controversial_enabled'), 'fnr_controversial_tooltip_on', 'fnr_controversial_tooltip_off')]"
 								onclick = "[GetScriptedGui('FormableNationReworked_toggle_controversial_formables').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								onclick = "[GetScriptedGui('FormableNationReworked_count_active').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 							}
 							button_regular = { # Fantasy
-								size = { 200 32 }
+								size = { 206 32 }
+								autoresize = no
+								minimumsize = { 206 32 }
+								maximumsize = { 206 32 }
 								text = "[SelectLocalization(GetPlayer.HasVariable('fnr_fantasy_enabled'), 'fnr_cat_fantasy_on', 'fnr_cat_fantasy_off')]"
 								tooltip = "[SelectLocalization(GetPlayer.HasVariable('fnr_fantasy_enabled'), 'fnr_fantasy_tooltip_on', 'fnr_fantasy_tooltip_off')]"
 								onclick = "[GetScriptedGui('FormableNationReworked_toggle_fantasy_formables').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								onclick = "[GetScriptedGui('FormableNationReworked_count_active').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 							}
 							button_regular = { # Meme
-								size = { 200 32 }
+								size = { 206 32 }
+								autoresize = no
+								minimumsize = { 206 32 }
+								maximumsize = { 206 32 }
 								text = "[SelectLocalization(GetPlayer.HasVariable('fnr_meme_enabled'), 'fnr_cat_meme_on', 'fnr_cat_meme_off')]"
 								tooltip = "[SelectLocalization(GetPlayer.HasVariable('fnr_meme_enabled'), 'fnr_meme_tooltip_on', 'fnr_meme_tooltip_off')]"
 								onclick = "[GetScriptedGui('FormableNationReworked_toggle_meme_formables').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								onclick = "[GetScriptedGui('FormableNationReworked_count_active').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 							}
 							button_regular = { # North American
-								size = { 200 32 }
+								size = { 206 32 }
+								autoresize = no
+								minimumsize = { 206 32 }
+								maximumsize = { 206 32 }
 								text = "[SelectLocalization(GetPlayer.HasVariable('fnr_us_states_enabled'), 'fnr_cat_us_states_on', 'fnr_cat_us_states_off')]"
 								tooltip = "[SelectLocalization(GetPlayer.HasVariable('fnr_us_states_enabled'), 'fnr_north_american_tooltip_on', 'fnr_north_american_tooltip_off')]"
 								onclick = "[GetScriptedGui('FormableNationReworked_toggle_us_states_formables').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
@@ -178,19 +204,26 @@ window = {
 							layoutpolicy_horizontal = expanding
 							spacing = 6
 							text_single = {
-								size = { 100 32 }
+								size = { 90 32 }
+								autoresize = no
 								align = right|nobaseline
 								text = "fnr_settings_row_base"
 							}
 							button_regular = { # Vanilla (inverted variable: set means OFF)
-								size = { 200 32 }
+								size = { 206 32 }
+								autoresize = no
+								minimumsize = { 206 32 }
+								maximumsize = { 206 32 }
 								text = "[SelectLocalization(GetPlayer.HasVariable('fnr_vanilla_formables_disabled'), 'fnr_cat_vanilla_off', 'fnr_cat_vanilla_on')]"
 								tooltip = "[SelectLocalization(GetPlayer.HasVariable('fnr_vanilla_formables_disabled'), 'fnr_vanilla_tooltip_off', 'fnr_vanilla_tooltip_on')]"
 								onclick = "[GetScriptedGui('FormableNationReworked_toggle_vanilla_formables').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								onclick = "[GetScriptedGui('FormableNationReworked_count_active').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 							}
 							button_regular = { # Papal States (only the Papacy can use it)
-								size = { 200 32 }
+								size = { 206 32 }
+								autoresize = no
+								minimumsize = { 206 32 }
+								maximumsize = { 206 32 }
 								text = "[SelectLocalization(GetPlayer.HasVariable('fnr_is_papacy'), 'fnr_cat_papal_on', 'fnr_cat_papal_off')]"
 								tooltip = "[SelectLocalization(GetPlayer.HasVariable('fnr_is_papacy'), 'fnr_papal_states_tooltip_on', 'fnr_papal_states_tooltip_off')]"
 								onclick = "[GetScriptedGui('FormableNationReworked_toggle_papal_formables').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
@@ -203,7 +236,7 @@ window = {
 			hbox = {
 				layoutpolicy_horizontal = expanding
 				margin_top = 6
-				widget = { size = { 106 20 } }
+				widget = { size = { 96 20 } }
 				text_single = {
 					text = "fnr_settings_presets_header"
 				}
@@ -212,30 +245,42 @@ window = {
 			hbox = {
 				layoutpolicy_horizontal = expanding
 				spacing = 6
-				widget = { size = { 100 32 } }
+				widget = { size = { 90 32 } }
 							button_regular = {
-								size = { 200 32 }
+								size = { 206 32 }
+								autoresize = no
+								minimumsize = { 206 32 }
+								maximumsize = { 206 32 }
 								text = "fnr_preset_default"
 								tooltip = "fnr_preset_default_tt"
 								onclick = "[GetScriptedGui('FormableNationReworked_preset_default').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								onclick = "[GetScriptedGui('FormableNationReworked_count_active').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 							}
 							button_regular = {
-								size = { 200 32 }
+								size = { 206 32 }
+								autoresize = no
+								minimumsize = { 206 32 }
+								maximumsize = { 206 32 }
 								text = "fnr_preset_plausible"
 								tooltip = "fnr_preset_plausible_tt"
 								onclick = "[GetScriptedGui('FormableNationReworked_preset_plausible').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								onclick = "[GetScriptedGui('FormableNationReworked_count_active').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 							}
 							button_regular = {
-								size = { 200 32 }
+								size = { 206 32 }
+								autoresize = no
+								minimumsize = { 206 32 }
+								maximumsize = { 206 32 }
 								text = "fnr_preset_everything"
 								tooltip = "fnr_preset_everything_tt"
 								onclick = "[GetScriptedGui('FormableNationReworked_preset_everything').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								onclick = "[GetScriptedGui('FormableNationReworked_count_active').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 							}
 							button_regular = {
-								size = { 200 32 }
+								size = { 206 32 }
+								autoresize = no
+								minimumsize = { 206 32 }
+								maximumsize = { 206 32 }
 								text = "fnr_preset_vanilla_only"
 								tooltip = "fnr_preset_vanilla_only_tt"
 								onclick = "[GetScriptedGui('FormableNationReworked_preset_vanilla_only').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
@@ -248,9 +293,12 @@ window = {
 				layoutpolicy_horizontal = expanding
 				margin_top = 8
 				spacing = 6
-				widget = { size = { 100 34 } }
+				widget = { size = { 90 34 } }
 				button_regular = {
-					size = { 300 34 }
+					size = { 418 34 }
+					autoresize = no
+					minimumsize = { 418 34 }
+					maximumsize = { 418 34 }
 					text = "fnr_settings_open_list"
 					tooltip = "fnr_debug_window_formable_list_loc"
 					onclick = "[GetVariableSystem.Set('formable_list_window_open', 'yes')]"

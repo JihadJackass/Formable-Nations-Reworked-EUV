@@ -1,0 +1,176 @@
+﻿# Trebizond scripted effects (Pax Romana)
+
+# ---------- Peril ----------
+
+# Peril tier modifier, always shown
+fnr_TRE_refresh_peril_tier_effect = {
+	hidden_effect = {
+		if = { limit = { has_country_modifier = fnr_TRE_peril_secure } remove_country_modifier = fnr_TRE_peril_secure }
+		if = { limit = { has_country_modifier = fnr_TRE_peril_watchful } remove_country_modifier = fnr_TRE_peril_watchful }
+		if = { limit = { has_country_modifier = fnr_TRE_peril_threatened } remove_country_modifier = fnr_TRE_peril_threatened }
+		if = { limit = { has_country_modifier = fnr_TRE_peril_dire } remove_country_modifier = fnr_TRE_peril_dire }
+		if = {
+			limit = { has_variable = fnr_TRE_peril }
+			if = {
+				limit = { var:fnr_TRE_peril >= 75 }
+				add_country_modifier = { modifier = fnr_TRE_peril_dire years = -1 }
+			}
+			else_if = {
+				limit = { var:fnr_TRE_peril >= 50 }
+				add_country_modifier = { modifier = fnr_TRE_peril_threatened years = -1 }
+			}
+			else_if = {
+				limit = { var:fnr_TRE_peril >= 25 }
+				add_country_modifier = { modifier = fnr_TRE_peril_watchful years = -1 }
+			}
+			else = {
+				add_country_modifier = { modifier = fnr_TRE_peril_secure years = -1 }
+			}
+		}
+	}
+}
+
+# Silent change, kept in 0-100. Use with VALUE
+fnr_TRE_shift_peril_effect = {
+	hidden_effect = {
+		if = {
+			limit = { NOT = { has_variable = fnr_TRE_peril } }
+			set_variable = { name = fnr_TRE_peril value = 40 }
+		}
+		change_variable = { name = fnr_TRE_peril add = $VALUE$ }
+		if = {
+			limit = { trigger_if = { limit = { has_variable = fnr_TRE_peril } var:fnr_TRE_peril > 100 } trigger_else = { always = no } }
+			set_variable = { name = fnr_TRE_peril value = 100 }
+		}
+		else_if = {
+			limit = { trigger_if = { limit = { has_variable = fnr_TRE_peril } var:fnr_TRE_peril < 0 } trigger_else = { always = no } }
+			set_variable = { name = fnr_TRE_peril value = 0 }
+		}
+	}
+}
+
+# Shown change. Use with VALUE and TT (minus_5 / minus_10 / minus_15 / minus_25 / plus_5 / plus_10)
+fnr_TRE_change_peril_effect = {
+	custom_tooltip = fnr_TRE_peril_$TT$_tt
+	fnr_TRE_shift_peril_effect = { VALUE = $VALUE$ }
+	fnr_TRE_refresh_peril_tier_effect = yes
+}
+
+# ---------- Setup ----------
+
+fnr_TRE_setup_effect = {
+	if = {
+		limit = { NOT = { has_variable = fnr_TRE_setup } }
+		set_variable = fnr_TRE_setup
+		set_variable = { name = fnr_TRE_peril value = 40 }
+		set_variable = { name = fnr_TRE_pacts value = 0 }
+		fnr_TRE_refresh_peril_tier_effect = yes
+		trigger_event_non_silently = fnr_TRE.1
+	}
+}
+
+# ---------- Marriage pacts ----------
+
+# Recount the pacts (countries holding our bride variable)
+fnr_TRE_count_pacts_effect = {
+	hidden_effect = {
+		set_variable = { name = fnr_TRE_pacts value = 0 }
+		every_country = {
+			limit = { has_variable = fnr_TRE_bride_of_trebizond }
+			root = { change_variable = { name = fnr_TRE_pacts add = 1 } }
+		}
+	}
+}
+
+# ---------- Yearly ----------
+
+fnr_TRE_yearly_effect = {
+	fnr_TRE_setup_effect = yes
+	fnr_TRE_count_pacts_effect = yes
+
+	# Peril rises
+	if = {
+		limit = { fnr_TRE_stronger_turk_neighbor = yes }
+		fnr_TRE_shift_peril_effect = { VALUE = 4 }
+	}
+	else = {
+		fnr_TRE_shift_peril_effect = { VALUE = -2 }
+	}
+	if = {
+		limit = { any_neighbor_country = { tag = TUR } }
+		fnr_TRE_shift_peril_effect = { VALUE = 2 }
+	}
+	if = {
+		limit = { at_war = yes }
+		fnr_TRE_shift_peril_effect = { VALUE = 4 }
+	}
+	# Peril falls
+	if = {
+		limit = { trigger_if = { limit = { has_variable = fnr_TRE_pacts } var:fnr_TRE_pacts >= 1 } trigger_else = { always = no } }
+		fnr_TRE_shift_peril_effect = { VALUE = -2 }
+	}
+	if = {
+		limit = { trigger_if = { limit = { has_variable = fnr_TRE_pacts } var:fnr_TRE_pacts >= 2 } trigger_else = { always = no } }
+		fnr_TRE_shift_peril_effect = { VALUE = -2 }
+	}
+	if = {
+		limit = { trigger_if = { limit = { has_variable = fnr_TRE_pacts } var:fnr_TRE_pacts >= 3 } trigger_else = { always = no } }
+		fnr_TRE_shift_peril_effect = { VALUE = -2 }
+	}
+	if = {
+		limit = { has_country_modifier = fnr_TRE_pontic_passes }
+		fnr_TRE_shift_peril_effect = { VALUE = -3 }
+	}
+	if = {
+		limit = { has_country_modifier = fnr_TRE_tributary }
+		fnr_TRE_shift_peril_effect = { VALUE = -3 }
+	}
+	if = {
+		limit = { has_estate_privilege = estate_privilege:fnr_TRE_archons_of_the_passes }
+		fnr_TRE_shift_peril_effect = { VALUE = -2 }
+	}
+	fnr_TRE_refresh_peril_tier_effect = yes
+
+	# Fortified passes only count while we hold Gumushane
+	hidden_effect = {
+		if = {
+			limit = {
+				has_variable = fnr_TRE_passes_fortified
+				owns = location:gumushane
+				NOT = { has_country_modifier = fnr_TRE_pontic_passes }
+			}
+			add_country_modifier = { modifier = fnr_TRE_pontic_passes years = -1 }
+		}
+		else_if = {
+			limit = {
+				has_country_modifier = fnr_TRE_pontic_passes
+				NOT = { owns = location:gumushane }
+			}
+			remove_country_modifier = fnr_TRE_pontic_passes
+		}
+	}
+
+	# The Tabriz caravans: while Tabriz's owner is at peace with us, or Tabriz is ours
+	hidden_effect = {
+		if = { limit = { has_country_modifier = fnr_TRE_tabriz_caravans } remove_country_modifier = fnr_TRE_tabriz_caravans }
+		if = {
+			limit = {
+				location:tabriz = {
+					owner ?= {
+						NOT = { is_at_war_with = root }
+					}
+				}
+			}
+			add_country_modifier = { modifier = fnr_TRE_tabriz_caravans years = -1 }
+		}
+	}
+
+	# Pontus, heir of Mithridates
+	if = {
+		limit = {
+			tag = PONTU
+			NOT = { has_country_modifier = fnr_TRE_mithridatic_heir }
+		}
+		trigger_event_non_silently = fnr_TRE.11
+	}
+}

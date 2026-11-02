@@ -1,15 +1,97 @@
-﻿# Advances for Magna Graecia
+﻿# Advances for Magna Graecia (Pax Romana)
 
-	# age_1_traditions
+		MGGCA_italiote_heritage = {
+			age = age_1_traditions
+			icon = smooth_administration
+			potential = {
+				has_or_had_tag = MGGCA
+			}
 
-	# age_2_renaissance
+			global_max_control = 0.05
 
-	# age_3_discovery
+			requires = codified_laws
+			allow_children = no
+		}
 
-	# age_4_reformation
+		MGGCA_greek_rite = {
+			age = age_2_renaissance
+			icon = patron_of_art
+			potential = {
+				has_or_had_tag = MGGCA
+			}
 
-	# age_5_absolutism
+			research_speed_modifier = 0.05
 
-	# age_6_revolutions
+			requires = patron_of_art
+			allow_children = no
+		}
 
-			
+		MGGCA_hoplite_tradition = {
+			age = age_2_renaissance
+			icon = professional_armies_advance
+			potential = {
+				has_or_had_tag = MGGCA
+			}
+
+			land_morale_modifier = 0.05
+			army_heavy_infantry_power = 0.05
+
+			requires = professional_armies_advance
+			allow_children = no
+		}
+
+		MGGCA_ports_of_the_ionian = {
+			age = age_2_renaissance
+			icon = teu_crusader_discipline
+			potential = {
+				has_or_had_tag = MGGCA
+			}
+
+			trade_income = 0.05
+			navy_maintenance_efficiency = 0.05
+
+			requires = maritime_advance_age_2
+			allow_children = no
+		}
+
+		MGGCA_greek_presses = {
+			age = age_3_discovery
+			icon = legalism_advance
+			potential = {
+				has_or_had_tag = MGGCA
+			}
+
+			research_speed_modifier = 0.05
+			global_pop_conversion_speed_modifier = 0.05
+
+			requires = printing_press_advance
+			allow_children = no
+		}
+
+		MGGCA_italiote_koinon = {
+			age = age_4_reformation
+			icon = crown_power_advance_renaissance
+			potential = {
+				has_or_had_tag = MGGCA
+			}
+
+			country_cabinet_efficiency = 0.05
+			stability_cost_efficiency = 0.05
+
+			requires = confessionalism_advance
+			allow_children = no
+		}
+
+		MGGCA_court_of_megale_hellas = {
+			age = age_5_absolutism
+			icon = imperial_ambitions
+			potential = {
+				has_or_had_tag = MGGCA
+			}
+
+			monthly_prestige = 0.25
+			global_max_control = 0.05
+
+			requires = absolutist_court
+			allow_children = no
+		}

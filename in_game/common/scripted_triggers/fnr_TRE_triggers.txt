@@ -1,0 +1,66 @@
+﻿# Trebizond scripted triggers (Pax Romana)
+
+# Country scope: Trebizond, or a realm that was once Trebizond (Pontus, Rome)
+fnr_TRE_is_komnenian = {
+	has_or_had_tag = TRE
+}
+
+# Country scope: a Turkish or Turkmen power (Muslim, Turkic culture)
+fnr_TRE_is_turkish = {
+	religion.group = religion_group:muslim
+	culture = { has_culture_group = culture_group:turkic_group }
+}
+
+# Country scope (us): a Turkish neighbour fields a larger army than ours
+fnr_TRE_stronger_turk_neighbor = {
+	any_neighbor_country = {
+		fnr_TRE_is_turkish = yes
+		army_size > root.army_size
+	}
+}
+
+# Peril is at least VALUE
+fnr_TRE_peril_at_least = {
+	trigger_if = {
+		limit = { has_variable = fnr_TRE_peril }
+		var:fnr_TRE_peril >= $VALUE$
+	}
+	trigger_else = { always = no }
+}
+
+# Number of marriage pacts is below VALUE
+fnr_TRE_pacts_below = {
+	custom_tooltip = {
+		text = fnr_TRE_pacts_below_$VALUE$_tt
+		trigger_if = {
+			limit = { has_variable = fnr_TRE_pacts }
+			var:fnr_TRE_pacts < $VALUE$
+		}
+		trigger_else = { always = yes }
+	}
+}
+
+# Country scope: may receive a Komnenian bride
+fnr_TRE_bride_candidate = {
+	OR = {
+		fnr_TRE_is_turkish = yes
+		religion.group = religion_group:christian
+		has_or_had_tag = GEO
+	}
+}
+
+# Country scope: Georgia (the tag, or a realm with its capital in Georgia)
+fnr_TRE_is_georgia = {
+	OR = {
+		has_or_had_tag = GEO
+		capital ?= { area = area:georgia_area }
+	}
+}
+
+# Country scope: a Byzantine emperor (Byzantium or the Eastern Roman Empire)
+fnr_TRE_is_byzantium = {
+	OR = {
+		tag = BYZ
+		tag = EASRE
+	}
+}
