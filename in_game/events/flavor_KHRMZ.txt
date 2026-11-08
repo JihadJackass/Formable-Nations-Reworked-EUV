@@ -2,10 +2,15 @@
 
 flavor_KHRMZ.1 = { 
 	type = country_event
+	trigger = {
+		NOT = { has_variable = fnr_seen_flavor_KHRMZ_1 } # FNR: once per country (was fire_only_once)
+	}
 	title = flavor_KHRMZ.1.title
 	desc = flavor_KHRMZ.1.desc
-	fire_only_once = yes
 	outcome = neutral
+	immediate = {
+		hidden_effect = { set_variable = fnr_seen_flavor_KHRMZ_1 }
+	}
 	option = { # Secure the Strait of Hormuz!
 		name = flavor_KHRMZ.1.a
 		# modifier

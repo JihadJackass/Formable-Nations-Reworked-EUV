@@ -87,7 +87,7 @@
 				region:italy_region = {
 					any_location_in_region = {
 						percent >= 0.8
-						owner = root
+						owner ?= root
 					}
 				}
 			}

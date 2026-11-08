@@ -1,0 +1,38 @@
+﻿l_english:
+
+    # Bactrian Synod decisions (fnr_BACTR_decisions.txt)
+
+      fnr_BACTR_proclaim_synod.title: "Proclaim the Bactrian Synod"
+      fnr_BACTR_proclaim_synod.desc: "The heirs of Alexander once carved an empire from the Aegean to the Indus, yet that great union of peoples has long since fractured into squabbling successors. By proclaiming the Bactrian Synod, we shall gather the scattered remnants of the Hellenic world under one banner once more. From Macedonia to Armenia, from Assyria to the banks of the Oxus, those who still honour the legacy of Alexander shall be called to our cause, not merely as allies, but as pillars of a restored empire worthy of the Conqueror himself."
+      fnr_BACTR_proclaim_synod.a: "Call the heirs of Alexander together."
+
+      fnr_BACTR_restore_armenia.title: "Restore the Armenian Kingdom"
+      fnr_BACTR_restore_armenia.desc: "Armenia has long served as a buffer between the great powers of the east and west. By restoring a friendly king to the Armenian throne, we secure a loyal ally on our western flank and extend the reach of Hellenic civilization into the highlands of the Caucasus."
+      fnr_BACTR_restore_armenia.a: "Crown a friend of the Synod."
+
+      fnr_BACTR_restore_macedonia.title: "Restore the Glorious State of Macedonia"
+      fnr_BACTR_restore_macedonia.desc: "Macedonia is the cradle of our heritage, the homeland of Alexander and the wellspring from which all successor kingdoms draw their legitimacy. To see it restored under worthy stewardship would rekindle the spirit of the Diadochi and affirm our place as the true inheritors of his legacy."
+      fnr_BACTR_restore_macedonia.a: "Return the crown to the homeland of Alexander."
+
+      fnr_BACTR_restore_assyria.title: "Position a Local on the Assyrian Throne"
+      fnr_BACTR_restore_assyria.desc: "The ancient lands of Assyria remain restive under foreign rule. By elevating a local figure amenable to our interests, we can establish a compliant king in the heart of Mesopotamia, one who owes his throne, and thus his loyalty, entirely to us."
+      fnr_BACTR_restore_assyria.a: "Raise a king on the Tigris."
+
+      fnr_BACTR_restore_persia.title: "Establish a Pro-Greek Persian King"
+      fnr_BACTR_restore_persia.desc: "Persia is the jewel of the east, and whoever holds sway over its throne commands the respect of a hundred peoples. A Persian king raised in the Greek tradition and indebted to Bactrian patronage would transform a historic rival into our most valuable partner."
+      fnr_BACTR_restore_persia.a: "A friend of the Greeks shall rule in Persia."
+
+      fnr_BACTR_restore_egypt.title: "Restore the Ptolemaic Dynasty to Egypt"
+      fnr_BACTR_restore_egypt.desc: "The Ptolemaic dynasty once presided over the greatest center of learning and commerce in the known world. Restoring them to power in Egypt, under our guidance, would see a grateful ally enthroned on the banks of the Nile, and Hellenic culture flourishing once more from Memphis to the sea."
+      fnr_BACTR_restore_egypt.a: "The House of Ptolemy returns."
+
+      fnr_BACTR_heir_of_alexander.title: "Restore the Macedonian Empire"
+      fnr_BACTR_heir_of_alexander.desc: "The dream of Alexander was never merely conquest; it was the unity of all peoples under one crown, from the pillars of Herakles to the waters of the Ganges. The Synod has gathered the faithful, the old domains have bent the knee, and the hour has come to cast aside the title of successor. We shall proclaim anew what the world has not seen since the death of the Conqueror, a single Macedonian Empire, stretching from West to East, with Bactria as its beating heart."
+      fnr_BACTR_heir_of_alexander.a: "We are the heirs of Alexander."
+
+      fnr_BACTR_client_enough_land_3_tt: "We hold at least #Y 3#! locations, other than our capital, in its lands"
+      fnr_BACTR_client_enough_land_5_tt: "We hold at least #Y 5#! locations, other than our capital, in its lands"
+      fnr_BACTR_client_not_capital_tt: "Our capital is not in its lands"
+      fnr_BACTR_alexandria_not_capital_tt: "Alexandria is not our capital"
+      fnr_BACTR_macedonia_restored_tt: "The Synod has restored #Y Macedonia#!"
+      fnr_BACTR_four_kingdoms_tt: "The Synod has restored at least #Y 4#! kingdoms (Armenia, Macedonia, Assyria, Persia, Egypt)"

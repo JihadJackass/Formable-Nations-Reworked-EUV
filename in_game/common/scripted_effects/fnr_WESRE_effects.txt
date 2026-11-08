@@ -15,7 +15,7 @@ fnr_WESRE_cede_border_province_effect = {
 		limit = { exists = scope:fnr_WESRE_ceded_location }
 		scope:fnr_WESRE_ceded_location.province = {
 			every_location_in_province = {
-				limit = { owner = root }
+				limit = { owner ?= root }
 				change_location_owner = scope:fnr_WESRE_barbarian
 			}
 		}
@@ -31,9 +31,9 @@ fnr_WESRE_province_joins_rebels_effect = {
 		}
 		scope:$LOCATION$.province = {
 			every_location_in_province = {
-				limit = { owner = root }
+				limit = { owner ?= root }
 				every_pop = {
-					limit = { owner = root }
+					limit = { owner ?= root }
 					add_pop_satisfaction = pop_satisfaction_ultimate_penalty
 					change_pop_allegiance = scope:fnr_WESRE_rebel
 				}
@@ -158,7 +158,7 @@ fnr_WESRE_yearly_upkeep_effect = {
 			owns = location:ravenna
 		}
 		location:ravenna = {
-			add_location_modifier = { modifier = fnr_WESRE_imperial_capital years = 2 mode = add_and_extend }
+			add_location_modifier = { modifier = fnr_WESRE_imperial_capital years = 2 mode = replace }
 		}
 	}
 
@@ -214,7 +214,7 @@ fnr_WESRE_yearly_upkeep_effect = {
 					has_building = building_type:fnr_WESRE_castellum
 				}
 			}
-			add_location_modifier = { modifier = fnr_WESRE_limes_network years = 2 mode = add_and_extend }
+			add_location_modifier = { modifier = fnr_WESRE_limes_network years = 2 mode = replace }
 		}
 	}
 

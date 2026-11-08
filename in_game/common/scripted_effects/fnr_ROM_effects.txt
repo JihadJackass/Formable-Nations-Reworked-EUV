@@ -269,6 +269,7 @@ fnr_ROM_restore_diocese_effect = {
 		change_variable = { name = fnr_ROM_dioceses add = 1 }
 	}
 	custom_tooltip = fnr_ROM_diocese_counter_tt
+	custom_tooltip = fnr_ROM_diocese_can_be_lost_tt
 	fnr_ROM_refresh_diocese_tier_effect = yes
 	add_prestige = prestige_mild_bonus
 	add_legitimacy = legitimacy_weak_bonus
@@ -276,6 +277,36 @@ fnr_ROM_restore_diocese_effect = {
 	if = {
 		limit = { fnr_ROM_dioceses_at_least = { VALUE = 11 } }
 		trigger_event_non_silently = fnr_ROM.14
+	}
+}
+
+# A restored diocese is lost when we hold less than 30% of its region. It can be restored
+# again with its decision (60% of the region). Use with KEY = diocese key, REGION = region key
+fnr_ROM_check_diocese_effect = {
+	if = {
+		limit = {
+			has_variable = fnr_ROM_diocese_$KEY$
+			region:$REGION$ = {
+				NOT = {
+					any_location_in_region = {
+						percent >= 0.3
+						owner ?= root
+					}
+				}
+			}
+		}
+		remove_variable = fnr_ROM_diocese_$KEY$
+		remove_country_modifier = fnr_ROM_diocese_$KEY$
+		if = {
+			limit = { has_variable = fnr_ROM_dioceses }
+			change_variable = { name = fnr_ROM_dioceses add = -1 }
+			if = {
+				limit = { var:fnr_ROM_dioceses < 0 }
+				set_variable = { name = fnr_ROM_dioceses value = 0 }
+			}
+		}
+		set_variable = { name = fnr_ROM_diocese_lost_$KEY$ days = 60 }
+		set_variable = { name = fnr_ROM_diocese_lost_this_year days = 1 }
 	}
 }
 
@@ -354,9 +385,9 @@ fnr_ROM_province_joins_rebels_effect = {
 		}
 		scope:$LOCATION$.province = {
 			every_location_in_province = {
-				limit = { owner = root }
+				limit = { owner ?= root }
 				every_pop = {
-					limit = { owner = root }
+					limit = { owner ?= root }
 					add_pop_satisfaction = pop_satisfaction_ultimate_penalty
 					change_pop_allegiance = scope:fnr_ROM_rebel
 				}
@@ -471,7 +502,7 @@ fnr_ROM_raise_usurper_effect = {
 			scope:fnr_ROM_rebel ?= {
 				add_rebel_progress = 1
 			}
-			add_country_modifier = { modifier = fnr_rising_imminent years = 1 mode = add_and_extend }
+			add_country_modifier = { modifier = fnr_rising_imminent years = 1 mode = replace }
 		}
 	}
 }
@@ -481,6 +512,25 @@ fnr_ROM_raise_usurper_effect = {
 fnr_ROM_yearly_upkeep_effect = {
 	fnr_ROM_yearly_legion_effect = yes
 	fnr_ROM_count_foederati_effect = yes
+	# Dioceses are lost when we hold less than 30% of their region (fnr_ROM.16 reports it)
+	hidden_effect = {
+		fnr_ROM_check_diocese_effect = { KEY = italia REGION = italy_region }
+		fnr_ROM_check_diocese_effect = { KEY = galliae REGION = france_region }
+		fnr_ROM_check_diocese_effect = { KEY = hispaniae REGION = iberia_region }
+		fnr_ROM_check_diocese_effect = { KEY = britanniae REGION = great_britain_region }
+		fnr_ROM_check_diocese_effect = { KEY = raetia REGION = south_german_region }
+		fnr_ROM_check_diocese_effect = { KEY = illyricum REGION = balkan_region }
+		fnr_ROM_check_diocese_effect = { KEY = dacia REGION = carpathia_region }
+		fnr_ROM_check_diocese_effect = { KEY = asiana REGION = anatolia_region }
+		fnr_ROM_check_diocese_effect = { KEY = oriens REGION = crescent_region }
+		fnr_ROM_check_diocese_effect = { KEY = aegyptus REGION = egypt_region }
+		fnr_ROM_check_diocese_effect = { KEY = africa REGION = maghreb_region }
+	}
+	if = {
+		limit = { has_variable = fnr_ROM_diocese_lost_this_year }
+		remove_variable = fnr_ROM_diocese_lost_this_year
+		trigger_event_non_silently = fnr_ROM.16
+	}
 	# Keep the diocese tier in step (a reload or a lost save never leaves it stale)
 	fnr_ROM_refresh_diocese_tier_effect = yes
 }

@@ -1,0 +1,309 @@
+﻿# Bactria and the Bactrian Synod
+# The Synod is proclaimed by decision (flavor_BACTR.3). Its leader restores the old kingdoms
+# of Alexander's empire as client kingdoms, then claims the Macedonian Empire (flavor_BACTR.9).
+
+# Proclaim the Bactrian Synod
+fnr_BACTR_proclaim_synod = {
+	decision_category = country_specific_decisions
+
+	tags = { BACTR }
+
+	potential = {
+		has_or_had_tag = BACTR
+		NOT = { exists = international_organization:fnr_bactria_synod_io }
+	}
+
+	allow = {
+		religion = religion:fnr_greco_buddhism_religion
+		at_war = no
+		gold >= 200
+	}
+
+	ai_will_do = { value = 100 }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:crown_estate }
+	}
+
+	option = {
+		name = fnr_BACTR_proclaim_synod.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -200
+			trigger_event_non_silently = flavor_BACTR.3
+		}
+	}
+}
+
+# Restore ARMNA (armenia) - flavor_BACTR.4
+fnr_BACTR_restore_armenia = {
+	decision_category = country_specific_decisions
+
+	tags = { BACTR }
+
+	potential = {
+		has_or_had_tag = BACTR
+		fnr_BACTR_leads_synod = yes
+		NOT = { has_variable = fnr_BACTR_client_armenia }
+		NOT = { has_variable = fnr_BACTR_client_pending_armenia }
+		NOT = { tag_exists = ARMNA }
+		any_owned_location = { fnr_BACTR_client_area_armenia = yes }
+	}
+
+	allow = {
+		at_war = no
+		gold >= 100
+		fnr_BACTR_can_carve_client = { KEY = armenia COUNT = 3 }
+	}
+
+	ai_will_do = { value = 0 }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_BACTR_restore_armenia.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -100
+			set_variable = { name = fnr_BACTR_client_pending_armenia days = 30 }
+			trigger_event_non_silently = flavor_BACTR.4
+		}
+	}
+}
+
+# Restore BMCDN (macedonia) - flavor_BACTR.5
+fnr_BACTR_restore_macedonia = {
+	decision_category = country_specific_decisions
+
+	tags = { BACTR }
+
+	potential = {
+		has_or_had_tag = BACTR
+		fnr_BACTR_leads_synod = yes
+		NOT = { has_variable = fnr_BACTR_client_macedonia }
+		NOT = { has_variable = fnr_BACTR_client_pending_macedonia }
+		NOT = { tag_exists = BMCDN }
+		any_owned_location = { fnr_BACTR_client_area_macedonia = yes }
+	}
+
+	allow = {
+		at_war = no
+		gold >= 100
+		fnr_BACTR_can_carve_client = { KEY = macedonia COUNT = 3 }
+	}
+
+	ai_will_do = { value = 0 }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_BACTR_restore_macedonia.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -100
+			set_variable = { name = fnr_BACTR_client_pending_macedonia days = 30 }
+			trigger_event_non_silently = flavor_BACTR.5
+		}
+	}
+}
+
+# Restore ASYRI (assyria) - flavor_BACTR.6
+fnr_BACTR_restore_assyria = {
+	decision_category = country_specific_decisions
+
+	tags = { BACTR }
+
+	potential = {
+		has_or_had_tag = BACTR
+		fnr_BACTR_leads_synod = yes
+		NOT = { has_variable = fnr_BACTR_client_assyria }
+		NOT = { has_variable = fnr_BACTR_client_pending_assyria }
+		NOT = { tag_exists = ASYRI }
+		any_owned_location = { fnr_BACTR_client_area_assyria = yes }
+	}
+
+	allow = {
+		at_war = no
+		gold >= 100
+		fnr_BACTR_can_carve_client = { KEY = assyria COUNT = 3 }
+	}
+
+	ai_will_do = { value = 0 }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_BACTR_restore_assyria.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -100
+			set_variable = { name = fnr_BACTR_client_pending_assyria days = 30 }
+			trigger_event_non_silently = flavor_BACTR.6
+		}
+	}
+}
+
+# Restore BPSNE (persia) - flavor_BACTR.7
+fnr_BACTR_restore_persia = {
+	decision_category = country_specific_decisions
+
+	tags = { BACTR }
+
+	potential = {
+		has_or_had_tag = BACTR
+		fnr_BACTR_leads_synod = yes
+		NOT = { has_variable = fnr_BACTR_client_persia }
+		NOT = { has_variable = fnr_BACTR_client_pending_persia }
+		NOT = { tag_exists = BPSNE }
+		any_owned_location = { fnr_BACTR_client_area_persia = yes }
+	}
+
+	allow = {
+		at_war = no
+		gold >= 100
+		fnr_BACTR_can_carve_client = { KEY = persia COUNT = 5 }
+	}
+
+	ai_will_do = { value = 0 }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_BACTR_restore_persia.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -100
+			set_variable = { name = fnr_BACTR_client_pending_persia days = 30 }
+			trigger_event_non_silently = flavor_BACTR.7
+		}
+	}
+}
+
+# Restore the Ptolemies (egypt) - fnr_PTLMY.2 makes Alexandria and our other Egyptian lands the Ptolemaic Kingdom
+fnr_BACTR_restore_egypt = {
+	decision_category = country_specific_decisions
+
+	tags = { BACTR }
+
+	potential = {
+		has_or_had_tag = BACTR
+		fnr_BACTR_leads_synod = yes
+		NOT = { has_variable = fnr_BACTR_client_egypt }
+		NOT = { has_variable = fnr_BACTR_client_pending_egypt }
+		NOT = { tag_exists = PTLMY }
+		any_owned_location = { fnr_BACTR_client_area_egypt = yes }
+	}
+
+	allow = {
+		at_war = no
+		gold >= 100
+		owns = location:alexandria
+		custom_tooltip = {
+			text = fnr_BACTR_alexandria_not_capital_tt
+			location:alexandria = { is_capital = no }
+		}
+	}
+
+	ai_will_do = { value = 0 }
+
+	illustration_tags = {
+		10 = interior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:clergy_estate }
+	}
+
+	option = {
+		name = fnr_BACTR_restore_egypt.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -100
+			set_variable = { name = fnr_BACTR_client_pending_egypt days = 30 }
+			trigger_event_non_silently = fnr_PTLMY.2
+		}
+	}
+}
+
+# Heir of Alexander - the Macedonian Empire (flavor_BACTR.9)
+fnr_BACTR_heir_of_alexander = {
+	decision_category = country_specific_decisions
+
+	tags = { BACTR }
+
+	potential = {
+		has_or_had_tag = BACTR
+		fnr_BACTR_leads_synod = yes
+		NOT = { has_variable = fnr_BACTR_heir_of_alexander }
+		NOT = { has_variable = fnr_BACTR_heir_pending }
+	}
+
+	allow = {
+		at_war = no
+		gold >= 500
+		custom_tooltip = {
+			text = fnr_BACTR_macedonia_restored_tt
+			has_variable = fnr_BACTR_client_macedonia
+		}
+		custom_tooltip = {
+			text = fnr_BACTR_four_kingdoms_tt
+			has_variable = fnr_BACTR_clients
+			var:fnr_BACTR_clients >= 4
+		}
+	}
+
+	ai_will_do = { value = 100 }
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	illustration_scope = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_BACTR_heir_of_alexander.a
+		ai_chance = { value = 100 }
+		effect = {
+			add_gold = -500
+			set_variable = { name = fnr_BACTR_heir_pending days = 30 }
+			trigger_event_non_silently = flavor_BACTR.9
+		}
+	}
+}

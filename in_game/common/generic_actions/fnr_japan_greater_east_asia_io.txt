@@ -170,7 +170,7 @@
 				region:korea_region = {
 					any_location_in_region = {
 						percent >= 0.80
-						owner = scope:actor
+						owner ?= scope:actor
 					}
 				}
 			}

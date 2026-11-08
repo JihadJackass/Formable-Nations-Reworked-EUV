@@ -4,10 +4,15 @@
 
 flavor_GMORV.1 = {
 	type = country_event
+	trigger = {
+		NOT = { has_variable = fnr_seen_flavor_GMORV_1 } # FNR: once per country (was fire_only_once)
+	}
 	title = flavor_GMORV.1.title
 	desc = flavor_GMORV.1.desc
-	fire_only_once = yes
 	outcome = neutral
+	immediate = {
+		hidden_effect = { set_variable = fnr_seen_flavor_GMORV_1 }
+	}
 	option = { # Orthodox Path (Moravian Patriarchate)
 		name = flavor_GMORV.1.a
 		change_religion = religion:fnr_great_moravia_orthodox

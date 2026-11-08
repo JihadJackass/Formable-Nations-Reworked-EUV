@@ -37,7 +37,7 @@ fnr_PTLMY_invite_greek_scholars = {
 			add_gold = -150
 			set_variable = fnr_PTLMY_hellenizing
 			set_variable = { name = fnr_PTLMY_hellenizing_wait years = 5 }
-			add_country_modifier = { modifier = fnr_PTLMY_greek_scholars years = 10 mode = add_and_extend }
+			add_country_modifier = { modifier = fnr_PTLMY_greek_scholars years = 10 mode = replace }
 			custom_tooltip = fnr_PTLMY_invite_greek_scholars_tt
 		}
 	}
@@ -162,7 +162,7 @@ fnr_PTLMY_found_greek_polis = {
 		effect = {
 			add_gold = -200
 			set_variable = { name = fnr_PTLMY_polis_cooldown years = 10 }
-			add_country_modifier = { modifier = fnr_PTLMY_new_polis years = 20 mode = add_and_extend }
+			add_country_modifier = { modifier = fnr_PTLMY_new_polis years = 20 mode = replace }
 			add_estate_satisfaction = { type = estate_type:burghers_estate value = estate_satisfaction_mild_bonus }
 			fnr_PTLMY_change_crown_effect = { VALUE = 15 TT = greek_15 }
 		}
@@ -242,7 +242,7 @@ fnr_PTLMY_decree_of_memphis = {
 		effect = {
 			set_variable = { name = fnr_PTLMY_decree_cooldown years = 15 }
 			fnr_PTLMY_crown_to_balance_effect = yes
-			add_country_modifier = { modifier = fnr_PTLMY_rosetta_decree years = 15 mode = add_and_extend }
+			add_country_modifier = { modifier = fnr_PTLMY_rosetta_decree years = 15 mode = replace }
 		}
 	}
 }
@@ -320,7 +320,7 @@ fnr_PTLMY_search_the_ships = {
 		effect = {
 			set_variable = { name = fnr_PTLMY_ships_cooldown years = 5 }
 			fnr_PTLMY_change_scholarship_effect = { VALUE = 10 TT = plus_10 }
-			add_country_modifier = { modifier = fnr_PTLMY_ships_searched years = 5 mode = add_and_extend }
+			add_country_modifier = { modifier = fnr_PTLMY_ships_searched years = 5 mode = replace }
 			add_estate_satisfaction = { type = estate_type:burghers_estate value = estate_satisfaction_weak_penalty }
 		}
 	}

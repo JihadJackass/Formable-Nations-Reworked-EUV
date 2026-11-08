@@ -72,9 +72,9 @@ fnr_RMNRP_province_joins_rebels_effect = {
 		}
 		scope:$LOCATION$.province = {
 			every_location_in_province = {
-				limit = { owner = root }
+				limit = { owner ?= root }
 				every_pop = {
-					limit = { owner = root }
+					limit = { owner ?= root }
 					add_pop_satisfaction = pop_satisfaction_ultimate_penalty
 					change_pop_allegiance = scope:fnr_RMNRP_rebel
 				}
@@ -146,7 +146,7 @@ fnr_RMNRP_civil_war_effect = {
 			scope:fnr_RMNRP_rebel ?= {
 				add_rebel_progress = 1
 			}
-			add_country_modifier = { modifier = fnr_rising_imminent years = 1 mode = add_and_extend }
+			add_country_modifier = { modifier = fnr_rising_imminent years = 1 mode = replace }
 		}
 	}
 }
@@ -313,7 +313,7 @@ fnr_RMNRP_servile_war_effect = {
 			scope:fnr_RMNRP_slave_rebel ?= {
 				add_rebel_progress = 1
 			}
-			add_country_modifier = { modifier = fnr_servile_rising_imminent years = 1 mode = add_and_extend }
+			add_country_modifier = { modifier = fnr_servile_rising_imminent years = 1 mode = replace }
 		}
 	}
 }
@@ -327,10 +327,10 @@ fnr_RMNRP_province_slaves_rise_effect = {
 		}
 		scope:$LOCATION$.province = {
 			every_location_in_province = {
-				limit = { owner = root }
+				limit = { owner ?= root }
 				every_pop = {
 					limit = {
-						owner = root
+						owner ?= root
 						pop_type = pop_type:slaves
 					}
 					add_pop_satisfaction = pop_satisfaction_ultimate_penalty
@@ -360,7 +360,7 @@ fnr_RMNRP_seed_rome_effect = {
 		location:rome = {
 			every_pop = {
 				limit = {
-					owner = root
+					owner ?= root
 					NOT = { culture = culture:roman_culture }
 				}
 				split_pop = {
@@ -381,7 +381,7 @@ fnr_RMNRP_yearly_romanization_effect = {
 		}
 		every_pop = {
 			limit = {
-				owner = root
+				owner ?= root
 				NOT = { culture = culture:roman_culture }
 				NOT = { pop_type = pop_type:slaves }
 			}

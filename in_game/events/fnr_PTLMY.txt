@@ -25,10 +25,10 @@ fnr_PTLMY.1 = {
 			}
 		}
 	}
-	fire_only_once = yes
 	outcome = positive
 
 	trigger = {
+		NOT = { has_variable = fnr_seen_fnr_PTLMY_1 } # FNR: once per country (was fire_only_once)
 		has_variable = fnr_PTLMY_formed
 	}
 
@@ -38,6 +38,7 @@ fnr_PTLMY.1 = {
 	}
 
 	immediate = {
+		hidden_effect = { set_variable = fnr_seen_fnr_PTLMY_1 }
 		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
 		if = {
 			limit = { has_variable = fnr_PTLMY_origin_bactrian }
@@ -100,6 +101,10 @@ fnr_PTLMY.2 = {
 		ai_chance = { factor = 50 }
 		custom_tooltip = fnr_PTLMY_bactrian_restoration_tt
 		hidden_effect = {
+	if = {
+		limit = { has_variable = fnr_BACTR_client_pending_egypt }
+		remove_variable = fnr_BACTR_client_pending_egypt
+	}
 	location:alexandria = {
 		create_country_from_location = {
 			save_scope_as = fnr_PTLMY_new_egypt
@@ -119,6 +124,19 @@ fnr_PTLMY.2 = {
 			}
 			change_location_owner = scope:fnr_PTLMY_new_egypt
 			change_integration_level = core
+		}
+		# Bactrian Synod bookkeeping (fnr_BACTR_restore_egypt, fnr_BACTR_heir_of_alexander)
+		set_variable = fnr_BACTR_client_egypt
+		if = {
+			limit = { NOT = { has_variable = fnr_BACTR_clients } }
+			set_variable = { name = fnr_BACTR_clients value = 0 }
+		}
+		change_variable = { name = fnr_BACTR_clients add = 1 }
+		if = {
+			limit = { exists = international_organization:fnr_bactria_synod_io }
+			international_organization:fnr_bactria_synod_io = {
+				add_country_to_international_organization = scope:fnr_PTLMY_new_egypt
+			}
 		}
 		scope:fnr_PTLMY_new_egypt ?= {
 			set_variable = fnr_PTLMY_origin_bactrian
@@ -217,7 +235,7 @@ fnr_PTLMY.11 = {
 		name = fnr_PTLMY.11.b
 		ai_chance = { factor = 40 }
 		add_legitimacy = legitimacy_mild_bonus
-		add_country_modifier = { modifier = fnr_PTLMY_greek_purge years = 10 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_PTLMY_greek_purge years = 10 mode = replace }
 		add_estate_satisfaction = { type = estate_type:burghers_estate value = estate_satisfaction_mild_penalty }
 	}
 }
@@ -619,7 +637,7 @@ fnr_PTLMY.41 = {
 	option = {
 		name = fnr_PTLMY.41.a
 		ai_chance = { factor = 50 }
-		add_country_modifier = { modifier = fnr_PTLMY_co_rulers years = 10 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_PTLMY_co_rulers years = 10 mode = replace }
 	}
 
 	option = {
@@ -731,7 +749,7 @@ fnr_PTLMY.61 = {
 	option = {
 		name = fnr_PTLMY.61.a
 		ai_chance = { factor = 50 }
-		add_country_modifier = { modifier = fnr_PTLMY_temple_strike years = 5 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_PTLMY_temple_strike years = 5 mode = replace }
 		fnr_PTLMY_change_crown_effect = { VALUE = 5 TT = greek_5 }
 	}
 
@@ -767,7 +785,7 @@ fnr_PTLMY.62 = {
 	option = {
 		name = fnr_PTLMY.62.a
 		ai_chance = { factor = 50 }
-		add_country_modifier = { modifier = fnr_PTLMY_settlers_flee years = 5 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_PTLMY_settlers_flee years = 5 mode = replace }
 	}
 
 	option = {
@@ -801,7 +819,7 @@ fnr_PTLMY.63 = {
 	option = {
 		name = fnr_PTLMY.63.a
 		ai_chance = { factor = 50 }
-		add_country_modifier = { modifier = fnr_PTLMY_philanthropa years = 10 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_PTLMY_philanthropa years = 10 mode = replace }
 		fnr_PTLMY_crown_to_balance_effect = yes
 	}
 
@@ -835,7 +853,7 @@ fnr_PTLMY.64 = {
 	option = {
 		name = fnr_PTLMY.64.a
 		ai_chance = { factor = 50 }
-		add_country_modifier = { modifier = fnr_PTLMY_thebaid_pacified years = 25 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_PTLMY_thebaid_pacified years = 25 mode = replace }
 		add_legitimacy = legitimacy_mild_bonus
 	}
 }

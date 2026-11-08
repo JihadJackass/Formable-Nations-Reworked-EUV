@@ -1,0 +1,54 @@
+﻿# Bactrian Synod client kingdoms (fnr_BACTR_create_client_effect, fnr_BACTR_decisions.txt)
+
+fnr_BACTR_client_area_armenia = {
+	OR = {
+		area = area:armenia_area
+		area = area:armenian_highlands_area
+	}
+}
+
+fnr_BACTR_client_area_macedonia = {
+	OR = {
+		area = area:macedonia_area
+		area = area:albania_area
+		area = area:northern_greece_area
+	}
+}
+
+fnr_BACTR_client_area_assyria = {
+	area = area:jazira_area
+}
+
+fnr_BACTR_client_area_persia = {
+	region = region:persia_region
+}
+
+fnr_BACTR_client_area_egypt = {
+	OR = {
+		area = area:lower_egypt_area
+		area = area:upper_egypt_area
+		area = area:cyrenaica_area
+	}
+}
+
+# We lead the Bactrian Synod
+fnr_BACTR_leads_synod = {
+	exists = international_organization:fnr_bactria_synod_io
+	is_leader_of_international_organization = international_organization:fnr_bactria_synod_io
+}
+
+# Enough land to carve the client KEY from (COUNT non-capital locations), and our capital is not in it
+fnr_BACTR_can_carve_client = {
+	custom_tooltip = {
+		text = fnr_BACTR_client_enough_land_$COUNT$_tt
+		any_owned_location = {
+			count >= $COUNT$
+			is_capital = no
+			fnr_BACTR_client_area_$KEY$ = yes
+		}
+	}
+	custom_tooltip = {
+		text = fnr_BACTR_client_not_capital_tt
+		capital = { fnr_BACTR_client_area_$KEY$ = no }
+	}
+}

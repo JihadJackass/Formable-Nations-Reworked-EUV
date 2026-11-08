@@ -12,9 +12,11 @@
 # 1 - Heirs of Burebista
 fnr_DACIA.1 = {
 	type = country_event
+	trigger = {
+		NOT = { has_variable = fnr_seen_fnr_DACIA_1 } # FNR: once per country (was fire_only_once)
+	}
 	title = fnr_DACIA.1.title
 	desc = fnr_DACIA.1.desc
-	fire_only_once = yes
 	outcome = positive
 
 	illustration_tags = {
@@ -23,6 +25,7 @@ fnr_DACIA.1 = {
 	}
 
 	immediate = {
+		hidden_effect = { set_variable = fnr_seen_fnr_DACIA_1 }
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:peasants_estate }
 		hidden_effect = {
 			trigger_event_non_silently = { id = fnr_DACIA.2 days = 30 }
@@ -32,7 +35,7 @@ fnr_DACIA.1 = {
 	option = {
 		name = fnr_DACIA.1.a
 		add_prestige = prestige_mild_bonus
-		add_country_modifier = { modifier = fnr_DACIA_burebistas_heir years = 15 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_DACIA_burebistas_heir years = 15 mode = replace }
 	}
 }
 
@@ -82,12 +85,12 @@ fnr_DACIA.2 = {
 		}
 		change_religion = religion:fnr_zalmoxian_religion
 		change_religion_for_ruler_and_family = { country = ROOT religion = religion:fnr_zalmoxian_religion }
-		add_country_modifier = { modifier = fnr_DACIA_zalmoxian_revival years = 20 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_DACIA_zalmoxian_revival years = 20 mode = replace }
 		custom_tooltip = fnr_DACIA_path_zalmoxian_tt
 		hidden_effect = {
 			every_pop = {
 				limit = {
-					owner = root
+					owner ?= root
 					NOT = { religion = religion:fnr_zalmoxian_religion }
 				}
 				if = {
@@ -122,7 +125,7 @@ fnr_DACIA.2 = {
 		ai_chance = { factor = 60 }
 		set_variable = fnr_DACIA_path_dacoroman
 		add_legitimacy = legitimacy_mild_bonus
-		add_country_modifier = { modifier = fnr_DACIA_dacoroman_heritage years = 20 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_DACIA_dacoroman_heritage years = 20 mode = replace }
 		custom_tooltip = fnr_DACIA_path_dacoroman_tt
 		hidden_effect = {
 			trigger_event_non_silently = { id = fnr_DACIA.3 days = { 730 1460 } }
@@ -156,7 +159,7 @@ fnr_DACIA.3 = {
 	option = {
 		name = fnr_DACIA.3.a
 		ai_chance = { factor = 50 }
-		add_country_modifier = { modifier = fnr_DACIA_royal_mines years = 25 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_DACIA_royal_mines years = 25 mode = replace }
 	}
 
 	# B - Free miners' towns
@@ -167,7 +170,7 @@ fnr_DACIA.3 = {
 			type = estate_type:burghers_estate
 			value = estate_satisfaction_mild_bonus
 		}
-		add_country_modifier = { modifier = fnr_DACIA_free_miners years = 25 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_DACIA_free_miners years = 25 mode = replace }
 	}
 }
 
@@ -198,14 +201,14 @@ fnr_DACIA.4 = {
 		name = fnr_DACIA.4.a
 		ai_chance = { factor = 50 }
 		add_prestige = prestige_mild_bonus
-		add_country_modifier = { modifier = fnr_DACIA_kogaionon years = 25 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_DACIA_kogaionon years = 25 mode = replace }
 	}
 
 	# B - Send the messenger to Zalmoxis
 	option = {
 		name = fnr_DACIA.4.b
 		ai_chance = { factor = 50 }
-		add_country_modifier = { modifier = fnr_DACIA_messenger_to_zalmoxis years = 25 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_DACIA_messenger_to_zalmoxis years = 25 mode = replace }
 	}
 }
 
@@ -236,13 +239,13 @@ fnr_DACIA.5 = {
 		name = fnr_DACIA.5.a
 		ai_chance = { factor = 50 }
 		add_legitimacy = legitimacy_mild_bonus
-		add_country_modifier = { modifier = fnr_DACIA_heirs_of_rome years = 25 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_DACIA_heirs_of_rome years = 25 mode = replace }
 	}
 
 	# B - We are the heirs of Decebalus
 	option = {
 		name = fnr_DACIA.5.b
 		ai_chance = { factor = 50 }
-		add_country_modifier = { modifier = fnr_DACIA_heirs_of_decebalus years = 25 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_DACIA_heirs_of_decebalus years = 25 mode = replace }
 	}
 }

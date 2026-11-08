@@ -37,7 +37,7 @@ fnr_MGGCA_delay_effect = {
 
 # Favouring the Greeks: Italian Resentment for 5 years (stacks in length)
 fnr_MGGCA_resentment_effect = {
-	add_country_modifier = { modifier = fnr_MGGCA_italian_resentment years = 5 mode = add_and_extend }
+	add_country_modifier = { modifier = fnr_MGGCA_italian_resentment years = 5 mode = replace }
 }
 
 # A foreign helper speeds the revival: the wait for the next stage ends now
@@ -71,7 +71,7 @@ fnr_MGGCA_seed_griko_effect = {
 			limit = { fnr_MGGCA_is_griko_land = yes }
 			every_pop = {
 				limit = {
-					owner = root
+					owner ?= root
 					NOT = { culture = culture:griko_culture }
 					NOT = { pop_type = pop_type:slaves }
 				}

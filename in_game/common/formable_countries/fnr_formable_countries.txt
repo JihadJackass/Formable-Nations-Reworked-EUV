@@ -4304,7 +4304,7 @@
 										has_building = building_type:hanseatic_shipwright_guild
 										has_building = building_type:hanseatic_town_hall
 									}
-									NOT = { owner = root }
+									NOT = { owner ?= root }
 								}
 							}
 						}

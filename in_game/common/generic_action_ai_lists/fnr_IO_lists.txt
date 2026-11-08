@@ -5,13 +5,6 @@
     }
     actions = {
         fnr_proclaim_bactrian_synod
-        fnr_bactria_restore_armenia
-        fnr_bactria_restore_macedonia
-        fnr_bactria_restore_assyria
-        fnr_bactria_restore_persia
-        fnr_bactria_egyptian_claim
-        fnr_bactria_egyptian_establish
-        fnr_bactria_restore_the_macedonian_empire
 		fnr_spread_litergical_copies_of_alexander
 		fnr_greco_buddhism_action_hybridize_local_cultures
         fnr_grecobuddhism_embrace_religion

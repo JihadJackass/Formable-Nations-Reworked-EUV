@@ -17,9 +17,11 @@
 # 1 - The Purple Chamber
 flavor_EASRE.1 = {
 	type = country_event
+	trigger = {
+		NOT = { has_variable = fnr_seen_flavor_EASRE_1 } # FNR: once per country (was fire_only_once)
+	}
 	title = flavor_EASRE.1.title
 	desc = flavor_EASRE.1.desc
-	fire_only_once = yes
 	outcome = positive
 
 	illustration_tags = {
@@ -28,6 +30,7 @@ flavor_EASRE.1 = {
 	}
 
 	immediate = {
+		hidden_effect = { set_variable = fnr_seen_flavor_EASRE_1 }
 		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:nobles_estate }
 	}
 
@@ -36,7 +39,7 @@ flavor_EASRE.1 = {
 		add_country_modifier = {
 			modifier = fnr_EASRE_heir_of_justinian
 			years = 10
-			mode = add_and_extend
+			mode = replace
 		}
 		trigger_event_non_silently = { id = flavor_EASRE.2 days = 365 }
 	}
@@ -73,7 +76,7 @@ flavor_EASRE.2 = {
 		add_country_modifier = {
 			modifier = fnr_EASRE_orthodoxy_triumphant
 			years = 20
-			mode = add_and_extend
+			mode = replace
 		}
 		add_estate_satisfaction = {
 			type = estate_type:clergy_estate
@@ -96,7 +99,7 @@ flavor_EASRE.2 = {
 		add_country_modifier = {
 			modifier = fnr_EASRE_hellenistic_renaissance
 			years = 20
-			mode = add_and_extend
+			mode = replace
 		}
 		add_estate_satisfaction = {
 			type = estate_type:clergy_estate
@@ -144,7 +147,7 @@ flavor_EASRE.3 = {
 		add_country_modifier = {
 			modifier = fnr_EASRE_central_command
 			years = 25
-			mode = add_and_extend
+			mode = replace
 		}
 		add_estate_satisfaction = {
 			type = estate_type:nobles_estate
@@ -206,7 +209,7 @@ flavor_EASRE.4 = {
 		add_country_modifier = {
 			modifier = fnr_EASRE_hagia_sophia_rededicated
 			years = 20
-			mode = add_and_extend
+			mode = replace
 		}
 	}
 
@@ -234,7 +237,7 @@ flavor_EASRE.4 = {
 		add_country_modifier = {
 			modifier = fnr_EASRE_hagia_sophia_rededicated
 			years = 20
-			mode = add_and_extend
+			mode = replace
 		}
 	}
 
@@ -254,7 +257,7 @@ flavor_EASRE.4 = {
 		add_country_modifier = {
 			modifier = fnr_EASRE_hagia_sophia_rededicated
 			years = 20
-			mode = add_and_extend
+			mode = replace
 		}
 		add_estate_satisfaction = {
 			type = estate_type:clergy_estate
@@ -457,7 +460,7 @@ flavor_EASRE.8 = {
 		add_country_modifier = {
 			modifier = fnr_EASRE_imperial_mismanagement
 			years = 5
-			mode = add_and_extend
+			mode = replace
 		}
 	}
 }
@@ -499,7 +502,7 @@ flavor_EASRE.9 = {
 		add_country_modifier = {
 			modifier = fnr_EASRE_foreign_scholars
 			years = 5
-			mode = add_and_extend
+			mode = replace
 		}
 	}
 }
@@ -545,7 +548,7 @@ flavor_EASRE.10 = {
 		add_country_modifier = {
 			modifier = fnr_EASRE_iconoclasm
 			years = 10
-			mode = add_and_extend
+			mode = replace
 		}
 	}
 }

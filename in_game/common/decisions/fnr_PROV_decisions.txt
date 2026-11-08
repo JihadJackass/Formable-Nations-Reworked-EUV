@@ -33,7 +33,7 @@ fnr_PROV_send_auxiliaries = {
 			add_manpower = -1
 			add_country_modifier = { modifier = fnr_PROV_auxiliaries_sent years = 10 }
 			overlord ?= {
-				add_country_modifier = { modifier = fnr_PROV_provincial_auxiliaries years = 5 mode = add_and_extend }
+				add_country_modifier = { modifier = fnr_PROV_provincial_auxiliaries years = 5 mode = replace }
 				add_opinion = { modifier = fnr_PROV_loyal_province target = root }
 			}
 		}

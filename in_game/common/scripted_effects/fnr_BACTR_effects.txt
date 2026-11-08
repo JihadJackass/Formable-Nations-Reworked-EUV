@@ -1,0 +1,67 @@
+﻿# Bactrian Synod client kingdoms
+# Same pattern as the Roman client kingdoms (fnr_ROM_create_client_effect).
+
+# Carves the client kingdom KEY out of our non-capital lands in fnr_BACTR_client_area_KEY:
+# a kingdom formed as TAG, with a CULTURE ruler of our faith, our vassal and a member of the Synod.
+# Use with KEY = client key, TAG = formable tag, CULTURE = ruler culture key
+fnr_BACTR_create_client_effect = {
+	random_owned_location = {
+		limit = {
+			is_capital = no
+			fnr_BACTR_client_area_$KEY$ = yes
+		}
+		save_scope_as = fnr_BACTR_client_seat
+	}
+	if = {
+		limit = { exists = scope:fnr_BACTR_client_seat }
+		scope:fnr_BACTR_client_seat ?= {
+			create_country_from_location = {
+				save_scope_as = fnr_BACTR_client
+				set_country_rank = country_rank:rank_kingdom
+			}
+		}
+	}
+	if = {
+		limit = { exists = scope:fnr_BACTR_client }
+		set_variable = fnr_BACTR_client_$KEY$
+		if = {
+			limit = { NOT = { has_variable = fnr_BACTR_clients } }
+			set_variable = { name = fnr_BACTR_clients value = 0 }
+		}
+		change_variable = { name = fnr_BACTR_clients add = 1 }
+		every_owned_location = {
+			limit = {
+				is_capital = no
+				fnr_BACTR_client_area_$KEY$ = yes
+			}
+			change_location_owner = scope:fnr_BACTR_client
+			change_integration_level = core
+		}
+		scope:fnr_BACTR_client ?= {
+			form_country = formable_country:$TAG$_f
+			# If the formation did not take, the kingdom still carries the right name
+			if = {
+				limit = { NOT = { tag = $TAG$ } }
+				change_country_name = $TAG$
+			}
+			change_country_color = map_$TAG$
+			create_character = {
+				save_scope_as = fnr_BACTR_client_ruler
+				culture = culture:$CULTURE$
+				religion = religion:fnr_greco_buddhism_religion
+			}
+			set_new_ruler = scope:fnr_BACTR_client_ruler
+			change_religion = religion:fnr_greco_buddhism_religion
+			make_subject_of = {
+				target = root
+				type = subject_type:vassal
+			}
+		}
+		if = {
+			limit = { exists = international_organization:fnr_bactria_synod_io }
+			international_organization:fnr_bactria_synod_io = {
+				add_country_to_international_organization = scope:fnr_BACTR_client
+			}
+		}
+	}
+}

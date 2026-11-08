@@ -11,9 +11,11 @@
 # 1 - Mithridates' Heir
 fnr_PONTU.1 = {
 	type = country_event
+	trigger = {
+		NOT = { has_variable = fnr_seen_fnr_PONTU_1 } # FNR: once per country (was fire_only_once)
+	}
 	title = fnr_PONTU.1.title
 	desc = fnr_PONTU.1.desc
-	fire_only_once = yes
 	outcome = positive
 
 	illustration_tags = {
@@ -22,6 +24,7 @@ fnr_PONTU.1 = {
 	}
 
 	immediate = {
+		hidden_effect = { set_variable = fnr_seen_fnr_PONTU_1 }
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:burghers_estate }
 		hidden_effect = {
 			trigger_event_non_silently = { id = fnr_PONTU.2 days = { 1095 1825 } }
@@ -33,7 +36,7 @@ fnr_PONTU.1 = {
 		name = fnr_PONTU.1.a
 		ai_chance = { factor = 50 }
 		add_prestige = prestige_mild_bonus
-		add_country_modifier = { modifier = fnr_PONTU_hellenic_basileus years = 20 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_PONTU_hellenic_basileus years = 20 mode = replace }
 	}
 
 	# B - Heir of the Achaemenids
@@ -41,7 +44,7 @@ fnr_PONTU.1 = {
 		name = fnr_PONTU.1.b
 		ai_chance = { factor = 50 }
 		add_legitimacy = legitimacy_mild_bonus
-		add_country_modifier = { modifier = fnr_PONTU_achaemenid_heir years = 20 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_PONTU_achaemenid_heir years = 20 mode = replace }
 	}
 }
 
@@ -74,14 +77,14 @@ fnr_PONTU.2 = {
 			type = estate_type:clergy_estate
 			value = estate_satisfaction_mild_bonus
 		}
-		add_country_modifier = { modifier = fnr_PONTU_greek_schools years = 25 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_PONTU_greek_schools years = 25 mode = replace }
 	}
 
 	# B - Welcome the hill peoples into the army
 	option = {
 		name = fnr_PONTU.2.b
 		ai_chance = { factor = 50 }
-		add_country_modifier = { modifier = fnr_PONTU_hill_levies years = 25 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_PONTU_hill_levies years = 25 mode = replace }
 	}
 }
 
@@ -111,14 +114,14 @@ fnr_PONTU.3 = {
 	option = {
 		name = fnr_PONTU.3.a
 		ai_chance = { factor = 50 }
-		add_country_modifier = { modifier = fnr_PONTU_sea_tolls years = 25 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_PONTU_sea_tolls years = 25 mode = replace }
 	}
 
 	# B - Open the sea to every merchant
 	option = {
 		name = fnr_PONTU.3.b
 		ai_chance = { factor = 50 }
-		add_country_modifier = { modifier = fnr_PONTU_open_sea years = 25 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_PONTU_open_sea years = 25 mode = replace }
 	}
 }
 
@@ -176,7 +179,7 @@ fnr_PONTU.4 = {
 			}
 			50 = {
 				add_legitimacy = legitimacy_mild_penalty
-				add_country_modifier = { modifier = fnr_PONTU_poisoned_king years = 5 mode = add_and_extend }
+				add_country_modifier = { modifier = fnr_PONTU_poisoned_king years = 5 mode = replace }
 			}
 		}
 	}

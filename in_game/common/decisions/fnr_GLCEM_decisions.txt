@@ -564,7 +564,7 @@ fnr_GLCEM_great_assembly = {
 			add_prestige = prestige_mild_bonus
 			international_organization:fnr_GLCEM_celtic_league_io = {
 				every_international_organization_member = {
-					add_country_modifier = { modifier = fnr_GLCEM_great_assembly years = 5 mode = add_and_extend }
+					add_country_modifier = { modifier = fnr_GLCEM_great_assembly years = 5 mode = replace }
 					if = {
 						limit = { NOT = { tag = GLCEM } }
 						add_opinion = { target = root modifier = fnr_GLCEM_attended_assembly }
@@ -610,7 +610,7 @@ fnr_GLCEM_sound_the_carnyx = {
 			add_prestige = prestige_weak_penalty
 			international_organization:fnr_GLCEM_celtic_league_io = {
 				every_international_organization_member = {
-					add_country_modifier = { modifier = fnr_GLCEM_carnyx years = 2 mode = add_and_extend }
+					add_country_modifier = { modifier = fnr_GLCEM_carnyx years = 2 mode = replace }
 				}
 			}
 			set_variable = { name = fnr_GLCEM_carnyx_cooldown years = 10 }

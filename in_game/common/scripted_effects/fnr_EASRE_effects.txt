@@ -38,6 +38,17 @@ fnr_EASRE_sync_see_effect = {
 # Yearly upkeep for everything the ERE content map makes "scale" or "persist while"
 fnr_EASRE_yearly_upkeep_effect = {
 
+	# Reconquista Orientalis grants Restore Roman Borders. Granted here instead of through the
+	# advance's unlock_casus_belli, because an advance unlock makes the CB require that advance
+	# for every country (ROM, BYZ and the Roman Republic could no longer use it).
+	if = {
+		limit = {
+			has_advance = EASRE_reconquest
+			NOT = { has_unlocked_casus_belli_trigger = { type = cb_restore_roman_borders } }
+		}
+		unlock_casus_belli_effect = { type = cb_restore_roman_borders }
+	}
+
 	# Years Constantinople has been held continuously (flavor_EASRE.6 needs 50)
 	if = {
 		limit = { owns = location:constantinople }
@@ -138,7 +149,7 @@ fnr_EASRE_yearly_upkeep_effect = {
 					area = area:crimea_area
 				}
 			}
-			add_location_modifier = { modifier = fnr_EASRE_greek_fire_waters years = 2 mode = add_and_extend }
+			add_location_modifier = { modifier = fnr_EASRE_greek_fire_waters years = 2 mode = replace }
 		}
 		# Fate of the Phoenix owners get the vanilla Greek Fire galley instead of the FNR dromon
 		if = {

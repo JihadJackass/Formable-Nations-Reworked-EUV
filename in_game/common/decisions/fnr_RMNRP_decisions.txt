@@ -71,7 +71,7 @@ fnr_RMNRP_grant_citizenship = {
 		ai_chance = { value = 100 }
 		effect = {
 			add_gold = -200
-			add_country_modifier = { modifier = fnr_RMNRP_civitas_romana years = 20 mode = add_and_extend }
+			add_country_modifier = { modifier = fnr_RMNRP_civitas_romana years = 20 mode = replace }
 			add_estate_satisfaction = {
 				type = estate_type:peasants_estate
 				value = estate_satisfaction_mild_bonus
@@ -122,7 +122,7 @@ fnr_RMNRP_hold_triumph = {
 		effect = {
 			add_gold = -150
 			add_prestige = prestige_severe_bonus
-			add_country_modifier = { modifier = fnr_RMNRP_triumph years = 10 mode = add_and_extend }
+			add_country_modifier = { modifier = fnr_RMNRP_triumph years = 10 mode = replace }
 			if = {
 				limit = { has_variable = fnr_ROM_formed }
 				fnr_ROM_change_loyalty_effect = { VALUE = 10 TT = plus_10 }
@@ -345,7 +345,7 @@ fnr_RMNRP_crack_down_on_the_familia = {
 		effect = {
 			fnr_RMNRP_change_servile_effect = { VALUE = -15 }
 			add_stability = stability_mild_penalty
-			add_country_modifier = { modifier = fnr_RMNRP_familia_crackdown years = 5 mode = add_and_extend }
+			add_country_modifier = { modifier = fnr_RMNRP_familia_crackdown years = 5 mode = replace }
 			set_variable = { name = fnr_RMNRP_crackdown_cooldown years = 10 }
 			custom_tooltip = fnr_RMNRP_servile_minus_15_tt
 		}
@@ -386,7 +386,7 @@ fnr_RMNRP_gladiatorial_games = {
 			add_gold = -100
 			add_stability = stability_weak_bonus
 			add_prestige = prestige_mild_bonus
-			add_country_modifier = { modifier = fnr_RMNRP_gladiatorial_games years = 5 mode = add_and_extend }
+			add_country_modifier = { modifier = fnr_RMNRP_gladiatorial_games years = 5 mode = replace }
 			fnr_RMNRP_change_servile_effect = { VALUE = 5 }
 			set_variable = { name = fnr_RMNRP_games_cooldown years = 5 }
 			custom_tooltip = fnr_RMNRP_servile_plus_5_tt
@@ -567,7 +567,7 @@ fnr_RMNRP_proclaim_great_republic = {
 		region:italy_region = {
 			any_location_in_region = {
 				percent >= 0.8
-				owner = root
+				owner ?= root
 			}
 		}
 		country_rank = country_rank:rank_empire

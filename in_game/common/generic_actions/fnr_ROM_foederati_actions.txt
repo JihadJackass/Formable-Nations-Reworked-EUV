@@ -39,7 +39,7 @@ fnr_ROM_foederati_renew_foedera = {
 		}
 		scope:recipient = {
 			every_international_organization_member = {
-				add_country_modifier = { modifier = fnr_ROM_foedus_renewed years = 5 mode = add_and_extend }
+				add_country_modifier = { modifier = fnr_ROM_foedus_renewed years = 5 mode = replace }
 				if = {
 					limit = { NOT = { this = scope:actor } }
 					add_opinion = { target = scope:actor modifier = fnr_ROM_renewed_foedus }
@@ -85,12 +85,12 @@ fnr_ROM_foederati_levy = {
 	effect = {
 		scope:actor = {
 			set_variable = { name = fnr_ROM_levy_cooldown years = 10 }
-			add_country_modifier = { modifier = fnr_ROM_foederati_levies years = 2 mode = add_and_extend }
+			add_country_modifier = { modifier = fnr_ROM_foederati_levies years = 2 mode = replace }
 		}
 		scope:recipient = {
 			every_international_organization_member = {
 				limit = { NOT = { this = scope:actor } }
-				add_country_modifier = { modifier = fnr_ROM_foederati_levied years = 2 mode = add_and_extend }
+				add_country_modifier = { modifier = fnr_ROM_foederati_levied years = 2 mode = replace }
 			}
 		}
 		custom_tooltip = fnr_ROM_levy_foederati_tt
@@ -205,14 +205,14 @@ fnr_ROM_foederati_settle_limes = {
 		scope:actor = {
 			add_gold = -50
 			set_variable = { name = fnr_ROM_limes_cooldown years = 10 }
-			add_country_modifier = { modifier = fnr_ROM_limes_held years = 20 mode = add_and_extend }
+			add_country_modifier = { modifier = fnr_ROM_limes_held years = 20 mode = replace }
 			if = {
 				limit = { has_variable = fnr_ROM_formed }
 				fnr_ROM_change_loyalty_effect = { VALUE = 5 TT = plus_5 }
 			}
 		}
 		scope:source = {
-			add_country_modifier = { modifier = fnr_ROM_limes_guardians years = 20 mode = add_and_extend }
+			add_country_modifier = { modifier = fnr_ROM_limes_guardians years = 20 mode = replace }
 			add_opinion = { target = scope:actor modifier = fnr_ROM_limes_honour }
 		}
 	}
@@ -331,7 +331,7 @@ fnr_ROM_foederati_romanize = {
 				every_owned_location = {
 					every_pop = {
 						limit = {
-							owner = scope:source
+							owner ?= scope:source
 							NOT = { culture = culture:roman_culture }
 						}
 						split_pop = {

@@ -21,9 +21,11 @@
 # 1 - The Empty Treasury
 flavor_WESRE.1 = {
 	type = country_event
+	trigger = {
+		NOT = { has_variable = fnr_seen_flavor_WESRE_1 } # FNR: once per country (was fire_only_once)
+	}
 	title = flavor_WESRE.1.title
 	desc = flavor_WESRE.1.desc
-	fire_only_once = yes
 	outcome = negative
 
 	illustration_tags = {
@@ -32,6 +34,7 @@ flavor_WESRE.1 = {
 	}
 
 	immediate = {
+		hidden_effect = { set_variable = fnr_seen_flavor_WESRE_1 }
 		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:crown_estate }
 		add_country_modifier = { modifier = fnr_WESRE_last_light years = -1 }
 		add_reform = government_reform:fnr_WESRE_magistrate_of_the_west
@@ -41,6 +44,14 @@ flavor_WESRE.1 = {
 			trigger_event_non_silently = { id = flavor_WESRE.3 days = { 3650 5475 } }
 			trigger_event_non_silently = { id = flavor_WESRE.5 days = { 5475 9125 } }
 			trigger_event_non_silently = { id = flavor_WESRE.6 days = { 7300 10950 } }
+			# If one of these is not possible on its date it is dropped. Once its latest date has
+			# passed, the yearly pulse retries it until it fires (fnr_WESRE_chain_retry_pulse).
+			set_variable = fnr_WESRE_chain_started
+			set_variable = { name = fnr_WESRE_chain_wait_2 days = 1826 }
+			set_variable = { name = fnr_WESRE_chain_wait_4 days = 3651 }
+			set_variable = { name = fnr_WESRE_chain_wait_3 days = 5476 }
+			set_variable = { name = fnr_WESRE_chain_wait_5 days = 9126 }
+			set_variable = { name = fnr_WESRE_chain_wait_6 days = 10951 }
 		}
 	}
 
@@ -52,7 +63,7 @@ flavor_WESRE.1 = {
 		add_country_modifier = {
 			modifier = fnr_WESRE_debased_coinage
 			years = 10
-			mode = add_and_extend
+			mode = replace
 		}
 	}
 
@@ -160,15 +171,15 @@ flavor_WESRE.2 = {
 			random_list = {
 				75 = {
 					add_prestige = prestige_severe_bonus
-					add_country_modifier = { modifier = fnr_WESRE_defender_of_rome years = 10 mode = add_and_extend }
+					add_country_modifier = { modifier = fnr_WESRE_defender_of_rome years = 10 mode = replace }
 				}
 				25 = {
 					fnr_WESRE_cede_border_province_effect = yes
 					fnr_WESRE_cede_border_province_effect = yes
 					add_prestige = prestige_mild_penalty
 					add_stability = stability_severe_penalty
-					add_country_modifier = { modifier = fnr_WESRE_frontier_collapse years = 10 mode = add_and_extend }
-					add_country_modifier = { modifier = fnr_WESRE_debased_coinage years = 10 mode = add_and_extend }
+					add_country_modifier = { modifier = fnr_WESRE_frontier_collapse years = 10 mode = replace }
+					add_country_modifier = { modifier = fnr_WESRE_debased_coinage years = 10 mode = replace }
 				}
 			}
 		}
@@ -176,15 +187,15 @@ flavor_WESRE.2 = {
 			random_list = {
 				60 = {
 					add_prestige = prestige_severe_bonus
-					add_country_modifier = { modifier = fnr_WESRE_defender_of_rome years = 10 mode = add_and_extend }
+					add_country_modifier = { modifier = fnr_WESRE_defender_of_rome years = 10 mode = replace }
 				}
 				40 = {
 					fnr_WESRE_cede_border_province_effect = yes
 					fnr_WESRE_cede_border_province_effect = yes
 					add_prestige = prestige_mild_penalty
 					add_stability = stability_severe_penalty
-					add_country_modifier = { modifier = fnr_WESRE_frontier_collapse years = 10 mode = add_and_extend }
-					add_country_modifier = { modifier = fnr_WESRE_debased_coinage years = 10 mode = add_and_extend }
+					add_country_modifier = { modifier = fnr_WESRE_frontier_collapse years = 10 mode = replace }
+					add_country_modifier = { modifier = fnr_WESRE_debased_coinage years = 10 mode = replace }
 				}
 			}
 		}
@@ -194,7 +205,7 @@ flavor_WESRE.2 = {
 	option = {
 		name = flavor_WESRE.2.c
 		ai_chance = { factor = 35 }
-		add_country_modifier = { modifier = fnr_WESRE_barbarian_tribute years = 10 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_WESRE_barbarian_tribute years = 10 mode = replace }
 		fnr_WESRE_change_foederati_loyalty_effect = { VALUE = 10 }
 		add_opinion_mutual_effect = {
 			target = scope:fnr_WESRE_barbarian
@@ -260,7 +271,7 @@ flavor_WESRE.3 = {
 	option = {
 		name = flavor_WESRE.3.a
 		ai_chance = { factor = 40 }
-		add_country_modifier = { modifier = fnr_WESRE_recalled_general years = 2 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_WESRE_recalled_general years = 2 mode = replace }
 		add_stability = stability_weak_bonus
 		add_estate_satisfaction = {
 			type = estate_type:nobles_estate
@@ -300,7 +311,7 @@ flavor_WESRE.3 = {
 			70 = {
 				kill_character_silently = scope:fnr_WESRE_general
 				add_stability = stability_mild_penalty
-				add_country_modifier = { modifier = fnr_WESRE_assassination_scandal years = 5 mode = add_and_extend }
+				add_country_modifier = { modifier = fnr_WESRE_assassination_scandal years = 5 mode = replace }
 				custom_tooltip = fnr_WESRE_assassination_works_tt
 			}
 			30 = {
@@ -433,7 +444,7 @@ flavor_WESRE.5 = {
 		name = flavor_WESRE.5.c
 		fallback = yes
 		ai_chance = { factor = 20 }
-		add_country_modifier = { modifier = fnr_WESRE_aqueducts_neglected years = 20 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_WESRE_aqueducts_neglected years = 20 mode = replace }
 	}
 }
 
@@ -470,7 +481,7 @@ flavor_WESRE.6 = {
 			modifier = fnr_WESRE_brothers_in_purple
 		}
 		add_legitimacy = legitimacy_mild_bonus
-		add_country_modifier = { modifier = fnr_WESRE_eastern_influence years = 20 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_WESRE_eastern_influence years = 20 mode = replace }
 	}
 
 	# B - Reject
@@ -535,7 +546,7 @@ flavor_WESRE.7 = {
 		name = flavor_WESRE.7.a
 		ai_chance = { factor = 30 }
 		set_variable = fnr_WESRE_front_gaul
-		add_country_modifier = { modifier = fnr_WESRE_front_gaul years = 20 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_WESRE_front_gaul years = 20 mode = replace }
 		custom_tooltip = fnr_WESRE_front_gaul_tt
 		custom_tooltip = fnr_WESRE_reform_upgrade_tt
 	}
@@ -545,7 +556,7 @@ flavor_WESRE.7 = {
 		name = flavor_WESRE.7.b
 		ai_chance = { factor = 30 }
 		set_variable = fnr_WESRE_front_hispania
-		add_country_modifier = { modifier = fnr_WESRE_front_hispania years = 20 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_WESRE_front_hispania years = 20 mode = replace }
 		custom_tooltip = fnr_WESRE_front_hispania_tt
 		custom_tooltip = fnr_WESRE_reform_upgrade_tt
 	}
@@ -555,7 +566,7 @@ flavor_WESRE.7 = {
 		name = flavor_WESRE.7.c
 		ai_chance = { factor = 20 }
 		set_variable = fnr_WESRE_front_africa
-		add_country_modifier = { modifier = fnr_WESRE_front_africa years = 20 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_WESRE_front_africa years = 20 mode = replace }
 		custom_tooltip = fnr_WESRE_front_africa_tt
 		custom_tooltip = fnr_WESRE_reform_upgrade_tt
 	}
@@ -599,7 +610,7 @@ flavor_WESRE.8 = {
 		add_prestige = 50
 		add_legitimacy = 20
 		add_stability = 15
-		add_country_modifier = { modifier = fnr_WESRE_eagles_fly_again years = 20 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_WESRE_eagles_fly_again years = 20 mode = replace }
 		every_owned_location = {
 			add_location_modifier = { modifier = fnr_WESRE_western_restoration years = -1 }
 		}
@@ -658,7 +669,7 @@ flavor_WESRE.9 = {
 		scope:fnr_WESRE_rebel ?= {
 			add_rebel_progress = 1
 		}
-		add_country_modifier = { modifier = fnr_rising_imminent years = 1 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_rising_imminent years = 1 mode = replace }
 		remove_variable = fnr_WESRE_ambitious_general
 	}
 }
@@ -689,7 +700,7 @@ flavor_WESRE.10 = {
 	option = {
 		name = flavor_WESRE.10.a
 		add_stability = stability_mild_penalty
-		add_country_modifier = { modifier = fnr_WESRE_foederati_betrayal years = 10 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_WESRE_foederati_betrayal years = 10 mode = replace }
 		create_rebel = {
 			category = pretender
 			name = fnr_WESRE_foederati_uprising
@@ -716,7 +727,7 @@ flavor_WESRE.10 = {
 				max = 3
 				check_range_bounds = no
 				every_pop = {
-					limit = { owner = root }
+					limit = { owner ?= root }
 					add_pop_satisfaction = pop_satisfaction_ultimate_penalty
 					change_pop_allegiance = scope:fnr_WESRE_rebel
 				}
@@ -736,7 +747,7 @@ flavor_WESRE.10 = {
 		scope:fnr_WESRE_rebel ?= {
 			add_rebel_progress = 1
 		}
-		add_country_modifier = { modifier = fnr_rising_imminent years = 1 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_rising_imminent years = 1 mode = replace }
 		set_variable = { name = fnr_WESRE_foederati_loyalty value = 45 }
 		set_variable = { name = fnr_WESRE_foederati_revolt_cooldown years = 10 }
 		custom_tooltip = fnr_WESRE_foederati_revolt_tt

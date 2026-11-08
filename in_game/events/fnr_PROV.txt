@@ -61,7 +61,7 @@ fnr_PROV.2 = {
 		add_manpower = -1
 		add_liberty_desire = -10
 		scope:fnr_PROV_overlord ?= {
-			add_country_modifier = { modifier = fnr_PROV_provincial_auxiliaries years = 3 mode = add_and_extend }
+			add_country_modifier = { modifier = fnr_PROV_provincial_auxiliaries years = 3 mode = replace }
 			add_opinion = { modifier = fnr_PROV_loyal_province target = root }
 		}
 	}

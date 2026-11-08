@@ -56,11 +56,11 @@ fnr_PTLMY_seek_amicitia = {
 
 	effect = {
 		scope:actor = {
-			add_country_modifier = { modifier = fnr_PTLMY_amicus_populi_romani years = 25 mode = add_and_extend }
+			add_country_modifier = { modifier = fnr_PTLMY_amicus_populi_romani years = 25 mode = replace }
 			add_opinion = { target = scope:recipient modifier = fnr_PTLMY_roman_amicitia }
 		}
 		scope:recipient = {
-			add_country_modifier = { modifier = fnr_PTLMY_egyptian_friendship years = 25 mode = add_and_extend }
+			add_country_modifier = { modifier = fnr_PTLMY_egyptian_friendship years = 25 mode = replace }
 			add_opinion = { target = scope:actor modifier = fnr_PTLMY_roman_amicitia }
 		}
 	}
@@ -132,11 +132,11 @@ fnr_PTLMY_royal_marriage_rome = {
 
 	effect = {
 		scope:actor = {
-			add_country_modifier = { modifier = fnr_PTLMY_lagid_roman_union years = 30 mode = add_and_extend }
+			add_country_modifier = { modifier = fnr_PTLMY_lagid_roman_union years = 30 mode = replace }
 			add_opinion = { target = scope:recipient modifier = fnr_PTLMY_lagid_marriage }
 		}
 		scope:recipient = {
-			add_country_modifier = { modifier = fnr_PTLMY_lagid_roman_union years = 30 mode = add_and_extend }
+			add_country_modifier = { modifier = fnr_PTLMY_lagid_roman_union years = 30 mode = replace }
 			add_opinion = { target = scope:actor modifier = fnr_PTLMY_lagid_marriage }
 		}
 	}
@@ -217,7 +217,7 @@ fnr_PTLMY_request_grain_fleet = {
 	effect = {
 		scope:actor = {
 			add_gold = -100
-			add_country_modifier = { modifier = fnr_PTLMY_grain_fleet years = 10 mode = add_and_extend }
+			add_country_modifier = { modifier = fnr_PTLMY_grain_fleet years = 10 mode = replace }
 		}
 		scope:recipient = {
 			add_gold = 100

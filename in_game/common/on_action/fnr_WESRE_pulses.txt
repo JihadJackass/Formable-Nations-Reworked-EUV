@@ -4,6 +4,7 @@
 yearly_country_pulse = {
 	on_actions = {
 		fnr_WESRE_yearly_pulse
+		fnr_WESRE_chain_retry_pulse
 	}
 }
 
@@ -18,4 +19,46 @@ fnr_WESRE_yearly_pulse = {
 		flavor_WESRE.8	# Renovatio - capstone advance
 		flavor_WESRE.10	# Foederati Revolt - loyalty below 30
 	}
+}
+
+# Retries for the timed events of flavor_WESRE.1 that were not possible on their date.
+# Each one is only tried after its latest scheduled date has passed (fnr_WESRE_chain_wait_N),
+# and every event keeps its own trigger and fires only once.
+fnr_WESRE_chain_retry_pulse = {
+	trigger = {
+		tag = WESRE
+		has_variable = fnr_WESRE_chain_started
+	}
+	on_actions = {
+		fnr_WESRE_chain_retry_2
+		fnr_WESRE_chain_retry_3
+		fnr_WESRE_chain_retry_4
+		fnr_WESRE_chain_retry_5
+		fnr_WESRE_chain_retry_6
+	}
+}
+
+fnr_WESRE_chain_retry_2 = {
+	trigger = { NOT = { has_variable = fnr_WESRE_chain_wait_2 } }
+	events = { flavor_WESRE.2 }
+}
+
+fnr_WESRE_chain_retry_3 = {
+	trigger = { NOT = { has_variable = fnr_WESRE_chain_wait_3 } }
+	events = { flavor_WESRE.3 }
+}
+
+fnr_WESRE_chain_retry_4 = {
+	trigger = { NOT = { has_variable = fnr_WESRE_chain_wait_4 } }
+	events = { flavor_WESRE.4 }
+}
+
+fnr_WESRE_chain_retry_5 = {
+	trigger = { NOT = { has_variable = fnr_WESRE_chain_wait_5 } }
+	events = { flavor_WESRE.5 }
+}
+
+fnr_WESRE_chain_retry_6 = {
+	trigger = { NOT = { has_variable = fnr_WESRE_chain_wait_6 } }
+	events = { flavor_WESRE.6 }
 }

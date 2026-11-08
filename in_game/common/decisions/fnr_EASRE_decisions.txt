@@ -239,7 +239,7 @@ fnr_EASRE_anathematize = {
 						}
 					}
 					add_legitimacy = legitimacy_severe_penalty
-					add_country_modifier = { modifier = fnr_EASRE_anathema years = 5 mode = add_and_extend }
+					add_country_modifier = { modifier = fnr_EASRE_anathema years = 5 mode = replace }
 					add_opinion = { target = root modifier = fnr_EASRE_anathematized }
 				}
 			}

@@ -470,7 +470,7 @@ flavor_ERSHR.12 = {
 			add_character_modifier = { 
 				modifier = fnr_ERSHR_rejected_mobads 
 				years = 5 
-				mode = add_and_extend 
+				mode = replace 
 			}
 		}
 		add_prestige = 15

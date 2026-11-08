@@ -50,10 +50,12 @@ fnr_ROM.1 = {
 			}
 		}
 	}
-	fire_only_once = yes
 	outcome = positive
 
-	trigger = { has_variable = fnr_ROM_formed } # fired from the form_effect, before the tag has changed
+	trigger = { # fired from the form_effect, before the tag has changed
+		NOT = { has_variable = fnr_seen_fnr_ROM_1 } # FNR: once per country (was fire_only_once)
+		has_variable = fnr_ROM_formed
+	}
 
 	illustration_tags = {
 		10 = exterior
@@ -61,6 +63,7 @@ fnr_ROM.1 = {
 	}
 
 	immediate = {
+		hidden_effect = { set_variable = fnr_seen_fnr_ROM_1 }
 		# The Great Republic's Senate reform (added here as well: the formation effect runs before the tag changes)
 		if = {
 			limit = {
@@ -360,7 +363,7 @@ fnr_ROM.5 = {
 	option = {
 		name = fnr_ROM.5.a
 		ai_chance = { factor = 50 }
-		add_country_modifier = { modifier = fnr_ROM_foederati_settled years = 20 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_ROM_foederati_settled years = 20 mode = replace }
 		fnr_ROM_change_loyalty_effect = { VALUE = -5 TT = minus_5 }
 	}
 
@@ -368,7 +371,7 @@ fnr_ROM.5 = {
 	option = {
 		name = fnr_ROM.5.b
 		ai_chance = { factor = 50 }
-		add_country_modifier = { modifier = fnr_ROM_limes_closed years = 10 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_ROM_limes_closed years = 10 mode = replace }
 		fnr_ROM_change_loyalty_effect = { VALUE = 5 TT = plus_5 }
 	}
 }
@@ -399,7 +402,7 @@ fnr_ROM.6 = {
 	option = {
 		name = fnr_ROM.6.a
 		ai_chance = { factor = 50 }
-		add_country_modifier = { modifier = fnr_ROM_census_tax years = 15 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_ROM_census_tax years = 15 mode = replace }
 		add_estate_satisfaction = {
 			type = estate_type:nobles_estate
 			value = estate_satisfaction_weak_penalty
@@ -410,7 +413,7 @@ fnr_ROM.6 = {
 	option = {
 		name = fnr_ROM.6.b
 		ai_chance = { factor = 50 }
-		add_country_modifier = { modifier = fnr_ROM_census_levy years = 15 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_ROM_census_levy years = 15 mode = replace }
 		add_estate_satisfaction = {
 			type = estate_type:peasants_estate
 			value = estate_satisfaction_weak_penalty
@@ -465,7 +468,7 @@ fnr_ROM.8 = {
 		name = fnr_ROM.8.a
 		ai_chance = { factor = 60 }
 		add_gold = 200
-		add_country_modifier = { modifier = fnr_ROM_debased_coinage years = 10 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_ROM_debased_coinage years = 10 mode = replace }
 		fnr_ROM_change_loyalty_effect = { VALUE = 10 TT = plus_10 }
 	}
 
@@ -652,7 +655,7 @@ fnr_ROM.12 = {
 	option = {
 		name = fnr_ROM.12.b
 		ai_chance = { factor = 60 }
-		add_country_modifier = { modifier = fnr_ROM_limes_breached years = 5 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_ROM_limes_breached years = 5 mode = replace }
 		add_army_tradition = army_tradition_mild_bonus
 		fnr_ROM_change_loyalty_effect = { VALUE = 5 TT = plus_5 }
 	}
@@ -739,7 +742,7 @@ fnr_ROM.15 = {
 	option = {
 		name = fnr_ROM.15.a
 		ai_chance = { factor = 50 }
-		add_country_modifier = { modifier = fnr_ROM_senate_dignity years = 20 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_ROM_senate_dignity years = 20 mode = replace }
 		add_estate_satisfaction = {
 			type = estate_type:nobles_estate
 			value = estate_satisfaction_mild_bonus
@@ -751,11 +754,90 @@ fnr_ROM.15 = {
 	option = {
 		name = fnr_ROM.15.b
 		ai_chance = { factor = 50 }
-		add_country_modifier = { modifier = fnr_ROM_senate_silenced years = 20 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_ROM_senate_silenced years = 20 mode = replace }
 		add_estate_satisfaction = {
 			type = estate_type:nobles_estate
 			value = estate_satisfaction_mild_penalty
 		}
 		fnr_ROM_change_loyalty_effect = { VALUE = 5 TT = plus_5 }
+	}
+}
+
+# 16 - A Diocese Lost (fired by fnr_ROM_yearly_upkeep_effect)
+fnr_ROM.16 = {
+	type = country_event
+	title = fnr_ROM.16.title
+	desc = fnr_ROM.16.desc
+	outcome = negative
+
+	trigger = { has_or_had_tag = ROM }
+
+	illustration_tags = {
+		10 = exterior
+		10 = regular
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:crown_estate background = estate_type:nobles_estate }
+	}
+
+	option = {
+		name = fnr_ROM.16.a
+		if = {
+			limit = { has_variable = fnr_ROM_diocese_lost_italia }
+			custom_tooltip = fnr_ROM_diocese_lost_italia_tt
+			hidden_effect = { remove_variable = fnr_ROM_diocese_lost_italia }
+		}
+		if = {
+			limit = { has_variable = fnr_ROM_diocese_lost_galliae }
+			custom_tooltip = fnr_ROM_diocese_lost_galliae_tt
+			hidden_effect = { remove_variable = fnr_ROM_diocese_lost_galliae }
+		}
+		if = {
+			limit = { has_variable = fnr_ROM_diocese_lost_hispaniae }
+			custom_tooltip = fnr_ROM_diocese_lost_hispaniae_tt
+			hidden_effect = { remove_variable = fnr_ROM_diocese_lost_hispaniae }
+		}
+		if = {
+			limit = { has_variable = fnr_ROM_diocese_lost_britanniae }
+			custom_tooltip = fnr_ROM_diocese_lost_britanniae_tt
+			hidden_effect = { remove_variable = fnr_ROM_diocese_lost_britanniae }
+		}
+		if = {
+			limit = { has_variable = fnr_ROM_diocese_lost_raetia }
+			custom_tooltip = fnr_ROM_diocese_lost_raetia_tt
+			hidden_effect = { remove_variable = fnr_ROM_diocese_lost_raetia }
+		}
+		if = {
+			limit = { has_variable = fnr_ROM_diocese_lost_illyricum }
+			custom_tooltip = fnr_ROM_diocese_lost_illyricum_tt
+			hidden_effect = { remove_variable = fnr_ROM_diocese_lost_illyricum }
+		}
+		if = {
+			limit = { has_variable = fnr_ROM_diocese_lost_dacia }
+			custom_tooltip = fnr_ROM_diocese_lost_dacia_tt
+			hidden_effect = { remove_variable = fnr_ROM_diocese_lost_dacia }
+		}
+		if = {
+			limit = { has_variable = fnr_ROM_diocese_lost_asiana }
+			custom_tooltip = fnr_ROM_diocese_lost_asiana_tt
+			hidden_effect = { remove_variable = fnr_ROM_diocese_lost_asiana }
+		}
+		if = {
+			limit = { has_variable = fnr_ROM_diocese_lost_oriens }
+			custom_tooltip = fnr_ROM_diocese_lost_oriens_tt
+			hidden_effect = { remove_variable = fnr_ROM_diocese_lost_oriens }
+		}
+		if = {
+			limit = { has_variable = fnr_ROM_diocese_lost_aegyptus }
+			custom_tooltip = fnr_ROM_diocese_lost_aegyptus_tt
+			hidden_effect = { remove_variable = fnr_ROM_diocese_lost_aegyptus }
+		}
+		if = {
+			limit = { has_variable = fnr_ROM_diocese_lost_africa }
+			custom_tooltip = fnr_ROM_diocese_lost_africa_tt
+			hidden_effect = { remove_variable = fnr_ROM_diocese_lost_africa }
+		}
+		custom_tooltip = fnr_ROM_diocese_regain_tt
 	}
 }

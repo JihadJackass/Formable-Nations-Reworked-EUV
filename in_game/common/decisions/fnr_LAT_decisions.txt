@@ -352,7 +352,7 @@ fnr_LAT_parliament_of_ravennika = {
 			add_prestige = prestige_mild_bonus
 			international_organization:fnr_LAT_barons_io = {
 				every_international_organization_member = {
-					add_country_modifier = { modifier = fnr_LAT_parliament_of_ravennika years = 5 mode = add_and_extend }
+					add_country_modifier = { modifier = fnr_LAT_parliament_of_ravennika years = 5 mode = replace }
 					if = {
 						limit = { NOT = { tag = LAT } }
 						add_opinion = { target = root modifier = fnr_LAT_attended_parliament }
@@ -398,7 +398,7 @@ fnr_LAT_summon_the_barons = {
 			add_prestige = prestige_weak_penalty
 			international_organization:fnr_LAT_barons_io = {
 				every_international_organization_member = {
-					add_country_modifier = { modifier = fnr_LAT_barons_summoned years = 2 mode = add_and_extend }
+					add_country_modifier = { modifier = fnr_LAT_barons_summoned years = 2 mode = replace }
 				}
 			}
 			set_variable = { name = fnr_LAT_summon_cooldown years = 10 }

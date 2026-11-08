@@ -27,9 +27,11 @@
 # 1 - SPQR Restored
 fnr_RMNRP.1 = {
 	type = country_event
+	trigger = {
+		NOT = { has_variable = fnr_seen_fnr_RMNRP_1 } # FNR: once per country (was fire_only_once)
+	}
 	title = fnr_RMNRP.1.title
 	desc = fnr_RMNRP.1.desc
-	fire_only_once = yes
 	outcome = positive
 
 	illustration_tags = {
@@ -38,6 +40,7 @@ fnr_RMNRP.1 = {
 	}
 
 	immediate = {
+		hidden_effect = { set_variable = fnr_seen_fnr_RMNRP_1 }
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:peasants_estate }
 		set_variable = { name = fnr_RMNRP_senate_authority value = 60 }
 		fnr_RMNRP_refresh_senate_tier_effect = yes
@@ -69,7 +72,7 @@ fnr_RMNRP.1 = {
 			type = estate_type:peasants_estate
 			value = estate_satisfaction_mild_bonus
 		}
-		add_country_modifier = { modifier = fnr_RMNRP_senate_and_people years = 20 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_RMNRP_senate_and_people years = 20 mode = replace }
 	}
 }
 
@@ -107,7 +110,7 @@ fnr_RMNRP.2 = {
 			type = estate_type:peasants_estate
 			value = estate_satisfaction_mild_penalty
 		}
-		add_country_modifier = { modifier = fnr_RMNRP_optimates years = 20 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_RMNRP_optimates years = 20 mode = replace }
 		custom_tooltip = fnr_RMNRP_senate_plus_10_tt
 	}
 
@@ -124,7 +127,7 @@ fnr_RMNRP.2 = {
 			type = estate_type:nobles_estate
 			value = estate_satisfaction_mild_penalty
 		}
-		add_country_modifier = { modifier = fnr_RMNRP_populares years = 20 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_RMNRP_populares years = 20 mode = replace }
 		custom_tooltip = fnr_RMNRP_senate_minus_5_tt
 	}
 
@@ -185,7 +188,7 @@ fnr_RMNRP.3 = {
 		trigger = { ruler ?= { mil >= 60 } }
 		ai_chance = { factor = 20 }
 		fnr_RMNRP_change_senate_effect = { VALUE = -2 }
-		add_country_modifier = { modifier = fnr_RMNRP_war_consul years = 4 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_RMNRP_war_consul years = 4 mode = replace }
 		custom_tooltip = fnr_RMNRP_senate_minus_2_tt
 	}
 }
@@ -225,7 +228,7 @@ fnr_RMNRP.4 = {
 			type = estate_type:nobles_estate
 			value = estate_satisfaction_mild_penalty
 		}
-		add_country_modifier = { modifier = fnr_RMNRP_lex_agraria years = 25 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_RMNRP_lex_agraria years = 25 mode = replace }
 		custom_tooltip = fnr_RMNRP_senate_minus_10_tt
 	}
 
@@ -242,7 +245,7 @@ fnr_RMNRP.4 = {
 			type = estate_type:peasants_estate
 			value = estate_satisfaction_mild_penalty
 		}
-		add_country_modifier = { modifier = fnr_RMNRP_landless_plebs years = 15 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_RMNRP_landless_plebs years = 15 mode = replace }
 		custom_tooltip = fnr_RMNRP_senate_plus_5_tt
 	}
 }
@@ -290,7 +293,7 @@ fnr_RMNRP.5 = {
 		ai_chance = { factor = 40 }
 		fnr_RMNRP_change_senate_effect = { VALUE = 5 }
 		add_republican_tradition = republican_tradition_mild_bonus
-		add_country_modifier = { modifier = fnr_RMNRP_general_recalled years = 3 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_RMNRP_general_recalled years = 3 mode = replace }
 		custom_tooltip = fnr_RMNRP_senate_plus_5_tt
 	}
 
@@ -298,7 +301,7 @@ fnr_RMNRP.5 = {
 	option = {
 		name = fnr_RMNRP.5.b
 		ai_chance = { factor = 30 }
-		add_country_modifier = { modifier = fnr_RMNRP_loyal_legions years = 5 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_RMNRP_loyal_legions years = 5 mode = replace }
 		custom_tooltip = fnr_RMNRP_rubicon_risk_tt
 		hidden_effect = {
 			random_list = {
@@ -317,7 +320,7 @@ fnr_RMNRP.5 = {
 		ai_chance = { factor = 30 }
 		fnr_RMNRP_change_senate_effect = { VALUE = -5 }
 		add_prestige = prestige_mild_bonus
-		add_country_modifier = { modifier = fnr_RMNRP_triumph years = 10 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_RMNRP_triumph years = 10 mode = replace }
 		custom_tooltip = fnr_RMNRP_senate_minus_5_tt
 	}
 }
@@ -360,7 +363,7 @@ fnr_RMNRP.6 = {
 		fnr_RMNRP_change_senate_effect = { VALUE = 20 }
 		add_republican_tradition = republican_tradition_mild_bonus
 		add_prestige = prestige_mild_bonus
-		add_country_modifier = { modifier = fnr_RMNRP_cincinnatus years = 20 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_RMNRP_cincinnatus years = 20 mode = replace }
 		custom_tooltip = fnr_RMNRP_senate_plus_20_tt
 	}
 
@@ -371,7 +374,7 @@ fnr_RMNRP.6 = {
 		set_variable = fnr_RMNRP_refused_to_resign
 		fnr_RMNRP_change_senate_effect = { VALUE = -30 }
 		add_stability = stability_severe_penalty
-		add_country_modifier = { modifier = fnr_RMNRP_perpetual_dictator years = 10 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_RMNRP_perpetual_dictator years = 10 mode = replace }
 		fnr_RMNRP_civil_war_effect = { NAME = fnr_RMNRP_republican_loyalists }
 		custom_tooltip = fnr_RMNRP_refuse_resign_tt
 		hidden_effect = {
@@ -415,7 +418,7 @@ fnr_RMNRP.7 = {
 		set_variable = fnr_RMNRP_augustus
 		add_stability = stability_severe_penalty
 		add_prestige = prestige_severe_bonus
-		add_country_modifier = { modifier = fnr_RMNRP_imperator years = 20 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_RMNRP_imperator years = 20 mode = replace }
 		custom_tooltip = fnr_RMNRP_augustus_tt
 		form_country = formable_country:ROM_BYZ_f
 	}
@@ -430,7 +433,7 @@ fnr_RMNRP.7 = {
 		change_country_name = fnr_RMNRP_PRINCIPATE_NAME
 		change_country_flag = fnr_RMNRP_principate_flag
 		add_prestige = prestige_mild_bonus
-		add_country_modifier = { modifier = fnr_RMNRP_principate years = 20 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_RMNRP_principate years = 20 mode = replace }
 		custom_tooltip = fnr_RMNRP_principate_tt
 	}
 
@@ -521,7 +524,7 @@ fnr_RMNRP.9 = {
 		name = fnr_RMNRP.9.a
 		ai_chance = { factor = 60 }
 		fnr_RMNRP_change_senate_effect = { VALUE = -5 }
-		add_country_modifier = { modifier = fnr_RMNRP_civitas_romana years = 25 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_RMNRP_civitas_romana years = 25 mode = replace }
 		international_organization:fnr_RMNRP_socii_io = {
 			every_international_organization_member = {
 				limit = { NOT = { has_or_had_tag = RMNRP } }
@@ -609,7 +612,7 @@ fnr_RMNRP.11 = {
 		ai_chance = { factor = 40 }
 		fnr_RMNRP_change_servile_effect = { VALUE = -15 }
 		add_stability = stability_mild_penalty
-		add_country_modifier = { modifier = fnr_RMNRP_familia_crackdown years = 5 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_RMNRP_familia_crackdown years = 5 mode = replace }
 		custom_tooltip = fnr_RMNRP_servile_minus_15_tt
 	}
 
@@ -723,7 +726,7 @@ fnr_RMNRP.13 = {
 		set_variable = { name = fnr_RMNRP_servile_discontent value = 10 }
 		fnr_RMNRP_refresh_servile_tier_effect = yes
 		add_prestige = prestige_mild_bonus
-		add_country_modifier = { modifier = fnr_RMNRP_via_appia years = 20 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_RMNRP_via_appia years = 20 mode = replace }
 		custom_tooltip = fnr_RMNRP_servile_set_10_tt
 	}
 
@@ -734,7 +737,7 @@ fnr_RMNRP.13 = {
 		set_variable = { name = fnr_RMNRP_servile_discontent value = 20 }
 		fnr_RMNRP_refresh_servile_tier_effect = yes
 		add_republican_tradition = republican_tradition_mild_bonus
-		add_country_modifier = { modifier = fnr_RMNRP_lessons_of_spartacus years = 20 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_RMNRP_lessons_of_spartacus years = 20 mode = replace }
 		custom_tooltip = fnr_RMNRP_servile_set_20_tt
 	}
 }
@@ -770,7 +773,7 @@ fnr_RMNRP.14 = {
 			type = estate_type:burghers_estate
 			value = estate_satisfaction_mild_bonus
 		}
-		add_country_modifier = { modifier = fnr_RMNRP_freedmen_citizens years = 20 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_RMNRP_freedmen_citizens years = 20 mode = replace }
 	}
 
 	# B - Let them remain clients of their old masters
@@ -781,7 +784,7 @@ fnr_RMNRP.14 = {
 			type = estate_type:nobles_estate
 			value = estate_satisfaction_mild_bonus
 		}
-		add_country_modifier = { modifier = fnr_RMNRP_freedmen_clients years = 20 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_RMNRP_freedmen_clients years = 20 mode = replace }
 	}
 }
 
@@ -813,7 +816,7 @@ fnr_RMNRP.15 = {
 			type = estate_type:nobles_estate
 			value = estate_satisfaction_mild_penalty
 		}
-		add_country_modifier = { modifier = fnr_RMNRP_proscriptions years = 10 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_RMNRP_proscriptions years = 10 mode = replace }
 		custom_tooltip = fnr_RMNRP_senate_minus_10_tt
 	}
 
@@ -823,7 +826,7 @@ fnr_RMNRP.15 = {
 		ai_chance = { factor = 50 }
 		add_stability = stability_weak_bonus
 		add_republican_tradition = republican_tradition_mild_bonus
-		add_country_modifier = { modifier = fnr_RMNRP_clementia years = 10 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_RMNRP_clementia years = 10 mode = replace }
 	}
 }
 
@@ -895,7 +898,7 @@ fnr_RMNRP.17 = {
 		trigger = { gold >= 200 }
 		ai_chance = { factor = 60 }
 		add_gold = -200
-		add_country_modifier = { modifier = fnr_RMNRP_donative_paid years = 5 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_RMNRP_donative_paid years = 5 mode = replace }
 	}
 
 	# B - Appeal to their oath
@@ -934,7 +937,7 @@ fnr_RMNRP.18 = {
 		trigger = { gold >= 100 }
 		ai_chance = { factor = 60 }
 		add_gold = -100
-		add_country_modifier = { modifier = fnr_RMNRP_rome_garrisoned years = 3 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_RMNRP_rome_garrisoned years = 3 mode = replace }
 	}
 
 	# B - Let the Senate flee the city
@@ -984,7 +987,7 @@ fnr_RMNRP.19 = {
 		ai_chance = { factor = 40 }
 		set_variable = fnr_RMNRP_refused_to_resign
 		fnr_RMNRP_change_senate_effect = { VALUE = -20 }
-		add_country_modifier = { modifier = fnr_RMNRP_perpetual_dictator years = 10 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_RMNRP_perpetual_dictator years = 10 mode = replace }
 		custom_tooltip = fnr_RMNRP_dictator_for_life_tt
 		hidden_effect = {
 			trigger_event_non_silently = { id = fnr_RMNRP.7 days = 365 }
@@ -1028,7 +1031,7 @@ fnr_RMNRP.20 = {
 		name = fnr_RMNRP.20.a
 		ai_chance = { base = 70 }
 		add_stability = stability_mild_penalty
-		add_country_modifier = { modifier = fnr_RMNRP_fragile_republic years = 15 mode = add_and_extend }
+		add_country_modifier = { modifier = fnr_RMNRP_fragile_republic years = 15 mode = replace }
 		custom_tooltip = fnr_RMNRP_early_formation_tt
 		form_country = formable_country:RMNRP_f
 	}

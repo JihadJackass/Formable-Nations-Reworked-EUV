@@ -53,7 +53,7 @@ fnr_WESRE_foederati_law = {
 				add_location_modifier = {
 					modifier = fnr_WESRE_settlement_betrayed
 					years = 5
-					mode = add_and_extend
+					mode = replace
 				}
 			}
 		}

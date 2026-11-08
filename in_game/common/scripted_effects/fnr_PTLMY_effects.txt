@@ -289,7 +289,7 @@ fnr_PTLMY_nile_outcome_effect = {
 # Yearly: the Nile flood. Nilometers and the Canal of the Pharaohs make good years likelier.
 fnr_PTLMY_yearly_nile_effect = {
 	if = {
-		limit = { region:egypt_region = { any_location_in_region = { owner = root } } }
+		limit = { region:egypt_region = { any_location_in_region = { owner ?= root } } }
 		fnr_PTLMY_clear_nile_effect = yes
 		if = {
 			limit = {
@@ -407,9 +407,9 @@ fnr_PTLMY_province_joins_rebels_effect = {
 		}
 		scope:$LOCATION$.province = {
 			every_location_in_province = {
-				limit = { owner = root }
+				limit = { owner ?= root }
 				every_pop = {
-					limit = { owner = root }
+					limit = { owner ?= root }
 					add_pop_satisfaction = pop_satisfaction_ultimate_penalty
 					change_pop_allegiance = scope:fnr_PTLMY_rebel
 				}
@@ -493,7 +493,7 @@ fnr_PTLMY_rebellion_effect = {
 			fnr_PTLMY_province_joins_rebels_effect = { LOCATION = fnr_PTLMY_revolt_3 }
 			fnr_PTLMY_province_joins_rebels_effect = { LOCATION = fnr_PTLMY_revolt_4 }
 			scope:fnr_PTLMY_rebel ?= { add_rebel_progress = 1 }
-			add_country_modifier = { modifier = fnr_rising_imminent years = 1 mode = add_and_extend }
+			add_country_modifier = { modifier = fnr_rising_imminent years = 1 mode = replace }
 		}
 	}
 }
